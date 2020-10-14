@@ -1,0 +1,316 @@
+/*
+Theme Name: customizr-pro-child
+Theme URI: https://presscustomizr.com/customizr
+Description: Childtheme for customizr
+Tags: Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, buddypress, custom-menu, custom-colors, featured-images, full-width-template, theme-options, threaded-comments, translation-ready, sticky-post, post-formats, rtl-language-support, editor-style
+Author: Hans-Gerd Gerhards
+Author URI: https://haurand.com
+Template: customizr-pro
+Version: 2.2019
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+/* @import url("../customizr-pro/style.css");
+
+/* @import url("the_events_calendar.css"); */ 
+
+/* @import url("parallax_scrolling.css"); */
+
+@import url("posts_in_site.css");
+
+
+/*----------------------------------------------------------------*/
+/* Start: allgemeine Anpassungen für Darstellung
+/* Datum: 18.11.2018
+/* Autor: hgg  
+/*----------------------------------------------------------------*/
+
+/* Breite des Containers erst mal so belassen und nicht von 1140px auf 1340px erweitert 
+.container {
+    max-width: 1140px;
+}
+*/
+
+/* Hintergrundfarbe des Hauptmenüs  
+.primary-navbar__wrapper {
+    background-color: #FFFFFF;
+}
+ */
+
+/* Logo größer beim Runterscrollen (sticky menue)  */
+.can-shrink-brand.sticky-brand-shrink-on .desktop-sticky 
+.navbar-brand img {
+    max-height: 130px !important;
+    width: auto !important;
+}
+
+/* Untermenues werden leider trotzdem rechts angezeigt, wenn der Punkt am rechten Rand gelistet wird 
+.menue_links {
+  text-align: left!important;
+}
+*/ 
+/*----------------------------------------------------------------*/
+/* Start: Anpassungen für Darstellung der Überschrift und 
+/*        Zeilenabstand Masonry grid
+/* Datum: 21.11.2018
+/* Autor: hgg  
+/*----------------------------------------------------------------*/
+
+.grid-title_size, .grid .entry-title, .grid .woocommerce .woocommerce-products-header .page-title, .woocommerce .woocommerce-products-header .grid .page-title {
+    line-height: 1.1;
+    font-size: 1.3em;
+}
+
+/*----------------------------------------------------------------*/
+/* Ende: Anpassungen für Darstellung der Übesrchrift und 
+/*        Zeilenabstand Masonry grid
+/* Datum: 21.11.2018
+/* Autor: hgg  
+/*----------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------*/
+/* Ende: allgemeine Anpassungen für Darstellung
+/* Datum: 18.11.2018
+/* Autor: hgg  
+/*----------------------------------------------------------------*/
+
+
+
+
+/*----------------------------------------------------------------*/
+/* Start: Anpassungen für Paginierung
+/* Datum: 17.11.2018
+/* Autor: hgg  
+/*----------------------------------------------------------------*/
+/* Schriftgröße im Container "Ältere Beiträge" vergrößern */
+.post-navigation nav {
+    font-size: 1.3em;
+}
+
+/* oranger Hintergrund auf aktiver Seite */
+.pagination .current {
+    background-color: #F9B81E;
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+}
+
+/* blauer Hintergrund und rund */
+.pagination .pag-list > * {
+    background-color: #77BCC7;
+    margin: 0 5px;
+    float: left;
+    height: 60px;
+    width: 60px;
+    line-height: 35px;
+    text-align: center;
+    padding: 0;
+    border-radius: 60px;
+    margin-right: 3px;
+    box-shadow: 0 0 1px 0 rgba(0,0,0,.2);
+}
+
+/* Platz für Seitennummern */
+.col-sm-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+/* Platz für Text neuer und älter */
+.col-2 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+/* Platz für Text voheriger und nächster Beitrag */
+.col-5 {
+    max-width: 33%!important;
+}
+
+/* Inhalte in der Sidebar rechtsbündig */
+.tc-sidebar.text-md-right .widget-title::after {
+    right: 0;
+    left: 0;
+}
+
+
+/* Text ältere und neuere Beiträge stärker hervorheben */
+/* funktioniert noch nicht */
+.post-navigation .meta-nav {
+    opacity: 0.8!important;
+}
+/*----------------------------------------------------------------*/
+/* Ende: Anpassungen für Paginierung
+/* Datum: 17.11.2018
+/* Autor: hgg  
+/*----------------------------------------------------------------*/
+
+/* Menue als Hamburger auch bei breiteren Ansichten zeigen - hgg, 13.10.2019*/
+/* wird leider nicht umgesetzt: 
+@media (min-width: 1200px) {
+  .d-lg-block {
+    display: block !important;
+  }
+  .d-none {
+    display: inherit !important;
+  }
+}
+
+@media (max-width: 1201px) {
+  .d-lg-block {
+    display: inherit !important;
+  }
+  .d-none {
+    display: block !important;
+  }
+}
+ */
+
+
+
+/*----------------------------------------------------------------*/
+/* Start: aktuelle Mitteilungen in Beiträgen
+/* Datum: 19.4.2018
+/* Autor: hgg  
+/*----------------------------------------------------------------*/
+.mitteilung {
+  background-color: #F9F9F9;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-width:5px;  
+  border-style:dashed;
+}
+/*----------------------------------------------------------------*/
+/* Ende: aktuelle Mitteilungen in Beiträgen
+/* Datum: 19.4.2018
+/* Autor: hgg  
+/*----------------------------------------------------------------*/     
+
+
+/*----------------------------------------------------------------*/
+/* Start: Tabellen responsive
+/* Datum: 28.9.2018
+/* Autor: hgg  
+/*----------------------------------------------------------------*/
+@media only screen and (max-width: 840px) {
+table.responsive {
+  margin-bottom: 0;
+  overflow: hidden;
+  overflow-x: scroll;
+  display: block;
+  white-space: nowrap;
+}
+}
+/*----------------------------------------------------------------*/
+/* Ende: Tabellen responsive
+/* Datum: 28.9.2018
+/* Autor: hgg  
+/*----------------------------------------------------------------*/
+
+/*----------------------------------------------------------------*/
+/* Start: Schritartem
+/* Datum: 02.11.2018
+/* Autor: hgg  
+/*----------------------------------------------------------------*/
+span.gross {
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+span.klein {
+  font-size: 9pt;
+  font-style:italic;
+}
+/*----------------------------------------------------------------*/
+/* Ende: Schritartem
+/* Datum: 02.11.2018
+/* Autor: hgg  
+/*----------------------------------------------------------------*/
+
+
+/* "Runde" Bilder */
+img.rund {
+	  float: right;
+    margin: 0 0 2rem 2rem;
+    border-radius: 50%;
+}
+
+/* Inhalte in der sidebar rechtsbündig anzeigen (customizr) */
+.text-md-right {
+    text-align: left !important; 
+}
+
+/*----------------------------------------------------------------*/
+/* Start: Button in Beiträgen
+/* Datum: 23.02.2018
+/* Autor: hgg
+/* z. Bsp.: weiße Farbe, bei Hover: grüner Button
+/*----------------------------------------------------------------*/
+
+/* Absatz für Button */
+.button-absatz {
+    margin:30px 0px 30px 0px;
+}
+
+.tribe-events-button-beitrag {
+    padding: 10px;
+    color: #ffffff!important;
+    font-size: 14px;
+    background-color: #77BCC7;
+    border-radius: 4px;
+    text-decoration: none!important;
+}
+
+
+a.tribe-events-button-beitrag:focus{
+  color: #fff!important;
+  text-decoration: none;
+}
+
+a.tribe-events-button-beitrag:visited{
+  color: #fff!important;
+  text-decoration: none;
+}
+
+  
+/* Hintergrund: gelb */  
+a.tribe-events-button-beitrag:hover{
+  color: #fff!important;
+  background-color: #F9B81E;
+}
+
+/*----------------------------------------------------------------*/
+/* Ende: Button in Beiträgen
+/* Datum: 23.02.2018
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------*/
+/* Start: bei hover Link deutlicher hervorheben 
+/* Datum: 5.2.2020
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+article .entry-content a:hover {
+    text-decoration: none;
+		background-color: #000;
+		color: #fff;
+}
+
+article .entry-content a:link {
+    text-decoration: none;
+    border-bottom: .1em dotted grey;
+    /* font-weight: bold; */
+}
+/*----------------------------------------------------------------*/
+/* Ende: bei hover Link deutlicher hervorheben 
+/* Datum: 5.2.2020
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+
+ 

@@ -1,0 +1,203 @@
+/*
+Theme Name: customizr-pro-child
+Theme URI: https://presscustomizr.com/customizr
+Description: Childtheme for customizr
+Tags: Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, buddypress, custom-menu, custom-colors, featured-images, full-width-template, theme-options, threaded-comments, translation-ready, sticky-post, post-formats, rtl-language-support, editor-style
+Author: Hans-Gerd Gerhards
+Author URI: https://eilendorf.net
+Template: customizr-pro
+Version: 6.2019
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+/* @import url("../customizr-pro/style.css");
+
+@import url("parallax_scrolling.css");
+*/
+
+
+/* #00FFFF: türkis
+ * #0D3042: dunkelblau
+ * /
+
+/* Größe des Logos beim Sticky Menü */
+.sticky-enabled .tc-shrink-on .site-logo img {
+    height: 50px!important;
+}
+
+/* ------------------------------- */
+/* allgemeine Einstellungen für das Menü */
+/* ------------------------------- */
+.navbar .nav>li>a:focus, .navbar .nav>li>a:hover {
+			color: #00FFFF;
+	}
+
+/* Menüpunkte türkis */
+.navbar .nav li.dropdown.active>.dropdown-toggle, .navbar .nav li.dropdown.open.active>.dropdown-toggle, .navbar .nav li.dropdown.open>.dropdown-toggle {
+    color: #00FFFF;
+}
+
+/*
+.pull-menu-right .navbar div>ul.nav>.menu-item:last-child>a, .tc-header .btn-toggle-nav.pull-right {
+    color: white;
+}
+*/
+
+/* Menüfarbe im Untermenü */
+.tc-header .nav-collapse .dropdown-menu > li > a {
+    font-size: 1.5em;
+    text-decoration: none;
+		color: #0D3042;
+	}
+
+/* ------------------------------- */
+/* Menü bei größerem Display */
+/* ------------------------------- */
+
+@media (min-width: 980px) {
+	/* Hauptmenüfarbe */
+	.navbar .nav>li>a {
+			font-size: 1.9em!important;
+			color: white;
+			text-shadow: inherit;
+	}
+
+
+	/* Menüfarbe active */
+	.navbar .nav>li.current-menu-item>a, .tc-regular-menu .navbar .nav>li.current-menu-ancestor>a {
+			color: white;
+	}
+
+
+	/* Farbe für den Menübereich */
+	header.tc-header.clearfix.row-fluid.tc-tagline-off.tc-title-logo-on.tc-shrink-on.tc-menu-on.logo-left.tc-second-menu-in-sn-before-when-mobile {
+			background-color: #0D3042;
+			/* background-color: #0D3042; */
+	}
+	/* Menü etwas weiter unten */
+		.row-fluid .span9 {
+				padding-top: 24px;
+	}
+}
+
+
+
+/* ------------------------------------- */
+/* mobiles Menü */
+/* ------------------------------------- */
+@media (max-width: 979px) {
+	/* Hintergrund für Menü */
+	.nav-collapse, .nav-collapse.collapse {
+			background: #fff transparent;
+			background-color: rgba(13,48,66,.9);
+	}
+
+	/* Menüpunkte */
+	.navbar .nav>li>a {
+			color: white;
+			text-shadow: inherit;
+	}
+	/* aktiver Menüpunkt */
+	.navbar .nav-collapse ul.nav>li li a {
+    color: white;
+    background-color: #0D3042;
+	}
+	
+	/* aktiv */
+	.navbar .nav>li.current-menu-item>a, .tc-regular-menu .navbar .nav>li.current-menu-ancestor>a {
+			color: white;
+	}
+}
+
+/* ------------------------------- */
+/* TEC */
+/* ------------------------------- */
+
+/* Links im Veranstaltungskalender */
+#tribe-events-content a, .tribe-events-event-meta a {
+    color: #0D3042;
+    border-bottom: .1em dotted grey;
+}
+
+/* Überschrift */
+.tribe-events-single-event-title {
+    color: #0D3042;
+}
+
+/* ------------------------------- */
+/* Fußbereich */
+/* ------------------------------- */
+footer#footer {
+    background: #0D3042;
+}
+
+/* ------------------------------------- */
+
+/* Tabelle mit Einträgen in der Karte schmaler */
+.dataTables_wrapper {
+    width: 90%;
+}
+/* ------------------------------------- */
+
+
+
+/* für Contact Form 7 - Angebote */
+.checkbox-breite {
+  display: grid;
+}
+
+/* Thumbs-Nails in der Beitragsübersicht ohne Rand */
+figure.wp-block-image.size-large {
+ margin: 20px 0px 30px 0px;
+}
+
+/* Abstand Slider zur Beitragsübersicht */
+#main-wrapper {
+    margin-top: 40px;
+}
+
+/* Schriftgröße und Zeilenabstand in der Beitragsübersicht */
+.wp-block-column {
+	/*
+
+		background-color: #ffffff;
+	  padding: 20px;
+	*/
+	  line-height: 1.4;
+    font-size: 1.3em;
+		margin-bottom: 20px;
+
+}
+
+/* Andere Schriftart */
+body.home.page-template-default.page.page-id-75.wp-custom-logo.wp-embed-responsive.tribe-js.tribe-bar-is-disabled.tc-fade-hover-links.tc-r-sidebar.tc-center-images.skin-grey.tc-sticky-header.tc-transparent-on-scroll.no-navbar.tc-regular-menu.tc-sticky-footer.chrome.tc-smoothscroll.sticky-enabled {
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Schriftgröße in der Menüzeile */
+.navbar .nav>li>a {
+    font-size: 1.5em;
+}
+
+.sticky-enabled .tc-header .navbar .nav>li>a {
+    font-size: 1.5em;
+}
+
+/* Schriftgröße in der Sidebar */
+.textwidget {
+    font-size: 1.2em;
+}
+
+/* Linkfarben */
+a {
+    font-weight: bold;
+    color: #0D3042;
+    text-decoration: underline;
+}
+
+a:hover {
+  color: #00FFFF;
+}
+
+
+

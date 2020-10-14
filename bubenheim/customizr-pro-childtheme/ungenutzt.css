@@ -1,0 +1,440 @@
+/* CSS Document */
+
+
+/*----------------------------------------------------------------*/
+/* 2. ALLGEMEIN
+/*----------------------------------------------------------------*/
+
+
+
+/*----------------------------------------------------------------*/
+/* Start: allgemeine Anpassungen für Darstellung
+/* Datum: 18.11.2018
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+
+
+
+/* Breite des Containers (statt 1140px) erweitert */
+/* Seitenbreite muss wegen der Werbung besser ausgenutzt werden, sonst sind die Banner zu schmal */
+.container {
+    max-width: 1440px !important;
+}
+
+
+/*
+@media only screen and (min-width: 993px) and (max-width: 1140px) {
+  .container {
+      max-width: 1140px !important;
+  }
+}
+*/
+
+/* Überschrift bei schmaleren mobilen displays */
+@media only screen and (min-width: 768px) and (max-width: 1140px) {
+  .fp-title {
+    font-size: 1.2em;
+  }
+}
+
+
+/* Hintergrundfarbe des Hauptmenüs */
+.primary-navbar__wrapper, .desktop-sticky, .mobile-sticky {
+    background-color: #F9B81E;
+}
+
+
+/* Menü: Keine Umwandlung in Großbuchstaben */
+.nav__menu {
+	text-transform: none;
+}
+
+/* Eule größer beim Runterscrollen (sticky menue) */
+.can-shrink-brand.sticky-brand-shrink-on .desktop-sticky
+.navbar-brand img {
+    max-height: 130px !important;
+    width: auto !important;
+}
+
+/* Untermenues werden leider trotzdem rechts angezeigt, wenn der Punkt am rechten Rand gelistet wird */
+/*.menue_links {
+  text-align: left!important;
+}
+*/
+
+/* Darstellung Links (Hover) bei Beiträgen */
+article .entry-content a:hover{
+  color: #77BCC7;
+	text-decoration: underline;
+  text-decoration-color: #77BCC7;
+}
+
+
+/* Schriftart im Container mit Beschreibung aachenerkinder.de */
+/* kleinere Darstellung bis 840px */
+@media only screen and (max-width: 840px) {
+  .ackids {
+    font-size: 0.9em;
+  }
+}
+
+@media only screen and (min-width: 841px) {
+  .ackids {
+    font-size: 1.2em;
+  }
+}
+
+
+/*----------------------------------------------------------------*/
+/* Start: Anpassungen für Darstellung der Überschrift und
+/*        Zeilenabstand Masonry grid
+/* Datum: 21.11.2018
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+
+.grid-title_size, .grid .entry-title, .grid .woocommerce .woocommerce-products-header .page-title, .woocommerce .woocommerce-products-header .grid .page-title {
+    line-height: 1.1;
+    font-size: 1.3em;
+}
+
+
+/* Bildhöhe bei Beiträgen auf 150px festlegen und einen Bildausschnitt wählen */
+/* folgende Regel führte zu Problemen beim Bild im Einzelbeitrag: */
+/* .tc-thumbnail img { */
+/* Darstellung in der Übersicht (z. B. Hauptseite mit Beiträgen), 23.5.2019, hgg */
+.tc-thumbnail.entry-media__holder {
+	  max-height: 141px !important;
+    object-fit: cover;
+    object-position: center;
+    /* clip-path: inset(2% 2% 2% 2% round 2% 2%); */
+}
+
+/* Darstellung im Einzelbeitrag je nach Displaybreite, 23.5.2019, hgg */
+@media only screen and (max-width: 574px) {
+  .tc-thumbnail.entry-media__holder.tc-singular-thumbnail-wrapper.__before_regular_heading_title {
+      max-height: 250px !important;
+      /*
+      object-fit: none;
+      object-position: initial;
+      */
+  }
+}
+@media only screen and (min-width: 575px) {
+  .tc-thumbnail.entry-media__holder.tc-singular-thumbnail-wrapper.__before_regular_heading_title {
+      max-height: 400px !important;
+      object-fit: none;
+      object-position: initial;
+  }
+}
+
+
+/*----------------------------------------------------------------*/
+/* Ende: Anpassungen für Darstellung der Übesrchrift und
+/*        Zeilenabstand Masonry grid
+/* Datum: 21.11.2018
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------*/
+/* Ende: allgemeine Anpassungen für Darstellung
+/* Datum: 18.11.2018
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+
+
+
+/*----------------------------------------------------------------*/
+/* Start: Anpassungen für Paginierung
+/* Datum: 17.11.2018
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+/* Schriftgröße im Container "Ältere Beiträge" vergrößern */
+.post-navigation nav {
+    font-size: 1.3em;
+}
+
+/* oranger Hintergrund auf aktiver Seite */
+.pagination .current {
+    background-color: #F9B81E;
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+}
+
+/* blauer Hintergrund und rund */
+.pagination .pag-list > * {
+    background-color: #77BCC7;
+    margin: 0 5px;
+    float: left;
+    height: 60px;
+    width: 60px;
+    line-height: 35px;
+    text-align: center;
+    padding: 0;
+    border-radius: 60px;
+    margin-right: 3px;
+    box-shadow: 0 0 1px 0 rgba(0,0,0,.2);
+}
+
+/* Platz für Seitennummern */
+.col-sm-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+/* Platz für Text neuer und älter */
+.col-2 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+/* Platz für Text voheriger und nächster Beitrag */
+.col-5 {
+    max-width: 33%!important;
+}
+
+/* Inhalte in der Sidebar rechtsbündig */
+.tc-sidebar.text-md-right .widget-title::after {
+    right: 0;
+    left: 0;
+}
+
+
+/* Text ältere und neuere Beiträge stärker hervorheben */
+/* funktioniert noch nicht */
+.post-navigation .meta-nav {
+    opacity: 0.8!important;
+}
+/*----------------------------------------------------------------*/
+/* Ende: Anpassungen für Paginierung
+/* Datum: 17.11.2018
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+
+
+
+
+
+/*----------------------------------------------------------------*/
+/* Start: aktuelle Mitteilungen in Beiträgen
+/* Datum: 19.4.2018
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+.mitteilung {
+  background-color: #F9F9F9;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-width:5px;
+  border-style:dashed;
+}
+/*----------------------------------------------------------------*/
+/* Ende: aktuelle Mitteilungen in Beiträgen
+/* Datum: 19.4.2018
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------*/
+/* Start: Tabellen responsive
+/* Datum: 28.9.2018
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+@media only screen and (max-width: 840px) {
+table.responsive {
+  margin-bottom: 0;
+  overflow: hidden;
+  overflow-x: scroll;
+  display: block;
+  white-space: nowrap;
+}
+}
+/*----------------------------------------------------------------*/
+/* Ende: Tabellen responsive
+/* Datum: 28.9.2018
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+
+/*----------------------------------------------------------------*/
+/* Start: Schriftarten
+/* Datum: 02.11.2018
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+span.gross {
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+span.klein {
+  font-size: 9pt;
+  font-style:italic;
+}
+/*----------------------------------------------------------------*/
+/* Ende: Schriftarten
+/* Datum: 02.11.2018
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+
+
+/* "Runde" Bilder */
+img.rund {
+	  float: right;
+    margin: 0 0 2rem 2rem;
+    border-radius: 50%;
+}
+
+/* Inhalte in der sidebar rechtsbündig anzeigen (customizr) */
+.text-md-right {
+    text-align: left !important;
+}
+
+/* Schlagwörter: Änderung Darstellung */
+.btn-skin-dark-oh {
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+    color: #3b3b3b;
+}
+
+/* Kein Rahmen bei Schlagwörtern */
+.btn-skin-dark-oh.inverted {
+    border-color: #ffffff;
+		padding: 0px;
+}
+
+.btn-skin-dark-oh:hover {
+/*  background-color: #aaaaaa !important; 	*/
+  color: #77BCC7 !important;
+/*  text-decoration: underline;	*/
+}
+
+/* Schriftgröße für Widget-Titel */
+.sidebar .widget-title {
+    font-size: 1.0em;
+}
+
+/* Kategorie - Auswahl */
+.kat_wahl {
+    color: #3b3b3b;
+    text-decoration: underline;
+}
+
+.kat_wahl:hover {
+/*  background-color: #aaaaaa !important; 	*/
+  color: #77BCC7 !important;
+/*  text-decoration: underline;	*/
+}
+
+/* schönere Darstellung von Tabellen */
+.ac_tabelle td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.ac_tabelle tr:nth-child(even){background-color: #f2f2f2;}
+
+.ac_tabelle tr:hover {background-color: #ddd;}
+
+.ac_tabelle th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #77BCC7;
+  color: white;
+  text-transform: none !important;
+}
+
+
+/* Darstellung der Tabellen auf der Seite "Marktplatz" */
+/* hgg, 7.2.2019 */
+#ac_marktplatz tr:nth-child(even){background-color: #f2f2f2;}
+
+#ac_marktplatz tr:hover {background-color: #ddd;}
+
+#ac_marktplatz th {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  background-color: #77BCC7;
+  color: white;
+  text-transform: none !important;
+}
+
+#ac_marktplatz td {
+  padding: 10px;
+}
+
+.element_zentriert {
+    clear: both;
+    display: block;
+    margin: 0 auto 0.5em;
+}
+
+/* Menüpunkte leicht vergrößert */
+#main-menu{
+  font-weight: 800 !important;
+}
+
+/*----------------------------------------------------------------*/
+/* Start: Button in Beiträgen
+/* Datum: 23.02.2018
+/* Autor: hgg
+/* z. Bsp.: grüner Hintergrund, Schrift: weiße Farbe, bei Hover: oranger Button
+/*----------------------------------------------------------------*/
+
+/* Absatz für Button */
+.button-absatz {
+    margin:30px 0px 30px 0px;
+    display:inline-flex;
+}
+
+/* Absatz für Button im shortcode fuss*/
+.button-absatz-fuss {
+    margin:30px 10px 30px 0px !important;
+    display:inline-flex;
+}
+
+
+.tribe-events-button-beitrag {
+    padding: 10px;
+    color: #ffffff!important;
+    font-size: 1.0em;
+    background-color: #77BCC7;
+    /* keine runden Ecken */
+    /* border-radius: 4px; */
+    text-decoration: none!important;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 840px) {
+  .tribe-events-button-beitrag {
+      font-size: 0.8em;
+  }
+}
+
+
+a.tribe-events-button-beitrag:focus{
+  color: #fff!important;
+  text-decoration: none;
+}
+
+a.tribe-events-button-beitrag:visited{
+  color: #fff!important;
+  text-decoration: none;
+}
+
+
+/* Hintergrund: gelb */
+a.tribe-events-button-beitrag:hover{
+  color: #fff!important;
+  background-color: #F9B81E;
+}
+
+
+/*----------------------------------------------------------------*/
+/* Ende: Button in Beiträgen
+/* Datum: 23.02.2018
+/* Autor: hgg
+/*----------------------------------------------------------------*/

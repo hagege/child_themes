@@ -1,0 +1,527 @@
+/*
+Theme Name: customizr-pro-child
+Theme URI: https://presscustomizr.com/customizr
+Description: Childtheme for customizr
+Tags: Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, buddypress, custom-menu, custom-colors, featured-images, full-width-template, theme-options, threaded-comments, translation-ready, sticky-post, post-formats, rtl-language-support, editor-style
+Author: Hans-Gerd Gerhards
+Author URI: https://bubenheimer-spieleland.de
+Template: customizr-pro
+Version: 6.2019
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+/* @import url("../customizr-pro/style.css");
+
+@import url("parallax_scrolling.css");
+*/
+
+/*----------------------------------------------------------------*/
+/* 1. Bubenheimer Spieleland
+/* 2. ALLGEMEIN
+/*----------------------------------------------------------------*/
+/* Farbe Bubenheimer Spieleland: green; */ 
+
+/* Titel unter Bildern größer */
+.wp-block-image figcaption  {
+    color: green;
+    font-size: 1.5rem;
+		margin: 0px;
+		padding-top: 12px !important;
+    padding-bottom: 24px !important;
+		background-color: white;
+}
+
+/* Schatten um Bilder */
+.wp-block-image {
+    /* damit der Rand von Text und Bild oben identisch ist */ 
+    padding-top: 35px;
+		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+    filter: drop-shadow(2px 2px 5px #CCCCCC);
+}  
+
+/* Hover - Effekt bei Bildern */
+.wp-block-image:hover {
+		opacity:0.7;
+    /* Kachel etwas größer: */
+  	transform: scale(1.01, 1.01);
+		-webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
+    filter: drop-shadow(5px 5px 3px #CCCCCC);
+}
+
+
+/* ----------------------------------------------------------------------------------------- */
+/* Für Kacheln mit Bildern, die nicht verlinkt sein sollen */
+/* das muss im Editor rechts unter erweitert bei Klasse eingegeben werden */
+/* ----------------------------------------------------------------------------------------- */
+.bild_mit_rand_ohne_link {
+	margin: 10px;
+	opacity:1 !important;
+}
+
+/* Gestaltung der Buttons */
+.wp-block-button {
+    text-decoration: none;
+}
+
+.wp-block-button a:link {
+  text-decoration: none;
+}
+
+
+/*----------------------------------------------------------------*/
+/* sidebar statt rechts mittig */
+/*----------------------------------------------------------------*/
+.text-md-right {
+    text-align: center !important;
+}
+
+/* Wetter - Widget */
+.weather-atlas-wrapper {
+	border: 0px !important;
+}
+
+.weather-atlas-footer {
+    visibility: hidden;
+}
+
+.city_selector_toggle {
+    visibility: hidden;
+}
+
+/* Hover - Effekt bei Bildern 
+.wp-block-column:hover {
+	transform: scale(1.02, 1.02);
+/*	-webkit-animation-name: move;  Safari 4.0 - 8.0 
+  -webkit-animation-duration: 4s;  Safari 4.0 - 8.0 
+  animation-name: move;
+	animation: move 2s;
+
+	transform: translate(-1%, -1%);
+  -ms-transform: translate(-1%, -1%); */
+}
+/*
+.wp-block-column:hover {
+		opacity:0.7;
+		-webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
+  filter: drop-shadow(5px 5px 3px #CCCCCC);
+}
+*/
+
+/* kann wahrscheinlich durch Einstellung im Customizr geändert werden  */ 
+.btn-skin-h-dark {
+    background-color: green !important;
+    color: #fff;
+    border-color: green !important;
+}
+
+
+
+/*----------------------------------------------------------------*/
+/* Fußbereich grün */
+/*----------------------------------------------------------------*/
+
+.footer-skin-dark .footer__wrapper {
+    background: green;
+    font-weight: 500;
+}
+
+
+/* START OF Change Footer Background, Border, Font/Color/Size, Alignment */
+/* Change Background, Border, Font/Color as needed  */
+footer#footer .colophon {
+	background:     none repeat scroll 0 0 green;
+	border-top:     12px solid green;
+}
+/* Change font-size, alignment as needed  */
+footer#footer .colophon  p, footer#footer .colophon  a {
+	color:          white;
+	font-size:      1em ;
+	text-align:     center;
+	line-height:    1.2em ;
+}
+
+/* FOOTER LINK color*/
+footer#footer a {
+color: yellow; 
+} 
+
+/*----------------------------------------------------------------*/
+/* Kacheln responsive anordnen: 
+ * erst dreispaltig, dann einspaltig*/
+/*----------------------------------------------------------------*/
+.has-3-columns > .wp-block-column:last-child {
+  margin-right: 0;
+}
+
+
+
+/*----------------------------------------------------------------*/
+/* Kein Strich über der Beschriftung unter den Kacheln */
+/*----------------------------------------------------------------*/
+.wp-block-image figcaption::before, .wp-caption-text::before {
+    border: none;
+		padding-left: 2px !important;
+}
+
+/*----------------------------------------------------------------*/
+/* Rand links bei Bezeichnung der Kacheln */
+/*----------------------------------------------------------------*/
+.wp-block-image figcaption, .wp-block-image .aligncenter>figcaption, .wp-block-image .alignleft>figcaption, .wp-block-image .alignright>figcaption, .wp-block-image.is-resized>figcaption .wp-block-image figcaption{
+    padding-left: 8px;
+}
+
+
+/*----------------------------------------------------------------*/
+/* Bilder und Fotos immer mit einer gleichen Breite */
+/*----------------------------------------------------------------*/
+.wp-block-image {
+    max-width: 480px;
+}
+
+
+/*----------------------------------------------------------------*/
+/* Ränder geändert, weil sonst die Fotos je nach Display nicht in der Mitte sind */
+/*----------------------------------------------------------------*/
+div.flex-row.row.column-content-wrapper {
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+
+
+/*----------------------------------------------------------------*/
+/* Media Queries 
+/*----------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------*/
+/* Containerbreite
+/*----------------------------------------------------------------*/
+
+@media (min-width: 782px) {
+	.container {
+			max-width: 1200px;
+	}
+}
+
+
+
+/*----------------------------------------------------------------*/
+/* Sidebar
+/*----------------------------------------------------------------*/
+@media (max-width: 1000px) {
+.sidebar .widget-title {
+   font-size: 1.0em;
+	}
+}
+
+/*----------------------------------------------------------------*/
+/* Sidebar: Buttons mit kleinerer Schriftgröße */
+/*----------------------------------------------------------------*/
+@media only screen and (max-width: 1030px) and (min-width: 903px) {
+	.button-beitrag {
+			font-size: 1em;
+	}
+}
+
+@media only screen and (max-width: 902px) and (min-width: 841px) {
+	.button-beitrag {
+			font-size: 0.9em;
+	}
+	/* Schriftart kleiner unter den Kacheln */
+	.wp-block-image figcaption {
+		font-size: 1.2rem !important;	
+	}
+}
+
+@media only screen and (max-width: 840px) and (min-width: 767px) {
+	.button-beitrag {
+			font-size: 0.7em;
+	}
+	/* Schriftart kleiner unter den Kacheln */
+	.wp-block-image figcaption {
+		font-size: 1.2rem !important;	
+	}
+
+}
+
+/*----------------------------------------------------------------*/
+/* Darstellung der Kacheln mit der Bezeichnung */
+/*----------------------------------------------------------------*/
+@media (min-width: 300px) AND (max-width: 781px) {
+  .has-2-columns > .wp-block-column,
+  .has-3-columns > .wp-block-column,
+  .has-4-columns > .wp-block-column {
+    /* flex-basis: calc(50% - 16px); */
+    flex-grow: 0;
+  }
+
+  .has-3-columns {
+    flex-flow: row wrap;
+  }
+
+  .has-3-columns .wp-block-column:first-child {
+    flex-basis: 100%;
+    /* margin-right: 0; */
+  }
+}
+
+
+@media (max-width: 299px) {
+ .has-2-columns > .wp-block-column,
+ .has-3-columns > .wp-block-column,
+ .has-4-columns > .wp-block-column {
+  flex-basis: 100%;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+ }
+}
+
+
+@media (max-width: 781px) {
+ .has-2-columns > .wp-block-column,
+ .has-3-columns > .wp-block-column,
+ .has-4-columns > .wp-block-column {
+  flex-basis: 100%;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100%;
+ }
+}
+
+
+
+/*----------------------------------------------------------------*/
+/* Preise und Öffnungszeiten kleiner und nicht in Großbuchstaben */
+/*----------------------------------------------------------------*/
+.sidebar .widget-title {
+   text-transform: initial;
+}
+
+.details-wrapper {
+   width: 75vw;
+   margin: 0 auto;
+   background-color: #999999;
+   /* box-shadow:0 0 1px 2px #E5E5E5;*/ 	
+}
+
+summary:hover {
+  background-color: #008000; 
+}
+
+summary:focus {
+	 background-color: #008000;
+}
+
+details {
+   padding: .5rem;
+   font: 1rem/1.2 sans-serif;
+}
+
+summary {
+   padding: .25rem 1rem;
+   font: bold 1.25rem/2 sans-serif;
+   background-color: #999999;
+   /*   border: none;
+   border-radius: 3px;
+   box-shadow: 0 -1px 1px 1px rgba(0,0,0,0.5); */
+   color:floralwhite; 
+   cursor: pointer;	
+}
+
+summary::before {
+   padding-right: .25rem;
+}
+
+
+/* unnötig, wird nicht benötigt: */
+/*
+@media (min-width: 2000px)  {
+  .has-2-columns > .wp-block-column,
+  .has-3-columns > .wp-block-column,
+  .has-4-columns > .wp-block-column {
+    flex-basis: calc(50% - 16px);
+    flex-grow: 0;
+  }
+
+  .has-3-columns {
+    flex-flow: row wrap;
+  }
+
+  .has-3-columns .wp-block-column:first-child {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+
+  .has-3-columns > .wp-block-column:nth-child(even) {
+    margin-left: 0;
+    margin-right: 32px;
+  }
+
+  .has-3-columns > .wp-block-column:nth-child(odd) {
+    margin-right: 0;
+  }
+}
+*/
+
+
+/*----------------------------------------------------------------*/
+/* Ken Burns - Effekt bei Sliderbildern und Beitragsbildern       */
+/*             Kein Effekt auf der Hauptseite                     */
+/*----------------------------------------------------------------*/
+
+
+/*
+.flickity-slider {
+	    width: 50%;
+      height: 50vw;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+}
+*/
+
+
+
+/* Slider einmal - Bilder nur einmal */
+img.attachment-slider-full.size-slider-full.wp-post-image.tc-smart-load-skip.czr-smart-loaded.v-centered,
+img.attachment-slider-full.size-slider-full.wp-post-image.tc-smart-load-skip.czr-smart-loaded.h-centered {
+      width: 100%;
+      animation: move 14s ease;
+      /* Add infinite to loop. */
+      
+      -ms-animation: move 14s ease;
+      -webkit-animation: move 14s ease;
+      -animation: move 14s ease;
+      -moz-animation: move 14s ease;
+      position: absolute;
+    }
+
+    @-webkit-keyframes move {
+      0% {
+        -webkit-transform-origin: bottom left;
+        -moz-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+        -o-transform-origin: bottom left;
+        transform-origin: bottom left;	
+        transform: scale(1.0);
+        -ms-transform: scale(1.0);
+        /* IE 9 */
+        
+        -webkit-transform: scale(1.0);
+        /* Safari and Chrome */
+        
+        -o-transform: scale(1.0);
+        /* Opera */
+        
+        -moz-transform: scale(1.0);
+        /* Firefox */
+      }
+      100% {
+        transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        /* IE 9 */
+        
+        -webkit-transform: scale(1.2);
+        /* Safari and Chrome */
+        
+        -o-transform: scale(1.2);
+        /* Opera */
+        
+        -moz-transform: scale(1.2);
+        /* Firefox */
+      }
+}
+
+
+
+
+
+/*----------------------------------------------------------------*/
+/* Credits linksbündig */
+/*----------------------------------------------------------------*/
+footer#footer .colophon p, footer#footer .colophon a {
+    text-align: left;
+}
+
+/*----------------------------------------------------------------*/
+/* Buttons z. B. in der sidebar */
+/*----------------------------------------------------------------*/
+.button-beitrag {
+    padding: 10px;
+    color: #ffffff!important;
+    /* font-size: 1.2em; */
+    background-color: #008000;
+    /* runden Ecken */
+    /* border-radius: 4px; */
+    text-decoration: none!important;
+}
+
+
+/*----------------------------------------------------------------*/
+/* Links */
+/*----------------------------------------------------------------*/
+/* unvisited link */
+a:link {
+	/* background-color: #00800 !important; */
+  color: #008000;
+}
+
+/* visited link */
+a:visited {
+  color: #008000;
+}
+
+/* mouse over link */
+a:hover {
+  color: #008000;
+}
+
+/* selected link */
+a:active {
+  color: #008000;
+}
+
+a:focus{
+  color: #008000;
+  /* text-decoration: none; */
+}
+
+/*----------------------------------------------------------------*/
+/* Navigationsmenü */
+/*----------------------------------------------------------------*/
+.nav__menu .menu-item .nav__link .nav__title {
+	color:inherit;
+}
+
+
+/*----------------------------------------------------------------*/
+/* Anzeigebreite Content */
+/*----------------------------------------------------------------*/
+.content {
+	max-width: 1440px;
+}
+
+/*----------------------------------------------------------------*/
+/* Rahmen für die Preisspalte */
+/*----------------------------------------------------------------*/
+.preis_spalte {
+    flex-basis: calc(50% - 16px);
+    flex-grow: 0;
+	  box-shadow: 5px 5px 10px #888888;
+		padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*----------------------------------------------------------------*/
+/* 2. ALLGEMEIN
+/*----------------------------------------------------------------*/
+
+
+
+/*----------------------------------------------------------------*/
+/* Start: allgemeine Anpassungen für Darstellung
+/* Datum: 18.11.2018
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+

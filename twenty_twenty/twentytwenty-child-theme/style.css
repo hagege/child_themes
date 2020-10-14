@@ -1,0 +1,214 @@
+/*
+Theme Name:   Twenty Twenty Child-Theme 
+Theme URI:    https://haurand.com/
+Description:  Child theme for Twenty Twenty.
+Author:       Hans-Gerd Gerhards 
+Author URI:   https://haurand.com/ 
+Template:     twentytwenty 
+Version:      1.0 (2020-04-08)
+License:      GNU General Public License v2 or later
+License URI:  https://www.gnu.org/licenses/gpl-2.0.html
+*/ 
+
+
+
+/* Breite des Blogs ändern */
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    max-width: 88rem;
+		/* das war bereits drin:
+    width: calc(100% - 4rem);*/
+}
+
+
+/* Rand zwischen Autor und Content verringern:*/
+.post-inner.thin {
+    /* margin-top: 10px !important; */
+    padding-top: 0px;
+}
+
+/* Hintergrundfarbe für Untermenüs */
+body:not(.overlay-header) .primary-menu ul {
+    background-color: whitesmoke;
+}
+
+/* für Contact Form7 */
+span.wpcf7-list-item {
+    display: block;
+}
+
+/* Hintergrund für Textboxen (Kontakt, ...) */  
+.wp-block-cover__inner-container h2  {
+    background: black;
+    opacity: 0.5;
+		padding-top: 20px;
+	  color:white;
+    max-width: 50%;	
+	  padding:30px;
+}
+
+h2.has-primary-color.has-text-color.has-text-align-center {
+    color: white;
+}
+
+/* Schriftart des themes nutzen */
+.entry-content {
+    font-family: unset;
+}
+
+
+/* Menüfarbe ändern */
+.primary-menu a {
+    color: #58B0AD!important;
+}
+
+.primary-menu a:hover {
+    color: red!important;
+}
+
+
+// Weiterlesen Link
+.read-more-button-wrap {
+    text-align: left;
+}
+
+
+/*------------------------------------*/
+/* Start: Parallax Scrolling Effekt
+/* Datum: 24.10.2018
+/* Autor: hgg
+/*------------------------------------*/
+.para_img-1, .para_img-2, .para_img-3 {
+  position: relative;
+  /* opacity: 0.65; */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*------------------------------------*/
+/* Bild 1
+/*------------------------------------*/
+.para_img-1 {
+  background-image: url("http://50plusaachen.de/wp-content/uploads/2020/01/platzhalter_slider_beach-2585264_1280.jpg");
+  min-height: 400px;
+	z-index:-1;
+	/* Verschiebung innerhalb des Containers */
+	/* transform: translateZ(3px)		scale(1.125); */
+
+
+/*  margin-left:-410px;
+  margin-right:-410px;  */
+
+
+/*  margin-left:-410px;
+  margin-right:-410px;  */
+}
+
+/*------------------------------------*/
+/* Bild 2
+/*------------------------------------*/
+.para_img-2 {
+ background-image:  url("http://50plusaachen.de/wp-content/uploads/2017/03/platzhalter_karl_der_grosse_seal-1504259_640.jpg"); 
+  /* background-color: #F9B81E; */
+  min-height: 400px;
+	z-index:-1;
+	/* Verschiebung innerhalb des Containers */
+/* scrollt runter: */
+	transform: translateZ(3px)		scale(1.125);
+	transform: perspective(1000px) translateZ(120px);
+	opacity:0.9;
+}
+
+/*------------------------------------*/
+/* Bild 3
+/*------------------------------------*/
+.para_img-3 {
+  background-image: url("http://50plusaachen.de/wp-content/uploads/2020/01/aachen_dom_fruehling_1.jpg");
+  min-height: 400px;
+	z-index:-1;
+		transform: translateZ(3px)		scale(1.125);
+	transform: perspective(1000px) translateZ(120px);
+	opacity:0.9;
+}
+
+/*------------------------------------*/
+/* Ende: Parallax Scrolling Effekt
+/* Datum: 24.10.2018
+/* Autor: hgg
+/*------------------------------------*/
+
+
+/* nicht ideal, weil nur auf der Hauptseite der Titel ausgeblendet werden soll */
+header.entry-header.has-text-align-center.header-footer-group {
+    display: none;
+}
+
+/*------------------------------------*/
+/* im Stapel ganz hinten - wichtig für sticky menue */
+/*------------------------------------*/
+.stapel_hinten {
+	z-index:-1;
+}
+
+
+/* Erster Eintrag mit Abstand nach oben */
+.entry-content > *:first-child {
+		/* Der Rand nach oben sollte mindestens den Wert für height im sticky menue haben */
+    margin-top: 120px;
+}
+
+
+
+/*------------------------------------*/
+/* sticky header */
+/*------------------------------------*/
+.header-inner.section-inner {
+    background: #fff;
+    height: 120px;
+    z-index: 170;
+	  padding: 20px;
+    max-width: 100%;
+    /* margin: 10px; */
+    /* padding: 30px; */
+    /* border-bottom: 1px solid #dadada; */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+
+/*------------------------------------*/
+/* nicht genutzt */
+/*------------------------------------*/
+
+/*
+.wp-block-cover.alignfull.has-background-dim {
+    margin-top: 100px;
+}
+
+/*.color-accent, .color-accent-hover:hover, .color-accent-hover:focus, :root .has-accent-color, .has-drop-cap:not(:focus):first-letter, .wp-block-button.is-style-outline, a {
+    color: #6d6d6d;
+}
+
+.post-inner {
+    background-color: white;
+}
+
+.entry-content > .alignwide {
+    background-color: bisque;
+}
+
+
+header.entry-header.has-text-align-center.header-footer-group {
+    display: none;
+}
+
+.post-inner {
+		background-color: white;
+    padding-top: 0rem;
+}
+*/
