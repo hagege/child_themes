@@ -310,7 +310,8 @@ function filter_the_content_in_the_main_loop( $content ) {
         // Den HTML Teil für die Schrift könnt ihr beliebig ändern oder erweitern
         $ackids_button = '<div class="ackids_container"><div class="mitglied"><a class="button-mitglied" href="https://steadyhq.com/de/aachenerkinder" target="_blank" rel="noopener noreferrer">Werde Mitglied</a></div><div class="mitglied_beschreibung">Werde als Besucher oder Veranstalter Mitglied bei aachenerkinder.de und unterstütze unsere Arbeit.</div></div>';
         // spezielle Anzeige wegen abgesagter Events, hgg, 19.3.2020
-        $abgesagte_events ='<div class="ackids_container"><div class="abgesagt"><strong>Bitte beachten:</strong> Mittlerweile werden wieder viele Veranstaltungen angeboten, die wir veröffentlichen. In vielen Fällen werden bestimmte Auflagen (Corona) genannt. Bleibt gesund!</div></div>';
+        $abgesagte_events = '<div class="ackids_container"><div class="mitglied"><a class="button-mitglied" href="https://aachenerkinder.de/corona-virus-staedteregion-aachen/">Infos zu Corona</a></div><div class="mitglied_beschreibung">Alle Infos zu Corona in der Städteregion Aachen. Im November 2020 finden aufgrund der aktuellen Bestimmungen fast keine Veranstaltungen statt.</div></div>';
+        // $abgesagte_events ='<div class="ackids_container"><div class="abgesagt"><strong>Bitte beachten:</strong> Im November 2020 finden so gut wie keine Veranstaltung statt.  Bleibt gesund!</div></div>';
         // return $ackids_button . $content . $ackids_button;
         return $abgesagte_events . $content . $ackids_button;
     }
