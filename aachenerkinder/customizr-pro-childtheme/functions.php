@@ -310,7 +310,7 @@ function filter_the_content_in_the_main_loop( $content ) {
         // Den HTML Teil für die Schrift könnt ihr beliebig ändern oder erweitern
         $ackids_button = '<div class="ackids_container"><div class="mitglied"><a class="button-mitglied" href="https://steadyhq.com/de/aachenerkinder" target="_blank" rel="noopener noreferrer">Werde Mitglied</a></div><div class="mitglied_beschreibung">Werde als Besucher oder Veranstalter Mitglied bei aachenerkinder.de und unterstütze unsere Arbeit.</div></div>';
         // spezielle Anzeige wegen abgesagter Events, hgg, 19.3.2020
-        $abgesagte_events = '<div class="ackids_container"><div class="mitglied"><a class="button-mitglied" href="https://aachenerkinder.de/corona-virus-staedteregion-aachen/">Infos zu Corona</a></div><div class="mitglied_beschreibung">Alle Infos zu Corona in der Städteregion Aachen. Im November 2020 finden aufgrund der aktuellen Bestimmungen fast keine Veranstaltungen statt.</div></div>';
+        $abgesagte_events = '<div class="ackids_container"><div class="mitglied"><a class="button-mitglied" href="https://aachenerkinder.de/corona-virus-staedteregion-aachen/">Infos zu Corona</a></div><div class="mitglied_beschreibung">Alle Infos zu Corona in der Städteregion Aachen - täglich aktualisiert. Im November 2020 finden aufgrund der aktuellen Bestimmungen fast keine Veranstaltungen statt.</div></div>';
         // $abgesagte_events ='<div class="ackids_container"><div class="abgesagt"><strong>Bitte beachten:</strong> Im November 2020 finden so gut wie keine Veranstaltung statt.  Bleibt gesund!</div></div>';
         // return $ackids_button . $content . $ackids_button;
         return $abgesagte_events . $content . $ackids_button;
@@ -411,5 +411,30 @@ return $content_text;
 /* Datum: 04.01.2020
 /* Autor: hgg
 /*----------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------*/
+/* Start:  Block pattern - Button für ackids
+/* Datum: 11.11.2020
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+register_block_pattern(
+   'button-card-pattern',
+     array(
+     'title' => __( 'ackids-Button', 'button-block-pattern' ),
+     'description' => _x( 'Button für ackids', 'Button für ackids', 'button-block-pattern' ),
+     'categories'  => array('buttons'),
+     'content'     => 
+        "<!-- wp:paragraph -->
+        <p><a class=\"tribe-events-button-beitrag\" href=\"https://aachenerkinder.de/wp-content/uploads/2020/11/Bekanntmachung_2020_weiterfuehrende_schulen.pdf\">Weitere Infos</a> </p>
+        <!-- /wp:paragraph -->",
+   )
+ );
+/*----------------------------------------------------------------*/
+/* Ende:  Block pattern - Button für ackids
+/* Datum: 11.11.2020
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+
 
 ?>
