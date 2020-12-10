@@ -40,7 +40,7 @@
 .team-columns {
     /* margin: 0 15%; */
     background-color: #263F5F;
-		padding: 50px;
+	padding: 50px;
 }
 
 /* Hintergrundfarbe Teams-Seite */
@@ -78,15 +78,21 @@ body .container  {
 @media (max-width:1099px) {
     .team-columns {
 	    display: unset;
-			background-color: unset;
+		background-color: unset;
     }
 	  .team-column {
 		  background-color: #263F5F; 
-			padding: 50px;
-	  }
-		.wp-block-column:not(:first-child) {
-  	  margin-left: 0px;
-		}
+		  padding: 50px;
+	}
+	  .team-column:not(:first-child) {
+  	      margin-left: 0px;
+	}
+}
+
+/* Rand beim Text in Spalten - Hauptseite */
+.spaltenrand {
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 
