@@ -63,6 +63,35 @@
 		color: white!important;
 }
 
+
+/* ----------------------------- */
+/* Pfeil bei Accordion-Block     */
+/* ----------------------------- */
+
+.wp-block-hotblocks-accordion .accordion-heading::after {
+  content: ' ';
+  background-image: url(http://test.dev-haurand.de/wp-content/uploads/2020/12/Button_blau_runter.png);
+  background-size:contain;
+	background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
+}
+
+
+.wp-block-hotblocks-accordion .accordion-heading.active_tab::after {
+  content: ' ';
+  background-image: url(http://test.dev-haurand.de/wp-content/uploads/2020/12/Button_rot_rauf.png);
+  background-size:contain;
+	background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
+}
+
+
+.wp-block-hotblocks-accordion .accordion-heading {
+    font-size: 1.1em;
+}
+
 /* ----------------------------- */
 
 
@@ -144,33 +173,7 @@
 */
 
 
-/* ----------------------------- */
-/* Pfeil bei Accordion-Block     */
-/* ----------------------------- */
 
-.wp-block-hotblocks-accordion .accordion-heading::after {
-  content: ' ';
-  background-image: url(http://test.dev-haurand.de/wp-content/uploads/2020/12/Button_blau_runter.png);
-  background-size:contain;
-	background-repeat: no-repeat;
-  height: 30px;
-  width: 30px;
-}
-
-
-.wp-block-hotblocks-accordion .accordion-heading.active_tab::after {
-  content: ' ';
-  background-image: url(http://test.dev-haurand.de/wp-content/uploads/2020/12/Button_rot_rauf.png);
-  background-size:contain;
-	background-repeat: no-repeat;
-  height: 30px;
-  width: 30px;
-}
-
-
-.wp-block-hotblocks-accordion .accordion-heading {
-    font-size: 1.1em;
-}
 
 /* ----------------------------- */
 
