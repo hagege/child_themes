@@ -279,12 +279,24 @@ header.entry-header {
 
 /* ----------------------------- */
 /* Blauer Hintergrund bei Team */
+/* funktioniert nicht */
 /* ----------------------------- */
 
-body.page-id-50, body.page-id-50.one-container .container {
+/*body.page-id-50, body.page-id-50.one-container .container {
     background-color: #263f5f;
 }
 
+#post-50 {
+    margin: 0px;
+	  background-color: #263f5f!important;
+}
+
+body.page-id-50.one-container, body.page-id-50.separate-container
+{
+    padding: 0px 40px 100px 40px;
+    background-color: #263F5F;
+} 
+*/
 
 /* ----------------------------- */
 /* Oberer Rand am Header 
