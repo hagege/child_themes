@@ -40,16 +40,8 @@
 .team-columns {
     /* margin: 0 15%; */
     background-color: #263F5F;
-	padding: 50px;
+		padding: 50px;
 }
-
-/* Hintergrundfarbe Teams-Seite */
-body.page-id-50.one-container, body.page-id-50.separate-container,
-body .container  {
-    padding: 0px 40px 100px 40px;
-    background-color: #263F5F;
-} 
-
 
 .wp-block-hotblocks-accordion .accordion-content {
     /* display: none; */
@@ -94,8 +86,6 @@ body .container  {
     margin-left: 1em;
     margin-right: 1em;
 }
-
-
 
 
 
@@ -262,12 +252,20 @@ body .container  {
 /* Rand für Text-Container (Spalten) */
 /* ----------------------------- */
 
-@media (min-width: 782px) {
+/* @media (min-width: 782px) {
 	.wp-block-columns {
 		margin: 0 15%;
 	}
 }
+*/
 
+@media (min-width: 782px) {
+.spalten_mit_rand {
+		margin: 0 15%;
+	}
+}
+
+/* Header nicht zeigen */
 header.entry-header {
     display: none;
 }
@@ -290,3 +288,45 @@ body.page-id-50 .inside-article {
     background-color: #263f5f;
 }
 
+
+/* ----------------------------- */
+/* Oberer Rand am Header 
+
+.separate-containers.no-sidebar .site-main {
+    margin-top: 5px;
+}
+
+article#post-50 {
+    margin: 0px;
+	  background-color: #263f5f;
+}
+
+.content-area {
+    background-color: #9a9a9a;
+}
+
+.inside-header.grid-container {
+    padding: 0px 20px 0px 20px;
+}
+
+/* .single.separate-containers .inside-article, .page.separate-containers .inside-article {
+    background-color: #263f5f;
+}
+*/
+
+/* Sonst wird bei News die graue Menülinie überdeckt 
+
+.entry-content:not(:first-child), .entry-summary:not(:first-child){
+    margin-top: 5px;
+}
+*/
+
+
+
+/* ----------------------------- 
+    margin-top: 3.8em;
+    padding-top: 3em;
+    background-color: #263F5F;
+    color: white;
+}
+*/
