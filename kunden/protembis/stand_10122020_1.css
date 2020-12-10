@@ -43,6 +43,14 @@
 		padding: 50px;
 }
 
+/* Hintergrundfarbe Teams-Seite */
+body.page-id-50.one-container, body.page-id-50.separate-container,
+body .container  {
+    padding: 0px 40px 100px 40px;
+    background-color: #263F5F;
+} 
+
+
 .wp-block-hotblocks-accordion .accordion-content {
     /* display: none; */
     padding: 15px;
@@ -276,6 +284,7 @@ header.entry-header {
 body.page-id-50, body.page-id-50.one-container .container {
     background-color: #263f5f;
 }
+
 
 /* ----------------------------- */
 /* Oberer Rand am Header 
