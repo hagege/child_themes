@@ -1,0 +1,357 @@
+/* CSS Document */         
+/* ----------------------------- */
+/* Bilder mit Dreieck nur unten */
+
+
+.dreieck {
+/*    background: url(http://d.pr/i/eqn9+);
+    height: 200px;*/
+    position: relative;
+}
+
+.dreieck:before, .dreieck:after {
+    box-sizing: border-box;
+    content: " ";
+    position: absolute;
+    top:0;
+    display: block;
+    width: 50%;
+    height: 100%;
+    border-bottom: 30px solid white; 
+/*    border-bottom-color: white; */
+}
+
+.dreieck:before {
+    left: 0;
+    border-right: 50px solid transparent; 
+    border-left: 0;
+}
+
+.dreieck:after {
+    right: 0;
+    border-left: 50px solid transparent;
+    border-right: 0;
+}
+/* ----------------------------- */
+
+
+/* ----------------------------- */
+/* Spalten auf der Teams-Seite */
+.team-columns {
+    /* margin: 0 15%; */
+    background-color: #263F5F;
+		padding: 50px;
+}
+
+.wp-block-hotblocks-accordion .accordion-content {
+    /* display: none; */
+    padding: 15px;
+    background-color: #E1E7F0;
+    color: #263F5F;
+}
+
+/* Accordion - unteren Rand vergrößern */
+.wp-block-hotblocks-accordion {
+    padding-bottom: 40px;
+    background-color: #3D6AA1;
+	  border-bottom: 0px;
+}
+
+
+.wp-block-hotblocks-accordion .accordion-heading {
+    border-top: 0px;
+		color: white!important;
+}
+
+/* ----------------------------- */
+
+
+/* Spalten von 3 auf 1 */
+@media (max-width:1099px) {
+    .team-columns {
+	    display: unset;
+			background-color: unset;
+    }
+	  .team-column {
+		  background-color: #263F5F; 
+			padding: 50px;
+	  }
+		.wp-block-column:not(:first-child) {
+  	  margin-left: 0px;
+		}
+}
+
+
+/* ----------------------------- */
+.post-50 {
+    margin-top: 3.8em;
+    padding-top: 3em;
+    background-color: #263F5F;
+    color: white;
+}
+
+
+/*
+.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .one-container .site-content, .inside-page-header, .wp-block-group__inner-container {
+    padding: 0px 0px 0px 0px;
+}
+
+/* .separate-containers.no-sidebar .site-main {
+    margin-top: -24px!important;
+}
+*/
+
+
+
+
+/* ----------------------------- */
+/* Oberer Rand am Header */
+
+.separate-containers.no-sidebar .site-main {
+    margin-top: 5px;
+}
+
+article#post-50 {
+    margin: 0px;
+	  background-color: #263f5f;
+}
+
+.content-area {
+    background-color: #9a9a9a;
+}
+
+.inside-header.grid-container {
+    padding: 0px 20px 0px 20px;
+}
+
+/* .single.separate-containers .inside-article, .page.separate-containers .inside-article {
+    background-color: #263f5f;
+}
+*/
+
+body.page-id-50, body.page-id-50.one-container .container {
+    background-color: #263f5f;
+}
+
+
+
+/* ----------------------------- */
+
+/* ----------------------------- */
+/* Navigation                    */
+/* ----------------------------- */
+
+@media (min-width: 769px) {
+    .main-navigation .menu > .menu-item > a::after
+	{
+        content: "";
+        position: absolute;
+        right: 0;
+        /* left: 50%; */
+        bottom: -5px;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        display: block;
+        width: 0;
+        height: 5px;
+				color: #622523;
+        background-color: currentColor;
+        transition: 0.3s width ease;
+    }
+    .main-navigation .menu > .menu-item.current-menu-item > a::after,
+    .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
+    .main-navigation .menu > .menu-item > a:hover::after {
+        width: 50%;
+    }
+}
+
+/* Sonst wird bei News die graue Menülinie überdeckt */
+
+.entry-content:not(:first-child), .entry-summary:not(:first-child){
+    margin-top: 5px;
+}
+
+
+
+
+
+/* funktioniert nicht:
+.main-navigation .menu > .menu-item > a:active::after {
+	      content: "";
+        position: absolute;
+        right: 0;
+        bottom: -5px;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        display: block;
+        width: 0;
+        height: 5px;
+				color: #263F5F;
+        background-color: currentColor;
+        transition: 0.3s width ease;
+}
+*/
+/* Farben für Untermenü - nicht verwendet
+.main-navigation ul ul
+{
+    color: white;
+    background-color: #3D6AA1;
+}
+
+.main-navigation ul ul a:hover {
+    color: #622523;
+    background-color: #E1E7F0;
+	  text-decoration:underline;
+		text-decoration-color:#BCBCBC;
+}
+
+/* Alternative für das Menü */
+/*.main-navigation .menu > .menu-item > a:hover {
+	text-decoration:underline;
+	text-decoration-color:red;
+}
+*/
+
+
+/* ----------------------------- */
+
+
+/* Farbe für Dreieck 
+    fill: #622621;
+}
+
+
+/* Kein Rand unter dem Dreieck, damit das Bild direkt über dem Dreick erscheint 
+.entry-content > [class*="wp-block-"]:not(:last-child) {
+    margin-bottom: 0;
+}
+*/
+
+
+/* ----------------------------- */
+/* Pfeil bei Accordion-Block     */
+/* ----------------------------- */
+
+.wp-block-hotblocks-accordion .accordion-heading::after {
+  content: ' ';
+  background-image: url(http://test.dev-haurand.de/wp-content/uploads/2020/12/Button_blau_runter.png);
+  background-size:contain;
+	background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
+}
+
+
+.wp-block-hotblocks-accordion .accordion-heading.active_tab::after {
+  content: ' ';
+  background-image: url(http://test.dev-haurand.de/wp-content/uploads/2020/12/Button_rot_rauf.png);
+  background-size:contain;
+	background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
+}
+
+
+.wp-block-hotblocks-accordion .accordion-heading {
+    font-size: 1.1em;
+}
+
+/* ----------------------------- */
+
+
+/* Beitragsbreite
+.entry-content {
+    margin: 0 17%;
+}
+*/
+
+
+/**
+ * Smooth scrolling inside an element
+
+.smooth_scroll {
+	scroll-behavior: smooth;
+}
+ */
+
+
+/* ----------------------------- */
+/* Text auf Bildern je nach device anpassen */
+/* ----------------------------- */
+
+
+.fadeInOut_3 {
+    opacity: 0;
+    -webkit-animation: fadein_3 15s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein_3 15s; /* Firefox < 16 */
+    -ms-animation: fadein_3 15s; /* Internet Explorer */
+    -o-animation: fadein_3 15s; /* Opera < 12.1 */
+    animation: fadein_3 15s;
+}
+
+ @keyframes fadein_3 {
+    0% { opacity: 0; }
+    80%   { opacity: 1; }
+    100% {opacity: 0;}
+}
+
+
+/* Textzeile für Device (ganz oben) */
+@media only screen and (min-width: 551px) {
+	p.has-text-align-center.fadeInOut_3.has-large-font-size {
+			font-size: 65px;
+		}
+}
+@media only screen and (min-width: 401px) and (max-width: 550px) {
+	p.has-text-align-center.fadeInOut_3.has-large-font-size {
+			font-size: 35px;
+		}
+}
+@media only screen and (max-width: 400px) {
+	p.has-text-align-center.fadeInOut_3.has-large-font-size {
+			font-size: 25px;
+		}
+}
+
+
+/* Textzeile für die beiden unteren Schriften auf dem Bild */
+@media only screen and (min-width: 551px) {
+	p.has-text-align-left.animated.bounceInRight.delay-3s {
+			font-size: 65px;
+		}
+}
+@media only screen and (min-width: 401px) and (max-width: 550px) {
+	p.has-text-align-left.animated.bounceInRight.delay-3s {
+			font-size: 35px;
+		}
+}
+@media only screen and (max-width: 400px) {
+	p.has-text-align-left.animated.bounceInRight.delay-3s {
+			font-size: 25px;
+		}
+}
+
+
+/* ----------------------------- */
+/* Rand für Text-Container (Spalten) */
+/* ----------------------------- */
+
+@media (min-width: 782px) {
+	.wp-block-columns {
+		margin: 0 15%;
+	}
+}
+
+header.entry-header {
+    display: none;
+}
+
+
+/* ----------------------------- */
+/* hover bei Buttons */
+/* ----------------------------- */
+
+.wp-block-button__link:active, .wp-block-button__link:focus, .wp-block-button__link:hover, .wp-block-button__link:visited {
+    color: #fff;
+    background-color: #622523!important;
+}
