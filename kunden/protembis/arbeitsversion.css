@@ -60,11 +60,13 @@
 }
 
 
-/* Spaltenbreite max. 400px 
-.team-column {
-	max-width:400px;
+/* Containerspalte enthält die 3 Spalten */
+.containerspalte {
+	max-width: 1300px;
+	display: block;
+  margin-left: auto;
+  margin-right: auto 
 }
-*/
 /* ----------------------------- */
 
 
@@ -95,6 +97,7 @@
     max-width: 400px;
 }
 */
+
 
 
 /* ----------------------------- */
