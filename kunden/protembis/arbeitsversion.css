@@ -47,7 +47,8 @@
 /* Spalten von 3 auf 1 */
 @media (max-width:1099px) {
     .team-columns {
-	  display: unset;
+		/* folgende Zeile sorgt dafür, dass die Spalten untereinander gezeigt werden */
+	  display: unset; 
 		background-color: unset;
     }
 	  .team-column {
@@ -75,9 +76,17 @@
 		margin-right: auto 
 	}
 }
+
+/* Spalte zentriert 70% */
+.spalte-zentriert{
+		display: block;
+		max-width: 70%;
+		margin-left: auto;
+		margin-right: auto 
+}
 /* ----------------------------- */
 
-
+/* Inhalt Accordion */
 .wp-block-hotblocks-accordion .accordion-content {
     /* display: none; */
     padding: 15px;
@@ -85,26 +94,30 @@
     color: #263F5F;
 }
 
-/* Accordion - unteren Rand vergrößern */
+/* Accordion - max. Breite begrenzen */
 .wp-block-hotblocks-accordion {
     padding-bottom: 0px;
-    background-color: #3D6AA1;
+    background-color: #BCBCBC;
 	  border-bottom: 0px;
 	  max-width: 400px;
 }
 
-
+/* Heading Accordion */
 .wp-block-hotblocks-accordion .accordion-heading {
     border-top: 0px;
 		color: white!important;
 }
 
-
-/* Textblock begrenzen 
-.wp-block-hotblocks-accordion {
-    max-width: 400px;
+/* Schriftgröße Heading Accordion */
+.wp-block-hotblocks-accordion .accordion-heading {
+    font-size: 1.1em;
 }
-*/
+
+/* Textblock mehr an das Bild ranrücken */
+p.has-text-align-center.has-medium-font-size {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
 
 
 
@@ -150,24 +163,22 @@
 }
 
 
-.wp-block-hotblocks-accordion .accordion-heading {
-    font-size: 1.1em;
-}
-
-/* Textblock mehr an das Bild ranrücken */
-p.has-text-align-center.has-medium-font-size {
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
 
 /* ----------------------------- */
 
 
 
-/* Rand beim Text in Spalten - Hauptseite */
+/* Rand beim Text in Spalten auf der Hauptseite */
 .spaltenrand {
     margin-left: 1em;
     margin-right: 1em;
+}
+
+
+.videospalte {
+    margin-left: 1em;
+    margin-right: 1em;
+		height: 200px;
 }
 
 
@@ -209,44 +220,6 @@ p.has-text-align-center.has-medium-font-size {
     margin: 0px;
     border-top: 5px solid #9a9a9a;
 }
-
-
-
-
-
-
-/* Farbe für Dreieck 
-    fill: #622621;
-}
-
-
-/* Kein Rand unter dem Dreieck, damit das Bild direkt über dem Dreick erscheint 
-.entry-content > [class*="wp-block-"]:not(:last-child) {
-    margin-bottom: 0;
-}
-*/
-
-
-
-
-/* ----------------------------- */
-
-
-/* Beitragsbreite
-.entry-content {
-    margin: 0 17%;
-}
-*/
-
-
-/**
- * Smooth scrolling inside an element
-
-.smooth_scroll {
-	scroll-behavior: smooth;
-}
- */
-
 
 /* ----------------------------- */
 /* Text auf Bildern je nach device anpassen */
@@ -341,9 +314,50 @@ header.entry-header {
 /* ----------------------------- */
 /* Blauer Hintergrund bei Team */
 /* ----------------------------- */
-body.page-id-50 .inside-article {
-    background-color: #263f5f;
+body.page-id-990 .inside-article {
+    background-color: #E1E7F0;
 }
+
+
+/* ----------------------------- */
+/* Nicht mehr genutzt            */
+/* ----------------------------- */
+
+
+
+/* Farbe für Dreieck 
+    fill: #622621;
+}
+
+
+/* Kein Rand unter dem Dreieck, damit das Bild direkt über dem Dreick erscheint 
+.entry-content > [class*="wp-block-"]:not(:last-child) {
+    margin-bottom: 0;
+}
+*/
+
+
+
+
+/* ----------------------------- */
+
+
+/* Beitragsbreite
+.entry-content {
+    margin: 0 17%;
+}
+*/
+
+
+/**
+ * Smooth scrolling inside an element
+
+.smooth_scroll {
+	scroll-behavior: smooth;
+}
+ */
+
+
 
 
 /* ----------------------------- */
