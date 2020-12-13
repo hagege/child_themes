@@ -59,7 +59,7 @@
 	  .team-column:not(:first-child) {
   	  margin-left: 0px;
 	}
-	.containerspalte {
+	.containerspalte_team {
 		max-width: 800px;
 		margin-left: auto;
 		margin-right: auto 
@@ -67,9 +67,9 @@
 }
 
 
-/* Containerspalte enthält die 3 Spalten */
+/* containerspalte_team enthält die 3 Spalten */
 @media (min-width:1100px) {
-	.containerspalte {
+	.containerspalte_team {
 		/* max-width: 1300px; */
 		display: block;
 		margin-left: auto;
@@ -84,9 +84,24 @@
 		margin-left: auto;
 		margin-right: auto 
 }
+
+.containerspalte_haupt {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+
+/* Beiträge mit Rand links und rechts */
+.entry-content {
+    margin-right: 12%;
+    margin-left: 12%;
+}
+
 /* ----------------------------- */
 
+/* ----------------------------- */
 /* Inhalt Accordion */
+/* ----------------------------- */
 .wp-block-hotblocks-accordion .accordion-content {
     /* display: none; */
     padding: 15px;
