@@ -39,7 +39,7 @@
 /* ----------------------------- */
 /* Spalten auf der Teams-Seite */
 .team-columns {
-    background-color: #263F5F;
+    background-color: #E1E7F0;
 		padding: 50px;
 }
 
@@ -249,6 +249,12 @@ p.has-text-align-center.has-medium-font-size {
 .separate-containers .site-main {
     margin: 0px;
     border-top: 5px solid #9a9a9a;
+}
+
+/* Hover bei Untermenüpunkten */
+.main-navigation .main-nav ul ul li[class*="current-menu-"] > a:hover, .main-navigation .main-nav ul ul li[class*="current-menu-"].sfHover > a {
+    color: #eaeaea;
+    background-color: #622523;
 }
 
 /* ----------------------------- */
