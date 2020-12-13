@@ -91,11 +91,23 @@
 }
 
 
-/* Beiträge mit Rand links und rechts */
-.entry-content {
-    margin-right: 12%;
-    margin-left: 12%;
+@media (min-width:1200px) {
+article.post {
+    max-width: 1200px;
+    margin-left: 17%;
+    margin-right: 15%;
 }
+
+/* Beitragsbreite bei news */
+@media (min-width:769px and max-width: 1199px) {
+article.post {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+	
+
+
+	
 
 /* ----------------------------- */
 
