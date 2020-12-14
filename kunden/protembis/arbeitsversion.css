@@ -140,11 +140,35 @@ article.post {
 
 
 
-@media only screen and (max-width:1099px) {
+
+
+
+@media only screen and (max-width:399px) {
 h4.accordion-heading {
-    font-size: 1.1em;
+    font-size: 0.55em;
 	}
 }
+
+@media only screen and (min-width:400px) {
+h4.accordion-heading {
+    font-size: 0.6em;
+	}
+}
+
+
+@media only screen and (min-width:500px) {
+h4.accordion-heading {
+    font-size: 0.8em;
+	}
+}
+
+@media only screen and (min-width:700px) {
+h4.accordion-heading {
+    font-size: 1.0em;
+	}
+}
+
+
 
 @media only screen and (min-width:1100px) {
 h4.accordion-heading {
