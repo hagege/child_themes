@@ -77,6 +77,12 @@
 	}
 }
 
+
+
+
+
+
+
 /* Spalte zentriert 70% */
 .spalte-zentriert{
 		display: block;
@@ -113,9 +119,9 @@ article.post {
 	
 
 /* ----------------------------- */
-
+/* TEAM -Seite                   */
 /* ----------------------------- */
-/* Inhalt Accordion */
+/* Inhalt Accordion              */
 /* ----------------------------- */
 .wp-block-hotblocks-accordion .accordion-content {
     /* display: none; */
@@ -132,16 +138,38 @@ article.post {
 	  max-width: 400px;
 }
 
+
+
+@media only screen and (max-width:1099px) {
+h4.accordion-heading {
+    font-size: 1.1em;
+	}
+}
+
+@media only screen and (min-width:1100px) {
+h4.accordion-heading {
+    font-size: 0.75em;
+	}
+}
+
+@media only screen and (min-width:1400px) {
+h4.accordion-heading {
+    font-size: 1.1em;
+	}
+}
+
+
+
+
 /* Heading Accordion */
 .wp-block-hotblocks-accordion .accordion-heading {
     border-top: 0px;
 		color: white!important;
 }
 
-/* Schriftgröße Heading Accordion */
-.wp-block-hotblocks-accordion .accordion-heading {
-    font-size: 1.1em;
-}
+
+
+
 
 /* Textblock mehr an das Bild ranrücken */
 p.has-text-align-center.has-medium-font-size {
@@ -157,6 +185,9 @@ p.has-text-align-center.has-medium-font-size {
 figure.aligncenter.size-large.is-resized {
     display: flex;
 }
+
+
+
 
 
 
@@ -204,7 +235,8 @@ figure.aligncenter.size-large.is-resized {
 
 
 /* ----------------------------- */
-
+/* HAUPTSEITE                    */
+/* ----------------------------- */
 
 
 /* Rand beim Text in Spalten auf der Hauptseite */
