@@ -149,6 +149,15 @@ p.has-text-align-center.has-medium-font-size {
     margin-bottom: 0px;
 }
 
+.team_foto {
+	margin-bottom:0px;
+  display: flex;
+}
+
+figure.aligncenter.size-large.is-resized {
+    display: flex;
+}
+
 
 
 /* ----------------------------- */
