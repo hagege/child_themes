@@ -424,7 +424,7 @@ function filter_the_content_in_the_main_loop( $content ) {
         // spezielle Anzeige wegen abgesagter Events, hgg, 19.3.2020
         // nicht auf der Hauptseite zeigen, hgg, 21.9.2020:
         if ( !is_front_page() ) {
-          $abgesagte_events ='<div class="ackids_container"><div class="abgesagt">Bitte beachten: Mittlerweile werden wieder viele Veranstaltungen angeboten, die wir veröffentlichen. In vielen Fällen werden bestimmte Auflagen (Corona) genannt. Bleibt gesund!</div></div>';
+          $abgesagte_events ='<div class="ackids_container"><div class="abgesagt">Bitte beachten: Im Dezember 2020 finden aufgrund der aktuellen Bestimmungen fast keine Veranstaltungen statt.</div></div>';
               // return $ackids_button . $content . $ackids_button;
           return $abgesagte_events . $content;
         }
