@@ -262,14 +262,14 @@ p.has-text-align-center.has-medium-font-size {
 a.oben.__mPS2id._mPS2id-h {
     background: url(http://test.dev-haurand.de/wp-content/uploads/2020/12/Button_blau_hoch.png) no-repeat;
 		padding-bottom: 60px;
-    padding-top: 120px;
+    margin-top: 120px; 
 }
 
 /* hover bei Button unten */
 a.oben.__mPS2id._mPS2id-h:hover {
     background: url(http://test.dev-haurand.de/wp-content/uploads/2020/12/Button_rot_rauf.png) no-repeat;
 		padding-bottom: 60px;
-    padding-top: 120px;
+    margin-top: 120px; 
 }
 
 /* damit image button unten nicht gezeigt wird */
