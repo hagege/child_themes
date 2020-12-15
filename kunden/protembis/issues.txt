@@ -1,0 +1,8 @@
+Ungelöste Probleme:
+
+15.12.2020: Foto unter teams wird nicht korrekt auf einem Mini-iPad angezeigt
+    Ab Zeile 67 würde das Problem zwar auf dem Gerät beheben, aber verursacht dann Probleme auf anderen Geräten:
+    	.team_foto {
+		/* Höhe der Fotos festlegen */
+		height: 408px; 
+        }
