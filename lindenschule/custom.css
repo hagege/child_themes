@@ -1,0 +1,67 @@
+/* CSS Document */
+
+.events-archive.events-gridview #tribe-events-content.tribe-events-month .hentry.vevent.type-tribe_events {
+    width: 100%;
+    margin: 0;
+    padding: 0%;
+}
+
+
+/* https://theeventscalendar.com/support/forums/topic/calendar-view-event-title-font-too-big/ */ 
+h3.tribe-events-month-event-title a, h3.tribe-events-month-event-title a:visited {
+  font-size: 11px !important;
+	color:#51545C !important; 
+}
+
+#tagline {
+    font-size:40px !important;
+    text-align:right !important;
+}
+
+h3.tribe-events-month-event-title.entry-title.summary{
+	font-size: 14px !important;
+}
+
+/* Farbliche Gestaltung im Untermenue */
+ul.nav-menu a {
+      color: #ffffff !important;
+      border-style: none !important;
+      text-shadow: none;
+}
+.menu-header {
+    border-color: #e0dddd!important;
+    border-style: none!important;
+    border-width: 0px!important;
+}
+
+ul.nav-menu ul {
+    border-style: none!important;
+}
+
+/* Logo nicht über dem Menü anzeigen */
+.header-logo-container img {
+    display: none;
+}
+
+/* Box über Terminen nicht anzeigen */
+.alert {
+    display: none;
+}
+
+/* Menue soll ausgeklappt grau sein */ 
+.dropdown-item {
+    background-color: green;
+		/* color: green;  */
+		/* grün: #249a25; */
+}
+
+/*
+@media (min-width: 768px) {
+.sticky-header .col-md-3 {
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    max-width: 10%;
+		width: 140% !important;
+	}
+}
+*/
