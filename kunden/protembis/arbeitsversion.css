@@ -1,8 +1,8 @@
 /* CSS Document */
-/* CSS Document */         
+
+
 /* ----------------------------- */
 /* Bilder mit Dreieck nur unten */
-
 
 .dreieck {
 /*    background: url(http://d.pr/i/eqn9+);
@@ -70,6 +70,17 @@
   }
 }
 
+/* Einstellungen für iPad mini */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 1)  { 
+		.team_foto {
+		/* Höhe der Fotos festlegen */
+		height: 408px; 
+  }
+
+}
 
 /* containerspalte_team enthält die 3 Spalten */
 @media (min-width:1100px) {
