@@ -1,0 +1,79 @@
+/* CSS Document */
+/* Button mit weißer Schriftfarbe */
+a.wp-block-button__link.has-background {
+    color: #ffffff !important;
+}
+
+
+/* Überschrift nicht zeigen */
+.entry-header.has-text-align-center.header-footer-group {
+    display: none;
+}
+
+/* Credits immer anzeigen */
+.powered-by-wordpress {
+    display: flex;
+    margin: 0px;
+}
+
+/* Pfeil nach oben */
+span.arrow {
+    background-color: #E8E8E8;
+    padding: 10px;
+}
+
+
+/*oberer Rand vor dem Bild */
+@media (min-width: 700px)
+.post-inner {
+    padding-top: 0rem; 
+}
+.post-inner {
+    padding-top: 0rem;
+}
+
+/* Abstand nach oben vergrößern 
+h2 {
+	padding-top:150px
+}
+
+/* Wartungsmodus 
+body { 
+	text-align: center; 
+	padding: 5%; 
+	font: 20px Helvetica, sans-serif; 
+	color: #1A171B; 
+	background-color: #E8E8E8; 
+}
+*/
+
+h2#start {
+    display: none;
+}
+
+article { 
+	display: block; 
+	text-align: left; 
+	/* max-width: 950px; */
+	margin: 0 auto; 
+	color:#333333;
+}
+
+a { 
+	color: #008854; 
+	text-decoration: none; 
+}
+
+a:hover { 
+	color: #9C9E9F; 
+	text-decoration: none; 
+}
+
+@media only screen and (max-width : 480px) {
+	h1 { 
+		font-size: 40px; 
+	}
+}
+
+
+
