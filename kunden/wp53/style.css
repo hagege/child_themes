@@ -1,3 +1,38 @@
+/* CSS Document */
+
+/* Für Container über dem Videos auf der Startseite - einspaltig: daher keine feste Höhe bis 599px (Breakpoint) */
+
+@media (min-width: 600px){
+	p.feste_hoehe {
+			height: 350px;
+	}
+}
+
+@media (min-width: 700px){
+	p.feste_hoehe {
+			height: 400px;
+	}
+}
+
+@media (min-width: 800px){
+	p.feste_hoehe {
+			height: 320px;
+	}
+}
+
+@media (min-width: 900px){
+	p.feste_hoehe {
+			height: 300px;
+	}
+}
+
+@media (min-width: 1378px){
+	p.feste_hoehe {
+			height: 250px;
+	}
+}
+
+
 body {
     background: #f9f9f9;
 }

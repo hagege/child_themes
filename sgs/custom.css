@@ -1,10 +1,6 @@
 /* CSS Document */
 /* Für Container über dem Videos auf der Startseite */
-@media (max-width: 599px){
-	p.feste_hoehe {
-			height: 80px;
-	}
-}
+
 
 @media (min-width: 600px){
 	p.feste_hoehe {
@@ -23,6 +19,7 @@
 			height: 80px;
 	}
 }
+
 
 
 /* Liste als Standard */
