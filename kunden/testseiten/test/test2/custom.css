@@ -1,6 +1,32 @@
 /* CSS Document */
 
-/* CSS Document */
+.bild_als_polygon:before {
+				left: 0;
+				border-right: 70vw solid transparent;
+				border-left: 0;
+		}
+
+.bild_als_polygon:after {
+				right: 0;
+				border-left: 50vw solid transparent;
+				border-right: 0;
+}
+
+.bild_als_polygon:before, .bild_als_polygon:after {
+    box-sizing: border-box;
+    content: " ";
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 50%;
+    height: 100%;
+    /* border-bottom regelt die Höhe*/
+    border-bottom: 100px solid white;
+    /* border-bottom-color: white; */
+}
+
+
+
 
 /* Spalten evtl. nur bei Text verwenden */
 .zwei_spalten {
@@ -17,39 +43,6 @@ figure.aligncenter.size-large.is-resized {
     justify-content: center;
 }
 
-/* ----------------------------- */
-/* Bilder mit Dreieck nur unten */
-
-.dreieck {
-/*    background: url(http://d.pr/i/eqn9+);
-    height: 200px;*/
-    position: relative;
-}
-
-.dreieck:before, .dreieck:after {
-    box-sizing: border-box;
-    content: " ";
-    position: absolute;
-    top:0;
-    display: block;
-    width: 50%;
-    height: 100%;
-    border-bottom: 30px solid white; 
-/*    border-bottom-color: white; */
-}
-
-.dreieck:before {
-    left: 0;
-    border-right: 50px solid transparent; 
-    border-left: 0;
-}
-
-.dreieck:after {
-    right: 0;
-    border-left: 50px solid transparent;
-    border-right: 0;
-}
-/* ----------------------------- */
 
 
 /* ----------------------------- */
@@ -322,12 +315,14 @@ figure.aligncenter.size-large.is-resized {
 /* ----------------------------- */
 
 @media (min-width: 769px) {
-    .main-navigation .menu > .menu-item > a::after
+    .main-navigation .menu > .menu-item.current-menu-item > a:hover::after,
+    .main-navigation .menu > .menu-item.current-menu-ancestor > a:hover::after,
+    .main-navigation .menu > .menu-item > a:hover::after
 	{
         content: "";
         position: absolute;
         right: 0;
-        /* left: 50%; */
+        /* left: 50%;  */
         bottom: -5px;
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
@@ -337,12 +332,7 @@ figure.aligncenter.size-large.is-resized {
 				color: #622523;
  background-color: currentColor;
         transition: 0.3s width ease; 
-    }
-    .main-navigation .menu > .menu-item.current-menu-item > a::after,
-    .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
-    .main-navigation .menu > .menu-item > a:hover::after {
         width: 50%;
-    }
 }
 
 /* graue Linie zwischen Menü und Content */ 
