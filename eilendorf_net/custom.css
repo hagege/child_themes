@@ -1,0 +1,30 @@
+/* CSS Document */
+
+/* #00FFFF: türkis
+ * #0D3042: dunkelblau
+ * #B2B2B2: hellgrau
+ * #878787: mittelgrau
+ * #575755: dunkelgrau
+ * /
+*/
+
+/* Links für Event-Export */
+a.tribe-events-gcal.tribe-events-button, a.tribe-events-ical.tribe-events-button {
+    background-color: #0D3240!important;
+    color: #00FFFF!important;
+}
+
+#tribe-events td.tribe-events-present div[id*="tribe-events-daynum-"], #tribe-events td.tribe-events-present div[id*="tribe-events-daynum-"] > a {
+    background-color: #0D3240!important;
+    color: #00FFFF!important;
+}
+
+/* Karte bei Veranstaltungen */
+.tribe-events-single-section.tribe-events-event-meta.primary.tribe-clearfix {
+    background-color: #ffffff;
+}
+
+/* Überschrift für Monatsansicht bei TEC */
+h3.tribe-events-month-event-title {
+    text-shadow: 0 0px 0 #fff;
+}
