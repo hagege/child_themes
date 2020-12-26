@@ -12,6 +12,19 @@ article .entry-content a.kontakt:hover {
 		cursor: pointer;
 }
 
+/* Buttons mit Unterstrich */
+a.wp-block-button__link.has-background.no-border-radius:hover {
+    text-decoration-style: dotted;
+}
+
+/* bei Hover: dotted */
+a.wp-block-button__link.has-background.no-border-radius {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: white;
+}
+
+
 /* Icon für Mail und Telefon etwas kleiner
 .wp-block-image img {
     max-width: 70%;
@@ -100,6 +113,24 @@ label {
     box-shadow: 10px 10px 15px #888888;
 }
 
+
+/* Spalten von 3 auf 1 */
+@media (max-width:930px) {
+    .kachel_spalten {
+		/* folgende Zeile sorgt dafür, dass die Spalten untereinander gezeigt werden */
+	  display: unset; 
+		background-color: unset;
+		max-width: 700px;
+    }
+	  .kachel_spalte {
+			padding-top: 50px;
+			padding-bottom: 50px;
+	        max-width: 600px;
+			margin-bottom:40px;
+			margin-left: auto!important;
+            margin-right: auto!important;
+}
+}
 
 /* Hintergrund für Slider-Text */
 .carousel-caption {
@@ -221,7 +252,7 @@ a.fuss_button-beitrag {
     border-bottom: 0px!important;
 }
 
-/* Action-Boxen nicht zeigen bei kleineren Displays */
+/* Action-Boxen nicht zeigen bei kleineren Displays 
 @media (max-width: 500px) {
 	body .sektion-wrapper [data-sek-id=__nimble__e5c9936f4880]>.sek-container-fluid>.sek-sektion-inner {
 			visibility: hidden; 
@@ -230,7 +261,7 @@ a.fuss_button-beitrag {
 			background-image: url(https://haurand.com/wp-content/uploads/2019/12/webentwicklung_check-2082845_1280.jpg) !important;
 	}	
 }
-
+*/
 
 
 /* Schriftgröße und -art bei Code*/
@@ -288,13 +319,13 @@ img.v-centered {
       }
 }
 
-/* Hintergrund für Textboxen (Kontakt, ...) */  
+/* Hintergrund für Textboxen (Kontakt, ...)   
 body .sektion-wrapper [data-sek-id=__nimble__e5c9936f4880]>.sek-container-fluid>.sek-sektion-inner {
     background: black;
     opacity: 0.4;
 		padding-top: 20px;
 }
-
+*/
 
 /* Menue als Hamburger auch bei breiteren Ansichten zeigen */
 @media (min-width: 1300px) {
