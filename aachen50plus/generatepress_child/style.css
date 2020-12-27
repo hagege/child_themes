@@ -21,15 +21,66 @@ h2 {
 }
 
 
-
+/* Farben für "Weiterlesen-Button" */
 a.read-more.button {
     background-color: #919191;
 }
 
 a.read-more.button:hover {
-    background-color: #Df5022;
+    background-color: #Df5022; 
 }
 
+
+/* Farben für Suchen-Button TEC */
+button.tribe-common-c-btn.tribe-events-c-search__button {
+    background-color: #919191!important;
+}
+
+button.tribe-common-c-btn.tribe-events-c-search__button:hover {
+    background-color: #Df5022!important;
+}
+
+
+/* Hintergrundfarbe bei einzelnen Events Metadaten unten */
+.tribe-events-single-section.tribe-events-event-meta.primary.tribe-clearfix,
+.tribe-events-single-section.tribe-events-event-meta.secondary.tribe-clearfix {
+    background-color: white;
+}
+
+
+/*----------------------------------------------------------------*/
+/* Start: Button in Beiträgen
+/* Datum: 23.02.2018
+/* Autor: hgg
+/* z. Bsp.: weiße Farbe, bei Hover: grauer Button
+/*----------------------------------------------------------------*/
+
+/* Absatz für Button */
+.button-absatz {
+    margin:30px 0px 30px 0px;
+}
+
+a.tribe-events-button-beitrag, a.tribe-events-button-beitrag:focus, a.tribe-events-button-beitrag:visited{
+    padding: 3px;
+    color: #ffffff;
+    font-size: 14px;
+    background-color: #df5022;
+    border-radius: 4px;
+    text-decoration: none!important;
+}
+
+
+/* Hintergrund: grau */
+a.tribe-events-button-beitrag:hover{
+  color: #000;
+  background-color: #e3ddcd;
+}
+
+/*----------------------------------------------------------------*/
+/* Ende: Button in Beiträgen
+/* Datum: 23.02.2018
+/* Autor: hgg
+/*----------------------------------------------------------------*/
 
 
 /* ------------------------------- */
