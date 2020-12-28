@@ -1,4 +1,3 @@
-/* CSS Document */
 
 /* #00FFFF: türkis
  * #0D3042: dunkelblau
@@ -27,4 +26,19 @@ a.tribe-events-gcal.tribe-events-button, a.tribe-events-ical.tribe-events-button
 /* Überschrift für Monatsansicht bei TEC */
 h3.tribe-events-month-event-title {
     text-shadow: 0 0px 0 #fff;
+
+}
+/* Änderung der Überschriftenfarbe bei TEC */
+.single-tribe_events .tribe-events-single-event-title {
+    color: #0d3042;
+}
+
+/* Vorher und Nachher Verstecken */
+nav.tribe-events-nav-pagination {
+    display: none;
+}
+
+/* Links bei TEC Größe r*/
+#tribe-events-content a, .tribe-events-event-meta a, .tribe-events-back {
+    font-size: 1.2em;
 }
