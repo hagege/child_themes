@@ -47,10 +47,18 @@ ul.sub-menu {
     }
 }
 
-@media (max-width: 768px) {
+/*
+img.header-image.is-logo-image {
+    max-width: 130px;
+}
+
 	/* auf schmaleren Displays anderes Bild zeigen */
+@media (max-width: 768px) {
 	.page-hero {
-		    background-image: url(http://aachen50plus.test/wp-content/uploads/2020/12/sonnenuntergang_3.jpg);
+		    background-image: url(http://aachen50plus.test/wp-content/uploads/2020/12/shutterstock_218267185_Andrey-Arkusha.jpg);
+	}
+	img.header-image.is-logo-image {
+    max-width: 100px;
 	}
 }
 

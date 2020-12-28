@@ -273,3 +273,6 @@ function filter_the_content_in_the_main_loop( $content ) {
 
     return $content;
 }
+
+
+?>
