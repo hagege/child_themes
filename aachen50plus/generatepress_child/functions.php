@@ -1,10 +1,24 @@
- <?php
+<?php
 /**
  * GeneratePress child theme functions and definitions.
  *
  * Add your custom PHP in this file. 
  * Only edit this file if you have direct access to it on your server (to fix errors if they happen).
  */
+
+/*----------------------------------------------------------------*/
+/* Start: style.css Datei des Eltern-Themes einbinden
+/* scheint nicht nötig zu sein, siehe hier: https://docs.generatepress.com/article/using-child-theme/
+/* Datum: 30.12.2020
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+
+/* function child_theme_styles() {
+  wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+}
+add_action( 'wp_enqueue_scripts', 'child_theme_styles' );
+*/ 
+
 
 function generatepress_child_enqueue_scripts() {
 	if ( is_rtl() ) {
