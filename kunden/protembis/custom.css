@@ -1,8 +1,12 @@
 /* CSS Document */
-/* CSS Document */         
+
+/* Link als Pfeil anzeigen, wenn Oberpunkt nicht angewählt werden soll */
+.menu-item a:not([href]) {
+    cursor: default;
+}
+
 /* ----------------------------- */
 /* Bilder mit Dreieck nur unten */
-
 
 .dreieck {
 /*    background: url(http://d.pr/i/eqn9+);
@@ -39,7 +43,7 @@
 /* ----------------------------- */
 /* Spalten auf der Teams-Seite */
 .team-columns {
-    background-color: #263F5F;
+    background-color: #E1E7F0;
 		padding: 50px;
 }
 
@@ -52,7 +56,7 @@
 		background-color: unset;
     }
 	  .team-column {
-		  background-color: #263F5F; 
+		  background-color: #E1E7F0; 
 			padding-top: 50px;
 			padding-bottom: 50px;
 	}
@@ -64,8 +68,23 @@
 		margin-left: auto;
 		margin-right: auto 
 	}
+	.team_foto {
+		/* Höhe der Fotos festlegen */
+		max-height: 408px; 
+  }
 }
 
+/* Einstellungen für iPad mini */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 1)  { 
+		.team_foto {
+		/* Höhe der Fotos festlegen */
+		height: 408px; 
+  }
+
+}
 
 /* containerspalte_team enthält die 3 Spalten */
 @media (min-width:1100px) {
@@ -77,6 +96,12 @@
 	}
 }
 
+
+
+
+
+
+
 /* Spalte zentriert 70% */
 .spalte-zentriert{
 		display: block;
@@ -85,27 +110,42 @@
 		margin-right: auto 
 }
 
-.containerspalte_haupt {
-    margin-left: 15%;
+/* Absätze auf der Hauptseite schmaler */
+.hauptseite_zentriert {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+
+/* Beitragsbreite bei news */
+@media (min-width:1200px) {
+article.post {
+    max-width: 1200px;
+    margin-left: 17%;
     margin-right: 15%;
 }
-
-
-/* Beiträge mit Rand links und rechts */
-.entry-content {
-    margin-right: 12%;
-    margin-left: 12%;
 }
 
-/* ----------------------------- */
+
+@media (min-width:769px and max-width: 1199px) {
+article.post {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+}	
+
+
+	
 
 /* ----------------------------- */
-/* Inhalt Accordion */
+/* TEAM -Seite                   */
+/* ----------------------------- */
+/* Inhalt Accordion              */
 /* ----------------------------- */
 .wp-block-hotblocks-accordion .accordion-content {
     /* display: none; */
     padding: 15px;
-    background-color: #E1E7F0;
+    background-color: white;
     color: #263F5F;
 }
 
@@ -117,22 +157,84 @@
 	  max-width: 400px;
 }
 
+
+
+
+
+
+@media only screen and (max-width:399px) {
+h4.accordion-heading {
+    font-size: 0.55em;
+	}
+}
+
+@media only screen and (min-width:400px) {
+h4.accordion-heading {
+    font-size: 0.6em;
+	}
+}
+
+
+@media only screen and (min-width:500px) {
+h4.accordion-heading {
+    font-size: 0.8em;
+	}
+}
+
+@media only screen and (min-width:700px) {
+h4.accordion-heading {
+    font-size: 1.0em;
+	}
+}
+
+
+
+@media only screen and (min-width:1100px) {
+h4.accordion-heading {
+    font-size: 0.75em;
+	}
+}
+
+@media only screen and (min-width:1400px) {
+h4.accordion-heading {
+    font-size: 1.1em;
+	}
+}
+
+
+
+
 /* Heading Accordion */
 .wp-block-hotblocks-accordion .accordion-heading {
     border-top: 0px;
 		color: white!important;
 }
 
-/* Schriftgröße Heading Accordion */
-.wp-block-hotblocks-accordion .accordion-heading {
-    font-size: 1.1em;
-}
+
+
+
 
 /* Textblock mehr an das Bild ranrücken */
 p.has-text-align-center.has-medium-font-size {
     margin-top: 0px;
     margin-bottom: 0px;
 }
+
+.team_foto {
+	margin-bottom:0px;
+  display: flex; 
+}
+
+
+	/* Höhe der Fotos festlegen 
+  height: 408px; */
+
+figure.aligncenter.size-large.is-resized {
+    display: flex;
+}
+
+
+
 
 
 
@@ -180,7 +282,8 @@ p.has-text-align-center.has-medium-font-size {
 
 
 /* ----------------------------- */
-
+/* HAUPTSEITE                    */
+/* ----------------------------- */
 
 
 /* Rand beim Text in Spalten auf der Hauptseite */
@@ -206,7 +309,7 @@ p.has-text-align-center.has-medium-font-size {
 /* Navigation                    */
 /* ----------------------------- */
 
-@media (min-width: 769px) {
+@media (min-width: 900px) {
     .main-navigation .menu > .menu-item > a::after
 	{
         content: "";
@@ -220,20 +323,47 @@ p.has-text-align-center.has-medium-font-size {
         width: 0;
         height: 5px;
 				color: #622523;
-        background-color: currentColor;
-        transition: 0.3s width ease;
+ background-color: currentColor;
+        transition: 0.3s width ease; 
     }
     .main-navigation .menu > .menu-item.current-menu-item > a::after,
     .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
     .main-navigation .menu > .menu-item > a:hover::after {
         width: 50%;
     }
+
+
+		/* graue Linie zwischen Menü und Content */ 
+		.separate-containers .site-main {
+				margin: 0px;
+				border-top: 5px solid #9a9a9a;
+		}
+
+		/* Hover bei Untermenüpunkten */
+		.main-navigation .main-nav ul ul li[class*="current-menu-"] > a:hover, .main-navigation .main-nav ul ul li[class*="current-menu-"].sfHover > a {
+				color: #eaeaea;
+				background-color: #622523;
+	}
 }
 
-/* graue Linie zwischen Menü und Content */ 
-.separate-containers .site-main {
-    margin: 0px;
-    border-top: 5px solid #9a9a9a;
+
+/* Button unten auf den Seiten */
+a.oben.__mPS2id._mPS2id-h {
+    background: url(http://test.dev-haurand.de/wp-content/uploads/2020/12/Button_blau_hoch.png) no-repeat;
+		padding-bottom: 60px;
+    margin-top: 120px; 
+}
+
+/* hover bei Button unten */
+a.oben.__mPS2id._mPS2id-h:hover {
+    background: url(http://test.dev-haurand.de/wp-content/uploads/2020/12/Button_rot_rauf.png) no-repeat;
+		padding-bottom: 60px;
+    margin-top: 120px; 
+}
+
+/* damit image button unten nicht gezeigt wird */
+img.wp-image-519 {
+    visibility: hidden;
 }
 
 /* ----------------------------- */

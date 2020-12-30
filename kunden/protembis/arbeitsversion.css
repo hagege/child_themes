@@ -1,5 +1,9 @@
 /* CSS Document */
 
+/* Link als Pfeil anzeigen, wenn Oberpunkt nicht angewählt werden soll */
+.menu-item a:not([href]) {
+    cursor: default;
+}
 
 /* ----------------------------- */
 /* Bilder mit Dreieck nur unten */
