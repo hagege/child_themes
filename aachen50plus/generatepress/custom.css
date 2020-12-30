@@ -1,7 +1,7 @@
 /* Custom CSS */
 
 
-/* Link als Pfeil anzeigen, wenn Oberpunkt nicht angew�hlt werden soll */
+/* Link als Pfeil anzeigen, wenn Oberpunkt nicht angewählt werden soll */
 .menu-item a:not([href]) {
     cursor: default;
 }
@@ -12,7 +12,7 @@
     opacity: 0.6;
 }
 
-/* Navigavtionsmen� mit animierten Unterstrich */
+/* Navigavtionsmenü mit animierten Unterstrich */
 @media (min-width: 769px) {
     .main-navigation .menu > .menu-item > a::after
 	{
@@ -37,7 +37,7 @@
     }
 }
 
-/* Submen� */
+/* Submenü */
 ul.sub-menu {
     opacity: 0.8!important;
 }
@@ -95,7 +95,7 @@ img.header-image.is-logo-image {
 }
 
 
-/* H�he des Elements immer 90px, damit die Bilder immer eine Linie bilden */
+/* Höhe des Elements immer 90px, damit die Bilder immer eine Linie bilden */
 h2.entry-title {
     height: 90px;
 }
