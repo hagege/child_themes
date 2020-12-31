@@ -33,13 +33,28 @@ add_filter( 'generate_blog_columns', function( $columns ) {
 } );
 
 
-
-
 /*----------------------------------------------------------------*/
-/* Ende: Damit 2 Spalten korrekt bei Schlagwörtern angezeigt werden
-/* Datum: 30.12.2020
+/* Start: Read-More Button, wenn der Beitrag einen Custom Excerpt hat
+/* Datum: 31.12.2020
 /* Autor: hgg
 /*----------------------------------------------------------------*/
+
+add_filter( 'wp_trim_excerpt', 'tu_excerpt_metabox_more' );
+function tu_excerpt_metabox_more( $excerpt ) {
+    $output = $excerpt;
+
+    if ( has_excerpt() ) {
+        $output = sprintf( '%1$s <p class="read-more-container"><a class="read-more button" href="%2$s">%3$s ...</a></p>',
+            $excerpt,
+            get_permalink(),
+            __( 'Read more', 'generatepress' )
+        );
+    }
+	
+    return $output;
+}
+
+
 
 function generatepress_child_enqueue_scripts() {
 	if ( is_rtl() ) {
