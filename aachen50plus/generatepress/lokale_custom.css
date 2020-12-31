@@ -59,7 +59,7 @@ img.header-image.is-logo-image {
 	/* auf schmaleren Displays anderes Bild zeigen */
 @media (max-width: 768px) {
 	.page-hero {
-		    background-image: url(http://aachen50plus.test/wp-content/uploads/2020/12/shutterstock_218267185_Andrey-Arkusha.jpg);
+		    background-image: url(http://test4.haurand.com/wp-content/uploads/2020/12/shutterstock_218267185_Andrey-Arkusha.jpg);
 	}
 	img.header-image.is-logo-image {
     max-width: 100px;
@@ -71,8 +71,8 @@ img.header-image.is-logo-image {
 	 .site-content .content-area {
         width: 100%;
    }
-	
-	.site-content {
+	/* Problemzone */
+/*	.site-content {
 		display: flex;
 		-webkit-flex-flow: row wrap;
 		flex-flow: row wrap;
@@ -91,6 +91,7 @@ img.header-image.is-logo-image {
 		left: 0;
 
 	}
+*/
 }
 
 

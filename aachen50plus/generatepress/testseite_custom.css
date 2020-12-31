@@ -1,6 +1,5 @@
 /* Custom CSS */
 
-
 /* Link als Pfeil anzeigen, wenn Oberpunkt nicht angewählt werden soll */
 .menu-item a:not([href]) {
     cursor: default;
@@ -60,19 +59,18 @@ img.header-image.is-logo-image {
 	/* auf schmaleren Displays anderes Bild zeigen */
 @media (max-width: 768px) {
 	.page-hero {
-		    background-image: url(http://aachen50plus.de/wp-content/uploads/2020/12/shutterstock_218267185_Andrey-Arkusha.jpg);
+		    background-image: url(http://aachen50plus.test/wp-content/uploads/2020/12/shutterstock_218267185_Andrey-Arkusha.jpg);
 	}
 	img.header-image.is-logo-image {
     max-width: 100px;
 	}
 }
 
-/* Breakpoint Sidebar unter content nicht schon bei 1100px, sondern wegen der Werbung bei 770px */
+/* Breakpoint Sidebar unter content schon bei 1100px */
 @media (max-width: 770px) {
 	 .site-content .content-area {
         width: 100%;
    }
-	
 	/* Problemzone */
 /*	.site-content {
 		display: flex;
@@ -95,6 +93,7 @@ img.header-image.is-logo-image {
 	}
 */
 }
+
 
 /* Höhe des Elements immer 90px, damit die Bilder immer eine Linie bilden */
 h2.entry-title {

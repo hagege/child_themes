@@ -19,6 +19,27 @@
 add_action( 'wp_enqueue_scripts', 'child_theme_styles' );
 */ 
 
+/*----------------------------------------------------------------*/
+/* Start: Damit 2 Spalten korrekt bei Schlagwörtern angezeigt werden
+/* Datum: 30.12.2020
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+add_filter( 'generate_blog_columns', function( $columns ) {
+    if ( ! is_singular() && 'tribe_events' === get_post_type() ) {
+        $columns = true; 
+    }
+
+    return $columns;
+} );
+
+
+
+
+/*----------------------------------------------------------------*/
+/* Ende: Damit 2 Spalten korrekt bei Schlagwörtern angezeigt werden
+/* Datum: 30.12.2020
+/* Autor: hgg
+/*----------------------------------------------------------------*/
 
 function generatepress_child_enqueue_scripts() {
 	if ( is_rtl() ) {
