@@ -1,4 +1,27 @@
 <?php
+
+/* Klappt zwar so weit, aber bei customer excerpt wird zwei Mal der Button gezeigt */
+// https://fastwp.de/magazin/ueberschriften-aus-den-excerpts-entfernen/
+function wp_strip_header_tags( $excerpt='' ) {
+
+        $raw_excerpt = $excerpt;
+        if ( '' == $excerpt ) {
+                $excerpt = get_the_content('');
+                $excerpt = strip_shortcodes( $excerpt );
+                $excerpt = apply_filters('the_content', $excerpt);
+                $excerpt = str_replace(']]>', ']]>', $excerpt);
+        }
+        $regex = '#(<h([1-6])[^>]*>)\s?(.*)?\s?(<\/h\2>)#';
+        $excerpt = preg_replace($regex,'', $excerpt);
+        $excerpt_length = apply_filters('excerpt_length', 55);
+        $excerpt_more = apply_filters('excerpt_more', ' ' . '[...]');
+        $excerpt = wp_trim_words( $excerpt, $excerpt_length, $excerpt_more );
+
+    return apply_filters('wp_trim_excerpt', preg_replace($regex,'', $excerpt), $raw_excerpt);
+}
+add_filter( 'get_the_excerpt', 'wp_strip_header_tags', 9);
+
+
 function bac_wp_strip_header_tags( $text ) {
     $raw_excerpt = $text;
     if ( '' == $text ) {
