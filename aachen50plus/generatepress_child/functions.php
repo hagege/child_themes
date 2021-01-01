@@ -23,7 +23,7 @@ add_action( 'wp_enqueue_scripts', 'child_theme_styles' );
 /* Start: Damit 2 Spalten korrekt bei Schlagwörtern angezeigt werden
 /* Datum: 30.12.2020
 /* Autor: hgg
-/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------
 add_filter( 'generate_blog_columns', function( $columns ) {
     if ( ! is_singular() && 'tribe_events' === get_post_type() ) {
         $columns = true; 
@@ -54,14 +54,40 @@ function tu_excerpt_metabox_more( $excerpt ) {
     return $output;
 }
 
+/*----------------------------------------------------------------*/
+/* Start: Keine Überschrift im Excerpt
+/* Datum: 01.01.2021
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+/* Klappt zwar so weit, aber bei einem customer excerpt wird zwei Mal der Button gezeigt */
+function wp_strip_header_tags( $excerpt='' ) {
+
+        $raw_excerpt = $excerpt;
+        if ( '' == $excerpt ) {
+                $excerpt = get_the_content('');
+                $excerpt = strip_shortcodes( $excerpt );
+                $excerpt = apply_filters('the_content', $excerpt);
+                $excerpt = str_replace(']]>', ']]>', $excerpt);
+        }
+        $regex = '#(<h([1-6])[^>]*>)\s?(.*)?\s?(<\/h\2>)#';
+        $excerpt = preg_replace($regex,'', $excerpt);
+        $excerpt_length = apply_filters('excerpt_length', 55);
+        $excerpt_more = apply_filters('excerpt_more', ' ' . '[...]');
+        $excerpt = wp_trim_words( $excerpt, $excerpt_length, $excerpt_more );
+
+    return apply_filters('wp_trim_excerpt', preg_replace($regex,'', $excerpt), $raw_excerpt);
+}
+add_filter( 'get_the_excerpt', 'wp_strip_header_tags', 9);
 
 
+/* adds the RTL stylesheet if you’re using an RTL language. If not, you can remove the function.
 function generatepress_child_enqueue_scripts() {
 	if ( is_rtl() ) {
 		wp_enqueue_style( 'generatepress-rtl', trailingslashit( get_template_directory_uri() ) . 'rtl.css' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'generatepress_child_enqueue_scripts', 100 );
+*/
 
 /* https://theeventscalendar.com/support/forums/topic/counting-posts/ */
 function tribe_count_by_cat ( $event_category_slug ) {
