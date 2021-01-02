@@ -1,4 +1,8 @@
-/* CSS Document */
+/* Tabelle bei Buchverlosung linksbündig */
+figure.wp-block-table.alignwide.ac_tabelle.is-style-regular {
+    text-align: left;
+}
+
 /* Start: Einstellungen für Contact Form 7 */
 .wpcf7 input[type="text"],
 .wpcf7 input[type="email"],
@@ -193,7 +197,7 @@ img.v-centered {
 		/* Winter: https://aachenerkinder.de/wp-content/uploads/2018/12/christmas-2894445_1280-min.jpg) */
 		/* Frühling: https://aachenerkinder.de/wp-content/uploads/2019/03/platzhalter_fruehling_margarite-3407277_1280-min.jpg*/
 		/* Herbst: https://aachenerkinder.de/wp-content/uploads/2020/10/platzhalter_herbst.jpg */
-		background-image: url("https://aachenerkinder.de/wp-content/uploads/2020/10/platzhalter_herbst.jpg"); 
+		background-image: url("https://aachenerkinder.de/wp-content/uploads/2018/12/christmas-2894445_1280-min.jpg"); 
 		background-color: #F9B81E;
 		min-height: 400px;
 		position: relative;
