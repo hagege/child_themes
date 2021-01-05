@@ -1,5 +1,11 @@
 <?php
 
+// Einträge in post_excerpt (Beiträge) löschen:
+// $wpdb->query( "UPDATE wp_posts SET post_excerpt='' WHERE post_type= 'post' " );
+// Einträge in post_excerpt (Veranstaltungen) löschen:
+// $wpdb->query( "UPDATE wp_posts SET post_excerpt='' WHERE post_type= 'tribe_events' " );
+
+
 /*----------------------------------------------------------------*/
 /* Start: Damit die Überschrift nicht gezeigt wird.
 /*        Funktioniert zwar, aber es wird kein Button "Mehr" angezeigt

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * GeneratePress child theme functions and definitions.
  *
@@ -36,8 +37,9 @@ add_filter( 'generate_blog_columns', function( $columns ) {
 /*----------------------------------------------------------------*/
 /* Start: Read-More Button, wenn der Beitrag einen Custom Excerpt hat
 /* Datum: 31.12.2020
+/* nicht mehr notwendig, wenn keine custom excerpts angelegt werden (3.1.2021)
 /* Autor: hgg
-/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------
 
 add_filter( 'wp_trim_excerpt', 'tu_excerpt_metabox_more' );
 function tu_excerpt_metabox_more( $excerpt ) {
