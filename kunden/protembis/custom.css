@@ -1,5 +1,10 @@
 /* CSS Document */
 
+/* kein Rand unter den Cover-Videos */
+.wp-block-cover.alignfull {
+    margin-bottom: 0px !important;
+}
+
 /* Link als Pfeil anzeigen, wenn Oberpunkt nicht angewählt werden soll */
 .menu-item a:not([href]) {
     cursor: default;
@@ -69,8 +74,8 @@
 		margin-right: auto 
 	}
 	.team_foto {
-		/* Höhe der Fotos festlegen */
-		max-height: 408px; 
+		/* Höhe der Fotos festlegen 
+		max-height: 408px; */
   }
 }
 
@@ -80,8 +85,8 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (-webkit-min-device-pixel-ratio: 1)  { 
 		.team_foto {
-		/* Höhe der Fotos festlegen */
-		height: 408px; 
+		/* Höhe der Fotos festlegen 
+		height: 408px; */
   }
 
 }
@@ -244,7 +249,7 @@ figure.aligncenter.size-large.is-resized {
 
 .wp-block-hotblocks-accordion .accordion-heading::after {
   content: ' ';
-  background-image: url(http://test.dev-haurand.de/wp-content/uploads/2020/12/Button_blau_runter.png);
+  background-image: url(http://wp.protembis.com/wp-content/uploads/2020/12/Button_blau_runter.png);
   background-size:contain;
 	background-repeat: no-repeat;
   height: 30px;
@@ -253,7 +258,7 @@ figure.aligncenter.size-large.is-resized {
 
 .wp-block-hotblocks-accordion .accordion-heading:hover::after {
   content: ' ';
-  background-image: url(http://test.dev-haurand.de/wp-content/uploads/2020/12/Button_rot_runter.png);
+  background-image: url(http://wp.protembis.com/wp-content/uploads/2020/12/Button_rot_runter.png);
   background-size:contain;
 	background-repeat: no-repeat;
   height: 30px;
@@ -263,7 +268,7 @@ figure.aligncenter.size-large.is-resized {
 
 .wp-block-hotblocks-accordion .accordion-heading.active_tab::after {
   content: ' ';
-  background-image: url(http://test.dev-haurand.de/wp-content/uploads/2020/12/Button_blau_hoch.png);
+  background-image: url(http://wp.protembis.com/wp-content/uploads/2020/12/Button_blau_hoch.png);
   background-size:contain;
 	background-repeat: no-repeat;
   height: 30px;
@@ -272,7 +277,7 @@ figure.aligncenter.size-large.is-resized {
 
 .wp-block-hotblocks-accordion .accordion-heading.active_tab:hover::after {
   content: ' ';
-  background-image: url(http://test.dev-haurand.de/wp-content/uploads/2020/12/Button_rot_rauf.png);
+  background-image: url(http://wp.protembis.com/wp-content/uploads/2020/12/Button_rot_rauf.png);
   background-size:contain;
 	background-repeat: no-repeat;
   height: 30px;
@@ -349,14 +354,14 @@ figure.aligncenter.size-large.is-resized {
 
 /* Button unten auf den Seiten */
 a.oben.__mPS2id._mPS2id-h {
-    background: url(http://test.dev-haurand.de/wp-content/uploads/2020/12/Button_blau_hoch.png) no-repeat;
+    background: url(http://wp.protembis.com/wp-content/uploads/2020/12/Button_blau_hoch.png) no-repeat;
 		padding-bottom: 60px;
     margin-top: 120px; 
 }
 
 /* hover bei Button unten */
 a.oben.__mPS2id._mPS2id-h:hover {
-    background: url(http://test.dev-haurand.de/wp-content/uploads/2020/12/Button_rot_rauf.png) no-repeat;
+    background: url(http://wp.protembis.com/wp-content/uploads/2020/12/Button_rot_rauf.png) no-repeat;
 		padding-bottom: 60px;
     margin-top: 120px; 
 }
