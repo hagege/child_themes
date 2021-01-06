@@ -1,5 +1,10 @@
 /* Custom CSS */
 
+/* in einem farbigen Kasten mit einer Schriftfarbe weiß, muss der Link in roter Schrift angezeigt werden */
+a.corona-button-beitrag {
+    color: #df5022!important;
+}
+
 /* Höhe des Elements immer 90px, damit die Bilder immer eine Linie bilden */
 h2.entry-title {
     height: 90px;
@@ -99,4 +104,3 @@ img.header-image.is-logo-image {
 	}
 */
 }
-
