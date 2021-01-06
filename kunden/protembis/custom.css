@@ -1,5 +1,10 @@
 /* CSS Document */
 
+/* Überschriften auf der Hauptseite hidden */
+h2.versteckt {
+	visibility: hidden;
+}
+
 /* kein Rand unter den Cover-Videos */
 .wp-block-cover.alignfull {
     margin-bottom: 0px !important;
@@ -163,31 +168,35 @@ article.post {
 }
 
 
-
+@media (max-width:769px) {
+    .accordion-content {
+        font-size: 0.7em;
+    }
+}
 
 
 
 @media only screen and (max-width:399px) {
-h4.accordion-heading {
+	h4.accordion-heading {
     font-size: 0.55em;
 	}
 }
 
 @media only screen and (min-width:400px) {
-h4.accordion-heading {
+	h4.accordion-heading {
     font-size: 0.6em;
 	}
 }
 
 
 @media only screen and (min-width:500px) {
-h4.accordion-heading {
-    font-size: 0.8em;
+	h4.accordion-heading {
+			font-size: 0.8em;
 	}
 }
 
 @media only screen and (min-width:700px) {
-h4.accordion-heading {
+	h4.accordion-heading {
     font-size: 1.0em;
 	}
 }
@@ -195,13 +204,13 @@ h4.accordion-heading {
 
 
 @media only screen and (min-width:1100px) {
-h4.accordion-heading {
-    font-size: 0.75em;
+	h4.accordion-heading {
+			font-size: 0.75em;
 	}
 }
 
 @media only screen and (min-width:1400px) {
-h4.accordion-heading {
+	h4.accordion-heading {
     font-size: 1.1em;
 	}
 }
