@@ -225,49 +225,6 @@ figure.aligncenter.size-large.is-resized {
 
 
 /* ----------------------------- */
-/* Pfeil bei Accordion-Block     */
-/* ----------------------------- */
-
-.wp-block-hotblocks-accordion .accordion-heading::after {
-  content: ' ';
-  background-image: url(http://wp.protembis.com/wp-content/uploads/2020/12/Button_blau_runter.png);
-  background-size:contain;
-	background-repeat: no-repeat;
-  height: 25px;
-  width: 25px;
-}
-
-.wp-block-hotblocks-accordion .accordion-heading:hover::after {
-  content: ' ';
-  background-image: url(http://wp.protembis.com/wp-content/uploads/2020/12/Button_rot_runter.png);
-  background-size:contain;
-	background-repeat: no-repeat;
-  height: 25px;
-  width: 25px;
-}
-
-
-.wp-block-hotblocks-accordion .accordion-heading.active_tab::after {
-  content: ' ';
-  background-image: url(http://wp.protembis.com/wp-content/uploads/2020/12/Button_blau_hoch.png);
-  background-size:contain;
-	background-repeat: no-repeat;
-  height: 25px;
-  width: 25px;
-}
-
-.wp-block-hotblocks-accordion .accordion-heading.active_tab:hover::after {
-  content: ' ';
-  background-image: url(http://wp.protembis.com/wp-content/uploads/2020/12/Button_rot_rauf.png);
-  background-size:contain;
-	background-repeat: no-repeat;
-  height: 25px;
-  width: 25px;
-}
-
-
-
-/* ----------------------------- */
 /* HAUPTSEITE                    */
 /* ----------------------------- */
 

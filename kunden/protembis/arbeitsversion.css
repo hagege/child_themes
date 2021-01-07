@@ -1,18 +1,4 @@
-/* Schriftgröße bei Texten kleiner 
-wieder rausgenommen, weil der Text springt */
-@media (max-width:769px) {
-    .accordion-content,
-		.wp-block-columns.alignfull.has-white-background-color.has-background,
-	   p.has-text-align-center,
-	a.wp-block-button__link.has-background.__mPS2id._mPS2id-h.mPS2id-highlight
-		{
-        font-size: 0.8em;
-    }
-	.wp-block-button .wp-block-button__link 	{
-			font-size: 0.8em;
-			line-height: inherit;
-	}
-}
+/* ----------------------------- */
 
 /* ----------------------------- */
 /* Navigation                    */
@@ -21,23 +7,100 @@ wieder rausgenommen, weil der Text springt */
 @media (min-width: 900px) {
     .main-navigation .menu > .menu-item > a::after
 	{
-        right: -20px;
+        right: -52px;
     }
     .main-navigation .menu > .menu-item.current-menu-item > a::after,
     .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
     .main-navigation .menu > .menu-item > a:hover::after {
-        width: 70%;
-
+        width: 100%;
     }
+	
+	    .main-navigation .menu > .menu-item.current-menu-item > a::after,
+    .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
+    .main-navigation .menu > .menu-item > a:active::after {
+        width: 90%;
+				color: #263F5F;
+    }
+
+
+		/* graue Linie zwischen Menü und Content */ 
+		.separate-containers .site-main {
+				margin: 0px;
+				border-top: 5px solid #9a9a9a;
+		}
+
+		/* Hover bei Untermenüpunkten */
+		.main-navigation .main-nav ul ul li[class*="current-menu-"] > a:hover, .main-navigation .main-nav ul ul li[class*="current-menu-"].sfHover > a {
+				color: #eaeaea;
+				background-color: #622523;
+	}
 }
-	
-	
-/* Teamfotos - Höhe auto (Probleme mit iPhone */
+
+
+
+/* Accordion-content bei mobilen Geräten kleiner */
+@media only screen and (max-width:499px) {
+		.wp-block-hotblocks-accordion .accordion-content {
+			font-size: 0.7em;
+	}
+}
+
+
+/* erstes Protembo-Video ohne Rand zum unteren Container */
+.arve, #html .arve {
+	margin-bottom: 0em;
+}
+
+.arve-embed, #html .arve-embed {
+    margin-bottom: -10px;
+}
+
+/* ----------------------------- */
+/* Pfeil bei Accordion-Block     */
+/* ----------------------------- */
+
+
+.wp-block-hotblocks-accordion .accordion-heading::after {
+  content: ' ';
+  background-image: url(http://wp.protembis.com/wp-content/uploads/2020/12/Button_blau_runter.png);
+  background-size:contain;
+  background-repeat: no-repeat;
+  height: 25px;
+  width: 25px;
+}
+
+.wp-block-hotblocks-accordion .accordion-heading:hover::after {
+  content: ' ';
+  background-image: url(http://wp.protembis.com/wp-content/uploads/2020/12/Button_rot_runter.png);
+  background-size:contain;
+  background-repeat: no-repeat;
+  height: 25px;
+  width: 25px;
+}
+
+
+.wp-block-hotblocks-accordion .accordion-heading.active_tab::after {
+  content: ' ';
+  background-image: url(http://wp.protembis.com/wp-content/uploads/2020/12/Button_blau_hoch.png);
+  background-size:contain;
+  background-repeat: no-repeat;
+  height: 25px;
+  width: 25px;
+}
+
+.wp-block-hotblocks-accordion .accordion-heading.active_tab:hover::after {
+  content: ' ';
+  background-image: url(http://wp.protembis.com/wp-content/uploads/2020/12/Button_rot_rauf.png);
+  background-size:contain;
+  background-repeat: no-repeat;
+  height: 25px;
+  width: 25px;
+}
+
+/* Teamfotos - Höhe auto (Probleme mit iPhone) */
 .wp-image-1769,
 .wp-image-1770,
 .wp-image-1771
 	{
     height: auto;
 	}
-
-
