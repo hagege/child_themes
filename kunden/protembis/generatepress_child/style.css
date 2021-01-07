@@ -306,7 +306,7 @@ p.versteckt {
 	{
         content: "";
         position: absolute;
-        right: -45px;
+        right: -20px;
         /* left: 50%; */
         bottom: -5px;
         -webkit-transform: translateX(-50%);
@@ -321,7 +321,7 @@ p.versteckt {
     .main-navigation .menu > .menu-item.current-menu-item > a::after,
     .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
     .main-navigation .menu > .menu-item > a:hover::after {
-        width: 90%;
+        width: 70%;
     }
 	
 	    .main-navigation .menu > .menu-item.current-menu-item > a::after,

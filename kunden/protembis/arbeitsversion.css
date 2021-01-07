@@ -28,6 +28,7 @@ wieder rausgenommen, weil der Text springt */
     .main-navigation .menu > .menu-item > a:hover::after {
         width: 70%;
 
+    }
 }
 	
 	
