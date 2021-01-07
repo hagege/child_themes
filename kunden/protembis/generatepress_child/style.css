@@ -146,17 +146,6 @@ article.post {
 	  max-width: 400px;
 }
 
-/* Schriftgröße bei Texten kleiner */
-@media (max-width:769px) {
-    .accordion-content,
-		.wp-block-columns.alignfull.has-white-background-color.has-background,
-	   p.has-text-align-center,
-	a.wp-block-button__link.has-background.__mPS2id._mPS2id-h.mPS2id-highlight
-		{
-        font-size: 0.9em;
-    }
-}
-
 
 
 @media only screen and (max-width:399px) {
@@ -300,6 +289,12 @@ figure.aligncenter.size-large.is-resized {
 
 
 
+/* Die Überschriften sind versteckt, werden aber zur Ansteuerung per Anker benötigt */
+p.versteckt {
+	visibility:hidden;
+	display:none;
+}
+
 /* ----------------------------- */
 
 /* ----------------------------- */
@@ -311,7 +306,7 @@ figure.aligncenter.size-large.is-resized {
 	{
         content: "";
         position: absolute;
-        right: 0;
+        right: -45px;
         /* left: 50%; */
         bottom: -5px;
         -webkit-transform: translateX(-50%);
@@ -319,14 +314,21 @@ figure.aligncenter.size-large.is-resized {
         display: block;
         width: 0;
         height: 5px;
-				color: #622523;
+		color: #622523;
  background-color: currentColor;
         transition: 0.3s width ease; 
     }
     .main-navigation .menu > .menu-item.current-menu-item > a::after,
     .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
     .main-navigation .menu > .menu-item > a:hover::after {
-        width: 50%;
+        width: 90%;
+    }
+	
+	    .main-navigation .menu > .menu-item.current-menu-item > a::after,
+    .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
+    .main-navigation .menu > .menu-item > a:active::after {
+        width: 90%;
+				color: #263F5F;
     }
 
 
@@ -354,7 +356,7 @@ a.oben.__mPS2id._mPS2id-h {
 /* hover bei Button unten */
 a.oben.__mPS2id._mPS2id-h:hover {
     background: url(http://wp.protembis.com/wp-content/uploads/2020/12/Button_rot_rauf.png) no-repeat;
-		padding-bottom: 60px;
+	padding-bottom: 60px;
     margin-top: 120px; 
 }
 
@@ -449,6 +451,13 @@ header.entry-header {
 
 @media (max-width:769px) {
 	.wp-block-button__link:active, .wp-block-button__link:focus, .wp-block-button__link:hover, .wp-block-button__link:visited {
+			color: #fff;
+			background-color: #622523!important;
+	}
+}
+
+@media (min-width:770px) {
+	.wp-block-button__link:hover{
 			color: #fff;
 			background-color: #622523!important;
 	}

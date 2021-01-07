@@ -1,6 +1,17 @@
-p.versteckt {
-	visibility:hidden;
-	display:none;
+/* Schriftgröße bei Texten kleiner 
+wieder rausgenommen, weil der Text springt */
+@media (max-width:769px) {
+    .accordion-content,
+		.wp-block-columns.alignfull.has-white-background-color.has-background,
+	   p.has-text-align-center,
+	a.wp-block-button__link.has-background.__mPS2id._mPS2id-h.mPS2id-highlight
+		{
+        font-size: 0.8em;
+    }
+	.wp-block-button .wp-block-button__link 	{
+			font-size: 0.8em;
+			line-height: inherit;
+	}
 }
 
 /* ----------------------------- */
@@ -10,11 +21,22 @@ p.versteckt {
 @media (min-width: 900px) {
     .main-navigation .menu > .menu-item > a::after
 	{
-        right: -45px;
+        right: -20px;
     }
     .main-navigation .menu > .menu-item.current-menu-item > a::after,
     .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
     .main-navigation .menu > .menu-item > a:hover::after {
-        width: 90%;
-    }
+        width: 70%;
+
 }
+	
+	
+/* Teamfotos - Höhe auto (Probleme mit iPhone */
+.wp-image-1769,
+.wp-image-1770,
+.wp-image-1771
+	{
+    height: auto;
+	}
+
+
