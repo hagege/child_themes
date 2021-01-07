@@ -1,6 +1,16 @@
 /* CSS Document */
 
-/* Link als Pfeil anzeigen, wenn Oberpunkt nicht angewählt werden soll */
+/* Ãœberschriften auf der Hauptseite hidden */
+h2.versteckt {
+	visibility: hidden;
+}
+
+/* kein Rand unter den Cover-Videos */
+.wp-block-cover.alignfull {
+    margin-bottom: 0px !important;
+}
+
+/* Link als Pfeil anzeigen, wenn Oberpunkt nicht angewÃ¤hlt werden soll */
 .menu-item a:not([href]) {
     cursor: default;
 }
@@ -51,7 +61,7 @@
 /* Spalten von 3 auf 1 */
 @media (max-width:1099px) {
     .team-columns {
-		/* folgende Zeile sorgt dafür, dass die Spalten untereinander gezeigt werden */
+		/* folgende Zeile sorgt dafÃ¼r, dass die Spalten untereinander gezeigt werden */
 	  display: unset; 
 		background-color: unset;
     }
@@ -68,25 +78,25 @@
 		margin-left: auto;
 		margin-right: auto 
 	}
-	.team_foto {
-		/* Höhe der Fotos festlegen */
+	/* .team_foto {
+		HÃ¶he der Fotos festlegen 
 		max-height: 408px; 
-  }
+  }*/
 }
 
-/* Einstellungen für iPad mini */
+/* Einstellungen fÃ¼r iPad mini */
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px)
 and (-webkit-min-device-pixel-ratio: 1)  { 
-		.team_foto {
-		/* Höhe der Fotos festlegen */
+		/*.team_foto {
+		HÃ¶he der Fotos festlegen 
 		height: 408px; 
   }
-
+*/
 }
 
-/* containerspalte_team enthält die 3 Spalten */
+/* containerspalte_team enthÃ¤lt die 3 Spalten */
 @media (min-width:1100px) {
 	.containerspalte_team {
 		/* max-width: 1300px; */
@@ -110,7 +120,7 @@ and (-webkit-min-device-pixel-ratio: 1)  {
 		margin-right: auto 
 }
 
-/* Absätze auf der Hauptseite schmaler */
+/* AbsÃ¤tze auf der Hauptseite schmaler */
 .hauptseite_zentriert {
     padding-left: 15%;
     padding-right: 15%;
@@ -127,11 +137,11 @@ article.post {
 }
 
 
-@media (min-width:769px and max-width: 1199px) {
-article.post {
-    margin-left: 100px;
-    margin-right: 100px;
-}
+@media (min-width:769px) and (max-width:1199px) {
+    article.post {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
 }	
 
 
@@ -158,31 +168,35 @@ article.post {
 }
 
 
-
+@media (max-width:769px) {
+    .accordion-content {
+        font-size: 0.7em;
+    }
+}
 
 
 
 @media only screen and (max-width:399px) {
-h4.accordion-heading {
+	h4.accordion-heading {
     font-size: 0.55em;
 	}
 }
 
 @media only screen and (min-width:400px) {
-h4.accordion-heading {
+	h4.accordion-heading {
     font-size: 0.6em;
 	}
 }
 
 
 @media only screen and (min-width:500px) {
-h4.accordion-heading {
-    font-size: 0.8em;
+	h4.accordion-heading {
+			font-size: 0.8em;
 	}
 }
 
 @media only screen and (min-width:700px) {
-h4.accordion-heading {
+	h4.accordion-heading {
     font-size: 1.0em;
 	}
 }
@@ -190,13 +204,13 @@ h4.accordion-heading {
 
 
 @media only screen and (min-width:1100px) {
-h4.accordion-heading {
-    font-size: 0.75em;
+	h4.accordion-heading {
+			font-size: 0.75em;
 	}
 }
 
 @media only screen and (min-width:1400px) {
-h4.accordion-heading {
+	h4.accordion-heading {
     font-size: 1.1em;
 	}
 }
@@ -214,7 +228,7 @@ h4.accordion-heading {
 
 
 
-/* Textblock mehr an das Bild ranrücken */
+/* Textblock mehr an das Bild ranrÃ¼cken */
 p.has-text-align-center.has-medium-font-size {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -226,7 +240,7 @@ p.has-text-align-center.has-medium-font-size {
 }
 
 
-	/* Höhe der Fotos festlegen 
+	/* HÃ¶he der Fotos festlegen 
   height: 408px; */
 
 figure.aligncenter.size-large.is-resized {
@@ -244,7 +258,7 @@ figure.aligncenter.size-large.is-resized {
 
 .wp-block-hotblocks-accordion .accordion-heading::after {
   content: ' ';
-  background-image: url(http://test.dev-haurand.de/wp-content/uploads/2020/12/Button_blau_runter.png);
+  background-image: url(http://wp.protembis.com/wp-content/uploads/2020/12/Button_blau_runter.png);
   background-size:contain;
 	background-repeat: no-repeat;
   height: 30px;
@@ -253,7 +267,7 @@ figure.aligncenter.size-large.is-resized {
 
 .wp-block-hotblocks-accordion .accordion-heading:hover::after {
   content: ' ';
-  background-image: url(http://test.dev-haurand.de/wp-content/uploads/2020/12/Button_rot_runter.png);
+  background-image: url(http://wp.protembis.com/wp-content/uploads/2020/12/Button_rot_runter.png);
   background-size:contain;
 	background-repeat: no-repeat;
   height: 30px;
@@ -263,7 +277,7 @@ figure.aligncenter.size-large.is-resized {
 
 .wp-block-hotblocks-accordion .accordion-heading.active_tab::after {
   content: ' ';
-  background-image: url(http://test.dev-haurand.de/wp-content/uploads/2020/12/Button_blau_hoch.png);
+  background-image: url(http://wp.protembis.com/wp-content/uploads/2020/12/Button_blau_hoch.png);
   background-size:contain;
 	background-repeat: no-repeat;
   height: 30px;
@@ -272,7 +286,7 @@ figure.aligncenter.size-large.is-resized {
 
 .wp-block-hotblocks-accordion .accordion-heading.active_tab:hover::after {
   content: ' ';
-  background-image: url(http://test.dev-haurand.de/wp-content/uploads/2020/12/Button_rot_rauf.png);
+  background-image: url(http://wp.protembis.com/wp-content/uploads/2020/12/Button_rot_rauf.png);
   background-size:contain;
 	background-repeat: no-repeat;
   height: 30px;
@@ -333,13 +347,13 @@ figure.aligncenter.size-large.is-resized {
     }
 
 
-		/* graue Linie zwischen Menü und Content */ 
+		/* graue Linie zwischen MenÃ¼ und Content */ 
 		.separate-containers .site-main {
 				margin: 0px;
 				border-top: 5px solid #9a9a9a;
 		}
 
-		/* Hover bei Untermenüpunkten */
+		/* Hover bei UntermenÃ¼punkten */
 		.main-navigation .main-nav ul ul li[class*="current-menu-"] > a:hover, .main-navigation .main-nav ul ul li[class*="current-menu-"].sfHover > a {
 				color: #eaeaea;
 				background-color: #622523;
@@ -349,14 +363,14 @@ figure.aligncenter.size-large.is-resized {
 
 /* Button unten auf den Seiten */
 a.oben.__mPS2id._mPS2id-h {
-    background: url(http://test.dev-haurand.de/wp-content/uploads/2020/12/Button_blau_hoch.png) no-repeat;
+    background: url(http://wp.protembis.com/wp-content/uploads/2020/12/Button_blau_hoch.png) no-repeat;
 		padding-bottom: 60px;
     margin-top: 120px; 
 }
 
 /* hover bei Button unten */
 a.oben.__mPS2id._mPS2id-h:hover {
-    background: url(http://test.dev-haurand.de/wp-content/uploads/2020/12/Button_rot_rauf.png) no-repeat;
+    background: url(http://wp.protembis.com/wp-content/uploads/2020/12/Button_rot_rauf.png) no-repeat;
 		padding-bottom: 60px;
     margin-top: 120px; 
 }
@@ -387,7 +401,7 @@ img.wp-image-519 {
 }
 
 
-/* Textzeile für Device (ganz oben) */
+/* Textzeile fÃ¼r Device (ganz oben) */
 @media only screen and (min-width: 551px) {
 	p.has-text-align-center.fadeInOut_3.has-large-font-size {
 			font-size: 65px;
@@ -405,7 +419,7 @@ img.wp-image-519 {
 }
 
 
-/* Textzeile für die beiden unteren Schriften auf dem Bild */
+/* Textzeile fÃ¼r die beiden unteren Schriften auf dem Bild */
 @media only screen and (min-width: 551px) {
 	p.has-text-align-left.animated.bounceInRight.delay-3s {
 			font-size: 65px;
@@ -424,7 +438,7 @@ img.wp-image-519 {
 
 
 /* ----------------------------- */
-/* Rand für Text-Container (Spalten) */
+/* Rand fÃ¼r Text-Container (Spalten) */
 /* ----------------------------- */
 
 /* @media (min-width: 782px) {
@@ -470,12 +484,12 @@ body.page-id-990 .inside-article {
 
 
 
-/* Farbe für Dreieck 
+/* Farbe fÃ¼r Dreieck 
     fill: #622621;
 }
 
 
-/* Kein Rand unter dem Dreieck, damit das Bild direkt über dem Dreick erscheint 
+/* Kein Rand unter dem Dreieck, damit das Bild direkt Ã¼ber dem Dreick erscheint 
 .entry-content > [class*="wp-block-"]:not(:last-child) {
     margin-bottom: 0;
 }
@@ -530,7 +544,7 @@ article#post-50 {
 }
 */
 
-/* Sonst wird bei News die graue Menülinie überdeckt 
+/* Sonst wird bei News die graue MenÃ¼linie Ã¼berdeckt 
 
 .entry-content:not(:first-child), .entry-summary:not(:first-child){
     margin-top: 5px;

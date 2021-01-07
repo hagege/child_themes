@@ -167,9 +167,13 @@ article.post {
 	  max-width: 400px;
 }
 
-
+/* Schriftgröße bei Texten kleiner */
 @media (max-width:769px) {
-    .accordion-content {
+    .accordion-content,
+		.wp-block-columns.alignfull.has-white-background-color.has-background,
+	   p.has-text-align-center,
+	a.wp-block-button__link.has-background.__mPS2id._mPS2id-h.mPS2id-highlight
+		{
         font-size: 0.7em;
     }
 }
@@ -464,11 +468,12 @@ header.entry-header {
 /* hover bei Buttons */
 /* ----------------------------- */
 
-.wp-block-button__link:active, .wp-block-button__link:focus, .wp-block-button__link:hover, .wp-block-button__link:visited {
-    color: #fff;
-    background-color: #622523!important;
+@media (max-width:769px) {
+	.wp-block-button__link:active, .wp-block-button__link:focus, .wp-block-button__link:hover, .wp-block-button__link:visited {
+			color: #fff;
+			background-color: #622523!important;
+	}
 }
-
 
 /* ----------------------------- */
 /* Blauer Hintergrund bei Team */
