@@ -21,6 +21,9 @@
         width: 90%;
 				color: #263F5F;
     }
+	
+
+
 
 
 		/* graue Linie zwischen Menü und Content */ 
@@ -31,9 +34,18 @@
 
 		/* Hover bei Untermenüpunkten */
 		.main-navigation .main-nav ul ul li[class*="current-menu-"] > a:hover, .main-navigation .main-nav ul ul li[class*="current-menu-"].sfHover > a {
-				color: #eaeaea;
+				color: #E1E7F0;
 				background-color: #622523;
 	}
+	/* Active bei Untermenüpunkten */
+   .main-navigation .main-nav ul ul li[class*="current-menu-"] > a:active {
+        color: #E1E7F0;
+        background-color: #263F5F;
+    }
+	   .main-navigation .main-nav ul ul li[class*="current-menu-"] > a:focus {
+        color: #E1E7F0;
+        background-color: #263F5F;
+    }
 }
 
 
