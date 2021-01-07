@@ -10,11 +10,11 @@ p.versteckt {
 @media (min-width: 900px) {
     .main-navigation .menu > .menu-item > a::after
 	{
-        right: -30px;
+        right: -45px;
     }
     .main-navigation .menu > .menu-item.current-menu-item > a::after,
     .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
     .main-navigation .menu > .menu-item > a:hover::after {
-        width: 75%;
+        width: 90%;
     }
 }
