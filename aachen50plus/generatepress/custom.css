@@ -26,35 +26,58 @@ h2.entry-title {
 		background-color: rgb(244,238,222);
     opacity: 0.6;
 }
+/* ----------------------------- */
+/* Navigation                    */
+/* ----------------------------- */
 
-/* Navigavtionsmenü mit animierten Unterstrich */
+/* Einstellungen für das Desktop-Menü */
 @media (min-width: 769px) {
-    .main-navigation .menu > .menu-item > a::after
-	{
+    /* nav links effect */
+    .main-navigation .menu > .menu-item > a::after {
         content: "";
         position: absolute;
         right: 0;
         left: 50%;
-        bottom: 15px;
+        bottom: 0px;
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
+        color: #df5022;
         display: block;
         width: 0;
-        height: 2px;
-				color: red;
-        background-color: black;
+        height: 5px;   
+        background-color: currentColor;
         transition: 0.3s width ease;
     }
     .main-navigation .menu > .menu-item.current-menu-item > a::after,
-    .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
     .main-navigation .menu > .menu-item > a:hover::after {
-        width: 50%;
+        width: 100%;
     }
-}
+	
+	.main-navigation .menu > .menu-item.current-menu-item > a::after,
+    .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
+    .main-navigation .menu > .menu-item > a:active::after {
+        width: 100%;
+		color: #df5022;
+    }
+	/* Submenü */
+	ul.sub-menu {
+    opacity: 0.9!important;
+	}
 
-/* Submenü */
-ul.sub-menu {
-    opacity: 0.8!important;
+    /* Hover bei Untermenüpunkten */
+    .main-navigation .main-nav ul ul li[class*="current-menu-"] > a:hover, .main-navigation .main-nav ul ul li[class*="current-menu-"].sfHover > a {
+        color: #F4EEDE;
+        background-color: #DF5022;
+    }
+    /* Active bei Untermenüpunkten */
+    .main-navigation .main-nav ul ul li[class*="current-menu-"] > a:active {
+        color: #DF5022;
+        background-color: #F4EEDE;
+    }
+    .main-navigation .main-nav ul ul li[class*="current-menu-"] > a:focus {
+        color: #DF5022;
+        background-color: #F4EEDE;
+    }
 }
 
 /* Breakpoint auf eine Spalte schon bei 1100px */
