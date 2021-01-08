@@ -7,7 +7,7 @@
 /* Farben für Off-Canvas-Menü */
 @media (max-width: 900px) {
 	.slideout-navigation.main-navigation .main-nav ul ul li[class*="current-menu-"] > a{
-		color: #263f5f;
+		color: #9a9a9a;
 		background-color: #e1e7f0;
 	}
 		.slideout-navigation.main-navigation .main-nav ul ul li[class*="current-menu-"] > a:hover{
@@ -30,18 +30,18 @@
 @media (min-width: 900px) {
     .main-navigation .menu > .menu-item > a::after
 	{
-        right: -41px;
+        right: -45px;
     }
     .main-navigation .menu > .menu-item.current-menu-item > a::after,
     .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
     .main-navigation .menu > .menu-item > a:hover::after {
-        width: 85%;
+        width: 95%;
     }
 	
 	    .main-navigation .menu > .menu-item.current-menu-item > a::after,
     .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
     .main-navigation .menu > .menu-item > a:active::after {
-        width: 85%;
+        width: 95%;
 				color: #263F5F;
     }
 			/* Hover bei Untermenüpunkten */
@@ -123,7 +123,21 @@
   width: 25px;
 }
 
-/* Teamfotos - Höhe auto (Probleme mit iPhone) */
+/* Einstellungen für iPad mini */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 1)  { 
+     /*
+        .team_foto {
+		Höhe der Fotos festlegen 
+		height: 408px; 
+  }
+*/
+}
+
+
+/* Teamfotos - Höhe auto (Probleme mit iPhone) 
 .wp-image-1769,
 .wp-image-1770,
 .wp-image-1771
