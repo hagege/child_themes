@@ -5,7 +5,7 @@
  Author:       Hans-Gerd Gerhards 
  Author URI:   https://haurand.com/ 
  Template:     generatepress
- Version:      1.0 (2021-01-07)
+ Version:      1.01 (2021-01-08)
 */
 
 
@@ -272,7 +272,7 @@ p.versteckt {
         width: 0;
         height: 5px;
 		color: #622523;
- background-color: currentColor;
+        background-color: currentColor;
         transition: 0.3s width ease; 
     }
     .main-navigation .menu > .menu-item.current-menu-item > a::after,
@@ -281,25 +281,26 @@ p.versteckt {
         width: 70%;
     }
 	
-	    .main-navigation .menu > .menu-item.current-menu-item > a::after,
+	.main-navigation .menu > .menu-item.current-menu-item > a::after,
     .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
     .main-navigation .menu > .menu-item > a:active::after {
         width: 90%;
-				color: #263F5F;
+		color: #263F5F;
     }
 
 
-		/* graue Linie zwischen Menü und Content */ 
-		.separate-containers .site-main {
-				margin: 0px;
-				border-top: 5px solid #9a9a9a;
-		}
+    /* graue Linie zwischen Menü und Content */ 
+    .separate-containers .site-main {
+            margin: 0px;
+            border-top: 5px solid #9a9a9a;
+    }
 
-		/* Hover bei Untermenüpunkten */
+		/* Hover bei Untermenüpunkten 
 		.main-navigation .main-nav ul ul li[class*="current-menu-"] > a:hover, .main-navigation .main-nav ul ul li[class*="current-menu-"].sfHover > a {
 				color: #eaeaea;
 				background-color: #622523;
-	}
+        }
+        */
 }
 
 
