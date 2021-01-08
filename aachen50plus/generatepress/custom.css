@@ -1,5 +1,11 @@
 /* Custom CSS */
 
+/* Anzeige von Online-Events */
+span.tribe-ext-events-control-online-event__text {
+    color: #f4eede;
+    background-color: #df5022;
+}
+
 /* in einem farbigen Kasten mit einer Schriftfarbe weiß, muss der Link in roter Schrift angezeigt werden */
 a.corona-button-beitrag {
     color: #df5022!important;
@@ -104,3 +110,4 @@ img.header-image.is-logo-image {
 	}
 */
 }
+
