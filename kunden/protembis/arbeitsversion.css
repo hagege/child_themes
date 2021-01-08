@@ -26,43 +26,6 @@
 	}
 }
 
-/* Einstellungen für das Desktop-Menü */
-@media (min-width: 900px) {
-    .main-navigation .menu > .menu-item > a::after
-	{
-        right: -45px;
-    }
-    .main-navigation .menu > .menu-item.current-menu-item > a::after,
-    .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
-    .main-navigation .menu > .menu-item > a:hover::after {
-        width: 95%;
-    }
-	
-	    .main-navigation .menu > .menu-item.current-menu-item > a::after,
-    .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
-    .main-navigation .menu > .menu-item > a:active::after {
-        width: 95%;
-				color: #263F5F;
-    }
-			/* Hover bei Untermenüpunkten */
-		.main-navigation .main-nav ul ul li[class*="current-menu-"] > a:hover, .main-navigation .main-nav ul ul li[class*="current-menu-"].sfHover > a {
-				color: #E1E7F0;
-				background-color: #622523;
-	}
-	/* Active bei Untermenüpunkten */
-   .main-navigation .main-nav ul ul li[class*="current-menu-"] > a:active {
-        color: #E1E7F0;
-        background-color: #263F5F;
-    }
-	   .main-navigation .main-nav ul ul li[class*="current-menu-"] > a:focus {
-        color: #E1E7F0;
-        background-color: #263F5F;
-    }
-}
-	
-
-
-
 
 /* Accordion-content bei mobilen Geräten kleiner */
 @media only screen and (max-width:499px) {
