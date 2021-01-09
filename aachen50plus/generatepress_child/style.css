@@ -9,7 +9,7 @@
 */
 
 
-/* Fuﬂzeile b¸ndig mit haurand.com */ 
+/* Fu√üzeile b√ºndig mit haurand.com */ 
 .footer-bar-align-right .copyright-bar {
     float: left;
     margin-top: 9px;
@@ -21,7 +21,7 @@ h2 {
 }
 
 
-/* Farben f¸r "Weiterlesen-Button" */
+/* Farben f√ºr "Weiterlesen-Button" */
 a.read-more.button {
     background-color: #919191;
     color: white;
@@ -32,7 +32,7 @@ a.read-more.button:hover {
 }
 
 
-/* Farben f¸r Suchen-Button TEC */
+/* Farben f√ºr Suchen-Button TEC */
 button.tribe-common-c-btn.tribe-events-c-search__button {
     background-color: #919191!important;
 }
@@ -60,7 +60,7 @@ button.tribe-common-c-btn.tribe-events-c-search__button:hover {
   margin-bottom: 40px;
 }
 
-/* Container f¸r Mitgliedsbutton und Infotext - hgg, 6.10.2019 */
+/* Container f√ºr Mitgliedsbutton und Infotext - hgg, 6.10.2019 */
 @media (min-width: 431px) {
   .ackids_container {
     display: inline-flex;
@@ -96,13 +96,13 @@ div.abgesagt {
 
 
 /*----------------------------------------------------------------*/
-/* Start: Button in Beitr‰gen
+/* Start: Button in Beitr√§gen
 /* Datum: 23.02.2018
 /* Autor: hgg
-/* z. Bsp.: weiﬂe Farbe, bei Hover: grauer Button
+/* z. Bsp.: wei√üe Farbe, bei Hover: grauer Button
 /*----------------------------------------------------------------*/
 
-/* Absatz f¸r Button */
+/* Absatz f√ºr Button */
 .button-absatz {
     margin:30px 0px 30px 0px;
 }
@@ -140,7 +140,7 @@ a.corona-button-beitrag:hover {
 
 
 /*----------------------------------------------------------------*/
-/* Ende: Button in Beitr‰gen
+/* Ende: Button in Beitr√§gen
 /* Datum: 23.02.2018
 /* Autor: hgg
 /*----------------------------------------------------------------*/
