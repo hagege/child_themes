@@ -13,7 +13,7 @@ a.corona-button-beitrag {
 
 /* Höhe des Elements immer 90px, damit die Bilder immer eine Linie bilden */
 h2.entry-title {
-    height: 90px;
+    height: 3.6em;
 }
 
 /* Link als Pfeil anzeigen, wenn Oberpunkt nicht angewählt werden soll */
@@ -51,6 +51,7 @@ h2.entry-title {
     .main-navigation .menu > .menu-item.current-menu-item > a::after,
     .main-navigation .menu > .menu-item > a:hover::after {
         width: 100%;
+				color: #000000;
     }
 	
 	.main-navigation .menu > .menu-item.current-menu-item > a::after,
