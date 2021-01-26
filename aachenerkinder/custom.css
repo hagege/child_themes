@@ -4,6 +4,14 @@ p.links_orange{
 	 padding: 10px;
 }
 
+/* Bessere Darstellung der Zitate */
+blockquote {
+		font-weight: unset;
+	  font-style: italic;
+		border-left: 5px solid #ef7f1a;
+/*    border-top: 4px dotted #f49d1d;
+    border-bottom: 4px dotted #f49d1d; */
+}
 	
 /* Tabelle bei Buchverlosung linksbündig */
 figure.wp-block-table.alignwide.ac_tabelle.is-style-regular {
