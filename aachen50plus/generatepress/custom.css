@@ -12,9 +12,26 @@ a.corona-button-beitrag {
 }
 
 /* Höhe des Elements immer 90px, damit die Bilder immer eine Linie bilden */
-h2.entry-title {
-    height: 3.6em;
+
+@media (max-width: 1099px) {
+	h2.entry-title {
+			height: unset;
+	}
 }
+
+
+@media (min-width: 1100px) and (max-width: 1350px) {
+	h2.entry-title {
+			height: 6.8em;
+	}
+}
+
+@media (min-width: 1351px) {
+	h2.entry-title {
+			height: 4.8em;
+	}
+}
+
 
 /* Link als Pfeil anzeigen, wenn Oberpunkt nicht angewählt werden soll */
 .menu-item a:not([href]) {
