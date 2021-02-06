@@ -5,7 +5,7 @@
 /* ----------------------------- */
 
 /* Farben für Off-Canvas-Menü */
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
 	.slideout-navigation.main-navigation .main-nav ul ul li[class*="current-menu-"] > a{
 		color: #9a9a9a;
 		background-color: #e1e7f0;
@@ -29,7 +29,7 @@
 
 /* Accordion-content bei mobilen Geräten kleiner */
 @media only screen and (max-width:499px) {
-		.wp-block-hotblocks-accordion .accordion-content {
+		.wp-block-hotblocks-accordion, 	.accordion-content {
 			font-size: 0.7em;
 	}
 }
@@ -99,6 +99,21 @@ and (-webkit-min-device-pixel-ratio: 1)  {
 */
 }
 
+@media only screen 
+	and (max-device-width : 470px) {
+.wp-block-buttons .wp-block-button {
+    font-size: 0.6em;
+}
+}
+
+
+@media only screen 
+and (min-device-width : 471px) 
+	and (max-device-width : 560px) {
+.wp-block-buttons .wp-block-button {
+    font-size: 0.8em;
+}
+}
 
 /* Teamfotos - Höhe auto (Probleme mit iPhone) 
 .wp-image-1769,
