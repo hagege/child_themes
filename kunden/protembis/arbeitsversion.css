@@ -99,6 +99,11 @@ and (-webkit-min-device-pixel-ratio: 1)  {
 */
 }
 
+
+/* ----------------------------- */
+/* Schriftgröße bei Buttons      */
+/* ----------------------------- */
+
 @media only screen 
 	and (max-device-width : 470px) {
 .wp-block-buttons .wp-block-button {
@@ -114,6 +119,55 @@ and (min-device-width : 471px)
     font-size: 0.8em;
 }
 }
+
+/* ----------------------------- */
+/* Trennlinie auf Kontaktseite   */
+/* ----------------------------- */
+@media only screen 
+	and (min-device-width : 600px) {
+hr.wp-block-separator {
+    display: none;
+}
+}
+
+
+/* ----------------------------- */
+/* Schriftgröße und Abstand      */
+/* verkleinern                    */
+/* ----------------------------- */
+@media only screen 
+	and (max-device-width : 700px) {
+	.has-text-align-center {
+    line-height: 1.2;
+    font-size: 0.8em;
+}
+}
+
+/* ----------------------------- */
+/* Icons auf Kontaktseite        */
+/* mehr nach links               */
+/* ----------------------------- */
+img.wp-image-1417,
+img.wp-image-1418,
+img.wp-image-1419,
+img.wp-image-1420,
+{
+    margin: -5px;
+}
+
+/* ----------------------------- */
+/* Videos auf der Hauptseite     */
+/* mehr rauszoomen               */
+/* ----------------------------- 
+@media only screen 
+	and (max-device-width : 600px) {
+.arve-embed, #html .arve-embed {
+    margin-bottom: -10px;
+    width: 950px;
+    margin-left: -150px;
+}
+}
+*/
 
 /* Teamfotos - Höhe auto (Probleme mit iPhone) 
 .wp-image-1769,
