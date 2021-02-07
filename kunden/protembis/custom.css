@@ -141,6 +141,9 @@ hr.wp-block-separator {
     line-height: 1.2;
     font-size: 0.8em;
 }
+		img.header-image.is-logo-image {
+    width: 200px;
+}
 }
 
 /* ----------------------------- */
