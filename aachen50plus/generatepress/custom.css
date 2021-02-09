@@ -1,5 +1,38 @@
 /* Custom CSS */
 
+/* Besondere Veranstaltungen */
+/* Überschrift */
+.tribe-common .tribe-common-h--alt {
+    padding: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 400;
+    text-transform: none;
+}
+
+/* Hintergrundfarbe */
+.tribe-events-widget-events-list {
+    background-color: white;
+}
+
+/* Link */
+.tribe-events-widget .tribe-events-widget-events-list__view-more-link {
+    color: #df5022!important;
+    text-transform: capitalize;
+		padding-left: 40px;
+}
+
+.tribe-events-widget .tribe-events-widget-events-list__view-more-link:visited {
+    color: #df5022!important;
+}
+
+.tribe-events-widget .tribe-events-widget-events-list__view-more-link:active,.tribe-events-widget .tribe-events-widget-events-list__view-more-link:focus,.tribe-events-widget .tribe-events-widget-events-list__view-more-link:hover {
+    color: #000000!important;
+    border-bottom-color: transparent!important;
+}
+
+/* ------------------------------ */
+
 /* Einen Block verstecken - unter erweitert: */
 .inhalt_verstecken {
     display: none; 
