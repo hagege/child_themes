@@ -1,5 +1,10 @@
 /* Custom CSS */
 
+/* Einen Block verstecken - unter erweitert: */
+.inhalt_verstecken {
+    display: none; 
+}
+
 /* Anzeige von Online-Events */
 span.tribe-ext-events-control-online-event__text {
     color: #f4eede;
