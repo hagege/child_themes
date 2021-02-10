@@ -1,6 +1,64 @@
 /* ----------------------------- */
 
 /* ----------------------------- */
+/* Kleines und großes Video      */
+/* ----------------------------- */
+
+/* auf kleineren Displays kleiner Film*/
+@media only screen 
+and (max-width: 800px) {
+    div.kleines_video {
+			display: block; 
+    }
+	  div.grosses_video {
+			display: none; 
+		}
+}
+
+/* auf größeren Displays großer Film*/
+@media only screen 
+and (min-width: 801px) {
+    div.kleines_video {
+			display: none; 
+    }
+	  div.grosses_video {
+			display: block; 
+	}
+	p.text_in_box {
+			text-align: center;
+			margin-right: 15%;
+			margin-left: 15%;
+	}
+}
+
+
+/* auf kleineren Displays kleiner Film*/
+@media only screen 
+and (max-width: 800px) {
+    figure.kleines_start_video {
+			display: block; 
+    }
+	  figure.grosses_start_video {
+			display: none; 
+		}
+		p.text_in_box {
+			text-align: center;
+		}
+}
+
+/* auf größeren Displays großer Film*/
+@media only screen 
+and (min-width: 801px) {
+    figure.kleines_start_video {
+			display: none; 
+    }
+	  figure.grosses_start_video {
+			display: block; 
+	}
+}
+
+
+/* ----------------------------- */
 /* Navigation                    */
 /* ----------------------------- */
 
@@ -153,10 +211,30 @@ hr.wp-block-separator {
 img.wp-image-1417,
 img.wp-image-1418,
 img.wp-image-1419,
-img.wp-image-1420,
+img.wp-image-1420
 {
     margin: -5px;
 }
+
+
+/* ----------------------------- */
+/* Vidoe Block auf Hautpseite    */
+/* ohne Rand                     */
+/* ----------------------------- */
+.wp-block-columns.alignfull.has-white-background-color.has-background {
+    padding-top: 0px;
+}
+
+
+
+/* TESTS */
+/*
+div#wpfp_cd1f4865aa942a9dc14ab73392d11569 {
+    width: 180%;
+    margin-left: -40%;
+}
+*/
+
 
 /* ----------------------------- */
 /* Videos auf der Hauptseite     */
