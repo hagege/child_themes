@@ -1,5 +1,4 @@
 /* ----------------------------- */
-
 /* ----------------------------- */
 /* Kleines und großes Video      */
 /* ----------------------------- */
@@ -29,6 +28,12 @@ and (min-width: 801px) {
 			margin-right: 15%;
 			margin-left: 15%;
 	}
+	 p.has-text-align-center {
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
+	}
+	
 }
 
 
@@ -218,16 +223,37 @@ img.wp-image-1420
 
 
 /* ----------------------------- */
-/* Vidoe Block auf Hautpseite    */
+/* Video Block auf Hautpseite    */
 /* ohne Rand                     */
 /* ----------------------------- */
 .wp-block-columns.alignfull.has-white-background-color.has-background {
     padding-top: 0px;
 }
 
+/* ----------------------------- */
+/* Abstand Überschrift nach oben
+ *  auf der Teamseite */
+/* ----------------------------- */
+h4.team {
+	margin-top: 30px;
+}
 
 
 /* TESTS */
+
+/* Bildbreite 2600px */
+@media only screen 
+		and (min-device-width : 2000px) {.grid-container {
+			max-width: 2600px!important;
+	}
+}
+
+/* bringt nichts 
+.team_foto {
+	max-height: 480px;
+}
+*/
+
 /*
 div#wpfp_cd1f4865aa942a9dc14ab73392d11569 {
     width: 180%;
