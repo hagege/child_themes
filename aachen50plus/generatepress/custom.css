@@ -1,5 +1,18 @@
 /* Custom CSS */
 
+/* für wichtige Infos */
+p.links_wichtig{
+   border-left: 5px solid #ef7f1a;
+	 padding: 10px;
+}
+
+/* für Zitate */
+blockquote.wp-block-quote.links_schwarz {
+    border-left: 5px solid #000000;
+    padding: 10px;
+    padding-left: 1.5em;
+}
+
 /* Besondere Veranstaltungen */
 /* Überschrift */
 .tribe-common .tribe-common-h--alt {
