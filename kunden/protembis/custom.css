@@ -1,4 +1,38 @@
 /* ----------------------------- */
+
+/* ----------------------------- */
+/* Überschriften im Fuß fett */
+/* ----------------------------- */
+h2.widget-title {
+    font-weight: bold;
+}
+
+
+/* ----------------------------- */
+/* kein hellblauer Rand beim Video */
+/* ----------------------------- */
+body.page-id-990 .inside-article {
+    background-color: white;
+}
+
+.team_spalte {
+    padding: 0px;
+}
+
+/* Einstellung für iPhone R */
+@media only screen 
+and (device-width : 375px) 
+and (device-height : 812px) 
+and (-webkit-device-pixel-ratio : 2) {
+
+		img.wp-image-69,
+		img.wp-image-70,
+		img.wp-image-71
+		{
+			max-height:300px;
+		}
+}
+
 /* ----------------------------- */
 /* Kleines und großes Video      */
 /* ----------------------------- */
