@@ -1,0 +1,554 @@
+/*
+ Theme Name:   GeneratePress Child
+ Theme URI:    https://haurand.com/
+ Description:  Default GeneratePress child theme
+ Author:       Hans-Gerd Gerhards 
+ Author URI:   https://haurand.com/ 
+ Template:     generatepress
+ Version:      1.01 (2021-01-08)
+*/
+
+
+/* CSS Document für Protembis*/
+
+/* Überschriften auf der Hauptseite hidden */
+h2.versteckt {
+	visibility: hidden;
+}
+
+/* kein Rand unter den Cover-Videos */
+.wp-block-cover.alignfull {
+    margin-bottom: 0px !important;
+}
+
+/* Link als Pfeil anzeigen, wenn Oberpunkt nicht angewählt werden soll */
+.menu-item a:not([href]) {
+    cursor: default;
+}
+
+
+/* ----------------------------- */
+/* Spalten auf der Teams-Seite */
+/* ----------------------------- */
+.team-columns {
+    background-color: #E1E7F0;
+		padding: 50px;
+}
+
+/* ----------------------------- */
+/* Spalten von 3 auf 1 */
+/* ----------------------------- */
+@media (max-width:1099px) {
+    .team-columns {
+		/* folgende Zeile sorgt dafür, dass die Spalten untereinander gezeigt werden */
+	  display: unset; 
+		background-color: unset;
+    }
+	  .team-column {
+		  background-color: #E1E7F0; 
+			padding-top: 50px;
+			padding-bottom: 50px;
+	}
+	  .team-column:not(:first-child) {
+  	  margin-left: 0px;
+	}
+	.containerspalte_team {
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto 
+	}
+	/* .team_foto {
+		Höhe der Fotos festlegen 
+		max-height: 408px; 
+  }*/
+}
+
+/* Einstellungen für iPad mini */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 1)  { 
+        /*
+        .team_foto {
+		Höhe der Fotos festlegen 
+		height: 408px; 
+  }
+*/
+}
+
+/* containerspalte_team enthält die 3 Spalten */
+@media (min-width:1100px) {
+	.containerspalte_team {
+		/* max-width: 1300px; */
+		display: block;
+		margin-left: auto;
+		margin-right: auto 
+	}
+}
+
+
+
+
+
+
+
+/* Spalte zentriert 70% */
+.spalte-zentriert{
+		display: block;
+		max-width: 70%;
+		margin-left: auto;
+		margin-right: auto 
+}
+
+/* Absätze auf der Hauptseite schmaler */
+.hauptseite_zentriert {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+
+/* Beitragsbreite bei news */
+@media (min-width:1200px) {
+article.post {
+    max-width: 1200px;
+    margin-left: 17%;
+    margin-right: 15%;
+}
+}
+
+
+@media (min-width:769px) and (max-width:1199px) {
+    article.post {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}	
+
+
+	
+
+/* ----------------------------- */
+/* TEAM -Seite                   */
+/* ----------------------------- */
+/* Inhalt Accordion              */
+/* ----------------------------- */
+.wp-block-hotblocks-accordion .accordion-content {
+    /* display: none; */
+    padding: 15px;
+    background-color: white;
+    color: #263F5F;
+}
+
+/* Accordion - max. Breite begrenzen */
+.wp-block-hotblocks-accordion {
+    padding-bottom: 0px;
+    background-color: #BCBCBC;
+	  border-bottom: 0px;
+	  max-width: 400px;
+}
+
+
+
+@media only screen and (max-width:399px) {
+	h4.accordion-heading {
+    font-size: 0.5em;
+	}
+}
+
+@media only screen and (min-width:400px) {
+	h4.accordion-heading {
+    font-size: 0.6em;
+	}
+}
+
+
+@media only screen and (min-width:500px) {
+	h4.accordion-heading {
+			font-size: 0.8em;
+	}
+}
+
+@media only screen and (min-width:700px) {
+	h4.accordion-heading {
+    font-size: 1.0em;
+	}
+}
+
+
+
+@media only screen and (min-width:1100px) {
+	h4.accordion-heading {
+			font-size: 0.75em;
+	}
+}
+
+@media only screen and (min-width:1400px) {
+	h4.accordion-heading {
+    font-size: 1.1em;
+	}
+}
+
+
+
+
+/* Heading Accordion */
+.wp-block-hotblocks-accordion .accordion-heading {
+    border-top: 0px;
+		color: white!important;
+}
+
+
+
+
+
+/* Textblock mehr an das Bild ranrücken */
+p.has-text-align-center.has-medium-font-size {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.team_foto {
+	margin-bottom:0px;
+  display: flex; 
+}
+
+
+	/* Höhe der Fotos festlegen 
+  height: 408px; */
+
+figure.aligncenter.size-large.is-resized {
+    display: flex;
+}
+
+
+
+
+
+
+/* ----------------------------- */
+/* HAUPTSEITE                    */
+/* ----------------------------- */
+
+
+/* Rand beim Text in Spalten auf der Hauptseite */
+.spaltenrand {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+
+.videospalte {
+    margin-left: 1em;
+    margin-right: 1em;
+		height: 200px;
+}
+
+
+
+
+
+/* Die Überschriften sind versteckt, werden aber zur Ansteuerung per Anker benötigt */
+p.versteckt {
+	visibility:hidden;
+	display:none;
+}
+
+/* ----------------------------- */
+
+/* ----------------------------- */
+/* Navigation                    */
+/* ----------------------------- */
+
+/* Einstellungen für das Desktop-Menü */
+@media (min-width: 900px) {
+    /* nav links effect */
+    .main-navigation .menu > .menu-item > a::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        left: 50%;
+        bottom: -5px;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        color: #622523;
+        display: block;
+        width: 0;
+        height: 5px;
+    
+        background-color: currentColor;
+        transition: 0.3s width ease;
+    }
+    .main-navigation .menu > .menu-item.current-menu-item > a::after,
+    .main-navigation .menu > .menu-item > a:hover::after {
+        width: 100%;
+    }
+	
+	.main-navigation .menu > .menu-item.current-menu-item > a::after,
+    .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
+    .main-navigation .menu > .menu-item > a:active::after {
+        width: 100%;
+		color: #263F5F;
+    }
+
+
+    /* graue Linie zwischen Menü und Content */ 
+    .separate-containers .site-main {
+            margin: 0px;
+            border-top: 5px solid #9a9a9a;
+    }
+
+    /* Hover bei Untermenüpunkten */
+    .main-navigation .main-nav ul ul li[class*="current-menu-"] > a:hover, .main-navigation .main-nav ul ul li[class*="current-menu-"].sfHover > a {
+        color: #E1E7F0;
+        background-color: #622523;
+    }
+    /* Active bei Untermenüpunkten */
+    .main-navigation .main-nav ul ul li[class*="current-menu-"] > a:active {
+        color: #E1E7F0;
+        background-color: #263F5F;
+    }
+    .main-navigation .main-nav ul ul li[class*="current-menu-"] > a:focus {
+        color: #E1E7F0;
+        background-color: #263F5F;
+    }
+}
+
+
+/* Button unten auf den Seiten */
+a.oben.__mPS2id._mPS2id-h {
+    background: url(http://wp.protembis.com/wp-content/uploads/2020/12/Button_blau_hoch.png) no-repeat;
+		padding-bottom: 60px;
+    margin-top: 120px; 
+}
+
+/* hover bei Button unten */
+a.oben.__mPS2id._mPS2id-h:hover {
+    background: url(http://wp.protembis.com/wp-content/uploads/2020/12/Button_rot_rauf.png) no-repeat;
+	padding-bottom: 60px;
+    margin-top: 120px; 
+}
+
+/* damit image button unten nicht gezeigt wird */
+img.wp-image-519 {
+    visibility: hidden;
+}
+
+/* ----------------------------- */
+/* Text auf Bildern je nach device anpassen */
+/* ----------------------------- */
+
+
+.fadeInOut_3 {
+    opacity: 0;
+    -webkit-animation: fadein_3 15s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein_3 15s; /* Firefox < 16 */
+    -ms-animation: fadein_3 15s; /* Internet Explorer */
+    -o-animation: fadein_3 15s; /* Opera < 12.1 */
+    animation: fadein_3 15s;
+}
+
+ @keyframes fadein_3 {
+    0% { opacity: 0; }
+    80%   { opacity: 1; }
+    100% {opacity: 0;}
+}
+
+
+/* Textzeile für Device (ganz oben) */
+@media only screen and (min-width: 551px) {
+	p.has-text-align-center.fadeInOut_3.has-large-font-size {
+			font-size: 65px;
+		}
+}
+@media only screen and (min-width: 401px) and (max-width: 550px) {
+	p.has-text-align-center.fadeInOut_3.has-large-font-size {
+			font-size: 35px;
+		}
+}
+@media only screen and (max-width: 400px) {
+	p.has-text-align-center.fadeInOut_3.has-large-font-size {
+			font-size: 25px;
+		}
+}
+
+
+/* Textzeile für die beiden unteren Schriften auf dem Bild */
+@media only screen and (min-width: 551px) {
+	p.has-text-align-left.animated.bounceInRight.delay-3s {
+			font-size: 65px;
+		}
+}
+@media only screen and (min-width: 401px) and (max-width: 550px) {
+	p.has-text-align-left.animated.bounceInRight.delay-3s {
+			font-size: 35px;
+		}
+}
+@media only screen and (max-width: 400px) {
+	p.has-text-align-left.animated.bounceInRight.delay-3s {
+			font-size: 25px;
+		}
+}
+
+
+/* ----------------------------- */
+/* Rand für Text-Container (Spalten) */
+/* ----------------------------- */
+
+/* @media (min-width: 782px) {
+	.wp-block-columns {
+		margin: 0 15%;
+	}
+}
+*/
+
+@media (min-width: 782px) {
+.spalten_mit_rand {
+		margin: 0 15%;
+	}
+}
+
+/* Header nicht zeigen */
+header.entry-header {
+    display: none;
+}
+
+
+/* ----------------------------- */
+/* hover bei Buttons */
+/* ----------------------------- */
+
+@media (max-width:769px) {
+	.wp-block-button__link:active, .wp-block-button__link:focus, .wp-block-button__link:hover, .wp-block-button__link:visited {
+			color: #fff;
+			background-color: #263F5F!important;
+	}
+}
+
+@media (min-width:770px) {
+	.wp-block-button__link:hover{
+			color: #fff;
+			background-color: #622523!important;
+	}
+}
+
+/* ----------------------------- */
+/* Blauer Hintergrund bei Team */
+/* ----------------------------- */
+body.page-id-990 .inside-article {
+    background-color: #E1E7F0;
+}
+
+
+/* ----------------------------- */
+/* Nicht mehr genutzt            */
+/* ----------------------------- */
+
+
+
+/* Farbe für Dreieck 
+    fill: #622621;
+}
+
+
+/* Kein Rand unter dem Dreieck, damit das Bild direkt über dem Dreick erscheint 
+.entry-content > [class*="wp-block-"]:not(:last-child) {
+    margin-bottom: 0;
+}
+*/
+
+
+
+
+/* ----------------------------- */
+
+
+/* Beitragsbreite
+.entry-content {
+    margin: 0 17%;
+}
+*/
+
+
+/**
+ * Smooth scrolling inside an element
+
+.smooth_scroll {
+	scroll-behavior: smooth;
+}
+ */
+
+
+
+
+/* ----------------------------- */
+/* Oberer Rand am Header 
+
+.separate-containers.no-sidebar .site-main {
+    margin-top: 5px;
+}
+
+article#post-50 {
+    margin: 0px;
+	  background-color: #263f5f;
+}
+
+.content-area {
+    background-color: #9a9a9a;
+}
+
+.inside-header.grid-container {
+    padding: 0px 20px 0px 20px;
+}
+
+/* .single.separate-containers .inside-article, .page.separate-containers .inside-article {
+    background-color: #263f5f;
+}
+*/
+
+/* Sonst wird bei News die graue Menülinie überdeckt 
+
+.entry-content:not(:first-child), .entry-summary:not(:first-child){
+    margin-top: 5px;
+}
+*/
+
+
+
+/* ----------------------------- 
+    margin-top: 3.8em;
+    padding-top: 3em;
+    background-color: #263F5F;
+    color: white;
+}
+
+/* ----------------------------- */
+/* Bilder mit Dreieck nur unten - nicht mehr genutzt*/
+/* ----------------------------- 
+.dreieck {
+        position: relative;
+    }
+    
+    .dreieck:before, .dreieck:after {
+        box-sizing: border-box;
+        content: " ";
+        position: absolute;
+        top:0;
+        display: block;
+        width: 50%;
+        height: 100%;
+        border-bottom: 30px solid white; 
+    }
+    
+    .dreieck:before {
+        left: 0;
+        border-right: 50px solid transparent; 
+        border-left: 0;
+    }
+    
+    .dreieck:after {
+        right: 0;
+        border-left: 50px solid transparent;
+        border-right: 0;
+    }
+    /* ----------------------------- */
+    
