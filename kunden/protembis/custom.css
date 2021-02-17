@@ -1,5 +1,32 @@
 /* ----------------------------- */
 
+/*
+img.wp-image-519 {
+    display: inherit;
+}
+*/
+
+/* ----------------------------- */
+/* Rahmen auf der Privacy-Seite  */
+/* ----------------------------- */
+.privacy_rahmen{
+    color: #7b7b7b;
+    border: 2px;
+    border: 5px solid silver;
+		padding: 5px;
+}
+
+
+/* ----------------------------- */
+/* Content-Breite auf Privacy    */
+/* und Imprint                   */
+/* ----------------------------- */
+article#post-44,
+article#post-42 {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 /* ----------------------------- */
 /* Überschriften im Fuß fett */
 /* ----------------------------- */
