@@ -1,10 +1,12 @@
 /* ----------------------------- */
 
-/*
+/* ----------------------------- */
+/* Pfeil nach oben zeigen        */
+/* ----------------------------- */
 img.wp-image-519 {
-    display: inherit;
+    display: inherit!important;
 }
-*/
+
 
 /* ----------------------------- */
 /* Rahmen auf der Privacy-Seite  */
