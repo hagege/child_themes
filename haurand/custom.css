@@ -1,6 +1,15 @@
+/* für Zitate */
+blockquote.wp-block-quote.links_schwarz {
+    border-left: 5px solid #000000;
+    padding: 10px;
+    padding-left: 1.5em;
+}
+
+
 /* für wichtige Infos */
+/* war vorher orange: #ef7f1a */
 p.links_wichtig{
-   border-left: 5px solid #ef7f1a;
+   border-left: 5px solid #f60012;
 	 padding: 10px;
 }
 
