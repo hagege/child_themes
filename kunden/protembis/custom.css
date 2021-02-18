@@ -324,13 +324,22 @@ h4.team {
 }
 
 
-/* TESTS */
-
 /* Bildbreite 2600px */
 @media only screen 
 		and (min-device-width : 2000px) {.grid-container {
 			max-width: 2600px!important;
 	}
+}
+
+/* TESTS */
+
+/* ----------------------------- */
+/* Abstandhalter soll nicht      */ 
+/* gezeigt werden und dient      */
+/* lediglich als Anker           */
+/* ----------------------------- 
+.versteckt_oben {
+	display: none;
 }
 
 /* bringt nichts 
