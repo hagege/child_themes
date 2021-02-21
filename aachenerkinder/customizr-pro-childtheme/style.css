@@ -867,21 +867,24 @@ dt{
 
 
 
-/* Veranstalterdaten nebeneinander mit mehr Platz */
+/* Veranstalterdaten nebeneinander mit mehr Platz bei einzelner Veranstaltung */
 @media screen and (max-width: 768px) {
 .tribe-events-meta-group.tribe-events-meta-group-organizer,
-.tribe-events-meta-group.tribe-events-meta-group-details {
+.tribe-events-meta-group.tribe-events-meta-group-details,
+.tribe-events-meta-group.tribe-events-meta-group-venue	
+	{
     width: 100%;
   }
 }
 
 @media screen and (min-width: 769px) {
 .tribe-events-meta-group.tribe-events-meta-group-organizer,
-.tribe-events-meta-group.tribe-events-meta-group-details {
+.tribe-events-meta-group.tribe-events-meta-group-details,
+.tribe-events-meta-group.tribe-events-meta-group-venue
+	{
     width: 50%;
   }
 }
-
 /*
 .single-tribe_events .secondary .tribe-events-venue-map {
     width: 45% !important;

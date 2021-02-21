@@ -1,5 +1,25 @@
 /* Custom CSS */
 
+/* Veranstalterdaten nebeneinander mit mehr Platz bei einzelner Veranstaltung */
+@media screen and (max-width: 768px) {
+.tribe-events-meta-group.tribe-events-meta-group-organizer,
+.tribe-events-meta-group.tribe-events-meta-group-details,
+.tribe-events-meta-group.tribe-events-meta-group-venue	
+	{
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+.tribe-events-meta-group.tribe-events-meta-group-organizer,
+.tribe-events-meta-group.tribe-events-meta-group-details,
+.tribe-events-meta-group.tribe-events-meta-group-venue
+	{
+    width: 50%;
+  }
+}
+
+
 /* für wichtige Infos */
 p.links_wichtig{
    border-left: 5px solid #ef7f1a;
