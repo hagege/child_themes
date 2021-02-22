@@ -1,6 +1,18 @@
 /* ----------------------------- */
 
 /* ----------------------------- */
+/* Video Block auf Hautpseite    */
+/* Ränder auf der Hauptseite     */
+/* ----------------------------- */
+.wp-block-columns.alignfull.has-white-background-color.has-background  {
+    padding-left: 20px;
+    padding-right: 20px; 
+	  padding-top: 0px; 
+	  margin-bottom: 0px;
+}
+
+
+/* ----------------------------- */
 /* Pfeil nach oben zeigen        */
 /* ----------------------------- */
 img.wp-image-519 {
@@ -48,6 +60,12 @@ body.page-id-990 .inside-article {
     padding: 0px;
 }
 
+/* ----------------------------- */
+/* Rand unten beim Video         */
+/* ----------------------------- */
+figure#oben {
+    margin-bottom: 0px;
+}
 
 /* -----------------------------*/
 /* Alternative für Teamfotos    */
@@ -199,7 +217,7 @@ and (min-width: 801px) {
 
 .wp-block-hotblocks-accordion .accordion-heading::after {
   content: ' ';
-  background-image: url(http://test.dev-haurand.de/wp-content/uploads/2020/12/Button_blau_runter.png);
+  background-image: url(https://protembis.com/wp-content/uploads/2020/12/Button_blau_runter.png);
   background-size:contain;
   background-repeat: no-repeat;
   height: 25px;
@@ -208,7 +226,7 @@ and (min-width: 801px) {
 
 .wp-block-hotblocks-accordion .accordion-heading:hover::after {
   content: ' ';
-  background-image: url(http://test.dev-haurand.de/wp-content/uploads/2020/12/Button_rot_runter.png);
+  background-image: url(https://protembis.com/wp-content/uploads/2020/12/Button_rot_runter.png);
   background-size:contain;
   background-repeat: no-repeat;
   height: 25px;
@@ -218,7 +236,7 @@ and (min-width: 801px) {
 
 .wp-block-hotblocks-accordion .accordion-heading.active_tab::after {
   content: ' ';
-  background-image: url(http://test.dev-haurand.de/wp-content/uploads/2020/12/Button_blau_hoch.png);
+  background-image: url(https://protembis.com/wp-content/uploads/2020/12/Button_blau_hoch.png);
   background-size:contain;
   background-repeat: no-repeat;
   height: 25px;
@@ -227,7 +245,7 @@ and (min-width: 801px) {
 
 .wp-block-hotblocks-accordion .accordion-heading.active_tab:hover::after {
   content: ' ';
-  background-image: url(http://test.dev-haurand.de/wp-content/uploads/2020/12/Button_rot_rauf.png);
+  background-image: url(https://protembis.com/wp-content/uploads/2020/12/Button_rot_rauf.png);
   background-size:contain;
   background-repeat: no-repeat;
   height: 25px;
@@ -307,13 +325,7 @@ img.wp-image-1420
 }
 
 
-/* ----------------------------- */
-/* Video Block auf Hautpseite    */
-/* ohne Rand                     */
-/* ----------------------------- */
-.wp-block-columns.alignfull.has-white-background-color.has-background {
-    padding-top: 0px;
-}
+
 
 /* ----------------------------- */
 /* Abstand Überschrift nach oben
