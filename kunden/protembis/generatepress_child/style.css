@@ -355,7 +355,7 @@ a.oben.__mPS2id._mPS2id-h:hover {
     margin-top: 120px; 
 }
 
-/* damit image button unten nicht gezeigt wird - ausgeschaltet, hgg, 22.2.2021 */ 
+/* damit image button unten nicht gezeigt wird, sonst wäre der Button doppelt zu sehen */ 
 img.wp-image-519 {
     visibility: hidden;
 }
