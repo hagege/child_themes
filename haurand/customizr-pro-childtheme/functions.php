@@ -2,12 +2,13 @@
 
 /*----------------------------------------------------------------*/
 /* Start: style.css Datei des Eltern-Themes einbinden
-/* Datum: 232.09.2019
+/* Datum: 23.09.2019, ergänzt 30.10.2020 um additional-style
 /* Autor: hgg
 /*----------------------------------------------------------------*/
 
 function child_theme_styles() {
   wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+  wp_enqueue_style( 'additional-style', get_stylesheet_directory_uri() . '/parallax_scrolling.css' );
 // die folgende Zeile ist wohl nicht notwendig:
 //wp_enqueue_style( 'child-theme-css', get_stylesheet_directory_uri() .'/style.css' , array('parent-style'));
 
@@ -20,7 +21,6 @@ function wpb_remove_version() {
 return '';
 }
 add_filter('the_generator', 'wpb_remove_version');
-
 
 
 
@@ -82,7 +82,12 @@ function shortcode_posts_function($atts){
       foreach ($custom_posts as $post) {
           $content .= '<div class="beitrags_titel">'.$post->post_title.'</a></div>';
           // $content .= '<p class="beitrags_text">'.get_the_category($post->ID).'</p>';
-          $content .= '<div class="flex-container"><a class="beitrags_bild_link" href="'.get_permalink($post->ID).'"><img class="beitrags_bild" src="'.get_the_post_thumbnail_url($post->ID, 'full').'"></a>';
+          $thumbnail_id = get_post_thumbnail_id( $post->ID );
+          $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+          // alte Einstellung: 
+          // $content .= '<div class="flex-container"><a class="beitrags_bild_link" href="'.get_permalink($post->ID).'"><img class="beitrags_bild" src="'.get_the_post_thumbnail_url($post->ID, 'full').'"></a>';
+          // $content .= '<div class="flex-container"><a class="beitrags_bild_link" href="'.get_permalink($post->ID).'"><img class="beitrags_bild" src="'.get_the_post_thumbnail_url($post->ID, 'full').' alt="'.$alt_text.'"></a>';
+          $content .= '<div class="flex-container"><a class="beitrags_bild_link" href="'.get_permalink($post->ID).'"><img class="beitrags_bild" src="'.get_the_post_thumbnail_url($post->ID, 'full'). ' width=auto height=auto alt="'.$alt_text.'"></a>';
           // hier entweder den Auszug anzeigen (vergisst man leicht, unter Dokument > Auszug)
           if (esc_attr($werte['auszug']) == 'ja'){
             $content .= '<p class="beitrags_text">' . $post->post_excerpt;
@@ -136,8 +141,11 @@ return $content_text;
 /*----------------------------------------------------------------*/
 /* Recaptcha - Script aus Contact Form 7 entfernen */
 /* Datum: 14.09.2020
+/* wieder rausgenommen am 22.10.2020, weil das Formular dann nicht mehr funktionierte
 /* Autor: hgg
 /*----------------------------------------------------------------*/
 
-remove_action( 'wp_enqueue_scripts', 'wpcf7_recaptcha_enqueue_scripts' );
+// remove_action( 'wp_enqueue_scripts', 'wpcf7_recaptcha_enqueue_scripts' );
+
+
 ?>
