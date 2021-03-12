@@ -454,7 +454,7 @@ register_block_pattern(
         <p><a class=\"tribe-events-button-beitrag\" href=\"https://aachenerkinder.de/wp-content/uploads/2020/11/Bekanntmachung_2020_weiterfuehrende_schulen.pdf\">Weitere Infos</a> </p>
         <!-- /wp:paragraph -->",
    )
- );
+ )
 /*----------------------------------------------------------------*/
 /* Ende:  Block pattern - Button für ackids
 /* Datum: 11.11.2020
@@ -463,4 +463,3 @@ register_block_pattern(
 
 
 ?>
-https://test4.haurand.com/wp-admin/edit.php?post_type=tribe_events
