@@ -7,11 +7,13 @@ nav#sticky-navigation {
     opacity: 0.9;
 }
 
+/* Fußbereich */
 .site-footer .footer-widgets-container .inside-footer-widgets {
     background-color: white;
     opacity: 0.8;
 }
 
+/* Bilc im Fußbereich */
 .footer-widgets {
     background-attachment: fixed;
 }
@@ -210,10 +212,6 @@ a.corona-button-beitrag {
     }
 }
 
-/*
-img.header-image.is-logo-image {
-    max-width: 130px;
-}
 
 	/* auf schmaleren Displays anderes Bild zeigen */
 @media (max-width: 768px) {
@@ -230,27 +228,5 @@ img.header-image.is-logo-image {
 	 .site-content .content-area {
         width: 100%;
    }
-	
-	/* Problemzone */
-/*	.site-content {
-		display: flex;
-		-webkit-flex-flow: row wrap;
-		flex-flow: row wrap;
- 	}
-    
-	#left-sidebar {
-		order: 2;
-		width: 100%;
-		left: 0;
-
-	}
-    
-	.content-area {   
-		-webkit-order: 2;  
-		order: 1;
-		left: 0;
-
-	}
-*/
 }
 
