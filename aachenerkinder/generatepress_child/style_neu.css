@@ -22,7 +22,27 @@
 3. WP Google Maps
 4. Nicht mehr benötigt?
 
+WATCH: Muss weiter beobachtet werden.
+
+Farben:
+RGB 129-178-47 #81B22F (grün)
+RGB 179-204-29 #B3CC1D (hellgrün)
+RGB 249-184-30 #F9B81E (gelb)
+RGB 239-127-26 #EF7F1A (orange)
+RGB 202-65-117 #CA4175 (rot)
+RGB 128-128-128 #808080 (grau)
+RGB 0-0-0 #000000 (schwarz)
+RGB 251-249-235 #FBF9EB (eierschalenfarben)
+FARBWERTE
+Web und Bildschirm Druck
+RGB 119-188-199 #77BCC7 (hellblau)
+RGB 69-125-128 #457D80 (dunkelblau)
+CMYK 55-0-18-13
+CMYK 67-19-35-35
+
 */
+
+
 
 
 /* ---------------------------------------------------- */
@@ -109,13 +129,14 @@ h2 {
   
   /* Anzeige von Online-Events */
   span.tribe-ext-events-control-online-event__text {
-    color: #f4eede;
+    color: #FBF9EB;
     background-color: #B3CC1D;
   }
   
   /* in einem farbigen Kasten mit einer Schriftfarbe weiß, muss der Link in roter Schrift angezeigt werden */
+  /* DELETED - WATCH, hgg, 19.3.2021
   a.corona-button-beitrag {
-    color: #B3CC1D!important;
+    color: #CA4175!important;
   }
   
   /* Höhe des Elements immer 90px, damit die Bilder immer eine Linie bilden */
@@ -209,7 +230,7 @@ h2 {
     .main-navigation .menu > .menu-item.current-menu-item > a::after,
     .main-navigation .menu > .menu-item > a:hover::after {
         width: 100%;
-        color: #808080;
+        color: #457D80;
     }
   
   .main-navigation .menu > .menu-item.current-menu-item > a::after,
@@ -268,16 +289,18 @@ a.read-more.button:hover {
 
 a.corona-button-beitrag {
     padding: 3px;
-    color: #F9B81E;
     font-size: 0.9em;
-    background-color: #ffffff;
-    text-decoration: none!important;
+    background-color: #77BCC7;
+    text-decoration: none;
+    color: #ffffff;
 }
 
+/* DELETED - WATCH, hgg, 19.3.2021 
 a.corona-button-beitrag:hover {
   color: #000;
   background-color: #e3ddcd;
 }
+*/
 
 
 
@@ -314,7 +337,7 @@ a.button-mitglied {
     padding: 10px;
     color: #ffffff;
     font-size: 1.0em;
-    background-color: #F9B81E;
+    background-color: #77BCC7;
     /* keine runden Ecken */
     /* border-radius: 4px; */
     text-decoration: none!important;
@@ -335,7 +358,7 @@ a.button-mitglied:visited{
 /* Hintergrund: blau */
 a.button-mitglied:hover{
   color: #fff!important;
-  background-color:#77BCC7;
+  background-color:#F9B81E;
   text-decoration: none!important;
 }
 
@@ -507,10 +530,10 @@ abbr[title], abbr[data-original-title] {
 /* Datum: 17.11.2018
 /* Autor: hgg
 /*----------------------------------------------------------------*/
-
 #tribe-events-content a, .tribe-events-adv-list-widget .tribe-events-widget-link a, .tribe-events-adv-list-widget .tribe-events-widget-link a:hover, .tribe-events-back a, .tribe-events-back a:hover, .tribe-events-event-meta a, .tribe-events-list-widget .tribe-events-widget-link a, .tribe-events-list-widget .tribe-events-widget-link a:hover, ul.tribe-events-sub-nav a, ul.tribe-events-sub-nav a:hover {
     text-decoration: underline;
 }
+
 
 /* Titel ohne Unterstrich */
 .tribe-event-url {
@@ -636,6 +659,7 @@ dt{
 /* Datum: 17.11.2018
 /* Autor: hgg
 /*----------------------------------------------------------------*/
+/* DELETED - WATCH, hgg, 19.3.2021 
 #tribe-events-content a, .tribe-events-adv-list-widget .tribe-events-widget-link a{
   position: relative;
   color: #000;
@@ -647,6 +671,7 @@ dt{
 	text-decoration: underline;
   text-decoration-color: #77BCC7;
 }
+*/
 
 
 /*----------------------------------------------------------------*/
@@ -706,6 +731,12 @@ dt{
     border-bottom-color: transparent!important;
   }
 
+  /* Rand zwischen Buttons und Kopfbereich uaf 0 setzen, sonst gibt es da ein zu große Lücke */
+  /* hgg, 19.3.2021, WATCH */
+
+  .tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
+    padding-top: 0px; 
+  }
 
 /* ---------------------------------------------------- */
 /* 2.2. Mini-Kalender                                   */
