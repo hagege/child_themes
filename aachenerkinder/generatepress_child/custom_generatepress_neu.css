@@ -1,0 +1,46 @@
+/* Custom CSS */
+
+/*------------------------------------*/
+
+/* nur zum Testen - besser in Customizer ändern */
+nav#sticky-navigation {
+    opacity: 0.9;
+}
+
+/* Fußbereich */
+.site-footer .footer-widgets-container .inside-footer-widgets {
+    background-color: white;
+    opacity: 0.8;
+}
+
+/* Bild im Fußbereich */
+.footer-widgets {
+    background-attachment: fixed;
+}
+/* .header-wrap .site-header {
+    background: #F9B81E;
+}
+
+div#primary-menu {
+    background-color: #F9B81E;
+}
+*/
+
+
+body.single:not(.elementor-default) .entry-content a,
+body.single:not(.elementor-default) .entry-content a:visited,
+body.page:not(.elementor-default) .entry-content a,
+body.page:not(.elementor-default) .entry-content a:visited
+{
+	text-decoration: underline;
+}
+
+
+body.single:not(.elementor-default) .entry-content a:hover,
+body.page:not(.elementor-default) .entry-content a:hover {
+	background-color: #F9B81E;
+	color: white;
+  text-decoration: none;
+}
+/*------------------------------------*/
+
