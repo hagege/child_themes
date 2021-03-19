@@ -23,6 +23,7 @@
 4. Nicht mehr benötigt?
 
 WATCH: Muss weiter beobachtet werden.
+DELETED: Gelöscht
 
 Farben:
 RGB 129-178-47 #81B22F (grün)
@@ -178,19 +179,20 @@ h2 {
   }
   
   
-  /* auf schmaleren Displays anderes Bild zeigen */
+  /* auf schmaleren Displays anderes Bild zeigen 
   @media (max-width: 768px) {
 
 /*
+/* DELETED - WATCH, hgg, 19.3.2021
   .page-hero {
         /* background-image: url(https://aachen50plus.de/wp-content/uploads/2020/12/shutterstock_218267185_Andrey-Arkusha.jpg); 
   }
-*/
+
   img.header-image.is-logo-image {
     max-width: 100px;
   }
   }
-  
+  */
   /* Breakpoint Sidebar unter content nicht schon bei 1100px, sondern wegen der Werbung bei 770px */
   @media (max-width: 770px) {
    .site-content .content-area {
