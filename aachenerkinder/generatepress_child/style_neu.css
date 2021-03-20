@@ -85,29 +85,27 @@ h2 {
 
 
 .ackids_container {
-    vertical-align: middle !important;
-    margin-bottom: 40px;
-  }
-  
-  /* Container für Mitgliedsbutton und Infotext - hgg, 6.10.2019 */
-  @media (min-width: 431px) {
-    .ackids_container {
-      display: inline-flex;
-  /*     border: 1px solid #eee; 
-      padding: 10px; */
-    }
-  }
-  
-  @media (max-width: 430px) {
-  .ackids_container {
-    display: block;
-  /*   border: 1px solid #eee; 
-    padding: 10px;  */
-    }
-  }
-  .ackids_container > div {
     text-align: left;
   }
+  
+ 
+  /* Container für Mitgliedsbutton und Infotext - hgg, 6.10.2019 */
+@media (min-width: 531px) {
+  .ackids_container {
+    display: inline-flex;
+    /* DELETED - WATCH, hgg, 20.3.2021 
+    vertical-align: middle !important; */
+  }
+}
+
+@media (max-width: 530px) {
+.ackids_container {
+  display: block;
+  /* DELETED - WATCH, hgg, 20.3.2021 
+  /* vertical-align: middle !important; */
+  }
+}
+
   
   /* Meldung abgesagte Veranstaltungen, hgg, 20.3.2020 */
   div.abgesagt {
@@ -134,11 +132,6 @@ h2 {
     background-color: #B3CC1D;
   }
   
-  /* in einem farbigen Kasten mit einer Schriftfarbe weiß, muss der Link in roter Schrift angezeigt werden */
-  /* DELETED - WATCH, hgg, 19.3.2021
-  a.corona-button-beitrag {
-    color: #CA4175!important;
-  }
   
   /* Höhe des Elements immer 90px, damit die Bilder immer eine Linie bilden */
   
@@ -292,9 +285,8 @@ a.read-more.button:hover {
 a.corona-button-beitrag {
     padding: 3px;
     font-size: 0.9em;
-    background-color: #77BCC7;
+    background-color: white;
     text-decoration: none;
-    color: #ffffff;
 }
 
 /* DELETED - WATCH, hgg, 19.3.2021 
@@ -344,6 +336,7 @@ a.button-mitglied {
     /* border-radius: 4px; */
     text-decoration: none!important;
     display: block;
+    margin: 2px;
 }
 
 a.button-mitglied:focus{
@@ -362,28 +355,6 @@ a.button-mitglied:hover{
   color: #fff!important;
   background-color:#F9B81E;
   text-decoration: none!important;
-}
-
-/* Container für Mitgliedsbutton und Infotext - hgg, 6.10.2019 */
-@media (min-width: 431px) {
-  .ackids_container {
-    display: inline-flex;
-    border: 1px solid #eee;
-    padding: 10px;
-    vertical-align: middle !important;
-  }
-}
-
-@media (max-width: 430px) {
-.ackids_container {
-  display: block;
-  border: 1px solid #eee;
-  padding: 10px;
-  vertical-align: middle !important;
-  }
-}
-.ackids_container > div {
-  text-align: left;
 }
 
 
@@ -416,12 +387,24 @@ div.mitglied_beschreibung {
 
 
 
-
+/* ---------------------------------------------------- */
+/* TEC - THE EVENTS CALENDAR                            */
+/* ---------------------------------------------------- */
 
 
 /* ---------------------------------------------------- */
 /* 2.1. Veranstaltungen allgemein                       */
 /* ---------------------------------------------------- */
+
+/* kein Rand über den Buttons in der Veranstaltungsliste. hgg, 20.3.2021 */
+.tribe-common-l-container.tribe-events-l-container {
+  padding-top: 0px;
+}
+
+/* kein Rand über der Veranstaltung. hgg, 20.3.2021 */
+main#tribe-events {
+  padding: 0px 10px 10px;
+}
 
 /* Hintergrundfarbe bei einzelnen Events Metadaten unten */
 .tribe-events-single-section.tribe-events-event-meta.primary.tribe-clearfix,
@@ -943,6 +926,8 @@ select {
   font-size: 13px;
   border-radius: 2px;
   -webkit-appearance: inherit;
+  user-select: auto;
+  transition: border .25s linear, color .25s linear, background-color .25s linear;
   -webkit-user-select: auto;
   -moz-transition: border .25s linear, color .25s linear, background-color .25s linear;
   background: none;
