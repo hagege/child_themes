@@ -278,8 +278,22 @@ a.read-more.button:hover {
 /*----------------------------------------------------------------*/
 
 /* Absatz für Button */
+/* DELETED - WATCH, hgg, 20.3.2021 
 .button-absatz {
     margin:30px 0px 30px 0px;
+}
+*/
+
+/* Absatz für Button */
+.button-absatz {
+  margin:30px 0px 30px 0px;
+  display:inline-flex;
+}
+
+/* Absatz für Button im shortcode fuss*/
+.button-absatz-fuss {
+  margin:30px 10px 30px 0px !important;
+  display:inline-flex;
 }
 
 a.corona-button-beitrag {
@@ -305,24 +319,7 @@ a.corona-button-beitrag:hover {
 /*----------------------------------------------------------------*/
 
 
-/*----------------------------------------------------------------*/
-/* Start: Button in Beiträgen
-/* Datum: 23.02.2018
-/* Autor: hgg
-/* z. Bsp.: grüner Hintergrund, Schrift: weiße Farbe, bei Hover: oranger Button
-/*----------------------------------------------------------------*/
 
-/* Absatz für Button */
-.button-absatz {
-    margin:30px 0px 30px 0px;
-    display:inline-flex;
-}
-
-/* Absatz für Button im shortcode fuss*/
-.button-absatz-fuss {
-    margin:30px 10px 30px 0px !important;
-    display:inline-flex;
-}
 
 
 /* Button für Mitgliedschaft invers - hgg, 6.10.2019 */
@@ -499,7 +496,7 @@ abbr[title], abbr[data-original-title] {
 /* Datum: 23.11.2018
 /* Autor: hgg
 /*----------------------------------------------------------------*/
-
+/* DELETED - WATCH, hgg, 20.3.2021 
 .tribe-events-map-event-title {
     font-size: 21px !important;
 }
@@ -521,9 +518,11 @@ abbr[title], abbr[data-original-title] {
 
 
 /* Titel ohne Unterstrich */
+/* DELETED - WATCH, hgg, 20.3.2021 
 .tribe-event-url {
 	text-decoration:none!important;
 }
+*/
 
 /* Hintergrund weiß statt dunkelgrau, sonst schlecht lesbar */
 .tribe-events-sub-nav li a {
@@ -587,7 +586,8 @@ abbr[title], abbr[data-original-title] {
 /* Datum: 17.11.2018
 /* Autor: hgg
 /*----------------------------------------------------------------*/
-/* Schriften etc. größer */
+/* Schriften etc. größer 
+/* DELETED - WATCH, hgg, 20.3.2021 
 .tribe-events-start-date-label,
 .tribe-events-start-time-label,
 .tribe-events-event-categories-label,
@@ -606,11 +606,11 @@ dt{
 		padding-right: 0px;
 }
 
-/* Mehr Platz beim Datum */
+/* Mehr Platz beim Datum 
 .tribe-event-date-start .tribe-event-date-end .tribe-event-time{
 	padding-right: 5px;
 }
-
+*/
 /*----------------------------------------------------------------*/
 /* Ende: Darstellung der Details in Einzelansicht (TEC)
 /* Datum: 17.11.2018
@@ -629,6 +629,7 @@ dt{
 */
 
 /* Titel ohne Unterstrich */
+/* DELETED - WATCH, hgg, 20.3.2021 
 .tribe-event-url {
 	text-decoration:none!important;
 }
@@ -666,6 +667,7 @@ dt{
 /*----------------------------------------------------------------*/
 
   /* Veranstalterdaten nebeneinander mit mehr Platz bei einzelner Veranstaltung */
+  /* DELETED - WATCH, hgg, 20.3.2021 
   @media screen and (max-width: 768px) {
     .tribe-events-meta-group.tribe-events-meta-group-organizer,
     .tribe-events-meta-group.tribe-events-meta-group-details,
@@ -683,7 +685,7 @@ dt{
       width: 50%;
     }
     }
-  
+  */
 
   /* Besondere Veranstaltungen */
   /* Überschrift */
@@ -840,12 +842,14 @@ a.tribe-events-button-beitrag:hover{
 }
 
 /* Meldung abgesagte Veranstaltungen, hgg, 20.3.2020 */
+/* DELETED - WATCH, hgg, 20.3.2021 
 div.abgesagt {
     color: #ffffff;
     font-size: 0.8em;
     background-color: #F9B81E;
     padding: 10px;
 }
+*/
 
 /* ---------------------------------------------------- */
 /* 2.4. Diverses                                        */
