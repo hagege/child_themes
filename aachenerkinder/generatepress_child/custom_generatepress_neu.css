@@ -1,22 +1,49 @@
 /* Custom CSS */
 
 /*------------------------------------*/
+/* nicht mehr zweispaltig, sondern einspaltig: */
+@media (min-width: 768px) and (max-width: 1024px) {
+	.generate-columns.tablet-grid-50, .grid-sizer.tablet-grid-50 {
+			width: 100%;
+	}
+}
 
 /* nur zum Testen - besser in Customizer ändern */
 nav#sticky-navigation {
     opacity: 0.9;
 }
 
-/* Fußbereich */
+
+@media (max-width: 768px) {
+.site-footer .footer-widgets .footer-widgets-container .inside-footer-widgets 	/* Fußbereich */
+	{
+    padding: 20px;
+	}
+	/* Veranstaltungen */
+}
+
+	
 .site-footer .footer-widgets-container .inside-footer-widgets {
     background-color: white;
     opacity: 0.8;
 }
 
+
 /* Bild im Fußbereich */
 .footer-widgets {
     background-attachment: fixed;
 }
+
+@media (max-width: 620px) {
+.footer-widgets-container {
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    background-color: white;
+}
+}
+
 /* .header-wrap .site-header {
     background: #F9B81E;
 }
@@ -26,7 +53,7 @@ div#primary-menu {
 }
 */
 
-
+/* das sollte noch mal überprüft werden: */
 body.single:not(.elementor-default) .entry-content a,
 body.single:not(.elementor-default) .entry-content a:visited,
 body.page:not(.elementor-default) .entry-content a,

@@ -1,0 +1,7 @@
+# Ignore (generated) zip files,
+*.zip
+*.jpg
+*.png
+*.mp4
+*.webm
+*.ogv
