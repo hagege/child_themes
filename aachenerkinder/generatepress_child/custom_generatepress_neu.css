@@ -1,6 +1,13 @@
 /* Custom CSS */
 
 /*------------------------------------*/
+
+/* Fußbereich: zusätzlicher Rand */
+.footer-widget-2, .footer-widget-1 {
+    margin: 10px;
+}
+
+
 /* nicht mehr zweispaltig, sondern einspaltig: */
 @media (min-width: 768px) and (max-width: 1024px) {
 	.generate-columns.tablet-grid-50, .grid-sizer.tablet-grid-50 {
