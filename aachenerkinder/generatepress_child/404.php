@@ -20,19 +20,16 @@ get_header(); ?>
 			 * @since 0.1
 			 */
 			do_action( 'generate_before_main_content' );
-            $ueberschrift_404 = utf8_encode("Sorry - leider war der Beitrag oder die Veranstaltung schon sehr alt und wir haben den Eintrag daher gelöscht");
-            $meldung_404 = utf8_encode("Im Interesse der Aktualität macht es bei manchen Beiträgen oder Veranstaltungen wenig Sinn, diese Beiträge oder Veranstaltungen ewig \"mitzuschleppen\".
-                      Daher bist du jetzt auf dieser Seite gelandet.
-                      Allerdings kannst du über die Suche ja mal einen Begriff eingeben, der mit der Thematik der gelöschten Seite zu tun hatte.
-                      Möglicherweise erhältst du dann Treffer zu aktuelleren Beiträgen oder Veranstaltungen zu diesem Thema.");
             ?>
             <div class="inside-article">
                  <div class="entry-content">
   
                     <p align="left"><img class="size-medium wp-image-66574" src="https://aachenerkinder.de/wp-content/uploads/2019/01/platzhalter_404_cow-30710_640-min_weiss.jpg" align="right" alt="404" width="200" />
-                       <h1><?php echo $ueberschrift_404 ?></h1> 
-                       <?php echo $meldung_404 ?>
-                       <br>
+                       <h2>Au weia - leider war der Beitrag oder die Veranstaltung evtl. schon sehr alt und wir haben den Eintrag daher mÃ¶glicherweise gelÃ¶scht</h2> 
+                       <p>Im Interesse der AktualitÃ¤t macht es bei manchen BeitrÃ¤gen oder Veranstaltungen wenig Sinn, diese BeitrÃ¤ge oder Veranstaltungen ewig "mitzuschleppen".<br>
+                          Daher bist du jetzt auf dieser Seite gelandet.<br>
+						  Allerdings kannst du Ã¼ber die Suche ja mal einen Begriff eingeben, der mit der gewÃ¼nschten Thematik zu tun hat.<br>
+                          MÃ¶glicherweise erhÃ¤ltst du dann Treffer zu aktuelleren BeitrÃ¤gen oder Veranstaltungen zu diesem Thema.</p>
                        <em>Grafik: pixabay.com </em>
                     </p>
                  </div>
