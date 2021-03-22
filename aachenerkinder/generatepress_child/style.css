@@ -282,7 +282,8 @@ a.corona-button-beitrag {
     padding: 3px;
     font-size: 0.9em;
     background-color: white;
-    text-decoration: none;
+    text-decoration: none!important;
+    margin: 8px;
 }
 
 
