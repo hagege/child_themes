@@ -1,0 +1,145 @@
+/* Ken Burns - Effekt bei Frontpage*/
+
+/* Problem: Die Navigation funktioniert leider nicht sauber */
+.page-hero, img.attachment-full.size-full {
+    animation: move 10s ease;
+    /* Add infinite to loop. */
+    
+    -ms-animation: move 35s ease;
+    -webkit-animation: move 35s ease;
+    -animation: move 35s ease;
+    -moz-animation: move 35s ease;
+          z-index:-1;
+  }
+
+  @keyframes move {
+    0% {
+
+      -webkit-transform-origin: left;
+      -moz-transform-origin: left;
+      -ms-transform-origin: left;
+      -o-transform-origin: left;
+      transform-origin: left;
+
+      transform: scale(1.0);
+      -ms-transform: scale(1.0);
+      /* IE 9 */
+      
+      -webkit-transform: scale(1.0);
+      /* Safari and Chrome */
+      
+      -o-transform: scale(1.0);
+      /* Opera */
+      
+      -moz-transform: scale(1.0);
+      /* Firefox */
+    }
+    50% {
+      transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      /* IE 9 */
+      
+      -webkit-transform: scale(1.05);
+      /* Safari and Chrome */
+      
+      -o-transform: scale(1.05);
+      /* Opera */
+      
+      -moz-transform: scale(1.05);
+      /* Firefox */
+    }
+    100% {
+      transform: scale(1.0);
+      -ms-transform: scale(1.0);
+      /* IE 9 */
+      
+      -webkit-transform: scale(1.0);
+      /* Safari and Chrome */
+      
+      -o-transform: scale(1.0);
+      /* Opera */
+      
+      -moz-transform: scale(1.0);
+      /* Firefox */
+    }
+}
+
+
+
+.page-hero {
+    opacity: 1;
+    -webkit-animation: fadein_1 12s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein_1 12s; /* Firefox < 16 */
+        -ms-animation: fadein_1 12s; /* Internet Explorer */
+         -o-animation: fadein_1 12s; /* Opera < 12.1 */
+            animation: fadein_1 12s;
+}
+
+@keyframes fadein_1 {
+    from { opacity: 0.7; }
+    to   { opacity: 1; }
+}
+
+
+img.attachment-full.size-full {
+    animation: move 10s ease;
+    /* Add infinite to loop. */
+    
+    -ms-animation: move 35s ease;
+    -webkit-animation: move 35s ease;
+    -animation: move 35s ease;
+    -moz-animation: move 35s ease;
+          z-index:-1;
+  }
+
+  @keyframes move {
+    0% {
+
+      -webkit-transform-origin: left;
+      -moz-transform-origin: left;
+      -ms-transform-origin: left;
+      -o-transform-origin: left;
+      transform-origin: left;
+
+      transform: scale(1.0);
+      -ms-transform: scale(1.0);
+      /* IE 9 */
+      
+      -webkit-transform: scale(1.0);
+      /* Safari and Chrome */
+      
+      -o-transform: scale(1.0);
+      /* Opera */
+      
+      -moz-transform: scale(1.0);
+      /* Firefox */
+    }
+    50% {
+      transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      /* IE 9 */
+      
+      -webkit-transform: scale(1.05);
+      /* Safari and Chrome */
+      
+      -o-transform: scale(1.05);
+      /* Opera */
+      
+      -moz-transform: scale(1.05);
+      /* Firefox */
+    }
+    100% {
+      transform: scale(1.0);
+      -ms-transform: scale(1.0);
+      /* IE 9 */
+      
+      -webkit-transform: scale(1.0);
+      /* Safari and Chrome */
+      
+      -o-transform: scale(1.0);
+      /* Opera */
+      
+      -moz-transform: scale(1.0);
+      /* Firefox */
+    }
+}

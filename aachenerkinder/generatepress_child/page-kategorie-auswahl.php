@@ -77,7 +77,7 @@ get_header(); ?>
             ?>
             <div class="inside-article">
               <h4> <?php echo $anzahl_array; ?> Kategorien: </h4>
-              <table><tbody>
+              <table class="ackids_tabelle"><tbody>
               <tr>
                 <th>Kategorie</th>
                 <th>Beschreibung</th>

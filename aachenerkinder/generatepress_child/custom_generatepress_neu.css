@@ -2,6 +2,78 @@
 
 /*------------------------------------*/
 
+
+/* Problem: Die Navigation funktioniert leider nicht sauber */
+.page-hero {
+		position: relative; 
+ 		overflow: hidden;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    animation: move 35s ease;
+    /* Add infinite to loop. */
+    
+    -ms-animation: move 35s ease;
+    -webkit-animation: move 35s ease;
+    -animation: move 35s ease;
+    -moz-animation: move 35s ease;
+    z-index:-1;
+  }
+
+  @keyframes move {
+    0% {
+
+      -webkit-transform-origin: left;
+      -moz-transform-origin: left;
+      -ms-transform-origin: left;
+      -o-transform-origin: left;
+      transform-origin: left;
+
+      transform: scale(1.0);
+      -ms-transform: scale(1.0);
+      /* IE 9 */
+      
+      -webkit-transform: scale(1.0);
+      /* Safari and Chrome */
+      
+      -o-transform: scale(1.0);
+      /* Opera */
+      
+      -moz-transform: scale(1.0);
+      /* Firefox */
+    }
+    50% {
+      transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      /* IE 9 */
+      
+      -webkit-transform: scale(1.1);
+      /* Safari and Chrome */
+      
+      -o-transform: scale(1.1);
+      /* Opera */
+      
+      -moz-transform: scale(1.1);
+      /* Firefox */
+    }
+    100% {
+      transform: scale(1.0);
+      -ms-transform: scale(1.0);
+      /* IE 9 */
+      
+      -webkit-transform: scale(1.0);
+      /* Safari and Chrome */
+      
+      -o-transform: scale(1.0);
+      /* Opera */
+      
+      -moz-transform: scale(1.0);
+      /* Firefox */
+    }
+}
+
+	
+	
 /* Fußbereich: zusätzlicher Rand */
 .footer-widget-2, .footer-widget-1 {
     margin: 10px;
