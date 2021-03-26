@@ -2,134 +2,138 @@
 
 /*------------------------------------*/
 
-/* damit Ken Burns Effekt nicht am unteren Rand in den Content "reinläuft" - betrifft nur die Hauptseite (home) */
-@media (min-width: 1024px) {
-	.home div#page {
-			margin-top: 40px;
-	}
+/* Maximale Breite für den Minikalender */
+.tribe-mini-calendar-grid-wrapper {
+  max-width: 300px;
 }
 
-/* Ken Burns Effekt nur auf der Hauptseite */
-.kopfbild {
-		position: relative; 
- 		/*overflow: hidden;
-    min-width: 100%;
-    min-height: 100%;*/
-    /* Add infinite to loop. */
-    animation: move 35s ease;
-    -ms-animation: move 35s ease;
-    -webkit-animation: move 35s ease;
-    -animation: move 35s ease;
-    -moz-animation: move 35s ease;
-    z-index:-1;
+
+/* Ken Burns Effekt auf Beitragsseiten */
+.featured-image.page-header-image-single {
+  overflow: hidden;
+}
+
+/* hier die Regeln für das Bild */
+.featured-image.page-header-image-single img {	
+  min-width: 100%;
+  min-height: 100%; 
+  /* Add infinite to loop. */
+  animation: move 10s ease;
+  -ms-animation: move 15s ease;
+  -webkit-animation: move 15s ease;
+  -animation: move 15s ease;
+  -moz-animation: move 15s ease;
+  position: relative; 
+  width: 100%;
+}
+
+@keyframes move {
+  0% {
+    
+    -webkit-transform-origin: left;
+    -moz-transform-origin: left;
+    -ms-transform-origin: left;
+    -o-transform-origin: left;
+    transform-origin: left;
+
+    transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    /* IE 9 */
+    
+    -webkit-transform: scale(1.0);
+    /* Safari and Chrome */
+    
+    -o-transform: scale(1.0);
+    /* Opera */
+    
+    -moz-transform: scale(1.0);
+    /* Firefox */
   }
+  50% {
+    transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    
+    -webkit-transform: scale(1.1);
+    /* Safari and Chrome */
+    
+    -o-transform: scale(1.1);
+    /* Opera */
+    
+    -moz-transform: scale(1.1);
+    /* Firefox */
+  }
+  100% {
 
-  @keyframes move {
-    0% {
-
-      -webkit-transform-origin: left;
-      -moz-transform-origin: left;
-      -ms-transform-origin: left;
-      -o-transform-origin: left;
-      transform-origin: left;
-
-      transform: scale(1.0);
-      -ms-transform: scale(1.0);
-      /* IE 9 */
-      
-      -webkit-transform: scale(1.0);
-      /* Safari and Chrome */
-      
-      -o-transform: scale(1.0);
-      /* Opera */
-      
-      -moz-transform: scale(1.0);
-      /* Firefox */
-    }
-    50% {
-      transform: scale(1.1);
-      -ms-transform: scale(1.1);
-      /* IE 9 */
-      
-      -webkit-transform: scale(1.1);
-      /* Safari and Chrome */
-      
-      -o-transform: scale(1.1);
-      /* Opera */
-      
-      -moz-transform: scale(1.1);
-      /* Firefox */
-    }
-    100% {
-      transform: scale(1.0);
-      -ms-transform: scale(1.0);
-      /* IE 9 */
-      
-      -webkit-transform: scale(1.0);
-      /* Safari and Chrome */
-      
-      -o-transform: scale(1.0);
-      /* Opera */
-      
-      -moz-transform: scale(1.0);
-      /* Firefox */
-    }
+    transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    /* IE 9 */
+    
+    -webkit-transform: scale(1.0);
+    /* Safari and Chrome */
+    
+    -o-transform: scale(1.0);
+    /* Opera */
+    
+    -moz-transform: scale(1.0);
+    /* Firefox */
+  }
 }
 
-	
-	
+
+
 /* Fußbereich: zusätzlicher Rand */
 .footer-widget-2, .footer-widget-1 {
-    margin: 10px;
+  margin: 10px;
 }
 
 
 /* nicht mehr zweispaltig, sondern einspaltig: */
 @media (min-width: 768px) and (max-width: 1024px) {
-	.generate-columns.tablet-grid-50, .grid-sizer.tablet-grid-50 {
-			width: 100%;
-	}
+.generate-columns.tablet-grid-50, .grid-sizer.tablet-grid-50 {
+    width: 100%;
+}
 }
 
 /* nur zum Testen - besser in Customizer ändern */
 nav#sticky-navigation {
-    opacity: 0.9;
+  opacity: 0.9;
 }
 
 
 @media (max-width: 768px) {
 .site-footer .footer-widgets .footer-widgets-container .inside-footer-widgets 	/* Fußbereich */
-	{
-    padding: 20px;
-	}
-	/* Veranstaltungen */
+{
+  padding: 20px;
+}
+/* Veranstaltungen */
 }
 
 /* Container mit Footer-Widgets */	
 .site-footer .footer-widgets-container .inside-footer-widgets {
-    background-color: white;
-    opacity: 0.8;
+  background-color: white;
+  opacity: 0.8;
 }
 
 
 /* Bild im Fußbereich */
 .footer-widgets {
-    background-attachment: fixed;
+  background-attachment: fixed;
 }
 
 /* Container mit Footer-Widgets */
 @media (max-width: 620px) {
 .footer-widgets-container {
-    background-color: white;
+  background-color: white;
 }
 }
 
 /* .header-wrap .site-header {
-    background: #F9B81E;
+  background: #F9B81E;
 }
 
 div#primary-menu {
-    background-color: #F9B81E;
+  background-color: #F9B81E;
 }
 */
 
@@ -139,15 +143,15 @@ body.single:not(.elementor-default) .entry-content a:visited,
 body.page:not(.elementor-default) .entry-content a,
 body.page:not(.elementor-default) .entry-content a:visited
 {
-	text-decoration: underline;
+text-decoration: underline;
 }
 
 
 body.single:not(.elementor-default) .entry-content a:hover,
 body.page:not(.elementor-default) .entry-content a:hover {
-	background-color: #F9B81E;
-	color: white;
-  text-decoration: none;
+background-color: #F9B81E;
+color: white;
+text-decoration: none;
 }
 /*------------------------------------*/
 
