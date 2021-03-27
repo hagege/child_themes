@@ -10,76 +10,76 @@
 
 /* Ken Burns Effekt auf Beitragsseiten */
 .featured-image.page-header-image-single {
-  overflow: hidden;
+overflow: hidden;
 }
 
 /* hier die Regeln für das Bild */
 .featured-image.page-header-image-single img {	
-  min-width: 100%;
-  min-height: 100%; 
-  /* Add infinite to loop. */
-  animation: move 10s ease;
-  -ms-animation: move 15s ease;
-  -webkit-animation: move 15s ease;
-  -animation: move 15s ease;
-  -moz-animation: move 15s ease;
-  position: relative; 
-  width: 100%;
+min-width: 100%;
+min-height: 100%; 
+/* Add infinite to loop. */
+animation: move 10s ease;
+-ms-animation: move 15s ease;
+-webkit-animation: move 15s ease;
+-animation: move 15s ease;
+-moz-animation: move 15s ease;
+position: relative; 
+/* width: 100%; 
+max-height: 400px; */
 }
 
 @keyframes move {
-  0% {
-    
-    -webkit-transform-origin: left;
-    -moz-transform-origin: left;
-    -ms-transform-origin: left;
-    -o-transform-origin: left;
-    transform-origin: left;
+0% {
+  /*
+  -webkit-transform-origin: left;
+  -moz-transform-origin: left;
+  -ms-transform-origin: left;
+  -o-transform-origin: left;
+  transform-origin: left;
+  */
+  transform: scale(1.0);
+  -ms-transform: scale(1.0);
+  /* IE 9 */
 
-    transform: scale(1.0);
-    -ms-transform: scale(1.0);
-    /* IE 9 */
-    
-    -webkit-transform: scale(1.0);
-    /* Safari and Chrome */
-    
-    -o-transform: scale(1.0);
-    /* Opera */
-    
-    -moz-transform: scale(1.0);
-    /* Firefox */
-  }
-  50% {
-    transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    /* IE 9 */
-    
-    -webkit-transform: scale(1.1);
-    /* Safari and Chrome */
-    
-    -o-transform: scale(1.1);
-    /* Opera */
-    
-    -moz-transform: scale(1.1);
-    /* Firefox */
-  }
-  100% {
+  -webkit-transform: scale(1.0);
+  /* Safari and Chrome */
 
-    transform: scale(1.0);
-    -ms-transform: scale(1.0);
-    /* IE 9 */
-    
-    -webkit-transform: scale(1.0);
-    /* Safari and Chrome */
-    
-    -o-transform: scale(1.0);
-    /* Opera */
-    
-    -moz-transform: scale(1.0);
-    /* Firefox */
-  }
+  -o-transform: scale(1.0);
+  /* Opera */
+
+  -moz-transform: scale(1.0);
+  /* Firefox */
 }
+50% {
+  transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  /* IE 9 */
 
+  -webkit-transform: scale(1.1);
+  /* Safari and Chrome */
+
+  -o-transform: scale(1.1);
+  /* Opera */
+
+  -moz-transform: scale(1.1);
+  /* Firefox */
+}
+100% {
+
+  transform: scale(1.0);
+  -ms-transform: scale(1.0);
+  /* IE 9 */
+
+  -webkit-transform: scale(1.0);
+  /* Safari and Chrome */
+
+  -o-transform: scale(1.0);
+  /* Opera */
+
+  -moz-transform: scale(1.0);
+  /* Firefox */
+}
+}
 
 
 /* Fußbereich: zusätzlicher Rand */
@@ -137,18 +137,18 @@ div#primary-menu {
 }
 */
 
-/* das sollte noch mal überprüft werden: */
-body.single:not(.elementor-default) .entry-content a,
-body.single:not(.elementor-default) .entry-content a:visited,
-body.page:not(.elementor-default) .entry-content a,
-body.page:not(.elementor-default) .entry-content a:visited
+/* Links in Seiten und Beiträgen */
+body.single .entry-content a,
+body.single .entry-content a:visited,
+body.page .entry-content a,
+body.page .entry-content a:visited
 {
 text-decoration: underline;
 }
 
 
-body.single:not(.elementor-default) .entry-content a:hover,
-body.page:not(.elementor-default) .entry-content a:hover {
+body.single .entry-content a:hover,
+body.page .entry-content a:hover {
 background-color: #F9B81E;
 color: white;
 text-decoration: none;
