@@ -1,6 +1,24 @@
 /* Custom CSS */
 
 /*------------------------------------*/
+/* Einstellungen für die Frontpage */
+.page-hero-buttons, .ackids_front {
+  margin-left:20%;
+  margin-right:20%;	
+}
+
+.ackids_front {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;	
+  color: white;
+}
+
+.ackids_front h2 {
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
 
 /* Maximale Breite für den Minikalender */
 .tribe-mini-calendar-grid-wrapper {
