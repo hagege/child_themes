@@ -168,8 +168,9 @@ body.page .entry-content a:hover {
   div.abgesagt {
       color: #ffffff;
       font-size: 1.0em;
-      background-color: #F9B81E;
+      background-color: #77BCC7;;
       padding: 10px;
+      margin-bottom: 1.0rem;
   }
   
   /*----------------------------------------------------------------*/
