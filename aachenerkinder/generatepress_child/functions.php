@@ -9,7 +9,7 @@
 
 /*----------------------------------------------------------------*/
 /* Start: style.css Datei des Eltern-Themes einbinden
-/* scheint nicht nötig zu sein, siehe hier: https://docs.generatepress.com/article/using-child-theme/
+/* scheint nicht nÃ¶tig zu sein, siehe hier: https://docs.generatepress.com/article/using-child-theme/
 /* Datum: 30.12.2020
 /* Autor: hgg
 /*----------------------------------------------------------------*/
@@ -21,7 +21,7 @@ add_action( 'wp_enqueue_scripts', 'child_theme_styles' );
 */ 
 
 /*----------------------------------------------------------------*/
-/* Start: Damit 2 Spalten korrekt bei Schlagwörtern angezeigt werden
+/* Start: Damit 2 Spalten korrekt bei SchlagwÃ¶rtern angezeigt werden
 /* Datum: 30.12.2020
 /* Autor: hgg
 /*---------------------------------------------------------------- */
@@ -57,7 +57,7 @@ function tu_excerpt_metabox_more( $excerpt ) {
 }
 
 /*----------------------------------------------------------------*/
-/* Start: Keine Überschrift im Excerpt
+/* Start: Keine Ãœberschrift im Excerpt
 /* Datum: 01.01.2021
 /* Autor: hgg
 /*----------------------------------------------------------------*/
@@ -82,7 +82,7 @@ function wp_strip_header_tags( $excerpt='' ) {
 add_filter( 'get_the_excerpt', 'wp_strip_header_tags', 9);
 
 
-/* adds the RTL stylesheet if you’re using an RTL language. If not, you can remove the function.
+/* adds the RTL stylesheet if you're using an RTL language. If not, you can remove the function.
 function generatepress_child_enqueue_scripts() {
 	if ( is_rtl() ) {
 		wp_enqueue_style( 'generatepress-rtl', trailingslashit( get_template_directory_uri() ) . 'rtl.css' );
@@ -110,7 +110,7 @@ function tribe_count_by_cat ( $event_category_slug ) {
 
 
   /* -- ADD SHARING AFTER EVERY EVENT -- */
-  /* Änderung von aachenerkinder auf aachen50plus bei den Grafiken, 25.10.2017, hgg */
+  /* Ã„nderung von aachenerkinder auf aachen50plus bei den Grafiken, 25.10.2017, hgg */
 
   function add_tribe_event_sharing(){
     ?>
@@ -134,7 +134,7 @@ function tribe_count_by_cat ( $event_category_slug ) {
       </a>
       -->
       <?php /* Mail */ ?>
-      <a class="sharebutton mail" href="mailto:?subject=interessanter Link auf aachen50plus.de&body=Hallo, hier ist ein interessanter Link auf aachen50plus.de:<?php echo rawurlencode(get_permalink()); ?> Viele Grüße" title="<?php _e('Diesen Beitrag per Mail teilen'); ?>">
+      <a class="sharebutton mail" href="mailto:?subject=interessanter Link auf aachen50plus.de&body=Hallo, hier ist ein interessanter Link auf aachen50plus.de:<?php echo rawurlencode(get_permalink()); ?> Viele Grï¿½ï¿½e" title="<?php _e('Diesen Beitrag per Mail teilen'); ?>">
         <img src="https://www.aachen50plus.de/grafiken/mail.png" alt="Mail" title="Mail" width=16px hight=16px border="0">
       </a>
 
@@ -189,7 +189,7 @@ function tribe_alter_event_archive_titles ( $original_recipe_title, $depth ) {
   /* $title_month =      'Events for %1$s'; // Month View, %1$s = the name of the month */
   $title_month =      'Veranstaltungen im %1$s'; // Month View, %1$s = the name of the month */
   $title_day =        'Veranstaltungen am %1$s'; // Day View, %1$s = the day
-  $title_all =        'Alle Veranstaltungen für %s'; // showing all recurrences of an event, %s = event title
+  $title_all =        'Alle Veranstaltungen fÃœr %s'; // showing all recurrences of an event, %s = event title
   $title_week =       'Veranstaltungen in der Woche %s'; // Week view
   /*
   $title_all =        'All events for %s'; // showing all recurrences of an event, %s = event title
@@ -249,7 +249,7 @@ function tribe_alter_event_archive_titles ( $original_recipe_title, $depth ) {
 }
 add_filter( 'tribe_get_events_title', 'tribe_alter_event_archive_titles', 11, 2 );
 
-/* eingefügt am 8.3.2017: */
+/* eingefÃ¼gt am 8.3.2017: */
 function wpb_remove_version() {
 return '';
 }
@@ -263,7 +263,7 @@ add_filter('the_generator', 'wpb_remove_version');
 add_filter( 'do_run_rocket_bot', '__return_false');
 
 /*----------------------------------------------------------------*/
-/* Start: Ausschließen recaptcha bei lazyload WP Rocket, siehe Antwort von Lucy
+/* Start: AusschlieÃŸen recaptcha bei lazyload WP Rocket, siehe Antwort von Lucy
 /* Datum: 29.12.2017
 /* Autor: hgg
 /*----------------------------------------------------------------*/
@@ -274,13 +274,13 @@ return $src;
 }
 add_filter( 'rocket_lazyload_excluded_src', 'rocket_lazyload_exclude_src' );
 /*----------------------------------------------------------------*/
-/* Ende: Ausschließen recaptcha bei lazyload WP Rocket
+/* Ende: AusschlieÃŸen recaptcha bei lazyload WP Rocket
 /* Datum: 29.12.2017
 /* Autor: hgg
 /*----------------------------------------------------------------*/
 
 /*----------------------------------------------------------------*/
-/* Start: Balken links in der Überschrift der Events fehlte
+/* Start: Balken links in der Ãœberschrift der Events fehlte
 /* Datum: 12.10.2018
 /* Autor: hgg
 /* https://wordpress.org/support/topic/category-colors-not-showing-after-update-to-5-2-2/page/2/#post-10757393
@@ -289,14 +289,14 @@ add_filter( 'teccc_fix_category_background_color', function( $null, $category ) 
 	return "#top .main_color {$category} .tribe-events-list-event-title,";
 }, 10, 2 );
 /*----------------------------------------------------------------*/
-/* Ende: Balken links in der Überschrift der Events fehlte
+/* Ende: Balken links in der Ãœberschrift der Events fehlte
 /* Datum: 12.10.2018
 /* Autor: hgg
 /* https://wordpress.org/support/topic/category-colors-not-showing-after-update-to-5-2-2/page/2/#post-10757393
 /*----------------------------------------------------------------*/
 
 /*----------------------------------------------------------------*/
-/* Start: shortcodes für Anzahl Veranstaltungen und Beiträge
+/* Start: shortcodes fÃ¼r Anzahl Veranstaltungen und BeitrÃ¤ge
 /* Datum: 18.12.2018
 /* Autor: hgg
 /*----------------------------------------------------------------*/
@@ -336,14 +336,14 @@ add_filter( 'the_content', 'filter_the_content_in_the_main_loop' );
 
 function filter_the_content_in_the_main_loop( $content ) {
 
-    // Prüfen ob wir in dem Loop eines Beitrags oder einer Seite sind
+    // PrÃ¼fen ob wir in dem Loop eines Beitrags oder einer Seite sind
     if (( is_single() OR is_page()) && in_the_loop() && is_main_query() ) {   
-        // Den HTML Teil für die Schrift könnt ihr beliebig ändern oder erweitern
-        // $ackids_button = '<div class="ackids_container"><div class="mitglied"><a class="button-mitglied" href="https://steadyhq.com/de/aachenerkinder" target="_blank" rel="noopener noreferrer">Werde Mitglied</a></div><div class="mitglied_beschreibung">Werde als Besucher oder Veranstalter Mitglied bei aachenerkinder.de und unterstütze unsere Arbeit.</div></div>';
+        // Den HTML Teil fÃ¼r die Schrift kÃ¶nnt ihr beliebig Ã¤ndern oder erweitern
+        // $ackids_button = '<div class="ackids_container"><div class="mitglied"><a class="button-mitglied" href="https://steadyhq.com/de/aachenerkinder" target="_blank" rel="noopener noreferrer">Werde Mitglied</a></div><div class="mitglied_beschreibung">Werde als Besucher oder Veranstalter Mitglied bei aachenerkinder.de und unterstÃ¼tze unsere Arbeit.</div></div>';
         // spezielle Anzeige wegen abgesagter Events, hgg, 19.3.2020
         // nicht auf der Hauptseite zeigen, hgg, 21.9.2020:
         if ( !is_front_page() ) {
-          $info_text = utf8_encode('- Bitte beachten: Im März 2021 finden aufgrund der aktuellen Bestimmungen fast keine Veranstaltungen statt.');
+          $info_text = utf8_encode(' Bitte beachten: Zur Zeit finden aufgrund der aktuellen Bestimmungen fast keine Veranstaltungen statt.');
           $abgesagte_events ='<div class="ackids_container"><div class="abgesagt"><a class="corona-button-beitrag" href="https://aachenerkinder.de/corona-virus-staedteregion-aachen/">Infos zu Corona</a>' . $info_text . ' </div></div>';
               // return $ackids_button . $content . $ackids_button;
           return $abgesagte_events . $content;
