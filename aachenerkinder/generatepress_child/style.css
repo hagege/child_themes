@@ -64,6 +64,36 @@ CMYK 67-19-35-35
      padding-left: 1.5em;
    }
  
+/* Links in Seiten und Beiträgen */
+body.single .entry-content a,
+body.single .entry-content a:visited,
+body.page .entry-content a,
+body.page .entry-content a:visited
+{
+	text-decoration: underline;
+}
+
+
+body.single .entry-content a:hover,
+body.page .entry-content a:hover {
+	background-color: #F9B81E;
+	color: white;
+  text-decoration: none;
+}
+
+
+
+/* Beitragsübersicht nicht mehr zweispaltig, sondern einspaltig: */
+@media (min-width: 768px) and (max-width: 1024px) {
+	.generate-columns.tablet-grid-50, .grid-sizer.tablet-grid-50 {
+			width: 100%;
+	}
+}   
+
+/* ---------------------------------------------------- */
+/* Fußbereich                                         */
+/* ---------------------------------------------------- */
+
 
 /* Fußzeile bündig mit haurand.com */ 
 .footer-bar-align-right .copyright-bar {
@@ -71,12 +101,40 @@ CMYK 67-19-35-35
     margin-top: 9px;
 }
 
-/* h2 etwas kleiner */
-/* DELETED - WATCH, hgg, 20.3.2021 
-h2 {
-    font-size: 26px;
+/* Fußbereich: zusätzlicher Rand */
+.footer-widget-2, .footer-widget-1 {
+  margin: 10px;
 }
-*/
+
+
+@media (max-width: 768px) {
+  .site-footer .footer-widgets .footer-widgets-container .inside-footer-widgets 	/* Fußbereich */
+    {
+      padding: 20px;
+    }
+    /* Veranstaltungen */
+  }
+  
+  /* Container mit Footer-Widgets */	
+  .site-footer .footer-widgets-container .inside-footer-widgets {
+      background-color: white;
+      opacity: 0.8;
+  }
+  
+  
+  /* Bild im Fußbereich */
+  .footer-widgets {
+      background-attachment: fixed;
+  }
+  
+  /* Container mit Footer-Widgets */
+  @media (max-width: 620px) {
+  .footer-widgets-container {
+      background-color: white;
+  }
+  }
+  
+
 
 /*----------------------------------------------------------------*/
 /* Start: Coronaleiste
@@ -225,25 +283,6 @@ h2 {
   }
 }
 
-  /*
-  /* DELETED - WATCH, hgg, 20.3.2021 
-    /* Hover bei Untermenüpunkten 
-    .main-navigation .main-nav ul ul li[class*="current-menu-"] > a:hover, .main-navigation .main-nav ul ul li[class*="current-menu-"].sfHover > a {
-        color: #81B22F;
-        background-color: #EF7F1A;
-    }
-    /* Active bei Untermenüpunkten 
-    .main-navigation .main-nav ul ul li[class*="current-menu-"] > a:active {
-        color: #81B22F;
-        background-color: #EF7F1A;
-    }
-    .main-navigation .main-nav ul ul li[class*="current-menu-"] > a:focus {
-        color: #81B22F;
-        background-color: #EF7F1A;
-    }
-  }
-  */
-
 
 /* ---------------------------------------------------- */
 /* 1.2. Buttons                                         */
@@ -354,7 +393,6 @@ div.mitglied_beschreibung {
 /* ---------------------------------------------------- */
 /* 1.3. Diverses                                        */
 /* ---------------------------------------------------- */
-
 
 
 

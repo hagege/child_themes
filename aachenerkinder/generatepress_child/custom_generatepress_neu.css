@@ -15,6 +15,7 @@
 }
 
 .ackids_front h2 {
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 10px;
   margin-top: 10px;
@@ -101,51 +102,12 @@ max-height: 400px; */
 }
 
 
-/* Fußbereich: zusätzlicher Rand */
-.footer-widget-2, .footer-widget-1 {
-  margin: 10px;
-}
-
-
-/* nicht mehr zweispaltig, sondern einspaltig: */
-@media (min-width: 768px) and (max-width: 1024px) {
-.generate-columns.tablet-grid-50, .grid-sizer.tablet-grid-50 {
-    width: 100%;
-}
-}
-
 /* nur zum Testen - besser in Customizer ändern */
 nav#sticky-navigation {
   opacity: 0.9;
 }
 
 
-@media (max-width: 768px) {
-.site-footer .footer-widgets .footer-widgets-container .inside-footer-widgets 	/* Fußbereich */
-{
-  padding: 20px;
-}
-/* Veranstaltungen */
-}
-
-/* Container mit Footer-Widgets */	
-.site-footer .footer-widgets-container .inside-footer-widgets {
-  background-color: white;
-  opacity: 0.8;
-}
-
-
-/* Bild im Fußbereich */
-.footer-widgets {
-  background-attachment: fixed;
-}
-
-/* Container mit Footer-Widgets */
-@media (max-width: 620px) {
-.footer-widgets-container {
-  background-color: white;
-}
-}
 
 /* .header-wrap .site-header {
   background: #F9B81E;
@@ -156,21 +118,6 @@ div#primary-menu {
 }
 */
 
-/* Links in Seiten und Beiträgen */
-body.single .entry-content a,
-body.single .entry-content a:visited,
-body.page .entry-content a,
-body.page .entry-content a:visited
-{
-text-decoration: underline;
-}
 
-
-body.single .entry-content a:hover,
-body.page .entry-content a:hover {
-background-color: #F9B81E;
-color: white;
-text-decoration: none;
-}
 /*------------------------------------*/
 
