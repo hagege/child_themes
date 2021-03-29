@@ -143,9 +143,17 @@ body.page .entry-content a:hover {
 /*----------------------------------------------------------------*/
 
 
-.ackids_container {
+div.ackids_container {
     text-align: left;
+    border-bottom: 0.4rem solid #F9B81E;
+    margin-bottom: 1.5rem;
   }
+
+p.ackids-info-box {
+    line-height: 1.5rem;
+    margin-bottom: 0px;
+    padding-bottom: 0.6rem;
+}
   
  
   /* Container für Mitgliedsbutton und Infotext - hgg, 6.10.2019 */
