@@ -1,5 +1,11 @@
 /* Custom CSS */
 
+
+/* Damit die Karte das Sticky Menue nicht überdeckt */
+.leaflet-map.WPLeafletMap.leaflet-container.leaflet-touch.leaflet-retina.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+  z-index: 1;
+}
+
 /*------------------------------------*/
 /* Einstellungen für die Frontpage */
 .page-hero-buttons, .ackids_front {
@@ -19,7 +25,7 @@
   font-weight: 600;
   margin-bottom: 10px;
   margin-top: 10px;
-  text-shadow: 0px 0px 0.7rem #F9B81E;
+  text-shadow: 0px 0px 0.2rem #F9B81E;
 }
 
 /* Maximale Breite für den Minikalender */
@@ -38,7 +44,7 @@ overflow: hidden;
 min-width: 100%;
 min-height: 100%; 
 /* Add infinite to loop. */
-animation: move 10s ease;
+animation: move 15s ease;
 -ms-animation: move 15s ease;
 -webkit-animation: move 15s ease;
 -animation: move 15s ease;
