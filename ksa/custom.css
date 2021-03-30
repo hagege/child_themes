@@ -1,4 +1,4 @@
-/* Custom CSS */
+/* Custom CSS KSA */
 
 /*Farben
 Dunkelgrau #9A9A9a
@@ -9,9 +9,30 @@ Hellblau   #D9DEF4
 */
 
 
+/* nur noch eine Spalte */
+@media (max-width: 1025px) {
+	.wp-block-columns {
+  	  display: block;
+	}
+}	
+
+/* Breite der Spalten verringert */
+@media (min-width: 1025px) {
+	.wp-block-columns.has-background, 
+	p.mehr_rand{
+			margin-left: 10vw;
+			margin-right: 10vw;
+	}
+}
+
 /* Linie zwischen Header und Content */
-header#masthead {
-    border-bottom: 8px solid #F7931D;
+h2.has-text-align-center.has-text-color {
+  padding-top: 2.5rem;  
+	border-top: 8px solid #F7931D;
+}
+
+p.has-text-align-center.text_auf_video {
+    margin-bottom: 0px;
 }
 
 /* Abstand nach oben zum Header auf 0 */
@@ -19,45 +40,41 @@ header#masthead {
     padding: 0px!important;
 }
 
-/* ----------------------------- */
-/* Navigation                    */
-/* ----------------------------- */
-  
-  /* Einstellungen für das Desktop-Menü */
-  @media (min-width: 769px) {
-    /* nav links effect */
-    .main-navigation .menu > .menu-item > a::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        left: 50%;
-        bottom: 0px;
-        -webkit-transform: translateX(-50%);
-        transform: translateX(-50%);
-        color: #EF7F1A;
-        display: block;
-        width: 0;
-        height: 5px;   
-        background-color: currentColor;
-        transition: 0.3s width ease;
-    }
+    /* Einstellungen für das Desktop-Menü */
+    @media (min-width: 769px) {
+      /* nav links effect */
+      .main-navigation .menu > .menu-item > a::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          left: 50%;
+          bottom: 0px;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+          color: #F7931D;
+          display: block;
+          width: 0;
+          height: 5px;   
+          background-color: currentColor;
+          transition: 0.3s width ease;
+      }
+      .main-navigation .menu > .menu-item.current-menu-item > a::after,
+      .main-navigation .menu > .menu-item > a:hover::after {
+          width: 100%;
+          color: #000085;
+      }
+    
     .main-navigation .menu > .menu-item.current-menu-item > a::after,
-    .main-navigation .menu > .menu-item > a:hover::after {
-        width: 100%;
-        color: #457D80;
+      .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
+      .main-navigation .menu > .menu-item > a:active::after {
+          width: 100%;
+      color: #F7931D;
+      }
+    /* Submenü */
+    ul.sub-menu {
+      opacity: 0.9!important;
     }
-  
-  .main-navigation .menu > .menu-item.current-menu-item > a::after,
-    .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
-    .main-navigation .menu > .menu-item > a:active::after {
-        width: 100%;
-    color: #EF7F1A;
-    }
-  /* Submenü */
-  ul.sub-menu {
-    opacity: 0.9!important;
   }
-}
 
 
 
@@ -67,12 +84,7 @@ header.entry-header {
     /* visibility: hidden; */
 }
 
-/* Breite der Spalten verringert */
-.wp-block-columns.has-background, 
-p.mehr_rand{
-    margin-left: 10vw;
-    margin-right: 10vw;
-}
+
 
 /* Videos mit Animation */
 p.text_auf_video {
