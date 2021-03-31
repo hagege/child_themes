@@ -26,13 +26,13 @@ Hellblau   #D9DEF4
 }
 
 /* Linie zwischen Header und Content */
-h2.has-text-align-center.has-text-color {
+h2.has-text-align-center {
   padding-top: 2.5rem;  
 	border-top: 8px solid #F7931D;
 }
 
 p.has-text-align-center.text_auf_video {
-    margin-bottom: 0px;
+    margin-bottom: -1px;
 }
 
 /* Abstand nach oben zum Header auf 0 */
