@@ -7,7 +7,18 @@
 }
 
 
-/* Damit die Karte das Sticky Menue nicht überdeckt 
+/* Damit die Karte das Sticky Menue nicht überdeckt */
+.leaflet-container {
+ z-index:0;
+}
+
+
+/* Karte in maximaler Breite */
+.single-tribe_events .secondary .tribe-events-venue-map {
+  width: 90%;
+}
+
+/* hat nicht funktioniert 
 .leaflet-map.WPLeafletMap.leaflet-container.leaflet-touch.leaflet-retina.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
   z-index: -1;
 }
