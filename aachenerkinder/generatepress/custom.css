@@ -1,9 +1,15 @@
 /* Custom CSS */
 
+/* Notbehelf, damit die Hintergrundfarbe auf jeden Fall weiß ist */
+/* WATCH */
+#tribe-events-content {
+  background-color: white;
+}
 
-/* Damit die Karte das Sticky Menue nicht überdeckt */
+
+/* Damit die Karte das Sticky Menue nicht überdeckt 
 .leaflet-map.WPLeafletMap.leaflet-container.leaflet-touch.leaflet-retina.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
-  z-index: 1;
+  z-index: -1;
 }
 
 /*------------------------------------*/
