@@ -1,6 +1,6 @@
 /* Custom CSS */
 
-/* Image auf Hauptseite in voller Breite */
+/* Image auf Hauptsete beim ersten Eintrag in voller Breite */
 .resize-featured-image .post-image img {
   width: 100%;
 }
