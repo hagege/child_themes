@@ -1,174 +1,178 @@
 /* Custom CSS */
 
+/* Image auf Hauptseite in voller Breite */
+.resize-featured-image .post-image img {
+  width: 100%;
+}
+
 
 /*------------------------------------*/
 /* Buttons mit Hinweisen über dem Content
 /*------------------------------------*/
 
 @media (max-width: 450px) {
-  .header_links {
-      display:unset;
-      padding: 10px 0px 0px 20px;
-    }
-  }
-  
-  @media (min-width: 451px) {
-  .header_links {
-      display:flex;
-      padding: 20px 0px 0px 20px;
-    }
-  }
-  
-  @media (min-width: 768px) {
-  .header_links {
-      display:flex;
-      padding: 30px 0px 0px 30px;
-    }
-  }
-  
-  
-  /* Notbehelf, damit die Hintergrundfarbe auf jeden Fall weiß ist */
-  /* WATCH */
-  #tribe-events-content {
-      background-color: white;
-  }
-  
-  
-  /* Damit die Karte das Sticky Menue nicht überdeckt */
-  .leaflet-container {
-     z-index:0;
-  }
-  
-  
-  /* Karte in maximaler Breite */
-  .single-tribe_events .secondary .tribe-events-venue-map {
-      width: 90%;
-  }
-  
-  /* hat nicht funktioniert 
-  .leaflet-map.WPLeafletMap.leaflet-container.leaflet-touch.leaflet-retina.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
-      z-index: -1;
-  }
-  
-  /*------------------------------------*/
-  /* Einstellungen für die Frontpage */
-  .page-hero-buttons, .ackids_front {
-      margin-left:20%;
-      margin-right:20%;	
-  }
-  
-  .ackids_front {
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.2);
-      margin-bottom: 20px;	
-      color: white;
-  }
-  
-  .ackids_front h2 {
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 10px;
-      margin-top: 10px;
-      text-shadow: 0px 0px 0.2rem #F9B81E;
-  }
-  
-  /* Maximale Breite für den Minikalender */
-  .tribe-mini-calendar-grid-wrapper {
-      max-width: 300px;
-  }
-  
-  
-  /* Ken Burns Effekt auf Beitragsseiten */
-  .featured-image.page-header-image-single {
-    overflow: hidden;
-  }
-  
-  /* hier die Regeln für das Bild */
-  .featured-image.page-header-image-single img {	
-    min-width: 100%;
-    min-height: 100%; 
-    /* Add infinite to loop. */
-    animation: move 15s ease;
-    -ms-animation: move 15s ease;
-    -webkit-animation: move 15s ease;
-    -animation: move 15s ease;
-    -moz-animation: move 15s ease;
-    position: relative; 
-    /* width: 100%; 
-    max-height: 400px; */
-  }
-  
-  @keyframes move {
-    0% {
-      /*
-      -webkit-transform-origin: left;
-      -moz-transform-origin: left;
-      -ms-transform-origin: left;
-      -o-transform-origin: left;
-      transform-origin: left;
-      */
-      transform: scale(1.0);
-      -ms-transform: scale(1.0);
-      /* IE 9 */
-  
-      -webkit-transform: scale(1.0);
-      /* Safari and Chrome */
-  
-      -o-transform: scale(1.0);
-      /* Opera */
-  
-      -moz-transform: scale(1.0);
-      /* Firefox */
-    }
-    50% {
-      transform: scale(1.1);
-      -ms-transform: scale(1.1);
-      /* IE 9 */
-  
-      -webkit-transform: scale(1.1);
-      /* Safari and Chrome */
-  
-      -o-transform: scale(1.1);
-      /* Opera */
-  
-      -moz-transform: scale(1.1);
-      /* Firefox */
-    }
-    100% {
-  
-      transform: scale(1.0);
-      -ms-transform: scale(1.0);
-      /* IE 9 */
-  
-      -webkit-transform: scale(1.0);
-      /* Safari and Chrome */
-  
-      -o-transform: scale(1.0);
-      /* Opera */
-  
-      -moz-transform: scale(1.0);
-      /* Firefox */
-    }
-  }
-    
-    
-  /* nur zum Testen - besser in Customizer ändern */
-  nav#sticky-navigation {
-      opacity: 0.9;
-  }
-  
-  
-  
-  /* .header-wrap .site-header {
-      background: #F9B81E;
-  }
-  
-  div#primary-menu {
-      background-color: #F9B81E;
-  }
+.header_links {
+  display:unset;
+  padding: 10px 0px 0px 20px;
+}
+}
+
+@media (min-width: 451px) {
+.header_links {
+  display:flex;
+  padding: 20px 0px 0px 20px;
+}
+}
+
+@media (min-width: 768px) {
+.header_links {
+  display:flex;
+  padding: 30px 0px 0px 30px;
+}
+}
+
+
+/* Notbehelf, damit die Hintergrundfarbe auf jeden Fall weiß ist */
+/* WATCH */
+#tribe-events-content {
+  background-color: white;
+}
+
+
+/* Damit die Karte das Sticky Menue nicht überdeckt */
+.leaflet-container {
+ z-index:0;
+}
+
+
+/* Karte in maximaler Breite */
+.single-tribe_events .secondary .tribe-events-venue-map {
+  width: 90%;
+}
+
+/* hat nicht funktioniert 
+.leaflet-map.WPLeafletMap.leaflet-container.leaflet-touch.leaflet-retina.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+  z-index: -1;
+}
+
+/*------------------------------------*/
+/* Einstellungen für die Frontpage */
+.page-hero-buttons, .ackids_front {
+  margin-left:20%;
+  margin-right:20%;	
+}
+
+.ackids_front {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;	
+  color: white;
+}
+
+.ackids_front h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-shadow: 0px 0px 0.2rem #F9B81E;
+}
+
+/* Maximale Breite für den Minikalender */
+.tribe-mini-calendar-grid-wrapper {
+  max-width: 300px;
+}
+
+
+/* Ken Burns Effekt auf Beitragsseiten */
+.featured-image.page-header-image-single {
+overflow: hidden;
+}
+
+/* hier die Regeln für das Bild */
+.featured-image.page-header-image-single img {	
+min-width: 100%;
+min-height: 100%; 
+/* Add infinite to loop. */
+animation: move 15s ease;
+-ms-animation: move 15s ease;
+-webkit-animation: move 15s ease;
+-animation: move 15s ease;
+-moz-animation: move 15s ease;
+position: relative; 
+/* width: 100%; 
+max-height: 400px; */
+}
+
+@keyframes move {
+0% {
+  /*
+  -webkit-transform-origin: left;
+  -moz-transform-origin: left;
+  -ms-transform-origin: left;
+  -o-transform-origin: left;
+  transform-origin: left;
   */
-  
-  
-  /*------------------------------------*/
-  
-  
+  transform: scale(1.0);
+  -ms-transform: scale(1.0);
+  /* IE 9 */
+
+  -webkit-transform: scale(1.0);
+  /* Safari and Chrome */
+
+  -o-transform: scale(1.0);
+  /* Opera */
+
+  -moz-transform: scale(1.0);
+  /* Firefox */
+}
+50% {
+  transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  /* IE 9 */
+
+  -webkit-transform: scale(1.1);
+  /* Safari and Chrome */
+
+  -o-transform: scale(1.1);
+  /* Opera */
+
+  -moz-transform: scale(1.1);
+  /* Firefox */
+}
+100% {
+
+  transform: scale(1.0);
+  -ms-transform: scale(1.0);
+  /* IE 9 */
+
+  -webkit-transform: scale(1.0);
+  /* Safari and Chrome */
+
+  -o-transform: scale(1.0);
+  /* Opera */
+
+  -moz-transform: scale(1.0);
+  /* Firefox */
+}
+}
+
+
+/* nur zum Testen - besser in Customizer ändern */
+nav#sticky-navigation {
+  opacity: 0.9;
+}
+
+
+
+/* .header-wrap .site-header {
+  background: #F9B81E;
+}
+
+div#primary-menu {
+  background-color: #F9B81E;
+}
+*/
+
+
+/*------------------------------------*/
+
