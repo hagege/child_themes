@@ -5,7 +5,7 @@
  Author:       Hans-Gerd Gerhards 
  Author URI:   https://haurand.com/ 
  Template:     generatepress
- Version:      2.1 (2021-03-28)
+ Version:      2.2 (2021-04-04)
 */
 
 /*
@@ -299,6 +299,7 @@ div.ackids_container {
 a.read-more.button {
     background-color: #77BCC7;
     color: white;
+    font-weight: 600;
 }
 
 a.read-more.button:hover {
@@ -349,6 +350,7 @@ a.button-mitglied {
     padding: 10px;
     color: #ffffff;
     font-size: 1.0em;
+    font-weight: 600;
     background-color: #77BCC7;
     /* keine runden Ecken */
     /* border-radius: 4px; */
@@ -689,6 +691,7 @@ a.tribe-events-button-beitrag, a.tribe-events-button-beitrag:focus, a.tribe-even
     padding: 10px 20px;
     color: #ffffff;
     font-size:  0.9em;
+    font-weight: 600;
     background-color: #77BCC7;
     text-decoration: none!important;
 }
