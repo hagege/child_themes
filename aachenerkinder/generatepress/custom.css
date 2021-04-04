@@ -1,5 +1,6 @@
 /* Custom CSS */
 
+
 /* Image auf Hauptsete beim ersten Eintrag in voller Breite */
 .resize-featured-image .post-image img {
   width: 100%;
@@ -57,6 +58,7 @@
 
 /*------------------------------------*/
 /* Einstellungen für die Frontpage */
+/*------------------------------------*/
 .page-hero-buttons, .ackids_front {
   margin-left:20%;
   margin-right:20%;	
@@ -70,12 +72,30 @@
 }
 
 .ackids_front h2 {
-  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 10px;
   margin-top: 10px;
   text-shadow: 0px 0px 0.2rem #F9B81E;
 }
+
+@media (max-width: 350px) {
+.ackids_front h2 {
+  font-size: 1.3rem;
+}
+}	
+
+@media (min-width: 351px) {
+.ackids_front h2 {
+  font-size: 1.5rem;
+}
+}	
+
+@media (min-width: 461px) {
+.ackids_front h2 {
+  font-size: 2rem;
+}
+}	
+
 
 /* Maximale Breite für den Minikalender */
 .tribe-mini-calendar-grid-wrapper {
