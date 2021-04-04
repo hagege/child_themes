@@ -8,163 +8,171 @@ Hellgrau   #CCCCCC
 Hellblau   #D9DEF4
 */
 
+span.ctl-story-time.selected::after,
+span.ctl-story-time::after {
+	background-color: #000085!important;
+}
 
+
+span.ctl-story-time {
+    font-weight: 700;
+}
 
 /* Rand bei Timeline */
 .timeline-wrapper.white-timeline-wrapper.hori-items-3 {
-  margin-left: 10vw;
-  margin-right: 10vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
 
 
 /* nur noch eine Spalte */
 @media (max-width: 1025px) {
-.wp-block-columns {
-    display: block;
-}
+	.wp-block-columns {
+  	  display: block;
+	}
 }	
 
 /* Breite der Spalten verringert */
 @media (min-width: 1025px) {
-.wp-block-columns.has-background, 
-p.mehr_rand, h5.has-text-align-center{
-    margin-left: 15vw;
-    margin-right: 15vw;
-}
+	.wp-block-columns.has-background, 
+	p.mehr_rand, h5.has-text-align-center{
+			margin-left: 15vw;
+			margin-right: 15vw;
+	}
 }
 
 /* Linie zwischen Header und Content */
 h2.has-text-align-center {
-padding-top: 4.5rem;  
-border-top: 8px solid #F7931D;
+  padding-top: 4.5rem;  
+	border-top: 8px solid #F7931D;
 }
 
 p.has-text-align-center.text_auf_video {
-  margin-bottom: -1px;
+    margin-bottom: -1px;
 }
 
 /* Abstand nach oben zum Header auf 0 */
 .inside-article {
-  padding: 0px!important;
+    padding: 0px!important;
 }
 
-  /* Einstellungen für das Desktop-Menü */
-  @media (min-width: 769px) {
-    /* nav links effect */
-    .main-navigation .menu > .menu-item > a::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        left: 50%;
-        bottom: 0px;
-        -webkit-transform: translateX(-50%);
-        transform: translateX(-50%);
-        color: #F7931D;
-        display: block;
-        width: 0;
-        height: 5px;   
-        background-color: currentColor;
-        transition: 0.3s width ease;
-    }
+    /* Einstellungen für das Desktop-Menü */
+    @media (min-width: 769px) {
+      /* nav links effect */
+      .main-navigation .menu > .menu-item > a::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          left: 50%;
+          bottom: 0px;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+          color: #F7931D;
+          display: block;
+          width: 0;
+          height: 5px;   
+          background-color: currentColor;
+          transition: 0.3s width ease;
+      }
+      .main-navigation .menu > .menu-item.current-menu-item > a::after,
+      .main-navigation .menu > .menu-item > a:hover::after {
+          width: 100%;
+          color: #000085;
+      }
+    
     .main-navigation .menu > .menu-item.current-menu-item > a::after,
-    .main-navigation .menu > .menu-item > a:hover::after {
-        width: 100%;
-        color: #000085;
+      .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
+      .main-navigation .menu > .menu-item > a:active::after {
+          width: 100%;
+      color: #F7931D;
+      }
+    /* Submenü */
+    ul.sub-menu {
+      opacity: 0.9!important;
     }
-  
-  .main-navigation .menu > .menu-item.current-menu-item > a::after,
-    .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
-    .main-navigation .menu > .menu-item > a:active::after {
-        width: 100%;
-    color: #F7931D;
-    }
-  /* Submenü */
-  ul.sub-menu {
-    opacity: 0.9!important;
   }
-}
 
 
 
 /* Titel wird nicht gezeigt */
 header.entry-header {
-  display: none;
-  /* visibility: hidden; */
+    display: none;
+    /* visibility: hidden; */
 }
 
 
 
 /* Videos mit Animation */
 p.text_auf_video {
-  background-color: rgb(255,255,255);
-  opacity: 0.4;
-  color:rgba(0, 0, 133, 1);
-  font-weight: 600;
-  animation: fadeIn ease 10s;
-  -webkit-animation: fadeIn ease 10s;
+    background-color: rgb(255,255,255);
+    opacity: 0.4;
+	  color:rgba(0, 0, 133, 1);
+	  font-weight: 600;
+	  animation: fadeIn ease 10s;
+	  -webkit-animation: fadeIn ease 10s;
 }
 
 @media (min-width: 1025px) {
-p.text_auf_video {
-  font-size: 3em;
-  margin-top: -2.1em;
+	p.text_auf_video {
+    font-size: 3em;
+    margin-top: -2.1em;
 }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  p.text_auf_video{
-    font-size: 2em;
-    margin-top: -2.4em;
-}
+		p.text_auf_video{
+			font-size: 2em;
+			margin-top: -2.4em;
+	}
 }
 
 @media (min-width: 500px) and (max-width: 767px)  {
-p.text_auf_video{
-  font-size: 1.5em;
-  margin-top: -2.7em;
-}
+	p.text_auf_video{
+    font-size: 1.5em;
+    margin-top: -2.7em;
+	}
 }
 
 
 @media (min-width: 340px) and (max-width: 499px)  {
-p.text_auf_video{
-  font-size: 1.0em;
-  margin-top: -3.35em;
-}
+	p.text_auf_video{
+		font-size: 1.0em;
+    margin-top: -3.35em;
+	}
 }
 
 @media (max-width: 339px)  {
-p.text_auf_video{
-  font-size: 0.8em;
-  margin-top: -3.8em;
-}
+	p.text_auf_video{
+		font-size: 0.8em;
+    margin-top: -3.8em;
+	}
 }
 
 
 
 
 @keyframes fadeIn {
-0% {opacity:0;}
-80%	{opacity:0;}
-100% {opacity:0.4;}
+	0% {opacity:0;}
+	80%	{opacity:0;}
+	100% {opacity:0.4;}
 }
 
 @-moz-keyframes fadeIn {
-0% {opacity:0;}
-80%	{opacity:0;}
-100% {opacity:0.4;}
+	0% {opacity:0;}
+	80%	{opacity:0;}
+	100% {opacity:0.4;}
 }
 
 @-webkit-keyframes fadeIn {
-0% {opacity:0;}
-80%	{opacity:0;}
-100% {opacity:0.4;}
+	0% {opacity:0;}
+	80%	{opacity:0;}
+	100% {opacity:0.4;}
 }
 
 @-o-keyframes fadeIn {
-0% {opacity:0;}
-80%	{opacity:0;}
-100% {opacity:0.4;}
+	0% {opacity:0;}
+	80%	{opacity:0;}
+	100% {opacity:0.4;}
 }
 
 @-ms-keyframes fadeIn {
