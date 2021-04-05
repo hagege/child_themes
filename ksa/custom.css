@@ -8,12 +8,61 @@ Hellgrau   #CCCCCC
 Hellblau   #D9DEF4
 */
 
+
+/* Für Container bei zwei Spalten - einspaltig: daher keine feste Höhe bis 599px (Breakpoint) */
+
+/*
+@media (min-width: 600px){
+	div.feste_hoehe {
+			height: 10rem;
+	}
+}
+
+@media (min-width: 700px){
+	div.feste_hoehe {
+			height: 10rem;
+	}
+}
+
+@media (min-width: 800px){
+	div.feste_hoehe {
+			height: 10rem;
+	}
+}
+*/
+@media (min-width: 1025px){
+	div.feste_hoehe {
+			height: 16rem;
+	}
+}
+
+@media (min-width: 1200px){
+	div.feste_hoehe {
+			height: 15rem;
+	}
+}
+
+@media (min-width: 1378px){
+	div.feste_hoehe {
+			height: 12rem;
+	}
+}
+
+/* Text mir Rand */
+p.text_schmaler {
+    margin-left: 7vw;
+		margin-right: 7vw;
+}
+
+
+/* Kreis statt orange blau */
 span.ctl-story-time.selected::after,
 span.ctl-story-time::after {
 	background-color: #000085!important;
 }
 
 
+/* Jahreszahl etwas dicker */
 span.ctl-story-time {
     font-weight: 700;
 }
@@ -29,8 +78,13 @@ span.ctl-story-time {
 @media (max-width: 1025px) {
 	.wp-block-columns {
   	  display: block;
+			margin-left: 0em!important;
 	}
-}	
+	/* Bei einer Spalte kein zusätzlicher linker Rand ab dem 2. Bild */
+	.wp-block-column:not(:first-child) {
+    	margin-left: 0em;
+	}	
+}
 
 /* Breite der Spalten verringert */
 @media (min-width: 1025px) {
