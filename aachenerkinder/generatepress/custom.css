@@ -1,7 +1,44 @@
 /* Custom CSS */
 
+/* Unterer Bereich einer Einzelveranstaltung (Metadaten) besser aufteilen */
+.tribe-events-single-section.tribe-events-event-meta.primary.tribe-clearfix,
+.tribe-events-single-section.tribe-events-event-meta.secondary.tribe-clearfix {
+    width: 100%;
+}
 
-/* Image auf Hauptsete beim ersten Eintrag in voller Breite */
+/* Einstellungen Überschrift Mini-Kalender */
+/* bis 768px: */
+@media (max-width: 768px) {
+span#tribe-mini-calendar-month-0 {
+    font-size: 1.2rem;
+    }
+}
+
+
+/* ab 769px: */ 
+@media (min-width: 769px) and (max-width: 975px) {
+span#tribe-mini-calendar-month-0 {
+    font-size: 0.6rem;
+    }
+}
+
+
+/* ab 976px: */ 
+@media (min-width: 976px) {
+span#tribe-mini-calendar-month-0 {
+    font-size: 0.8rem;
+    }
+}
+
+
+/* Kein unterer Rand bei Links (Einzelveranstaltungen) */
+.tribe-events-content a, 
+.tribe-events-content a:hover{
+    border-bottom: 0px;
+}
+
+
+/* Image auf Hauptseite beim ersten Eintrag in voller Breite */
 .resize-featured-image .post-image img {
   width: 100%;
 }
