@@ -207,31 +207,31 @@ p.text_auf_video {
 
 @keyframes fadeIn {
 	0% {opacity:0;}
-	80%	{opacity:0;}
+	40%	{opacity:0;}
 	100% {opacity:0.6;}
 }
 
 @-moz-keyframes fadeIn {
 	0% {opacity:0;}
-	80%	{opacity:0;}
+	40%	{opacity:0;}
 	100% {opacity:0.6;}
 }
 
 @-webkit-keyframes fadeIn {
 	0% {opacity:0;}
-	80%	{opacity:0;}
+	40%	{opacity:0;}
 	100% {opacity:0.6;}
 }
 
 @-o-keyframes fadeIn {
 	0% {opacity:0;}
-	80%	{opacity:0;}
+	40%	{opacity:0;}
 	100% {opacity:0.6;}
 }
 
 @-ms-keyframes fadeIn {
 	0% {opacity:0;}
-	80%	{opacity:0;}
+	40%	{opacity:0;}
 	100% {opacity:0.6;}
 }
 

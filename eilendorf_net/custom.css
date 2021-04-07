@@ -1,5 +1,5 @@
 
-/* #00FFFF: t�rkis
+/* #00FFFF: türkis
  * #0D3042: dunkelblau
  * #B2B2B2: hellgrau
  * #878787: mittelgrau
@@ -7,7 +7,24 @@
  * /
 */
 
-/* Links f�r Event-Export */
+/* Farben geändert für iCal */
+.tribe-events .tribe-events-c-ical__link {
+    border-color: #0d3042!important;
+    color: #0d3042!important;
+}
+
+.tribe-events .tribe-events-c-ical__link:hover {
+    background-color: #0d3042!important;
+    color: white!important;
+}
+
+
+/* Schriftgröße geändert für Breadcrump */
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-c-breadcrumbs__list {
+    font-size: 1.2rem;
+}
+
+/* Links für Event-Export */
 a.tribe-events-gcal.tribe-events-button, a.tribe-events-ical.tribe-events-button {
     background-color: #0D3240!important;
     color: #00FFFF!important;
@@ -23,12 +40,12 @@ a.tribe-events-gcal.tribe-events-button, a.tribe-events-ical.tribe-events-button
     background-color: #ffffff;
 }
 
-/* �berschrift f�r Monatsansicht bei TEC */
+/* Überschrift für Monatsansicht bei TEC */
 h3.tribe-events-month-event-title {
     text-shadow: 0 0px 0 #fff;
 
 }
-/* �nderung der �berschriftenfarbe bei TEC */
+/* Änderung der Überschriftenfarbe bei TEC */
 .single-tribe_events .tribe-events-single-event-title {
     color: #0d3042;
 }
@@ -38,7 +55,12 @@ nav.tribe-events-nav-pagination {
     display: none;
 }
 
-/* Links bei TEC Gr��e r*/
+/* Links bei TEC Größe r*/
 #tribe-events-content a, .tribe-events-event-meta a, .tribe-events-back {
     font-size: 1.2em;
+
+	/*Schriftgröße bei Beiträgen*/
+	body {
+        font-size: 18px;
+   }
 }
