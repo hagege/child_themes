@@ -142,7 +142,7 @@ p.ackids-info-box {
 
 div.ackids_container {
   text-align: left;
-  border-bottom: 0.4rem solid #DF5022;
+  /* border-bottom: 0.4rem solid #DF5022; */
   margin-bottom: 1.5rem;
 }
  

@@ -1,112 +1,91 @@
 /* Custom CSS */
 
+/* wegen besserer Sichtbarkeit */
+.gp-icon svg {
+  fill: black;
+}
+
+/* schräge Kante beim Bild auf der Startseite */ 
+.schraeg {
+clip-path: polygon(0 0, 100% 0, 100% 85%, 66% 100%, 0 85%);
+}
+
 
 /* Breadcrumb - Schriftgröße und Rand nach oben ändern */
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-c-breadcrumbs__list {
-    font-size: 22px;
-    margin-top: 5px;
+  font-size: 22px;
+  margin-top: 5px;
 }
 
 
 /* Image auf Hauptseite beim ersten Eintrag in voller Breite */
 .resize-featured-image .post-image img {
-  width: 100%;
+width: 100%;
 }
 
 
-/*------------------------------------*/
-/* Buttons mit Hinweisen über dem Content
-/*------------------------------------*/
-
-@media (max-width: 450px) {
-.header_links {
-  display:unset;
-  padding: 10px 0px 0px 20px;
-}
-}
-
-@media (min-width: 451px) {
-.header_links {
-  display:flex;
-  padding: 20px 0px 0px 20px;
-}
-}
-
-@media (min-width: 768px) {
-.header_links {
-  display:flex;
-  padding: 30px 0px 0px 30px;
-}
-}
-
-
-/* Notbehelf, damit die Hintergrundfarbe auf jeden Fall weiß ist */
-/* WATCH */
-#tribe-events-content {
-  background-color: white;
-}
 
 
 /* Damit die Karte das Sticky Menue nicht überdeckt */
 .leaflet-container {
- z-index:0;
+z-index:0;
 }
 
 
 /* Karte in maximaler Breite */
 .single-tribe_events .secondary .tribe-events-venue-map {
-  width: 90%;
+width: 90%;
 }
 
 /* hat nicht funktioniert 
 .leaflet-map.WPLeafletMap.leaflet-container.leaflet-touch.leaflet-retina.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
-  z-index: -1;
+z-index: -1;
 }
 
 /*------------------------------------*/
 /* Einstellungen für die Frontpage */
 /*------------------------------------*/
 .page-hero-buttons, .ackids_front {
-  margin-left:20%;
-  margin-right:20%;	
+margin-left:20%;
+margin-right:20%;	
 }
 
 .ackids_front {
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;	
-  color: white;
+padding: 20px;
+background: rgba(0, 0, 0, 0.2);
+margin-bottom: 20px;	
+color: white;
 }
 
 .ackids_front h2 {
-  font-weight: 600;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  text-shadow: 0px 0px 0.2rem #F9B81E;
+font-weight: 600;
+margin-bottom: 10px;
+margin-top: 10px;
+text-shadow: 0px 0px 0.2rem #F9B81E;
 }
 
 @media (max-width: 350px) {
 .ackids_front h2 {
-  font-size: 1.3rem;
+font-size: 1.3rem;
 }
 }	
 
 @media (min-width: 351px) {
 .ackids_front h2 {
-  font-size: 1.5rem;
+font-size: 1.5rem;
 }
 }	
 
 @media (min-width: 461px) {
 .ackids_front h2 {
-  font-size: 2rem;
+font-size: 2rem;
 }
 }	
 
 
 /* Maximale Breite für den Minikalender */
 .tribe-mini-calendar-grid-wrapper {
-  max-width: 300px;
+max-width: 300px;
 }
 
 
@@ -132,71 +111,71 @@ max-height: 400px; */
 
 @keyframes move {
 0% {
-  /*
-  -webkit-transform-origin: left;
-  -moz-transform-origin: left;
-  -ms-transform-origin: left;
-  -o-transform-origin: left;
-  transform-origin: left;
-  */
-  transform: scale(1.0);
-  -ms-transform: scale(1.0);
-  /* IE 9 */
+/*
+-webkit-transform-origin: left;
+-moz-transform-origin: left;
+-ms-transform-origin: left;
+-o-transform-origin: left;
+transform-origin: left;
+*/
+transform: scale(1.0);
+-ms-transform: scale(1.0);
+/* IE 9 */
 
-  -webkit-transform: scale(1.0);
-  /* Safari and Chrome */
+-webkit-transform: scale(1.0);
+/* Safari and Chrome */
 
-  -o-transform: scale(1.0);
-  /* Opera */
+-o-transform: scale(1.0);
+/* Opera */
 
-  -moz-transform: scale(1.0);
-  /* Firefox */
+-moz-transform: scale(1.0);
+/* Firefox */
 }
 50% {
-  transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  /* IE 9 */
+transform: scale(1.1);
+-ms-transform: scale(1.1);
+/* IE 9 */
 
-  -webkit-transform: scale(1.1);
-  /* Safari and Chrome */
+-webkit-transform: scale(1.1);
+/* Safari and Chrome */
 
-  -o-transform: scale(1.1);
-  /* Opera */
+-o-transform: scale(1.1);
+/* Opera */
 
-  -moz-transform: scale(1.1);
-  /* Firefox */
+-moz-transform: scale(1.1);
+/* Firefox */
 }
 100% {
 
-  transform: scale(1.0);
-  -ms-transform: scale(1.0);
-  /* IE 9 */
+transform: scale(1.0);
+-ms-transform: scale(1.0);
+/* IE 9 */
 
-  -webkit-transform: scale(1.0);
-  /* Safari and Chrome */
+-webkit-transform: scale(1.0);
+/* Safari and Chrome */
 
-  -o-transform: scale(1.0);
-  /* Opera */
+-o-transform: scale(1.0);
+/* Opera */
 
-  -moz-transform: scale(1.0);
-  /* Firefox */
+-moz-transform: scale(1.0);
+/* Firefox */
 }
 }
 
 
 /* nur zum Testen - besser in Customizer ändern */
 nav#sticky-navigation {
-  opacity: 0.9;
+opacity: 0.9;
 }
 
 
 
 /* .header-wrap .site-header {
-  background: #F9B81E;
+background: #F9B81E;
 }
 
 div#primary-menu {
-  background-color: #F9B81E;
+background-color: #F9B81E;
 }
 */
 
