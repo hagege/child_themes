@@ -1,5 +1,16 @@
 /* Custom CSS */
 
+
+/* Für Button in Seitenleiste - später Klasse in style.css ergänzen */
+a.read-more.button:hover {
+  color: white;
+}
+
+.widget .search-form button.search-submit {
+  background-color: #b3b3b3;
+}
+
+
 /* wegen besserer Sichtbarkeit */
 .gp-icon svg {
   fill: black;
