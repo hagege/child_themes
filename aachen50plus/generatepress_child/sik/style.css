@@ -1,0 +1,219 @@
+/*
+ Theme Name:   GeneratePress Child
+ Theme URI:    https://haurand.com/
+ Description:  Default GeneratePress child theme
+ Author:       Hans-Gerd Gerhards 
+ Author URI:   https://haurand.com/ 
+ Template:     generatepress
+ Version:      1.1 (2020-12-31)
+*/
+
+
+/* Fußzeile bündig mit haurand.com */ 
+.footer-bar-align-right .copyright-bar {
+    float: left;
+    margin-top: 9px;
+}
+
+/* h2 etwas kleiner */
+h2 {
+    font-size: 26px;
+}
+
+
+/* Farben für "Weiterlesen-Button" */
+a.read-more.button {
+    background-color: #919191;
+    color: white;
+}
+
+a.read-more.button:hover {
+    background-color: #Df5022; 
+}
+
+
+/* Farben für Suchen-Button TEC */
+button.tribe-common-c-btn.tribe-events-c-search__button {
+    background-color: #919191!important;
+}
+
+button.tribe-common-c-btn.tribe-events-c-search__button:hover {
+    background-color: #Df5022!important;
+}
+
+
+/* Hintergrundfarbe bei einzelnen Events Metadaten unten */
+.tribe-events-single-section.tribe-events-event-meta.primary.tribe-clearfix,
+.tribe-events-single-section.tribe-events-event-meta.secondary.tribe-clearfix {
+    background-color: white;
+}
+
+/*----------------------------------------------------------------*/
+/* Start: Coronaleiste
+/* Datum: 27.12.2020
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+
+
+.ackids_container {
+  vertical-align: middle !important;
+  margin-bottom: 40px;
+}
+
+/* Container für Mitgliedsbutton und Infotext - hgg, 6.10.2019 */
+@media (min-width: 431px) {
+  .ackids_container {
+    display: inline-flex;
+/*     border: 1px solid #eee; 
+    padding: 10px; */
+  }
+}
+
+@media (max-width: 430px) {
+.ackids_container {
+  display: block;
+/*   border: 1px solid #eee; 
+  padding: 10px;  */
+  }
+}
+.ackids_container > div {
+  text-align: left;
+}
+
+/* Meldung abgesagte Veranstaltungen, hgg, 20.3.2020 */
+div.abgesagt {
+    color: #ffffff;
+    font-size: 1.0em;
+    background-color: #df5022;
+    padding: 10px;
+}
+
+/*----------------------------------------------------------------*/
+/* Ende: Coronaleiste
+/* Datum: 27.12.2020
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------*/
+/* Start: Button in Beiträgen
+/* Datum: 23.02.2018
+/* Autor: hgg
+/* z. Bsp.: weiße Farbe, bei Hover: grauer Button
+/*----------------------------------------------------------------*/
+
+/* Absatz für Button */
+.button-absatz {
+    margin:30px 0px 30px 0px;
+}
+
+a.tribe-events-button-beitrag, a.tribe-events-button-beitrag:focus, a.tribe-events-button-beitrag:visited {
+    padding: 3px;
+    color: #ffffff;
+    font-size: 14px;
+    background-color: #df5022;
+    border-radius: 4px;
+    text-decoration: none!important;
+}
+
+
+/* Hintergrund: grau */
+a.tribe-events-button-beitrag:hover {
+  color: #000;
+  background-color: #e3ddcd;
+}
+
+a.corona-button-beitrag {
+    padding: 3px;
+    color: #df5022;
+    font-size: 14px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    text-decoration: none!important;
+}
+
+a.corona-button-beitrag:hover {
+  color: #000;
+  background-color: #e3ddcd;
+}
+
+
+
+/*----------------------------------------------------------------*/
+/* Ende: Button in Beiträgen
+/* Datum: 23.02.2018
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+
+
+/* ------------------------------- */
+/* Start Anpassungen Mini-Kalender */
+/* ------------------------------- */ 
+
+/* Titelzeile im Minikalender */
+.tribe-mini-calendar-nav td {
+    background: #Df5022!important;
+    border-color: #Df5022!important;
+}
+
+.tribe-mini-calendar-nav span{
+	background: #Df5022;
+}
+
+/* Tag mit Veranstaltungen */
+.tribe-mini-calendar .tribe-events-has-events {
+    background: #Df5022!important;
+    opacity:1.0;
+}
+
+/* Veranstaltungen in diesem Monat */
+td.tribe-events-thismonth.tribe-events-future.tribe-events-has-events.mobile-trigger {
+    opacity:0.7;
+}
+
+/* Veranstaltungen in folgenden Monaten */
+td.tribe-events-othermonth.tribe-events-future.tribe-events-has-events.mobile-trigger {
+    opacity:0.5;
+}
+
+/* Veranstaltungen in vergangenen Monaten */
+td.tribe-events-othermonth.tribe-events-past.tribe-events-has-events.mobile-trigger {
+    opacity: 0.2;
+}
+
+/* Schriftfarbe im Kalender */
+.tribe-mini-calendar .tribe-events-has-events div[id*=daynum-] a {
+    color: #000!important;
+}
+
+/* Tag ohne Veranstaltungen */
+.tribe-mini-calendar-no-event {
+    background: #fff!important;
+    color: #000!important;
+}
+
+/* ------------------------------- */
+/* Ende Anpassungen Mini-Kalender  */
+/* ------------------------------- */ 
+
+
+/* Veranstaltungen exportieren */
+a.tribe-events-c-ical__link, .tribe-events .tribe-events-c-ical__link {
+    background-color: #919191;
+    border: 1px solid #919191;
+    color: #fff;
+}
+
+/* Veranstaltungen exportieren (hover)*/
+a.tribe-events-c-ical__link:hover {
+    background-color: #919191!important;
+    border: 1px solid #919191;
+    opacity:0.5;
+    color: #fff;
+    text-decoration:none!important;
+}
+
+
+/* ------------------------------- */
+/* Ende Anpassungen Mini-Kalender  */
+/* ------------------------------- */

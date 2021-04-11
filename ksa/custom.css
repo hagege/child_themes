@@ -35,6 +35,13 @@ button.eigener_button {
 	  color: white;
   }
   
+  @media (max-width: 1217px){
+  p.text_unter_ueberschrift{
+	  margin-left: 15%;
+	  margin-right: 15%;
+  }
+  }
+  
   /* Für Container bei zwei Spalten - einspaltig: daher keine feste Höhe bis 599px (Breakpoint) */
   
   /*
@@ -62,15 +69,16 @@ button.eigener_button {
 			  height: 32rem;
 	  }
   }
-  */
+  
   
   @media (min-width: 1150px){
 	  div.feste_hoehe {
 			  height: 24rem;
 	  }
   }
-  
-  @media (min-width: 1200px){
+  */
+  /* nur wenn es dreispaltig ist */
+  @media (min-width: 1218px){
 	  div.feste_hoehe {
 			  height: 22rem;
 	  }
@@ -78,9 +86,16 @@ button.eigener_button {
   
   @media (min-width: 1378px){
 	  div.feste_hoehe {
+			  height: 20rem;
+	  }
+  }
+  
+  @media (min-width: 1400px){
+	  div.feste_hoehe {
 			  height: 18rem;
 	  }
   }
+  
   
   /* Text mir Rand */
   p.text_schmaler {
@@ -90,7 +105,7 @@ button.eigener_button {
   
   
   /* nur noch eine Spalte */
-  @media (max-width: 1149px) {
+  @media (max-width: 1217px) {
 	  .wp-block-columns {
 		  display: block;
 			  margin-left: 0em!important;
@@ -102,7 +117,7 @@ button.eigener_button {
   }
   
   /* Breite der Spalten verringert */
-  @media (min-width: 1150px) {
+  @media (min-width: 1218px) {
 	  .wp-block-columns.has-background, 
 	  p.mehr_rand, h5.has-text-align-center{
 			  margin-left: 15vw;
