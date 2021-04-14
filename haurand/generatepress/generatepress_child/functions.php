@@ -35,30 +35,6 @@ add_filter( 'generate_blog_columns', function( $columns ) {
 
 
 /*----------------------------------------------------------------*/
-/* Start: Read-More Button, wenn der Beitrag einen Custom Excerpt hat
-/* Datum: 31.12.2020
-/* nicht mehr notwendig, wenn keine custom excerpts angelegt werden (3.1.2021)
-/* Autor: hgg
-/*----------------------------------------------------------------
-
-add_filter( 'wp_trim_excerpt', 'tu_excerpt_metabox_more' );
-function tu_excerpt_metabox_more( $excerpt ) {
-    $output = $excerpt;
-
-    if ( has_excerpt() ) {
-        $output = sprintf( '%1$s <p class="read-more-container"><a class="read-more button" href="%2$s">%3$s ...</a></p>',
-            $excerpt,
-            get_permalink(),
-            __( 'Read more', 'generatepress' )
-        );
-    }
-	
-    return $output;
-}
-
-*/
-
-/*----------------------------------------------------------------*/
 /* Start: Block Patterns von haurand.com 
 /* Datum: 14.01.2021
 /* Autor: hgg
@@ -82,17 +58,7 @@ function haurand_register_block_categories() {
  }
  add_action( 'init', 'haurand_register_block_categories' );
 
-/* Beispiel - nicht benötigt */
-/* register_block_pattern(
-    'my-plugin/my-awesome-pattern',
-    array(
-        'title'       => __( 'Two buttons', 'my-plugin' ),
-        'description' => _x( 'Two horizontal buttons, the left button is filled in, and the right button is outlined.', 'Block pattern description', 'my-plugin' ),
-        'categories'  => array('Haurand'),
-        'content'     => "<!-- wp:buttons {\"align\":\"center\"} -->\n<div class=\"wp-block-buttons aligncenter\"><!-- wp:button {\"backgroundColor\":\"very-dark-gray\",\"borderRadius\":0} -->\n<div class=\"wp-block-button\"><a class=\"wp-block-button__link has-background has-very-dark-gray-background-color no-border-radius\">" . esc_html__( 'Button One', 'my-plugin' ) . "</a></div>\n<!-- /wp:button -->\n\n<!-- wp:button {\"textColor\":\"very-dark-gray\",\"borderRadius\":0,\"className\":\"is-style-outline\"} -->\n<div class=\"wp-block-button is-style-outline\"><a class=\"wp-block-button__link has-text-color has-very-dark-gray-color no-border-radius\">" . esc_html__( 'Button Two', 'my-plugin' ) . "</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons -->",
-    )
-);
-*/
+
 register_block_pattern(
    'absatz_zentriert',
      array(
@@ -117,7 +83,34 @@ register_block_pattern(
        "<!-- wp:list {\"style\":{\"color\":{\"background\":\"#b70000\"}},\"textColor\":\"white\"} -->
 <ul class=\"has-white-color has-text-color has-background\" style=\"background-color:#b70000\"><li>Fotos</li><li>Texten</li><li>Formularen</li><li>Social Media Buttons</li><li>Downloadbereich</li><li>Newsverwaltung</li><li>Mehrsprachigkeit</li><li>DSGVO- Sicherheit</li><li>und allem, was Ihnen wichtig ist</li></ul>
 <!-- /wp:list -->",
-)
+  )
+);
+
+
+register_block_pattern(
+  'container_hellgrau',
+    array(
+    'title' => __( 'Hellgrauer Container', 'container_hellgrau' ),
+    'description' => _x( 'Hellgrauer Container', 'Ein Container für Bilder mit hellgrauem Hintergrund', 'container_hellgrau' ),
+    'categories'  => array('Haurand'),
+    'content'     =>
+      "<!-- wp:columns {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#d4dadb\"}}} -->
+      <div class=\"wp-block-columns alignfull has-background\" style=\"background-color:#d4dadb\"><!-- wp:column -->
+      <div class=\"wp-block-column\"><!-- wp:columns -->
+      <div class=\"wp-block-columns\"><!-- wp:column {\"verticalAlignment\":\"center\"} -->
+      <div class=\"wp-block-column is-vertically-aligned-center\"><!-- wp:image {\"align\":\"right\",\"id\":3766,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->
+      <div class=\"wp-block-image\"><figure class=\"alignright size-large\"><a href=\"https://www.hochxeit.de/wp-content/uploads/2021/04/Logo.png\"><img src=\"https://www.hochxeit.de/wp-content/uploads/2021/04/Logo.png\" alt=\"ein Bild\" class=\"wp-image-3766\"/></a></figure></div>
+      <!-- /wp:image --></div>
+      <!-- /wp:column -->
+      <!-- wp:column {\"verticalAlignment\":\"center\"} -->
+      <div class=\"wp-block-column is-vertically-aligned-center\"><!-- wp:image {\"align\":\"left\",\"id\":3711,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->
+      <div class=\"wp-block-image\"><figure class=\"alignleft size-large\"><a href=\"https://www.hochxeit.de/wp-content/uploads/2021/03/2021-03-30-09_23_59-Window.png\"><img src=\"https://www.hochxeit.de/wp-content/uploads/2021/03/2021-03-30-09_23_59-Window.png\" alt=\"Auswahl im Block-Editor\" class=\"wp-image-3711\"/></a><figcaption>Grafik: haurand.com</figcaption></figure></div>
+      <!-- /wp:image --></div>
+      <!-- /wp:column --></div>
+      <!-- /wp:columns --></div>
+      <!-- /wp:column --></div>
+      <!-- /wp:columns -->",
+  )
 );
 
 /*----------------------------------------------------------------*/
@@ -126,61 +119,6 @@ register_block_pattern(
 /* Autor: hgg
 /*----------------------------------------------------------------*/
 
-
-
-/*----------------------------------------------------------------*/
-/* Start: Keine Überschrift im Excerpt
-/* Datum: 01.01.2021
-/* Autor: hgg
-/*----------------------------------------------------------------*/
-/* Klappt zwar so weit, aber bei einem customer excerpt wird zwei Mal der Button gezeigt */
-function wp_strip_header_tags( $excerpt='' ) {
-
-        $raw_excerpt = $excerpt;
-        if ( '' == $excerpt ) {
-                $excerpt = get_the_content('');
-                $excerpt = strip_shortcodes( $excerpt );
-                $excerpt = apply_filters('the_content', $excerpt);
-                $excerpt = str_replace(']]>', ']]>', $excerpt);
-        }
-        $regex = '#(<h([1-6])[^>]*>)\s?(.*)?\s?(<\/h\2>)#';
-        $excerpt = preg_replace($regex,'', $excerpt);
-        $excerpt_length = apply_filters('excerpt_length', 55);
-        $excerpt_more = apply_filters('excerpt_more', ' ' . '[...]');
-        $excerpt = wp_trim_words( $excerpt, $excerpt_length, $excerpt_more );
-
-    return apply_filters('wp_trim_excerpt', preg_replace($regex,'', $excerpt), $raw_excerpt);
-}
-add_filter( 'get_the_excerpt', 'wp_strip_header_tags', 9);
-
-
-/* adds the RTL stylesheet if you're using an RTL language. If not, you can remove the function.
-function generatepress_child_enqueue_scripts() {
-	if ( is_rtl() ) {
-		wp_enqueue_style( 'generatepress-rtl', trailingslashit( get_template_directory_uri() ) . 'rtl.css' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'generatepress_child_enqueue_scripts', 100 );
-*/
-
-
-
-/*----------------------------------------------------------------*/
-/* Start: Ausschließen recaptcha bei lazyload WP Rocket, siehe Antwort von Lucy
-/* Datum: 29.12.2017
-/* Autor: hgg
-/*----------------------------------------------------------------*/
-function rocket_lazyload_exclude_src( $src ) {
-$src[] = '?cp_contactformtoemail_captcha=captcha';
-
-return $src;
-}
-add_filter( 'rocket_lazyload_excluded_src', 'rocket_lazyload_exclude_src' );
-/*----------------------------------------------------------------*/
-/* Ende: Ausschließen recaptcha bei lazyload WP Rocket
-/* Datum: 29.12.2017
-/* Autor: hgg
-/*----------------------------------------------------------------*/
 
 /*----------------------------------------------------------------*/
 /* Start: Shortcode zur Ausgabe eines aktuellen Beitrags
@@ -223,7 +161,7 @@ function shortcode_posts_function($atts){
         // alte Einstellung: 
         // $content .= '<div class="flex-container"><a class="beitrags_bild_link" href="'.get_permalink($post->ID).'"><img class="beitrags_bild" src="'.get_the_post_thumbnail_url($post->ID, 'full').'"></a>';
         // $content .= '<div class="flex-container"><a class="beitrags_bild_link" href="'.get_permalink($post->ID).'"><img class="beitrags_bild" src="'.get_the_post_thumbnail_url($post->ID, 'full').' alt="'.$alt_text.'"></a>';
-        $content .= '<div class="flex-container"><a class="beitrags_bild_link" href="'.get_permalink($post->ID).'"><img class="beitrags_bild" src="'.get_the_post_thumbnail_url($post->ID, 'full'). ' width=auto height=auto alt="'.$alt_text.'"></a>';
+        $content .= '<div class="flex-container"><a class="beitrags_bild_link" href="'.get_permalink($post->ID).'"><img class="beitrags_bild" src="'.get_the_post_thumbnail_url($post->ID, 'full'). '" width=auto height=auto alt="'.$alt_text.'"></a>';
         // hier entweder den Auszug anzeigen (vergisst man leicht, unter Dokument > Auszug)
         if (esc_attr($werte['auszug']) == 'ja'){
           $content .= '<p class="beitrags_text">' . $post->post_excerpt;
@@ -275,33 +213,6 @@ return $content_text;
 /*----------------------------------------------------------------*/
 
 
-
-/*----------------------------------------------------------------*/
-/* Start: Hinweistext vor dem Content
-/* Datum: 22.03.2020
-/* Autor: hgg
-/*----------------------------------------------------------------*/
-
-add_filter( 'the_content', 'filter_the_content_in_the_main_loop' );
-
-function filter_the_content_in_the_main_loop( $content ) {
-
-    // Prüfen ob wir in dem Loop eines Beitrags oder einer Seite sind
-    if (( is_single() OR is_page()) && in_the_loop() && is_main_query() ) {   
-        // Den HTML Teil für die Schrift könnt ihr beliebig ändern oder erweitern
-        // $ackids_button = '<div class="ackids_container"><div class="mitglied"><a class="button-mitglied" href="https://steadyhq.com/de/aachenerkinder" target="_blank" rel="noopener noreferrer">Werde Mitglied</a></div><div class="mitglied_beschreibung">Werde als Besucher oder Veranstalter Mitglied bei aachenerkinder.de und unterst�tze unsere Arbeit.</div></div>';
-        // spezielle Anzeige wegen abgesagter Events, hgg, 19.3.2020
-        // nicht auf der Hauptseite zeigen, hgg, 21.9.2020:
-        if ( !is_front_page() ) {
-          $info_text = utf8_encode('- Bitte beachten: Im März 2021 finden aufgrund der aktuellen Bestimmungen fast keine Veranstaltungen statt.');
-          $abgesagte_events ='<div class="ackids_container"><div class="abgesagt"><a class="corona-button-beitrag" href="https://aachenerkinder.de/corona-virus-staedteregion-aachen/">Infos zu Corona</a>' . $info_text . ' </div></div>';
-              // return $ackids_button . $content . $ackids_button;
-          return $abgesagte_events . $content;
-        }
-    }
-
-    return $content;
-}
 
 
 ?>
