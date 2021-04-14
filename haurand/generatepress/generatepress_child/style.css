@@ -1,0 +1,287 @@
+/*
+ Theme Name:   GeneratePress Child
+ Theme URI:    https://haurand.com/
+ Description:  Default GeneratePress child theme
+ Author:       Hans-Gerd Gerhards 
+ Author URI:   https://haurand.com/ 
+ Template:     generatepress
+ Version:      1.0 (2021-04-14)
+*/
+
+/*
+
+1. Allgemein
+1.1. Menue
+1.2. Buttons
+1.3. Diverses
+4. Nicht mehr benötigt?
+
+WATCH: Muss weiter beobachtet werden.
+DELETED: Gelöscht
+
+Farben haurand.de:
+hellgrau: #D4DaDB - RGB: (212, 218, 219)
+weiß: #FFFFFF - RGB: (255, 255, 255)
+dunkelgrau: #3C4346 - RGB: (60, 67, 70)
+rot: #B70000 - RGB: (183, 0, 0)
+mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
+FARBWERTE
+Web und Bildschirm Druck
+
+*/
+
+
+
+
+/* ---------------------------------------------------- */
+/* 0. Neu dazu                                          */
+/* ---------------------------------------------------- */
+
+  /* für wichtige Infos */
+p.links_wichtig, p.links_orange{
+    border-left: 5px solid #B70000;
+    padding: 10px;
+   }
+   
+   
+h1, h2, h3, h4, h5 {
+  text-align: center;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+
+/* img.attachment-medium.size-medium.wp-post-image  
+img.beitragsbild_hauptseite {
+  width: 100vw;
+  height: 50vh;
+}
+*/
+
+.wp-block-latest-posts__featured-image img {
+  height: 40vh;
+  width: 100vw;
+  object-fit: cover;
+}
+
+/* .wp-block-group__inner-container {
+    color: white;
+    background-color: #B70000;
+}  
+*/ 
+
+/* ------------------------------------------------- */
+
+
+/* ----------------------------------------------------------------------------- */
+/* 1. Allgemeines */
+/* ----------------------------------------------------------------------------- */
+
+      
+   /* für Zitate */
+   blockquote.wp-block-quote.links_schwarz {
+     border-left: 5px solid #000000;
+     padding: 10px;
+     padding-left: 1.5em;
+   }
+ 
+/* Links in Seiten und Beiträgen */
+body.single .entry-content a,
+body.single .entry-content a:visited,
+body.page .entry-content a,
+body.page .entry-content a:visited
+{
+	text-decoration: underline;
+}
+
+
+body.single .entry-content a:hover,
+body.page .entry-content a:hover {
+	background-color: #B3B3B3;
+	color: white;
+  text-decoration: none;
+}
+
+
+
+/* Beitragsübersicht nicht mehr zweispaltig, sondern einspaltig: */
+@media (min-width: 768px) and (max-width: 1024px) {
+	.generate-columns.tablet-grid-50, .grid-sizer.tablet-grid-50 {
+			width: 100%;
+	}
+}   
+
+/* ---------------------------------------------------- */
+/* Fußbereich                                         */
+/* ---------------------------------------------------- */
+
+
+/* Fußzeile bündig mit haurand.com */ 
+.footer-bar-align-right .copyright-bar {
+    float: left;
+    margin-top: 9px;
+}
+
+/* Fußbereich: zusätzlicher Rand */
+.footer-widget-2, .footer-widget-1 {
+  margin: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .site-footer .footer-widgets .footer-widgets-container .inside-footer-widgets 	/* Fußbereich */
+    {
+      padding: 20px;
+    }
+    /* Veranstaltungen */
+  }
+  
+  /* Container mit Footer-Widgets */	
+  .site-footer .footer-widgets-container .inside-footer-widgets {
+      background-color: white;
+      opacity: 0.8;
+  }
+  
+  
+  /* Bild im Fußbereich */
+  .footer-widgets {
+      background-attachment: fixed;
+  }
+  
+  /* Container mit Footer-Widgets */
+  @media (max-width: 620px) {
+  .footer-widgets-container {
+      background-color: white;
+  }
+  }
+  
+
+
+  
+  
+
+
+/* ---------------------------------------------------- */
+/* 1.1. Menue                                           */
+/* ---------------------------------------------------- */
+
+  /* ----------------------------- */
+  /* Navigation                    */
+  /* ----------------------------- */
+  
+  /* Einstellungen für das Desktop-Menü */
+  @media (min-width: 769px) {
+    /* nav links effect */
+    .main-navigation .menu > .menu-item > a::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        left: 50%;
+        bottom: 0px;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        color: #DF5022;
+        display: block;
+        width: 0;
+        height: 5px;   
+        background-color: currentColor;
+        transition: 0.3s width ease;
+    }
+    .main-navigation .menu > .menu-item.current-menu-item > a::after,
+    .main-navigation .menu > .menu-item > a:hover::after {
+        width: 100%;
+        color: #000000;
+    }
+  
+  .main-navigation .menu > .menu-item.current-menu-item > a::after,
+    .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
+    .main-navigation .menu > .menu-item > a:active::after {
+        width: 100%;
+    color: #DF5022;
+    }
+  /* Submenü */
+  ul.sub-menu {
+    opacity: 0.9!important;
+  }
+}
+
+
+/* ---------------------------------------------------- */
+/* 1.2. Buttons                                         */
+/* ---------------------------------------------------- */
+
+/* Farben für "Weiterlesen-Button" */
+a.read-more.button {
+  background-color: #919191;
+  color: white;
+}
+
+a.read-more.button:hover {
+  background-color: #Df5022; 
+}
+
+
+/* Farben für Suchen-Button TEC */
+button.tribe-common-c-btn.tribe-events-c-search__button {
+  background-color: #919191!important;
+}
+
+button.tribe-common-c-btn.tribe-events-c-search__button:hover {
+  background-color: #Df5022!important;
+}
+
+/*----------------------------------------------------------------*/
+/* Start: Button in Beiträgen
+/* Datum: 23.02.2018
+/* Autor: hgg
+/* z. Bsp.: weiße Farbe, bei Hover: grauer Button
+/*----------------------------------------------------------------*/
+
+/* Absatz für Button */
+.button-absatz {
+  margin:30px 0px 30px 0px;
+  display:inline-flex;
+}
+
+/* Absatz für Button im shortcode fuss*/
+.button-absatz-fuss {
+  margin:30px 10px 30px 0px !important;
+  display:inline-flex;
+}
+
+a.corona-button-beitrag {
+    padding: 3px;
+    font-size: 0.9em;
+    background-color: white;
+    text-decoration: none!important;
+    /* margin: 8px; */
+}
+
+
+
+/*----------------------------------------------------------------*/
+/* Ende: Button in Beiträgen
+/* Datum: 23.02.2018
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+
+
+
+/* ---------------------------------------------------- */
+/* 1.3. Diverses                                        */
+/* ---------------------------------------------------- */
+
+
+
+
+
+
+/*----------------------------------------------------------------*/
+/* 4. Nicht mehr benötigt ??
+/*----------------------------------------------------------------*/

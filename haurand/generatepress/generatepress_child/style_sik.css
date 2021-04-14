@@ -1,0 +1,361 @@
+/*
+ Theme Name:   GeneratePress Child
+ Theme URI:    https://haurand.com/
+ Description:  Default GeneratePress child theme
+ Author:       Hans-Gerd Gerhards 
+ Author URI:   https://haurand.com/ 
+ Template:     generatepress
+ Version:      1.2 (2021-01-09)
+*/
+
+
+/* ----------------------------- */
+/* Allgemeine Anpassungen        */
+/* ----------------------------- */
+
+/* Fußzeile bündig mit haurand.com */ 
+.footer-bar-align-right .copyright-bar {
+    float: left;
+    margin-top: 9px;
+}
+
+/* h2 etwas kleiner */
+h2 {
+    font-size: 26px;
+}
+
+
+/* Farben für "Weiterlesen-Button" */
+a.read-more.button {
+    background-color: #919191;
+    color: white;
+}
+
+a.read-more.button:hover {
+    background-color: #Df5022; 
+}
+
+
+/* Farben für Suchen-Button TEC */
+button.tribe-common-c-btn.tribe-events-c-search__button {
+    background-color: #919191!important;
+}
+
+button.tribe-common-c-btn.tribe-events-c-search__button:hover {
+    background-color: #Df5022!important;
+}
+
+
+/* Hintergrundfarbe bei einzelnen Events Metadaten unten */
+.tribe-events-single-section.tribe-events-event-meta.primary.tribe-clearfix,
+.tribe-events-single-section.tribe-events-event-meta.secondary.tribe-clearfix {
+    background-color: white;
+}
+
+/* Anzeige von Online-Events */
+span.tribe-ext-events-control-online-event__text {
+    color: #f4eede;
+    background-color: #df5022;
+}
+
+/* in einem farbigen Kasten mit einer Schriftfarbe weiß, muss der Link in roter Schrift angezeigt werden */
+a.corona-button-beitrag {
+    color: #df5022!important;
+}
+
+/* Höhe des Elements immer 90px, damit die Bilder immer eine Linie bilden */
+h2.entry-title {
+    height: 90px;
+}
+
+/* Link als Pfeil anzeigen, wenn Oberpunkt nicht angewählt werden soll */
+.menu-item a:not([href]) {
+    cursor: default;
+}
+
+/* Logo mit opacity-Effekt */
+.site-header .header-image {
+	background-color: rgb(244,238,222);
+    opacity: 0.6;
+}
+
+
+/* ----------------------------- */
+/* Navigation                    */
+/* ----------------------------- */
+
+/* Einstellungen für das Desktop-Menü */
+@media (min-width: 769px) {
+    /* nav links effect */
+    .main-navigation .menu > .menu-item > a::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        left: 50%;
+        bottom: 0px;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        color: #df5022;
+        display: block;
+        width: 0;
+        height: 5px;   
+        background-color: currentColor;
+        transition: 0.3s width ease;
+    }
+    .main-navigation .menu > .menu-item.current-menu-item > a::after,
+    .main-navigation .menu > .menu-item > a:hover::after {
+        width: 100%;
+				color: #000000;
+    }
+	
+	.main-navigation .menu > .menu-item.current-menu-item > a::after,
+    .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
+    .main-navigation .menu > .menu-item > a:active::after {
+        width: 100%;
+		color: #df5022;
+    }
+	/* Submenü */
+	ul.sub-menu {
+    opacity: 0.9!important;
+	}
+
+    /* Hover bei Untermenüpunkten */
+    .main-navigation .main-nav ul ul li[class*="current-menu-"] > a:hover, .main-navigation .main-nav ul ul li[class*="current-menu-"].sfHover > a {
+        color: #F4EEDE;
+        background-color: #DF5022;
+    }
+    /* Active bei Untermenüpunkten */
+    .main-navigation .main-nav ul ul li[class*="current-menu-"] > a:active {
+        color: #DF5022;
+        background-color: #F4EEDE;
+    }
+    .main-navigation .main-nav ul ul li[class*="current-menu-"] > a:focus {
+        color: #DF5022;
+        background-color: #F4EEDE;
+    }
+}
+
+/* Breakpoint auf eine Spalte schon bei 1100px */
+@media (max-width: 1100px) {
+    .generate-columns-container .mobile-grid-100 {
+        width: calc(100% - 5px);
+    }
+    .generate-columns-container {
+        justify-content: space-between;
+    }
+}
+
+/*
+img.header-image.is-logo-image {
+    max-width: 130px;
+}
+
+	/* auf schmaleren Displays anderes Bild zeigen */
+@media (max-width: 768px) {
+	.page-hero {
+		    background-image: url(https://aachen50plus.de/wp-content/uploads/2020/12/shutterstock_218267185_Andrey-Arkusha.jpg);
+	}
+	img.header-image.is-logo-image {
+    max-width: 100px;
+	}
+}
+
+/* Breakpoint Sidebar unter content nicht schon bei 1100px, sondern wegen der Werbung bei 770px */
+@media (max-width: 770px) {
+	 .site-content .content-area {
+        width: 100%;
+   }
+	
+	/* Problemzone */
+/*	.site-content {
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		flex-flow: row wrap;
+ 	}
+    
+	#left-sidebar {
+		order: 2;
+		width: 100%;
+		left: 0;
+
+	}
+    
+	.content-area {   
+		-webkit-order: 2;  
+		order: 1;
+		left: 0;
+
+	}
+*/
+}
+
+
+/*----------------------------------------------------------------*/
+/* Start: Coronaleiste
+/* Datum: 27.12.2020
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+
+
+.ackids_container {
+  vertical-align: middle !important;
+  margin-bottom: 40px;
+}
+
+/* Container für Mitgliedsbutton und Infotext - hgg, 6.10.2019 */
+@media (min-width: 431px) {
+  .ackids_container {
+    display: inline-flex;
+/*     border: 1px solid #eee; 
+    padding: 10px; */
+  }
+}
+
+@media (max-width: 430px) {
+.ackids_container {
+  display: block;
+/*   border: 1px solid #eee; 
+  padding: 10px;  */
+  }
+}
+.ackids_container > div {
+  text-align: left;
+}
+
+/* Meldung abgesagte Veranstaltungen, hgg, 20.3.2020 */
+div.abgesagt {
+    color: #ffffff;
+    font-size: 1.0em;
+    background-color: #df5022;
+    padding: 10px;
+}
+
+/*----------------------------------------------------------------*/
+/* Ende: Coronaleiste
+/* Datum: 27.12.2020
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------*/
+/* Start: Button in Beiträgen
+/* Datum: 23.02.2018
+/* Autor: hgg
+/* z. Bsp.: weiße Farbe, bei Hover: grauer Button
+/*----------------------------------------------------------------*/
+
+/* Absatz für Button */
+.button-absatz {
+    margin:30px 0px 30px 0px;
+}
+
+a.tribe-events-button-beitrag, a.tribe-events-button-beitrag:focus, a.tribe-events-button-beitrag:visited {
+    padding: 3px;
+    color: #ffffff;
+    font-size: 14px;
+    background-color: #df5022;
+    border-radius: 4px;
+    text-decoration: none!important;
+}
+
+
+/* Hintergrund: grau */
+a.tribe-events-button-beitrag:hover {
+  color: #000;
+  background-color: #e3ddcd;
+}
+
+a.corona-button-beitrag {
+    padding: 3px;
+    color: #df5022;
+    font-size: 14px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    text-decoration: none!important;
+}
+
+a.corona-button-beitrag:hover {
+  color: #000;
+  background-color: #e3ddcd;
+}
+
+
+
+/*----------------------------------------------------------------*/
+/* Ende: Button in Beiträgen
+/* Datum: 23.02.2018
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+
+
+/* ------------------------------- */
+/* Start Anpassungen Mini-Kalender */
+/* ------------------------------- */ 
+
+/* Titelzeile im Minikalender */
+.tribe-mini-calendar-nav td {
+    background: #Df5022!important;
+    border-color: #Df5022!important;
+}
+
+.tribe-mini-calendar-nav span{
+	background: #Df5022;
+}
+
+/* Tag mit Veranstaltungen */
+.tribe-mini-calendar .tribe-events-has-events {
+    background: #Df5022!important;
+    opacity:1.0;
+}
+
+/* Veranstaltungen in diesem Monat */
+td.tribe-events-thismonth.tribe-events-future.tribe-events-has-events.mobile-trigger {
+    opacity:0.7;
+}
+
+/* Veranstaltungen in folgenden Monaten */
+td.tribe-events-othermonth.tribe-events-future.tribe-events-has-events.mobile-trigger {
+    opacity:0.5;
+}
+
+/* Veranstaltungen in vergangenen Monaten */
+td.tribe-events-othermonth.tribe-events-past.tribe-events-has-events.mobile-trigger {
+    opacity: 0.2;
+}
+
+/* Schriftfarbe im Kalender */
+.tribe-mini-calendar .tribe-events-has-events div[id*=daynum-] a {
+    color: #000!important;
+}
+
+/* Tag ohne Veranstaltungen */
+.tribe-mini-calendar-no-event {
+    background: #fff!important;
+    color: #000!important;
+}
+
+/* ------------------------------- */
+/* Ende Anpassungen Mini-Kalender  */
+/* ------------------------------- */ 
+
+
+/* Veranstaltungen exportieren */
+a.tribe-events-c-ical__link, .tribe-events .tribe-events-c-ical__link {
+    background-color: #919191;
+    border: 1px solid #919191;
+    color: #fff;
+}
+
+/* Veranstaltungen exportieren (hover)*/
+a.tribe-events-c-ical__link:hover {
+    background-color: #919191!important;
+    border: 1px solid #919191;
+    opacity:0.5;
+    color: #fff;
+    text-decoration:none!important;
+}
+
+
+/* ------------------------------- */
+/* Ende Anpassungen Mini-Kalender  */
+/* ------------------------------- */
