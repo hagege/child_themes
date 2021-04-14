@@ -113,6 +113,40 @@ register_block_pattern(
   )
 );
 
+
+
+register_block_pattern(
+  'container_rot_drei_spalten',
+    array(
+    'title' => __( 'Roter dreispaltiger Container', 'container_rot_drei_spalten' ),
+    'description' => _x( 'Roter dreispaltiger Container', 'Ein Container mit Bild / Listbox / Eckengrafik', 'container_rot_drei_spalten' ),
+    'categories'  => array('Haurand'),
+    'content'     =>
+      " <!-- wp:columns {\"style\":{\"color\":{\"background\":\"#b70000\"}}} -->
+        <div class=\"wp-block-columns has-background\" style=\"background-color:#b70000\"><!-- wp:column {\"verticalAlignment\":\"center\",\"width\":\"15%\"} -->
+        <div class=\"wp-block-column is-vertically-aligned-center\" style=\"flex-basis:15%\"><!-- wp:image {\"align\":\"center\",\"id\":3822,\"width\":120,\"height\":120,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->
+        <div class=\"wp-block-image\"><figure class=\"aligncenter size-large is-resized\"><img src=\"https://www.hochxeit.de/wp-content/uploads/2021/01/WordPress_Chart_Zeichenfläche-1.png\" alt=\"\" class=\"wp-image-3822\" width=\"120\" height=\"120\"/><figcaption>Stand: 2021</figcaption></figure></div>
+        <!-- /wp:image --></div>
+        <!-- /wp:column -->
+
+        <!-- wp:column {\"width\":\"80%\"} -->
+        <div class=\"wp-block-column\" style=\"flex-basis:80%\"><!-- wp:heading {\"textAlign\":\"center\",\"level\":3,\"textColor\":\"white\"} -->
+        <h3 class=\"has-text-align-center has-white-color has-text-color\">Circa 40% aller Internetseiten verwenden WordPress – Sie möchten auch:</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:list {\"textColor\":\"white\"} -->
+        <ul class=\"has-white-color has-text-color\"><li>einen Internetauftritt, z. B. für Ihre Firma, Ihren Verein oder Ihr Hobby?</li><li>selber Inhalte verändern oder erstellen?</li><li>Ihre Produkte oder Dienstleistungen zeitgemäß präsentieren?</li><li>Responsivität (das heißt, dass Ihre Seite auch auf Smartphones gut dargestellt wird)?</li><li>eine schnelle Webseite (wichtig vor allem bei mobilen Endgeräten)?</li><li>für Ihre Internetseite ein übersichtliches und klares Design?</li><li>eine einfach zu bedienende Webseite</li><li>eine logische Menüstruktur?</li><li>für die Besucher Ihrer Webseite eine klare Orientierung?</li></ul>
+        <!-- /wp:list --></div>
+        <!-- /wp:column -->
+
+        <!-- wp:column {\"verticalAlignment\":\"bottom\",\"width\":\"5%\"} -->
+        <div class=\"wp-block-column is-vertically-aligned-bottom\" style=\"flex-basis:5%\"><!-- wp:image {\"align\":\"right\",\"id\":3823,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->
+        <div class=\"wp-block-image\"><figure class=\"alignright size-large\"><img src=\"https://www.hochxeit.de/wp-content/uploads/2021/04/Eckendeko.png\" alt=\"\" class=\"wp-image-3823\"/></figure></div>
+        <!-- /wp:image --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns -->",
+        )
+      );
 /*----------------------------------------------------------------*/
 /* Ende: Block Patterns von haurand.com 
 /* Datum: 14.01.2021
