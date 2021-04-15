@@ -40,7 +40,9 @@ add_filter( 'generate_blog_columns', function( $columns ) {
 /* Autor: hgg
 /*----------------------------------------------------------------*/
 
-/* eigene Kategorie */
+/* ------------------------------ */
+/* eigene Kategorie               */
+/* ------------------------------ */
 if ( function_exists( 'register_block_pattern_category' ) ) {
   register_block_pattern_category(
     'haurand',
@@ -59,6 +61,10 @@ function haurand_register_block_categories() {
  add_action( 'init', 'haurand_register_block_categories' );
 
 
+
+/* ------------------------------ */
+/* Absatz zentriert               */
+/* ------------------------------ */
 register_block_pattern(
    'absatz_zentriert',
      array(
@@ -72,7 +78,9 @@ register_block_pattern(
    )
  );
 
-
+/* ------------------------------ */
+/* Container rot mit Listen       */
+/* ------------------------------ */
  register_block_pattern(
   'listbox_rot',
     array(
@@ -86,16 +94,18 @@ register_block_pattern(
   )
 );
 
-
+/* -------------------------------- */
+/* Container mittelgrau mit Bildern */
+/* -------------------------------- */
 register_block_pattern(
-  'container_hellgrau',
+  'container_mittelgrau',
     array(
-    'title' => __( 'Hellgrauer Container', 'container_hellgrau' ),
-    'description' => _x( 'Hellgrauer Container', 'Ein Container für Bilder mit hellgrauem Hintergrund', 'container_hellgrau' ),
+    'title' => __( 'Mittelgrauer Container', 'container_mittelgrau' ),
+    'description' => _x( 'Hellgrauer Container', 'Ein Container für Bilder mit mittelgrauem Hintergrund', 'container_mittelgrau' ),
     'categories'  => array('Haurand'),
     'content'     =>
-      "<!-- wp:columns {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#d4dadb\"}}} -->
-      <div class=\"wp-block-columns alignfull has-background\" style=\"background-color:#d4dadb\"><!-- wp:column -->
+      "<!-- wp:columns {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#a9b2b\"}}} -->
+      <div class=\"wp-block-columns alignfull has-background\" style=\"background-color:#a9b2b\"><!-- wp:column -->
       <div class=\"wp-block-column\"><!-- wp:columns -->
       <div class=\"wp-block-columns\"><!-- wp:column {\"verticalAlignment\":\"center\"} -->
       <div class=\"wp-block-column is-vertically-aligned-center\"><!-- wp:image {\"align\":\"right\",\"id\":3766,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->
@@ -114,7 +124,129 @@ register_block_pattern(
 );
 
 
+/* ----------------------------------------------------- */
+/* Container mittelgrau mit zwei Zeilen und fünf Spalten */
+/* ----------------------------------------------------- */
+register_block_pattern(
+  'container_mittelgrau',
+    array(
+    'title' => __( 'Mittelgrauer Container', 'container_mittelgrau' ),
+    'description' => _x( 'Hellgrauer Container', 'Ein Container für Bilder mit mittelgrauem Hintergrund', 'container_mittelgrau' ),
+    'categories'  => array('Haurand'),
+    'content'     =>
+      "<!-- wp:columns {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#a9b2b5\"}}} -->
+      <div class=\"wp-block-columns alignfull has-background\" style=\"background-color:#a9b2b5\"><!-- wp:column -->
+      <div class=\"wp-block-column\"><!-- wp:columns {\"align\":\"wide\"} -->
+      <div class=\"wp-block-columns alignwide\"><!-- wp:column {\"width\":\"20%\"} -->
+      <div class=\"wp-block-column\" style=\"flex-basis:20%\"></div>
+      <!-- /wp:column -->
 
+      <!-- wp:column {\"width\":22.22} -->
+      <div class=\"wp-block-column\" style=\"flex-basis:22.22%\"><!-- wp:image {\"align\":\"center\",\"id\":3767,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->
+      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><a href=\"https://wp.haurand.com/wp-content/uploads/2021/04/Icons_Kontakt_FFFFFF.png\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/Icons_Kontakt_FFFFFF.png\" alt=\"\" class=\"wp-image-3767\"/></a></figure></div>
+      <!-- /wp:image -->
+
+      <!-- wp:heading {\"textAlign\":\"center\",\"level\":4,\"textColor\":\"white\"} -->
+      <h4 class=\"has-text-align-center has-white-color has-text-color\"><strong>Kontakt</strong></h4>
+      <!-- /wp:heading -->
+
+      <!-- wp:paragraph {\"align\":\"center\",\"textColor\":\"white\"} -->
+      <p class=\"has-text-align-center has-white-color has-text-color\">Nehmen Sie jetzt<br>Kontakt zu uns auf</p>
+      <!-- /wp:paragraph --></div>
+      <!-- /wp:column -->
+
+      <!-- wp:column {\"width\":22.22} -->
+      <div class=\"wp-block-column\" style=\"flex-basis:22.22%\"><!-- wp:image {\"align\":\"center\",\"id\":3765,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->
+      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><a href=\"https://wp.haurand.com/wp-content/uploads/2021/04/Icons_IhreWebsite_FFFFFF.png\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/Icons_IhreWebsite_FFFFFF.png\" alt=\"\" class=\"wp-image-3765\"/></a></figure></div>
+      <!-- /wp:image -->
+
+      <!-- wp:heading {\"textAlign\":\"center\",\"level\":4,\"textColor\":\"white\"} -->
+      <h4 class=\"has-text-align-center has-white-color has-text-color\"><strong>Ihre Website</strong></h4>
+      <!-- /wp:heading -->
+
+      <!-- wp:paragraph {\"align\":\"center\",\"textColor\":\"white\"} -->
+      <p class=\"has-text-align-center has-white-color has-text-color\">Passende Websites<br>für jeden Bedarf</p>
+      <!-- /wp:paragraph --></div>
+      <!-- /wp:column -->
+
+      <!-- wp:column {\"width\":22.22} -->
+      <div class=\"wp-block-column\" style=\"flex-basis:22.22%\"><!-- wp:image {\"align\":\"center\",\"id\":3779,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->
+      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><a href=\"https://wp.haurand.com/wp-content/uploads/2021/04/Icons_ZumBlog_FFFFFF.png\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/Icons_ZumBlog_FFFFFF.png\" alt=\"\" class=\"wp-image-3779\"/></a></figure></div>
+      <!-- /wp:image -->
+
+      <!-- wp:heading {\"textAlign\":\"center\",\"level\":4,\"textColor\":\"white\"} -->
+      <h4 class=\"has-text-align-center has-white-color has-text-color\">Zum Blog</h4>
+      <!-- /wp:heading -->
+
+      <!-- wp:paragraph {\"align\":\"center\",\"textColor\":\"white\"} -->
+      <p class=\"has-text-align-center has-white-color has-text-color\">Tipps zu WordPress<br>Und Entwicklung</p>
+      <!-- /wp:paragraph --></div>
+      <!-- /wp:column -->
+
+      <!-- wp:column {\"width\":\"20%\"} -->
+      <div class=\"wp-block-column\" style=\"flex-basis:20%\"></div>
+      <!-- /wp:column --></div>
+      <!-- /wp:columns -->
+
+      <!-- wp:columns {\"align\":\"wide\"} -->
+      <div class=\"wp-block-columns alignwide\"><!-- wp:column {\"width\":\"20%\"} -->
+      <div class=\"wp-block-column\" style=\"flex-basis:20%\"></div>
+      <!-- /wp:column -->
+
+      <!-- wp:column {\"width\":20.83} -->
+      <div class=\"wp-block-column\" style=\"flex-basis:20.83%\"><!-- wp:image {\"align\":\"center\",\"id\":3771,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->
+      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><a href=\"https://wp.haurand.com/wp-content/uploads/2021/04/Icons_Referenzen_FFFFFF.png\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/Icons_Referenzen_FFFFFF.png\" alt=\"\" class=\"wp-image-3771\"/></a></figure></div>
+      <!-- /wp:image -->
+
+      <!-- wp:heading {\"textAlign\":\"center\",\"level\":4,\"textColor\":\"white\"} -->
+      <h4 class=\"has-text-align-center has-white-color has-text-color\"><strong>Referenzen</strong></h4>
+      <!-- /wp:heading -->
+
+      <!-- wp:paragraph {\"align\":\"center\",\"textColor\":\"white\"} -->
+      <p class=\"has-text-align-center has-white-color has-text-color\">Eine Auswahl von Seiten,<br>Die wir erstellt haben</p>
+      <!-- /wp:paragraph --></div>
+      <!-- /wp:column -->
+
+      <!-- wp:column {\"width\":20.83} -->
+      <div class=\"wp-block-column\" style=\"flex-basis:20.83%\"><!-- wp:image {\"align\":\"center\",\"id\":3777,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->
+      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><a href=\"https://wp.haurand.com/wp-content/uploads/2021/04/Icons_Wartung_FFFFFF.png\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/Icons_Wartung_FFFFFF.png\" alt=\"\" class=\"wp-image-3777\"/></a></figure></div>
+      <!-- /wp:image -->
+
+      <!-- wp:heading {\"textAlign\":\"center\",\"level\":4,\"textColor\":\"white\"} -->
+      <h4 class=\"has-text-align-center has-white-color has-text-color\"><strong>Wartung</strong></h4>
+      <!-- /wp:heading -->
+
+      <!-- wp:paragraph {\"align\":\"center\",\"textColor\":\"white\"} -->
+      <p class=\"has-text-align-center has-white-color has-text-color\">Eine Auswahl von Seiten,<br>Die wir erstellt haben</p>
+      <!-- /wp:paragraph --></div>
+      <!-- /wp:column -->
+
+      <!-- wp:column {\"width\":20.83} -->
+      <div class=\"wp-block-column\" style=\"flex-basis:20.83%\"><!-- wp:image {\"align\":\"center\",\"id\":3773,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->
+      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><a href=\"https://wp.haurand.com/wp-content/uploads/2021/04/Icons_Support_FFFFFF.png\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/Icons_Support_FFFFFF.png\" alt=\"\" class=\"wp-image-3773\"/></a></figure></div>
+      <!-- /wp:image -->
+
+      <!-- wp:heading {\"textAlign\":\"center\",\"level\":4,\"textColor\":\"white\"} -->
+      <h4 class=\"has-text-align-center has-white-color has-text-color\">Support</h4>
+      <!-- /wp:heading -->
+
+      <!-- wp:paragraph {\"align\":\"center\",\"textColor\":\"white\"} -->
+      <p class=\"has-text-align-center has-white-color has-text-color\">Erfahren Sie hier mehr<br>über unser Hilfsangebote</p>
+      <!-- /wp:paragraph --></div>
+      <!-- /wp:column -->
+
+      <!-- wp:column {\"width\":\"20%\"} -->
+      <div class=\"wp-block-column\" style=\"flex-basis:20%\"></div>
+      <!-- /wp:column --></div>
+      <!-- /wp:columns --></div>
+      <!-- /wp:column --></div>
+      <!-- /wp:columns -->",
+      )
+  );
+
+/* ------------------------------ */
+/* Container rot mit drei Spalten */
+/* ------------------------------ */
 register_block_pattern(
   'container_rot_drei_spalten',
     array(
@@ -146,7 +278,7 @@ register_block_pattern(
         <!-- /wp:column --></div>
         <!-- /wp:columns -->",
         )
-      );
+  );
 /*----------------------------------------------------------------*/
 /* Ende: Block Patterns von haurand.com 
 /* Datum: 14.01.2021
