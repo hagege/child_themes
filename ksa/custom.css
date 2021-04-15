@@ -8,284 +8,289 @@ Hellgrau   #CCCCCC
 Hellblau   #D9DEF4
 */
 
+figure.kleineres_video {
+    width: 50%;
+	  margin-left: 20%;
+    margin-right: 20%;
+}
+
 /* Buttons für Hauptseite */
 button.eigener_button {
-	background-color: #000085; /* Blau */
-	border: none;
+  background-color: #000085; /* Blau */
+  border: none;
+  color: white;
+	line-height: 1.1em;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+	margin-left: auto;
+	margin-right: auto;
+  font-size: 1.7em;
+	font-weight: 700;
+  cursor: pointer;
+  height: 5em;
+  width: 5em; 
+  border-radius: 150%;
+  border-color: #F7931D; /* orange */
+  border-width: 6px;
+  border-style: solid;  
+}
+
+a.eigener_button {
 	color: white;
-	  line-height: 1.1em;
-	padding: 20px;
-	text-align: center;
-	text-decoration: none;
-	display: block;
-	  margin-left: auto;
-	  margin-right: auto;
-	font-size: 1.7em;
-	  font-weight: 700;
-	cursor: pointer;
-	height: 5em;
-	width: 5em; 
-	border-radius: 150%;
-	border-color: #F7931D; /* orange */
-	border-width: 6px;
-	border-style: solid;  
-  }
-  
-  a.eigener_button {
-	  color: white;
-  }
-  
-  @media (max-width: 1217px){
-  p.text_unter_ueberschrift{
-	  margin-left: 15%;
-	  margin-right: 15%;
-  }
-  }
-  
-  /* Für Container bei zwei Spalten - einspaltig: daher keine feste Höhe bis 599px (Breakpoint) */
-  
-  /*
-  @media (min-width: 600px){
-	  div.feste_hoehe {
-			  height: 10rem;
-	  }
-  }
-  
-  @media (min-width: 700px){
-	  div.feste_hoehe {
-			  height: 10rem;
-	  }
-  }
-  
-  @media (min-width: 800px){
-	  div.feste_hoehe {
-			  height: 10rem;
-	  }
-  }
-  
-  
-  @media (min-width: 1100px){
-	  div.feste_hoehe {
-			  height: 32rem;
-	  }
-  }
-  
-  
-  @media (min-width: 1150px){
-	  div.feste_hoehe {
-			  height: 24rem;
-	  }
-  }
-  */
-  /* nur wenn es dreispaltig ist */
-  @media (min-width: 1218px){
-	  div.feste_hoehe {
-			  height: 22rem;
-	  }
-  }
-  
-  @media (min-width: 1378px){
-	  div.feste_hoehe {
-			  height: 20rem;
-	  }
-  }
-  
-  @media (min-width: 1400px){
-	  div.feste_hoehe {
-			  height: 18rem;
-	  }
-  }
-  
-  
-  /* Text mir Rand */
-  p.text_schmaler {
-	  margin-left: 7vw;
-		  margin-right: 7vw;
-  }
-  
-  
-  /* nur noch eine Spalte */
-  @media (max-width: 1217px) {
-	  .wp-block-columns {
-		  display: block;
-			  margin-left: 0em!important;
-	  }
-	  /* Bei einer Spalte kein zusätzlicher linker Rand ab dem 2. Bild */
-	  .wp-block-column:not(:first-child) {
-		  margin-left: 0em;
-	  }	
-  }
-  
-  /* Breite der Spalten verringert */
-  @media (min-width: 1218px) {
-	  .wp-block-columns.has-background, 
-	  p.mehr_rand, h5.has-text-align-center{
-			  margin-left: 15vw;
-			  margin-right: 15vw;
-	  }
-  }
-  
-  
-  
-  /* Kreis statt orange blau */
-  span.ctl-story-time.selected::after,
-  span.ctl-story-time::after {
-	  background-color: #000085!important;
-  }
-  
-  
-  /* Jahreszahl etwas dicker */
-  span.ctl-story-time {
-	  font-weight: 700;
-  }
-  
-  /* Rand bei Timeline */
-  .timeline-wrapper.white-timeline-wrapper.hori-items-3 {
-	  margin-left: 10vw;
-	  margin-right: 10vw;
-  }
-  
-  
-  
-  /* Linie zwischen Header und Content */
-  h2.has-text-align-center {
-	padding-top: 4.5rem;  
-	  border-top: 8px solid #F7931D;
-  }
-  
-  p.has-text-align-center.text_auf_video {
-	  margin-bottom: -1px;
-  }
-  
-  /* Abstand nach oben zum Header auf 0 */
-  .inside-article {
-	  padding: 0px!important;
-  }
-  
-	  /* Einstellungen für das Desktop-Menü */
-	  @media (min-width: 769px) {
-		/* nav links effect */
-		.main-navigation .menu > .menu-item > a::after {
-			content: "";
-			position: absolute;
-			right: 0;
-			left: 50%;
-			bottom: 0px;
-			-webkit-transform: translateX(-50%);
-			transform: translateX(-50%);
-			color: #F7931D;
-			display: block;
-			width: 0;
-			height: 5px;   
-			background-color: currentColor;
-			transition: 0.3s width ease;
-		}
-		.main-navigation .menu > .menu-item.current-menu-item > a::after,
-		.main-navigation .menu > .menu-item > a:hover::after {
-			width: 100%;
-			color: #000085;
-		}
-	  
-	  .main-navigation .menu > .menu-item.current-menu-item > a::after,
-		.main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
-		.main-navigation .menu > .menu-item > a:active::after {
-			width: 100%;
-		color: #F7931D;
-		}
-	  /* Submenü */
-	  ul.sub-menu {
-		opacity: 0.9!important;
-	  }
+}
+
+@media (max-width: 1217px){
+p.text_unter_ueberschrift{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+}
+
+/* Für Container bei zwei Spalten - einspaltig: daher keine feste Höhe bis 599px (Breakpoint) */
+
+/*
+@media (min-width: 600px){
+	div.feste_hoehe {
+			height: 10rem;
 	}
-  
-  
-  
-  /* Titel wird nicht gezeigt */
-  header.entry-header {
-	  display: none;
-	  /* visibility: hidden; */
+}
+
+@media (min-width: 700px){
+	div.feste_hoehe {
+			height: 10rem;
+	}
+}
+
+@media (min-width: 800px){
+	div.feste_hoehe {
+			height: 10rem;
+	}
+}
+
+
+@media (min-width: 1100px){
+	div.feste_hoehe {
+			height: 32rem;
+	}
+}
+
+
+@media (min-width: 1150px){
+	div.feste_hoehe {
+			height: 24rem;
+	}
+}
+*/
+/* nur wenn es dreispaltig ist */
+@media (min-width: 1218px){
+	div.feste_hoehe {
+			height: 22rem;
+	}
+}
+
+@media (min-width: 1378px){
+	div.feste_hoehe {
+			height: 20rem;
+	}
+}
+
+@media (min-width: 1400px){
+	div.feste_hoehe {
+			height: 18rem;
+	}
+}
+
+
+/* Text mir Rand */
+p.text_schmaler {
+    margin-left: 7vw;
+		margin-right: 7vw;
+}
+
+
+/* nur noch eine Spalte */
+@media (max-width: 1217px) {
+	.wp-block-columns {
+  	  display: block;
+			margin-left: 0em!important;
+	}
+	/* Bei einer Spalte kein zusätzlicher linker Rand ab dem 2. Bild */
+	.wp-block-column:not(:first-child) {
+    	margin-left: 0em;
+	}	
+}
+
+/* Breite der Spalten verringert */
+@media (min-width: 1218px) {
+	.wp-block-columns.has-background, 
+	p.mehr_rand, h5.has-text-align-center{
+			margin-left: 15%;
+			margin-right: 15%;
+	}
+}
+
+
+
+/* Kreis statt orange blau */
+span.ctl-story-time.selected::after,
+span.ctl-story-time::after {
+	background-color: #000085!important;
+}
+
+
+/* Jahreszahl etwas dicker */
+span.ctl-story-time {
+    font-weight: 700;
+}
+
+/* Rand bei Timeline */
+.timeline-wrapper.white-timeline-wrapper.hori-items-3 {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+
+
+/* Linie zwischen Header und Content */
+h2.has-text-align-center {
+  padding-top: 4.5rem;  
+	border-top: 8px solid #F7931D;
+}
+
+p.has-text-align-center.text_auf_video {
+    margin-bottom: -1px;
+}
+
+/* Abstand nach oben zum Header auf 0 */
+.inside-article {
+    padding: 0px!important;
+}
+
+    /* Einstellungen für das Desktop-Menü */
+    @media (min-width: 769px) {
+      /* nav links effect */
+      .main-navigation .menu > .menu-item > a::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          left: 50%;
+          bottom: 0px;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+          color: #F7931D;
+          display: block;
+          width: 0;
+          height: 5px;   
+          background-color: currentColor;
+          transition: 0.3s width ease;
+      }
+      .main-navigation .menu > .menu-item.current-menu-item > a::after,
+      .main-navigation .menu > .menu-item > a:hover::after {
+          width: 100%;
+          color: #000085;
+      }
+    
+    .main-navigation .menu > .menu-item.current-menu-item > a::after,
+      .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
+      .main-navigation .menu > .menu-item > a:active::after {
+          width: 100%;
+      color: #F7931D;
+      }
+    /* Submenü */
+    ul.sub-menu {
+      opacity: 0.9!important;
+    }
   }
-  
-  
-  
-  /* Videos mit Animation */
-  p.text_auf_video {
-	  background-color: rgb(255,255,255);
-	  opacity: 0.6;
-		color:rgba(0, 0, 133);
-		font-weight: 600;
-		animation: fadeIn ease 10s;
-		-webkit-animation: fadeIn ease 10s;
-  }
-  
-  @media (min-width: 1025px) {
-	  p.text_auf_video {
-	  font-size: 3em;
-	  margin-top: -2.1em;
-  }
-  }
-  
-  @media (min-width: 768px) and (max-width: 1024px) {
-		  p.text_auf_video{
-			  font-size: 2em;
-			  margin-top: -2.4em;
-	  }
-  }
-  
-  @media (min-width: 500px) and (max-width: 767px)  {
-	  p.text_auf_video{
-	  font-size: 1.5em;
-	  margin-top: -2.7em;
-	  }
-  }
-  
-  
-  @media (min-width: 340px) and (max-width: 499px)  {
-	  p.text_auf_video{
-		  font-size: 1.0em;
-	  margin-top: -3.35em;
-	  }
-  }
-  
-  @media (max-width: 339px)  {
-	  p.text_auf_video{
-		  font-size: 0.8em;
-	  margin-top: -3.8em;
-	  }
-  }
-  
-  
-  
-  
-  @keyframes fadeIn {
-	  0% {opacity:0;}
-	  40%	{opacity:0;}
-	  100% {opacity:0.6;}
-  }
-  
-  @-moz-keyframes fadeIn {
-	  0% {opacity:0;}
-	  40%	{opacity:0;}
-	  100% {opacity:0.6;}
-  }
-  
-  @-webkit-keyframes fadeIn {
-	  0% {opacity:0;}
-	  40%	{opacity:0;}
-	  100% {opacity:0.6;}
-  }
-  
-  @-o-keyframes fadeIn {
-	  0% {opacity:0;}
-	  40%	{opacity:0;}
-	  100% {opacity:0.6;}
-  }
-  
-  @-ms-keyframes fadeIn {
-	  0% {opacity:0;}
-	  40%	{opacity:0;}
-	  100% {opacity:0.6;}
-  }
-  
-  
-  
+
+
+
+/* Titel wird nicht gezeigt */
+header.entry-header {
+    display: none;
+    /* visibility: hidden; */
+}
+
+
+
+/* Videos mit Animation */
+p.text_auf_video {
+    background-color: rgb(255,255,255);
+    opacity: 0.6;
+	  color:rgba(0, 0, 133);
+	  font-weight: 600;
+	  animation: fadeIn ease 10s;
+	  -webkit-animation: fadeIn ease 10s;
+}
+
+@media (min-width: 1025px) {
+	p.text_auf_video {
+    font-size: 3em;
+    margin-top: -2.1em;
+}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+		p.text_auf_video{
+			font-size: 2em;
+			margin-top: -2.4em;
+	}
+}
+
+@media (min-width: 500px) and (max-width: 767px)  {
+	p.text_auf_video{
+    font-size: 1.5em;
+    margin-top: -2.7em;
+	}
+}
+
+
+@media (min-width: 340px) and (max-width: 499px)  {
+	p.text_auf_video{
+		font-size: 1.0em;
+    margin-top: -3.35em;
+	}
+}
+
+@media (max-width: 339px)  {
+	p.text_auf_video{
+		font-size: 0.8em;
+    margin-top: -3.8em;
+	}
+}
+
+
+
+
+@keyframes fadeIn {
+	0% {opacity:0;}
+	40%	{opacity:0;}
+	100% {opacity:0.6;}
+}
+
+@-moz-keyframes fadeIn {
+	0% {opacity:0;}
+	40%	{opacity:0;}
+	100% {opacity:0.6;}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {opacity:0;}
+	40%	{opacity:0;}
+	100% {opacity:0.6;}
+}
+
+@-o-keyframes fadeIn {
+	0% {opacity:0;}
+	40%	{opacity:0;}
+	100% {opacity:0.6;}
+}
+
+@-ms-keyframes fadeIn {
+	0% {opacity:0;}
+	40%	{opacity:0;}
+	100% {opacity:0.6;}
+}
+
+

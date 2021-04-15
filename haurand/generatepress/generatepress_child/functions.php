@@ -99,12 +99,12 @@ register_block_pattern(
       <div class=\"wp-block-column\"><!-- wp:columns -->
       <div class=\"wp-block-columns\"><!-- wp:column {\"verticalAlignment\":\"center\"} -->
       <div class=\"wp-block-column is-vertically-aligned-center\"><!-- wp:image {\"align\":\"right\",\"id\":3766,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->
-      <div class=\"wp-block-image\"><figure class=\"alignright size-large\"><a href=\"https://www.hochxeit.de/wp-content/uploads/2021/04/Logo.png\"><img src=\"https://www.hochxeit.de/wp-content/uploads/2021/04/Logo.png\" alt=\"ein Bild\" class=\"wp-image-3766\"/></a></figure></div>
+      <div class=\"wp-block-image\"><figure class=\"alignright size-large\"><a href=\"https://wp.haurand.com//wp-content/uploads/2021/04/Logo.png\"><img src=\"https://wp.haurand.com//wp-content/uploads/2021/04/Logo.png\" alt=\"ein Bild\" class=\"wp-image-3766\"/></a></figure></div>
       <!-- /wp:image --></div>
       <!-- /wp:column -->
       <!-- wp:column {\"verticalAlignment\":\"center\"} -->
       <div class=\"wp-block-column is-vertically-aligned-center\"><!-- wp:image {\"align\":\"left\",\"id\":3711,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->
-      <div class=\"wp-block-image\"><figure class=\"alignleft size-large\"><a href=\"https://www.hochxeit.de/wp-content/uploads/2021/03/2021-03-30-09_23_59-Window.png\"><img src=\"https://www.hochxeit.de/wp-content/uploads/2021/03/2021-03-30-09_23_59-Window.png\" alt=\"Auswahl im Block-Editor\" class=\"wp-image-3711\"/></a><figcaption>Grafik: haurand.com</figcaption></figure></div>
+      <div class=\"wp-block-image\"><figure class=\"alignleft size-large\"><a href=\"https://wp.haurand.com//wp-content/uploads/2021/03/2021-03-30-09_23_59-Window.png\"><img src=\"https://wp.haurand.com//wp-content/uploads/2021/03/2021-03-30-09_23_59-Window.png\" alt=\"Auswahl im Block-Editor\" class=\"wp-image-3711\"/></a><figcaption>Grafik: haurand.com</figcaption></figure></div>
       <!-- /wp:image --></div>
       <!-- /wp:column --></div>
       <!-- /wp:columns --></div>
@@ -125,7 +125,7 @@ register_block_pattern(
       " <!-- wp:columns {\"style\":{\"color\":{\"background\":\"#b70000\"}}} -->
         <div class=\"wp-block-columns has-background\" style=\"background-color:#b70000\"><!-- wp:column {\"verticalAlignment\":\"center\",\"width\":\"15%\"} -->
         <div class=\"wp-block-column is-vertically-aligned-center\" style=\"flex-basis:15%\"><!-- wp:image {\"align\":\"center\",\"id\":3822,\"width\":120,\"height\":120,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->
-        <div class=\"wp-block-image\"><figure class=\"aligncenter size-large is-resized\"><img src=\"https://www.hochxeit.de/wp-content/uploads/2021/01/WordPress_Chart_Zeichenfläche-1.png\" alt=\"\" class=\"wp-image-3822\" width=\"120\" height=\"120\"/><figcaption>Stand: 2021</figcaption></figure></div>
+        <div class=\"wp-block-image\"><figure class=\"aligncenter size-large is-resized\"><img src=\"https://wp.haurand.com//wp-content/uploads/2021/01/WordPress_Chart_Zeichenfläche-1.png\" alt=\"\" class=\"wp-image-3822\" width=\"120\" height=\"120\"/><figcaption>Stand: 2021</figcaption></figure></div>
         <!-- /wp:image --></div>
         <!-- /wp:column -->
 
@@ -141,7 +141,7 @@ register_block_pattern(
 
         <!-- wp:column {\"verticalAlignment\":\"bottom\",\"width\":\"5%\"} -->
         <div class=\"wp-block-column is-vertically-aligned-bottom\" style=\"flex-basis:5%\"><!-- wp:image {\"align\":\"right\",\"id\":3823,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->
-        <div class=\"wp-block-image\"><figure class=\"alignright size-large\"><img src=\"https://www.hochxeit.de/wp-content/uploads/2021/04/Eckendeko.png\" alt=\"\" class=\"wp-image-3823\"/></figure></div>
+        <div class=\"wp-block-image\"><figure class=\"alignright size-large\"><img src=\"https://wp.haurand.com//wp-content/uploads/2021/04/Eckendeko.png\" alt=\"\" class=\"wp-image-3823\"/></figure></div>
         <!-- /wp:image --></div>
         <!-- /wp:column --></div>
         <!-- /wp:columns -->",
