@@ -101,7 +101,7 @@ register_block_pattern(
   'container_mittelgrau',
     array(
     'title' => __( 'Mittelgrauer Container', 'container_mittelgrau' ),
-    'description' => _x( 'Hellgrauer Container', 'Ein Container für Bilder mit mittelgrauem Hintergrund', 'container_mittelgrau' ),
+    'description' => _x( 'Mittelgrauer Container', 'Ein Container für Bilder mit mittelgrauem Hintergrund', 'container_mittelgrau' ),
     'categories'  => array('Haurand'),
     'content'     =>
       "<!-- wp:columns {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#a9b2b\"}}} -->
@@ -128,10 +128,10 @@ register_block_pattern(
 /* Container mittelgrau mit zwei Zeilen und fünf Spalten */
 /* ----------------------------------------------------- */
 register_block_pattern(
-  'container_mittelgrau',
+  'container_mittelgrau_spalten',
     array(
-    'title' => __( 'Mittelgrauer Container', 'container_mittelgrau' ),
-    'description' => _x( 'Hellgrauer Container', 'Ein Container für Bilder mit mittelgrauem Hintergrund', 'container_mittelgrau' ),
+    'title' => __( 'Mittelgrauer Container', 'container_mittelgrau_spalten' ),
+    'description' => _x( 'Mittelgrauer Container mit 2 Zeilen und 5 Spalten', 'Ein Container mit mittelgrauem Hintergrund und 2 Zeilen und 5 Spalten', 'container_mittelgrau_spalten' ),
     'categories'  => array('Haurand'),
     'content'     =>
       "<!-- wp:columns {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#a9b2b5\"}}} -->
@@ -257,7 +257,7 @@ register_block_pattern(
       " <!-- wp:columns {\"style\":{\"color\":{\"background\":\"#b70000\"}}} -->
         <div class=\"wp-block-columns has-background\" style=\"background-color:#b70000\"><!-- wp:column {\"verticalAlignment\":\"center\",\"width\":\"15%\"} -->
         <div class=\"wp-block-column is-vertically-aligned-center\" style=\"flex-basis:15%\"><!-- wp:image {\"align\":\"center\",\"id\":3822,\"width\":120,\"height\":120,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->
-        <div class=\"wp-block-image\"><figure class=\"aligncenter size-large is-resized\"><img src=\"https://wp.haurand.com//wp-content/uploads/2021/01/WordPress_Chart_Zeichenfläche-1.png\" alt=\"\" class=\"wp-image-3822\" width=\"120\" height=\"120\"/><figcaption>Stand: 2021</figcaption></figure></div>
+        <div class=\"wp-block-image\"><figure class=\"aligncenter size-large is-resized\"><img src=\"https://wp.haurand.com//wp-content/uploads/2021/01/WordPress_Chart_Zeichenflaeche.png\" alt=\"\" class=\"wp-image-3822\" width=\"120\" height=\"120\"/><figcaption>Stand: 2021</figcaption></figure></div>
         <!-- /wp:image --></div>
         <!-- /wp:column -->
 
