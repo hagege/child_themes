@@ -1,3 +1,86 @@
+/* Problem bei ungeraden Spalten, funktioniert aber noch nicht */
+@media (min-width: 600px) and (max-width: 781px) {
+  .wp-block-columns.has-3-columns {
+    flex-flow: row wrap!important;
+  }
+   
+  .has-3-columns .wp-block-column:first-child {
+    flex-basis: 100%!important;
+  }
+}
+
+/* Newest Posts */
+/* Ränder für Grid */
+@media (min-width: 782px) {
+	.uagb-post-grid {
+			margin-left: 15%;
+			margin-right: 15%;
+	}
+
+
+	.neue_beitraege {
+			width:100%
+	}
+}
+
+/* Link bei der Überschrift bei Einzelbeiträgen */
+.uagb-post-grid .uagb-post__title a, .uagb-post-grid .uagb-post__title a:hover, 
+.uagb-post-grid .uagb-post__title a:focus, .uagb-post-grid .uagb-post__title a:active{
+    color: #b70000;
+    text-decoration: none!important;
+	  font-weight: 600;
+    font-size: 1.6rem;
+}
+
+/* Überschrift Einzelbeiträge */
+.uagb-post-grid .uagb-post__title {
+		text-align: left;
+}
+
+/* Bildhöhe bei Einzelbeiträgen */
+.uagb-post-grid .uagb-post__image img {
+    height: 200px;
+}
+
+/* Button bei Einzelbeiträgen mit runden Ecken */
+a.wp-block-button__link.uagb-text-link {
+    background-color: #A9B2B5;
+    text-decoration: none!important;
+    border-radius: 30px;
+}
+
+
+/* Einzelbeiträge mit runden Ecken unten */
+.uagb-block-6bc0af57 .uagb-post__inner-wrap,
+.uagb-block-f796014a .uagb-post__inner-wrap {
+    border-radius: 30px;
+}
+/* Smartphone */
+@media (max-width: 599px) {
+/* rechte untere Ecke */
+.wp-block-image .alignright {
+    margin-bottom: -1.7rem;
+    margin-inline: -2.5rem;
+	}
+}
+
+/* Tablet: klappt nicht so gut */
+@media (min-width: 600px) and (max-width: 781px) {
+/* rechte untere Ecke */
+.wp-block-image .alignright {
+    margin-bottom: -1.7rem;
+    margin-inline: -17.9rem;
+	}
+}
+
+/* Destop */
+@media (min-width: 782px) {
+/* rechte untere Ecke */
+.wp-block-image .alignright {
+    margin-bottom: -1.7rem;
+    margin-inline: -2.5rem;
+	}
+}
 
 /* Listen mit grauen Quadraten */
 ul.has-white-color.has-text-color {

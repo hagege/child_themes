@@ -260,7 +260,7 @@ register_block_pattern(
     'description' => _x( 'Roter dreispaltiger Container', 'Ein Container mit Bild / Listbox / Eckengrafik', 'container_rot_drei_spalten' ),
     'categories'  => array('Haurand'),
     'content'     =>
-      " <!-- wp:columns {\"style\":{\"color\":{\"background\":\"#b70000\"}}} -->
+      "<!-- wp:columns {\"style\":{\"color\":{\"background\":\"#b70000\"}}} -->
       <div class=\"wp-block-columns has-background\" style=\"background-color:#b70000\"><!-- wp:column {\"verticalAlignment\":\"center\",\"width\":\"15%\"} -->
       <div class=\"wp-block-column is-vertically-aligned-center\" style=\"flex-basis:15%\"><!-- wp:image {\"align\":\"center\",\"id\":3797,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->
       <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/WordPress_Chart_Zeichenflaeche.png\" alt=\"\" class=\"wp-image-3797\"/><figcaption>Stand: 2021</figcaption></figure></div>
@@ -272,8 +272,8 @@ register_block_pattern(
       <h3 class=\"has-text-align-center has-white-color has-text-color\" id=\"h-circa-40-aller-internetseiten-verwenden-wordpress-sie-m-chten-auch\">Circa 40% aller Internetseiten verwenden WordPress – Sie möchten auch:</h3>
       <!-- /wp:heading -->
       
-      <!-- wp:list {\"textColor\":\"white\"} -->
-      <ul class=\"has-white-color has-text-color\"><li>einen Internetauftritt, z. B. für Ihre Firma, Ihren Verein oder Ihr Hobby?</li><li>selber Inhalte verändern oder erstellen?</li><li>Ihre Produkte oder Dienstleistungen zeitgemäß präsentieren?</li><li>Responsivität (das heißt, dass Ihre Seite auch auf Smartphones gut dargestellt wird)?</li><li>eine schnelle Webseite (wichtig vor allem bei mobilen Endgeräten)?</li><li>für Ihre Internetseite ein übersichtliches und klares Design?</li><li>eine einfach zu bedienende Webseite</li><li>eine logische Menüstruktur?</li><li>für die Besucher Ihrer Webseite eine klare Orientierung?</li></ul>
+      <!-- wp:list {\"style\":{\"typography\":{\"fontSize\":22}},\"textColor\":\"white\"} -->
+      <ul class=\"has-white-color has-text-color\" style=\"font-size:22px\"><li>einen Internetauftritt, z. B. für Ihre Firma, Ihren Verein oder Ihr Hobby?</li><li>selber Inhalte verändern oder erstellen?</li><li>Ihre Produkte oder Dienstleistungen zeitgemäß präsentieren?</li><li>Responsivität (das heißt, dass Ihre Seite auch auf Smartphones gut dargestellt wird)?</li><li>eine schnelle Webseite (wichtig vor allem bei mobilen Endgeräten)?</li><li>für Ihre Internetseite ein übersichtliches und klares Design?</li><li>eine einfach zu bedienende Webseite</li><li>eine logische Menüstruktur?</li><li>für die Besucher Ihrer Webseite eine klare Orientierung?</li></ul>
       <!-- /wp:list --></div>
       <!-- /wp:column -->
       
@@ -291,98 +291,6 @@ register_block_pattern(
 /* Autor: hgg
 /*----------------------------------------------------------------*/
 
-
-/*----------------------------------------------------------------*/
-/* Start: Shortcode zur Ausgabe eines aktuellen Beitrags
-/* Datum: 04.01.2020
-/* Autor: hgg
-/*----------------------------------------------------------------*/
-function shortcode_posts_function($atts){
-  // Parameter für Posts
-  // Voreinstellung für Parameter, falls keine angegeben werden:
-  $werte = shortcode_atts( array(
-      'headline' => 'Aktuelle Informationen',
-      'category_posts' => 'allgemein',
-      'anzahl_posts' => 2,
-      'auszug' => 'ja',
-      'content_laenge' => 55,
-      'show_categories' => 'ja'
-    ), $atts);
-
-
-  // Werte aus dem Shortcode zuordnen: //
-  $args['category'] = $werte['category_posts'];
-  $args['numberposts'] = $werte['anzahl_posts'];
-  // ID von der Kategorie "holen":
-  $args['category'] = get_cat_ID($args['category']);
-  // Beiträge holen
-  $custom_posts = get_posts($args);
-  // var_dump($args);
-  // var_dump($args['numberposts']);
-  // var_dump($posts);
-  // Beiträge aufbereiten
-  $content = '<h2>' . $werte['headline'] .'</h2>';
-  $content .= '<div class="aktuelle_beitraege">';
-  // found posts
-  if( ! empty( $custom_posts ) ){
-    foreach ($custom_posts as $post) {
-        $content .= '<div class="beitrags_titel">'.$post->post_title.'</a></div>';
-        // $content .= '<p class="beitrags_text">'.get_the_category($post->ID).'</p>';
-        $thumbnail_id = get_post_thumbnail_id( $post->ID );
-        $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
-        // alte Einstellung: 
-        // $content .= '<div class="flex-container"><a class="beitrags_bild_link" href="'.get_permalink($post->ID).'"><img class="beitrags_bild" src="'.get_the_post_thumbnail_url($post->ID, 'full').'"></a>';
-        // $content .= '<div class="flex-container"><a class="beitrags_bild_link" href="'.get_permalink($post->ID).'"><img class="beitrags_bild" src="'.get_the_post_thumbnail_url($post->ID, 'full').' alt="'.$alt_text.'"></a>';
-        $content .= '<div class="flex-container"><a class="beitrags_bild_link" href="'.get_permalink($post->ID).'"><img class="beitrags_bild" src="'.get_the_post_thumbnail_url($post->ID, 'full'). '" width=auto height=auto alt="'.$alt_text.'"></a>';
-        // hier entweder den Auszug anzeigen (vergisst man leicht, unter Dokument > Auszug)
-        if (esc_attr($werte['auszug']) == 'ja'){
-          $content .= '<p class="beitrags_text">' . $post->post_excerpt;
-        } else {
-          // Alternative: Wenn in der Regel Beiträge nur intern genutzt werden, ist diese Lösung einfacher: // 
-          $content .= '<p class="beitrags_text">' . custom_post_excerpt($post->post_content, intval($werte['content_laenge']));
-        }
-        $content .= '<br><a href="'.get_permalink($post->ID).'">Weiterlesen</a>';
-        if (esc_attr($werte['show_categories']) == 'ja'){
-          $content .= '<br>';
-          // $content .= '<div class="flex-container_fuss">';
-          $content .= '<span class="beitrags_categories">Kategorien:&nbsp;</span>';
-          foreach((get_the_category($post->ID)) as $cat) {
-            $content .= '<span class="beitrags_categories"> ' . $cat->cat_name . ',&nbsp;' . '</span>';
-          }
-          $content .= '<br>';
-          // $content .= '</div>';
-        }
-        $content .= '</p></div><hr>';
-        // $content .= '<div class="flex-container_fuss"><a href="'.get_permalink($post->ID).'">Weiterlesen</a></div><hr>';
-    }
-  }
-  $content .= '</div>';
-  //Beiträge übergeben
-  return $content;
-}
-add_shortcode('aktuelle_posts', 'shortcode_posts_function');
-
-
-
-/*----------------------------------------------------------------*/
-/* Diese Funktion reduziert den Content $content_text auf eine Länge von $c_laenge
-/*----------------------------------------------------------------*/
-function custom_post_excerpt($content_text, $c_laenge ){
-// var_dump($content_text);
-// $content_text = strip_shortcodes( $post->post_content );
-$content_text = apply_filters( 'the_content', $content_text );
-$content_text = str_replace(']]>', ']]&gt;', $content_text);
-$excerpt_more = apply_filters( 'excerpt_more', ' ' . '[&hellip;]' );
-$content_text = wp_trim_words( $content_text,  $c_laenge, $excerpt_more );
-// var_dump($content_text);
-// var_dump($c_laenge);
-return $content_text;
-}
-/*----------------------------------------------------------------*/
-/* Ende: Shortcode zur Ausgabe eines aktuellen Beitrags
-/* Datum: 04.01.2020
-/* Autor: hgg
-/*----------------------------------------------------------------*/
 
 
 
