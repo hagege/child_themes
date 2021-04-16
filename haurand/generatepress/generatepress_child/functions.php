@@ -50,6 +50,11 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
  );
 }
 
+
+add_action('init', function() {
+	remove_theme_support('core-block-patterns');
+});
+
 function haurand_register_block_categories() {
   if ( class_exists( 'WP_Block_Patterns_Registry' ) ) {
   register_block_pattern_category(
@@ -104,17 +109,18 @@ register_block_pattern(
     'description' => _x( 'Mittelgrauer Container', 'Ein Container für Bilder mit mittelgrauem Hintergrund', 'container_mittelgrau' ),
     'categories'  => array('Haurand'),
     'content'     =>
-      "<!-- wp:columns {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#a9b2b\"}}} -->
-      <div class=\"wp-block-columns alignfull has-background\" style=\"background-color:#a9b2b\"><!-- wp:column -->
+      "<!-- wp:columns {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#a9b2b5\"}}} -->
+      <div class=\"wp-block-columns alignfull has-background\" style=\"background-color:#a9b2b5\"><!-- wp:column -->
       <div class=\"wp-block-column\"><!-- wp:columns -->
       <div class=\"wp-block-columns\"><!-- wp:column {\"verticalAlignment\":\"center\"} -->
-      <div class=\"wp-block-column is-vertically-aligned-center\"><!-- wp:image {\"align\":\"right\",\"id\":3766,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->
-      <div class=\"wp-block-image\"><figure class=\"alignright size-large\"><a href=\"https://wp.haurand.com//wp-content/uploads/2021/04/Logo.png\"><img src=\"https://wp.haurand.com//wp-content/uploads/2021/04/Logo.png\" alt=\"ein Bild\" class=\"wp-image-3766\"/></a></figure></div>
+      <div class=\"wp-block-column is-vertically-aligned-center\"><!-- wp:image {\"align\":\"right\",\"id\":3780,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->
+      <div class=\"wp-block-image\"><figure class=\"alignright size-large\"><a href=\"https://wp.haurand.com/wp-content/uploads/2021/04/Logo.png\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/Logo.png\" alt=\"\" class=\"wp-image-3780\"/></a></figure></div>
       <!-- /wp:image --></div>
       <!-- /wp:column -->
+      
       <!-- wp:column {\"verticalAlignment\":\"center\"} -->
       <div class=\"wp-block-column is-vertically-aligned-center\"><!-- wp:image {\"align\":\"left\",\"id\":3711,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->
-      <div class=\"wp-block-image\"><figure class=\"alignleft size-large\"><a href=\"https://wp.haurand.com//wp-content/uploads/2021/03/2021-03-30-09_23_59-Window.png\"><img src=\"https://wp.haurand.com//wp-content/uploads/2021/03/2021-03-30-09_23_59-Window.png\" alt=\"Auswahl im Block-Editor\" class=\"wp-image-3711\"/></a><figcaption>Grafik: haurand.com</figcaption></figure></div>
+      <div class=\"wp-block-image\"><figure class=\"alignleft size-large\"><a href=\"https://wp.haurand.com/wp-content/uploads/2021/03/2021-03-30-09_23_59-Window.png\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/03/2021-03-30-09_23_59-Window.png\" alt=\"Auswahl im Block-Editor\" class=\"wp-image-3711\"/></a><figcaption>Grafik: haurand.com</figcaption></figure></div>
       <!-- /wp:image --></div>
       <!-- /wp:column --></div>
       <!-- /wp:columns --></div>
@@ -130,7 +136,7 @@ register_block_pattern(
 register_block_pattern(
   'container_mittelgrau_spalten',
     array(
-    'title' => __( 'Mittelgrauer Container', 'container_mittelgrau_spalten' ),
+    'title' => __( 'Mittelgrauer Container mit 5 Spalten', 'container_mittelgrau_spalten' ),
     'description' => _x( 'Mittelgrauer Container mit 2 Zeilen und 5 Spalten', 'Ein Container mit mittelgrauem Hintergrund und 2 Zeilen und 5 Spalten', 'container_mittelgrau_spalten' ),
     'categories'  => array('Haurand'),
     'content'     =>
@@ -255,28 +261,28 @@ register_block_pattern(
     'categories'  => array('Haurand'),
     'content'     =>
       " <!-- wp:columns {\"style\":{\"color\":{\"background\":\"#b70000\"}}} -->
-        <div class=\"wp-block-columns has-background\" style=\"background-color:#b70000\"><!-- wp:column {\"verticalAlignment\":\"center\",\"width\":\"15%\"} -->
-        <div class=\"wp-block-column is-vertically-aligned-center\" style=\"flex-basis:15%\"><!-- wp:image {\"align\":\"center\",\"id\":3822,\"width\":120,\"height\":120,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->
-        <div class=\"wp-block-image\"><figure class=\"aligncenter size-large is-resized\"><img src=\"https://wp.haurand.com//wp-content/uploads/2021/01/WordPress_Chart_Zeichenflaeche.png\" alt=\"\" class=\"wp-image-3822\" width=\"120\" height=\"120\"/><figcaption>Stand: 2021</figcaption></figure></div>
-        <!-- /wp:image --></div>
-        <!-- /wp:column -->
-
-        <!-- wp:column {\"width\":\"80%\"} -->
-        <div class=\"wp-block-column\" style=\"flex-basis:80%\"><!-- wp:heading {\"textAlign\":\"center\",\"level\":3,\"textColor\":\"white\"} -->
-        <h3 class=\"has-text-align-center has-white-color has-text-color\">Circa 40% aller Internetseiten verwenden WordPress – Sie möchten auch:</h3>
-        <!-- /wp:heading -->
-
-        <!-- wp:list {\"textColor\":\"white\"} -->
-        <ul class=\"has-white-color has-text-color\"><li>einen Internetauftritt, z. B. für Ihre Firma, Ihren Verein oder Ihr Hobby?</li><li>selber Inhalte verändern oder erstellen?</li><li>Ihre Produkte oder Dienstleistungen zeitgemäß präsentieren?</li><li>Responsivität (das heißt, dass Ihre Seite auch auf Smartphones gut dargestellt wird)?</li><li>eine schnelle Webseite (wichtig vor allem bei mobilen Endgeräten)?</li><li>für Ihre Internetseite ein übersichtliches und klares Design?</li><li>eine einfach zu bedienende Webseite</li><li>eine logische Menüstruktur?</li><li>für die Besucher Ihrer Webseite eine klare Orientierung?</li></ul>
-        <!-- /wp:list --></div>
-        <!-- /wp:column -->
-
-        <!-- wp:column {\"verticalAlignment\":\"bottom\",\"width\":\"5%\"} -->
-        <div class=\"wp-block-column is-vertically-aligned-bottom\" style=\"flex-basis:5%\"><!-- wp:image {\"align\":\"right\",\"id\":3823,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->
-        <div class=\"wp-block-image\"><figure class=\"alignright size-large\"><img src=\"https://wp.haurand.com//wp-content/uploads/2021/04/Eckendeko.png\" alt=\"\" class=\"wp-image-3823\"/></figure></div>
-        <!-- /wp:image --></div>
-        <!-- /wp:column --></div>
-        <!-- /wp:columns -->",
+      <div class=\"wp-block-columns has-background\" style=\"background-color:#b70000\"><!-- wp:column {\"verticalAlignment\":\"center\",\"width\":\"15%\"} -->
+      <div class=\"wp-block-column is-vertically-aligned-center\" style=\"flex-basis:15%\"><!-- wp:image {\"align\":\"center\",\"id\":3797,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->
+      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/WordPress_Chart_Zeichenflaeche.png\" alt=\"\" class=\"wp-image-3797\"/><figcaption>Stand: 2021</figcaption></figure></div>
+      <!-- /wp:image --></div>
+      <!-- /wp:column -->
+      
+      <!-- wp:column {\"width\":\"80%\"} -->
+      <div class=\"wp-block-column\" style=\"flex-basis:80%\"><!-- wp:heading {\"textAlign\":\"center\",\"level\":3,\"textColor\":\"white\"} -->
+      <h3 class=\"has-text-align-center has-white-color has-text-color\" id=\"h-circa-40-aller-internetseiten-verwenden-wordpress-sie-m-chten-auch\">Circa 40% aller Internetseiten verwenden WordPress – Sie möchten auch:</h3>
+      <!-- /wp:heading -->
+      
+      <!-- wp:list {\"textColor\":\"white\"} -->
+      <ul class=\"has-white-color has-text-color\"><li>einen Internetauftritt, z. B. für Ihre Firma, Ihren Verein oder Ihr Hobby?</li><li>selber Inhalte verändern oder erstellen?</li><li>Ihre Produkte oder Dienstleistungen zeitgemäß präsentieren?</li><li>Responsivität (das heißt, dass Ihre Seite auch auf Smartphones gut dargestellt wird)?</li><li>eine schnelle Webseite (wichtig vor allem bei mobilen Endgeräten)?</li><li>für Ihre Internetseite ein übersichtliches und klares Design?</li><li>eine einfach zu bedienende Webseite</li><li>eine logische Menüstruktur?</li><li>für die Besucher Ihrer Webseite eine klare Orientierung?</li></ul>
+      <!-- /wp:list --></div>
+      <!-- /wp:column -->
+      
+      <!-- wp:column {\"verticalAlignment\":\"bottom\",\"width\":\"5%\"} -->
+      <div class=\"wp-block-column is-vertically-aligned-bottom\" style=\"flex-basis:5%\"><!-- wp:image {\"align\":\"right\",\"id\":3823,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->
+      <div class=\"wp-block-image\"><figure class=\"alignright size-large\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/Eckendeko.png\" alt=\"\" class=\"wp-image-3823\"/></figure></div>
+      <!-- /wp:image --></div>
+      <!-- /wp:column --></div>
+      <!-- /wp:columns -->",
         )
   );
 /*----------------------------------------------------------------*/
