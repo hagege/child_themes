@@ -84,17 +84,20 @@ a.wp-block-button__link.uagb-text-link {
 /* ---------------------------- */
 /* rechte untere Ecke */
 /* ---------------------------- */
-.wp-block-columns.has-background {
+.rechte_untere_ecke {
     position: relative; 
-    bottom:0;
-		right:0;
 		background-image: url("https://wp.haurand.com/wp-content/uploads/2021/04/Eckendeko.png");
     background-repeat: no-repeat;
     background-position: bottom right;
-    
+    background-size: 8%;    
 }
 
-/* Listen mit grauen Quadraten */
+/* Listen mit grauen Quadraten bei Aufzählung */
+@media (max-width: 782px){
+	ul.has-white-color.has-text-color {
+			margin-left: 0px;
+	}
+}
 ul.has-white-color.has-text-color {
     list-style: square;
 }
