@@ -1,13 +1,20 @@
 /* Problem bei ungeraden Spalten, funktioniert aber noch nicht */
-@media (min-width: 600px) and (max-width: 781px) {
+@media (min-width: 600px) and (max-width: 1024px) {
   .wp-block-columns.has-3-columns {
     flex-flow: row wrap!important;
   }
-   
+  
   .has-3-columns .wp-block-column:first-child {
     flex-basis: 100%!important;
   }
+		.wp-block-column.is-vertically-aligned-bottom {
+			margin-left: 0em;
+	}
+	.wp-block-column:not(:first-child) {
+    margin-left: 0em;
+	}
 }
+
 
 
 /* Beitragsübersicht nicht mehr zweispaltig, sondern einspaltig: */

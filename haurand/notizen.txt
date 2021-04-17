@@ -1,0 +1,18 @@
+https://www.mediaevent.de/css/border-image.html
+https://www.mediaevent.de/css/calc.html
+https://www.mediaevent.de/css/position-top.html
+https://stackoverflow.com/questions/17306087/attach-images-on-all-four-corner-of-div
+
+
+Da ist beim Container noch ein padding. Das sollte der erste Ansatz sein:
+Ecke unten rechts
+.wp-block-columns.has-background {
+    padding: 1em 0em 0em 1em;
+}
+
+@media (min-width: 1024px)
+.wp-block-image .alignright {
+    margin-bottom: -0.45rem;
+    /* margin-inline: -2.5rem; */
+}
+
