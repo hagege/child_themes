@@ -9,6 +9,20 @@
   }
 }
 
+
+/* Beitragsübersicht nicht mehr zweispaltig, sondern einspaltig: */
+@media (min-width: 600px) and (max-width: 1024px) {
+	.wp-block-columns {
+			display: block; 
+			margin-bottom: 1.75em;
+			flex-wrap: wrap;
+	}
+		.neue_beitraege {
+			width:100%;
+			display: contents;
+	}
+} 
+
 /* Newest Posts */
 /* Ränder für Grid */
 @media (min-width: 782px) {
@@ -16,10 +30,12 @@
 			margin-left: 15%;
 			margin-right: 15%;
 	}
+}
 
-
-	.neue_beitraege {
-			width:100%
+@media (min-width: 1025px) {
+		.neue_beitraege {
+			width:100%;
+			display: block;
 	}
 }
 
@@ -48,6 +64,9 @@ a.wp-block-button__link.uagb-text-link {
     text-decoration: none!important;
     border-radius: 30px;
 }
+.uagb-post__inner-wrap {
+    border-radius: 30px;
+}
 
 
 /* Einzelbeiträge mit runden Ecken unten */
@@ -64,16 +83,19 @@ a.wp-block-button__link.uagb-text-link {
 }
 
 /* Tablet: klappt nicht so gut */
-@media (min-width: 600px) and (max-width: 781px) {
+@media (min-width: 600px) and (max-width: 1023px) {
 /* rechte untere Ecke */
 .wp-block-image .alignright {
-    margin-bottom: -1.7rem;
-    margin-inline: -17.9rem;
+			float: unset;
+			margin-left: auto;
+      margin-right: auto;
+/*      margin-bottom: -1.7rem;
+  margin-inline: -17.9rem; */
 	}
 }
 
 /* Destop */
-@media (min-width: 782px) {
+@media (min-width: 1024px) {
 /* rechte untere Ecke */
 .wp-block-image .alignright {
     margin-bottom: -1.7rem;
@@ -155,10 +177,10 @@ figcaption {
 	  .kachel_spalte {
 			padding-top: 50px;
 			padding-bottom: 50px;
-	        max-width: 600px;
+	    max-width: 600px;
 			margin-bottom:40px;
 			margin-left: auto!important;
-            margin-right: auto!important;
+      margin-right: auto!important;
 }
 }
 
