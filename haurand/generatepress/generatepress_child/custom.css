@@ -84,34 +84,14 @@ a.wp-block-button__link.uagb-text-link {
 /* ---------------------------- */
 /* rechte untere Ecke */
 /* ---------------------------- */
-/* Smartphone */
-@media (max-width: 599px) {
-/* rechte untere Ecke */
-.wp-block-image .alignright {
-    margin-bottom: -1.7rem;
-    margin-inline: -2.5rem;
-	}
-}
-
-/* Tablet: nicht ideal */
-@media (min-width: 600px) and (max-width: 1023px) {
-/* rechte untere Ecke */
-.wp-block-image .alignright {
-			float: unset;
-			margin-left: auto;
-      margin-right: auto;
-/*      margin-bottom: -1.7rem;
-  margin-inline: -17.9rem; */
-	}
-}
-
-/* Destop */
-@media (min-width: 1024px) {
-/* rechte untere Ecke */
-.wp-block-image .alignright {
-    margin-bottom: -1.7rem;
-    margin-inline: -2.5rem;
-	}
+.wp-block-columns.has-background {
+    position: relative; 
+    bottom:0;
+		right:0;
+		background-image: url("https://wp.haurand.com/wp-content/uploads/2021/04/Eckendeko.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    
 }
 
 /* Listen mit grauen Quadraten */
