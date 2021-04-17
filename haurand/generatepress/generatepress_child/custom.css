@@ -1,4 +1,4 @@
-/* Problem bei ungeraden Spalten, funktioniert aber noch nicht */
+/* Problem bei ungeraden Spalten weitestgehend behoben, aber nicht optimal */
 @media (min-width: 600px) and (max-width: 1024px) {
   .wp-block-columns.has-3-columns {
     flex-flow: row wrap!important;
@@ -80,6 +80,10 @@ a.wp-block-button__link.uagb-text-link {
 .uagb-block-23c9c34f .uagb-post__inner-wrap {
     border-radius: 30px;
 }
+
+/* ---------------------------- */
+/* rechte untere Ecke */
+/* ---------------------------- */
 /* Smartphone */
 @media (max-width: 599px) {
 /* rechte untere Ecke */
@@ -89,7 +93,7 @@ a.wp-block-button__link.uagb-text-link {
 	}
 }
 
-/* Tablet: klappt nicht so gut */
+/* Tablet: nicht ideal */
 @media (min-width: 600px) and (max-width: 1023px) {
 /* rechte untere Ecke */
 .wp-block-image .alignright {
