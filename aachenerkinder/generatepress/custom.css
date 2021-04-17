@@ -1,5 +1,11 @@
 /* Custom CSS */
 
+/* schräge Kante beim Bild auf der Startseite */ 
+.schraeg {
+	clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+
 /* Unterer Bereich einer Einzelveranstaltung (Metadaten) besser aufteilen */
 .tribe-events-single-section.tribe-events-event-meta.primary.tribe-clearfix,
 .tribe-events-single-section.tribe-events-event-meta.secondary.tribe-clearfix {
