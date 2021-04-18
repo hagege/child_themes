@@ -1,3 +1,21 @@
+/* Gestaltung Referenzen */
+div.referenz {
+  background-color: #A9B2B5;
+  padding: 20px;
+  color: white;}
+
+p.referenz {
+  margin: 20px;
+}
+
+div.referenz-spalte {
+  background-color: #ffffff;	
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 50px;
+  max-width: 600px;
+}
+
 /* Beiträge mit Linie nach unten */
 .uagb-post__image {
   border-bottom: 1px solid #d4dadb;
@@ -116,7 +134,7 @@ a.fuss_button-beitrag {
 /* ---------------------------- */
 .rechte_untere_ecke {
   position: relative; 
-  background-image: url("https://wp.haurand.com/wp-content/uploads/2021/04/Eckendeko.png");
+  background-image: url("https://wp.haurand.com/wp-content/uploads/2021/04/Eckendeko_ohne_Rahmen.jpg");
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 3em;    
