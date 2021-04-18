@@ -8,6 +8,14 @@ Hellgrau   #CCCCCC
 Hellblau   #D9DEF4
 */
 
+.ksa_video {
+    width: 50%;
+}
+
+.entry-content > [class*="wp-block-"]:not(:last-child) {
+    margin-bottom: -0.4em;
+}
+
 figure.kleineres_video {
     width: 50%;
 	  margin-left: 20%;
@@ -41,48 +49,29 @@ a.eigener_button {
 	color: white;
 }
 
-@media (max-width: 1217px){
+
+@media (max-width: 600px){
+p.text_unter_ueberschrift{
+    margin-left: 0%;
+    margin-right: 0%;
+}
+}
+
+@media (min-width: 601px){
+p.text_unter_ueberschrift{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+}
+
+@media (min-width: 867px){
 p.text_unter_ueberschrift{
     margin-left: 15%;
     margin-right: 15%;
 }
 }
 
-/* Für Container bei zwei Spalten - einspaltig: daher keine feste Höhe bis 599px (Breakpoint) */
 
-/*
-@media (min-width: 600px){
-	div.feste_hoehe {
-			height: 10rem;
-	}
-}
-
-@media (min-width: 700px){
-	div.feste_hoehe {
-			height: 10rem;
-	}
-}
-
-@media (min-width: 800px){
-	div.feste_hoehe {
-			height: 10rem;
-	}
-}
-
-
-@media (min-width: 1100px){
-	div.feste_hoehe {
-			height: 32rem;
-	}
-}
-
-
-@media (min-width: 1150px){
-	div.feste_hoehe {
-			height: 24rem;
-	}
-}
-*/
 /* nur wenn es dreispaltig ist */
 @media (min-width: 1218px){
 	div.feste_hoehe {
@@ -114,7 +103,7 @@ p.text_schmaler {
 @media (max-width: 1217px) {
 	.wp-block-columns {
   	  display: block;
-			margin-left: 0em!important;
+			/* margin-left: 0em!important; */
 	}
 	/* Bei einer Spalte kein zusätzlicher linker Rand ab dem 2. Bild */
 	.wp-block-column:not(:first-child) {
@@ -122,7 +111,7 @@ p.text_schmaler {
 	}	
 }
 
-/* Breite der Spalten verringert */
+/* Breite der Spalten verringert - nicht mehr benötigt 
 @media (min-width: 1218px) {
 	.wp-block-columns.has-background, 
 	p.mehr_rand, h5.has-text-align-center{
@@ -130,7 +119,7 @@ p.text_schmaler {
 			margin-right: 15%;
 	}
 }
-
+*/
 
 
 /* Kreis statt orange blau */
@@ -154,10 +143,26 @@ span.ctl-story-time {
 
 
 /* Linie zwischen Header und Content */
-h2.has-text-align-center {
+h2.oben {
   padding-top: 4.5rem;  
-	border-top: 8px solid #F7931D;
+	/* border-top: 8px solid #F7931D; */
 }
+
+
+/*
+@media (max-width: 769px) {
+	h2.oben {
+		border-top: 6px solid #F7931D;
+	}
+}
+*/
+
+.wp-block-video video {
+    border-bottom: 8px solid #F7931D;
+    /* margin-left: 0px!important; */
+    /* margin-right: -1.9rem!important; */
+}
+
 
 p.has-text-align-center.text_auf_video {
     margin-bottom: -1px;
