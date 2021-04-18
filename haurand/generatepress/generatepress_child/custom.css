@@ -1,3 +1,12 @@
+/* Beiträge mit Linie nach unten */
+.uagb-post__image {
+  border-bottom: 1px solid #d4dadb;
+}
+
+/* Button ohne Unterstrich */
+a.wp-block-button__link.has-text-color.has-background {
+  text-decoration: none;
+}
 
 /* Schrfitgröße bei schmaleren Geräten */
 @media (max-width: 768px) {
@@ -69,12 +78,15 @@
 }
 
 /* Bildhöhe bei Einzelbeiträgen */
-.uagb-post-grid .uagb-post__image img {
-  height: 200px;
+@media (max-width: 1299px) {
+  .uagb-post-grid .uagb-post__image img {
+    height: 150px;
 }
-@media (min-width: 768px) and (max-width: 882px) {
+}
+
+@media (min-width: 1300px){
 .uagb-post-grid .uagb-post__image img {
-  height: 150px;
+  height: 250px;
 }
 }
 
@@ -85,7 +97,7 @@ a.wp-block-button__link.uagb-text-link {
   border-radius: 30px;
 }
 .uagb-post__inner-wrap {
-  border-radius: 30px;
+  border-radius: 50px;
 }
 
 

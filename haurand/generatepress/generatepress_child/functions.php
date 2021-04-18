@@ -181,11 +181,11 @@ register_block_pattern(
       <!-- /wp:image -->
 
       <!-- wp:heading {\"textAlign\":\"center\",\"level\":4,\"textColor\":\"white\"} -->
-      <h4 class=\"has-text-align-center has-white-color has-text-color\">Zum Blog</h4>
+      <h4 class=\"has-text-align-center has-white-color has-text-color\"><strong>Zum Blog</strong></h4>
       <!-- /wp:heading -->
 
       <!-- wp:paragraph {\"align\":\"center\",\"textColor\":\"white\"} -->
-      <p class=\"has-text-align-center has-white-color has-text-color\">Tipps zu WordPress<br>Und Entwicklung</p>
+      <p class=\"has-text-align-center has-white-color has-text-color\">Tipps zu WordPress<br>und Entwicklung</p>
       <!-- /wp:paragraph --></div>
       <!-- /wp:column -->
 
@@ -233,7 +233,7 @@ register_block_pattern(
       <!-- /wp:image -->
 
       <!-- wp:heading {\"textAlign\":\"center\",\"level\":4,\"textColor\":\"white\"} -->
-      <h4 class=\"has-text-align-center has-white-color has-text-color\">Support</h4>
+      <h4 class=\"has-text-align-center has-white-color has-text-color\"><strong>Support<strong></h4>
       <!-- /wp:heading -->
 
       <!-- wp:paragraph {\"align\":\"center\",\"textColor\":\"white\"} -->
@@ -251,17 +251,17 @@ register_block_pattern(
   );
 
 /* ------------------------------ */
-/* Container rot mit drei Spalten */
+/* Container rot mit zwei Spalten */
 /* ------------------------------ */
 register_block_pattern(
-  'container_rot_drei_spalten',
+  'container_rot_zwei_spalten',
     array(
-    'title' => __( 'Roter dreispaltiger Container', 'container_rot_drei_spalten' ),
-    'description' => _x( 'Roter dreispaltiger Container', 'Ein Container mit Bild / Listbox / Eckengrafik', 'container_rot_drei_spalten' ),
+    'title' => __( 'Roter zweispaltiger Container', 'container_rot_zwei_spalten' ),
+    'description' => _x( 'Roter zweispaltiger Container', 'Ein Container mit Bild / Listbox / Eckengrafik per CSS-Klasse', 'container_rot_zwei_spalten' ),
     'categories'  => array('Haurand'),
     'content'     =>
-      "<!-- wp:columns {\"style\":{\"color\":{\"background\":\"#b70000\"}}} -->
-      <div class=\"wp-block-columns has-background\" style=\"background-color:#b70000\"><!-- wp:column {\"verticalAlignment\":\"center\",\"width\":\"15%\"} -->
+      "<!-- wp:columns {\"style\":{\"color\":{\"background\":\"#b70000\"}},\"className\":\"rechte_untere_ecke\"} -->
+      <div class=\"wp-block-columns rechte_untere_ecke has-background\" style=\"background-color:#b70000\"><!-- wp:column {\"verticalAlignment\":\"center\",\"width\":\"15%\"} -->
       <div class=\"wp-block-column is-vertically-aligned-center\" style=\"flex-basis:15%\"><!-- wp:image {\"align\":\"center\",\"id\":3797,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->
       <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/WordPress_Chart_Zeichenflaeche.png\" alt=\"\" class=\"wp-image-3797\"/><figcaption>Stand: 2021</figcaption></figure></div>
       <!-- /wp:image --></div>
@@ -275,12 +275,6 @@ register_block_pattern(
       <!-- wp:list {\"style\":{\"typography\":{\"fontSize\":22}},\"textColor\":\"white\"} -->
       <ul class=\"has-white-color has-text-color\" style=\"font-size:22px\"><li>einen Internetauftritt, z. B. für Ihre Firma, Ihren Verein oder Ihr Hobby?</li><li>selber Inhalte verändern oder erstellen?</li><li>Ihre Produkte oder Dienstleistungen zeitgemäß präsentieren?</li><li>Responsivität (das heißt, dass Ihre Seite auch auf Smartphones gut dargestellt wird)?</li><li>eine schnelle Webseite (wichtig vor allem bei mobilen Endgeräten)?</li><li>für Ihre Internetseite ein übersichtliches und klares Design?</li><li>eine einfach zu bedienende Webseite</li><li>eine logische Menüstruktur?</li><li>für die Besucher Ihrer Webseite eine klare Orientierung?</li></ul>
       <!-- /wp:list --></div>
-      <!-- /wp:column -->
-      
-      <!-- wp:column {\"verticalAlignment\":\"bottom\",\"width\":\"5%\"} -->
-      <div class=\"wp-block-column is-vertically-aligned-bottom\" style=\"flex-basis:5%\"><!-- wp:image {\"align\":\"right\",\"id\":3823,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->
-      <div class=\"wp-block-image\"><figure class=\"alignright size-large\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/Eckendeko.png\" alt=\"\" class=\"wp-image-3823\"/></figure></div>
-      <!-- /wp:image --></div>
       <!-- /wp:column --></div>
       <!-- /wp:columns -->",
         )
