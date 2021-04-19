@@ -1,3 +1,47 @@
+/* Gestaltung Über uns */
+
+
+.wp-block-columns.ueber_uns_gruppe.has-background {
+  padding: 0px;
+}
+
+h3.ueber_uns {
+  padding: 5px 0px 10px 0px;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+ul.ueber_uns li::marker {
+color: #B70000;
+}
+
+
+ul.ueber_uns {
+min-height: inherit;
+}
+
+
+@media (min-width: 1024px) {
+ul.ueber_uns {
+min-height: calc(9rem + 10vw);
+}
+}
+
+
+/* runde bilder */
+img.wp-image-2111,
+img.wp-image-2110{
+  height: 178px;
+  margin-top: 3rem;
+}
+
+.wp-block-image figcaption {
+  font-size: 1.2rem;
+  text-align: center;
+  color: black;
+  font-weight: 700;
+}
+
 /* Gestaltung Referenzen */
 div.referenz {
   background-color: #A9B2B5;
@@ -142,24 +186,29 @@ a.fuss_button-beitrag {
 
 /* Listen mit grauen Quadraten bei Aufzählung */
 @media (max-width: 782px){
-ul.has-white-color.has-text-color {
-    margin-left: 0px;
+ul.rote_liste,
+ul.ueber_uns {
     font-size: 16px;
+}
+ul.rote_liste {
+    margin-left: 0px;
 }
 }
 
 @media (min-width: 783px){
-ul.has-white-color.has-text-color {
+ul.rote_liste,
+ul.ueber_uns {
     font-size: 22px;
 }
 }
 
 
-ul.has-white-color.has-text-color {
+ul.rote_liste,
+ul.ueber_uns {
   list-style: square;
 }
 
-li::marker {
+ul.rote_liste li::marker {
 color: #A9B2B5;
 }
 

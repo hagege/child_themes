@@ -67,37 +67,29 @@ function haurand_register_block_categories() {
 
 
 
-/* ------------------------------ */
-/* Absatz zentriert               */
-/* ------------------------------ */
+/* ---------------------------------- */
+/* Überschrift und zentrierter Absatz */
+/* ---------------------------------- */
 register_block_pattern(
-   'absatz_zentriert',
-     array(
-     'title' => __( 'Absatz zentriert', 'absatz_zentriert' ),
-     'description' => _x( 'Zentrierter Absatz', 'Ein Absatz mit zentriertem Text', 'absatz_zentriert' ),
-     'categories'  => array('Haurand'),
-     'content'     =>
-        "<!-- wp:paragraph {\"align\":\"center\"} -->
-        <p class=\"has-text-align-center\">Wir sind eine WordPress - Agentur in Aachen, die professionelle Webseiten zu fairen Konditionen erstellt. Beim Webdesign sorgen wir dafür, dass Ihre neue Homepage grafisch optimal gestaltet ist. Wir erstellen ansprechende und funktionelle Webseiten mit schnellen Ladezeiten (Performance).&nbsp;</p>
-        <!-- /wp:paragraph -->",
-   )
- );
-
-/* ------------------------------ */
-/* Container rot mit Listen       */
-/* ------------------------------ */
- register_block_pattern(
-  'listbox_rot',
+  'absatz_zentriert',
     array(
-    'title' => __( 'Listbox rot', 'listbox_rot' ),
-    'description' => _x( 'Listbox rot', 'Eine Listbox mit roter Hintergrundfarbe', 'listbox_rot' ),
+    'title' => __( 'Absatz zentriert mit Überschrift', 'absatz_zentriert' ),
+    'description' => _x( 'Zentrierter Absatz mit Überschrift', 'Ein Absatz mit zentriertem Text', 'absatz_zentriert' ),
     'categories'  => array('Haurand'),
     'content'     =>
-       "<!-- wp:list {\"style\":{\"color\":{\"background\":\"#b70000\"}},\"textColor\":\"white\"} -->
-<ul class=\"has-white-color has-text-color has-background\" style=\"background-color:#b70000\"><li>Fotos</li><li>Texten</li><li>Formularen</li><li>Social Media Buttons</li><li>Downloadbereich</li><li>Newsverwaltung</li><li>Mehrsprachigkeit</li><li>DSGVO- Sicherheit</li><li>und allem, was Ihnen wichtig ist</li></ul>
-<!-- /wp:list -->",
-  )
+       "<!-- wp:group {\"className\":\"ueber_uns_rand\"} -->
+       <div class=\"wp-block-group ueber_uns_rand\"><div class=\"wp-block-group__inner-container\"><!-- wp:heading {\"textAlign\":\"center\"} -->
+       <h2 class=\"has-text-align-center\">Wie wir ticken und wie wir die Welt sehen</h2>
+       <!-- /wp:heading -->
+       
+       <!-- wp:paragraph {\"align\":\"center\"} -->
+       <p class=\"has-text-align-center\">Wenn Sie wissen möchten mit wem Sie es hier zu tun kriegen, dann verpassen Sie nicht folgende Informationen rund um unsere Person.</p>
+       <!-- /wp:paragraph --></div></div>
+       <!-- /wp:group -->
+       ",
+    )
 );
+
 
 /* -------------------------------- */
 /* Container mittelgrau mit Bildern */
@@ -279,7 +271,25 @@ register_block_pattern(
       <!-- /wp:columns -->",
         )
   );
-/*----------------------------------------------------------------*/
+
+/* ------------------------------ */
+/* Container rot mit Listen       */
+/* ------------------------------ */
+register_block_pattern(
+  'listbox_rot',
+    array(
+    'title' => __( 'Listbox rot', 'listbox_rot' ),
+    'description' => _x( 'Listbox rot', 'Eine Listbox mit roter Hintergrundfarbe', 'listbox_rot' ),
+    'categories'  => array('Haurand'),
+    'content'     =>
+       "<!-- wp:list {\"style\":{\"color\":{\"background\":\"#b70000\"}},\"textColor\":\"white\"} -->
+<ul class=\"has-white-color has-text-color has-background\" style=\"background-color:#b70000\"><li>Fotos</li><li>Texten</li><li>Formularen</li><li>Social Media Buttons</li><li>Downloadbereich</li><li>Newsverwaltung</li><li>Mehrsprachigkeit</li><li>DSGVO- Sicherheit</li><li>und allem, was Ihnen wichtig ist</li></ul>
+<!-- /wp:list -->",
+  )
+);
+
+
+  /*----------------------------------------------------------------*/
 /* Ende: Block Patterns von haurand.com 
 /* Datum: 14.01.2021
 /* Autor: hgg
