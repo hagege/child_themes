@@ -5,6 +5,12 @@
   padding: 0px;
 }
 
+
+.ueber_uns_rand {
+margin-left: 10%;
+margin-right: 10%;
+}
+
 h3.ueber_uns {
   padding: 5px 0px 10px 0px;
   font-size: 1.6rem;
@@ -35,12 +41,13 @@ img.wp-image-2110{
   margin-top: 3rem;
 }
 
-.wp-block-image figcaption {
+/* .wp-block-image figcaption {
   font-size: 1.2rem;
   text-align: center;
-  color: black;
+  color: white;
   font-weight: 700;
 }
+*/
 
 /* Gestaltung Referenzen */
 div.referenz {

@@ -103,7 +103,7 @@ body.page .entry-content a:visited
 
 body.single .entry-content a:hover,
 body.page .entry-content a:hover {
-	background-color: #B3B3B3;
+	background-color: #A9B2B5;
 	color: white;
   text-decoration: none;
 }
@@ -186,7 +186,7 @@ body.page .entry-content a:hover {
         bottom: 0px;
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
-        color: #DF5022;
+        color: #B70000;
         display: block;
         width: 0;
         height: 5px;   
@@ -196,14 +196,14 @@ body.page .entry-content a:hover {
     .main-navigation .menu > .menu-item.current-menu-item > a::after,
     .main-navigation .menu > .menu-item > a:hover::after {
         width: 100%;
-        color: #000000;
+        color: #3C4346;
     }
   
   .main-navigation .menu > .menu-item.current-menu-item > a::after,
     .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
     .main-navigation .menu > .menu-item > a:active::after {
         width: 100%;
-    color: #DF5022;
+    color: #B70000;
     }
   /* Submenü */
   ul.sub-menu {
@@ -218,22 +218,22 @@ body.page .entry-content a:hover {
 
 /* Farben für "Weiterlesen-Button" */
 a.read-more.button {
-  background-color: #919191;
+  background-color: #A9B2B5;
   color: white;
 }
 
 a.read-more.button:hover {
-  background-color: #Df5022; 
+  background-color: #B70000; 
 }
 
 
 /* Farben für Suchen-Button TEC */
 button.tribe-common-c-btn.tribe-events-c-search__button {
-  background-color: #919191!important;
+  background-color: #A9B2B5!important;
 }
 
 button.tribe-common-c-btn.tribe-events-c-search__button:hover {
-  background-color: #Df5022!important;
+  background-color: #B70000!important;
 }
 
 /*----------------------------------------------------------------*/
