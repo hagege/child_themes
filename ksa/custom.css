@@ -8,8 +8,28 @@ Hellgrau   #CCCCCC
 Hellblau   #D9DEF4
 */
 
-.ksa_video {
+/* Ersten Buchstaben unterstreichen */
+span.unterstreichen {
+	text-decoration: underline;
+}
+
+
+/* für Timeline */
+.ctl_info.event-description {
+    text-align: center;
+}
+
+
+@media (min-width: 957px) {
+	.ksa_video {
     width: 50%;
+	}
+}
+
+@media (max-width: 956px) {
+.ksa_video {
+    width: 100%;
+}
 }
 
 .entry-content > [class*="wp-block-"]:not(:last-child) {
@@ -51,21 +71,21 @@ a.eigener_button {
 
 
 @media (max-width: 600px){
-p.text_unter_ueberschrift{
+.text_unter_ueberschrift{
     margin-left: 0%;
     margin-right: 0%;
 }
 }
 
 @media (min-width: 601px){
-p.text_unter_ueberschrift{
+.text_unter_ueberschrift{
     margin-left: 5%;
     margin-right: 5%;
 }
 }
 
 @media (min-width: 867px){
-p.text_unter_ueberschrift{
+.text_unter_ueberschrift{
     margin-left: 15%;
     margin-right: 15%;
 }
@@ -99,6 +119,7 @@ p.text_schmaler {
 }
 
 
+	
 /* nur noch eine Spalte */
 @media (max-width: 1217px) {
 	.wp-block-columns {
