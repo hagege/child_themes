@@ -8,28 +8,20 @@ Hellgrau   #CCCCCC
 Hellblau   #D9DEF4
 */
 
-/* Ersten Buchstaben unterstreichen */
+
+/* Titel im Footer ohne Rand nach unten */
+.widget-title {
+    margin-bottom: 0px;
+}
+
+/* für ersten Buchstaben */
 span.unterstreichen {
 	text-decoration: underline;
 }
 
-
-/* für Timeline */
+/* Text unter Timeline zentriert */
 .ctl_info.event-description {
     text-align: center;
-}
-
-
-@media (min-width: 957px) {
-	.ksa_video {
-    width: 50%;
-	}
-}
-
-@media (max-width: 956px) {
-.ksa_video {
-    width: 100%;
-}
 }
 
 .entry-content > [class*="wp-block-"]:not(:last-child) {
@@ -121,7 +113,7 @@ p.text_schmaler {
 
 	
 /* nur noch eine Spalte */
-@media (max-width: 1217px) {
+@media (max-width: 855px) {
 	.wp-block-columns {
   	  display: block;
 			/* margin-left: 0em!important; */
@@ -130,6 +122,25 @@ p.text_schmaler {
 	.wp-block-column:not(:first-child) {
     	margin-left: 0em;
 	}	
+}
+
+@media (min-width: 755px) and (max-width: 955px) {
+.wp-block-group__inner-container {
+    padding: 20px 10px 40px 10px;
+}
+}
+
+
+@media (max-width: 855px) {
+	.ksa_video {
+    width: 50%;
+	}
+}
+
+@media (min-width: 856px) {
+.ksa_video {
+    width: 100%;
+}
 }
 
 /* Breite der Spalten verringert - nicht mehr benötigt 
