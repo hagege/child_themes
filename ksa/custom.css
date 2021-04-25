@@ -8,6 +8,10 @@ Hellgrau   #CCCCCC
 Hellblau   #D9DEF4
 */
 
+/* Zeilenhöhe beim Footermenue */
+ul#menu-footermenue {
+    line-height: 1.1;
+}
 
 /* Titel im Footer ohne Rand nach unten */
 .widget-title {
