@@ -32,11 +32,17 @@ h3 {
 }
 
 
-.uagb-post-grid .uagb-post__link {
-		background-color: #A9B2B5;
-    text-decoration: none!important;
-    border-radius: 30px!important;
-	  font-weight: 400;
+
+
+/*
+li {
+    background-color: white;
+}
+*/
+
+.wp-block-latest-posts__post-excerpt {
+    background-color: white;
+    padding: 1rem;
 }
 
 
@@ -79,9 +85,15 @@ img.attachment-full.size-full.wp-post-image {
 
 
 h2.entry-title {
+		text-align: left;
     margin-left: 2rem;
     margin-right: 2rem;
-    padding-top: 2rem;
+    /* padding-top: 2rem; */
+}
+
+.entry-title a{
+	color: #b70000;
+	
 }
 
 .entry-meta,
@@ -256,12 +268,11 @@ a.wp-block-button__link.has-text-color.has-background {
 } 
 
 /* Newest Posts */
-/* Ränder für Grid  */
-
+/* Einstellungen  */
 
 @media (max-width: 981px) {
 .uagb-block-368ded8f .uagb-post__items, .uagb-post-grid {
-    background-color: #A9B2B5;
+    background-color: #D4DaDB;
 		padding: 2rem;
 }
 }
@@ -270,7 +281,7 @@ a.wp-block-button__link.has-text-color.has-background {
 .uagb-block-368ded8f .uagb-post__items,
 .uagb-block-a9a3a58e .uagb-post__items,
 .uagb-post-grid{
-    background-color: #A9B2B5;
+    background-color: #D4DaDB;
 		padding: 7rem;
 		margin-left: calc(-100vw / 2 + 100% / 2);
     margin-right: calc(-100vw /2  + 100% / 2);
@@ -279,6 +290,16 @@ a.wp-block-button__link.has-text-color.has-background {
 }
 }
 
+.uagb-post-grid .uagb-post__link {
+		background-color: #A9B2B5;
+    text-decoration: none!important;
+    border-radius: 30px!important;
+	  font-weight: 400;
+}
+
+.uagb-post__cta a:hover {
+		background-color: #B70000;
+}
 
 /* Link bei der Überschrift bei Einzelbeiträgen */
 .uagb-post-grid .uagb-post__title a, .uagb-post-grid .uagb-post__title a:hover, 
@@ -290,8 +311,30 @@ a.wp-block-button__link.has-text-color.has-background {
 }
 
 /* Überschrift Einzelbeiträge */
-.uagb-post-grid .uagb-post__title {
+.uagb-post-grid .uagb-post__title,
+.uagb-post__excerpt,
+.uagb-post-grid .uagb-post-grid-byline{
   text-align: left;
+}
+
+/* Buttons */
+.uagb-block-46e78355 .uagb-post__text .uagb-post__cta a,
+.uagb-block-5346bec2 .uagb-post__text .uagb-post__cta a{
+    font-weight: 500;
+		background-color: #A9B2B5;
+		text-decoration: none;
+}
+
+.uagb-block-46e78355 .uagb-post__text .uagb-post__cta a:hover,
+.uagb-block-5346bec2 .uagb-post__text .uagb-post__cta a:hover{
+    font-weight: 500;
+		background-color: #B70000;		
+}
+
+
+/* unten runde Ecken */
+.uagb-post-grid .is-grid.uagb-post__equal-height .uagb-post__inner-wrap {
+    border-radius: 0px 0px 50px 50px;
 }
 
 /* Bildhöhe bei Einzelbeiträgen */
@@ -306,17 +349,6 @@ a.wp-block-button__link.has-text-color.has-background {
   height: 250px;
 }
 }
-
-/* Button bei Einzelbeiträgen mit runden Ecken 
-a.wp-block-button__link.uagb-text-link {
-  background-color: #A9B2B5;
-  text-decoration: none!important;
-  border-radius: 30px;
-}
-.uagb-post__inner-wrap {
-  border-radius: 50px;
-}
-*/
 
 
 /* Buttons unten mit mehr Padding */
