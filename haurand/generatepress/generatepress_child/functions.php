@@ -347,6 +347,28 @@ register_block_pattern(
         )
   );
 
+
+/* -------------------------------------- */
+/* Container mit einem zentrierten Button */
+/* -------------------------------------- */
+register_block_pattern(
+  'container_button_zentriert',
+    array(
+    'title' => __( 'Container mit einem zentrierten Button', 'container_button_zentriert' ),
+    'description' => _x( 'Container mit einem zentrierten Button', 'Ein Container mit Bild / Listbox / Eckengrafik per CSS-Klasse', 'container_button_zentriert' ),
+    'categories'  => array('Haurand'),
+    'content'     =>
+      "<!-- wp:columns -->
+        <div class=\"wp-block-columns\"><!-- wp:column {\"className\":\"container-zentriert\"} -->
+        <div class=\"wp-block-column container-zentriert\"><!-- wp:html -->
+        <a class=\"eigener_block-button\" href=\"https://wp.haurand.com/blog/\">Zum Blog</a>
+        <!-- /wp:html --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns -->",
+        )
+  );
+
+
 /* ------------------------------ */
 /* Container rot mit Listen       */
 /* ------------------------------ */
