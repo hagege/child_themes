@@ -114,6 +114,11 @@ img.attachment-full.size-full.wp-post-image {
   height: calc(10px + 13rem);
 }
 
+@media (max-width: 968px) {
+img.attachment-full.size-full.wp-post-image {
+  height: calc(10px + 10rem);
+}
+}
 
 .generate-columns-container:not(.masonry-container) {
   background-color: #D4DaDB;
