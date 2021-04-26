@@ -485,26 +485,26 @@ figcaption {
   color: white;
 }
 
-/* Randdarstellung für Kacheln */
-/* Randdarstellung für Kacheln 
-*/
-div.kacheln {
+/* Randdarstellung für Kacheln im der Übersicht und in der Einzelansicht */
+img.attachment-full.size-full.wp-post-image,
+.featured-image.page-header-image-single img{
   flex-basis: calc(50% - 16px);
   flex-grow: 0;
-  box-shadow: 5px 5px 10px #888888;
-  padding: 15px;
+  box-shadow: 15px 15px 15px #A9B2B5;
+  padding: 0px;
   opacity: 0.7;
 }
 
 /* Beim Überfahren mehr Schatten 
 */
-div.kacheln:hover{
-  box-shadow: 10px 10px 15px #888888;
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  -o-transform: scale(1.05);
-  transform: scale(1.05);
+div.kacheln:hover
+{
+  box-shadow: 5px 5px 5px #A9B2B5;
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  transform: scale(1.02);
   opacity: 1.0;
   /* VERZÖGERUNG */
  -webkit-transition: all 0.7s linear;
@@ -524,14 +524,14 @@ figcaption {
 .kachel_spalte {
   flex-basis: calc(50% - 16px);
   flex-grow: 0;
-  box-shadow: 5px 5px 10px #888888;
+  box-shadow: 5px 5px 10px #A9B2B5;
   padding-left: 15px;
   padding-right: 15px;
 }
 
 /* Beim Überfahren mehr Schatten */
 .kachel_spalte:hover {
-  box-shadow: 10px 10px 15px #888888;
+  box-shadow: 10px 10px 15px #A9B2B5;
 }
 
 
@@ -599,7 +599,7 @@ font-family: "Courier New", Times, serif;
 }
 
 /* hier die Regeln für das Bild */
-.featured-image.page-header-image-single img {	
+.das_waere_die_regel_fuer_das_bild {	
 	/*min-width: 100%;
 	min-height: 100%; 
 	/* Add infinite to loop. */
