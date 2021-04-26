@@ -102,6 +102,26 @@ register_block_pattern(
 
 
 /* ---------------------------------- */
+/* zentrierter Button                 */
+/* ---------------------------------- */
+register_block_pattern(
+  'button_zentriert',
+    array(
+    'title' => __( 'zentrierter Button mit Hover-Effekt', 'button_zentriert' ),
+    'description' => _x( 'zentrierter Button mit Hover-Effekt', 'zentrierter Button mit Hover-Effekt', 'button_zentriert' ),
+    'categories'  => array('Haurand'),
+    'content'     =>
+       "<!-- wp:buttons {\"contentJustification\":\"center\",\"className\":\"eigener_block-button\"} -->
+      <div class=\"wp-block-buttons is-content-justification-center eigener_block-button\"><!-- wp:button {\"className\":\"eigener_block-button\"} -->
+      <div class=\"wp-block-button eigener_block-button\"><a class=\"wp-block-button__link\" href=\"https://wp.haurand.com/blog/\">Zum Blog</a></div>
+      <!-- /wp:button --></div>
+      <!-- /wp:buttons -->",
+  )
+);
+
+
+
+/* ---------------------------------- */
 /* Container mittelgrau mit 2 Bildern */
 /* ---------------------------------- */
 register_block_pattern(
