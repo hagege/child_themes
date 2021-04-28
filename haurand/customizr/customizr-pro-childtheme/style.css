@@ -1,316 +1,431 @@
-/*
-Theme Name: customizr-pro-child
-Theme URI: https://presscustomizr.com/customizr
-Description: Childtheme for customizr
-Tags: Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, buddypress, custom-menu, custom-colors, featured-images, full-width-template, theme-options, threaded-comments, translation-ready, sticky-post, post-formats, rtl-language-support, editor-style
-Author: Hans-Gerd Gerhards
-Author URI: https://haurand.com
-Template: customizr-pro
-Version: 2.2019
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-*/
-/* @import url("../customizr-pro/style.css");
+/* für wichtige Infos */
 
-/* @import url("the_events_calendar.css"); */ 
-
-/* @import url("parallax_scrolling.css"); */
-
-/* @import url("posts_in_site.css"); */
-
-
-/*----------------------------------------------------------------*/
-/* Start: allgemeine Anpassungen für Darstellung
-/* Datum: 18.11.2018
-/* Autor: hgg  
-/*----------------------------------------------------------------*/
-
-/* Breite des Containers erst mal so belassen und nicht von 1140px auf 1340px erweitert 
-.container {
-    max-width: 1140px;
-}
-*/
-
-/* Hintergrundfarbe des Hauptmenüs  
-.primary-navbar__wrapper {
-    background-color: #FFFFFF;
-}
- */
-
-/* Logo größer beim Runterscrollen (sticky menue)  */
-.can-shrink-brand.sticky-brand-shrink-on .desktop-sticky 
-.navbar-brand img {
-    max-height: 130px !important;
-    width: auto !important;
+/* Einen Block verstecken - unter erweitert: */
+.inhalt_verstecken {
+  display: none; 
 }
 
-/* Untermenues werden leider trotzdem rechts angezeigt, wenn der Punkt am rechten Rand gelistet wird 
-.menue_links {
-  text-align: left!important;
-}
-*/ 
-/*----------------------------------------------------------------*/
-/* Start: Anpassungen für Darstellung der Überschrift und 
-/*        Zeilenabstand Masonry grid
-/* Datum: 21.11.2018
-/* Autor: hgg  
-/*----------------------------------------------------------------*/
-
-.grid-title_size, .grid .entry-title, .grid .woocommerce .woocommerce-products-header .page-title, .woocommerce .woocommerce-products-header .grid .page-title {
-    line-height: 1.1;
-    font-size: 1.3em;
+/* war vorher orange: #ef7f1a */
+p.links_wichtig{
+ border-left: 5px solid #f60012;
+ padding: 10px;
 }
 
-/*----------------------------------------------------------------*/
-/* Ende: Anpassungen für Darstellung der Übesrchrift und 
-/*        Zeilenabstand Masonry grid
-/* Datum: 21.11.2018
-/* Autor: hgg  
-/*----------------------------------------------------------------*/
-
-
-/*----------------------------------------------------------------*/
-/* Ende: allgemeine Anpassungen für Darstellung
-/* Datum: 18.11.2018
-/* Autor: hgg  
-/*----------------------------------------------------------------*/
-
-
-
-
-/*----------------------------------------------------------------*/
-/* Start: Anpassungen für Paginierung
-/* Datum: 17.11.2018
-/* Autor: hgg  
-/*----------------------------------------------------------------*/
-/* Schriftgröße im Container "Ältere Beiträge" vergrößern */
-.post-navigation nav {
-    font-size: 1.3em;
-}
-
-/* oranger Hintergrund auf aktiver Seite */
-.pagination .current {
-    background-color: #F9B81E;
-    height: 60px;
-    width: 60px;
-    border-radius: 60px;
-}
-
-/* blauer Hintergrund und rund */
-.pagination .pag-list > * {
-    background-color: #77BCC7;
-    margin: 0 5px;
-    float: left;
-    height: 60px;
-    width: 60px;
-    line-height: 35px;
-    text-align: center;
-    padding: 0;
-    border-radius: 60px;
-    margin-right: 3px;
-    box-shadow: 0 0 1px 0 rgba(0,0,0,.2);
-}
-
-/* Platz für Seitennummern */
-.col-sm-4 {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
-}
-
-/* Platz für Text neuer und älter */
-.col-2 {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-    max-width: 25%;
-}
-
-/* Platz für Text voheriger und nächster Beitrag */
-.col-5 {
-    max-width: 33%!important;
-}
-
-/* Inhalte in der Sidebar rechtsbündig */
-.tc-sidebar.text-md-right .widget-title::after {
-    right: 0;
-    left: 0;
-}
-
-
-/* Text ältere und neuere Beiträge stärker hervorheben */
-/* funktioniert noch nicht */
-.post-navigation .meta-nav {
-    opacity: 0.8!important;
-}
-/*----------------------------------------------------------------*/
-/* Ende: Anpassungen für Paginierung
-/* Datum: 17.11.2018
-/* Autor: hgg  
-/*----------------------------------------------------------------*/
-
-/* Menue als Hamburger auch bei breiteren Ansichten zeigen - hgg, 13.10.2019*/
-/* wird leider nicht umgesetzt: 
-@media (min-width: 1200px) {
-  .d-lg-block {
-    display: block !important;
-  }
-  .d-none {
-    display: inherit !important;
-  }
-}
-
-@media (max-width: 1201px) {
-  .d-lg-block {
-    display: inherit !important;
-  }
-  .d-none {
-    display: block !important;
-  }
-}
- */
-
-
-
-/*----------------------------------------------------------------*/
-/* Start: aktuelle Mitteilungen in Beiträgen
-/* Datum: 19.4.2018
-/* Autor: hgg  
-/*----------------------------------------------------------------*/
-.mitteilung {
-  background-color: #F9F9F9;
+/* für Zitate */
+blockquote.wp-block-quote.links_schwarz {
+  border-left: 5px solid #000000;
   padding: 10px;
-  margin-bottom: 10px;
-  border-width:5px;  
-  border-style:dashed;
-}
-/*----------------------------------------------------------------*/
-/* Ende: aktuelle Mitteilungen in Beiträgen
-/* Datum: 19.4.2018
-/* Autor: hgg  
-/*----------------------------------------------------------------*/     
-
-
-/*----------------------------------------------------------------*/
-/* Start: Tabellen responsive
-/* Datum: 28.9.2018
-/* Autor: hgg  
-/*----------------------------------------------------------------*/
-@media only screen and (max-width: 840px) {
-table.responsive {
-  margin-bottom: 0;
-  overflow: hidden;
-  overflow-x: scroll;
-  display: block;
-  white-space: nowrap;
-}
-}
-/*----------------------------------------------------------------*/
-/* Ende: Tabellen responsive
-/* Datum: 28.9.2018
-/* Autor: hgg  
-/*----------------------------------------------------------------*/
-
-/*----------------------------------------------------------------*/
-/* Start: Schritartem
-/* Datum: 02.11.2018
-/* Autor: hgg  
-/*----------------------------------------------------------------*/
-span.gross {
-  font-size: 18pt;
-  font-weight: bold;
-}
-
-span.klein {
-  font-size: 9pt;
-  font-style:italic;
-}
-/*----------------------------------------------------------------*/
-/* Ende: Schritartem
-/* Datum: 02.11.2018
-/* Autor: hgg  
-/*----------------------------------------------------------------*/
-
-
-/* "Runde" Bilder */
-img.rund {
-	  float: right;
-    margin: 0 0 2rem 2rem;
-    border-radius: 50%;
-}
-
-/* Inhalte in der sidebar rechtsbündig anzeigen (customizr) */
-.text-md-right {
-    text-align: left !important; 
-}
-
-/*----------------------------------------------------------------*/
-/* Start: Button in Beiträgen
-/* Datum: 23.02.2018
-/* Autor: hgg
-/* z. Bsp.: weiße Farbe, bei Hover: grüner Button
-/*----------------------------------------------------------------*/
-
-/* Absatz für Button */
-.button-absatz {
-    margin:30px 0px 30px 0px;
-}
-
-.tribe-events-button-beitrag {
-    padding: 10px;
-    color: #ffffff!important;
-    font-size: 14px;
-    background-color: #77BCC7;
-    border-radius: 4px;
-    text-decoration: none!important;
+  padding-left: 1.5em;
 }
 
 
-a.tribe-events-button-beitrag:focus{
-  color: #fff!important;
+/* Der Link Kontakt ohne Unterstrich */
+article .entry-content a.kontakt:link {
   text-decoration: none;
+  border-bottom: 0; 
+  font-weight: inherit;
 }
 
-a.tribe-events-button-beitrag:visited{
-  color: #fff!important;
+article .entry-content a.kontakt:hover {
   text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
-  
-/* Hintergrund: gelb */  
-a.tribe-events-button-beitrag:hover{
-  color: #fff!important;
-  background-color: #F9B81E;
+/* Buttons mit Unterstrich */
+a.wp-block-button__link.has-background.no-border-radius:hover {
+  text-decoration-style: dotted;
 }
 
-/*----------------------------------------------------------------*/
-/* Ende: Button in Beiträgen
-/* Datum: 23.02.2018
-/* Autor: hgg
-/*----------------------------------------------------------------*/
-
-
-/*----------------------------------------------------------------*/
-/* Start: bei hover Link deutlicher hervorheben 
-/* Datum: 5.2.2020
-/* Autor: hgg
-/*----------------------------------------------------------------*/
-article .entry-content a:hover {
-    text-decoration: none;
-		background-color: #000;
-		color: #fff;
+/* bei Hover: dotted */
+a.wp-block-button__link.has-background.no-border-radius {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: white;
 }
 
-article .entry-content a:link {
-    text-decoration: none;
-    border-bottom: .1em dotted grey;
-    /* font-weight: bold; */
-}
-/*----------------------------------------------------------------*/
-/* Ende: bei hover Link deutlicher hervorheben 
-/* Datum: 5.2.2020
-/* Autor: hgg
-/*----------------------------------------------------------------*/
 
- 
+/* Icon für Mail und Telefon etwas kleiner
+.wp-block-image img {
+  max-width: 70%;
+}
+*/
+
+/* Block Pattern Kacheln */
+/* Randdarstellung für Kacheln */
+/* Randdarstellung für Kacheln 
+*/
+div.kacheln {
+  flex-basis: calc(50% - 16px);
+  flex-grow: 0;
+  box-shadow: 5px 5px 10px #888888;
+  padding: 15px;
+  opacity: 0.7;
+}
+
+/* Beim Überfahren mehr Schatten 
+*/
+div.kacheln:hover{
+  box-shadow: 10px 10px 15px #888888;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+  opacity: 1.0;
+  /* VERZÖGERUNG */
+ -webkit-transition: all 0.7s linear;
+ -moz-transition: all 0.7s linear;
+ -ms-transition: all 0.7s linear;
+ -o-transition: all 0.7s linear;
+ transition: all 0.7s linear;
+}
+
+/* Beschriftung der Kachel */
+figcaption {
+  padding: 10px;
+}
+
+/* Start: Einstellungen für Contact Form 7 */
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 input[type="tel"],
+.wpcf7 input[type="checkbox"],
+.wpcf7 textarea 
+{
+  border-color: #fd2900;
+  color: black;
+  margin-left: 0px;
+}
+
+
+.wpcf7 textarea {
+  width: 50rem;
+}
+
+label {
+  letter-spacing: normal;
+  font-family: "Source Sans Pro";
+}
+/* Ende: Einstellungen für Contact Form 7 */
+
+
+
+/* Breite des Blogs ändern */
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+  max-width: 110rem;
+  /* das war bereits drin:
+  width: calc(100% - 4rem);*/
+}
+
+
+/* Randdarstellung für Kacheln */
+.kachel_spalte {
+  flex-basis: calc(50% - 16px);
+  flex-grow: 0;
+  box-shadow: 5px 5px 10px #888888;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Beim Überfahren mehr Schatten */
+.kachel_spalte:hover {
+  box-shadow: 10px 10px 15px #888888;
+}
+
+
+/* Spalten von 3 auf 1 */
+@media (max-width:930px) {
+  .kachel_spalten {
+  /* folgende Zeile sorgt dafür, dass die Spalten untereinander gezeigt werden */
+  display: unset; 
+  background-color: unset;
+  max-width: 700px;
+  }
+  .kachel_spalte {
+    padding-top: 50px;
+    padding-bottom: 50px;
+        max-width: 600px;
+    margin-bottom:40px;
+    margin-left: auto!important;
+          margin-right: auto!important;
+}
+}
+
+/* Hintergrund für Slider-Text */
+.carousel-caption {
+  background-color: black;
+  opacity: 0.50;
+}
+
+/* header grau */
+.tc-header.header-transparent:not(.is-sticky) {
+  background: #555555;
+}
+
+/* auf kleineren Displays kein Parallax wegen Problemen mit iOS*/
+@media (max-width: 800px) {
+  .para_img {
+      background-attachment: scroll;
+  }
+}
+
+/* auf größeren Displays Parallax */
+@media (min-width: 801px) {
+.para_img {
+   background-attachment: fixed;
+   /* z-index:-1;
+   background-size: cover;
+   background-position: center;
+   background-size: cover; */
+}
+}
+
+
+/* Bild hervorgehoben mit Schatten */
+img.tc-smart-loaded {
+/* SCALE */
+-webkit-transform: scale(1);
+-moz-transform: scale(1);
+-ms-transform: scale(1);
+-o-transform: scale(1);
+transform: scale(1);
+/* VERZÖGERUNG */
+-webkit-transition: all 0.3s linear;
+-moz-transition: all 0.3s linear;
+-ms-transition: all 0.3s linear;
+-o-transition: all 0.3s linear;
+transition: all 0.3s linear;
+}
+
+img.tc-smart-loaded:hover {
+-webkit-transform: scale(1.01);
+-moz-transform: scale(1.01);
+-ms-transform: scale(1.01);
+-o-transform: scale(1.01);
+transform: scale(1.01);
+/* mit Schatten: */
+-webkit-filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
+filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
+}
+
+/* Bilder bei der Darstellung in der Übersicht in gleicher Höhe (z. B. Hauptseite mit Beiträgen), 15.3.2020, hgg */ 
+.entry-media__wrapper.czr__r-i.no-centering {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+
+/* Regel für Buttons im Block-Editor */
+a.eigener_block-button {
+  /* padding: 10px; */
+  color: #ffffff;
+  font-size: 1.0em;
+  background-color: #77BCC7;
+  /* keine runden Ecken */
+  /* border-radius: 4px; */
+  text-decoration: none!important;
+  border-bottom: none!important;
+}
+
+/* Regel für Buttons im Block-Editor */
+a.eigener_block-button {
+  padding: 10px;
+  color: #ffffff;
+  font-size: 1.0em;
+  background-color: #77BCC7;
+  /* keine runden Ecken */
+  /* border-radius: 4px; */
+  text-decoration: none!important;
+  border-bottom: none!important;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 840px) {
+.eigener_block-button {
+    font-size: 0.8em;
+}
+}
+
+
+a.eigener_block-button:visited{
+color: #fff!important;
+text-decoration: none;
+}
+
+/* Hintergrund: gelb */
+a.eigener_block-button:hover{
+color: #fff;
+background-color: #F9B81E;
+text-decoration: none!important;
+}
+
+a.eigener_block-button:focus{
+color: #fff!important;
+text-decoration: none;
+}
+
+/* keine gepunktete Linie bei den Buttons */
+a.fuss_button-beitrag {
+  border-bottom: 0px!important;
+}
+.wp-block-button__link {
+  border-bottom: 0px!important;
+}
+
+/* Action-Boxen nicht zeigen bei kleineren Displays 
+@media (max-width: 500px) {
+body .sektion-wrapper [data-sek-id=__nimble__e5c9936f4880]>.sek-container-fluid>.sek-sektion-inner {
+    visibility: hidden; 
+}
+[data-sek-id="__nimble__e5c9936f4880"] {
+    background-image: url(https://haurand.com/wp-content/uploads/2019/12/webentwicklung_check-2082845_1280.jpg) !important;
+}	
+}
+*/
+
+
+/* Schriftgröße und -art bei Code*/
+.sourcecode { 
+font-size: 0.8em;
+font-family: "Courier New", Times, serif;
+}
+
+/* Bei 4 Bildern muss 30s eingestellt werden */ 
+img.v-centered {
+    width: 100%;
+    animation: move 15s ease infinite;
+    /* Add infinite to loop. */
+    
+    -ms-animation: move 15s ease;
+    -webkit-animation: move 15s ease;
+    -animation: move 15s ease;
+    -moz-animation: move 15s ease;
+    position: absolute;
+  }
+
+  @-webkit-keyframes move {
+    0% {
+      -webkit-transform-origin: bottom left;
+      -moz-transform-origin: bottom left;
+      -ms-transform-origin: bottom left;
+      -o-transform-origin: bottom left;
+      transform-origin: bottom left;
+      transform: scale(1.0);
+      -ms-transform: scale(1.0);
+      /* IE 9 */
+      
+      -webkit-transform: scale(1.0);
+      /* Safari and Chrome */
+      
+      -o-transform: scale(1.0);
+      /* Opera */
+      
+      -moz-transform: scale(1.0);
+      /* Firefox */
+    }
+    50% {
+      transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      /* IE 9 */
+      
+      -webkit-transform: scale(1.2);
+      /* Safari and Chrome */
+      
+      -o-transform: scale(1.2);
+      /* Opera */
+      
+      -moz-transform: scale(1.2);
+      /* Firefox */
+    }
+
+    100% {
+      transform: scale(1.0);
+      -ms-transform: scale(1.0);
+      /* IE 9 */
+      
+      -webkit-transform: scale(1.0);
+      /* Safari and Chrome */
+      
+      -o-transform: scale(1.0);
+      /* Opera */
+      
+      -moz-transform: scale(1.0);
+      /* Firefox */
+    }
+}
+
+/* Hintergrund für Textboxen (Kontakt, ...)   
+body .sektion-wrapper [data-sek-id=__nimble__e5c9936f4880]>.sek-container-fluid>.sek-sektion-inner {
+  background: black;
+  opacity: 0.4;
+  padding-top: 20px;
+}
+*/
+
+/* Menue als Hamburger auch bei breiteren Ansichten zeigen */
+@media (min-width: 1300px) {
+.d-lg-none {
+    display: none!important;
+}
+}
+
+/* Menüzeile wegen Problem auf Mac schwarzer */
+/* Hintergrund mit weißer Schrift 
+.tc-header.header-transparent:not(.is-sticky) {
+  background: black;
+}
+*/
+
+/* Start Accordion 
+* {
+  box-sizing: border-box;
+}
+
+img {
+ max-width: 100%;
+}
+*/
+.details-wrapper {
+ width: 75vw;
+ margin: 0 auto;
+ background-color: #999999;
+ /* box-shadow:0 0 1px 2px #E5E5E5;*/ 	
+}
+
+summary:hover {
+background-color: #F7000F; 
+}
+
+summary:focus {
+ background-color: #F7000F;
+}
+
+details {
+ padding: 1rem;
+ font: 1rem/1.2 sans-serif;
+}
+
+summary {
+ padding: .25rem 1rem;
+ font: bold 1.25rem/2 sans-serif;
+ background-color: #999999;
+ /*   border: none;
+ border-radius: 3px;
+ box-shadow: 0 -1px 1px 1px rgba(0,0,0,0.5); */
+ color:floralwhite; 
+ cursor: pointer;	
+}
+
+summary::before {
+ padding-right: .25rem;
+}
+div.accordion {
+padding-top: 20px;
+line-height: 1.5rem;
+/* line-height:1.5px; 
+transition: all 0.35s; */
+}
+
+
+
+
