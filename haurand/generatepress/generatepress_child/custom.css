@@ -6,7 +6,9 @@ rot: #B70000 - RGB: (183, 0, 0)
 mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 */
 
-
+/* ------------------------------ */
+/* Bild auf dem Video */
+/* ------------------------------ */
 img.wp-image-3780 {
   width: 50%;
   animation-name: video_logo;
@@ -27,6 +29,10 @@ img.wp-image-3780 {
 
 }
 
+
+/* ------------------------------ */
+/* Text auf dem Video */
+/* ------------------------------ */
 h2.video_text{
   font-weight: 700;
   font-size: 2rem;
@@ -78,12 +84,16 @@ h2.video_text{
 }
 */
 
+/* ------------------------------ */
 /* Einen Block verstecken - unter erweitert: */
+/* ------------------------------ */
 .inhalt_verstecken {
   display: none; 
 }
 
+/* ------------------------------ */
 /* Telefon im Menü etwas nach unten */
+/* ------------------------------ */
 li#menu-item-2817 {
   margin-bottom: -20px;
 }
@@ -92,14 +102,18 @@ li#menu-item-2817 {
 /* UAGB - Block für neueste Beiträge */
 /* --------------------------------- */
 
+/* ------------------------------ */
 /* Hauptseite: Neueste Beiträge schmaler */
+/* ------------------------------ */
 .uagb-post__items, .uagb-post-grid {
 background-color: #D4DaDB;
 margin-left: calc(-100vw / 2 + 100% / 2);
 margin-right: calc(-100vw /2  + 100% / 2);
 }
 
+/* ------------------------------ */
 /* auf schmaleren Displays */
+/* ------------------------------ */
 @media only screen and (max-width: 767px) {
 .uagb-post__items {
  margin-right: 0px!important;
@@ -141,7 +155,9 @@ h3.uagb-post__title {
 
 
 
+/* ------------------------------ */
 /* Bildhöhe bei Einzelbeiträgen */
+/* ------------------------------ */
 @media (max-width: 1299px) {
 .uagb-post__image img {
  height: calc(9rem + 20px);
@@ -156,20 +172,24 @@ h3.uagb-post__title {
 
 
 
+/* ------------------------------ */
 /* Schriftdicke für Button bei Einzelbeiträgen */
+/* ------------------------------ */
 a.uagb-post__link.uagb-text-link {
 font-weight: 500!important;
 }
 
+/* ------------------------------ */
 /* Beiträge mit Linie nach unten */
+/* ------------------------------ */
 .uagb-post__image {
 border-bottom: 1px solid #d4dadb;
 }
 
+/* ------------------------------ */
 /* Newest Posts */
 /* Einstellungen  */
-
-
+/* ------------------------------ */
 
 .uagb-post-grid .uagb-post__link {
   background-color: #A9B2B5;
@@ -182,7 +202,9 @@ border-bottom: 1px solid #d4dadb;
   background-color: #B70000;
 }
 
+/* ------------------------------ */
 /* Link bei der Überschrift */
+/* ------------------------------ */
 .uagb-post-grid .uagb-post__title a, .uagb-post-grid .uagb-post__title a:hover, 
 .uagb-post-grid .uagb-post__title a:focus, .uagb-post-grid .uagb-post__title a:active{
 color: #b70000;
@@ -191,14 +213,18 @@ font-weight: 600;
 font-size: 1.6rem;
 }
 
+/* ------------------------------ */
 /* Überschrift  */
+/* ------------------------------ */
 .uagb-post-grid .uagb-post__title,
 .uagb-post__excerpt,
 .uagb-post-grid .uagb-post-grid-byline{
 text-align: left;
 }
 
+/* ------------------------------ */
 /* Buttons */
+/* ------------------------------ */
 .uagb-post__text .uagb-post__cta a,
 .uagb-post__text .uagb-post__cta a{
   font-weight: 500;
@@ -213,13 +239,17 @@ text-align: left;
 }
 
 
+/* ------------------------------ */
 /* unten runde Ecken */
+/* ------------------------------ */
 .uagb-post-grid .is-grid.uagb-post__equal-height .uagb-post__inner-wrap {
   border-radius: 0px 0px 50px 50px;
 }
 
 
+/* ------------------------------ */
 /* Einzelbeiträge mit runden Ecken unten */
+/* ------------------------------ */
 .uagb-block-23c9c34f .uagb-post__inner-wrap {
 border-radius: 30px;
 }
@@ -252,17 +282,17 @@ opacity: 1.0;
 transition: all 0.5s linear;
 }
 
-/* --------------------------------- */
+/* ------------------------------ */
 /* Breite für Blog Archive */
-/* --------------------------------- */
+/* ------------------------------ */
 body.blog .site.grid-container {
   max-width: 1800px;
 }
 
 
-/* ------------------------- */
+/* ------------------------------ */
 /* Darstellung Blog Archive  */
-/* ------------------------- */
+/* ------------------------------ */
 
 @media (max-width: 968px) {
 .site-content {
@@ -270,12 +300,6 @@ flex-direction: column;
 }
 }
 
-/* klappt nicht 
-img.attachment-full.size-full.wp-post-image:first-child {
-height: calc(13rem + 100px);
-border-bottom: 1px solid #D4DaDB;
-}
-*/
 
 img.attachment-full.size-full.wp-post-image {
 height: calc(10px + 13rem);
@@ -300,13 +324,10 @@ padding: 30px;
 border-radius: 30px
 }
 
-
-
 .generate-columns .inside-article {
 border-radius: 0px 0px 50px 50px;
 padding: 0px 0px 2rem 0px;
 }
-
 
 h2.entry-title {
 margin-left: 2rem;
@@ -331,15 +352,18 @@ margin-right: 2rem;
 
 
 
+/* ------------------------------ */
 /* Bilder in Beiträgen */
+/* ------------------------------ */
 div.bild_in_mitte {
 background-color: #D4DaDB;
 padding: 2rem;
 }
 
 
+/* ------------------------------ */
 /* Regel für zentrierten Button */
-
+/* ------------------------------ */
 .wp-block-column.container-zentriert,
 .zentrierter_button{
 margin-left: auto;
@@ -372,7 +396,9 @@ color: #fff;
 text-decoration: none;
 }
 
+/* ------------------------------ */
 /* Hintergrund: rot */
+/* ------------------------------ */
 a.eigener_block-button:hover,
 a.wp-block-button__link:hover{
 color: #fff;
@@ -386,10 +412,9 @@ text-decoration: none;
 }
 
 
-
-
-
-
+/* ------------------------------ */
+/* Schriftdicke bei Überschriften */
+/* ------------------------------ */
 h2 {
 font-weight: 700;
 }
@@ -399,21 +424,15 @@ font-weight: 600;
 }
 
 
-
-
-/*
-li {
-background-color: white;
-}
-*/
-
 .wp-block-latest-posts__post-excerpt {
 background-color: white;
 padding: 1rem;
 }
 
 
+/* ------------------------------ */
 /* Einstellung für grauen Block (5 Spalten und 2 Zeilen) */
+/* ------------------------------ */
 @media (min-width:782px) and (max-width:981px) { 
 /* 1. Spalte fällt weg */
 .wp-block-column.fuenf_spalten:first-child {
@@ -433,10 +452,9 @@ padding: 1rem;
 
 
 
-
-
-
+/* ------------------------------ */
 /* Gestaltung Über uns */
+/* ------------------------------ */
 @media (min-width: 781px) and (max-width: 870px) {
 p.grauer_kasten{
 font-size: 0.9em;
@@ -471,7 +489,9 @@ ul.ueber_uns {
 min-height: inherit;
 }
 
+/* ------------------------------ */
 /* Feste Höhe */
+/* ------------------------------ */
 @media (min-width: 781px) {
 ul.ueber_uns {
 min-height: calc(9rem + 10vw);
@@ -485,26 +505,24 @@ ul.ueber_uns {
 }
 
 
+/* ------------------------------ */
 /* runde bilder */
+/* ------------------------------ */
 img.wp-image-2111,
 img.wp-image-2110{
 height: 178px;
 margin-top: 3rem;
 }
 
-/* .wp-block-image figcaption {
-font-size: 1.2rem;
-text-align: center;
-color: white;
-font-weight: 700;
-}
-*/
 
+/* ------------------------------ */
 /* Gestaltung Referenzen */
+/* ------------------------------ */
 div.referenz {
 background-color: #A9B2B5;
 padding: 20px;
-color: white;}
+color: white;
+}
 
 p.referenz {
 margin: 20px;
@@ -521,14 +539,18 @@ max-width: 600px;
 
 
 
+/* ------------------------------ */
 /* Schriftgröße bei schmaleren Geräten */
+/* ------------------------------ */
 @media (max-width: 981px) {
 body {
   font-size: 1rem;
 }
 }
 
+/* ------------------------------ */
 /* Problem bei ungeraden Spalten weitestgehend behoben, aber nicht optimal */
+/* ------------------------------ */
 @media (min-width: 600px) and (max-width: 781px) {
 .wp-block-columns.has-3-columns {
 flex-flow: row wrap!important;
@@ -547,22 +569,21 @@ margin-left: 0em;
 
 
 
+/* ------------------------------ */
 /* Beitragsübersicht nicht mehr zweispaltig, sondern einspaltig: */
+/* ------------------------------ */
 @media (min-width: 600px) and (max-width: 781px) {
 .wp-block-columns {
-display: block; 
-margin-bottom: 1.75em;
-flex-wrap: wrap;
+  display: block; 
+  margin-bottom: 1.75em;
+  flex-wrap: wrap;
 }
-/*  .neue_beitraege {
-width:100%;
-display: contents;
-}
-*/
 } 
 
 
+/* ------------------------------ */
 /* Buttons unten mit mehr Padding */
+/* ------------------------------ */
 a.fuss_button-beitrag {
 padding: 15px;
 }
@@ -581,19 +602,21 @@ background-position: bottom right;
 background-size: 3em;    
 }
 
+/* ------------------------------ */
 /* Listen mit grauen Quadraten bei Aufzählung */
+/* ------------------------------ */
 @media (max-width: 782px){
 ul.rote_liste{
-font-size: 16px;
+  font-size: 16px;
 }
 ul.rote_liste {
-margin-left: 0px;
+  margin-left: 0px;
 }
 }
 
 @media (min-width: 783px){
 ul.rote_liste {
-font-size: 22px;
+  font-size: 22px;
 }
 }
 
@@ -612,7 +635,9 @@ color: white;
 }
 
 
+/* ------------------------------ */
 /* Beschriftung der Kachel */
+/* ------------------------------ */
 figcaption {
 padding: 10px;
 }
@@ -620,7 +645,9 @@ padding: 10px;
 
 
 
+/* ------------------------------ */
 /* keine gepunktete Linie bei den Buttons */
+/* ------------------------------ */
 a.fuss_button-beitrag {
 border-bottom: 0px!important;
 }
@@ -629,13 +656,17 @@ border-bottom: 0px!important;
 }
 
 
+/* ------------------------------ */
 /* Schriftgröße und -art bei Code*/
+/* ------------------------------ */
 .sourcecode { 
 font-size: 0.8em;
 font-family: "Courier New", Times, serif;
 }
 
+/* ------------------------------ */
 /* hier die Regeln für das Bild */
+/* ------------------------------ */
 .das_waere_die_regel_fuer_das_bild {	
 /*min-width: 100%;
 min-height: 100%; 
@@ -652,59 +683,53 @@ max-height: 400px; */
 
 @keyframes move {
 0% {
-/*
--webkit-transform-origin: left;
--moz-transform-origin: left;
--ms-transform-origin: left;
--o-transform-origin: left;
-transform-origin: left;
-*/
-transform: scale(1.0);
--ms-transform: scale(1.0);
-/* IE 9 */
+  transform: scale(1.0);
+  -ms-transform: scale(1.0);
+  /* IE 9 */
 
--webkit-transform: scale(1.0);
-/* Safari and Chrome */
+  -webkit-transform: scale(1.0);
+  /* Safari and Chrome */
 
--o-transform: scale(1.0);
-/* Opera */
+  -o-transform: scale(1.0);
+  /* Opera */
 
--moz-transform: scale(1.0);
-/* Firefox */
+  -moz-transform: scale(1.0);
+  /* Firefox */
 }
 50% {
-transform: scale(1.1);
--ms-transform: scale(1.1);
-/* IE 9 */
+  transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  /* IE 9 */
 
--webkit-transform: scale(1.1);
-/* Safari and Chrome */
+  -webkit-transform: scale(1.1);
+  /* Safari and Chrome */
 
--o-transform: scale(1.1);
-/* Opera */
+  -o-transform: scale(1.1);
+  /* Opera */
 
--moz-transform: scale(1.1);
-/* Firefox */
+  -moz-transform: scale(1.1);
+  /* Firefox */
 }
 100% {
 
-transform: scale(1.0);
--ms-transform: scale(1.0);
-/* IE 9 */
+  transform: scale(1.0);
+  -ms-transform: scale(1.0);
+  /* IE 9 */
 
--webkit-transform: scale(1.0);
-/* Safari and Chrome */
+  -webkit-transform: scale(1.0);
+  /* Safari and Chrome */
 
--o-transform: scale(1.0);
-/* Opera */
+  -o-transform: scale(1.0);
+  /* Opera */
 
--moz-transform: scale(1.0);
-/* Firefox */
+  -moz-transform: scale(1.0);
+  /* Firefox */
+  }
 }
-}
 
 
 
+/* ------------------------------ */
 /* Start Accordion 
 * {
 box-sizing: border-box;
@@ -714,6 +739,8 @@ img {
 max-width: 100%;
 }
 */
+
+
 .details-wrapper {
 width: 75vw;
 margin: 0 auto;
@@ -754,4 +781,3 @@ line-height: 1.5rem;
 /* line-height:1.5px; 
 transition: all 0.35s; */
 }
-
