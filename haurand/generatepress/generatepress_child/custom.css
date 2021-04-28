@@ -35,9 +35,10 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 
 /* auf schmaleren Displays */
 @media only screen and (max-width: 767px) {
-.uagb-post__items article {
-   padding-right: 0px;
-   padding-left: 0px;
+.uagb-post__items {
+   margin-right: 0px!important;
+   margin-left: 0px!important;
+	 padding-top: 50px;
    }
   h3.uagb-post__title {
     font-size: 1.0em;
@@ -170,6 +171,19 @@ opacity: 1.0;
 transition: all 0.5s linear;
 }
 
+/* --------------------------------- */
+/* Breite für Blog Archive */
+/* --------------------------------- */
+body.blog .site.grid-container {
+    max-width: 1800px;
+}
+
+
+.separate-containers .site-main>.generate-columns-container {
+    margin-bottom: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+}
 
 
 /* Regel für zentrierten Button */
