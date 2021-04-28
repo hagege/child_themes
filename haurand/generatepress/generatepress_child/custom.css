@@ -7,11 +7,85 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 */
 
 
-/* TEST ANFANG */
+img.wp-image-3780 {
+  width: 50%;
+  animation-name: video_logo;
+  animation-delay: 0.75s;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes video_logo {
+    0% {
+        width: 0%;
+}
+
+    100% {
+        width: 100%;
+    }
+
+}
+
+h2.video_text{
+  font-weight: 700;
+  font-size: 2rem;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+  animation-name: video_header;
+  animation-delay: 2.75s;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  text-shadow: 0px 0px 0.2rem #F9B81E;
+}
+
+@media only screen and (max-width: 767px) {
+@keyframes video_header {
+    0% {
+        opacity: 0;
+        font-size: 1.2rem;
+    }
+
+    100% {
+        opacity: 1;
+        font-size: 3rem;
+    }
+
+}
+}
+
+@media only screen and (min-width: 768px) {
+@keyframes video_header {
+    0% {
+        opacity: 0;
+        font-size: 2rem;
+    }
+
+    100% {
+        opacity: 1;
+        font-size: 5rem;
+    }
+
+}
+}
+
+/*
+.wp-block-cover__inner-container {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  color: white;
+}
+*/
 
 /* Einen Block verstecken - unter erweitert: */
 .inhalt_verstecken {
   display: none; 
+}
+
+/* Telefon im Menü etwas nach unten */
+li#menu-item-2817 {
+  margin-bottom: -20px;
 }
 
 /* --------------------------------- */
@@ -35,11 +109,21 @@ margin-right: calc(-100vw /2  + 100% / 2);
 h3.uagb-post__title {
   font-size: 1.0em;
 }
+.separate-containers .site-main>.generate-columns-container {
+  margin-bottom: 0;
+  padding-left: 2%;
+  padding-right: 2%;
+}
 }
 
 @media (min-width: 768px) and (max-width: 981px) {
 .uagb-post__items, .uagb-post-grid {
   padding: calc(1rem + 10px) calc(2rem + 10px) calc(1rem + 10px) calc(2rem + 10px);
+}
+.separate-containers .site-main>.generate-columns-container {
+  margin-bottom: 0;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 }
 
@@ -47,6 +131,11 @@ h3.uagb-post__title {
 @media  only screen and (min-width: 982px) {
 .uagb-post__items, .uagb-post-grid {
    padding: calc(2rem + 20px) calc(3rem + 20px) calc(2rem + 20px) calc(3rem + 20px);
+}
+.separate-containers .site-main>.generate-columns-container {
+  margin-bottom: 0;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 }  
 
@@ -171,10 +260,81 @@ body.blog .site.grid-container {
 }
 
 
-.separate-containers .site-main>.generate-columns-container {
-  margin-bottom: 0;
-  padding-left: 10%;
-  padding-right: 10%;
+/* ------------------------- */
+/* Darstellung Blog Archive  */
+/* ------------------------- */
+
+@media (max-width: 968px) {
+.site-content {
+flex-direction: column;
+}
+}
+
+/* klappt nicht 
+img.attachment-full.size-full.wp-post-image:first-child {
+height: calc(13rem + 100px);
+border-bottom: 1px solid #D4DaDB;
+}
+*/
+
+img.attachment-full.size-full.wp-post-image {
+height: calc(10px + 13rem);
+border-bottom: 1px solid #D4DaDB;
+}
+
+
+@media (max-width: 968px) {
+img.attachment-full.size-full.wp-post-image {
+height: calc(10px + 10rem);
+}
+}
+
+.generate-columns-container:not(.masonry-container) {
+background-color: #D4DaDB;
+padding: calc(2px + 0.5rem);
+}
+
+
+.generate-columns-container:not(.masonry-container) .generate-columns {
+padding: 30px;
+border-radius: 30px
+}
+
+
+
+.generate-columns .inside-article {
+border-radius: 0px 0px 50px 50px;
+padding: 0px 0px 2rem 0px;
+}
+
+
+h2.entry-title {
+margin-left: 2rem;
+margin-right: 2rem;
+padding-top: 2rem;
+}
+
+@media (max-width:781px) { 
+h2.entry-title {
+margin-left: 1rem;
+margin-right: 1rem;
+padding-top: 2rem;
+font-size: 1.5rem;
+}
+}
+
+.entry-meta,
+.entry-summary {
+margin-left: 2rem;
+margin-right: 2rem;	
+}
+
+
+
+/* Bilder in Beiträgen */
+div.bild_in_mitte {
+background-color: #D4DaDB;
+padding: 2rem;
 }
 
 
@@ -252,79 +412,6 @@ background-color: white;
 padding: 1rem;
 }
 
-
-/* Darstellung Blog Archive */
-
-
-@media (max-width: 968px) {
-.site-content {
-flex-direction: column;
-}
-}
-
-
-
-img.attachment-full.size-full.wp-post-image {
-height: calc(10px + 13rem);
-border-bottom: 1px solid #D4DaDB;
-}
-
-
-@media (max-width: 968px) {
-img.attachment-full.size-full.wp-post-image {
-height: calc(10px + 10rem);
-}
-}
-
-.generate-columns-container:not(.masonry-container) {
-background-color: #D4DaDB;
-padding: calc(2px + 0.5rem);
-}
-
-
-.generate-columns-container:not(.masonry-container) .generate-columns {
-padding: 30px;
-border-radius: 999px
-}
-
-
-
-.generate-columns .inside-article {
-border-radius: 0px 0px 50px 50px;
-padding: 0px 0px 2rem 0px;
-}
-
-
-h2.entry-title {
-margin-left: 2rem;
-margin-right: 2rem;
-padding-top: 2rem;
-}
-
-@media (max-width:781px) { 
-h2.entry-title {
-margin-left: 1rem;
-margin-right: 1rem;
-padding-top: 2rem;
-font-size: 1.5rem;
-}
-}
-
-.entry-meta,
-.entry-summary {
-margin-left: 2rem;
-margin-right: 2rem;	
-}
-
-
-
-/* TEST ENDE */
-
-/* Bilder in Beiträgen */
-div.bild_in_mitte {
-background-color: #D4DaDB;
-padding: 2rem;
-}
 
 /* Einstellung für grauen Block (5 Spalten und 2 Zeilen) */
 @media (min-width:782px) and (max-width:981px) { 
