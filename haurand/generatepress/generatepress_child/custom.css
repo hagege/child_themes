@@ -22,6 +22,10 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 }
 */
 
+/* --------------------------------- */
+/* UAGB - Block für neueste Beiträge */
+/* --------------------------------- */
+
 /* Hauptseite: Neueste Beiträge schmaler */
 .uagb-block-8a5086df .uagb-post__items {
   margin-right: calc(5rem - 20px);
@@ -29,11 +33,138 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 }
 
 @media (max-width: 982px) {
-.uagb-post__items.uagb-post__columns-2.is-grid.uagb-post__columns-tablet-2.uagb-post__columns-mobile-1.uagb-post__equal-height {
-    margin-left: 0px;
-    margin-right: 0px;
+  .uagb-post__items.uagb-post__columns-2.is-grid.uagb-post__columns-tablet-2.uagb-post__columns-mobile-1.uagb-post__equal-height {
+      margin-left: 0px;
+      margin-right: 0px;
+  }
 }
+
+/* Schriftdicke für Button bei Einzelbeiträgen */
+a.uagb-post__link.uagb-text-link {
+  font-weight: 500!important;
 }
+
+/* Beiträge mit Linie nach unten */
+.uagb-post__image {
+  border-bottom: 1px solid #d4dadb;
+}
+
+/* Newest Posts */
+/* Einstellungen  */
+
+@media (max-width: 981px) {
+  .uagb-post__items, .uagb-post-grid {
+    background-color: #D4DaDB;
+    padding: 2rem;
+  }
+  }
+  
+  @media (min-width: 982px) {
+  .uagb-post__items, .uagb-post-grid{
+    background-color: #D4DaDB;
+    padding: 7rem;
+    margin-left: calc(-100vw / 2 + 100% / 2);
+    margin-right: calc(-100vw /2  + 100% / 2);
+    max-width: 100vw;
+    width: auto;
+  }
+  }
+  
+  .uagb-post-grid .uagb-post__link {
+    background-color: #A9B2B5;
+    text-decoration: none!important;
+    border-radius: 30px!important;
+    font-weight: 400;
+  }
+  
+  .uagb-post__cta a:hover {
+    background-color: #B70000;
+  }
+  
+  /* Link bei der Überschrift */
+  .uagb-post-grid .uagb-post__title a, .uagb-post-grid .uagb-post__title a:hover, 
+  .uagb-post-grid .uagb-post__title a:focus, .uagb-post-grid .uagb-post__title a:active{
+  color: #b70000;
+  text-decoration: none!important;
+  font-weight: 600;
+  font-size: 1.6rem;
+  }
+  
+  /* Überschrift  */
+  .uagb-post-grid .uagb-post__title,
+  .uagb-post__excerpt,
+  .uagb-post-grid .uagb-post-grid-byline{
+  text-align: left;
+  }
+  
+  /* Buttons */
+  .uagb-post__text .uagb-post__cta a,
+  .uagb-post__text .uagb-post__cta a{
+    font-weight: 500;
+    background-color: #A9B2B5;
+    text-decoration: none;
+  }
+  
+  .uagb-post__text .uagb-post__cta a:hover,
+  .uagb-post__text .uagb-post__cta a:hover{
+    font-weight: 500;
+    background-color: #B70000!important	
+  }
+  
+  
+  /* unten runde Ecken */
+  .uagb-post-grid .is-grid.uagb-post__equal-height .uagb-post__inner-wrap {
+    border-radius: 0px 0px 50px 50px;
+  }
+  
+  /* auf schmaleren Displays */
+  @media only screen and (max-width: 767px) {
+  .uagb-block-2e51dfe1 .uagb-post__items article {
+   padding-right: 0px;
+   padding-left: 0px;
+   }
+  h3.uagb-post__title {
+    font-size: 1.0em;
+  }
+  }
+  
+  
+  /* Bildhöhe bei Einzelbeiträgen */
+  @media (max-width: 1299px) {
+  .uagb-post-grid .uagb-post__image img {
+   height: calc(9rem + 10px);
+  }
+  }
+  
+  @media (min-width: 1300px){
+  .uagb-post-grid .uagb-post__image img {
+  height: 200px;
+  }
+  }
+  
+  /* Übersicht mit weniger Padding */
+  @media (min-width: 982px) {
+  .uagb-post__items, .uagb-post-grid {
+    padding: 2rem;
+  }
+  }
+  
+  @media (max-width: 981px) {
+  .uagb-post__items, .uagb-post-grid {
+    padding: calc(0.1rem + 3px)
+  }
+  }
+  
+  /* Einzelbeiträge mit runden Ecken unten */
+.uagb-block-23c9c34f .uagb-post__inner-wrap {
+  border-radius: 30px;
+  }
+  
+
+
+/* --------------------------------- */
+/* UAGB und weitere Elemente         */
+/* --------------------------------- */
 
 /* Schatten bei Beitragsübersicht unter Blog und auf der Hauptseite */
 .generate-columns .inside-article,
@@ -107,10 +238,6 @@ text-decoration: none;
 }
 
 
-/* Schriftdicke für Button bei Einzelbeiträgen */
-a.uagb-post__link.uagb-text-link {
-  font-weight: 500!important;
-}
 
 
 
@@ -316,10 +443,6 @@ border-radius: 50px;
 max-width: 600px;
 }
 
-/* Beiträge mit Linie nach unten */
-.uagb-post__image {
-border-bottom: 1px solid #d4dadb;
-}
 
 
 
@@ -363,121 +486,12 @@ margin-left: 0em;
 */
 } 
 
-/* Newest Posts */
-/* Einstellungen  */
-
-@media (max-width: 981px) {
-.uagb-post__items, .uagb-post-grid {
-  background-color: #D4DaDB;
-  padding: 2rem;
-}
-}
-
-@media (min-width: 982px) {
-.uagb-post__items, .uagb-post-grid{
-  background-color: #D4DaDB;
-  padding: 7rem;
-  margin-left: calc(-100vw / 2 + 100% / 2);
-  margin-right: calc(-100vw /2  + 100% / 2);
-  max-width: 100vw;
-  width: auto;
-}
-}
-
-.uagb-post-grid .uagb-post__link {
-  background-color: #A9B2B5;
-  text-decoration: none!important;
-  border-radius: 30px!important;
-  font-weight: 400;
-}
-
-.uagb-post__cta a:hover {
-  background-color: #B70000;
-}
-
-/* Link bei der Überschrift */
-.uagb-post-grid .uagb-post__title a, .uagb-post-grid .uagb-post__title a:hover, 
-.uagb-post-grid .uagb-post__title a:focus, .uagb-post-grid .uagb-post__title a:active{
-color: #b70000;
-text-decoration: none!important;
-font-weight: 600;
-font-size: 1.6rem;
-}
-
-/* Überschrift  */
-.uagb-post-grid .uagb-post__title,
-.uagb-post__excerpt,
-.uagb-post-grid .uagb-post-grid-byline{
-text-align: left;
-}
-
-/* Buttons */
-.uagb-post__text .uagb-post__cta a,
-.uagb-post__text .uagb-post__cta a{
-  font-weight: 500;
-  background-color: #A9B2B5;
-  text-decoration: none;
-}
-
-.uagb-post__text .uagb-post__cta a:hover,
-.uagb-post__text .uagb-post__cta a:hover{
-  font-weight: 500;
-  background-color: #B70000!important	
-}
-
-
-/* unten runde Ecken */
-.uagb-post-grid .is-grid.uagb-post__equal-height .uagb-post__inner-wrap {
-  border-radius: 0px 0px 50px 50px;
-}
-
-/* auf schmaleren Displays */
-@media only screen and (max-width: 767px) {
-.uagb-block-2e51dfe1 .uagb-post__items article {
- padding-right: 0px;
- padding-left: 0px;
- }
-h3.uagb-post__title {
-  font-size: 1.0em;
-}
-}
-
-
-/* Bildhöhe bei Einzelbeiträgen */
-@media (max-width: 1299px) {
-.uagb-post-grid .uagb-post__image img {
- height: calc(9rem + 10px);
-}
-}
-
-@media (min-width: 1300px){
-.uagb-post-grid .uagb-post__image img {
-height: 200px;
-}
-}
-
-/* Übersicht mit weniger Padding */
-@media (min-width: 982px) {
-.uagb-post__items, .uagb-post-grid {
-  padding: 2rem;
-}
-}
-
-@media (max-width: 981px) {
-.uagb-post__items, .uagb-post-grid {
-  padding: calc(0.1rem + 3px)
-}
-}
 
 /* Buttons unten mit mehr Padding */
 a.fuss_button-beitrag {
 padding: 15px;
 }
 
-/* Einzelbeiträge mit runden Ecken unten */
-.uagb-block-23c9c34f .uagb-post__inner-wrap {
-border-radius: 30px;
-}
 
 
 
