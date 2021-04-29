@@ -111,7 +111,10 @@ register_block_pattern(
     'description' => _x( 'Überschrift (h2), Überschrift (h3) und linksbündiger Absatz', 'Überschrift (h2), Überschrift (h3) und linksbündiger Absatz', 'ueberschrift_blog' ),
     'categories'  => array('Haurand'),
     'content'     =>
-       "<!-- wp:heading -->
+        "<!-- wp:spacer {\"height\":20} -->
+        <div style=\"height:20px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>
+        <!-- /wp:spacer -->
+        <!-- wp:heading -->
         <h2>Button mit dem Block-Editor erstellen und gestalten.</h2>
         <!-- /wp:heading -->
 
@@ -225,7 +228,7 @@ register_block_pattern(
       "<!-- wp:columns {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#d4dadb\"}}} -->
       <div class=\"wp-block-columns alignfull has-background\" style=\"background-color:#d4dadb\"><!-- wp:column -->
       <div class=\"wp-block-column\"><!-- wp:image {\"align\":\"center\",\"id\":5171,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->
-      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><a href=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_2.jpg\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_2.jpg\" alt=\"\" class=\"wp-image-5171\"/></a></figure></div>
+      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><a href=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_erfassen_4.jpg\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_erfassen_4.jpg\" alt=\"\" class=\"wp-image-5171\"/></a></figure></div>
       <!-- /wp:image --></div>
       <!-- /wp:column --></div>
       <!-- /wp:columns -->",

@@ -13,7 +13,8 @@
 1. Allgemein
 1.1. Menue
 1.2. Buttons
-1.3. Diverses
+1.3. Blog
+1.4. Diverses
 4. Nicht mehr benötigt?
 
 WATCH: Muss weiter beobachtet werden.
@@ -37,24 +38,6 @@ Web und Bildschirm Druck
 /* 0. Neu dazu                                          */
 /* ---------------------------------------------------- */
 
-  /* für wichtige Infos */
-p.links_wichtig, p.links_orange{
-    border-left: 5px solid #B70000;
-    padding: 10px;
-   }
-   
-   
-h1, h2, h3, h4, h5 {
-  text-align: center;
-}
-
-h1 {
-    font-weight: 700;
-}
-
-h2 {
-    font-weight: 500;
-}
 
 
 /* img.attachment-medium.size-medium.wp-post-image  
@@ -83,13 +66,81 @@ img.beitragsbild_hauptseite {
 /* 1. Allgemeines */
 /* ----------------------------------------------------------------------------- */
 
-      
-   /* für Zitate */
+
+/* ------------------------------ */
+/* Schriftgröße und -art bei Code*/
+/* ------------------------------ */
+.sourcecode { 
+	font-size: 0.8em;
+	font-family: "Courier New", Times, serif;
+}
+
+/* ------------------------------ */
+/* Problem bei ungeraden Spalten weitestgehend behoben, aber nicht optimal */
+/* ------------------------------ */
+@media (min-width: 600px) and (max-width: 781px) {
+  .wp-block-columns.has-3-columns {
+  flex-flow: row wrap!important;
+  }
+  
+  .has-3-columns .wp-block-column:first-child {
+  flex-basis: 100%!important;
+  }
+  .wp-block-column.is-vertically-aligned-bottom {
+    margin-left: 0em;
+  }
+  .wp-block-column:not(:first-child) {
+  margin-left: 0em;
+  }
+}
+  
+ 
+/* ----------------------------------------- */
+/* Einen Block verstecken - unter erweitert: */
+/* ----------------------------------------- */
+.inhalt_verstecken {
+  display: none; 
+}
+
+
+
+
+/* für wichtige Infos */
+p.links_wichtig, p.links_orange{
+    border-left: 5px solid #B70000;
+    padding: 10px;
+   }
+   
+
+   
+/* ------------------------------ */
+/* Schriftdicke bei Überschriften */
+/* ------------------------------ */
+
+h1, h2, h3, h4, h5 {
+  text-align: center;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+
+
+/* für Zitate */
    blockquote.wp-block-quote.links_schwarz {
      border-left: 5px solid #000000;
      padding: 10px;
      padding-left: 1.5em;
-   }
+}
  
 /* Links in Seiten und Beiträgen */
 body.single .entry-content a,
@@ -121,6 +172,12 @@ body.page .entry-content a:hover {
 /* Fußbereich                                         */
 /* ---------------------------------------------------- */
 
+/* ------------------------------ */
+/* Buttons unten mit mehr Padding */
+/* ------------------------------ */
+a.fuss_button-beitrag {
+	padding: 15px;
+}
 
 /* Fußzeile bündig mit haurand.com */ 
 .footer-bar-align-right .copyright-bar {
@@ -163,13 +220,154 @@ body.page .entry-content a:hover {
   
 
 
+/* ----------------------------------------------------- */
+/* Einstellung für grauen Block (5 Spalten und 2 Zeilen) */
+/* ----------------------------------------------------- */
+@media (min-width:782px) and (max-width:981px) { 
+  /* 1. Spalte fällt weg */
+  .wp-block-column.fuenf_spalten:first-child {
+      display: none;
+    }
   
+  /* 5. Spalte fällt weg */
+  .wp-block-column.fuenf_spalten:last-child {
+      display: none;
+    }
+  
+  /* die verbliebenen Spalten erhalten eine Breite von 33,33% */
+  .wp-block-column.fuenf_spalten {
+      flex-basis: 33.33%!important;
+  }
+  }   
+
+/* ---------------------------- */
+/* rechte untere Ecke */
+/* ---------------------------- */
+.rechte_untere_ecke {
+	position: relative; 
+	background-image: url("https://wp.haurand.com/wp-content/uploads/2021/04/Eckendeko_ohne_Rahmen.jpg");
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-size: 3em;    
+}
+
+/* ------------------------------ */
+/* Listen mit grauen Quadraten bei Aufzählung */
+/* ------------------------------ */
+@media (max-width: 782px){
+	ul.rote_liste{
+		font-size: 16px;
+	}
+	ul.rote_liste {
+		margin-left: 0px;
+	}
+}
+
+@media (min-width: 783px){
+	ul.rote_liste {
+		font-size: 22px;
+	}
+}
+
+
+ul.rote_liste,
+ul.ueber_uns {
+	list-style: square;
+}
+
+ul.rote_liste li::marker {
+	color: #A9B2B5;
+}
+
+figcaption {
+	color: white;
+}
+
+
+
+/* ------------------------------ */
+/* Gestaltung Referenzen */
+/* ------------------------------ */
+div.referenz {
+	background-color: #A9B2B5;
+	padding: 20px;
+	color: white;
+}
+
+p.referenz {
+	margin: 20px;
+}
+
+div.referenz-spalte {
+	background-color: #ffffff;	
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 50px;
+	max-width: 600px;
+}
   
 
+/* ------------------------------ */
+/* Start Accordion * 
+/* ------------------------------ */
+/*
+img {
+  max-width: 100%;
+}
+*/
+
+
+.details-wrapper {
+	width: 75vw;
+	margin: 0 auto;
+	background-color: #999999;
+	/* box-shadow:0 0 1px 2px #E5E5E5;*/ 	
+}
+
+summary:hover {
+	background-color: #F7000F; 
+}
+
+summary:focus {
+	background-color: #F7000F;
+}
+
+details {
+	padding: 1rem;
+	font: 1rem/1.2 sans-serif;
+}
+
+summary {
+	padding: .25rem 1rem;
+	font: bold 1.25rem/2 sans-serif;
+	background-color: #999999;
+	/*   border: none;
+	border-radius: 3px;
+	box-shadow: 0 -1px 1px 1px rgba(0,0,0,0.5); */
+	color:floralwhite; 
+	cursor: pointer;	
+}
+
+summary::before {
+	padding-right: .25rem;
+}
+div.accordion {
+	padding-top: 20px;
+	line-height: 1.5rem;
+	/* line-height:1.5px; 
+	transition: all 0.35s; */
+}
 
 /* ---------------------------------------------------- */
 /* 1.1. Menue                                           */
 /* ---------------------------------------------------- */
+
+/* ------------------------------ */
+/* Telefon im Menü etwas nach unten */
+/* ------------------------------ */
+li#menu-item-2817 {
+  margin-bottom: -20px;
+}
 
   /* ----------------------------- */
   /* Navigation                    */
@@ -215,6 +413,17 @@ body.page .entry-content a:hover {
 /* ---------------------------------------------------- */
 /* 1.2. Buttons                                         */
 /* ---------------------------------------------------- */
+
+/* -------------------------------------- */
+/* keine gepunktete Linie bei den Buttons */
+/* -------------------------------------- */
+a.fuss_button-beitrag {
+	border-bottom: 0px!important;
+}
+.wp-block-button__link {
+	border-bottom: 0px!important;
+}
+
 
 /* Farben für "Weiterlesen-Button" */
 a.read-more.button {
@@ -274,11 +483,159 @@ a.corona-button-beitrag {
 
 
 /* ---------------------------------------------------- */
-/* 1.3. Diverses                                        */
+/* 1.3. Blog                                            */
 /* ---------------------------------------------------- */
 
+/* ------------------------------ */
+/* Breite für Blog Archive */
+/* ------------------------------ */
+body.blog .site.grid-container {
+  max-width: 1800px;
+}
+
+.wp-block-latest-posts__post-excerpt {
+  background-color: white;
+  padding: 1rem;
+}
 
 
+/* ------------------------------ */
+/* Beitragsübersicht nicht mehr zweispaltig, sondern einspaltig: */
+/* ------------------------------ */
+@media (min-width: 600px) and (max-width: 781px) {
+	.wp-block-columns {
+		display: block; 
+		margin-bottom: 1.75em;
+		flex-wrap: wrap;
+	}
+} 
+
+
+/* ------------------------------ */
+/* Darstellung Blog Archive       */
+/* ------------------------------ */
+
+@media (max-width: 968px) {
+  .site-content {
+    flex-direction: column;
+  }
+  }
+  
+  
+  img.attachment-full.size-full.wp-post-image {
+    height: calc(10px + 13rem);
+    border-bottom: 1px solid #D4DaDB;
+  }
+  
+  
+  @media (max-width: 968px) {
+  img.attachment-full.size-full.wp-post-image {
+    height: calc(10px + 10rem);
+  }
+  }
+  
+  .generate-columns-container:not(.masonry-container) {
+    background-color: #D4DaDB;
+    padding: calc(2px + 0.5rem);
+  }
+  
+  
+  .generate-columns-container:not(.masonry-container) .generate-columns {
+    padding: 30px;
+    border-radius: 30px
+  }
+  
+  .generate-columns .inside-article {
+    border-radius: 0px 0px 50px 50px;
+    padding: 0px 0px 2rem 0px;
+  }
+  
+  h2.entry-title {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-top: 2rem;
+  }
+  
+  @media (max-width:781px) { 
+  h2.entry-title {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-top: 2rem;
+    font-size: 1.5rem;
+  }
+  }
+  
+  .entry-meta,
+  .entry-summary {
+    margin-left: 2rem;
+    margin-right: 2rem;	
+  }
+  
+  
+  
+  /* ------------------------------ */
+  /* Bilder in Beiträgen */
+  /* ------------------------------ */
+  div.bild_in_mitte {
+    background-color: #D4DaDB;
+    padding: 2rem;
+  }
+  
+  
+  /* ------------------------------ */
+  /* Regel für zentrierten Button */
+  /* ------------------------------ */
+  .wp-block-column.container-zentriert,
+  .zentrierter_button{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  
+  
+  a.eigener_block-button,
+  a.wp-block-button__link{
+    text-decoration: none!important;
+    padding: 10px 20px!important;;
+    color: #ffffff;
+    font-size: 1.2em!important;
+    font-weight:500!important;;
+    background-color: #A9B2B5;
+    border-radius: 50px;
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 840px) {
+  .eigener_block-button {
+    font-size: 0.8em;
+  }
+  }
+  
+  
+  a.eigener_block-button:visited,
+  a.wp-block-button__link:visited{
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* ------------------------------ */
+  /* Hintergrund: rot */
+  /* ------------------------------ */
+  a.eigener_block-button:hover,
+  a.wp-block-button__link:hover{
+  color: #fff;
+  background-color: #B70000!important;
+  }
+  
+  a.eigener_block-button:focus,
+  a.wp-block-button__link:focus{
+  color: #fff;
+  text-decoration: none;
+  }
+  
+
+/* ---------------------------------------------------- */
+/* 1.3. Diverses                                        */
+/* ---------------------------------------------------- */
 
 
 
