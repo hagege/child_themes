@@ -101,6 +101,31 @@ register_block_pattern(
 );
 
 
+/* ----------------------------------------------------------- */
+/* Überschrift (h2), Überschrift (h3) und linksbündiger Absatz */
+/* ----------------------------------------------------------- */
+register_block_pattern(
+  'ueberschrift_blog',
+    array(
+    'title' => __( 'Überschrift (h2), Überschrift (h3) und linksbündiger Absatz', 'ueberschrift_blog' ),
+    'description' => _x( 'Überschrift (h2), Überschrift (h3) und linksbündiger Absatz', 'Überschrift (h2), Überschrift (h3) und linksbündiger Absatz', 'ueberschrift_blog' ),
+    'categories'  => array('Haurand'),
+    'content'     =>
+       "<!-- wp:heading -->
+        <h2>Button mit dem Block-Editor erstellen und gestalten.</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:heading {\"textAlign\":\"left\",\"level\":3} -->
+        <h3 class=\"has-text-align-left\">Grundsätzlich ist es kein großes Problem, wenn man einen Button mit dem Block-Editor erstellen will. Man klickt auf den entsprechenden Button-Block und schon ist der Button da. Aber die Gestaltungsmöglichkeiten bei den Eigenschaften sind doch arg begrenzt.</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>In unserem Fall wollten wir einen Button erstellen, der genau in der Mitte des Bildschirms zu sehen ist und als Hover-Effekt (beim Überfahren mit der Maus) die Farbe von grau auf rot wechselt.</p>
+        <!-- /wp:paragraph -->",
+        )
+);
+
+
 /* ---------------------------------- */
 /* zentrierter Button                 */
 /* ---------------------------------- */
@@ -131,21 +156,17 @@ register_block_pattern(
     'description' => _x( 'Mittelgrauer Container für 2 Bilder', 'Ein Container für 2 Bilder mit mittelgrauem Hintergrund', 'container_mittelgrau_bilder' ),
     'categories'  => array('Haurand'),
     'content'     =>
-      "<!-- wp:columns {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#a9b2b5\"}}} -->
-      <div class=\"wp-block-columns alignfull has-background\" style=\"background-color:#a9b2b5\"><!-- wp:column -->
-      <div class=\"wp-block-column\"><!-- wp:columns -->
-      <div class=\"wp-block-columns\"><!-- wp:column {\"verticalAlignment\":\"center\"} -->
-      <div class=\"wp-block-column is-vertically-aligned-center\"><!-- wp:image {\"align\":\"right\",\"id\":3780,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->
-      <div class=\"wp-block-image\"><figure class=\"alignright size-large\"><a href=\"https://wp.haurand.com/wp-content/uploads/2021/04/Logo.png\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/Logo.png\" alt=\"\" class=\"wp-image-3780\"/></a></figure></div>
+      "<!-- wp:columns {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#d4dadb\"}}} -->
+      <div class=\"wp-block-columns alignfull has-background\" style=\"background-color:#d4dadb\"><!-- wp:column -->
+      <div class=\"wp-block-column\"><!-- wp:image {\"align\":\"center\",\"id\":5150,\"width\":547,\"height\":321,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->
+      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large is-resized\"><a href=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_erfassen_3.jpg\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_erfassen_3.jpg\" alt=\"Button mit dem Block-Editor\" class=\"wp-image-5150\" width=\"547\" height=\"321\"/></a><figcaption>Grafik: haurand.com</figcaption></figure></div>
       <!-- /wp:image --></div>
       <!-- /wp:column -->
       
-      <!-- wp:column {\"verticalAlignment\":\"center\"} -->
-      <div class=\"wp-block-column is-vertically-aligned-center\"><!-- wp:image {\"align\":\"left\",\"id\":3711,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->
-      <div class=\"wp-block-image\"><figure class=\"alignleft size-large\"><a href=\"https://wp.haurand.com/wp-content/uploads/2021/03/2021-03-30-09_23_59-Window.png\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/03/2021-03-30-09_23_59-Window.png\" alt=\"Auswahl im Block-Editor\" class=\"wp-image-3711\"/></a><figcaption>Grafik: haurand.com</figcaption></figure></div>
+      <!-- wp:column -->
+      <div class=\"wp-block-column\"><!-- wp:image {\"align\":\"center\",\"id\":5149,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->
+      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><a href=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_erfassen_4.jpg\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_erfassen_4.jpg\" alt=\"Button mit dem Block-Editor\" class=\"wp-image-5149\"/></a><figcaption>Grafik: haurand.com</figcaption></figure></div>
       <!-- /wp:image --></div>
-      <!-- /wp:column --></div>
-      <!-- /wp:columns --></div>
       <!-- /wp:column --></div>
       <!-- /wp:columns -->",
   )
@@ -162,8 +183,8 @@ register_block_pattern(
     'description' => _x( 'Mittelgrauer Container mit Text links und Bild rechts', 'Mittelgrauer Container mit Text links und Bild rechts', 'container_mittelgrau_bild_text' ),
     'categories'  => array('Haurand'),
     'content'     =>
-      "<!-- wp:columns {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#a9b2b5\"}}} -->
-        <div class=\"wp-block-columns alignfull has-background\" style=\"background-color:#a9b2b5\"><!-- wp:column -->
+      "<!-- wp:columns {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#d4dadb\"}}} -->
+        <div class=\"wp-block-columns alignfull has-background\" style=\"background-color:#d4dadb\"><!-- wp:column -->
         <div class=\"wp-block-column\"><!-- wp:columns -->
         <div class=\"wp-block-columns\"><!-- wp:column {\"verticalAlignment\":\"center\"} -->
         <div class=\"wp-block-column is-vertically-aligned-center\"><!-- wp:paragraph {\"textColor\":\"white\"} -->
@@ -201,13 +222,13 @@ register_block_pattern(
     'description' => _x( 'Mittelgrauer Container für 1 Bild', 'Ein Container für 1 Bild mit mittelgrauem Hintergrund', 'container_mittelgrau_bild' ),
     'categories'  => array('Haurand'),
     'content'     =>
-      "<!-- wp:columns {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#a9b2b5\"}}} -->
-        <div class=\"wp-block-columns alignfull has-background\" style=\"background-color:#a9b2b5\"><!-- wp:column -->
-        <div class=\"wp-block-column\"><!-- wp:image {\"align\":\"center\",\"id\":3713,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->
-        <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><a href=\"https://wp.haurand.com/wp-content/uploads/2021/03/2021-03-30-09_35_50-Window.png\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/03/2021-03-30-09_35_50-Window.png\" alt=\"Direkteingabe beim Block-Editor im Auswahlfeld\" class=\"wp-image-3713\"/></a><figcaption>Grafik: haurand.com</figcaption></figure></div>
-        <!-- /wp:image --></div>
-        <!-- /wp:column --></div>
-        <!-- /wp:columns -->",
+      "<!-- wp:columns {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#d4dadb\"}}} -->
+      <div class=\"wp-block-columns alignfull has-background\" style=\"background-color:#d4dadb\"><!-- wp:column -->
+      <div class=\"wp-block-column\"><!-- wp:image {\"align\":\"center\",\"id\":5171,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->
+      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><a href=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_2.jpg\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_2.jpg\" alt=\"\" class=\"wp-image-5171\"/></a></figure></div>
+      <!-- /wp:image --></div>
+      <!-- /wp:column --></div>
+      <!-- /wp:columns -->",
     )
 );
 
