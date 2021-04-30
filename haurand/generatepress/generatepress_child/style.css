@@ -256,10 +256,10 @@ a.fuss_button-beitrag {
 			margin-bottom: 1.75em;
 			flex-wrap: nowrap;
 	}
-	.wp-block-column.fuenf_spalten:first-child {
+	.wp-block-column.fuenf_spalten_bilder:first-child {
     display: none;
 	}
-	.wp-block-column.fuenf_spalten:last-child {
+	.wp-block-column.fuenf_spalten_bilder:last-child {
     display: none;
 	}
 }
@@ -268,20 +268,62 @@ a.fuss_button-beitrag {
 
 @media (min-width:782px) and (max-width:981px) { 
   /* 1. Spalte fällt weg */
-  .wp-block-column.fuenf_spalten:first-child {
+  .wp-block-column.fuenf_spalten_bilder:first-child {
       display: none;
     }
   
   /* 5. Spalte fällt weg */
-  .wp-block-column.fuenf_spalten:last-child {
+  .wp-block-column.fuenf_spalten_bilder:last-child {
       display: none;
     }
   
   /* die verbliebenen Spalten erhalten eine Breite von 33,33% */
-  .wp-block-column.fuenf_spalten {
+  .wp-block-column.fuenf_spalten_bilder {
       flex-basis: 33.33%!important;
   }
-  }   
+}   
+
+
+/* ----------------------------------------------------- */
+/* Einstellung für grauen Block (5 Spalten und 2 Zeilen) */
+/* ----------------------------------------------------- */
+/* Auch auf kleineren Display 3-spaltig */
+@media (min-width: 682px) and (max-width: 781px){
+	.grauer_block {
+			display: flex;
+			margin-bottom: 1.75em;
+			flex-wrap: nowrap;
+	}
+	.wp-block-column.fuenf_spalten_bilder:first-child {
+    display: none;
+	}
+	.wp-block-column.fuenf_spalten_bilder:last-child {
+    display: none;
+	}
+}
+
+
+
+@media (min-width:782px) and (max-width:981px) { 
+  /* 1. Spalte fällt weg */
+  .wp-block-column.fuenf_spalten_bilder:first-child {
+      display: none;
+    }
+  
+  /* 5. Spalte fällt weg */
+  .wp-block-column.fuenf_spalten_bilder:last-child {
+      display: none;
+    }
+  
+  /* die verbliebenen Spalten erhalten eine Breite von 33,33% */
+  .wp-block-column.fuenf_spalten_bilder:nth-child(2n) {
+      flex-basis: 49%!important;
+  }
+
+  .wp-block-column.fuenf_spalten_bilder:nth-child(3) {
+    flex-basis: 2%!important;
+  }
+}  
 
 /* ---------------------------- */
 /* rechte untere Ecke */
@@ -430,14 +472,14 @@ li#menu-item-2817 {
         color: #B70000;
         display: block;
         width: 0;
-        height: 5px;   
+        height: 2px;   
         background-color: currentColor;
         transition: 0.3s width ease;
     }
     .main-navigation .menu > .menu-item.current-menu-item > a::after,
     .main-navigation .menu > .menu-item > a:hover::after {
         width: 100%;
-        color: #3C4346;
+        color: #A9B2B5;
     }
   
   .main-navigation .menu > .menu-item.current-menu-item > a::after,
