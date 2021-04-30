@@ -66,6 +66,21 @@ img.beitragsbild_hauptseite {
 /* 1. Allgemeines */
 /* ----------------------------------------------------------------------------- */
 
+/* ----------------------------------- */
+/* Schriftgröße bei schmaleren Geräten */
+/* ----------------------------------- */
+@media (max-width: 981px) {
+  body {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (min-width: 982px) and (max-width: 1123px) {
+  body {
+      font-size: 1.2rem;
+    }
+  }
+  
 
 /* ------------------------------ */
 /* Schriftgröße und -art bei Code*/
@@ -217,12 +232,40 @@ a.fuss_button-beitrag {
       background-color: white;
   }
   }
-  
 
+
+/* ------------------------------ */
+/* Beitragsübersicht nicht mehr zweispaltig, sondern einspaltig: */
+/* ------------------------------ */
+@media (min-width: 600px) and (max-width: 781px) {
+	.wp-block-columns {
+		display: block; 
+		margin-bottom: 1.75em;
+		flex-wrap: wrap;
+	}
+}   
+ 
 
 /* ----------------------------------------------------- */
 /* Einstellung für grauen Block (5 Spalten und 2 Zeilen) */
 /* ----------------------------------------------------- */
+/* Auch auf kleineren Display 3-spaltig */
+@media (min-width: 682px) and (max-width: 781px){
+	.grauer_block {
+			display: flex;
+			margin-bottom: 1.75em;
+			flex-wrap: nowrap;
+	}
+	.wp-block-column.fuenf_spalten:first-child {
+    display: none;
+	}
+	.wp-block-column.fuenf_spalten:last-child {
+    display: none;
+	}
+}
+
+
+
 @media (min-width:782px) and (max-width:981px) { 
   /* 1. Spalte fällt weg */
   .wp-block-column.fuenf_spalten:first-child {
@@ -498,17 +541,6 @@ body.blog .site.grid-container {
   padding: 1rem;
 }
 
-
-/* ------------------------------ */
-/* Beitragsübersicht nicht mehr zweispaltig, sondern einspaltig: */
-/* ------------------------------ */
-@media (min-width: 600px) and (max-width: 781px) {
-	.wp-block-columns {
-		display: block; 
-		margin-bottom: 1.75em;
-		flex-wrap: wrap;
-	}
-} 
 
 
 /* ------------------------------ */
