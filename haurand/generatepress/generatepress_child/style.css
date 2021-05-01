@@ -190,34 +190,6 @@ a.fuss_button-beitrag {
 }
 
 
-@media (max-width: 768px) {
-  .site-footer .footer-widgets .footer-widgets-container .inside-footer-widgets 	/* Fußbereich */
-    {
-      padding: 20px;
-    }
-    /* Veranstaltungen */
-  }
-  
-  /* Container mit Footer-Widgets */	
-  .site-footer .footer-widgets-container .inside-footer-widgets {
-      background-color: white;
-      opacity: 0.8;
-  }
-  
-  
-  /* Bild im Fußbereich */
-  .footer-widgets {
-      background-attachment: fixed;
-  }
-  
-  /* Container mit Footer-Widgets */
-  @media (max-width: 620px) {
-  .footer-widgets-container {
-      background-color: white;
-  }
-  }
-
-
 /* ------------------------------ */
 /* Beitragsübersicht nicht mehr zweispaltig, sondern einspaltig: */
 /* ------------------------------ */

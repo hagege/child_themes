@@ -6,7 +6,9 @@ rot: #B70000 - RGB: (183, 0, 0)
 mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 */
 
-/* Container mit 2 Bildern */
+/* ----------------------------- */
+/* Einstellungen Container mit 2 Bildern */
+/* ----------------------------- */
 .wp-block-columns.alignwide.container_mit_bildern.has-background {
   max-width: 100%;
   margin-left: 20px;
@@ -14,6 +16,15 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
   margin-bottom: 0px;
 }
 
+/* damit nur 1200px maximal genutzt werden - entsprechend der maximalen Breite für den Text */
+@media only screen and (min-width: 1200px) {
+.wp-block-columns.alignfull.container_mit_bildern.has-background {
+    max-width: 1200px;
+    margin-left: calc((100vw - 1200px)/2);
+}
+}
+
+/* der äußere Container */
 .container_aussen {
 width: 100%;	
 background-color: #d4dadb;
@@ -23,6 +34,7 @@ background-color: #d4dadb;
 }
 
 
+/* Text kleiner bei schmaleren Devices */
 @media only screen and (max-width: 768px) {
 .has-text-align-center {
   line-height: 1.2;
@@ -30,6 +42,8 @@ background-color: #d4dadb;
 }
 }
 
+
+/* unklar */
 .page.separate-containers:not(.blog):nog(.home) .inside-article {
   padding: 10px;
 }
