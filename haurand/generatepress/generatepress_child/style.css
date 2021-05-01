@@ -189,11 +189,6 @@ a.fuss_button-beitrag {
     margin-top: 9px;
 }
 
-/* Fußbereich: zusätzlicher Rand */
-.footer-widget-2, .footer-widget-1 {
-  margin: 10px;
-}
-
 
 @media (max-width: 768px) {
   .site-footer .footer-widgets .footer-widgets-container .inside-footer-widgets 	/* Fußbereich */
@@ -455,7 +450,7 @@ li#menu-item-2817 {
         position: absolute;
         right: 0;
         left: 50%;
-        bottom: 0px;
+        bottom: 10px;
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
         color: #B70000;
@@ -475,12 +470,26 @@ li#menu-item-2817 {
     .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
     .main-navigation .menu > .menu-item > a:active::after {
         width: 100%;
-    color: #B70000;
+        color: #B70000;
     }
   /* Submenü */
   ul.sub-menu {
-    opacity: 0.9!important;
+    opacity: 0.96!important;
   }
+}
+
+.sticky-navigation-logo {
+  margin: 10px;
+}
+
+.navigation-branding img, .site-logo.mobile-header-logo img {
+  height: 65px!important;
+}
+
+@media (max-width: 768px) {
+.site-header .header-image {
+  width: 200px;
+}
 }
 
 

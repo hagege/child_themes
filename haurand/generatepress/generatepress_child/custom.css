@@ -6,14 +6,6 @@ rot: #B70000 - RGB: (183, 0, 0)
 mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 */
 
-/* Testen 
-.navigation-branding img, .site-logo.mobile-header-logo img {
-    margin-left: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-*/
-
 /* Container mit 2 Bildern */
 .wp-block-columns.alignwide.container_mit_bildern.has-background {
   max-width: 100%;
@@ -26,8 +18,6 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 width: 100%;	
 background-color: #d4dadb;
 }
-
-
 .wp-block-image.bild_zentriert {
   text-align: center;
 }
@@ -35,16 +25,14 @@ background-color: #d4dadb;
 
 @media only screen and (max-width: 768px) {
 .has-text-align-center {
-  line-height: 1.3;
-  font-size: 0.8em;
-}
-.uagb-post__excerpt {
-  line-height: 1.3;
+  line-height: 1.2;
   font-size: 0.8em;
 }
 }
 
-
+.page.separate-containers:not(.blog):nog(.home) .inside-article {
+  padding: 10px;
+}
 
 /* ------------------------------ */
 /* Bild auf dem Video */
