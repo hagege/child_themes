@@ -6,6 +6,17 @@ rot: #B70000 - RGB: (183, 0, 0)
 mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 */
 
+/* Blog-Archive: runde Ecken */
+a.read-more.button {
+  border-radius: 30px;
+}
+
+/* Blog-Archive: zentrierter Button */
+p.read-more-container {
+  text-align: center;
+}
+
+
 /* Liste mit roten Markern */
 ul.weisse_liste li::marker {
   color: #B70000;
@@ -36,6 +47,15 @@ ul.weisse_liste {
 }
 }
 
+.container_aussen {
+width: 100%;	
+background-color: #d4dadb;
+}
+
+
+.wp-block-image.bild_zentriert {
+  text-align: center;
+}
 
 /* Beim Überfahren mehr Schatten 
 
@@ -55,15 +75,7 @@ transition: all 0.7s linear;
 }
 */
 
-.container_aussen {
-width: 100%;	
-background-color: #d4dadb;
-}
 
-
-.wp-block-image.bild_zentriert {
-  text-align: center;
-}
 
 
 /* unklar */
