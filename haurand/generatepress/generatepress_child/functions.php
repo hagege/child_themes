@@ -148,6 +148,27 @@ register_block_pattern(
 );
 
 
+/* -------------------------------------- */
+/* Container mit einem zentrierten Button */
+/* -------------------------------------- */
+register_block_pattern(
+  'container_button_zentriert',
+    array(
+    'title' => __( 'Container mit einem zentrierten Button', 'container_button_zentriert' ),
+    'description' => _x( 'Container mit einem zentrierten Button', 'Ein Container mit Bild / Listbox / Eckengrafik per CSS-Klasse', 'container_button_zentriert' ),
+    'categories'  => array('Haurand'),
+    'content'     =>
+      "<!-- wp:columns -->
+        <div class=\"wp-block-columns\"><!-- wp:column {\"className\":\"container-zentriert\"} -->
+        <div class=\"wp-block-column container-zentriert\"><!-- wp:html -->
+        <a class=\"eigener_block-button\" href=\"https://wp.haurand.com/blog/\">Zum Blog</a>
+        <!-- /wp:html --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns -->",
+        )
+  );
+
+
 
 /* ---------------------------------- */
 /* Container mittelgrau mit 2 Bildern */
@@ -159,22 +180,50 @@ register_block_pattern(
     'description' => _x( 'Mittelgrauer Container für 2 Bilder', 'Ein Container für 2 Bilder mit mittelgrauem Hintergrund', 'container_mittelgrau_bilder' ),
     'categories'  => array('Haurand'),
     'content'     =>
-      "<!-- wp:columns {\"verticalAlignment\":\"center\",\"align\":\"wide\",\"style\":{\"color\":{\"background\":\"#d4dadb\"}}} -->
-      <div class=\"wp-block-columns alignwide are-vertically-aligned-center has-background\" style=\"background-color:#d4dadb\"><!-- wp:column {\"verticalAlignment\":\"center\"} -->
-      <div class=\"wp-block-column is-vertically-aligned-center\"><!-- wp:image {\"align\":\"center\",\"id\":5150,\"width\":547,\"height\":321,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->
-      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large is-resized\"><a href=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_erfassen_3.jpg\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_erfassen_3.jpg\" alt=\"Button mit dem Block-Editor\" class=\"wp-image-5150\" width=\"547\" height=\"321\"/></a><figcaption>Grafik: haurand.com</figcaption></figure></div>
+      "<!-- wp:columns {\"align\":\"full\"} -->
+      <div class=\"wp-block-columns alignfull\"><!-- wp:column {\"width\":\"\",\"className\":\"container_aussen\"} -->
+      <div class=\"wp-block-column container_aussen\"><!-- wp:columns {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#d4dadb\"}},\"className\":\"container_mit_bildern\"} -->
+      <div class=\"wp-block-columns alignfull container_mit_bildern has-background\" style=\"background-color:#d4dadb\"><!-- wp:column {\"verticalAlignment\":\"center\",\"width\":\"50%\"} -->
+      <div class=\"wp-block-column is-vertically-aligned-center\" style=\"flex-basis:50%\"><!-- wp:image {\"align\":\"center\",\"id\":5153,\"sizeSlug\":\"large\",\"linkDestination\":\"media\",\"className\":\"bild_zentriert\"} -->
+      <div class=\"wp-block-image bild_zentriert\"><figure class=\"aligncenter size-large\"><a href=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_erfassen_6.jpg\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_erfassen_6.jpg\" alt=\"Button mit dem Block-Editor\" class=\"wp-image-5153\"/></a></figure></div>
       <!-- /wp:image --></div>
       <!-- /wp:column -->
       
-      <!-- wp:column {\"verticalAlignment\":\"center\"} -->
-      <div class=\"wp-block-column is-vertically-aligned-center\"><!-- wp:image {\"align\":\"center\",\"id\":5149,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->
-      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><a href=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_erfassen_4.jpg\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_erfassen_4.jpg\" alt=\"Button mit dem Block-Editor\" class=\"wp-image-5149\"/></a><figcaption>Grafik: haurand.com</figcaption></figure></div>
+      <!-- wp:column {\"verticalAlignment\":\"center\",\"width\":\"50%\"} -->
+      <div class=\"wp-block-column is-vertically-aligned-center\" style=\"flex-basis:50%\"><!-- wp:image {\"align\":\"center\",\"id\":5155,\"sizeSlug\":\"large\",\"linkDestination\":\"media\",\"className\":\"bild_zentriert\"} -->
+      <div class=\"wp-block-image bild_zentriert\"><figure class=\"aligncenter size-large\"><a href=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_erfassen_7.jpg\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_erfassen_7.jpg\" alt=\"Button mit dem Block-Editor\" class=\"wp-image-5155\"/></a></figure></div>
       <!-- /wp:image --></div>
+      <!-- /wp:column --></div>
+      <!-- /wp:columns --></div>
       <!-- /wp:column --></div>
       <!-- /wp:columns -->",
   )
 );
 
+
+/* ---------------------------------- */
+/* Container mittelgrau mit 1 Bild    */
+/* ---------------------------------- */
+register_block_pattern(
+  'container_mittelgrau_bild',
+    array(
+    'title' => __( 'Mittelgrauer Container mit 1 Bild', 'container_mittelgrau_bild' ),
+    'description' => _x( 'Mittelgrauer Container für 1 Bild', 'Ein Container für 1 Bild mit mittelgrauem Hintergrund', 'container_mittelgrau_bild' ),
+    'categories'  => array('Haurand'),
+    'content'     =>
+      "<!-- wp:columns {\"align\":\"full\"} -->
+      <div class=\"wp-block-columns alignfull\"><!-- wp:column {\"width\":\"\",\"className\":\"container_aussen\"} -->
+      <div class=\"wp-block-column container_aussen\"><!-- wp:columns {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#d4dadb\"}},\"className\":\"container_mit_bildern\"} -->
+      <div class=\"wp-block-columns alignfull container_mit_bildern has-background\" style=\"background-color:#d4dadb\"><!-- wp:column {\"verticalAlignment\":\"center\",\"width\":\"100%\"} -->
+      <div class=\"wp-block-column is-vertically-aligned-center\" style=\"flex-basis:100%\"><!-- wp:image {\"align\":\"center\",\"id\":5149,\"sizeSlug\":\"large\",\"linkDestination\":\"media\",\"className\":\"bild_zentriert\"} -->
+      <div class=\"wp-block-image bild_zentriert\"><figure class=\"aligncenter size-large\"><a href=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_erfassen_4.jpg\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_erfassen_4.jpg\" alt=\"Button mit dem Block-Editor\" class=\"wp-image-5149\"/></a><figcaption>Grafik: haurand.com</figcaption></figure></div>
+      <!-- /wp:image --></div>
+      <!-- /wp:column --></div>
+      <!-- /wp:columns --></div>
+      <!-- /wp:column --></div>
+      <!-- /wp:columns -->",
+    )
+);
 
 /* --------------------------------------------------- */
 /* Container mittelgrau mit Text links und Bild rechts */
@@ -215,26 +264,38 @@ register_block_pattern(
 );
 
 
-/* ---------------------------------- */
-/* Container mittelgrau mit 1 Bild    */
-/* ---------------------------------- */
+/* ------------------------------ */
+/* Container weiß mit Listen      */
+/* ------------------------------ */
 register_block_pattern(
-  'container_mittelgrau_bild',
+  'listbox_weiss',
     array(
-    'title' => __( 'Mittelgrauer Container mit 1 Bild', 'container_mittelgrau_bild' ),
-    'description' => _x( 'Mittelgrauer Container für 1 Bild', 'Ein Container für 1 Bild mit mittelgrauem Hintergrund', 'container_mittelgrau_bild' ),
+    'title' => __( 'Listbox weiß', 'listbox_weiss' ),
+    'description' => _x( 'Listbox weiß ', 'Eine Listbox mit weißer Hintergrundfarbe und roten Kästchen', 'listbox_weiss' ),
     'categories'  => array('Haurand'),
     'content'     =>
-      "<!-- wp:columns {\"verticalAlignment\":null,\"align\":\"wide\",\"style\":{\"color\":{\"background\":\"#d4dadb\"}}} -->
-      <div class=\"wp-block-columns alignwide has-background\" style=\"background-color:#d4dadb\"><!-- wp:column {\"verticalAlignment\":\"center\"} -->
-      <div class=\"wp-block-column is-vertically-aligned-center\"><!-- wp:image {\"align\":\"center\",\"id\":5171,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->
-      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><a href=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_erfassen_3.jpg\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_2.jpg\" alt=\"\" class=\"wp-image-5171\"/></a></figure></div>
-      <!-- /wp:image --></div>
-      <!-- /wp:column --></div>
-      <!-- /wp:columns -->",
-    )
+       "<!-- wp:list {\"className\":\"weisse_liste\"} -->
+       <ul class=\"weisse_liste\"><li>Fotos</li><li>Texten</li><li>Formularen</li><li>Social Media Buttons</li><li>Downloadbereich</li><li>Newsverwaltung</li><li>Mehrsprachigkeit</li><li>DSGVO- Sicherheit</li><li>und allem, was Ihnen wichtig ist</li></ul>
+       <!-- /wp:list -->",
+  )
 );
 
+
+/* ------------------------------ */
+/* Container rot mit Listen       */
+/* ------------------------------ */
+register_block_pattern(
+  'listbox_rot',
+    array(
+    'title' => __( 'Listbox rot', 'listbox_rot' ),
+    'description' => _x( 'Listbox rot', 'Eine Listbox mit roter Hintergrundfarbe', 'listbox_rot' ),
+    'categories'  => array('Haurand'),
+    'content'     =>
+       "<!-- wp:list {\"style\":{\"color\":{\"background\":\"#b70000\"}},\"textColor\":\"white\",\"className\":\"rote_liste\"} -->
+       <ul class=\"rote_liste has-white-color has-text-color has-background\" style=\"background-color:#b70000\"><li>Fotos</li><li>Texten</li><li>Formularen</li><li>Social Media Buttons</li><li>Downloadbereich</li><li>Newsverwaltung</li><li>Mehrsprachigkeit</li><li>DSGVO- Sicherheit</li><li>und allem, was Ihnen wichtig ist</li></ul>
+       <!-- /wp:list -->",
+  )
+);
 
 /* ----------------------------------------------------- */
 /* Container mittelgrau mit zwei Zeilen und fünf Spalten */
@@ -387,52 +448,11 @@ register_block_pattern(
   );
 
 
-/* -------------------------------------- */
-/* Container mit einem zentrierten Button */
-/* -------------------------------------- */
-register_block_pattern(
-  'container_button_zentriert',
-    array(
-    'title' => __( 'Container mit einem zentrierten Button', 'container_button_zentriert' ),
-    'description' => _x( 'Container mit einem zentrierten Button', 'Ein Container mit Bild / Listbox / Eckengrafik per CSS-Klasse', 'container_button_zentriert' ),
-    'categories'  => array('Haurand'),
-    'content'     =>
-      "<!-- wp:columns -->
-        <div class=\"wp-block-columns\"><!-- wp:column {\"className\":\"container-zentriert\"} -->
-        <div class=\"wp-block-column container-zentriert\"><!-- wp:html -->
-        <a class=\"eigener_block-button\" href=\"https://wp.haurand.com/blog/\">Zum Blog</a>
-        <!-- /wp:html --></div>
-        <!-- /wp:column --></div>
-        <!-- /wp:columns -->",
-        )
-  );
-
-
-/* ------------------------------ */
-/* Container rot mit Listen       */
-/* ------------------------------ */
-register_block_pattern(
-  'listbox_rot',
-    array(
-    'title' => __( 'Listbox rot', 'listbox_rot' ),
-    'description' => _x( 'Listbox rot', 'Eine Listbox mit roter Hintergrundfarbe', 'listbox_rot' ),
-    'categories'  => array('Haurand'),
-    'content'     =>
-       "<!-- wp:list {\"style\":{\"color\":{\"background\":\"#b70000\"}},\"textColor\":\"white\",\"className\":\"rote_liste\"} -->
-       <ul class=\"rote_liste has-white-color has-text-color has-background\" style=\"background-color:#b70000\"><li>Fotos</li><li>Texten</li><li>Formularen</li><li>Social Media Buttons</li><li>Downloadbereich</li><li>Newsverwaltung</li><li>Mehrsprachigkeit</li><li>DSGVO- Sicherheit</li><li>und allem, was Ihnen wichtig ist</li></ul>
-       <!-- /wp:list -->",
-  )
-);
-
-
 /*----------------------------------------------------------------*/
 /* Ende: Block Patterns von haurand.com 
 /* Datum: 14.01.2021
 /* Autor: hgg
 /*----------------------------------------------------------------*/
-
-
-
 
 
 

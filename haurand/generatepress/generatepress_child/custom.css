@@ -6,6 +6,21 @@ rot: #B70000 - RGB: (183, 0, 0)
 mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 */
 
+/* Liste mit roten Markern */
+ul.weisse_liste li::marker {
+  color: #B70000;
+}
+
+ul.weisse_liste {
+  list-style: square;
+}
+
+/* Links im Footer unsterstrichen */
+.footer-widgets a {
+  text-decoration: underline;
+}
+
+
 /* Container mit Bildern */
 .container_mit_bildern {
   margin-top: 1em;
@@ -13,10 +28,39 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
   padding-bottom: 0px!important;
 }
 
+/* damit nur 1200px maximal genutzt werden - entsprechend der maximalen Breite für den Text */
+@media only screen and (min-width: 1200px) {
+.wp-block-columns.alignfull.container_mit_bildern.has-background {
+  max-width: 1200px;
+  margin-left: calc((100vw - 1200px)/2);
+}
+}
+
+
+/* Beim Überfahren mehr Schatten 
+
+.bild_zentriert:hover {
+box-shadow: 20px -19px 20px 0px #A9B2B5;
+-webkit-transform: scale(1.02);
+-moz-transform: scale(1.02);
+-ms-transform: scale(1.02);
+-o-transform: scale(1.02);
+transform: scale(1.02);
+/* VERZÖGERUNG 
+-webkit-transition: all 0.7s linear;
+-moz-transition: all 0.7s linear;
+-ms-transition: all 0.7s linear;
+-o-transition: all 0.7s linear;
+transition: all 0.7s linear;
+}
+*/
+
 .container_aussen {
 width: 100%;	
 background-color: #d4dadb;
 }
+
+
 .wp-block-image.bild_zentriert {
   text-align: center;
 }
