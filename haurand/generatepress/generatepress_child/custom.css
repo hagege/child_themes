@@ -6,58 +6,19 @@ rot: #B70000 - RGB: (183, 0, 0)
 mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 */
 
-/* Beim Überfahren mehr Schatten 
- */
- .bild_zentriert:hover {
-  box-shadow: 10px 10px 15px #A9B2B5;
-  -webkit-transform: scale(1.02);
-  -moz-transform: scale(1.02);
-  -ms-transform: scale(1.02);
-  -o-transform: scale(1.02);
-  transform: scale(1.02);
-  opacity: 1.0;
-  /* VERZÖGERUNG */
- -webkit-transition: all 0.7s linear;
- -moz-transition: all 0.7s linear;
- -ms-transition: all 0.7s linear;
- -o-transition: all 0.7s linear;
- transition: all 0.7s linear;
-}
-
-/* ----------------------------- */
-/* Einstellungen Container mit 2 Bildern */
-/* ----------------------------- */
-.wp-block-columns.alignwide.container_mit_bildern.has-background {
-  max-width: 100%;
-  margin-left: 20px;
-  margin-right: 20px;
+/* Container mit Bildern */
+.container_mit_bildern {
+  margin-top: 1em;
   margin-bottom: 0px;
+  padding-bottom: 0px!important;
 }
 
-/* damit nur 1200px maximal genutzt werden - entsprechend der maximalen Breite für den Text */
-@media only screen and (min-width: 1200px) {
-.wp-block-columns.alignfull.container_mit_bildern.has-background {
-    max-width: 1200px;
-    margin-left: calc((100vw - 1200px)/2);
-}
-}
-
-/* der äußere Container */
 .container_aussen {
 width: 100%;	
 background-color: #d4dadb;
 }
 .wp-block-image.bild_zentriert {
   text-align: center;
-}
-
-
-/* Text kleiner bei schmaleren Devices */
-@media only screen and (max-width: 768px) {
-.has-text-align-center {
-  line-height: 1.2;
-  font-size: 0.8em;
-}
 }
 
 

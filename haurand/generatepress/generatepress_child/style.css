@@ -79,6 +79,18 @@ img.beitragsbild_hauptseite {
 	font-family: "Courier New", Times, serif;
 }
 
+
+/* Text kleiner bei schmaleren Devices */
+@media only screen and (max-width: 768px) {
+  .has-text-align-center,
+  .uagb-post__excerpt,
+  .entry-summary {
+    font-size: 0.8em;
+  }
+}
+
+
+
 /* ------------------------------ */
 /* Problem bei ungeraden Spalten weitestgehend behoben, aber nicht optimal */
 /* ------------------------------ */
