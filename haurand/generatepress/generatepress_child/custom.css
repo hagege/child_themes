@@ -6,7 +6,10 @@ rot: #B70000 - RGB: (183, 0, 0)
 mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 */
 
+/* TEST */
 
+
+/* TEST */
 
 
 
@@ -33,9 +36,10 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 
 
 /* unklar */
-.page.separate-containers:not(.blog):nog(.home) .inside-article {
+.page.separate-containers:not(.blog):not(.home) .inside-article {
   padding: 10px;
 }
+
 
 /* ------------------------------ */
 /* Bild auf dem Video */
