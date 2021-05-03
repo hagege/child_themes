@@ -96,15 +96,15 @@ max-width: 300px;
 
 
 /* Ken Burns Effekt auf Beitragsseiten */
-.featured-image.page-header-image-single {
+.__abgeschaltet_featured-image.page-header-image-single {
 overflow: hidden;
 }
 
 /* hier die Regeln für das Bild */
-.featured-image.page-header-image-single img {	
+.__abgeschaltet_featured-image.page-header-image-single img {	
 min-width: 100%;
 min-height: 100%; 
-/* Add infinite to loop. */
+/* Add infinite to loop. 
 animation: move 15s ease;
 -ms-animation: move 15s ease;
 -webkit-animation: move 15s ease;
