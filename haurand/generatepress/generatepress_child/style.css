@@ -30,6 +30,11 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 FARBWERTE
 Web und Bildschirm Druck
 
+Devices:
+768px (Smartphone)
+968px (Tablet)
+
+
 */
 
 
@@ -206,7 +211,7 @@ body.page .entry-content a:hover {
 
 
 
-@media (min-width:782px) and (max-width:981px) { 
+@media (min-width:782px) and (max-width:968px) { 
   /* 1. Spalte fällt weg */
   .wp-block-column.fuenf_spalten_bilder:first-child {
       display: none;
@@ -244,7 +249,7 @@ body.page .entry-content a:hover {
 
 
 
-@media (min-width:782px) and (max-width:981px) { 
+@media (min-width:782px) and (max-width:968px) { 
   /* 1. Spalte fällt weg */
   .wp-block-column.fuenf_spalten_bilder:first-child {
       display: none;
@@ -787,9 +792,9 @@ p.read-more-container {
 }
 
 
-@media only screen and (max-width: 981px) {
+@media only screen and (max-width: 968px) {
 .wp-block-latest-posts.is-grid li {
-    margin: 0 1.25em 1.25em 0;
+    margin: 0 0 3em 0;
     width: 100%;
 }
 .wp-block-latest-posts__post-excerpt {

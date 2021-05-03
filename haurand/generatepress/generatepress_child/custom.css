@@ -8,6 +8,19 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 
 /* TEST */
 
+li > a {
+	text-decoration: none!important;
+	font-size: 1.2em;
+	font-weight: 600;	
+}
+
+@media only screen and (max-width: 968px) {
+li > a {
+	font-size: 1.0em;
+	font-weight: 600;	
+}
+	
+}
 
 /* TEST */
 
@@ -37,7 +50,7 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 
 /* unklar */
 .page.separate-containers:not(.blog):not(.home) .inside-article {
-  padding: 10px;
+    padding: 10px;
 }
 
 
@@ -45,77 +58,77 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 /* Bild auf dem Video */
 /* ------------------------------ */
 img.wp-image-3780 {
-  width: 50%;
-  animation-name: video_logo;
-  animation-delay: 0.75s;
-  animation-duration: 10s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: both;
+		width: 50%;
+    animation-name: video_logo;
+    animation-delay: 0.75s;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
 }
 
 @keyframes video_logo {
-    0% {
-        width: 0%;
-}
+			0% {
+					width: 0%;
+	}
 
-    100% {
-        width: 100%;
-    }
+			100% {
+					width: 100%;
+			}
 
-}
+	}
 
 
 /* ------------------------------ */
 /* Text auf dem Video */
 /* ------------------------------ */
 h2.video_text{
-  font-weight: 700;
-  font-size: 2rem;
-  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
-  animation-name: video_header;
-  animation-delay: 2.75s;
-  animation-duration: 10s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: both;
-  text-shadow: 0px 0px 0.2rem #F9B81E;
+    font-weight: 700;
+    font-size: 2rem;
+    text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    animation-name: video_header;
+    animation-delay: 2.75s;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+		text-shadow: 0px 0px 0.2rem #F9B81E;
 }
 
 @media only screen and (max-width: 767px) {
-@keyframes video_header {
-    0% {
-        opacity: 0;
-        font-size: 1.2rem;
-    }
+	@keyframes video_header {
+			0% {
+					opacity: 0;
+					font-size: 1.2rem;
+			}
 
-    100% {
-        opacity: 1;
-        font-size: 3rem;
-    }
+			100% {
+					opacity: 1;
+					font-size: 3rem;
+			}
 
-}
+	}
 }
 
 @media only screen and (min-width: 768px) {
-@keyframes video_header {
-    0% {
-        opacity: 0;
-        font-size: 2rem;
-    }
+	@keyframes video_header {
+			0% {
+					opacity: 0;
+					font-size: 2rem;
+			}
 
-    100% {
-        opacity: 1;
-        font-size: 5rem;
-    }
+			100% {
+					opacity: 1;
+					font-size: 5rem;
+			}
 
-}
+	}
 }
 
 /*
 .wp-block-cover__inner-container {
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
-  color: white;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    color: white;
 }
 */
 
@@ -127,8 +140,8 @@ h2.video_text{
 /* ------------------------------ */
 img.wp-image-2111,
 img.wp-image-2110{
-height: 178px;
-margin-top: 3rem;
+	height: 178px;
+	margin-top: 3rem;
 }
 
 
@@ -143,7 +156,7 @@ margin-top: 3rem;
 /* Beschriftung der Kachel */
 /* ------------------------------ */
 figcaption {
-padding: 10px;
+	padding: 10px;
 }
 
 
@@ -152,62 +165,62 @@ padding: 10px;
 /* hier die Regeln für das Bild */
 /* ------------------------------ */
 .das_waere_die_regel_fuer_das_bild {	
-/*min-width: 100%;
-min-height: 100%; 
-/* Add infinite to loop. */
-animation: move 15s ease;
--ms-animation: move 15s ease;
--webkit-animation: move 15s ease;
--animation: move 15s ease;
--moz-animation: move 15s ease;
-/* position: relative; 
-/* width: 100%; 
-max-height: 400px; */
+	/*min-width: 100%;
+	min-height: 100%; 
+	/* Add infinite to loop. */
+	animation: move 15s ease;
+	-ms-animation: move 15s ease;
+	-webkit-animation: move 15s ease;
+	-animation: move 15s ease;
+	-moz-animation: move 15s ease;
+	/* position: relative; 
+	/* width: 100%; 
+	max-height: 400px; */
 }
 
 @keyframes move {
-0% {
-  transform: scale(1.0);
-  -ms-transform: scale(1.0);
-  /* IE 9 */
+	0% {
+		transform: scale(1.0);
+		-ms-transform: scale(1.0);
+		/* IE 9 */
 
-  -webkit-transform: scale(1.0);
-  /* Safari and Chrome */
+		-webkit-transform: scale(1.0);
+		/* Safari and Chrome */
 
-  -o-transform: scale(1.0);
-  /* Opera */
+		-o-transform: scale(1.0);
+		/* Opera */
 
-  -moz-transform: scale(1.0);
-  /* Firefox */
-}
-50% {
-  transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  /* IE 9 */
+		-moz-transform: scale(1.0);
+		/* Firefox */
+	}
+	50% {
+		transform: scale(1.1);
+		-ms-transform: scale(1.1);
+		/* IE 9 */
 
-  -webkit-transform: scale(1.1);
-  /* Safari and Chrome */
+		-webkit-transform: scale(1.1);
+		/* Safari and Chrome */
 
-  -o-transform: scale(1.1);
-  /* Opera */
+		-o-transform: scale(1.1);
+		/* Opera */
 
-  -moz-transform: scale(1.1);
-  /* Firefox */
-}
-100% {
+		-moz-transform: scale(1.1);
+		/* Firefox */
+	}
+	100% {
 
-  transform: scale(1.0);
-  -ms-transform: scale(1.0);
-  /* IE 9 */
+		transform: scale(1.0);
+		-ms-transform: scale(1.0);
+		/* IE 9 */
 
-  -webkit-transform: scale(1.0);
-  /* Safari and Chrome */
+		-webkit-transform: scale(1.0);
+		/* Safari and Chrome */
 
-  -o-transform: scale(1.0);
-  /* Opera */
+		-o-transform: scale(1.0);
+		/* Opera */
 
-  -moz-transform: scale(1.0);
-  /* Firefox */
-  }
+		-moz-transform: scale(1.0);
+		/* Firefox */
+		}
 }
 
