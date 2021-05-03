@@ -6,74 +6,28 @@ rot: #B70000 - RGB: (183, 0, 0)
 mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 */
 
-/* Blog-Archive: runde Ecken */
-a.read-more.button {
-  border-radius: 30px;
-}
-
-/* Blog-Archive: zentrierter Button */
-p.read-more-container {
-  text-align: center;
-}
 
 
-/* Liste mit roten Markern */
-ul.weisse_liste li::marker {
-  color: #B70000;
-}
-
-ul.weisse_liste {
-  list-style: square;
-}
-
-/* Links im Footer unsterstrichen */
-.footer-widgets a {
-  text-decoration: underline;
-}
 
 
-/* Container mit Bildern */
-.container_mit_bildern {
-  margin-top: 1em;
-  margin-bottom: 0px;
-  padding-bottom: 0px!important;
-}
-
-/* damit nur 1200px maximal genutzt werden - entsprechend der maximalen Breite für den Text */
-@media only screen and (min-width: 1200px) {
-.wp-block-columns.alignfull.container_mit_bildern.has-background {
-  max-width: 1200px;
-  margin-left: calc((100vw - 1200px)/2);
-}
-}
-
-.container_aussen {
-width: 100%;	
-background-color: #d4dadb;
-}
-
-
-.wp-block-image.bild_zentriert {
-  text-align: center;
-}
 
 /* Beim Überfahren mehr Schatten 
 
-.bild_zentriert:hover {
-box-shadow: 20px -19px 20px 0px #A9B2B5;
--webkit-transform: scale(1.02);
--moz-transform: scale(1.02);
--ms-transform: scale(1.02);
--o-transform: scale(1.02);
-transform: scale(1.02);
-/* VERZÖGERUNG 
--webkit-transition: all 0.7s linear;
--moz-transition: all 0.7s linear;
--ms-transition: all 0.7s linear;
--o-transition: all 0.7s linear;
-transition: all 0.7s linear;
+ .bild_zentriert:hover {
+  box-shadow: 20px -19px 20px 0px #A9B2B5;
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  transform: scale(1.02);
+  /* VERZÖGERUNG 
+ -webkit-transition: all 0.7s linear;
+ -moz-transition: all 0.7s linear;
+ -ms-transition: all 0.7s linear;
+ -o-transition: all 0.7s linear;
+ transition: all 0.7s linear;
 }
-*/
+ */
 
 
 
@@ -162,246 +116,6 @@ h2.video_text{
 */
 
 
-/* --------------------------------- */
-/* UAGB - Block für neueste Beiträge */
-/* --------------------------------- */
-
-/* ------------------------------ */
-/* Hauptseite: Neueste Beiträge schmaler */
-/* ------------------------------ */
-.uagb-post__items, .uagb-post-grid {
-background-color: #D4DaDB;
-margin-left: calc(-100vw / 2 + 100% / 2);
-margin-right: calc(-100vw /2  + 100% / 2);
-}
-
-/* ------------------------------ */
-/* auf schmaleren Displays */
-/* ------------------------------ */
-@media only screen and (max-width: 767px) {
-.uagb-post__items {
- margin-right: 0px!important;
- margin-left: 0px!important;
- padding-top: 50px;
- }
-h3.uagb-post__title {
-  font-size: 1.0em;
-}
-.separate-containers .site-main>.generate-columns-container {
-  margin-bottom: 0;
-  padding-left: 2%;
-  padding-right: 2%;
-}
-}
-
-@media (min-width: 768px) and (max-width: 981px) {
-.uagb-post__items, .uagb-post-grid {
-  padding: calc(1rem + 10px) calc(2rem + 10px) calc(1rem + 10px) calc(2rem + 10px);
-}
-.separate-containers .site-main>.generate-columns-container {
-  margin-bottom: 0;
-  padding-left: 5%;
-  padding-right: 5%;
-}
-}
-
-
-@media  only screen and (min-width: 982px) {
-.uagb-post__items, .uagb-post-grid {
-   padding: calc(2rem + 20px) calc(3rem + 20px) calc(2rem + 20px) calc(3rem + 20px);
-}
-.separate-containers .site-main>.generate-columns-container {
-  margin-bottom: 0;
-  padding-left: 10%;
-  padding-right: 10%;
-}
-}  
-
-
-
-/* ------------------------------ */
-/* Bildhöhe bei Einzelbeiträgen */
-/* ------------------------------ */
-@media (max-width: 1299px) {
-.uagb-post__image img {
- height: calc(9rem + 20px);
-}
-}
-
-@media (min-width: 1300px){
-.uagb-post__image img {
-  height: calc(12rem + 50px);
-}
-}
-
-
-
-/* ------------------------------ */
-/* Schriftdicke für Button bei Einzelbeiträgen */
-/* ------------------------------ */
-a.uagb-post__link.uagb-text-link {
-font-weight: 500!important;
-}
-
-/* ------------------------------ */
-/* Beiträge mit Linie nach unten */
-/* ------------------------------ */
-.uagb-post__image {
-border-bottom: 1px solid #d4dadb;
-}
-
-/* ------------------------------ */
-/* Newest Posts */
-/* Einstellungen  */
-/* ------------------------------ */
-
-.uagb-post-grid .uagb-post__link {
-  background-color: #A9B2B5;
-  text-decoration: none!important;
-  border-radius: 30px!important;
-  font-weight: 400;
-}
-
-.uagb-post__cta a:hover {
-  background-color: #B70000;
-}
-
-/* ------------------------------ */
-/* Link bei der Überschrift */
-/* ------------------------------ */
-.uagb-post-grid .uagb-post__title a, .uagb-post-grid .uagb-post__title a:hover, 
-.uagb-post-grid .uagb-post__title a:focus, .uagb-post-grid .uagb-post__title a:active{
-color: #b70000;
-text-decoration: none!important;
-font-weight: 600;
-font-size: 1.6rem;
-}
-
-/* ------------------------------ */
-/* Überschrift  */
-/* ------------------------------ */
-.uagb-post-grid .uagb-post__title,
-.uagb-post__excerpt,
-.uagb-post-grid .uagb-post-grid-byline{
-text-align: left;
-}
-
-/* ------------------------------ */
-/* Buttons */
-/* ------------------------------ */
-.uagb-post__text .uagb-post__cta a,
-.uagb-post__text .uagb-post__cta a{
-  font-weight: 500;
-  background-color: #A9B2B5;
-  text-decoration: none;
-}
-
-.uagb-post__text .uagb-post__cta a:hover,
-.uagb-post__text .uagb-post__cta a:hover{
-  font-weight: 500;
-  background-color: #B70000!important	
-}
-
-
-/* ------------------------------ */
-/* unten runde Ecken */
-/* ------------------------------ */
-.uagb-post-grid .is-grid.uagb-post__equal-height .uagb-post__inner-wrap {
-  border-radius: 0px 0px 50px 50px;
-}
-
-
-/* ------------------------------ */
-/* Einzelbeiträge mit runden Ecken unten */
-/* ------------------------------ */
-.uagb-block-23c9c34f .uagb-post__inner-wrap {
-border-radius: 30px;
-}
-
-
-
-/* --------------------------------- */
-/* UAGB und weitere Elemente         */
-/* --------------------------------- */
-
-/* Schatten bei Beitragsübersicht unter Blog und auf der Hauptseite */
-.generate-columns .inside-article,
-.uagb-post__inner-wrap{
-box-shadow: 10px 10px 10px #a9b2b5;
-}
-
-.generate-columns .inside-article:hover,.uagb-post__inner-wrap:hover{
-box-shadow: 15px 15px 15px #a9b2b5;
--webkit-transform: scale(1.02);
--moz-transform: scale(1.02);
--ms-transform: scale(1.02);
--o-transform: scale(1.02);
-transform: scale(1.02);
-opacity: 1.0;
-/* VERZÖGERUNG */
--webkit-transition: all 0.5s linear;
--moz-transition: all 0.5s linear;
--ms-transition: all 0.5s linear;
--o-transition: all 0.5s linear;
-transition: all 0.5s linear;
-}
-
-
-
-
-
-
-/* ------------------------------ */
-/* Gestaltung Über uns */
-/* ------------------------------ */
-@media (min-width: 781px) and (max-width: 870px) {
-p.grauer_kasten{
-font-size: 0.9em;
-}
-}
-
-/* unklar */
-dbox p:first-of-type {background: orange}
-
-.wp-block-columns.ueber_uns_gruppe.has-background {
-padding: 0px;
-}
-
-
-.ueber_uns_rand {
-margin-left: 10%;
-margin-right: 10%;
-}
-
-h3.ueber_uns {
-padding: 5px 0px 10px 0px;
-font-size: 1.6rem;
-font-weight: 500;
-}
-
-ul.ueber_uns li::marker {
-color: #B70000;
-}
-
-
-ul.ueber_uns {
-min-height: inherit;
-}
-
-/* ------------------------------ */
-/* Feste Höhe */
-/* ------------------------------ */
-@media (min-width: 781px) {
-ul.ueber_uns {
-min-height: calc(9rem + 10vw);
-}
-}
-
-@media (min-width: 783px){
-ul.ueber_uns {
-  font-size: 0.8em;
-}
-}
 
 
 /* ------------------------------ */
