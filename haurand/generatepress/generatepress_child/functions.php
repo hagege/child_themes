@@ -33,6 +33,14 @@ add_filter( 'generate_blog_columns', function( $columns ) {
     return $columns;
 } );
 
+/* wird nicht mehr genutzt 
+function kb_svg ( $svg_mime ){
+	$svg_mime['svg'] = 'image/svg+xml';
+	return $svg_mime;
+}
+
+add_filter( 'upload_mimes', 'kb_svg' );
+*/
 
 /*----------------------------------------------------------------*/
 /* Start: Block Patterns von haurand.com 
