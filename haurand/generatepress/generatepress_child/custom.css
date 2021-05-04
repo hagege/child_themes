@@ -25,9 +25,12 @@ li > a {
 }
 
 
+
 /* keine "Linie" am Image Bottom bei hover */
+figure.aligncenter.size-large > a:hover,
 figure.wp-block-image.size-large > a:hover,
 div.icon.icon-kontakt > a:hover,
+div.icon-telefon.icon-kontakt > a:hover,
 div.wp-block-latest-posts__featured-image.aligncenter > a:hover
 {
 	background-color: transparent;
@@ -52,7 +55,15 @@ div.wp-block-latest-posts__featured-image.aligncenter > a:hover
 	filter: invert(23%) sepia(23%) saturate(199%) hue-rotate(152deg) brightness(97%) contrast(90%);
 }
 
-
+.icon-telefon {
+    display: block;
+    width: 86px;
+    height: 86px;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+	filter: invert(85%) sepia(1%) saturate(2029%) hue-rotate(149deg) brightness(96%) contrast(60%);
+}
 
 
 /* TEST */
