@@ -229,46 +229,7 @@ body.page .entry-content a:hover {
 }   
 
 
-/* ----------------------------------------------------- */
-/* Einstellung für grauen Block (5 Spalten und 2 Zeilen) */
-/* ----------------------------------------------------- */
-/* Auch auf kleineren Display 3-spaltig */
-@media (min-width: 682px) and (max-width: 781px){
-	.grauer_block {
-			display: flex;
-			margin-bottom: 1.75em;
-			flex-wrap: nowrap;
-	}
-	.wp-block-column.fuenf_spalten_bilder:first-child {
-    display: none;
-	}
-	.wp-block-column.fuenf_spalten_bilder:last-child {
-    display: none;
-	}
-}
-
-
-
-@media (min-width:782px) and (max-width:968px) { 
-  /* 1. Spalte fällt weg */
-  .wp-block-column.fuenf_spalten_bilder:first-child {
-      display: none;
-    }
-  
-  /* 5. Spalte fällt weg */
-  .wp-block-column.fuenf_spalten_bilder:last-child {
-      display: none;
-    }
-  
-  /* die verbliebenen Spalten erhalten eine Breite von 33,33% */
-  .wp-block-column.fuenf_spalten_bilder:nth-child(2n) {
-      flex-basis: 49%!important;
-  }
-
-  .wp-block-column.fuenf_spalten_bilder:nth-child(3) {
-    flex-basis: 2%!important;
-  }
-}  
+ 
 
 /* ---------------------------- */
 /* rechte untere Ecke */
