@@ -8,13 +8,7 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 
 /* TEST */
 
-/* keine "Linie" am Image Bottom bei hover */
-figure.wp-block-image.size-large > a:hover,
-div.icon.icon-kontakt > a:hover,
-div.wp-block-latest-posts__featured-image.aligncenter > a:hover
-{
-	background-color: transparent;
-}
+
 
 /* Links bei Listen */
 li > a {
@@ -31,18 +25,16 @@ li > a {
 }
 
 
-.icon-kontakt,
-.icon-webseite,
-.icon-blog,
-.icon-referenzen,
-.icon-wartung,
-.icon-support
+/* keine "Linie" am Image Bottom bei hover */
+figure.wp-block-image.size-large > a:hover,
+div.icon.icon-kontakt > a:hover,
+div.wp-block-latest-posts__featured-image.aligncenter > a:hover
 {
+	background-color: transparent;
 }
 
 
-
-
+/* SVG-Icons im grauen Kasten */
 .icon {
     display: block;
     width: 86px;
@@ -54,34 +46,14 @@ li > a {
 }
 
 
-
+/* SVG-Icons im grauen Kasten bei hover */
 .icon-kontakt:hover,
 .icon-kontakt:focus {
 	filter: invert(23%) sepia(23%) saturate(199%) hue-rotate(152deg) brightness(97%) contrast(90%);
 }
 
-/*
-a.grauer_block:hover {
-		background-color: transparent;	
-}
-*/
-
-.style-svg{
- 	fill: red;
-	width: 86px;
-}
-
-.style-svg:hover{
-	fill: black;
-}
 
 
-.imgLink3{
-	background-image:url('css-tutorial-bild1.jpeg');
-}
-.imgLink3:hover img{
-	display:none;
-}
 
 /* TEST */
 
