@@ -13,13 +13,13 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 /* Links bei Listen */
 li > a {
 	text-decoration: none!important;
-	font-size: 1.2em;
+	font-size: 1.0em;
 	font-weight: 600;	
 }
 
 @media only screen and (max-width: 968px) {
 li > a {
-	font-size: 1.0em;
+	font-size: 0.9em;
 	font-weight: 600;	
 	}
 }
@@ -64,7 +64,6 @@ div.wp-block-latest-posts__featured-image.aligncenter > a:hover
     margin-right: auto;
 	filter: invert(85%) sepia(1%) saturate(2029%) hue-rotate(149deg) brightness(96%) contrast(60%);
 }
-
 
 /* TEST */
 
