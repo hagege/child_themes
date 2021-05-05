@@ -50,9 +50,38 @@ h3.tribe-events-calendar-month__header-column-title.tribe-common-b3 {
 /* Schriftgröße im Kalender */
 .tribe-common .tribe-common-h--alt {
   padding: 1.3em;
-  font-size: 0.8em;
+  /*font-size: calc(0.6em + 5px);
+   font-size: 0.8em; */
   line-height: 0.5;
 }
+
+@media (max-width: 425px) {
+.tribe-common .tribe-common-h--alt{
+    font-size: 0.8em; 
+}
+}
+
+@media (min-width: 426px) {
+.tribe-common .tribe-common-h--alt{
+    font-size: 1.2em; 
+}
+}
+
+@media (min-width: 769px) {
+.tribe-common .tribe-common-h--alt{
+    font-size: 0.7em; 
+}
+}
+
+
+@media (min-width: 1095px) {
+.tribe-common .tribe-common-h--alt{
+    font-size: 1em; 
+}
+}
+
+
+
 
 /* runder Punkt rot */
 .tribe-events .tribe-events-calendar-month__mobile-events-icon--event {
