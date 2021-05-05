@@ -1,5 +1,23 @@
 /* Custom CSS */
 
+/*
+Farben:
+RGB 129-178-47 #81B22F (grün)
+RGB 179-204-29 #B3CC1D (hellgrün)
+RGB 249-184-30 #F9B81E (gelb)
+RGB 239-127-26 #EF7F1A (orange)
+RGB 202-65-117 #CA4175 (rot)
+RGB 128-128-128 #808080 (grau)
+RGB 0-0-0 #000000 (schwarz)
+RGB 251-249-235 #FBF9EB (eierschalenfarben)
+FARBWERTE
+Web und Bildschirm Druck
+RGB 119-188-199 #77BCC7 (hellblau)
+RGB 69-125-128 #457D80 (dunkelblau)
+CMYK 55-0-18-13
+CMYK 67-19-35-35
+*/
+
 /* schräge Kante beim Bild auf der Startseite */ 
 .schraeg {
 	clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);

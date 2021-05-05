@@ -1,14 +1,77 @@
 /* Custom CSS */
 
+/* Farben aachen50plus.de:
+RGB 223-80-34 #DF5022 (rot)
+RGB 0-0-0 #000000 (schwarz)
+RGB 179-179-179 #B3B3B3 (grau)
+RGB 244-238-222 #F4EEDE (eierschale)
+FARBWERTE
+Web und Bildschirm Druck
+*/
+
+
+
+/* TEST */
+/* Tagesdatum rot */
+button.tribe-events-calendar-month__day-cell.tribe-events-calendar-month__day-cell--mobile.tribe-events-calendar-month__day-cell--selected {
+  background-color: #DF5022;
+}
+
+
+
+.tribe-events .tribe-events-calendar-month__day-cell--selected .tribe-events-calendar-month__day-date {
+opacity: 1.0;
+}
+
+.tribe-events .tribe-events-calendar-month__day--past .tribe-events-calendar-month__day-date
+{
+opacity: 0.5;
+}
+
+.tribe-common.tribe-events.tribe-events-widget-shortcode.tribe-events-widget-shortcode-events-month .tribe-events-calendar-month__day-cell--mobile:focus, .tribe-common.tribe-events.tribe-events-widget-shortcode.tribe-events-widget-shortcode-events-month .tribe-events-calendar-month__day-cell--mobile:hover {
+  background-color: rgba(249,184,30,.2)!important;
+}
+
+.tribe-events-calendar-month__header-row {
+  background-color: #DF5022;
+}
+
+/* Tag */
+h3.tribe-events-calendar-month__header-column-title.tribe-common-b3 {
+  font-size: 1.0em;
+  color: white;
+}
+
+
+/* Schriftgröße im Kalender */
+.tribe-common .tribe-common-h--alt {
+  padding: 1.3em;
+  font-size: 0.8em;
+  line-height: 0.5;
+}
+
+/* runder Punkt rot */
+.tribe-events .tribe-events-calendar-month__mobile-events-icon--event {
+  background-color: #DF5022!important;
+}
+
+/* statt 50% bei Link in Calendar-Widget */
+.generate-columns.grid-50 {
+  width: 100%;
+}
+
+
+/* TEST */
+
 /* Hintergrund heller */
 .widget .search-form button.search-submit {
-  background-color: #b3b3b3;
+background-color: #b3b3b3;
 }
 
 
 /* wegen besserer Sichtbarkeit */
 .gp-icon svg {
-  fill: black;
+fill: black;
 }
 
 /* schräge Kante beim Bild auf der Startseite */ 
@@ -19,8 +82,8 @@ clip-path: polygon(0 0, 100% 0, 100% 85%, 66% 100%, 0 85%);
 
 /* Breadcrumb - Schriftgröße und Rand nach oben ändern */
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-c-breadcrumbs__list {
-  font-size: 22px;
-  margin-top: 5px;
+font-size: 22px;
+margin-top: 5px;
 }
 
 
