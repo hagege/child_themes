@@ -24,6 +24,12 @@ li > a {
 	font-weight: 600;	
 }
 
+/* Links in der Liste mit der Klasse "weisse_liste" */
+ul.weisse_liste > li > a {
+	text-decoration: underline!important;
+	font-weight: inherit;
+}
+
 @media only screen and (max-width: 968px) {
 li > a {
 	font-size: 0.9em;
