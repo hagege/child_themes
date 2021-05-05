@@ -1,0 +1,352 @@
+/* Custom CSS */
+
+/*
+Farben:
+RGB 129-178-47 #81B22F (grün)
+RGB 179-204-29 #B3CC1D (hellgrün)
+RGB 249-184-30 #F9B81E (gelb)
+RGB 239-127-26 #EF7F1A (orange)
+RGB 202-65-117 #CA4175 (rot)
+RGB 128-128-128 #808080 (grau)
+RGB 0-0-0 #000000 (schwarz)
+RGB 251-249-235 #FBF9EB (eierschalenfarben)
+FARBWERTE
+Web und Bildschirm Druck
+RGB 119-188-199 #77BCC7 (hellblau)
+RGB 69-125-128 #457D80 (dunkelblau)
+CMYK 55-0-18-13
+CMYK 67-19-35-35
+*/
+
+
+/* TEST */
+
+/* Link zur Kalenderansicht */
+a.tribe-common-anchor-thin.tribe-events-widget-events-month__view-more-link {
+    color: #CA4175;
+}
+
+/* hover - muss noch verbessert werden */
+.sidebar .widget a:hover {
+    color: #F9B81E;
+}
+
+/* Tagesdatum rot */
+button.tribe-events-calendar-month__day-cell.tribe-events-calendar-month__day-cell--mobile.tribe-events-calendar-month__day-cell--selected {
+    background-color: #F9B81E;
+}
+
+
+/* ausgewählter Tag */
+.tribe-events .tribe-events-calendar-month__day-cell--selected .tribe-events-calendar-month__day-date {
+	opacity: 1.0;
+}
+
+/* vergangene Tage */
+.tribe-events .tribe-events-calendar-month__day--past .tribe-events-calendar-month__day-date
+{
+	opacity: 0.5;
+}
+
+
+/* Farbe eiergelb beim Hover */
+.tribe-common.tribe-events.tribe-events-widget-shortcode.tribe-events-widget-shortcode-events-month .tribe-events-calendar-month__day-cell--mobile:focus, .tribe-common.tribe-events.tribe-events-widget-shortcode.tribe-events-widget-shortcode-events-month .tribe-events-calendar-month__day-cell--mobile:hover {
+    background-color: rgba(249,184,30,.4)!important;
+}
+
+/* Hintergrund bei Tagen */
+.tribe-events-calendar-month__header-row {
+    background-color: #F9B81E;
+}
+
+/* Farbe für einzelnen Tag */
+h3.tribe-events-calendar-month__header-column-title.tribe-common-b3 {
+    font-size: 1.0em;
+    color: white;
+}
+
+
+/* Schriftgröße im Kalender */
+.tribe-common .tribe-common-h--alt {
+    padding: 1.3em;
+		/*font-size: calc(0.6em + 5px);
+     font-size: 0.8em; */
+    line-height: 0.5;
+}
+
+@media (max-width: 425px) {
+	.tribe-common .tribe-common-h--alt{
+			font-size: 0.8em; 
+	}
+}
+
+@media (min-width: 426px) {
+	.tribe-common .tribe-common-h--alt{
+			font-size: 1.2em; 
+	}
+}
+
+@media (min-width: 769px) {
+	.tribe-common .tribe-common-h--alt{
+			font-size: 0.7em; 
+	}
+}
+
+
+@media (min-width: 1095px) {
+	.tribe-common .tribe-common-h--alt{
+			font-size: 1em; 
+	}
+}
+
+
+
+
+/* runder Punkt rot */
+.tribe-events .tribe-events-calendar-month__mobile-events-icon--event {
+    background-color: #DF5022!important;
+}
+
+/* statt 50% bei Link in Calendar-Widget */
+.generate-columns.grid-50 {
+    width: 100%;
+}
+
+
+/* TEST */
+
+/* TEST */
+
+
+/* Unterer Bereich einer Einzelveranstaltung (Metadaten) besser aufteilen */
+.tribe-events-single-section.tribe-events-event-meta.primary.tribe-clearfix,
+.tribe-events-single-section.tribe-events-event-meta.secondary.tribe-clearfix {
+    width: 100%;
+}
+
+/* Einstellungen Überschrift Mini-Kalender */
+/* bis 768px: */
+@media (max-width: 768px) {
+span#tribe-mini-calendar-month-0 {
+    font-size: 1.2rem;
+    }
+}
+
+
+/* ab 769px: */ 
+@media (min-width: 769px) and (max-width: 975px) {
+span#tribe-mini-calendar-month-0 {
+    font-size: 0.6rem;
+    }
+}
+
+
+/* ab 976px: */ 
+@media (min-width: 976px) {
+span#tribe-mini-calendar-month-0 {
+    font-size: 0.8rem;
+    }
+}
+
+
+/* Kein unterer Rand bei Links (Einzelveranstaltungen) */
+.tribe-events-content a, 
+.tribe-events-content a:hover{
+    border-bottom: 0px;
+}
+
+/* Image auf Hauptseite beim ersten Eintrag in voller Breite */
+.resize-featured-image .post-image img {
+    width: 100%;
+}
+
+
+/*------------------------------------*/
+/* Buttons mit Hinweisen über dem Content
+/*------------------------------------*/
+
+@media (max-width: 450px) {
+.header_links {
+    display:unset;
+		padding: 10px 0px 0px 20px;
+	}
+}
+
+@media (min-width: 451px) {
+.header_links {
+    display:flex;
+		padding: 20px 0px 0px 20px;
+	}
+}
+
+@media (min-width: 768px) {
+.header_links {
+    display:flex;
+		padding: 30px 0px 0px 30px;
+	}
+}
+
+
+/* Notbehelf, damit die Hintergrundfarbe auf jeden Fall weiß ist */
+/* WATCH */
+#tribe-events-content {
+    background-color: white;
+}
+
+
+/* Damit die Karte das Sticky Menue nicht überdeckt */
+.leaflet-container {
+	 z-index:0;
+}
+
+
+/* Karte in maximaler Breite */
+.single-tribe_events .secondary .tribe-events-venue-map {
+    width: 90%;
+}
+
+/* hat nicht funktioniert 
+.leaflet-map.WPLeafletMap.leaflet-container.leaflet-touch.leaflet-retina.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+    z-index: -1;
+}
+
+/*------------------------------------*/
+/* Einstellungen für die Frontpage */
+/*------------------------------------*/
+.page-hero-buttons, .ackids_front {
+		margin-left:20%;
+		margin-right:20%;	
+}
+
+.ackids_front {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;	
+		color: white;
+}
+
+.ackids_front h2 {
+		font-weight: 600;
+		margin-bottom: 10px;
+		margin-top: 10px;
+		text-shadow: 0px 0px 0.2rem #F9B81E;
+}
+
+@media (max-width: 350px) {
+	.ackids_front h2 {
+		font-size: 1.3rem;
+	}
+}	
+
+@media (min-width: 351px) {
+	.ackids_front h2 {
+		font-size: 1.5rem;
+	}
+}	
+
+@media (min-width: 461px) {
+	.ackids_front h2 {
+		font-size: 2rem;
+	}
+}	
+
+
+/* Maximale Breite für den Minikalender */
+.tribe-mini-calendar-grid-wrapper {
+    max-width: 300px;
+}
+
+
+/* Ken Burns Effekt auf Beitragsseiten */
+.featured-image.page-header-image-single {
+  overflow: hidden;
+}
+
+/* hier die Regeln für das Bild */
+.featured-image.page-header-image-single img {	
+  min-width: 100%;
+  min-height: 100%; 
+  /* Add infinite to loop. */
+  animation: move 15s ease;
+  -ms-animation: move 15s ease;
+  -webkit-animation: move 15s ease;
+  -animation: move 15s ease;
+  -moz-animation: move 15s ease;
+  position: relative; 
+  /* width: 100%; 
+	max-height: 400px; */
+}
+
+@keyframes move {
+  0% {
+		/*
+    -webkit-transform-origin: left;
+    -moz-transform-origin: left;
+    -ms-transform-origin: left;
+    -o-transform-origin: left;
+    transform-origin: left;
+		*/
+    transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    /* IE 9 */
+
+    -webkit-transform: scale(1.0);
+    /* Safari and Chrome */
+
+    -o-transform: scale(1.0);
+    /* Opera */
+
+    -moz-transform: scale(1.0);
+    /* Firefox */
+  }
+  50% {
+    transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+
+    -webkit-transform: scale(1.1);
+    /* Safari and Chrome */
+
+    -o-transform: scale(1.1);
+    /* Opera */
+
+    -moz-transform: scale(1.1);
+    /* Firefox */
+  }
+  100% {
+
+    transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    /* IE 9 */
+
+    -webkit-transform: scale(1.0);
+    /* Safari and Chrome */
+
+    -o-transform: scale(1.0);
+    /* Opera */
+
+    -moz-transform: scale(1.0);
+    /* Firefox */
+  }
+}
+	
+	
+/* nur zum Testen - besser in Customizer ändern */
+nav#sticky-navigation {
+    opacity: 0.9;
+}
+
+
+
+/* .header-wrap .site-header {
+    background: #F9B81E;
+}
+
+div#primary-menu {
+    background-color: #F9B81E;
+}
+*/
+
+
+/*------------------------------------*/
+
