@@ -21,16 +21,7 @@ CMYK 67-19-35-35
 
 /* TEST */
 
-/* Link zur Kalenderansicht */
-a.tribe-common-anchor-thin.tribe-events-widget-events-month__view-more-link {
-    color: #CA4175;
-}
-
-/* hover - muss noch verbessert werden */
-.sidebar .widget a:hover {
-    color: #F9B81E;
-}
-
+/* TEST */
 /* Tagesdatum rot */
 button.tribe-events-calendar-month__day-cell.tribe-events-calendar-month__day-cell--mobile.tribe-events-calendar-month__day-cell--selected {
     background-color: #F9B81E;
@@ -63,6 +54,12 @@ button.tribe-events-calendar-month__day-cell.tribe-events-calendar-month__day-ce
 h3.tribe-events-calendar-month__header-column-title.tribe-common-b3 {
     font-size: 1.0em;
     color: white;
+}
+
+
+/* Farbe für den aktuellen Tag */
+time.tribe-events-calendar-month__day-date-daynum {
+    color: black;
 }
 
 
@@ -100,17 +97,29 @@ h3.tribe-events-calendar-month__header-column-title.tribe-common-b3 {
 }
 
 
-
-
 /* runder Punkt rot */
 .tribe-events .tribe-events-calendar-month__mobile-events-icon--event {
     background-color: #DF5022!important;
 }
 
-/* statt 50% bei Link in Calendar-Widget */
-.generate-columns.grid-50 {
-    width: 100%;
+/* statt 50% Breite Calendar-Widget */  
+.tribe-events .tribe-events-calendar-month-mobile-events__mobile-event {
+    width: 100%!important;
 }
+
+/* Link unter Calendar-Widget */
+.sidebar .widget a {
+    color: #CA4175;
+		text-decoration: underline;
+}
+
+.sidebar .widget a:hover {
+    background-color: #F9B81E;
+		color: white;
+		border-bottom: 0px;
+	  text-decoration: none;
+}
+
 
 
 /* TEST */
