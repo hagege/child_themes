@@ -708,26 +708,39 @@ img.attachment-full.size-full.wp-post-image {
     border-bottom: 1px solid #D4DaDB;
 }
 
-@media (max-width: 768px) {  
-img.attachment-full.size-full.wp-post-image {
-    height: calc(10px + 16rem);
+
+@media (max-width: 468px) {  
+  img.attachment-full.size-full.wp-post-image {
+    height: calc(10px + 10rem);
   }
 }
 
 
-@media (min-width: 769px) {
+@media (min-width: 868px){
   img.attachment-full.size-full.wp-post-image {
-    height: calc(10px + 15rem);
+      height: calc(10px + 10rem);
+  }
+}
+
+
+
+@media (min-width: 1148px) {
+  img.attachment-full.size-full.wp-post-image {
+    height: calc(10px + 14rem);
   }
 }
 
 
 @media (min-width: 1376px) {
   img.attachment-full.size-full.wp-post-image {
-    height: calc(10px + 26rem);
+    height: calc(10px + 15rem);
   }
 }
-
+@media (min-width: 1698px) {
+  img.attachment-full.size-full.wp-post-image {
+  height: calc(10px + 18rem);
+  }
+}
   
 .generate-columns-container:not(.masonry-container) {
     background-color: #D4DaDB;
