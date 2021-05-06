@@ -8,82 +8,11 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 
 /* TEST */
 
-/* bei schmaleren Displays nicht so großes padding */
-@media only screen and (max-width: 768px) {
-	.wp-block-columns.alignfull.has-background {
-			padding-left: 1rem;
-			padding-right: 1rem;
-	}
-}
 
-
-/* Links bei Listen */
-li > a {
-	text-decoration: none!important;
-	font-size: 1.0em;
-	font-weight: 600;	
-}
-
-/* Links in der Liste mit der Klasse "weisse_liste" */
-ul.weisse_liste > li > a {
-	text-decoration: underline!important;
-	font-weight: inherit;
-}
-
-@media only screen and (max-width: 968px) {
-li > a {
-	font-size: 0.9em;
-	font-weight: 600;	
-	}
-}
-
-
-
-/* keine "Linie" am Image Bottom bei hover */
-figure.aligncenter.size-large > a:hover,
-figure.wp-block-image.size-large > a:hover,
-div.icon.icon-kontakt > a:hover,
-div.icon-telefon.icon-kontakt > a:hover,
-div.wp-block-latest-posts__featured-image.aligncenter > a:hover
-{
-	background-color: transparent;
-}
-
-
-/* SVG-Icons im grauen Kasten */
-.icon {
-    display: block;
-    width: 86px;
-    height: 86px;
-    background-size: cover;
-    margin-left: auto;
-    margin-right: auto;
-		filter: invert(100%) sepia(24%) saturate(0%) hue-rotate(320deg) brightness(106%) contrast(101%);
-}
-
-
-/* SVG-Icons im grauen Kasten bei hover */
-.icon-kontakt:hover,
-.icon-kontakt:focus {
-	filter: invert(23%) sepia(23%) saturate(199%) hue-rotate(152deg) brightness(97%) contrast(90%);
-}
-
-.icon-telefon {
-    display: block;
-    width: 86px;
-    height: 86px;
-    background-size: cover;
-    margin-left: auto;
-    margin-right: auto;
-	filter: invert(85%) sepia(1%) saturate(2029%) hue-rotate(149deg) brightness(96%) contrast(60%);
-}
 
 /* TEST */
 
-/* Button bei Kommentaren */
-input#submit {
-    border-radius: 50px;
-}
+
 
 
 /* Beim Überfahren mehr Schatten 

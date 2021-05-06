@@ -53,11 +53,6 @@ img.beitragsbild_hauptseite {
 }
 */
 
-.wp-block-latest-posts__featured-image img {
-  height: 40vh;
-  width: 100vw;
-  object-fit: cover;
-}
 
 /* .wp-block-group__inner-container {
     color: white;
@@ -95,6 +90,13 @@ img.beitragsbild_hauptseite {
 }
 
 
+/* bei schmaleren Displays nicht so großes padding */
+@media only screen and (max-width: 768px) {
+	.wp-block-columns.alignfull.has-background {
+			padding-left: 1rem;
+			padding-right: 1rem;
+	}
+}
 
 /* ------------------------------ */
 /* Problem bei ungeraden Spalten weitestgehend behoben, aber nicht optimal */
@@ -115,6 +117,12 @@ img.beitragsbild_hauptseite {
   }
 }
   
+
+/* Button bei Kommentaren */
+input#submit {
+  border-radius: 50px;
+}
+
  
 /* ----------------------------------------- */
 /* Einen Block verstecken - unter erweitert: */
@@ -284,6 +292,67 @@ ul.weisse_liste {
   list-style: square;
 }
 
+/* Links bei Listen */
+li > a {
+	text-decoration: none!important;
+	font-size: 1.0em;
+	font-weight: 600;	
+}
+
+/* Links in der Liste mit der Klasse "weisse_liste" */
+ul.weisse_liste > li > a {
+	text-decoration: underline!important;
+	font-weight: inherit;
+}
+
+@media only screen and (max-width: 968px) {
+li > a {
+	font-size: 0.9em;
+	font-weight: 600;	
+	}
+}
+
+
+
+/* keine "Linie" am Image Bottom bei hover */
+figure.aligncenter.size-large > a:hover,
+figure.wp-block-image.size-large > a:hover,
+div.icon.icon-kontakt > a:hover,
+div.icon-telefon.icon-kontakt > a:hover,
+div.wp-block-latest-posts__featured-image.aligncenter > a:hover
+{
+	background-color: transparent;
+}
+
+
+/* SVG-Icons im grauen Kasten */
+.icon {
+    display: block;
+    width: 86px;
+    height: 86px;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+		filter: invert(100%) sepia(24%) saturate(0%) hue-rotate(320deg) brightness(106%) contrast(101%);
+}
+
+
+/* SVG-Icons im grauen Kasten bei hover */
+.icon-kontakt:hover,
+.icon-kontakt:focus {
+	filter: invert(23%) sepia(23%) saturate(199%) hue-rotate(152deg) brightness(97%) contrast(90%);
+}
+
+.icon-telefon {
+    display: block;
+    width: 86px;
+    height: 86px;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+	filter: invert(85%) sepia(1%) saturate(2029%) hue-rotate(149deg) brightness(96%) contrast(60%);
+}
+
 
 
 /* ------------------------------ */
@@ -323,21 +392,60 @@ ul.ueber_uns {
   min-height: inherit;
 }
   
-  /* ------------------------------ */
-  /* Feste Höhe */
-  /* ------------------------------ */
-  @media (min-width: 781px) {
+/* ------------------------------ */
+/* Feste Höhe auf "Über uns"      */
+/* ------------------------------ */
+@media (min-width: 768px) {
   ul.ueber_uns {
-    min-height: calc(9rem + 10vw);
+      min-height: calc(15rem + 10vw);
+    }	
+    ul.ueber_uns_mit_bild {
+      min-height: 5rem;
     }
-  }
+    ul.ueber_uns_mag_nicht {
+      min-height: 10rem;
+    }
+}
   
-  @media (min-width: 783px){
-  ul.ueber_uns {
-      font-size: 0.8em;
+  
+@media (min-width: 924px) {
+    ul.ueber_uns {
+      min-height: calc(9rem + 10vw);
+      }
+    ul.ueber_uns_mit_bild {
+      min-height: 3rem;
     }
+    ul.ueber_uns_mag_nicht {
+      min-height: 10rem;
+    }
+}
+  
+@media (min-width: 1323px) {
+  ul.ueber_uns {
+      min-height: calc(3rem + 10vw);
   }
+}
+  
+    
+@media (min-width: 768px){
+    ul.ueber_uns,
+    ul.ueber_uns_mit_bild,
+    ul.ueber_uns_mag_nicht
+    {
+        font-size: 0.8em;
+    }
+}
 
+@media (min-width: 1323px){
+  ul.ueber_uns,
+  ul.ueber_uns_mit_bild,
+  ul.ueber_uns_mag_nicht
+  {
+      font-size: 0.9em;
+  }
+}
+  
+  
 
 /* ------------------------------ */
 /* Gestaltung Referenzen */
@@ -567,6 +675,11 @@ body.blog .site.grid-container {
   padding: 1rem;
 }
 
+.wp-block-latest-posts__featured-image img {
+  height: 40vh;
+  width: 100vw;
+  object-fit: cover;
+}
 
 
 
@@ -591,23 +704,35 @@ p.read-more-container {
   }
   }
   
-  
-  img.attachment-full.size-full.wp-post-image {
-    height: calc(10px + 13rem);
+img.attachment-full.size-full.wp-post-image {
     border-bottom: 1px solid #D4DaDB;
+}
+
+@media (max-width: 768px) {  
+img.attachment-full.size-full.wp-post-image {
+    height: calc(10px + 16rem);
   }
-  
-  
-  @media (max-width: 968px) {
+}
+
+
+@media (min-width: 769px) {
   img.attachment-full.size-full.wp-post-image {
-    height: calc(10px + 10rem);
+    height: calc(10px + 15rem);
   }
+}
+
+
+@media (min-width: 1376px) {
+  img.attachment-full.size-full.wp-post-image {
+    height: calc(10px + 26rem);
   }
+}
+
   
-  .generate-columns-container:not(.masonry-container) {
+.generate-columns-container:not(.masonry-container) {
     background-color: #D4DaDB;
     padding: calc(2px + 0.5rem);
-  }
+}
   
   
   .generate-columns-container:not(.masonry-container) .generate-columns {
