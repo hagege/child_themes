@@ -12,6 +12,11 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 
 /* TEST */
 
+/* Farbe für Cookie-Banner */
+.cn-button.bootstrap {
+    background: #B70000;
+}
+
 
 
 

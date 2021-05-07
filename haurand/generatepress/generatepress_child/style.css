@@ -422,7 +422,7 @@ ul.ueber_uns {
   
 @media (min-width: 1323px) {
   ul.ueber_uns {
-      min-height: calc(3rem + 10vw);
+    min-height: calc(3rem + 12vw);
   }
 }
   

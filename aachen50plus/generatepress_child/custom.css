@@ -9,7 +9,11 @@ FARBWERTE
 Web und Bildschirm Druck
 */
 
-
+/* Farben im Cookie-Banner */
+.cn-button.bootstrap {
+  color: #fff;
+  background: #DF5022;
+}
 
 /* TEST */
 
