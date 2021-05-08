@@ -675,12 +675,21 @@ body.blog .site.grid-container {
   padding: 1rem;
 }
 
+/* WATCH: Führt in manchen Fällen zu ungüsntiger Ansicht 
 .wp-block-latest-posts__featured-image img {
   height: 40vh;
   width: 100vw;
   object-fit: cover;
 }
 
+@media (min-height: 1900px) and (max-height: 2000px) and (min-width: 1200px) and (max-width: 1200px) {
+  .wp-block-latest-posts__featured-image img {
+    height: 10vh;
+    width: 100vw;
+    object-fit: cover;
+  }
+}
+*/
 
 
 /* ------------------------------ */
@@ -706,6 +715,7 @@ p.read-more-container {
   
 img.attachment-full.size-full.wp-post-image {
     border-bottom: 1px solid #D4DaDB;
+    border-top: 1px solid #D4DaDB;
 }
 
 
@@ -741,6 +751,7 @@ img.attachment-full.size-full.wp-post-image {
   height: calc(10px + 18rem);
   }
 }
+
   
 .generate-columns-container:not(.masonry-container) {
     background-color: #D4DaDB;
@@ -781,9 +792,11 @@ h2.entry-title {
   footer.entry-meta {
       font-size: 0.8em;
   }
+  /* WATCH: Probleme mit iPad Mini und altes iPad weiter beobachten */
   .generate-columns-container:not(.masonry-container) .generate-columns {
-    padding: 0px; 
+    padding: 1rem; 
   }
+  */
 }
   
 .entry-meta,

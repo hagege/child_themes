@@ -8,6 +8,13 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 
 /* TEST */
 
+@media (max-width:768px) {
+	.entry-content > p,
+	.entry-content > ul.weisse_liste,
+	footer.entry-meta > span {
+			font-size: 0.8em;
+	}
+}
 
 
 /* TEST */
