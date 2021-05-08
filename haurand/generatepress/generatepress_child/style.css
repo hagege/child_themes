@@ -752,7 +752,14 @@ img.attachment-full.size-full.wp-post-image {
     padding: 30px;
     border-radius: 30px
 }
-  
+
+/* etwas mehr Rand bei breiteren Displays bei Beitragsübersicht */
+@media only screen and (min-width: 1523px) {
+  .generate-columns-container:not(.masonry-container) .generate-columns {
+    padding: 3em 3em 0px 3em;
+  }
+}
+
 .generate-columns .inside-article {
     border-radius: 0px 0px 50px 50px;
     padding: 0px 0px 2rem 0px;
