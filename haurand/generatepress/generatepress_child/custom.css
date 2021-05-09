@@ -8,11 +8,19 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 
 /* TEST */
 
+/* Code: Schriftgröße ist zu klein */
+code {
+    font: 18px Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace;
+	background-color: #D4DaDB;
+}
+
+
+/* Schriftgröße bei Beiträgen */
 @media (max-width:768px) {
 	.entry-content > p,
 	.entry-content > ul.weisse_liste,
 	footer.entry-meta > span {
-			font-size: 0.8em;
+		font-size: 0.8em;
 	}
 }
 
