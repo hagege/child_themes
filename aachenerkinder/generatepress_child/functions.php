@@ -343,7 +343,7 @@ function filter_the_content_in_the_main_loop( $content ) {
         // spezielle Anzeige wegen abgesagter Events, hgg, 19.3.2020
         // nicht auf der Hauptseite zeigen, hgg, 21.9.2020:
         if ( !is_front_page() ) {
-          $info_text = utf8_encode(' Bitte beachten: Zur Zeit finden aufgrund der aktuellen Bestimmungen fast keine Veranstaltungen statt.');
+          $info_text = utf8_encode(' Bitte beachten: Zur Zeit finden aufgrund der aktuellen Bestimmungen fast nur Online-Veranstaltungen statt.');
           // $abgesagte_events ='<div class="ackids_container"><div class="abgesagt"><a class="corona-button-beitrag" href="https://aachenerkinder.de/corona-virus-staedteregion-aachen/">Infos zu Corona</a>' . $info_text . ' </div></div>';
 
           $abgesagte_events ='<div class="ackids_container"><div class="mitglied"><a class="button-mitglied" href="http://aachener-senioren.de/_test_/corona-virus-staedteregion-aachen/">Infos zu Corona</a></div><p class="ackids-info-box">' . $info_text . ' </p></div>';
