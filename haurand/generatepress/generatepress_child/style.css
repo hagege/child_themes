@@ -780,6 +780,7 @@ h2.entry-title {
     margin-left: 2rem;
     margin-right: 2rem;
     padding-top: 2rem;
+    height: calc(13rem + 5px);
 }
   
 @media (max-width:768px) { 
@@ -796,7 +797,6 @@ h2.entry-title {
   .generate-columns-container:not(.masonry-container) .generate-columns {
     padding: 1rem; 
   }
-  */
 }
   
 .entry-meta,
