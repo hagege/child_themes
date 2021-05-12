@@ -822,11 +822,11 @@ div.bild_in_mitte {
   padding-bottom: 0px!important;
 }
 
-/* damit nur 1200px maximal genutzt werden - entsprechend der maximalen Breite für den Text */
-@media only screen and (min-width: 1200px) {
+/* damit nur 1000px maximal genutzt werden - entsprechend der maximalen Breite für den Text */
+@media only screen and (min-width: 1000px) {
 .wp-block-columns.alignfull.container_mit_bildern.has-background {
-  max-width: 1200px;
-  margin-left: calc((100vw - 1200px)/2);
+  max-width: 1000px;
+  margin-left: calc((100vw - 1000px)/2);
 }
 }
 
