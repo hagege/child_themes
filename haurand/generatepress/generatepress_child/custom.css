@@ -8,10 +8,22 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 
 /* TEST */
 
+/* optisch schöner - fast zentriert */
+.footer-widget-1 {
+    margin-left: calc(10px + 8rem);
+}
+
+@media (max-width:768px) {
+	.footer-widget-1 {
+    margin-left: inherit;
+	}
+}
+	
+
 /* Code: Schriftgröße ist zu klein */
 code {
     font: 18px Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace;
-	background-color: #D4DaDB;
+		 background-color: #D4DaDB;
 }
 
 
@@ -20,7 +32,7 @@ code {
 	.entry-content > p,
 	.entry-content > ul.weisse_liste,
 	footer.entry-meta > span {
-		font-size: 0.8em;
+			font-size: 0.8em;
 	}
 }
 
