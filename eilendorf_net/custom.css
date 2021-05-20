@@ -7,6 +7,11 @@
  * /
 */
 
+/* Menüpunkte mit mehr Raum */
+.tc-header .nav-collapse .dropdown-menu > li > a {
+    margin: 10px;
+}
+
 /* Farben geändert für iCal */
 .tribe-events .tribe-events-c-ical__link {
     border-color: #0d3042!important;
@@ -58,9 +63,9 @@ nav.tribe-events-nav-pagination {
 /* Links bei TEC Größe r*/
 #tribe-events-content a, .tribe-events-event-meta a, .tribe-events-back {
     font-size: 1.2em;
+}
 
-	/*Schriftgröße bei Beiträgen*/
-	body {
+/*Schriftgröße bei Beiträgen*/
+body {
         font-size: 18px;
-   }
 }
