@@ -270,10 +270,7 @@ body.page .entry-content a:hover {
 
 
 ul.rote_liste,
-ul.ueber_uns,
-ul.ueber_uns_mit_bild,
-ul.ueber_uns_mag_nicht,
-ul.weisse_liste {
+ul.ueber_uns {
 	list-style: square;
 }
 
@@ -289,6 +286,10 @@ figcaption {
 /* Liste mit roten Markern */
 ul.weisse_liste li::marker {
   color: #B70000;
+}
+
+ul.weisse_liste {
+  list-style: square;
 }
 
 /* Links bei Listen */
@@ -342,8 +343,6 @@ div.wp-block-latest-posts__featured-image.aligncenter > a:hover
 	filter: invert(23%) sepia(23%) saturate(199%) hue-rotate(152deg) brightness(97%) contrast(90%);
 }
 
-
-/* bei Kontaktdaten */
 .icon-telefon {
     display: block;
     width: 86px;
@@ -351,7 +350,7 @@ div.wp-block-latest-posts__featured-image.aligncenter > a:hover
     background-size: cover;
     margin-left: auto;
     margin-right: auto;
-	  filter: invert(93%) sepia(4%) saturate(197%) hue-rotate(141deg) brightness(96%) contrast(88%);
+	filter: invert(85%) sepia(1%) saturate(2029%) hue-rotate(149deg) brightness(96%) contrast(60%);
 }
 
 
@@ -384,10 +383,7 @@ h3.ueber_uns {
   font-weight: 500;
 }
   
-ul.ueber_uns li::marker,
-ul.ueber_uns_mit_bild li::marker,
-ul.ueber_uns_mit_bild li::marker,
-ul.ueber_uns_mag_nicht li::marker {
+ul.ueber_uns li::marker {
   color: #B70000;
 }
   
