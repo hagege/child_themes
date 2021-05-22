@@ -6,12 +6,13 @@ read -r -p "Are you sure you want to install WordPress? [y/N] " response
 
 # username, database-name, sitename
 wpuser='hagege'
+# a web page with the name "Neue Testseite" and the database "test_db" should always be created
 dbname='test_db'
 sitename='Neue Testseite'
 dir='neue_testseite'
 
 	# remove directory (show the process: v)
-	rm -rv $dir;
+	# rm -rv $dir; 
 	
 	# Make a new directory
 	mkdir $dir;

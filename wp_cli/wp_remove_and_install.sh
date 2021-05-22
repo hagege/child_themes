@@ -2,25 +2,26 @@
 
 #Double-check you're ready to rock and roll with an update
 # https://n8finch.com/wrote-first-bash-script-implement-wp-cli-managed-sites
-read -r -p "Are you sure you want to DEINSTALL WordPress? [y/N] " response
+read -r -p "Are you sure you want to install WordPress? [y/N] " response
 
 # username, database-name, sitename
-# wpuser='hagege'
-dbname='d0202b6f'
-# sitename='Neue Testseite'
+wpuser='hagege'
+# a web page with the name "Neue Testseite" and the database "test_db" should always be created
+dbname='test_db'
+sitename='Neue Testseite'
 dir='neue_testseite'
 
 	# remove directory (show the process: v)
-	rm -rv $dir;
+	rm -rv $dir; 
 	
 	# Make a new directory
-	# mkdir $dir;
+	mkdir $dir;
 	
 	# Change directory
-	# cd $dir;
+	cd $dir;
 
 	echo "================================================================="
-	echo "Awesome WordPress DEINSTALLER!!"
+	echo "Awesome WordPress Installer!!"
 	echo "================================================================="
 
 	# accept user input for the databse name - here deactivated
@@ -34,29 +35,28 @@ dir='neue_testseite'
 
 	# download the WordPress core files
 	# php ../wp-cli.phar wp core download
-	# php ../wp-cli.phar core download
+	php ../wp-cli.phar core download
 
 	# create the wp-config file
-	# php ../wp-cli.phar core config --dbname=$dbname --dbuser=root --dbpass=
+	php ../wp-cli.phar core config --dbname=$dbname --dbuser=root --dbpass=
 	# php ../wp-cli.phar core config --dbname=$dbname --dbuser=root --dbpass=
 
 	# parse the current directory name
-	# currentdirectory=${PWD##*/}
+	currentdirectory=${PWD##*/}
 
 	# generate random 12 character password
-	# password=$(LC_CTYPE=C tr -dc A-Za-z0-9_\!\@\#\$\%\^\&\*\(\)-+= < /dev/urandom | head -c 12)
+	password=$(LC_CTYPE=C tr -dc A-Za-z0-9_\!\@\#\$\%\^\&\*\(\)-+= < /dev/urandom | head -c 12)
 
 	# delete database
 	php ../wp-cli.phar db drop
-	# php ../wp-cli.phar $dbname drop
 	# create database, and install WordPress
-	# php ../wp-cli.phar db create
-	# php ../wp-cli.phar core install --url="http://localhost/$currentdirectory" --title="$sitename" --admin_user="$wpuser" --admin_password="$password" --admin_email="gerhards@haurand.com"
+	php ../wp-cli.phar db create
+	php ../wp-cli.phar core install --url="http://localhost/$currentdirectory" --title="$sitename" --admin_user="$wpuser" --admin_password="$password" --admin_email="postmaster@aachenerkinder.de"
 	# Change User-Password:
-	# php ../wp-cli.phar user update hagege --display_name=Hans-Gerd --user_pass=Test_2019
+	php ../wp-cli.phar user create HansGerd gerhards@haurand.com --role=administrator --user_pass=Test_2019
 	# german language:
-	# php ../wp-cli.phar language core install de_DE
-	# php ../wp-cli.phar language core activate de_DE
+	php ../wp-cli.phar language core install de_DE
+	php ../wp-cli.phar language core activate de_DE
 	# php ../wp-cli.phar site switch-language de_DE
 
 	# install the _s theme
@@ -65,7 +65,11 @@ dir='neue_testseite'
 	# clear
 
 	echo "================================================================="
-	echo "DEInstallation is complete. "
+	echo "Installation is complete. Your username/password is listed below."
+	echo ""
+	echo "Username: $wpuser"
+	echo "Password: $password"
+	echo ""
 	echo "================================================================="
 
 

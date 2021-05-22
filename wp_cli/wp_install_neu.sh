@@ -64,6 +64,11 @@ sitename='Neue Testseite'
 					# create database, and install WordPress
 					php ../wp-cli.phar db create
 					php ../wp-cli.phar core install --url="http://localhost/$currentdirectory" --title="$sitename" --admin_user="$wpuser" --admin_password="$password" --admin_email="user@example.org"
+					# Change User-Password:
+					php ../wp-cli.phar user create HansGerd gerhards@haurand.com --role=administrator --user_pass=Test_2019
+					# german language:
+					php ../wp-cli.phar language core install de_DE
+					php ../wp-cli.phar language core activate de_DE
 
 					# install the _s theme
 					# php ../wp-cli.phar theme install https://github.com/Automattic/_s/archive/master.zip --activate
