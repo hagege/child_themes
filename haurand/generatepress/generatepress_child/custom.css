@@ -8,6 +8,23 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 
 /* TEST */
 
+/* h1 nicht zeigen */
+h1.entry-title {
+    display: none;
+}
+
+/* Datum der Veröffentlichung zentriert */
+time.entry-date.published {
+    margin-left: 40%;
+}
+
+
+/* Datum über den Beiträgen linksbündig 
+generate-columns-container > span.posted-on {
+    margin-left: -2rem;
+}
+*/
+
 /* optisch schöner - fast zentriert */
 .footer-widget-1 {
     margin-left: calc(10px + 8rem);
