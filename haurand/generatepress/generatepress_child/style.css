@@ -785,7 +785,8 @@ h2.entry-title {
     margin-left: 2rem;
     margin-right: 2rem;
     padding-top: 2rem;
-    height: calc(13rem + 5px);
+    /* Bild ist jetzt oben */
+    /* height: calc(13rem + 5px); */
 }
   
 @media (max-width:768px) { 
@@ -793,8 +794,7 @@ h2.entry-title {
       margin-left: 1rem;
       margin-right: 1rem;
       padding-top: 2rem;
-      font-size: 1.5rem;
-      height: inherit;
+      /* font-size: 1.5rem; */
   }
   footer.entry-meta {
       font-size: 0.8em;
