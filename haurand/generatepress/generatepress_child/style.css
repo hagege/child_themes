@@ -382,6 +382,7 @@ h3.ueber_uns {
   padding: 5px 0px 10px 0px;
   font-size: 1.6rem;
   font-weight: 500;
+  margin-bottom: 0px;
 }
   
 ul.ueber_uns li::marker,
@@ -802,7 +803,8 @@ h2.entry-title {
     padding: 1rem; 
   }
 }
-  
+ 
+/* damit in der Beitrags-Übersicht die Ränder eingehalten werden */
 .entry-meta,
 .entry-summary {
     margin-left: 2rem;

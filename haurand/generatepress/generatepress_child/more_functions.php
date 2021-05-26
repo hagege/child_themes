@@ -13,29 +13,76 @@
 /* Datum: 30.12.2020
 /* Autor: hgg
 /*---------------------------------------------------------------- */
-function bac_wp_strip_header_tags( $text ) {
-    $raw_excerpt = $text;
-    if ( '' == $text ) {
+function bac_wp_strip_header_tags( $excerpt ) {
+    $raw_excerpt = $excerpt;
+    if ( '' == $excerpt ) {
         //Retrieve the post content.
-        $text = get_the_content(''); 
+        $excerpt = get_the_content(''); 
         //remove shortcode tags from the given content.
-        $text = strip_shortcodes( $text );
-        $text = apply_filters('the_content', $text);
-        $text = str_replace(']]>', ']]>', $text);
+        $excerpt = strip_shortcodes( $excerpt );
+        $excerpt = apply_filters('the_content', $excerpt);
+        $excerpt = str_replace(']]>', ']]>', $excerpt);
      
         //Regular expression that strips the header tags and their content.
         $regex = '#(<h([1-6])[^>]*>)\s?(.*)?\s?(<\/h\2>)#';
-        $text = preg_replace($regex,'', $text);
+        $excerpt = preg_replace($regex,'', $excerpt);
      
         /***Change the excerpt word count.***/
         $excerpt_word_count = 20; //This is WP default.
         $excerpt_length = apply_filters('excerpt_length', $excerpt_word_count);
          
-        $excerpt = wp_trim_words( $text, $excerpt_length, $excerpt_more );
+        $excerpt = wp_trim_words( $excerpt, $excerpt_length, $excerpt_more );
         }
         return apply_filters('wp_trim_excerpt', $excerpt, $raw_excerpt);
 }
 add_filter( 'get_the_excerpt', 'bac_wp_strip_header_tags', 5);
+
+
+/*----------------------------------------------------------------*/
+/* Ende: Block Patterns von haurand.com 
+/* Datum: 14.01.2021
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+
+/***********************CODE-1************************************************
+* @Author: Boutros AbiChedid 
+* @Date:   April 18, 2012
+* @Websites: bacsoftwareconsulting.com/ ; blueoliveonline.com/
+* @Description: Remove header tags and their content From the automatically 
+* generated Excerpt.
+* Code modifies default excerpt_length and excerpt_more filters.
+* Code Does NOT preserve any other HTML formatting in the excerpt.
+* @Tested on: WordPress version 3.3.1 
+****************************************************************************/
+ 
+function wp_strip_header_tags( $excerpt='' ) {
+  $raw_excerpt = $excerpt;
+  if ( '' == $excerpt ) {
+      //Retrieve the post content.
+      $excerpt = get_the_content(''); 
+      /* remove shortcode tags from the given content. */
+      $excerpt = strip_shortcodes( $excerpt );
+      $excerpt = apply_filters('the_content', $excerpt);
+      $excerpt = str_replace(']]>', ']]&gt;', $excerpt);
+      
+   
+      //Regular expression that strips the header tags and their content.
+      $regex = '#(<h([1-6])[^>]*>)\s?(.*)?\s?(<\/h\2>)#';
+      $excerpt = preg_replace($regex,'', $excerpt);
+   
+      /***Change the excerpt word count.***/
+      $excerpt_word_count = 55; //This is WP default.
+      $excerpt_length = apply_filters('excerpt_length', $excerpt_word_count);
+       
+      /*** Change the excerpt ending.***/
+      $excerpt_end = '[...]'; //This is the WP default.
+      $excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end);
+       
+      $excerpt = wp_trim_words( $excerpt, $excerpt_length, $excerpt_more );
+      }
+      return apply_filters('wp_trim_excerpt', preg_replace($regex, '', $excerpt, $raw_excerpt);
+}
+add_filter( 'get_the_excerpt', 'wp_strip_header_tags', 99);
 
 
 /*

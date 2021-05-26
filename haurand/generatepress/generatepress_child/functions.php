@@ -462,6 +462,22 @@ register_block_pattern(
 /* Autor: hgg
 /*----------------------------------------------------------------*/
 
-
+/*----------------------------------------------------------------*/
+/* Start: Beiträge der Kategorie "Keine Anzeige" nicht zeigen
+/* Datum: 25.05.2021
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+function exclude_single_posts_home($query) {
+  if ( $query->is_home() && $query->is_main_query() ) {
+      /* $query->set( 'post__not_in', array(6873) ); */ /* zeigt einen bestimmten Beitrag nicht */
+      $query->set('cat', '-1486'); /* zeigt eine bestimmte Kategorie (in dem Fall "Keine Anzeige" nicht */
+  }
+}
+add_action( 'pre_get_posts', 'exclude_single_posts_home' );
+/*----------------------------------------------------------------*/
+/* Ende: Beiträge der Kategorie "Keine Anzeige" nicht zeigen
+/* Datum: 25.05.2021
+/* Autor: hgg
+/*----------------------------------------------------------------*/
 
 ?>
