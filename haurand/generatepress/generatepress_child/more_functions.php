@@ -85,6 +85,78 @@ function wp_strip_header_tags( $excerpt='' ) {
 add_filter( 'get_the_excerpt', 'wp_strip_header_tags', 99);
 
 
+function wp_strip_header_tags( $excerpt='' ) {
+  $raw_excerpt = $excerpt;
+  // var_dump($excerpt);
+  // echo(the_excerpt());
+  if ( '' == $excerpt ) {
+      //Retrieve the post content.
+      $excerpt = get_the_content(''); 
+      /* remove shortcode tags from the given content. */
+      $excerpt = strip_shortcodes( $excerpt );
+      $excerpt = apply_filters('the_content', $excerpt);
+      $excerpt = str_replace(']]>', ']]&gt;', $excerpt);
+  }
+   
+  //Regular expression that strips the header tags and their content.
+  $regex = '#(<h([1-6])[^>]*>)\s?(.*)?\s?(<\/h\2>)#';
+  $excerpt = preg_replace($regex,'', $excerpt);
+
+  /***Change the excerpt word count.***/
+  $excerpt_word_count = 55; //This is WP default.
+  $excerpt_length = apply_filters('excerpt_length', $excerpt_word_count);
+    
+  /*** Change the excerpt ending.***/
+  $excerpt_end = '[...]'; //This is the WP default.
+  $excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end);
+    
+  $excerpt = wp_trim_words( $excerpt, $excerpt_length, $excerpt_more );
+  
+  return apply_filters('wp_trim_excerpt', preg_replace($regex,'', $excerpt), $raw_excerpt);
+}
+add_filter( 'get_the_excerpt', 'wp_strip_header_tags', 99);
+
+?>
+
+Alternative, aber hat nicht funktioniert:
+
+/**
+ *  Create a custom excerpt string from the first paragraph of the content.
+ *
+ *  @param   integer  $id       The id of the post
+ *  @return  string   $excerpt  The excerpt string
+ */
+function wp_first_paragraph_excerpt( $id=null ) {
+  // Set $id to the current post by default
+  if( !$id ) {
+      global $post;
+      $id = get_the_id();
+  }
+
+  // Get the post content
+  $content = get_post_field( 'post_content', $id );
+  var_dump($content);
+  $content = apply_filters( 'the_content', strip_shortcodes( $content ) );
+
+  // Remove all tags, except paragraphs
+  $excerpt = strip_tags( $content, '<p></p>' );
+
+  // Remove empty paragraph tags
+  $excerpt = force_balance_tags( $excerpt );
+  $excerpt = preg_replace( '#<p>\s*+(<br\s*/*>)?\s*</p>#i', '', $excerpt );
+  $excerpt = preg_replace( '~\s?<p>(\s|&nbsp;)+</p>\s?~', '', $excerpt );
+
+  // Get the first paragraph
+  $excerpt = substr( $excerpt, 0, strpos( $excerpt, '</p>' ) + 4 );
+
+  // Remove remaining paragraph tags
+  $excerpt = strip_tags( $excerpt );
+
+  return $excerpt;
+}
+add_filter( 'get_the_excerpt', 'wp_first_paragraph_excerpt', 99);
+?>
+
 /*
 add_filter( 'the_excerpt', 'wpse49280_strip_header_tags', 1 );
 function wpse49280_strip_header_tags( $excerpt ) {
