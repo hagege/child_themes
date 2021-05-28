@@ -480,4 +480,35 @@ add_action( 'pre_get_posts', 'exclude_single_posts_home' );
 /* Autor: hgg
 /*----------------------------------------------------------------*/
 
+
+/*----------------------------------------------------------------*/
+/* Start: Weiterlesen-Button, auch wenn der Textauszug eingetragen ist
+/* Datum: 27.05.2021
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+add_filter( 'wp_trim_excerpt', 'tu_excerpt_metabox_more' );
+function tu_excerpt_metabox_more( $excerpt ) {
+	$output = $excerpt;
+    $settings = wp_parse_args( 
+		get_option( 'generate_blog_settings', array() ), 
+		generate_blog_get_defaults() 
+	);
+	
+	if ( has_excerpt() ) {
+    $excerpt = $excerpt . ' ...';
+		$output = sprintf( '%1$s <p class="read-more-container"><a class="read-more button" href="%2$s">%3$s</a></p>',
+			$excerpt,
+			get_permalink(),
+      wp_kses_post( $settings['read_more'] )
+		);
+	}
+	
+	return $output;
+}
+/*----------------------------------------------------------------*/
+/* Start: Weiterlesen-Link, auch wenn der Textauszug eingetragen ist
+/* Datum: 27.05.2021
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+
 ?>

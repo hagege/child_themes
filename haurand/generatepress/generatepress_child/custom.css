@@ -8,45 +8,49 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 
 /* TEST */
 
+/* Bei Suche Container mit max. 1400 px */
+body.search > .grid-container {
+    max-width: 1400px;
+}
 
 /* Veröffentlichungsdatum zentriert */
 header.entry-header > .entry-meta {
-	text-align: center;	
+		text-align: center;	
 }
 
 
 /* h1 nicht zeigen */
 h1.entry-title {
-display: none;
+    display: none;
 }
 
 
 /* optisch schöner - fast zentriert */
 .footer-widget-1 {
-margin-left: calc(10px + 8rem);
+    margin-left: calc(10px + 8rem);
 }
 
 @media (max-width:768px) {
-.footer-widget-1 {
-margin-left: inherit;
+	.footer-widget-1 {
+    margin-left: inherit;
+	}
 }
-}
-
+	
 
 /* Code: Schriftgröße ist zu klein */
 code {
-font: 18px Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace;
-	 background-color: #D4DaDB;
+    font: 18px Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace;
+		 background-color: #D4DaDB;
 }
 
 
 /* Schriftgröße bei Beiträgen */
 @media (max-width:768px) {
-.entry-content > p,
-.entry-content > ul.weisse_liste,
-footer.entry-meta > span {
-		font-size: 0.8em;
-}
+	.entry-content > p,
+	.entry-content > ul.weisse_liste,
+	footer.entry-meta > span {
+			font-size: 0.8em;
+	}
 }
 
 
@@ -54,7 +58,7 @@ footer.entry-meta > span {
 
 /* Farbe für Cookie-Banner */
 .cn-button.bootstrap {
-background: #B70000;
+    background: #B70000;
 }
 
 
@@ -62,28 +66,28 @@ background: #B70000;
 
 /* Beim Überfahren mehr Schatten 
 
-.bild_zentriert:hover {
-box-shadow: 20px -19px 20px 0px #A9B2B5;
--webkit-transform: scale(1.02);
--moz-transform: scale(1.02);
--ms-transform: scale(1.02);
--o-transform: scale(1.02);
-transform: scale(1.02);
-/* VERZÖGERUNG 
--webkit-transition: all 0.7s linear;
--moz-transition: all 0.7s linear;
--ms-transition: all 0.7s linear;
--o-transition: all 0.7s linear;
-transition: all 0.7s linear;
+ .bild_zentriert:hover {
+  box-shadow: 20px -19px 20px 0px #A9B2B5;
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  transform: scale(1.02);
+  /* VERZÖGERUNG 
+ -webkit-transition: all 0.7s linear;
+ -moz-transition: all 0.7s linear;
+ -ms-transition: all 0.7s linear;
+ -o-transition: all 0.7s linear;
+ transition: all 0.7s linear;
 }
-*/
+ */
 
 
 
 
 /* unklar */
 .page.separate-containers:not(.blog):not(.home) .inside-article {
-padding: 10px;
+    padding: 10px;
 }
 
 
@@ -91,77 +95,77 @@ padding: 10px;
 /* Bild auf dem Video */
 /* ------------------------------ */
 img.wp-image-3780 {
-	width: 50%;
-animation-name: video_logo;
-animation-delay: 0.75s;
-animation-duration: 10s;
-animation-timing-function: ease-in-out;
-animation-fill-mode: both;
+		width: 50%;
+    animation-name: video_logo;
+    animation-delay: 0.75s;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
 }
 
 @keyframes video_logo {
-		0% {
-				width: 0%;
-}
+			0% {
+					width: 0%;
+	}
 
-		100% {
-				width: 100%;
-		}
+			100% {
+					width: 100%;
+			}
 
-}
+	}
 
 
 /* ------------------------------ */
 /* Text auf dem Video */
 /* ------------------------------ */
 h2.video_text{
-font-weight: 700;
-font-size: 2rem;
-text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
-animation-name: video_header;
-animation-delay: 2.75s;
-animation-duration: 10s;
-animation-timing-function: ease-in-out;
-animation-fill-mode: both;
-	text-shadow: 0px 0px 0.2rem #F9B81E;
+    font-weight: 700;
+    font-size: 2rem;
+    text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    animation-name: video_header;
+    animation-delay: 2.75s;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+		text-shadow: 0px 0px 0.2rem #F9B81E;
 }
 
 @media only screen and (max-width: 767px) {
-@keyframes video_header {
-		0% {
-				opacity: 0;
-				font-size: 1.2rem;
-		}
+	@keyframes video_header {
+			0% {
+					opacity: 0;
+					font-size: 1.2rem;
+			}
 
-		100% {
-				opacity: 1;
-				font-size: 3rem;
-		}
+			100% {
+					opacity: 1;
+					font-size: 3rem;
+			}
 
-}
+	}
 }
 
 @media only screen and (min-width: 768px) {
-@keyframes video_header {
-		0% {
-				opacity: 0;
-				font-size: 2rem;
-		}
+	@keyframes video_header {
+			0% {
+					opacity: 0;
+					font-size: 2rem;
+			}
 
-		100% {
-				opacity: 1;
-				font-size: 5rem;
-		}
+			100% {
+					opacity: 1;
+					font-size: 5rem;
+			}
 
-}
+	}
 }
 
 /*
 .wp-block-cover__inner-container {
-padding: 20px;
-background: rgba(0, 0, 0, 0.2);
-margin-bottom: 20px;
-color: white;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    color: white;
 }
 */
 
@@ -173,8 +177,8 @@ color: white;
 /* ------------------------------ */
 img.wp-image-2111,
 img.wp-image-2110{
-height: 178px;
-margin-top: 3rem;
+	height: 178px;
+	margin-top: 3rem;
 }
 
 
@@ -189,7 +193,7 @@ margin-top: 3rem;
 /* Beschriftung der Kachel */
 /* ------------------------------ */
 figcaption {
-padding: 10px;
+	padding: 10px;
 }
 
 
@@ -198,62 +202,62 @@ padding: 10px;
 /* hier die Regeln für das Bild */
 /* ------------------------------ */
 .das_waere_die_regel_fuer_das_bild {	
-/*min-width: 100%;
-min-height: 100%; 
-/* Add infinite to loop. */
-animation: move 15s ease;
--ms-animation: move 15s ease;
--webkit-animation: move 15s ease;
--animation: move 15s ease;
--moz-animation: move 15s ease;
-/* position: relative; 
-/* width: 100%; 
-max-height: 400px; */
+	/*min-width: 100%;
+	min-height: 100%; 
+	/* Add infinite to loop. */
+	animation: move 15s ease;
+	-ms-animation: move 15s ease;
+	-webkit-animation: move 15s ease;
+	-animation: move 15s ease;
+	-moz-animation: move 15s ease;
+	/* position: relative; 
+	/* width: 100%; 
+	max-height: 400px; */
 }
 
 @keyframes move {
-0% {
-	transform: scale(1.0);
-	-ms-transform: scale(1.0);
-	/* IE 9 */
+	0% {
+		transform: scale(1.0);
+		-ms-transform: scale(1.0);
+		/* IE 9 */
 
-	-webkit-transform: scale(1.0);
-	/* Safari and Chrome */
+		-webkit-transform: scale(1.0);
+		/* Safari and Chrome */
 
-	-o-transform: scale(1.0);
-	/* Opera */
+		-o-transform: scale(1.0);
+		/* Opera */
 
-	-moz-transform: scale(1.0);
-	/* Firefox */
-}
-50% {
-	transform: scale(1.1);
-	-ms-transform: scale(1.1);
-	/* IE 9 */
-
-	-webkit-transform: scale(1.1);
-	/* Safari and Chrome */
-
-	-o-transform: scale(1.1);
-	/* Opera */
-
-	-moz-transform: scale(1.1);
-	/* Firefox */
-}
-100% {
-
-	transform: scale(1.0);
-	-ms-transform: scale(1.0);
-	/* IE 9 */
-
-	-webkit-transform: scale(1.0);
-	/* Safari and Chrome */
-
-	-o-transform: scale(1.0);
-	/* Opera */
-
-	-moz-transform: scale(1.0);
-	/* Firefox */
+		-moz-transform: scale(1.0);
+		/* Firefox */
 	}
+	50% {
+		transform: scale(1.1);
+		-ms-transform: scale(1.1);
+		/* IE 9 */
+
+		-webkit-transform: scale(1.1);
+		/* Safari and Chrome */
+
+		-o-transform: scale(1.1);
+		/* Opera */
+
+		-moz-transform: scale(1.1);
+		/* Firefox */
+	}
+	100% {
+
+		transform: scale(1.0);
+		-ms-transform: scale(1.0);
+		/* IE 9 */
+
+		-webkit-transform: scale(1.0);
+		/* Safari and Chrome */
+
+		-o-transform: scale(1.0);
+		/* Opera */
+
+		-moz-transform: scale(1.0);
+		/* Firefox */
+		}
 }
 

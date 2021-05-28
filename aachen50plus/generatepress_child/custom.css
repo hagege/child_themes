@@ -9,85 +9,91 @@ FARBWERTE
 Web und Bildschirm Druck
 */
 
+/* Anzeige mit 100% bei Veranstaltungen */
+.tribe-events-calendar-list__event-wrapper.tribe-common-g-col >
+.generate-columns.grid-50 {
+	width: 100%;
+}
+
 /* Farben im Cookie-Banner */
 .cn-button.bootstrap {
-  color: #fff;
-  background: #DF5022;
+    color: #fff;
+    background: #DF5022;
 }
 
 /* TEST */
 
 /* Farbe für den aktuellen Tag */
 time.tribe-events-calendar-month__day-date-daynum {
-  color: black;
+    color: black;
 }
 
 /* Tagesdatum rot */
 button.tribe-events-calendar-month__day-cell.tribe-events-calendar-month__day-cell--mobile.tribe-events-calendar-month__day-cell--selected {
-  background-color: #F4EEDE;
+    background-color: #F4EEDE;
 }
 
 
 /* ausgewählter Tag */
 .tribe-events .tribe-events-calendar-month__day-cell--selected .tribe-events-calendar-month__day-date {
-opacity: 1.0;
+	opacity: 1.0;
 }
 
 /* vergangene Tage */
 .tribe-events .tribe-events-calendar-month__day--past .tribe-events-calendar-month__day-date
 {
-opacity: 0.5;
+	opacity: 0.5;
 }
 
 
 /* Farbe eiergelb beim Hover */
 .tribe-common.tribe-events.tribe-events-widget-shortcode.tribe-events-widget-shortcode-events-month .tribe-events-calendar-month__day-cell--mobile:focus, .tribe-common.tribe-events.tribe-events-widget-shortcode.tribe-events-widget-shortcode-events-month .tribe-events-calendar-month__day-cell--mobile:hover {
-  background-color: rgba(249,184,30,.2)!important;
+    background-color: rgba(249,184,30,.2)!important;
 }
 
 /* Hintergrund bei Tagen */
 .tribe-events-calendar-month__header-row {
-  background-color: #DF5022;
+    background-color: #DF5022;
 }
 
 /* Farbe für einzelnen Tag */
 h3.tribe-events-calendar-month__header-column-title.tribe-common-b3 {
-  font-size: 1.0em;
-  color: white;
+    font-size: 1.0em;
+    color: white;
 }
 
 
 /* Schriftgröße im Kalender */
 .tribe-common .tribe-common-h--alt {
-  padding: 1.3em;
-  /*font-size: calc(0.6em + 5px);
-   font-size: 0.8em; */
-  line-height: 0.5;
+    padding: 1.3em;
+		/*font-size: calc(0.6em + 5px);
+     font-size: 0.8em; */
+    line-height: 0.5;
 }
 
 @media (max-width: 425px) {
-.tribe-common .tribe-common-h--alt{
-    font-size: 0.8em; 
-}
+	.tribe-common .tribe-common-h--alt{
+			font-size: 0.8em; 
+	}
 }
 
 @media (min-width: 426px) {
-.tribe-common .tribe-common-h--alt{
-    font-size: 1.2em; 
-}
+	.tribe-common .tribe-common-h--alt{
+			font-size: 1.2em; 
+	}
 }
 
 @media (min-width: 769px) {
-.tribe-common .tribe-common-h--alt{
-    font-size: 0.7em; 
-}
+	.tribe-common .tribe-common-h--alt{
+			font-size: 0.7em; 
+	}
 }
 
 
 @media (min-width: 1095px) {
-.tribe-common .tribe-common-h--alt{
-    font-size: 1em; 
-}
+	.tribe-common .tribe-common-h--alt{
+			font-size: 1em; 
+	}
 }
 
 
@@ -95,26 +101,26 @@ h3.tribe-events-calendar-month__header-column-title.tribe-common-b3 {
 
 /* runder Punkt rot */
 .tribe-events .tribe-events-calendar-month__mobile-events-icon--event {
-  background-color: #DF5022!important;
+    background-color: #DF5022!important;
 }
 
 
 /* statt 50% Breite Calendar-Widget */  
 .tribe-events .tribe-events-calendar-month-mobile-events__mobile-event {
-  width: 100%!important;
+    width: 100%!important;
 }
 
 /* TEST */
 
 /* Hintergrund heller */
 .widget .search-form button.search-submit {
-background-color: #b3b3b3;
+  background-color: #b3b3b3;
 }
 
 
 /* wegen besserer Sichtbarkeit */
 .gp-icon svg {
-fill: black;
+  fill: black;
 }
 
 /* schräge Kante beim Bild auf der Startseite */ 
@@ -125,8 +131,8 @@ clip-path: polygon(0 0, 100% 0, 100% 85%, 66% 100%, 0 85%);
 
 /* Breadcrumb - Schriftgröße und Rand nach oben ändern */
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-c-breadcrumbs__list {
-font-size: 22px;
-margin-top: 5px;
+  font-size: 22px;
+  margin-top: 5px;
 }
 
 
