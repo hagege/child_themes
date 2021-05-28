@@ -7,6 +7,35 @@
  * /
 */
 
+/* Beginn Mini-Calendar */
+/* Farbe für aktuellen Tag */
+button.tribe-events-calendar-month__day-cell.tribe-events-calendar-month__day-cell--mobile.tribe-events-calendar-month__day-cell--selected {
+    background-color: #0D3042!important;
+}
+
+/* Farbe für Punkte */
+em.tribe-events-calendar-month__mobile-events-icon.tribe-events-calendar-month__mobile-events-icon--event {
+    background-color: #878787!important;
+}
+
+/* Farbe für weitere Tage */
+button.tribe-events-calendar-month__day-cell.tribe-events-calendar-month__day-cell--mobile:hover {
+    background-color: #b2b2b240!important;
+}
+
+/* Farbe für Tag */
+time.tribe-events-calendar-month__day-date-daynum {
+    color: #878787;
+}
+
+/* Farbe für Link */
+a.tribe-common-anchor-thin.tribe-events-widget-events-month__view-more-link {
+    color: #878787!important;
+}
+
+/* Ende Mini-Calendar */
+
+
 /* Menüpunkte mit mehr Raum */
 .tc-header .nav-collapse .dropdown-menu > li > a {
     margin: 10px;

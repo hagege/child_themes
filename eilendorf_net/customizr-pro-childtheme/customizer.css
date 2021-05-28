@@ -1,8 +1,0 @@
-/* CSS Document */
-
-/* Untermenü ohne den animierten Unterstrich 
-.czr-link-hover-underline [class*=nav__menu] .nav__title:hover::before {
-  visibility: hidden;
-}
-*/
-
