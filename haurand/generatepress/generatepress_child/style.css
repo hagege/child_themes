@@ -146,21 +146,27 @@ p.links_wichtig, p.links_orange{
 /* Schriftdicke bei Überschriften */
 /* ------------------------------ */
 
-h1, h2, h3, h4, h5 {
+h1, h2  {
   text-align: center;
 }
 
-h1 {
-    font-weight: 700;
+/* h1 nicht zeigen */
+h1.entry-title {
+  display: none;
+  font-weight: 700;
 }
 
 h2 {
     font-weight: 700;
 }
 
-h3 {
+/* h3 immer linksbündig */
+h3, h4, h5 {
     font-weight: 600;
+    text-align: left;
 }
+
+
 
 
 

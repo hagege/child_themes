@@ -19,12 +19,6 @@ header.entry-header > .entry-meta {
 }
 
 
-/* h1 nicht zeigen */
-h1.entry-title {
-    display: none;
-}
-
-
 /* optisch schöner - fast zentriert */
 .footer-widget-1 {
     margin-left: calc(10px + 8rem);
