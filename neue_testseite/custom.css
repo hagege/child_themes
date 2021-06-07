@@ -1,0 +1,43 @@
+/* .bild {
+clip-path: polygon(0 0, 100% 0, 100% 79%, 0% 100%);
+}
+*/
+
+/* Menüpunkte größer */
+ul.primary-menu.reset-list-style {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+p.verstecken {
+	display: none;
+}
+
+/* title nicht zeigen */
+header.entry-header.has-text-align-center.header-footer-group {
+    display: none;
+}
+
+
+/* Kein oberer Rand und Welle im Footer */
+.wp-block-coblocks-shape-divider__svg-wrapper {
+    position: relative;
+    margin-top: -90px;
+}
+
+
+
+.footer-nav-widgets-wrapper.header-footer-group {
+    margin-top: -8rem;
+}
+
+/* oben kein padding */
+.post-inner.thin {
+    padding-top: 0;
+}
+
+/* Footer gelb */
+.footer-nav-widgets-wrapper.header-footer-group {
+    background-color: #efab00;
+    border: none;
+}
