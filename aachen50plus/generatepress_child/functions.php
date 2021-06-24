@@ -328,10 +328,10 @@ add_filter( 'wp_headers', 'AH_remove_x_pingback' );
 
 /*----------------------------------------------------------------*/
 /* Start: Hinweistext vor dem Content
-/* Datum: 22.03.2020
+/* Datum: 22.03.2020, abgeschaltet 24.6.2021
 /* Autor: hgg
 /*----------------------------------------------------------------*/
-
+/*
 add_filter( 'the_content', 'filter_the_content_in_the_main_loop' );
 
 function filter_the_content_in_the_main_loop( $content ) {
@@ -339,7 +339,7 @@ function filter_the_content_in_the_main_loop( $content ) {
     // Prüfen ob wir in dem Loop eines Beitrags oder einer Seite sind
     if (( is_single() OR is_page()) && in_the_loop() && is_main_query() ) {   
         // Den HTML Teil für die Schrift könnt ihr beliebig ändern oder erweitern
-        // $ackids_button = '<div class="ackids_container"><div class="mitglied"><a class="button-mitglied" href="https://steadyhq.com/de/aachenerkinder" target="_blank" rel="noopener noreferrer">Werde Mitglied</a></div><div class="mitglied_beschreibung">Werde als Besucher oder Veranstalter Mitglied bei aachenerkinder.de und unterst�tze unsere Arbeit.</div></div>';
+        // $ackids_button = '<div class="ackids_container"><div class="mitglied"><a class="button-mitglied" href="https://steadyhq.com/de/aachenerkinder" target="_blank" rel="noopener noreferrer">Werde Mitglied</a></div><div class="mitglied_beschreibung">Werde als Besucher oder Veranstalter Mitglied bei aachenerkinder.de und unterstütze unsere Arbeit.</div></div>';
         // spezielle Anzeige wegen abgesagter Events, hgg, 19.3.2020
         // nicht auf der Hauptseite zeigen, hgg, 21.9.2020:
         if ( !is_front_page() ) {
@@ -352,6 +352,6 @@ function filter_the_content_in_the_main_loop( $content ) {
 
     return $content;
 }
-
+*/
 
 ?>
