@@ -189,7 +189,7 @@ function tribe_alter_event_archive_titles ( $original_recipe_title, $depth ) {
   /* $title_month =      'Events for %1$s'; // Month View, %1$s = the name of the month */
   $title_month =      'Veranstaltungen im %1$s'; // Month View, %1$s = the name of the month */
   $title_day =        'Veranstaltungen am %1$s'; // Day View, %1$s = the day
-  $title_all =        'Alle Veranstaltungen fÜr %s'; // showing all recurrences of an event, %s = event title
+  $title_all =        'Alle Veranstaltungen für %s'; // showing all recurrences of an event, %s = event title
   $title_week =       'Veranstaltungen in der Woche %s'; // Week view
   /*
   $title_all =        'All events for %s'; // showing all recurrences of an event, %s = event title
@@ -339,16 +339,14 @@ function filter_the_content_in_the_main_loop( $content ) {
     // Prüfen ob wir in dem Loop eines Beitrags oder einer Seite sind
     if (( is_single() OR is_page()) && in_the_loop() && is_main_query() ) {   
         // Den HTML Teil für die Schrift könnt ihr beliebig ändern oder erweitern
+        // $ackids_button = '<div class="ackids_container"><div class="mitglied"><a class="button-mitglied" href="https://steadyhq.com/de/aachenerkinder" target="_blank" rel="noopener noreferrer">Werde Mitglied</a></div><div class="mitglied_beschreibung">Werde als Besucher oder Veranstalter Mitglied bei aachenerkinder.de und unterst�tze unsere Arbeit.</div></div>';
         // spezielle Anzeige wegen abgesagter Events, hgg, 19.3.2020
         // nicht auf der Hauptseite zeigen, hgg, 21.9.2020:
         if ( !is_front_page() ) {
-          $ackids_button = '<div class="ackids_container"><div class="mitglied"><a class="button-mitglied" href="https://steadyhq.com/de/aachenerkinder" target="_blank" rel="noopener noreferrer">Werde Mitglied</a></div><div class="mitglied_beschreibung">Werde als Besucher oder Veranstalter Mitglied bei aachenerkinder.de und unterstütze unsere Arbeit.</div></div>';
-          //$info_text = utf8_encode(' Bitte beachten: Zur Zeit finden aufgrund der aktuellen Bestimmungen fast nur Online-Veranstaltungen statt.');
-          // $abgesagte_events ='<div class="ackids_container"><div class="abgesagt"><a class="corona-button-beitrag" href="https://aachenerkinder.de/corona-virus-staedteregion-aachen/">Infos zu Corona</a>' . $info_text . ' </div></div>';
-
-          // $abgesagte_events ='<div class="ackids_container"><div class="mitglied"><a class="button-mitglied" href="http://aachener-senioren.de/_test_/corona-virus-staedteregion-aachen/">Infos zu Corona</a></div><p class="ackids-info-box">' . $info_text . ' </p></div>';
-          // return $ackids_button . $content . $ackids_button;
-          return $ackids_button . $content;
+          $info_text = utf8_encode('- Bitte beachten: Zur Zeit finden aufgrund der aktuellen Bestimmungen fast nur Online-Veranstaltungen statt.');
+          $abgesagte_events ='<div class="ackids_container"><div class="abgesagt"><a class="corona-button-beitrag" href="https://aachenerkinder.de/corona-virus-staedteregion-aachen/">Infos zu Corona</a>' . $info_text . ' </div></div>';
+              // return $ackids_button . $content . $ackids_button;
+          return $abgesagte_events . $content;
         }
     }
 
