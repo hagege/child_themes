@@ -1,3 +1,26 @@
+
+/* Höhe der Menüpunkte verringern (war 60px) */
+.main-navigation .main-nav ul li a {
+    line-height: 45px
+}
+
+/* Höhe des Logos größer */
+.navigation-branding img, .site-logo.mobile-header-logo img {
+    height: 100px;
+}
+
+
+/* Containergestaltung für Überschrift 2 */
+h2.alignfull.has-text-align-center.ueberschrift_gelb {
+    /* height: 10rem; */
+    background-color: #FBDF23;
+    border-radius: 55px 0px 55px 0px;
+		/* padding-top:50px; */
+		margin-left: 0vw;
+		margin-right: 0vw;
+}
+
+/* Startseite */
 li#menu-item-8 a {
     background-color: rgba(121,130,173);
 	  color: white;
@@ -9,17 +32,20 @@ li#menu-item-8 a:hover {
     background-color: rgba(121,130,173,0.3);
 }
 
+/* Unsere Schule */
 li#menu-item-16 a {
-    background-color: rgba(62,32,19);
+    background-color: rgba(183,155,72);
 	  color: white;
 		border-radius: 17px 0px 17px 0px;
 		margin-right:4px;
 }
 
 li#menu-item-16 a:hover {
-    background-color: rgba(62,32,19,0.3);
+    background-color: rgba(183,155,72,0.3);
 }
 
+
+/* OGS */
 li#menu-item-17 a{
     background-color: rgba(69,134,210);
 	  color: white;
@@ -31,6 +57,7 @@ li#menu-item-17 a:hover {
     background-color: rgba(69,134,210,0.3);
 }
 
+/* Termine */
 li#menu-item-18 a{
     background-color: rgba(219,46,25);
 	  color: white;
@@ -42,6 +69,7 @@ li#menu-item-18 a:hover {
     background-color: rgba(219,46,25,0.3);
 }
 
+/* Digitales Lernen */
 li#menu-item-19 a{
     background-color: rgba(251,223,35);
 		border-radius: 17px 0px 17px 0px;
@@ -52,6 +80,8 @@ li#menu-item-19 a:hover {
     background-color: rgba(251,223,35,0.3);
 }
 
+
+/* Service */
 li#menu-item-20 a {
     background-color: rgba(56,153,49);
     color: white;	
@@ -62,66 +92,3 @@ li#menu-item-20 a:hover {
     background-color: rgba(56,153,49,0.3);
 }
 
-/*
-
-li#menu-item-8 {
-		border-radius: 7px;
-    border: 7px solid blue;
-}
-
-li#menu-item-8 a:hover {
-		background-color: blue;
-		color: white;
-}
-
-li#menu-item-16 {
-    /* background-color: yellow; 
-		border-radius: 7px;
-    border: 7px solid yellow;
-}
-
-li#menu-item-16 a:hover {
-		background-color: yellow;
-		color: black;
-}
-
-li#menu-item-17 {
-		border-radius: 7px;
-    border: 7px solid lightgreen;
-}
-
-li#menu-item-17 a:hover {
-		background-color: lightgreen;
-		color: black;
-}
-
-li#menu-item-18 {
-		border-radius: 7px;
-    border: 7px solid lightcoral;
-}
-
-li#menu-item-18 a:hover {
-		background-color: lightcoral;
-		color: black;
-}
-
-li#menu-item-19 {
-		border-radius: 7px;
-    border: 7px solid lightblue;
-}
-
-li#menu-item-19 a:hover {
-		background-color: lightblue;
-		color: black;
-}
-
-li#menu-item-20 {
-		border-radius: 7px;
-    border: 7px solid lightcyan;
-}
-
-li#menu-item-20 a:hover {
-		background-color: lightcyan;
-		color: black;
-}
-*/
