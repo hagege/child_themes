@@ -1,0 +1,60 @@
+li#menu-item-8 {
+    border-radius: 7px;
+border: 7px solid blue;
+}
+
+li#menu-item-8 a:hover {
+    background-color: blue;
+    color: white;
+}
+
+li#menu-item-16 {
+/* background-color: yellow; */
+    border-radius: 7px;
+border: 7px solid yellow;
+}
+
+li#menu-item-16 a:hover {
+    background-color: yellow;
+    color: black;
+}
+
+li#menu-item-17 {
+    border-radius: 7px;
+border: 7px solid lightgreen;
+}
+
+li#menu-item-17 a:hover {
+    background-color: lightgreen;
+    color: black;
+}
+
+li#menu-item-18 {
+    border-radius: 7px;
+border: 7px solid lightcoral;
+}
+
+li#menu-item-18 a:hover {
+    background-color: lightcoral;
+    color: black;
+}
+
+li#menu-item-19 {
+    border-radius: 7px;
+border: 7px solid lightblue;
+}
+
+li#menu-item-19 a:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+li#menu-item-20 {
+    border-radius: 7px;
+border: 7px solid lightcyan;
+}
+
+li#menu-item-20 a:hover {
+    background-color: lightcyan;
+    color: black;
+}
