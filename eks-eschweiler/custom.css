@@ -20,18 +20,34 @@ Schriftfarbe #3E2013
     height: 100px;
 }
 
+/* ---------------------- */
+/* Farbige H2 - Container */
+/* ---------------------- */
 
 /* Containergestaltung für Überschrift 2 */
-h2.alignfull.has-text-align-center.ueberschrift_gelb {
+h2.alignfull.has-text-align-center.ueberschrift_gelb,
+h2.alignfull.has-text-align-center.ueberschrift_rot{
     /* height: 10rem; */
-    background-color: #FBDF23;
     border-radius: 55px 0px 55px 0px;
 		/* padding-top:50px; */
 		margin-left: 0vw;
 		margin-right: 0vw;
+		margin-bottom: 3rem;
+		color: white;
 }
 
-/* Startseite */
+h2.alignfull.has-text-align-center.ueberschrift_gelb {
+    background-color: rgba(251,223,35);
+		color: black;
+}
+
+h2.alignfull.has-text-align-center.ueberschrift_rot {
+    background-color: rgba(219,46,25);
+}
+
+
+
+/* Startseite: Lila */
 li#menu-item-8 a {
     background-color: rgba(121,130,173);
 	  color: white;
@@ -43,7 +59,7 @@ li#menu-item-8 a:hover {
     background-color: rgba(121,130,173,0.3);
 }
 
-/* Unsere Schule */
+/* Unsere Schule: Ocker */
 li#menu-item-16 a {
     background-color: rgba(183,155,72);
 	  color: white;
@@ -56,7 +72,7 @@ li#menu-item-16 a:hover {
 }
 
 
-/* OGS */
+/* OGS: Blau */
 li#menu-item-17 a{
     background-color: rgba(69,134,210);
 	  color: white;
@@ -68,7 +84,7 @@ li#menu-item-17 a:hover {
     background-color: rgba(69,134,210,0.3);
 }
 
-/* Termine */
+/* Termine: rot */
 li#menu-item-18 a{
     background-color: rgba(219,46,25);
 	  color: white;
@@ -80,7 +96,7 @@ li#menu-item-18 a:hover {
     background-color: rgba(219,46,25,0.3);
 }
 
-/* Digitales Lernen */
+/* Digitales Lernen: Gelb */
 li#menu-item-19 a{
     background-color: rgba(251,223,35);
 		border-radius: 17px 0px 17px 0px;
@@ -92,7 +108,7 @@ li#menu-item-19 a:hover {
 }
 
 
-/* Service */
+/* Service: Grün */
 li#menu-item-20 a {
     background-color: rgba(56,153,49);
     color: white;	
