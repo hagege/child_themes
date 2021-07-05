@@ -1,6 +1,8 @@
 li#menu-item-8 a {
     background-color: rgba(121,130,173);
 	  color: white;
+		border-radius: 17px 0px 17px 0px;
+		margin-right:4px;
 }
 
 li#menu-item-8 a:hover {
@@ -10,6 +12,8 @@ li#menu-item-8 a:hover {
 li#menu-item-16 a {
     background-color: rgba(62,32,19);
 	  color: white;
+		border-radius: 17px 0px 17px 0px;
+		margin-right:4px;
 }
 
 li#menu-item-16 a:hover {
@@ -19,6 +23,8 @@ li#menu-item-16 a:hover {
 li#menu-item-17 a{
     background-color: rgba(69,134,210);
 	  color: white;
+		border-radius: 17px 0px 17px 0px;
+		margin-right:4px;
 }
 
 li#menu-item-17 a:hover {
@@ -28,6 +34,8 @@ li#menu-item-17 a:hover {
 li#menu-item-18 a{
     background-color: rgba(219,46,25);
 	  color: white;
+		border-radius: 17px 0px 17px 0px;
+		margin-right:4px;
 }
 
 li#menu-item-18 a:hover {
@@ -36,6 +44,8 @@ li#menu-item-18 a:hover {
 
 li#menu-item-19 a{
     background-color: rgba(251,223,35);
+		border-radius: 17px 0px 17px 0px;
+		margin-right:4px;
 }
 
 li#menu-item-19 a:hover {
@@ -45,6 +55,7 @@ li#menu-item-19 a:hover {
 li#menu-item-20 a {
     background-color: rgba(56,153,49);
     color: white;	
+		border-radius: 17px 0px 17px 0px;
 }
 
 li#menu-item-20 a:hover {
