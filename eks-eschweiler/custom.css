@@ -25,27 +25,27 @@ Schriftfarbe #3E2013
 /* ---------------------- */
 
 /* Containergestaltung für Überschrift 2 */
-h2.alignfull.has-text-align-center.ueberschrift_gelb,
-h2.alignfull.has-text-align-center.ueberschrift_rot{
-    /* height: 10rem; */
+
+h2.has-text-align-center.h2_gelb.has-background,
+h2.has-text-align-center.h2_rot.has-background,
+h2.has-text-align-center.h2_lila.has-background,
+h2.has-text-align-center.h2_ocker.has-background,
+h2.has-text-align-center.h2_blau.has-background,
+h2.has-text-align-center.h2_gruen.has-background{
     border-radius: 55px 0px 55px 0px;
-		/* padding-top:50px; */
-		margin-left: 0vw;
-		margin-right: 0vw;
-		margin-bottom: 3rem;
-		color: white;
+	padding: 0px 114px 0px 114px;
+	margin-bottom: 3rem;
+	color: white;
 }
 
-h2.alignfull.has-text-align-center.ueberschrift_gelb {
-    background-color: rgba(251,223,35);
-		color: black;
-}
-
-h2.alignfull.has-text-align-center.ueberschrift_rot {
-    background-color: rgba(219,46,25);
+h2.has-text-align-center.h2_gelb.has-background {
+		color: black;	
 }
 
 
+/* ---------------------- */
+/* Farbige Menüpunkte     */
+/* ---------------------- */
 
 /* Startseite: Lila */
 li#menu-item-8 a {

@@ -108,8 +108,8 @@ register_block_pattern(
     'description' => _x( 'Gelber Container H2', 'Gelber Container H2', 'container_h2_gelb' ),
     'categories'  => array('Haurand'),
     'content'     =>
-       "<!-- wp:heading {\"textAlign\":\"center\",\"align\":\"full\",\"className\":\"ueberschrift_gelb\"} -->
-       <h2 class=\"alignfull has-text-align-center ueberschrift_gelb\">Gelber Container H2</h2>
+       "<!-- wp:heading {\"textAlign\":\"center\",\"style\":{\"color\":{\"background\":\"#fbdf23\"}},\"className\":\"h2_gelb\"} -->
+       <h2 class=\"has-text-align-center h2_gelb has-background\" style=\"background-color:#fbdf23\">Gelber Container H2</h2>
        <!-- /wp:heading -->",
   )
 );
@@ -125,12 +125,77 @@ register_block_pattern(
     'description' => _x( 'Roter Container H2', 'Roter Container H2', 'container_h2_rot' ),
     'categories'  => array('Haurand'),
     'content'     =>
-       "<!-- wp:heading {\"textAlign\":\"center\",\"align\":\"full\",\"className\":\"ueberschrift_rot\"} -->
-       <h2 class=\"alignfull has-text-align-center ueberschrift_rot\">Roter Container H2</h2>
-       <!-- /wp:heading -->",
+    "<!-- wp:heading {\"textAlign\":\"center\",\"style\":{\"color\":{\"background\":\"#db2e19\"}},\"className\":\"h2_rot\"} -->
+    <h2 class=\"has-text-align-center h2_rot has-background\" style=\"background-color:#db2e19\">Roter Container H2</h2>
+    <!-- /wp:heading -->",
   )
 );
 
+/* ---------------------------------- */
+/* Container für H2 (lila)             */
+/* ---------------------------------- */
+register_block_pattern(
+  'container_h2_lila',
+    array(
+    'title' => __( 'Lila Container H2', 'container_h2_lila' ),
+    'description' => _x( 'Lila Container H2', 'Lila Container H2', 'container_h2_lila' ),
+    'categories'  => array('Haurand'),
+    'content'     =>
+    "<!-- wp:heading {\"textAlign\":\"center\",\"style\":{\"color\":{\"background\":\"#7982AD\"}},\"className\":\"h2_lila\"} -->
+    <h2 class=\"has-text-align-center h2_lila has-background\" style=\"background-color:#7982AD\">Lila Container H2</h2>
+    <!-- /wp:heading -->",
+  )
+);
+
+/* ---------------------------------- */
+/* Container für H2 (ocker)             */
+/* ---------------------------------- */
+register_block_pattern(
+  'container_h2_ocker',
+    array(
+    'title' => __( 'ocker Container H2', 'container_h2_ocker' ),
+    'description' => _x( 'Ocker Container H2', 'Ocker Container H2', 'container_h2_ocker' ),
+    'categories'  => array('Haurand'),
+    'content'     =>
+    "<!-- wp:heading {\"textAlign\":\"center\",\"style\":{\"color\":{\"background\":\"#B79B48\"}},\"className\":\"h2_ocker\"} -->
+    <h2 class=\"has-text-align-center h2_ocker has-background\" style=\"background-color:#B79B48\">Ocker Container H2</h2>
+    <!-- /wp:heading -->",
+  )
+);
+
+
+/* ---------------------------------- */
+/* Container für H2 (blau)             */
+/* ---------------------------------- */
+register_block_pattern(
+  'container_h2_blau',
+    array(
+    'title' => __( 'Blauer Container H2', 'container_h2_blau' ),
+    'description' => _x( 'Blauer Container H2', 'Blauer Container H2', 'container_h2_blau' ),
+    'categories'  => array('Haurand'),
+    'content'     =>
+    "<!-- wp:heading {\"textAlign\":\"center\",\"style\":{\"color\":{\"background\":\"#4586D2\"}},\"className\":\"h2_blau\"} -->
+    <h2 class=\"has-text-align-center h2_blau has-background\" style=\"background-color:#4586D2\">Blauer Container H2</h2>
+    <!-- /wp:heading -->",
+  )
+);
+
+
+/* ---------------------------------- */
+/* Container für H2 (grün)             */
+/* ---------------------------------- */
+register_block_pattern(
+  'container_h2_gruen',
+    array(
+    'title' => __( 'Grüner Container H2', 'container_h2_gruen' ),
+    'description' => _x( 'Grüner Container H2', 'Grüner Container H2', 'container_h2_gruen' ),
+    'categories'  => array('Haurand'),
+    'content'     =>
+    "<!-- wp:heading {\"textAlign\":\"center\",\"style\":{\"color\":{\"background\":\"#389931\"}},\"className\":\"h2_gruen\"} -->
+    <h2 class=\"has-text-align-center h2_gruen has-background\" style=\"background-color:#389931\">Grüner Container H2</h2>
+    <!-- /wp:heading -->",
+  )
+);
 
 
 /*----------------------------------------------------------------*/
