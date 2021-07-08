@@ -215,6 +215,23 @@ register_block_pattern(
 );
 
 
+/* ------------------------------ */
+/* Container weiß mit Listen      */
+/* ------------------------------ */
+register_block_pattern(
+  'listbox_weiss',
+    array(
+    'title' => __( 'Listbox weiß', 'listbox_weiss' ),
+    'description' => _x( 'Listbox weiß ', 'Eine Listbox mit weißer Hintergrundfarbe und roten Bullets', 'listbox_weiss' ),
+    'categories'  => array('Haurand'),
+    'content'     =>
+       "<!-- wp:list {\"className\":\"eks_liste\"} -->
+       <ul class=\"eks_liste\"><li>eins</li><li>zwei</li><li>drei</li><li>vier</li><li>fünf</li></ul>
+       <!-- /wp:list -->",
+  )
+);
+
+
 /*----------------------------------------------------------------*/
 /* Ende: Block Patterns von haurand.com 
 /* Datum: 14.01.2021
