@@ -1,14 +1,20 @@
 /* Custom CSS */
 /* Farben:
-Lila #7982AD 
-Ocker #B79B48 
-Blau #4586D2 
-Rot #DB2E19 
-Gelb #FBDF23 
-Grün #389931
-Schriftfarbe #3E2013
+Rot		    #E62115, rgb(230,33,21)
+Orange	    #F18A1A, rgb(241,138,26)
+Lila		#7982AD, rgb(121,130,173)
+Ocker		#D5A12F, rgb(213,161,47)
+Blau		#4587D3, rgb(69,135,211)
+Grün		#67AB34, rgb(103,171,52)
+Gelb		#F8DE17, rgb(248,222,23)
+Schriftfarbe #3E2013, rgb(62,32,19)
 */
 
+
+/* Listen mit rotem Punkt */
+ul.eks_liste li::marker {
+    color: #E62115;
+}
 
 /* Untermenüpunkte ohne abgerundete Ecken */
 ul.sub-menu >li >a{
@@ -18,7 +24,7 @@ ul.sub-menu >li >a{
 }
 
 ul.sub-menu >li >a:hover{
-	background-color: rgba(251,223,35,0.3)!important;
+	background-color: #ffffff!important;
 	border-radius: 0px!important;
 }
 
@@ -43,20 +49,21 @@ ul.sub-menu >li >a:hover{
 
 /* Containergestaltung für Überschrift 2 */
 
-h2.has-text-align-center.h2_gelb.has-background,
 h2.has-text-align-center.h2_rot.has-background,
 h2.has-text-align-center.h2_lila.has-background,
-h2.has-text-align-center.h2_ocker.has-background,
+h2.has-text-align-center.h2_gelb.has-background,
 h2.has-text-align-center.h2_blau.has-background,
-h2.has-text-align-center.h2_gruen.has-background{
+h2.has-text-align-center.h2_gruen.has-background,
+h2.has-text-align-center.h2_ocker.has-background
+{
     border-radius: 55px 0px 55px 0px;
-		padding: 0px 114px 0px 114px;
-		margin-bottom: 3rem;
-		color: white;
+	padding: 0px 114px 0px 114px;
+	margin-bottom: 3rem;
+	color: white;
 }
 
 h2.has-text-align-center.h2_gelb.has-background {
-		color: #3E2013;	
+	color: #3E2013;	
 }
 
 
@@ -64,75 +71,75 @@ h2.has-text-align-center.h2_gelb.has-background {
 /* Farbige Menüpunkte     */
 /* ---------------------- */
 
-/* Startseite: Lila */
+/* Startseite: Rot */
 li#menu-item-8 a {
-    background-color: rgba(121,130,173);
-	  color: white;
-		border-radius: 17px 0px 17px 0px;
-		margin-right:4px;
+    background-color: rgb(230,33,21);
+	border-radius: 17px 0px 17px 0px;
+	margin-right:4px;
+	color: white;
 }
 
 li#menu-item-8 a:hover {
-    background-color: rgba(121,130,173,0.3);
+    background-color: rgba(230,33,21,0.3);
 }
 
-/* Unsere Schule: Ocker */
+/* Unsere Schule: Lila */
 li#menu-item-16 a {
-    background-color: rgba(183,155,72);
-	  color: white;
-		border-radius: 17px 0px 17px 0px;
-		margin-right:4px;
+    background-color: rgb(121,130,173);
+	border-radius: 17px 0px 17px 0px;
+	margin-right:4px;
+	color: white;
 }
 
 li#menu-item-16 a:hover {
-    background-color: rgba(183,155,72,0.3);
+    background-color: rgba(121,130,173,0.3);
 }
 
 
-/* OGS: Blau */
+/* OGS: Gelb */
 li#menu-item-17 a{
-    background-color: rgba(69,134,210);
-	  color: white;
-		border-radius: 17px 0px 17px 0px;
-		margin-right:4px;
+    background-color: rgb(248,222,23);
+	border-radius: 17px 0px 17px 0px;
+	margin-right:4px;
 }
 
 li#menu-item-17 a:hover {
-    background-color: rgba(69,134,210,0.3);
+    background-color: rgba(248,222,23,0.3);
 }
 
-/* Termine: rot */
+/* Termine: Blau */
 li#menu-item-18 a{
-    background-color: rgba(219,46,25);
-	  color: white;
-		border-radius: 17px 0px 17px 0px;
-		margin-right:4px;
+    background-color: rgb(69,135,211);
+	border-radius: 17px 0px 17px 0px;
+	margin-right:4px;
+	color: white;
 }
 
 li#menu-item-18 a:hover {
-    background-color: rgba(219,46,25,0.3);
+    background-color: rgba(69,135,211,0.3);
 }
 
-/* Digitales Lernen: Gelb */
+/* Digitales Lernen: Grün */
 li#menu-item-19 a{
-    background-color: rgba(251,223,35);
-		border-radius: 17px 0px 17px 0px;
-		margin-right:4px;
+  	background-color: rgb(103,171,52);
+	border-radius: 17px 0px 17px 0px;
+	margin-right:4px;
+	color: white;
 }
 
 li#menu-item-19 a:hover {
-    background-color: rgba(251,223,35,0.3);
+    background-color: rgba(103,171,52,0.3);
 }
 
 
-/* Service: Grün */
+/* Service: Orange */
 li#menu-item-20 a {
-    background-color: rgba(56,153,49);
-    color: white;	
-		border-radius: 17px 0px 17px 0px;
+    background-color: rgb(241,138,26);
+	border-radius: 17px 0px 17px 0px;
+	color: white;
 }
 
 li#menu-item-20 a:hover {
-    background-color: rgba(56,153,49,0.3);
+    background-color: rgba(241,138,26,0.3);
 }
 
