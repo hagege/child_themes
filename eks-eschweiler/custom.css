@@ -13,7 +13,7 @@ Schriftfarbe #3E2013, rgb(62,32,19)
 
 /* Listen mit rotem Punkt */
 ul.eks_liste li::marker {
-    color: #E62115;
+	color: #E62115;
 }
 
 /* Untermenüpunkte ohne abgerundete Ecken */
@@ -101,6 +101,7 @@ li#menu-item-17 a{
     background-color: rgb(248,222,23);
 	border-radius: 17px 0px 17px 0px;
 	margin-right:4px;
+	color: black;
 }
 
 li#menu-item-17 a:hover {
