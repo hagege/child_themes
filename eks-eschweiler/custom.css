@@ -62,8 +62,7 @@ h2.has-text-align-center.h2_ocker.has-background
 	color: white;
 }
 
-
-/* Containergestaltung für Überschrift 2 bei Devices <= 768px */
+/* Containergestaltung für Überschrift 2 bei Devices kleiner oder gleich 768px */
 @media only screen and (max-width: 768px) {
 	h2.has-text-align-center.h2_rot.has-background,
 h2.has-text-align-center.h2_lila.has-background,
