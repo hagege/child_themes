@@ -53,7 +53,7 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
       remove_theme_support('core-block-patterns');
   });
   
-  
+  /* alle anderen Vorlagen ausblenden */
   function prefix_unregister_category() {
     unregister_block_pattern_category( 'buttons');
     unregister_block_pattern_category( 'header');
@@ -64,6 +64,7 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
   add_action( 'init', 'prefix_unregister_category' );
   */
   
+  /* eigene Vorlagen registrieren - im Beispiel "Vorlagen Haurand" */
   function haurand_register_block_categories() {
     if ( class_exists( 'WP_Block_Patterns_Registry' ) ) {
     register_block_pattern_category(
@@ -97,7 +98,7 @@ register_block_pattern(
 
 /* -------------------------------------------------------------------------------------------------------------------- */
 /* zentrierter roter Button                                                                                             */
-/* dieser Button wird im Dashboard rot angezeigt, weil hier bei den Eingeschaften scbhon die Farbe geändert worden ist  */
+/* dieser Button wird im Dashboard rot angezeigt, weil hier bei den Eigenschaften scbhon die Farbe geändert worden ist  */
 /* -------------------------------------------------------------------------------------------------------------------- */
 register_block_pattern(
     'button_zentriert_rot',
