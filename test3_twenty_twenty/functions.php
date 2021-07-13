@@ -41,6 +41,7 @@ add_filter( 'get_the_excerpt', 'manual_excerpt_more' );
 /* ------------------------------ */
 /* eigene Kategorie               */
 /* ------------------------------ */
+
 if ( function_exists( 'register_block_pattern_category' ) ) {
     register_block_pattern_category(
       'haurand',
@@ -48,21 +49,24 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
    );
   }
   
-  /* nicht ausblenden 
+  /* Um alle WordPress-Standard-Block Patterns auszublenden 
   add_action('init', function() {
       remove_theme_support('core-block-patterns');
   });
+  */
   
-  /* alle anderen Vorlagen ausblenden */
+  /* nur bestimmte Kategorien ausblenden */
   function prefix_unregister_category() {
-    unregister_block_pattern_category( 'buttons');
-    unregister_block_pattern_category( 'header');
-    unregister_block_pattern_category( 'text');
-    unregister_block_pattern_category( 'columns');
-    unregister_block_pattern_category( 'gallery');
+    /* unregister_block_pattern_category( 'buttons'); */
+    /* unregister_block_pattern_category( 'header'); */
+    /* unregister_block_pattern_category( 'text'); */
+    /* unregister_block_pattern_category( 'columns'); */
+    /* unregister_block_pattern_category( 'gallery'); */
+    /* unregister_block_pattern_category( 'uncategorized'); */
+    /* unregister_block_pattern_category( 'query'); */
   }
   add_action( 'init', 'prefix_unregister_category' );
-  */
+
   
   /* eigene Vorlagen registrieren - im Beispiel "Vorlagen Haurand" */
   function haurand_register_block_categories() {
@@ -75,7 +79,7 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
    }
    add_action( 'init', 'haurand_register_block_categories' );
   
-  
+
 
 /* ---------------------------------- */
 /* zentrierter Button                 */
