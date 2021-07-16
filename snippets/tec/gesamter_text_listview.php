@@ -23,7 +23,7 @@ if ( function_exists( 'tribe_get_events' ) ) {
 	
 		$text = $original_text;
         // keine Formatierungen
-        $text = strip_tags($text);
+        $text = strip_tags($text, '<p><a><h2>');
         // echo var_dump($text); 
 
 /*	 hier Anfang Auskommentierung
