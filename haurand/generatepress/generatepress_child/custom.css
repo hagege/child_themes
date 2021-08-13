@@ -8,6 +8,12 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 
 /* TEST */
 
+/* damit der Anker korrekt angesteuert werden kann */
+[id^="htoc-"] { 
+	padding-top: 150px; 
+	margin-top: -150px!important;
+}
+
 /* Bei Suche Container mit max. 1400 px */
 body.search > .grid-container {
     max-width: 1400px;
