@@ -9,6 +9,12 @@ FARBWERTE
 Web und Bildschirm Druck
 */
 
+/* damit der Anker korrekt angesteuert werden kann */
+[id^="htoc-"] { 
+	padding-top: 130px; 
+	margin-top: -130px!important;
+}
+
 /* Anzeige mit 100% bei Veranstaltungen */
 .tribe-events-calendar-list__event-wrapper.tribe-common-g-col >
 .generate-columns.grid-50 {
