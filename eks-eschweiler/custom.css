@@ -10,6 +10,28 @@ Gelb		#F8DE17, rgb(248,222,23)
 Schriftfarbe #3E2013, rgb(62,32,19)
 */
 
+/* 
+ul.wp-block-latest-posts__list.leistung.wp-block-latest-posts >li{
+	font-size: initial;
+	margin-bottom: initial;
+}
+
+ul.wp-block-latest-posts__list.leistung.wp-block-latest-posts >a{
+	font-size: initial;
+	margin-bottom: initial;
+}
+*/
+
+/* Abstand zwischen den Beiträgen */
+ul.wp-block-latest-posts.wp-block-latest-posts__list >li{
+	margin-bottom: 5rem;
+}
+
+/* Überschriften bei Beiträgen */
+ul.wp-block-latest-posts__list.wp-block-latest-posts >li >a{
+	font-size: 2rem;
+  text-decoration: none;
+}
 
 /* Listen mit rotem Punkt */
 ul.eks_liste li::marker {
@@ -54,10 +76,10 @@ h2.has-text-align-center.h2_lila.has-background,
 h2.has-text-align-center.h2_gelb.has-background,
 h2.has-text-align-center.h2_blau.has-background,
 h2.has-text-align-center.h2_gruen.has-background,
-h2.has-text-align-center.h2_ocker.has-background
+h2.has-text-align-center.h2_orange.has-background
 {
     border-radius: 55px 0px 55px 0px;
-	padding: 0px 114px 0px 114px;
+	padding: 20px 114px 20px 114px;
 	margin-bottom: 3rem;
 	color: white;
 }
@@ -126,14 +148,14 @@ li#menu-item-17 a:hover {
 }
 
 /* Termine: Blau */
-li#menu-item-18 a{
+li#menu-item-291 a{
     background-color: rgb(69,135,211);
 	border-radius: 17px 0px 17px 0px;
 	margin-right:4px;
 	color: white;
 }
 
-li#menu-item-18 a:hover {
+li#menu-item-291 a:hover {
     background-color: rgba(69,135,211,0.3);
 }
 
