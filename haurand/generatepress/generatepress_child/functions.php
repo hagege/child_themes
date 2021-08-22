@@ -505,6 +505,7 @@ function tu_excerpt_metabox_more( $excerpt ) {
 	
 	return $output;
 }
+
 /*----------------------------------------------------------------*/
 /* Start: Weiterlesen-Link, auch wenn der Textauszug eingetragen ist
 /* Datum: 27.05.2021
