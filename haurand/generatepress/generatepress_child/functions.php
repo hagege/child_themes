@@ -511,4 +511,28 @@ function tu_excerpt_metabox_more( $excerpt ) {
 /* Autor: hgg
 /*----------------------------------------------------------------*/
 
+
+/*----------------------------------------------------------------*/
+/* Start: Alle Medien zeigen - abschalten von jeweils 40 Medien
+/* Datum: 22.08.2021
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+add_filter( 'media_library_infinite_scrolling', '__return_true' );
+/*----------------------------------------------------------------*/
+/* Ende: Alle Medien zeigen - abschalten von jeweils 40 Medien
+/*----------------------------------------------------------------*/
+
+/*----------------------------------------------------------------*/
+/* Start: Menüpunkt zu wiederverwendbaren Blöcken
+/* Datum: 22.08.2021
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+function be_reusable_blocks_admin_menu() {
+  add_menu_page( 'Wiederverwendbare Blöcke', 'Wiederverwendbare Blöcke', 'edit_posts', 'edit.php?post_type=wp_block', '', 'dashicons-editor-table', 22 );
+  }
+add_action( 'admin_menu', 'be_reusable_blocks_admin_menu' );
+/*----------------------------------------------------------------*/
+/* Ende: Menüpunkt zu wiederverwendbaren Blöcken
+/*----------------------------------------------------------------*/
+
 ?>
