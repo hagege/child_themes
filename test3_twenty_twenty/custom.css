@@ -112,6 +112,10 @@ a.mein_button:hover{
  transition: all 0.5s linear;
 }
 
+/* ---------------------------- */
+/* Blaue Spalten */
+/* ---------------------------- */
+
 /* Randdarstellung für Kacheln 
 */
 div.kacheln {
@@ -195,21 +199,15 @@ figure.zoomeffekt:hover+span {
 	opacity: 0.1;
 }
 
-/*
-img.wp-image-91,
-img.wp-image-141
-*/
 
-/* .wp-block-buttons .mein_button a { … } */
-
-.wp-block-image img.hovereffekt{
+figure.wp-block-image.size-large.zoomeffekt img {
 	-webkit-transform: scale(1);
 	transform: scale(1);
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 }
 
-.wp-block-image img.hovereffekt:hover{
+figure.wp-block-image.size-large.zoomeffekt img:hover {
 	-webkit-transform: scale(1.5);
 	transform: scale(1.5);
 	transition: all 1.5s linear;
@@ -217,12 +215,13 @@ img.wp-image-141
 
 /* ----------------------------- */
 /* Dreieck oben und unten */
+/* klappt hier noch nicht */
 /* ----------------------------- */
-.hero1 {
+.hero_bild {
     position: relative;
 }
 
-.hero1:before, .hero1:after {
+.hero_bild:before, .hero1:after {
     box-sizing: border-box;
     content: " ";
     position: absolute;
@@ -231,16 +230,16 @@ img.wp-image-141
     width: 50%;
     height: 100%;
     border: 30px solid white;
-    /* border-bottom-color: pink; */
+    border-bottom-color: white; 
 }
 
-.hero1:before {
+.hero_bild:before {
     left: 0;
     border-right: 50px solid transparent ;
     border-left: 0;
 }
 
-.hero1:after {
+.hero_bild:after {
     right: 0;
     border-left: 50px solid transparent;
     border-right: 0;
@@ -253,7 +252,7 @@ img.wp-image-141
 /* Dreieck oben und unten (Original) */
 /* ----------------------------- */
 .hero {
-    background: url(http://d.pr/i/eqn9+);
+    background: url(https://test3.haurand.com/wp-content/uploads/2021/07/platzhalter_natur_mit_biene.jpg);
     height: 200px;
     position: relative;
 }
@@ -266,8 +265,8 @@ img.wp-image-141
     display: block;
     width: 50%;
     height: 100%;
-    border: 30px solid orange;
-    border-bottom-color: pink;
+    border: 30px solid white;
+    border-bottom-color: white;
 }
 
 .hero:before {
