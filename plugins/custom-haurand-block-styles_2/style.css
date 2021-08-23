@@ -1,0 +1,624 @@
+/**
+ * Please note that these styles will be loaded before editor styles.
+ * If a theme's editor style specifies the same classname, these may be overwritten. 
+ * style.css for Custom Haurand Block Styles
+ */
+
+
+
+ /**
+ * 1. Register Custom Block Styles
+ */
+ 
+/* Blauer Absatz */
+.is-style-blue-paragraph {
+	background-color: #0087be;
+	color: #FFF;
+	padding: 16px;
+}
+
+/* Absatz mit voller Breite */
+.is-style-full.width.Paragraph {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* fancy button*/
+.wp-block-button.is-style-fancy-button .wp-block-button__link {
+    color: #fff;
+    background-color: #ff7052;
+    border-radius: 50px 50px 50px 50px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #ff7052;
+    box-shadow: 0px 10px 30px -8px rgba(0,0,0,0.16);
+}
+.wp-block-button.is-style-fancy-button .wp-block-button__link a:hover {
+	background-color: orange;
+}
+
+/* 2-spaltige Liste */
+.is-style-2col-list {
+    /* background: #f8f8f8; */
+    padding: 20px 0 20px 40px;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 40px;
+    column-gap: 40px;
+    -moz-column-gap: 40px;
+    margin:0;
+}
+
+
+/* farbige Überschrift */
+.is-style-gradient-headline {
+    background: -webkit-linear-gradient(left,#ff6969 0%,#5a61e8 100%);
+    background-clip: border-box;
+    color: transparent;
+    -webkit-background-clip: text;
+    border-bottom: 3px solid #ccc;
+}
+
+
+/**
+ * 2. Custom Block Patterns
+ */
+ 
+ 
+ /* Breite des Containers */
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    max-width: 128rem;
+}
+
+/* Randdarstellung für Kacheln */
+.kachel_spalte {
+    flex-basis: calc(50% - 16px);
+    flex-grow: 0;
+	  box-shadow: 5px 5px 10px #888888;
+		padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Beim Überfahren mehr Schatten */
+.kachel_spalte:hover {
+    box-shadow: 10px 10px 15px #888888;
+}
+
+
+/* Hintergrund für Slider-Text */
+.carousel-caption {
+    background-color: black;
+    opacity: 0.50;
+}
+
+/* CSS-Regel für Bilder in Spalten */
+img.wp-image-2005,
+img.wp-image-2002,
+img.wp-image-2003{
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+img.wp-image-2005:hover,
+img.wp-image-2002:hover,
+img.wp-image-2003:hover{
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+	/* mit Schatten: */
+	-webkit-filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
+  filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
+}
+
+/* header grau */
+.tc-header.header-transparent:not(.is-sticky) {
+    background: #555555;
+}
+
+
+/* --------------------------------------------------------------- */
+/* Bilder als Polygon                                              */
+/* Die Summe von border-right (before) und border-left(after)      */ 
+/* muss mindestens der maximalen Breite des Containers entsprechen */
+/* --------------------------------------------------------------- */
+
+.bild_als_polygon:before {
+		left: 0;
+		border-right: 70vw solid transparent;
+		border-left: 0;
+}
+
+.bild_als_polygon:after {
+		right: 0;
+		border-left: 50vw solid transparent;
+		border-right: 0;
+}
+
+.bild_als_polygon:before, .bild_als_polygon:after {
+    box-sizing: border-box;
+    content: " ";
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 50%;
+    height: 100%;
+    /* border-bottom regelt die Höhe*/
+    border-bottom: 280px solid white;
+    /* border-bottom-color: white; */
+}
+
+
+
+/* ----------------------------- */
+/* Bilder mit Dreieck nur unten */
+
+.bild_mit_dreieck_unten {
+/*    background: url(http://d.pr/i/eqn9+);
+    height: 200px;*/
+    position: relative;
+}
+
+.bild_mit_dreieck_unten:before, .bild_mit_dreieck_unten:after {
+    box-sizing: border-box;
+    content: " ";
+    position: absolute;
+    top:0;
+    display: block;
+    width: 50%;
+    height: 100%;
+    /* Dreieck spitzer bei größeren Werten */   
+    border-bottom: 30px solid white; 
+/*    border-bottom-color: white; */
+}
+
+.bild_mit_dreieck_unten:before {
+    left: 0;
+    /* Dreieck spitzer bei kleineren Werten */
+    border-right: 150px solid transparent; 
+    border-left: 0;
+}
+
+.bild_mit_dreieck_unten:after {
+    right: 0;
+    /* Dreieck spitzer bei kleineren Werten */    
+    border-left: 150px solid transparent;
+    border-right: 0;
+}
+/* ----------------------------- */
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+/* 1. Block */
+/* Block pattern: Vorlage mit 3 Kacheln, bestehend aus jeweils einer Überschrift, einem Bild mit kurzer Beschreibung*/
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+/* Randdarstellung für Kacheln 
+.kachel_spalte, 
+div.wp-block-column */
+div.kacheln {
+    flex-basis: calc(50% - 16px);
+    flex-grow: 0;
+	/* box-shadow: 7px 5px 30px rgba(72,73,121,.15) */
+	box-shadow: 5px 5px 10px #888888;
+    padding: 15px;
+
+	/* kommt beim Vortrag dazu: */ 
+	opacity: 0.7;*/
+}
+
+/* Beim Überfahren mehr Schatten 
+.kachel_spalte:hover,
+div.wp-block-column:hover */
+div.kacheln:hover{
+    box-shadow: 10px 10px 15px #888888;
+	/* box-shadow: 7px 5px 30px rgba(72,73,121,.15) */
+	
+	/* kommt beim Vortrag dazu: */ 
+  	-webkit-transform: scale(1.1);
+		-moz-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		transform: scale(1.05);
+	  opacity: 1.0;
+		/* VERZÖGERUNG  */
+	 -webkit-transition: all 0.7s linear;
+	 -moz-transition: all 0.7s linear;
+	 -ms-transition: all 0.7s linear;
+	 -o-transition: all 0.7s linear;
+	 transition: all 0.7s linear;
+     /* Die Transition beginnt langsam, wird schnell und endet wieder langsam.*/
+     transition-timing-function: ease-in-out;
+	 /* Schatten bei allen Elementen 
+	 -webkit-filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
+   filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));*/
+}
+
+/* Beschriftung der Kachel */
+figcaption {
+    padding: 10px;
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+/* 2. Block */
+/* 3 Spalten mit runden Bildern */
+/* Block pattern: Vorlage mit 3 Kacheln, bestehend aus jeweils einer Überschrift, einem Bild mit kurzer Beschreibung*/
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+/* für Block Pattern 3 Spalten */ 
+/* Randdarstellung für Kacheln */
+.kachel_spalte {
+    flex-basis: calc(50% - 16px);
+    flex-grow: 0;
+	box-shadow: 5px 5px 10px #888888;
+	padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+}
+
+
+/* Spalten von 3 auf 1 */
+@media (max-width:930px) {
+    .kachel_spalten {
+		/* folgende Zeile sorgt dafür, dass die Spalten untereinander gezeigt werden */
+	  display: unset; 
+		background-color: unset;
+		max-width: 700px;
+    }
+	  .kachel_spalte {
+			padding-top: 50px;
+			padding-bottom: 50px;
+	        max-width: 600px;
+			margin-bottom:40px;
+			margin-left: auto!important;
+            margin-right: auto!important;
+}
+}
+
+/* Beim Überfahren mehr Schatten */
+.kachel_spalte:hover {
+    box-shadow: 10px 10px 15px #888888;
+}
+
+/* Bilder mit Schatten */
+.wp-block-image.is-style-rounded {
+	/* SCALE */
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	transform: scale(0.8);
+	/* VERZÖGERUNG */
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-ms-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+}
+    
+.wp-block-image.is-style-rounded:hover {
+ 	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+	/* mit Schatten: */
+	-webkit-filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
+    filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+/* 5. Block - ähnlich wie 2. Block */
+/* 3 Spalten mit runden Bildern */
+/* Block pattern: Vorlage mit 3 Kacheln, bestehend aus jeweils einer Überschrift, einem Bild mit kurzer Beschreibung*/
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* CSS-Regel für eine Spalte */
+div.kachel_spalte_v2 {
+    flex-basis: calc(50% - 16px);
+    flex-grow: 0;
+	/* box-shadow: 7px 5px 30px rgba(72,73,121,.15) */
+	box-shadow: 5px 5px 10px #888888;
+    padding: 15px;
+
+
+	/* kommt beim Vortrag dazu: */ 
+	opacity: 0.7;
+}
+
+/* Beim Überfahren mehr Schatten */
+div.kachel_spalte_v2:hover{
+    box-shadow: 10px 10px 15px #888888;
+	/* box-shadow: 7px 5px 30px rgba(72,73,121,.15) */
+  	-webkit-transform: scale(1.1);
+		-moz-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		transform: scale(1.05);
+	  opacity: 1.0;
+	 -webkit-transition: all 0.7s linear;
+	 -moz-transition: all 0.7s linear;
+	 -ms-transition: all 0.7s linear;
+	 -o-transition: all 0.7s linear;
+	 transition: all 0.7s linear;
+     /* Die Transition beginnt langsam, wird schnell und endet wieder langsam.*/
+     transition-timing-function: ease-in-out;
+	 /* Schatten bei allen Elementen 
+	 -webkit-filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
+   filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));*/
+}
+
+/* Spalten von 3 auf 1 */
+@media (max-width:930px) {
+    .kachel_spalten_v2 {
+		/* folgende Zeile sorgt dafür, dass die Spalten untereinander gezeigt werden */
+	  display: unset; 
+		background-color: unset;
+		max-width: 700px;
+    }
+	  .kachel_spalte_v2 {
+			padding-top: 50px;
+			padding-bottom: 50px;
+	        max-width: 600px;
+			margin-bottom:40px;
+			margin-left: auto!important;
+      margin-right: auto!important;
+}
+}
+
+/* Einstellungen für iPad mini */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 1)  { 
+		._kachel_bild_v2 {
+		/* Höhe der Fotos festlegen */
+		height: 408px; 
+  }
+}
+
+
+/* CSS-Regel für Bilder in Spalten */
+.kachel_bild_v2{
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+    width:100%;
+}
+
+/* mit hover */
+.kachel_bild_v2:hover{
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+	transition: all 1.5s linear;
+}
+
+
+/* Button mit unterstrichenem Link */
+a.wp-block-button__link.has-background.no-border-radius {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: white;
+}
+
+a.wp-block-button__link.has-background.no-border-radius:hover {
+  text-decoration-style: dotted;
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+/* 3. Block */
+/* 2 Spalten mit Bild oben Text darunter, blauer Hintergrund ohne Rahmen */ 
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+/* Spaltenblock */
+p.blue-background,
+div.blue-background {
+    background-color: #22405a;
+    color: white;
+    /* evtl. Schriftgrößenanpassung */
+    /* font-size: calc(16px + 6 * ((100vw - 320px) / 680)); */
+	/* box-shadow: 5px 5px 10px #888888; */
+}
+
+/* Beim Überfahren mehr Schatten 
+ */
+div.blue-background:hover{
+    box-shadow: 10px 10px 15px #888888;
+		/* kommt beim Vortrag dazu: */
+  	-webkit-transform: scale(1.1);
+		-moz-transform: scale(1.01);
+		-ms-transform: scale(1.01);
+		-o-transform: scale(1.01);
+		transform: scale(1.01);
+	  opacity: 1.0;
+		/* VERZÖGERUNG */
+	 -webkit-transition: all 0.7s linear;
+	 -moz-transition: all 0.7s linear;
+	 -ms-transition: all 0.7s linear;
+	 -o-transition: all 0.7s linear;
+	 transition: all 0.7s linear;
+	 /* Schatten bei allen Elementen 
+	 -webkit-filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
+   filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));*/
+}
+
+/* damit die Spalten nicht direkt zusammenhängen */
+@media (max-width: 599px){
+	.wp-block-column {
+			/* statt 0px */
+			margin-top: 20px;    
+	}
+}
+
+/* Foto bei den dunkelblauen Spalten animieren (Hover) */
+figure.zoomeffekt {
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	overflow: hidden;
+}
+
+figure.zoomeffekt:hover+span {
+	bottom: -36px;
+	opacity: 0.1;
+}
+
+/* hier muss ggfs. die Klasse wp-image-324 jeweils für das Bild angepasst werden */
+/* durch falsche Kennung (324-1) zunächst allgemein ausgeschaltet */
+img.wp-image-324,
+img.wp-image-325 { 
+
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+    width:100%;
+
+}
+
+img.wp-image-324:hover,
+img.wp-image-325:hover {
+
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+	transition: all 1.5s linear;
+    
+}
+
+
+/* Absatz für Spaltentext */
+p.blue-background {
+   padding: 20px 38px;
+}
+
+/* kein Rand bei Bildern animieren */
+figure.wp-block-image.size-large {
+    margin-top: 0px!important;
+}
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+/* 4. Block */
+/* 2 Spalten mit Bild oben Text darunter, grüner Hintergrund ohne Rahmen */ 
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+/* Spaltenblock */
+p.green-background,
+div.green-background {
+    background-color: #2a452a;
+    color: white;
+	/* box-shadow: 5px 5px 10px #888888; */
+}
+
+/* Beim Überfahren mehr Schatten 
+ */
+div.green-background:hover{
+    box-shadow: 10px 10px 15px #888888;
+		/* kommt beim Vortrag dazu: */
+  	-webkit-transform: scale(1.1);
+		-moz-transform: scale(1.01);
+		-ms-transform: scale(1.01);
+		-o-transform: scale(1.01);
+		transform: scale(1.01);
+	  opacity: 1.0;
+		/* VERZÖGERUNG */
+	 -webkit-transition: all 0.7s linear;
+	 -moz-transition: all 0.7s linear;
+	 -ms-transition: all 0.7s linear;
+	 -o-transition: all 0.7s linear;
+	 transition: all 0.7s linear;
+	 /* Schatten bei allen Elementen 
+	 -webkit-filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
+   filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));*/
+}
+
+/* damit die Spalten nicht direkt zusammenhängen */
+@media (max-width: 599px){
+	.wp-block-column {
+			/* statt 0px */
+			margin-top: 20px;    
+	}
+}
+
+/* Ken-Burns-Effekt */
+/* hier muss ggfs. die Klasse wp-image-326 jeweils für das Bild angepasst werden */
+/* durch falsche Kennung (326-1) zunächst allgemein ausgeschaltet */
+
+/* einheitliche Höhe der Bilder */
+/* weißen Rand unten vermeiden */
+figure.wp-block-image.size-large.ken_burns {
+    margin-bottom: -6px;
+    height: 350px;
+}
+
+/* Foto bei den grünen Spalten animieren (Hover) */
+figure.ken_burns {
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	overflow: hidden;
+}
+
+img.wp-image-326,
+img.wp-image-327 {
+  animation-duration: 13s;
+  animation-name: slidein2;
+}
+
+
+/* bleibt im Rahmen */
+@keyframes slidein2 {
+  from {
+    width: 300%; 
+  }
+
+  25% {
+    width: 250%;
+  }
+
+
+  50% {
+    width: 200%;
+  }
+
+
+  75% {
+    width: 150%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+
+/* Absatz für Spaltentext */
+p.green-background {
+   padding: 20px 38px;
+}
+
+
+
+
+
+
+
