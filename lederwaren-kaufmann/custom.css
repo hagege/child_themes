@@ -1,72 +1,50 @@
-/* ------------------------------- */
-/* sticky menue                    */
-/* ------------------------------- */
-header#masthead {
-    background: #fff;
-    height: 10rem;
-    z-index: 170;
-    padding: 20px;
-    max-width: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
+/* Überschrift im Kopfbereich (hero) */
+h2.front_hero {
+	padding-right: 20rem;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+	padding-left: 2rem;
+	color: white;
+	background-color: black;
 }
 
-/* ------------------------------- */
-/* Grafiken im Stapel ganz hinten  */
-/* - wichtig für sticky menue      */
-/* ------------------------------- */
-.stapel_hinten {
-	z-index:-1;
+/* Animation (Fade) */
+.animated {
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-duration: 1s;
+    animation-fill-mode: both;
 }
 
-/* Beiträge und Seiten etwas weiter unten positionieren */
-main#main {
-    padding-top: 10rem;
+.fadeInLeftBig {
+    -webkit-animation-name: fadeInLeftBig;
+    animation-name: fadeInLeftBig
 }
 
-/* Menü etwas weiter oben positionieren */
-ul#primary-menu-list {
-    padding-bottom: 5rem;
+@-webkit-keyframes fadeInLeftBig {
+    0% {
+        -webkit-transform: translate3d(-2000px,0,0);
+        opacity: 0;
+        transform: translate3d(-2000px,0,0)
+    }
+
+    to {
+        -webkit-transform: translateZ(0);
+        opacity: 0.6;
+        transform: translateZ(0)
+    }
 }
 
-/* Mobiles Menü ab 782 px */
-@media only screen and (max-width: 782px) {
-	.primary-navigation-open .primary-navigation > .primary-menu-container {
-		height: 100vh;
-		overflow-x: hidden;
-		overflow-y: auto;
-		border: 2px solid transparent;
-	}
-	.primary-navigation > div > .menu-wrapper {
-		padding-bottom: 100px;
-		padding-left: 0;
-	}
-	.primary-navigation-open .primary-navigation {
-		width: 100%;
-		position: fixed;
-	}
-	.menu-button-container {
-		display: block;
-	}
-	.primary-navigation > .primary-menu-container {
-		visibility: hidden;
-		opacity: 0;
-		position: fixed;
-		padding-top: calc(var(--button--line-height) * var(--primary-nav--font-size-button) + 42px + 5px);
-		padding-left: var(--global--spacing-unit);
-		padding-right: var(--global--spacing-unit);
-		padding-bottom: var(--global--spacing-horizontal);
-		background-color: var(--global--color-background);
-		transition: all 0.15s ease-in-out;
-		transform: translateY(var(--global--spacing-vertical));
-	}
-	.primary-navigation > div > .menu-wrapper li {
-		display: block;
-		position: relative;
-		width: 100%;
-	}
+@keyframes fadeInLeftBig {
+    0% {
+        -webkit-transform: translate3d(-2000px,0,0);
+        opacity: 0;
+        transform: translate3d(-2000px,0,0)
+    }
+
+    to {
+        -webkit-transform: translateZ(0);
+        opacity: 0.6;
+        transform: translateZ(0)
+    }
 }
