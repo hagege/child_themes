@@ -8,6 +8,8 @@
 }
 */
 
+
+/* Container für Text in Elements */
 .front_hero {
 	margin-bottom: 10px;
 	margin-top: 10rem;
@@ -21,23 +23,50 @@
   }
   
   
-  /* Animation (Fade) */
-  .animated_1 {
-	  font-weight: 700;
-		font-size: 4rem;
-	  -webkit-animation-duration: 1s;
-	  -webkit-animation-fill-mode: both;
-	  animation-duration: 2s;
-	  animation-fill-mode: both;
+  /* Animationen für Text in Elements */
+  @media only screen and (max-width: 767px) {
+  
+	  /* Animation (Fade) */
+	  .animated_1 {
+			  font-weight: 700;
+			  font-size: 2rem;
+			  -webkit-animation-duration: 1s;
+			  -webkit-animation-fill-mode: both;
+			  animation-duration: 2s;
+			  animation-fill-mode: both;
+	  }
+  
+	  .animated_2 {
+			  font-weight: 400;
+			  font-size: 1.5rem;
+			  -webkit-animation-duration: 1s;
+			  -webkit-animation-fill-mode: both;
+			  animation-duration: 1s;
+			  animation-fill-mode: both;
+	  }
   }
   
-  .animated_2 {
-	  font-weight: 400;
-		font-size: 3rem;
-	  -webkit-animation-duration: 1s;
-	  -webkit-animation-fill-mode: both;
-	  animation-duration: 1s;
-	  animation-fill-mode: both;
+  
+  @media only screen and (min-width: 768px) {
+  
+	  /* Animation (Fade) */
+	  .animated_1 {
+			  font-weight: 700;
+			  font-size: 4rem;
+			  -webkit-animation-duration: 1s;
+			  -webkit-animation-fill-mode: both;
+			  animation-duration: 2s;
+			  animation-fill-mode: both;
+	  }
+  
+	  .animated_2 {
+			  font-weight: 400;
+			  font-size: 3rem;
+			  -webkit-animation-duration: 1s;
+			  -webkit-animation-fill-mode: both;
+			  animation-duration: 1s;
+			  animation-fill-mode: both;
+	  }
   }
   
   .fadeInLeftBig {
