@@ -8,22 +8,32 @@
 }
 */
 
-h2.front_hero {
-	font-weight: 600;
+.front_hero {
 	margin-bottom: 10px;
-	margin-top: 20rem;
-	  padding-right: 20rem;
+	margin-top: 10rem;
+	  padding-right: 15rem;
 	  padding-top: 5rem;
 	  padding-bottom: 5rem;
 	  padding-left: 2rem;
 	  color: white;
 	  text-shadow: 0px 0px 0.2rem #f9b81e;
-	  background-color: #a49889;
+	  /* background-color: #a49889; */
   }
-  */
+  
   
   /* Animation (Fade) */
-  .animated {
+  .animated_1 {
+	  font-weight: 700;
+		font-size: 4rem;
+	  -webkit-animation-duration: 1s;
+	  -webkit-animation-fill-mode: both;
+	  animation-duration: 2s;
+	  animation-fill-mode: both;
+  }
+  
+  .animated_2 {
+	  font-weight: 400;
+		font-size: 3rem;
 	  -webkit-animation-duration: 1s;
 	  -webkit-animation-fill-mode: both;
 	  animation-duration: 1s;
@@ -44,7 +54,7 @@ h2.front_hero {
   
 	  to {
 		  -webkit-transform: translateZ(0);
-		  opacity: 0.6;
+		  opacity: 1;
 		  transform: translateZ(0)
 	  }
   }
@@ -58,7 +68,7 @@ h2.front_hero {
   
 	  to {
 		  -webkit-transform: translateZ(0);
-		  opacity: 0.6;
+		  opacity: 1;
 		  transform: translateZ(0)
 	  }
   }
