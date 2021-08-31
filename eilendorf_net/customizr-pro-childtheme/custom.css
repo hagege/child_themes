@@ -7,94 +7,99 @@
  * /
 */
 
-/* Beginn Mini-Calendar */
-/* Farbe für aktuellen Tag */
-button.tribe-events-calendar-month__day-cell.tribe-events-calendar-month__day-cell--mobile.tribe-events-calendar-month__day-cell--selected {
-    background-color: #0D3042!important;
-}
-
-/* Farbe für Punkte */
-em.tribe-events-calendar-month__mobile-events-icon.tribe-events-calendar-month__mobile-events-icon--event {
-    background-color: #878787!important;
-}
-
-/* Farbe für weitere Tage */
-button.tribe-events-calendar-month__day-cell.tribe-events-calendar-month__day-cell--mobile:hover {
-    background-color: #b2b2b240!important;
-}
-
-/* Farbe für Tag */
-time.tribe-events-calendar-month__day-date-daynum {
-    color: #878787;
-}
-
-/* Farbe für Link */
-a.tribe-common-anchor-thin.tribe-events-widget-events-month__view-more-link {
-    color: #878787!important;
-}
-
-/* Ende Mini-Calendar */
-
-
-/* Menüpunkte mit mehr Raum */
-.tc-header .nav-collapse .dropdown-menu > li > a {
-    margin: 10px;
-}
-
-/* Farben geändert für iCal */
-.tribe-events .tribe-events-c-ical__link {
-    border-color: #0d3042!important;
-    color: #0d3042!important;
-}
-
-.tribe-events .tribe-events-c-ical__link:hover {
-    background-color: #0d3042!important;
-    color: white!important;
-}
-
-
-/* Schriftgröße geändert für Breadcrump */
-.tribe-common--breakpoint-medium.tribe-events .tribe-events-c-breadcrumbs__list {
-    font-size: 1.2rem;
-}
-
-/* Links für Event-Export */
-a.tribe-events-gcal.tribe-events-button, a.tribe-events-ical.tribe-events-button {
-    background-color: #0D3240!important;
-    color: #00FFFF!important;
-}
-
-#tribe-events td.tribe-events-present div[id*="tribe-events-daynum-"], #tribe-events td.tribe-events-present div[id*="tribe-events-daynum-"] > a {
-    background-color: #0D3240!important;
-    color: #00FFFF!important;
-}
-
-/* Karte bei Veranstaltungen */
-.tribe-events-single-section.tribe-events-event-meta.primary.tribe-clearfix {
-    background-color: #ffffff;
-}
-
-/* Überschrift für Monatsansicht bei TEC */
-h3.tribe-events-month-event-title {
-    text-shadow: 0 0px 0 #fff;
-
-}
-/* Änderung der Überschriftenfarbe bei TEC */
-.single-tribe_events .tribe-events-single-event-title {
-    color: #0d3042;
-}
-
-/* Vorher und Nachher Verstecken */
-nav.tribe-events-nav-pagination {
-    display: none;
-}
-
-/* Links bei TEC Größe r*/
-#tribe-events-content a, .tribe-events-event-meta a, .tribe-events-back {
-    font-size: 1.2em;
-}
-
-/*Schriftgröße bei Beiträgen*/
-body {
-        font-size: 18px;
-}
+/* Bild beim Widget zentriert */
+.image.wp-image-3010.attachment-full.size-full {
+    max-width: 150px;
+  }
+  
+  /* Beginn Mini-Calendar */
+  /* Farbe für aktuellen Tag */
+  button.tribe-events-calendar-month__day-cell.tribe-events-calendar-month__day-cell--mobile.tribe-events-calendar-month__day-cell--selected {
+      background-color: #0D3042!important;
+  }
+  
+  /* Farbe für Punkte */
+  em.tribe-events-calendar-month__mobile-events-icon.tribe-events-calendar-month__mobile-events-icon--event {
+      background-color: #878787!important;
+  }
+  
+  /* Farbe für weitere Tage */
+  button.tribe-events-calendar-month__day-cell.tribe-events-calendar-month__day-cell--mobile:hover {
+      background-color: #b2b2b240!important;
+  }
+  
+  /* Farbe für Tag */
+  time.tribe-events-calendar-month__day-date-daynum {
+      color: #878787;
+  }
+  
+  /* Farbe für Link */
+  a.tribe-common-anchor-thin.tribe-events-widget-events-month__view-more-link {
+      color: #878787!important;
+  }
+  
+  /* Ende Mini-Calendar */
+  
+  
+  /* Menüpunkte mit mehr Raum */
+  .tc-header .nav-collapse .dropdown-menu > li > a {
+      margin: 10px;
+  }
+  
+  /* Farben geändert für iCal */
+  .tribe-events .tribe-events-c-ical__link {
+      border-color: #0d3042!important;
+      color: #0d3042!important;
+  }
+  
+  .tribe-events .tribe-events-c-ical__link:hover {
+      background-color: #0d3042!important;
+      color: white!important;
+  }
+  
+  
+  /* Schriftgröße geändert für Breadcrump */
+  .tribe-common--breakpoint-medium.tribe-events .tribe-events-c-breadcrumbs__list {
+      font-size: 1.2rem;
+  }
+  
+  /* Links für Event-Export */
+  a.tribe-events-gcal.tribe-events-button, a.tribe-events-ical.tribe-events-button {
+      background-color: #0D3240!important;
+      color: #00FFFF!important;
+  }
+  
+  #tribe-events td.tribe-events-present div[id*="tribe-events-daynum-"], #tribe-events td.tribe-events-present div[id*="tribe-events-daynum-"] > a {
+      background-color: #0D3240!important;
+      color: #00FFFF!important;
+  }
+  
+  /* Karte bei Veranstaltungen */
+  .tribe-events-single-section.tribe-events-event-meta.primary.tribe-clearfix {
+      background-color: #ffffff;
+  }
+  
+  /* Überschrift für Monatsansicht bei TEC */
+  h3.tribe-events-month-event-title {
+      text-shadow: 0 0px 0 #fff;
+  
+  }
+  /* Änderung der Überschriftenfarbe bei TEC */
+  .single-tribe_events .tribe-events-single-event-title {
+      color: #0d3042;
+  }
+  
+  /* Vorher und Nachher Verstecken */
+  nav.tribe-events-nav-pagination {
+      display: none;
+  }
+  
+  /* Links bei TEC Größe r*/
+  #tribe-events-content a, .tribe-events-event-meta a, .tribe-events-back {
+      font-size: 1.2em;
+  }
+  
+  /*Schriftgröße bei Beiträgen*/
+  body {
+          font-size: 18px;
+  }
