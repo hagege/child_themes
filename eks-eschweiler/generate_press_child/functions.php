@@ -232,6 +232,23 @@ register_block_pattern(
 );
 
 
+/* ------------------------------ */
+/* Foto im Header                 */
+/* ------------------------------ */
+register_block_pattern(
+  'header_foto',
+    array(
+    'title' => __( 'Foto im Header', 'header_foto' ),
+    'description' => _x( 'Foto im Header ', 'ein Foto im Header mit einer Breite von 1120px', 'header_foto' ),
+    'categories'  => array('Haurand'),
+    'content'     =>
+       "<!-- wp:image {\"align\":\"center\",\"id\":582,\"width\":1020,\"sizeSlug\":\"large\",\"linkDestination\":\"none\",\"className\":\"breite_bild\"} -->
+       <div class=\"wp-block-image breite_bild\"><figure class=\"aligncenter size-large is-resized\"><img src=\"https://wp.eks-eschweiler.de/wp-content/uploads/2021/09/Beispielfoto_2-1024x320.jpg\" alt=\"Foto im Header\" class=\"wp-image-582\" width=\"1020\"/></figure></div>
+       <!-- /wp:image -->",
+  )
+);
+
+
 /*----------------------------------------------------------------*/
 /* Ende: Block Patterns von haurand.com 
 /* Datum: 14.01.2021

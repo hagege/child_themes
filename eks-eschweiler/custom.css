@@ -22,13 +22,24 @@ ul.wp-block-latest-posts__list.leistung.wp-block-latest-posts >a{
 }
 */
 
-/* Hover-Effekt im Fußbereich */
-.footer-widgets a:hover {
-    background-color: #A9B2B5;
-    color: white;
-    text-decoration: none;
+/* Breite Bild im Header */
+.wp-block-image.breite_bild img {
+	width: 1120px;
 }
 
+.wp-block-buttons .mein_button a
+
+/* zusätzlicher linker Abstand bei Spalten */
+div.text_spalte {
+	padding-left: 1rem;
+}
+
+/* Bild nicht zeigen auf der Hauptseite bei kleineren Displays */
+@media only screen and (max-width: 800px) {
+	img.wp-image-225 {
+    display: none;
+	}
+}
 
 /* verkleinerte Ansicht der Grafik im Kopf */
 @media only screen and (max-width: 471px) {
