@@ -4,6 +4,128 @@
 }
 */
 
+/* Breite von einem Cover im Cover 
+[class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    max-width: 90%;
+    width: 100%;
+}
+
+
+/* Breite von einem Cover im Cover */
+div[class*="breiteres_bild"]  > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    max-width: 90%;
+}
+
+
+.alignfull > figcaption, .alignfull > .wp-caption-text {
+    font-size: 4vmax;
+		font-weight: 800;
+	  margin-top: calc(-100vh + 10vw); 
+    /* margin-top: -100vH; */
+	  color: white;
+		margin-bottom: calc(80vH + 2vw);  		/* margin-bottom: 80vH; */
+		text-shadow: 0px 0px 0.2rem #f9b81e;
+}
+
+}
+
+/* Animationen für Text in Elements */
+@media only screen and (max-width: 767px) {
+
+	/* Animation (Fade) */
+	.animated_1 {
+			font-weight: 700;
+			font-size: 2rem;
+			-webkit-animation-duration: 1s;
+			-webkit-animation-fill-mode: both;
+			animation-duration: 2s;
+			animation-fill-mode: both;
+	}
+
+	.animated_2 {
+			font-weight: 400;
+			font-size: 1.5rem;
+			-webkit-animation-duration: 1s;
+			-webkit-animation-fill-mode: both;
+			animation-duration: 1s;
+			animation-fill-mode: both;
+	}
+}
+
+
+@media only screen and (min-width: 768px) {
+
+	/* Animation (Fade) */
+	.animated_1 {
+			font-weight: 700;
+			font-size: 4rem;
+			-webkit-animation-duration: 1s;
+			-webkit-animation-fill-mode: both;
+			animation-duration: 2s;
+			animation-fill-mode: both;
+	}
+
+	.animated_2 {
+			font-weight: 400;
+			font-size: 3rem;
+			-webkit-animation-duration: 1s;
+			-webkit-animation-fill-mode: both;
+			animation-duration: 1s;
+			animation-fill-mode: both;
+	}
+}
+
+.fadeInLeftBig {
+    -webkit-animation-name: fadeInLeftBig;
+    animation-name: fadeInLeftBig
+}
+
+@-webkit-keyframes fadeInLeftBig {
+    0% {
+        -webkit-transform: translate3d(-2000px,0,0);
+        opacity: 0;
+        transform: translate3d(-2000px,0,0)
+    }
+
+    to {
+        -webkit-transform: translateZ(0);
+        opacity: 1;
+        transform: translateZ(0)
+    }
+}
+
+@keyframes fadeInLeftBig {
+    0% {
+        -webkit-transform: translate3d(-2000px,0,0);
+        opacity: 0;
+        transform: translate3d(-2000px,0,0)
+    }
+
+    to {
+        -webkit-transform: translateZ(0);
+        opacity: 1;
+        transform: translateZ(0)
+    }
+}
+
+
+/* Umschalten von 3 auf 1 Spalte */
+@media (max-width:781px){
+.wp-block-columns {
+    display: block; 
+	}
+}
+
+@media (min-width: 600px) and (max-width: 781px) {
+.wp-block-column:nth-child(2n) {
+    margin-left: 0;
+}	
+}	
+
+/* Beiträge mit zusätzlichem oberen Rand */
+.post-inner.thin {
+    margin-top: 15rem;
+}
 
 /* Anker auf Beitrag ohne Plugin */
 #erster, #zweiter, #dritter, #vierter, #fuenfter {
@@ -21,11 +143,11 @@
   border-radius: 20px;
 }
 
-/* ersten Absatz im Beitrag kursiv, wenn der Absatz fett ausgezeichnet ist */
+/* ersten Absatz im Beitrag kursiv, wenn der Absatz fett ausgezeichnet ist 
 .entry-content p:first-child strong{
     font-style: italic;
 }
-
+*/
 
 /* mehr Platz oben für Anker */
 h2.anker_h2 {
