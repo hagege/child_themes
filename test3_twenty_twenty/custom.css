@@ -11,11 +11,18 @@
 }
 
 
-/* Breite von einem Cover im Cover */
+/* Breite von einem Cover im Cover 
 div[class*="breiteres_bild"]  > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
     max-width: 90%;
 }
+*/
 
+/* oben mehr padding */
+@media only screen and (max-width: 767px) {
+	main#site-content {
+			padding-top: 5rem;
+	}
+}
 
 .alignfull > figcaption, .alignfull > .wp-caption-text {
     font-size: 4vmax;
