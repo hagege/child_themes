@@ -28,7 +28,8 @@ p.text_auf_bild {
 
 /* schräge Kante beim Bild */ 
 .schraeg {
-clip-path: polygon(0 0, 100% 0, 100% 85%, 66% 100%, 0 85%);
+clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);	
+/* clip-path: polygon(0 0, 100% 0, 100% 85%, 66% 100%, 0 85%); */
 }
 
 
@@ -74,6 +75,9 @@ clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
 
 }
 
+/* ----------------------------- */
+/* Animation auf Bild */
+/* ----------------------------- */
 /* Animationen für Text in Elements */
 @media only screen and (max-width: 767px) {
 
@@ -521,84 +525,3 @@ figure.wp-block-image.size-large.zoomeffekt img:hover {
 }
 /* ----------------------------- */
 
-/* ----------------------------- */
-/* Animation auf Bild */
-/* ----------------------------- */
-/* Animationen für Text in Elements */
-@media only screen and (max-width: 767px) {
-
-	/* Animation (Fade) */
-	.animated_1 {
-			font-weight: 700;
-			font-size: 2rem;
-			-webkit-animation-duration: 1s;
-			-webkit-animation-fill-mode: both;
-			animation-duration: 2s;
-			animation-fill-mode: both;
-	}
-
-	.animated_2 {
-			font-weight: 400;
-			font-size: 1.5rem;
-			-webkit-animation-duration: 1s;
-			-webkit-animation-fill-mode: both;
-			animation-duration: 1s;
-			animation-fill-mode: both;
-	}
-}
-
-
-@media only screen and (min-width: 768px) {
-
-	/* Animation (Fade) */
-	.animated_1 {
-			font-weight: 700;
-			font-size: 4rem;
-			-webkit-animation-duration: 1s;
-			-webkit-animation-fill-mode: both;
-			animation-duration: 2s;
-			animation-fill-mode: both;
-	}
-
-	.animated_2 {
-			font-weight: 400;
-			font-size: 3rem;
-			-webkit-animation-duration: 1s;
-			-webkit-animation-fill-mode: both;
-			animation-duration: 1s;
-			animation-fill-mode: both;
-	}
-}
-
-.fadeInLeftBig {
-    -webkit-animation-name: fadeInLeftBig;
-    animation-name: fadeInLeftBig
-}
-
-@-webkit-keyframes fadeInLeftBig {
-    0% {
-        -webkit-transform: translate3d(-2000px,0,0);
-        opacity: 0;
-        transform: translate3d(-2000px,0,0)
-    }
-
-    to {
-        -webkit-transform: translateZ(0);
-        opacity: 1;
-        transform: translateZ(0)
-    }
-}
-
-@keyframes fadeInLeftBig {
-    0% {
-        -webkit-transform: translate3d(-2000px,0,0);
-        opacity: 0;
-        transform: translate3d(-2000px,0,0)
-    }
-
-    to {
-        -webkit-transform: translateZ(0);
-        opacity: 1;
-        transform: translateZ(0)
-    }
-}
