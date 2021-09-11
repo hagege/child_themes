@@ -73,18 +73,15 @@ clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
 		text-shadow: 0px 0px 0.2rem #f9b81e;
 }
 
-}
+
 
 /* ----------------------------- */
 /* Animation auf Bild */
 /* ----------------------------- */
 /* Animationen für Text in Elements */
-@media only screen and (max-width: 767px) {
 
 	/* Animation (Fade) */
 	.animated_1 {
-			font-weight: 700;
-			font-size: 2rem;
 			-webkit-animation-duration: 1s;
 			-webkit-animation-fill-mode: both;
 			animation-duration: 2s;
@@ -92,37 +89,13 @@ clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
 	}
 
 	.animated_2 {
-			font-weight: 400;
-			font-size: 1.5rem;
 			-webkit-animation-duration: 1s;
 			-webkit-animation-fill-mode: both;
-			animation-duration: 1s;
-			animation-fill-mode: both;
-	}
-}
-
-
-@media only screen and (min-width: 768px) {
-
-	/* Animation (Fade) */
-	.animated_1 {
-			font-weight: 700;
-			font-size: 4rem;
-			-webkit-animation-duration: 1s;
-			-webkit-animation-fill-mode: both;
-			animation-duration: 2s;
+			animation-duration: 4s;
 			animation-fill-mode: both;
 	}
 
-	.animated_2 {
-			font-weight: 400;
-			font-size: 3rem;
-			-webkit-animation-duration: 1s;
-			-webkit-animation-fill-mode: both;
-			animation-duration: 1s;
-			animation-fill-mode: both;
-	}
-}
+
 
 .fadeInLeftBig {
     -webkit-animation-name: fadeInLeftBig;
