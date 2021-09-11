@@ -20,8 +20,8 @@ div[class*="breiteres_bild"]  > *:not(.alignwide):not(.alignfull):not(.alignleft
 @media only screen and (max-width: 428px) {
     h2.text_auf_bild,
     p.text_auf_bild	{
-        margin-top: -30vh;
-        margin-bottom: 30vh!important;
+        margin-top: -40vh;
+        margin-bottom: 40vh!important;
         color: white;
     }
     }
@@ -29,16 +29,17 @@ div[class*="breiteres_bild"]  > *:not(.alignwide):not(.alignfull):not(.alignleft
     @media only screen and (min-width: 429px) {
     h2.text_auf_bild,
     p.text_auf_bild {
-        margin-top: -40vh;
-        margin-bottom: 40vh!important;
+        margin-top: -50vh;
+        margin-bottom: 50vh!important;
         color: white;
     }
     }
     
     @media only screen and (min-width: 600px) {
-    h2.text_auf_bild {
-        margin-top: -50vh;
-        margin-bottom: 50vh!important;
+    h2.text_auf_bild,
+    p.text_auf_bild  {
+        margin-top: -65vh;
+        margin-bottom: 65vh!important;
         color: white;
     }
     }
@@ -546,7 +547,7 @@ div[class*="breiteres_bild"]  > *:not(.alignwide):not(.alignfull):not(.alignleft
     @media only screen and (max-width: 767px) {
     
         /* Animation (Fade) */
-        h2.animated_1 {
+        .animated_1 {
                 font-weight: 700;
                 font-size: 2rem;
                 -webkit-animation-duration: 1s;
@@ -555,7 +556,7 @@ div[class*="breiteres_bild"]  > *:not(.alignwide):not(.alignfull):not(.alignleft
                 animation-fill-mode: both;
         }
     
-        h2.animated_2 {
+        .animated_2 {
                 font-weight: 400;
                 font-size: 1.5rem;
                 -webkit-animation-duration: 1s;
