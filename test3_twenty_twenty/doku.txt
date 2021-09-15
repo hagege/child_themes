@@ -1,0 +1,32 @@
+doku.txt
+
+In dieser Datei werden die Beiträge, die zu Testzwecken u. a. aufgrund von Beiträgen von haurand.com dokumentiert
+
+11.9.2021: Mehrere Bilder und Text
+			https://test3.haurand.com/mehrere-bilder-und-text/
+			Anwendung der Lösung von Text über Bilder (Image-Block mit Text über Bild)
+
+11.9.2021: Bilder mit abgeschrägter Kante
+			https://test3.haurand.com/bilder-mit-abgeschraegter-kante/
+			a) Bilder mit abgeschrägter Kante ohne Schatten
+			b) Text auf Hintergrund Pfeil nach links
+			c) Text auf Hintergrund Pfeil nach links mit Schatten (Gruppenblock)
+			d) Bild mit abgeschrägter Kante mit Schatten (Gruppenblock)
+			e) Bild mit Text über Bild (Image-Block und Gruppenblock)
+			siehe hier mit Hinweis auf coblocks: 
+			https://wordpress.org/support/topic/change-the-color-of-the-primary-menu/#post-12382614
+			
+10.9.2021: Cover-Bilder
+			https://test3.haurand.com/cover-bilder/
+			Cover-Block mit Duotone-Effekt und innerhalb des Cover-Blocks ein weiterer Cover-Block (teilweise mit fixiertem Hintergrund)
+			verschiedene farbliche Kombinationen
+			
+6.9.2021: Animationen (zum Beitrag auf haurand.com)
+			https://test3.haurand.com/animationen/
+			verschiedene Darstellungen zu Animationen. 
+			Plugin Blocks Animation: CSS Animations for Gutenberg Blocks
+			Beschreibung im Beitrag auf haurand.com: https://haurand.com/animationen-bei-wordpress-seiten-mit-einem-plugin/
+			
+			
+			
+	

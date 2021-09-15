@@ -104,7 +104,7 @@ h2.has-text-align-center.h2_blau.has-background,
 h2.has-text-align-center.h2_gruen.has-background,
 h2.has-text-align-center.h2_orange.has-background
 {
-    border-radius: 55px 0px 55px 0px;
+  border-radius: 55px 0px 55px 0px;
 	padding: 20px 114px 20px 114px;
 	margin-bottom: 3rem;
 	color: white;
@@ -120,8 +120,9 @@ h2.has-text-align-center.h2_gruen.has-background,
 h2.has-text-align-center.h2_ocker.has-background
 {
 		border-radius: 35px 0px 35px 0px;
-		padding: 0px;
+		padding: 20px 0px 20px 0px;
 		font-size: 1.2em;
+		margin-bottom: 2rem;
 }
 }
 
