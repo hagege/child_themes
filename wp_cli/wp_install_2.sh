@@ -7,9 +7,9 @@ read -r -p "Are you sure you want to install WordPress? [y/N] " response
 # username, database-name, sitename
 wpuser='hagege'
 # a web page with the name "Weitere Testseite" and the database "test_db2" should always be created
-dbname='test_db2'
-sitename='Weitere Testseite'
-dir='weitere_testseite'
+dbname='test_db3'
+sitename='Neue Testseite'
+dir='neue_testseite_2'
 
 	# remove directory (show the process: v)
 	rm -rv $dir; 
@@ -77,12 +77,15 @@ dir='weitere_testseite'
 	
     # php ../wp-cli.phar updraftplus get_latest_full_backup
 	# UpdraftPlus-Ordner aus ackids_50 kopieren, damit die Premiumversion installiert ist
-	cp -r -v d:/laragon/sicherungen/updraftplus d:/laragon/www/weitere_testseite/wp-content/plugins/updraftplus
+	cp -r -v d:/laragon/sicherungen/updraftplus d:/laragon/www/$dir/wp-content/plugins/updraftplus
 	php ../wp-cli.phar plugin activate updraftplus
 	# Ordner für Backups anlegen:
-	mkdir d:/laragon/www/weitere_testseite/wp-content/updraft
+	mkdir d:/laragon/www/$dir/wp-content/updraft
 	# Sicherungen in den Ordner updraft kopieren:
-	cp d:/laragon/sicherungen/backup_2021-06-22-1735_Neue_Testseite*.* d:/laragon/www/weitere_testseite/wp-content/updraft
+	cp d:/laragon/sicherungen/backup_2021-06-22-1735_Neue_Testseite*.* d:/laragon/www/$dir/wp-content/updraft
+	
+	# Rescan either local or remote storage for backup sets
+	php ../wp-cli.phar updraftplus rescan_storage local
 	php ../wp-cli.phar updraftplus existing_backups
 	php ../wp-cli.phar updraftplus restore a8f39e7f3d4a
 	
