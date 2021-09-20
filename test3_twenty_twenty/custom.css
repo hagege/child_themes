@@ -17,6 +17,45 @@ div[class*="breiteres_bild"]  > *:not(.alignwide):not(.alignfull):not(.alignleft
 }
 */
 
+/* ------------------------------ */
+/* Drei Spalten mit Bild schattiert und hover-Effekt */
+/* ------------------------------ */
+/* Titel unter Bildern größer */
+div.wp-block-column.drei_kacheln {
+    color: green;
+    font-size: 1.5rem;
+		padding: 0px 0px 24px 0px;
+    margin: 0px 20px 0px 0px;
+		background-color: white;
+		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+    filter: drop-shadow(2px 2px 5px #CCCCCC); 
+		margin-bottom: 3rem;
+}
+
+/* beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind */
+@media (min-width: 782px) {
+div.wp-block-column.drei_kacheln:last-child {
+	margin-right: 0px;
+	}
+}
+
+/* wenn die Bilder untereinander stehen, dann kein rechter Rand, damit die Bilder zentriert sind */
+@media (min-width: 600px) and (max-width: 781px) {
+div.wp-block-column.drei_kacheln {
+	margin-right: 0px;
+	}
+}
+
+/* beim Hover leicht größer mit mehr Schatten */
+div.wp-block-column.drei_kacheln:hover {
+		opacity:0.7;
+    /* Kachel etwas größer: */
+  	transform: scale(1.01, 1.01);
+		-webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
+    filter: drop-shadow(5px 5px 3px #CCCCCC);
+}
+
+
 /* --------------------------- */
 /* Lauftext */
 /* --------------------------- */
