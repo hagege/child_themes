@@ -116,4 +116,38 @@ register_block_pattern(
     )
   );
 
+
+
+
+/* -------------------------------------------------------------------------------------------------------------------- */
+/* Drei Spalten mit Bildern als Kacheln                                                                                            */
+/* -------------------------------------------------------------------------------------------------------------------- */
+register_block_pattern(
+    'drei_spalten_kacheln',
+      array(
+      'title' => __( 'Drei Spalten mit Bildern als Kacheln', 'drei_spalten_kacheln' ),
+      'description' => _x( 'Drei Spalten mit Bildern als Kacheln', 'Drei Spalten mit Bildern als Kacheln', 'drei_spalten_kacheln' ),
+      'categories'  => array('Haurand'),
+      'content'     =>
+         "<!-- wp:columns {\"align\":\"full\",\"className\":\"has-3-columns\"} -->
+          <div class=\"wp-block-columns alignfull has-3-columns\"><!-- wp:column {\"className\":\"drei_kacheln\"} -->
+          <div class=\"wp-block-column drei_kacheln\"><!-- wp:image {\"id\":48891,\"sizeSlug\":\"large\",\"linkDestination\":\"custom\",\"className\":\"kachelbild\"} -->
+          <figure class=\"wp-block-image size-large kachelbild\"><img src=\"https://test3.haurand.com/wp-content/uploads/2021/09/dom_2-1024x768.jpg\" alt=\"\" class=\"wp-image-48891\"/><figcaption>Dom in Aachen</figcaption></figure>
+          <!-- /wp:image --></div>
+          <!-- /wp:column -->
+
+          <!-- wp:column {\"className\":\"drei_kacheln\"} -->
+          <div class=\"wp-block-column drei_kacheln\"><!-- wp:image {\"id\":48887,\"sizeSlug\":\"large\",\"linkDestination\":\"custom\",\"className\":\"kachelbild\"} -->
+          <figure class=\"wp-block-image size-large kachelbild\"><img src=\"https://test3.haurand.com/wp-content/uploads/2021/09/bild_1_vortrag-1024x768.jpg\" alt=\"\" class=\"wp-image-48887\"/><figcaption>Sonnenuntergang</figcaption></figure>
+          <!-- /wp:image --></div>
+          <!-- /wp:column -->
+
+          <!-- wp:column {\"className\":\"drei_kacheln\"} -->
+          <div class=\"wp-block-column drei_kacheln\"><!-- wp:image {\"id\":48889,\"sizeSlug\":\"large\",\"linkDestination\":\"custom\",\"className\":\"kachelbild\"} -->
+          <figure class=\"wp-block-image size-large kachelbild\"><img src=\"https://test3.haurand.com/wp-content/uploads/2021/09/bild_3_vortrag-1024x768.jpg\" alt=\"\" class=\"wp-image-48889\"/><figcaption>Landschaft</figcaption></figure>
+          <!-- /wp:image --></div>
+          <!-- /wp:column --></div>
+          <!-- /wp:columns -->",
+    )
+  );
 ?>
