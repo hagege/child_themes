@@ -53,6 +53,7 @@ div.wp-block-column.drei_kacheln:hover {
   	transform: scale(1.01, 1.01);
 		-webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
     filter: drop-shadow(5px 5px 3px #CCCCCC);
+	transition-duration: 1s;
 }
 
 

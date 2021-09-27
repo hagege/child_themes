@@ -52,7 +52,7 @@ add_filter( 'get_the_excerpt', 'manual_excerpt_more' );
  
  
   
-  /* bestimmte Kategorien ausblenden 
+  /* bestimmte Kategorien ausblenden */
   function prefix_unregister_category() {
     unregister_block_pattern_category( 'buttons'); 
     unregister_block_pattern_category( 'header'); 
@@ -60,10 +60,11 @@ add_filter( 'get_the_excerpt', 'manual_excerpt_more' );
     unregister_block_pattern_category( 'columns');
     unregister_block_pattern_category( 'gallery');
     unregister_block_pattern_category( 'uncategorized');
-    unregister_block_pattern_category( 'query'); 
+    unregister_block_pattern_category( 'query');
+    unregister_block_pattern_category( 'Twenty Twenty'); 
   }
   add_action( 'init', 'prefix_unregister_category' );
-*/
+
   
   /* eigene Vorlagen registrieren - im Beispiel "Vorlagen Haurand" */
   function haurand_register_block_categories() {
