@@ -17,6 +17,20 @@ div[class*="breiteres_bild"]  > *:not(.alignwide):not(.alignfull):not(.alignleft
 }
 */
 
+
+/* Beitrag "bild-und-text-nebeneinander": Bild und Text untereinander bei schmaleren Displays */
+@media (max-width: 781px) {
+	.wp-block-columns.umgekehrt {
+			display: flex;
+			flex-direction: column-reverse;
+	}
+}
+
+/* Rand oben wie beim Bild */
+.wp-block-column > p {
+	margin-top: 4rem!important;
+}
+
 /* ------------------------------ */
 /* Drei Spalten mit Bild schattiert und hover-Effekt */
 /* ------------------------------ */
