@@ -18,7 +18,9 @@ div[class*="breiteres_bild"]  > *:not(.alignwide):not(.alignfull):not(.alignleft
 */
 
 
+/* ------------------------------ */
 /* Beitrag "bild-und-text-nebeneinander": Bild und Text untereinander bei schmaleren Displays */
+/* ------------------------------ */
 @media (max-width: 781px) {
 	.wp-block-columns.umgekehrt {
 			display: flex;
@@ -32,7 +34,7 @@ div[class*="breiteres_bild"]  > *:not(.alignwide):not(.alignfull):not(.alignleft
 }
 
 /* ------------------------------ */
-/* Drei Spalten mit Bild schattiert und hover-Effekt */
+/* Drei Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln" */
 /* ------------------------------ */
 /* Titel unter Bildern größer */
 div.wp-block-column.drei_kacheln {
@@ -104,7 +106,8 @@ p.lauftext {
 }
 
 /* --------------------------- */
-
+/* siehe Beitrag "Mehrere Bilder und Text" */
+/* ------------------------------ */
 h2.text_auf_bild,
 p.text_auf_bild {
 	margin-top: -35vh;
@@ -113,7 +116,9 @@ p.text_auf_bild {
 }
 
 
-/* schräge Kante beim Bild */ 
+/* ------------------------------ */
+/* schräge Kante beim Bild, siehe Beitrag: Bilder mit abgeschrägter Kante */ 
+/* ------------------------------ */
 .schraeg {
 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);	
 /* clip-path: polygon(0 0, 100% 0, 100% 85%, 66% 100%, 0 85%); */
