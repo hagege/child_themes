@@ -19,6 +19,11 @@ body.search > .grid-container {
     max-width: 1400px;
 }
 
+/* damit die Breite der Archive besser dargestellt wird, z. B. bei Schlagwörtern */
+body.archive .site.grid-container {
+    max-width: 1500px;
+}
+
 /* Veröffentlichungsdatum zentriert */
 header.entry-header > .entry-meta {
 		text-align: center;	
