@@ -15,12 +15,10 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 }
 
 /* Bei Suche Container mit max. 1400 px */
-body.search > .grid-container {
-    max-width: 1400px;
-}
-
 /* damit die Breite der Archive besser dargestellt wird, z. B. bei Schlagwörtern */
-body.archive .site.grid-container {
+body.search > .grid-container,
+body.archive > .grid-container
+{
     max-width: 1500px;
 }
 
