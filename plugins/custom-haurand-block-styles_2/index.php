@@ -5,7 +5,7 @@ Plugin URI: https://haurand.com
 Description: Zusätzliche Block-Styles für den Block Editor
 Author: Hans-Gerd Gerhards
 Author URI: https://haurand.com (Quelle: Automattic: https://github.com/Automattic/gutenberg-block-styles/)
-Version: 1.51
+Version: 1.52
 
 
 
@@ -77,6 +77,18 @@ if ( function_exists( 'register_block_style' ) ) {
 	add_action( 'init', 'block_styles_register_block_styles' );
 }
 
+/* eigene Vorlagen registrieren - im Beispiel "Vorlagen Haurand" */
+function haurand_register_block_categories() {
+    if ( class_exists( 'WP_Block_Patterns_Registry' ) ) {
+    register_block_pattern_category(
+     'Haurand',
+     array( 'label' => _x( 'Vorlagen Haurand', 'Block pattern category', 'Haurand' ) )
+     );
+    }
+}
+add_action( 'init', 'haurand_register_block_categories' );
+
+
 
 /**
  * 2. Custom Block Patterns
@@ -91,7 +103,7 @@ register_block_pattern(
      array(
      'title' => __( 'Drei Spalten mit Bildern (Kacheln)', 'kacheln-block-pattern' ),
      'description' => _x( 'Drei Spalten mit Bildern (Kacheln)', 'Drei Spalten mit Bildern (Kacheln)', 'kacheln-block-pattern' ),
-     'categories'  => array('columns'),
+     'categories'  => array('Haurand'),
      'content'     => 
         " <!-- wp:columns -->
           <div class=\"wp-block-columns\"><!-- wp:column {\"className\":\"kacheln\"} -->
@@ -137,7 +149,7 @@ register_block_pattern(
 array(
   'title' => __( '3 Columns with Cards', 'haurand-three-block-pattern' ),
   'description' => _x( 'Three Columns with Cards', 'Three Columns with Cards', 'haurand-three-block-pattern' ),
-  'categories' => array('columns'),
+  'categories' => array('Haurand'),
   'content' => "<!-- wp:columns -->
         <div class=\"wp-block-columns\"><!-- wp:column {\"className\":\"kachel_spalte\"} -->
         <div class=\"wp-block-column kachel_spalte\"><!-- wp:heading {\"align\":\"center\"} -->
@@ -213,7 +225,7 @@ register_block_pattern(
      array(
      'title' => __( '2 Columns with Cards', 'haurand-two-block-pattern' ),
      'description' => _x( 'Two Columns with Cards', 'Two Columns with Cards', 'haurand-two-block-pattern' ),
-     'categories'  => array('columns'),
+     'categories'  => array('Haurand'),
      'content'     => "<!-- wp:columns -->
         <div class=\"wp-block-columns\"><!-- wp:column {\"className\":\"blue-background\"} -->
         <div class=\"wp-block-column blue-background\"><!-- wp:image {\"id\":324,\"sizeSlug\":\"large\",\"className\":\"zoomeffekt\"} -->
@@ -251,7 +263,7 @@ register_block_pattern(
      array(
      'title' => __( '2 Columns with Cards - Ken Burns', 'haurand-kb-two-block-pattern' ),
      'description' => _x( 'Two Columns with Cards - Ken Burns', 'Two Columns with Cards - Ken Burns', 'haurand-kb-two-block-pattern' ),
-     'categories'  => array('columns'),
+     'categories'  => array('Haurand'),
      'content'     => "<!-- wp:columns -->
         <div class=\"wp-block-columns\"><!-- wp:column {\"className\":\"green-background\"} -->
         <div class=\"wp-block-column green-background\"><!-- wp:image {\"id\":326,\"sizeSlug\":\"large\",\"className\":\"ken_burns\"} -->
@@ -285,7 +297,7 @@ register_block_pattern('haurand-three-card-pattern-v2',
      array(
      'title' => __( '3 Columns with Cards - v2', 'haurand-three-block-pattern-v2' ),
      'description' => _x( 'Three Columns with Cards', 'Three Columns with Cards - version 2', 'haurand-three-block-pattern-v2' ),
-     'categories' => array('columns'),
+     'categories' => array('Haurand'),
      'content'     => "<!-- wp:columns {\"className\":\"kachel_spalten_v2\"} -->
       <div class=\"wp-block-columns kachel_spalten_v2\"><!-- wp:column {\"className\":\"kachel_spalte_v2\"} -->
       <div class=\"wp-block-column kachel_spalte_v2\"><!-- wp:heading {\"textAlign\":\"center\"} -->
