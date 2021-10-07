@@ -20,7 +20,7 @@ All you really need to get started is:
 
 ## Update
 
-7.10.2021: Zusätzlich einen Style für einen Absatz mit Hintergrundfarbe (jetzt hellgrün) und Rahmen.
+7.10.2021: Zusätzlich einen Style für einen Absatz mit Hintergrundfarbe (jetzt hellgrün) und Rahmen (haurand-paragraph).
 
 
 ## Customization
