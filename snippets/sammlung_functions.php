@@ -25,3 +25,11 @@ add_action('admin_enqueue_scripts', 'kb_admin_style');
 #wpadminbar {
    background: deeppink;
  }
+*/
+
+// Beispiel für die Idee, Styles im Dashboard genauso aussehen zu lassen wie im Frontend. Hat aber nicht funktioniert
+function haurand_dashboard_admin_style() {
+   wp_enqueue_style('admin-styles', plugin_dir_path( __FILE__ ) . '/style.css');
+}
+
+add_action('admin_enqueue_scripts', 'haurand_dashboard_admin_style');
