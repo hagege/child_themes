@@ -1,0 +1,61 @@
+/**
+ * Please note that these styles will be loaded before editor styles.
+ * If a theme's editor style specifies the same classname, these may be overwritten. 
+ * style.css for Custom Haurand Block Styles
+ */
+
+
+
+ /**
+ * 1. Register Custom Block Styles
+ */
+ 
+
+/* farbige Überschriften */
+.is-style-gradient-red-headline {
+    background: -webkit-linear-gradient(left,#ff6969 0%,#5a61e8 100%);
+    background-clip: border-box;
+    color: transparent;
+    -webkit-background-clip: text;
+    border-bottom: 3px solid #ccc;
+}
+
+/* farbige Überschrift */
+.is-style-gradient-blue-headline {
+    background: -webkit-linear-gradient(left,#5a93e8 0%,#63e85a 100%);
+    background-clip: border-box;
+    color: transparent;
+    -webkit-background-clip: text;
+    border-bottom: 3px solid #ccc;
+}
+
+/* farbige Überschrift */
+.is-style-gradient-green-headline {
+    background: -webkit-linear-gradient(left,#255b21 0%,#f9e685 100%);
+    background-clip: border-box;
+    color: transparent;
+    -webkit-background-clip: text;
+    border-bottom: 3px solid #ccc;
+}
+
+/* farbige Überschrift */
+.is-style-gradient-yellow-headline {
+    background: -webkit-linear-gradient(left,#fbd30e 0%,#0efb78 100%);
+    background-clip: border-box;
+    color: transparent;
+    -webkit-background-clip: text;
+    border-bottom: 3px solid #ccc;
+	background-color: black;
+}
+
+/* farbige Überschrift */
+.is-style-gradient-grey-headline {
+    background: -webkit-linear-gradient(left,#a6a9a9 0%,#11f9f9 100%);
+    background-clip: border-box;
+    color: transparent;
+    -webkit-background-clip: text;
+    border-bottom: 3px solid #ccc;
+}
+
+
+
