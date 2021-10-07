@@ -5,7 +5,7 @@ Plugin URI: https://haurand.com
 Description: Zusätzliche Block-Styles für den Block Editor
 Author: Hans-Gerd Gerhards
 Author URI: https://haurand.com (Quelle: Automattic: https://github.com/Automattic/gutenberg-block-styles/)
-Version: 1.52
+Version: 1.53
 
 
 
@@ -27,6 +27,7 @@ if ( function_exists( 'register_block_style' ) ) {
 		/**
 		 * Register block style
 		 */
+		/* Absätze - paragraph */ 
 		register_block_style(
 			'core/paragraph',
 			array(
@@ -35,23 +36,14 @@ if ( function_exists( 'register_block_style' ) ) {
 				'style_handle' => 'block-styles-stylesheet',
 			)
 		);
-        register_block_style( 
-            'core/button', 
-            array(
-	           'name'          => 'fancy-button',
-	           'label'         => 'Fancy Button',
-  			   'style_handle'  => 'block-styles-stylesheet',
-            )
-        );
-        
-        register_block_style( 
-            'core/list',
-            array(
-            	'name'         => '2col-list',
-	            'label'        => '2-Spaltige Liste',
-    			'style_handle' => 'block-styles-stylesheet',
-            )
-        );
+		register_block_style(
+			'core/paragraph',
+			array(
+				'name'         => 'haurand-paragraph',
+				'label'        => 'Absatz mit Rahmen und Hintergrundfarbe',
+				'style_handle' => 'block-styles-stylesheet',
+			)
+		);
 		register_block_style(
 			'core/paragraph',
 			array(
@@ -60,6 +52,28 @@ if ( function_exists( 'register_block_style' ) ) {
 				'style_handle' => 'block-styles-stylesheet',
 			)
 		);
+		
+		/* Buttons*/ 
+        register_block_style( 
+            'core/button', 
+            array(
+	           'name'          => 'fancy-button',
+	           'label'         => 'Fancy Button',
+  			   'style_handle'  => 'block-styles-stylesheet',
+            )
+        );
+		
+        /* Listen */ 
+        register_block_style( 
+            'core/list',
+            array(
+            	'name'         => '2col-list',
+	            'label'        => '2-Spaltige Liste',
+    			'style_handle' => 'block-styles-stylesheet',
+            )
+        );
+		
+		/* Headings */ 
         register_block_style(
 			'core/heading',
 			array(
@@ -67,10 +81,7 @@ if ( function_exists( 'register_block_style' ) ) {
 	           'label'         => 'Gradient Überschrift',
 			   'style_handle'  => 'block-styles-stylesheet',
           	)
-		);
-      
-        
-        
+		);       
 	}
     
 

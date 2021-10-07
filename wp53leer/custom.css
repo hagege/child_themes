@@ -1,0 +1,378 @@
+/* ------------------------------ */
+/* Drei Spalten mit Bild schattiert und hover-Effekt, Vortrag Block Patterns */
+/* ------------------------------ */
+@media (min-width: 1281px) {
+	div.wp-block-columns.kachel_block {
+		width: 80%;
+	}
+}
+
+div.wp-block-column.drei_kacheln {
+    color: black;
+    font-size: 1.5rem;
+		padding: 2rem 2rem 2rem 2rem;
+		background-color: white;
+		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+    filter: drop-shadow(2px 2px 5px #CCCCCC); 
+		margin-bottom: 3rem;
+}
+
+
+/* beim Hover leicht größer mit mehr Schatten */
+div.wp-block-column.drei_kacheln:hover {
+		opacity:0.7;
+    /* Kachel etwas größer: */
+  	transform: scale(1.01, 1.01);
+		-webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
+    filter: drop-shadow(5px 5px 3px #CCCCCC);
+	transition-duration: 1s;
+}
+
+/* ----------------------------- */
+
+/* Umschalten von 3 auf 1 Spalte */
+@media (max-width:781px){
+.wp-block-columns {
+    display: block; 
+	}
+}
+
+@media (min-width: 600px) and (max-width: 781px) {
+.wp-block-column:nth-child(2n) {
+    margin-left: 0;
+}	
+}	
+
+/* ----------------------------- */
+
+
+/* Für Container bei zwei Spalten - einspaltig: daher keine feste Höhe bis 599px (Breakpoint) */
+
+@media (min-width: 600px){
+	p.feste_hoehe {
+			height: 350px;
+	}
+}
+
+@media (min-width: 700px){
+	p.feste_hoehe {
+			height: 400px;
+	}
+}
+
+@media (min-width: 800px){
+	p.feste_hoehe {
+			height: 320px;
+	}
+}
+
+@media (min-width: 900px){
+	p.feste_hoehe {
+			height: 300px;
+	}
+}
+
+@media (min-width: 1378px){
+	p.feste_hoehe {
+			height: 250px;
+	}
+}
+
+
+body {
+    background: #f9f9f9;
+}
+
+.wp-block-spacer.hero1 {
+    font-family: unset;
+    background-color: whitesmoke;
+}
+
+
+/* ----------------------------- */
+/* Dreieck oben und unten */
+/* ----------------------------- */
+.hero1 {
+    position: relative;
+}
+
+.hero1:before, .hero1:after {
+    box-sizing: border-box;
+    content: " ";
+    position: absolute;
+    top:0;
+    display: block;
+    width: 50%;
+    height: 100%;
+    border: 30px solid white;
+    /* border-bottom-color: pink; */
+}
+
+.hero1:before {
+    left: 0;
+    border-right: 50px solid transparent ;
+    border-left: 0;
+}
+
+.hero1:after {
+    right: 0;
+    border-left: 50px solid transparent;
+    border-right: 0;
+}
+
+
+
+
+/* ----------------------------- */
+/* Dreieck oben und unten (Original) */
+/* ----------------------------- */
+.hero {
+    background: url(http://d.pr/i/eqn9+);
+    height: 200px;
+    position: relative;
+}
+
+.hero:before, .hero:after {
+    box-sizing: border-box;
+    content: " ";
+    position: absolute;
+    top:0;
+    display: block;
+    width: 50%;
+    height: 100%;
+    border: 30px solid orange;
+    border-bottom-color: pink;
+}
+
+.hero:before {
+    left: 0;
+    border-right: 20px solid transparent;
+    border-left: 0;
+}
+
+.hero:after {
+    right: 0;
+    border-left: 20px solid transparent;
+    border-right: 0;
+}
+
+
+
+
+/* ----------------------------- */
+/* Bilder mit Dreieck nur unten */
+
+
+.dreieck {
+/*    background: url(http://d.pr/i/eqn9+);
+    height: 200px;*/
+    position: relative;
+}
+
+.dreieck:before, .dreieck:after {
+    box-sizing: border-box;
+    content: " ";
+    position: absolute;
+    top:0;
+    display: block;
+    width: 50%;
+    height: 100%;
+    border-bottom: 30px solid white; 
+/*    border-bottom-color: white; */
+}
+
+.dreieck:before {
+    left: 0;
+    border-right: 50px solid transparent; 
+    border-left: 0;
+}
+
+.dreieck:after {
+    right: 0;
+    border-left: 50px solid transparent;
+    border-right: 0;
+}
+/* ----------------------------- */
+
+
+
+/* ----------------------------- */
+/* Bilder mit Dreieck nur unten */
+
+.film {
+/*    background: url(http://d.pr/i/eqn9+);
+    height: 200px;*/
+    position: relative;
+}
+
+.film:before, .hero1:after {
+    box-sizing: border-box;
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 50%;
+    height: 100%;
+    border-bottom: 30px solid white; 
+}
+
+
+.film:before {
+    left: 0;
+    border-right: 50px solid transparent; 
+    border-left: 0;
+}
+
+.film:after {
+    right: 0;
+    border-left: 50px solid transparent;
+    border-right: 0;
+}
+/* ----------------------------- */
+
+
+
+/* ---------------------------- */
+/* Blaue Spalten */
+/* ---------------------------- */
+
+/* Randdarstellung für Kacheln 
+*/
+div.kacheln {
+    flex-basis: calc(50% - 16px);
+    flex-grow: 0;
+    box-shadow: 5px 5px 10px #888888;
+    padding-right: 15px;
+		padding-left: 15px;
+}
+
+/* Beim Überfahren mehr Schatten 
+ */
+div.kacheln:hover{
+    box-shadow: 10px 10px 15px #888888;
+}
+
+/* Beschriftung der Kachel */
+figcaption {
+    padding: 10px;
+}
+
+/* Absatz für Spaltentext */
+p.blue-background {
+   padding: 20px 38px;
+}
+
+/* kein Rand bei Bildern animieren */
+figure.wp-block-image.size-large {
+    margin-top: 0px!important;
+}
+
+
+/* Spaltenblock */
+p.blue-background,
+div.blue-background {
+    background-color: #22405a;
+    color: white;
+	/* box-shadow: 5px 5px 10px #888888; */
+}
+
+/* Beim Überfahren mehr Schatten 
+ */
+div.blue-background:hover{
+    box-shadow: 10px 10px 15px #888888;
+		/* kommt beim Vortrag dazu: */
+  	-webkit-transform: scale(1.1);
+		-moz-transform: scale(1.01);
+		-ms-transform: scale(1.01);
+		-o-transform: scale(1.01);
+		transform: scale(1.01);
+	  opacity: 1.0;
+		/* VERZÖGERUNG */
+	 -webkit-transition: all 0.7s linear;
+	 -moz-transition: all 0.7s linear;
+	 -ms-transition: all 0.7s linear;
+	 -o-transition: all 0.7s linear;
+	 transition: all 0.7s linear;
+	 /* Schatten bei allen Elementen 
+	 -webkit-filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
+   filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));*/
+}
+
+/* damit die Spalten nicht direkt zusammenhängen */
+@media (max-width: 599px){
+	.wp-block-column {
+			/* statt 0px */
+			margin-top: 20px;    
+	}
+}
+
+/* Foto bei den dunkelblauen Spalten animieren (Hover) */
+figure.zoomeffekt {
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	overflow: hidden;
+}
+
+figure.zoomeffekt:hover+span {
+	bottom: -36px;
+	opacity: 0.1;
+}
+
+
+figure.wp-block-image.size-large.zoomeffekt img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+figure.wp-block-image.size-large.zoomeffekt img:hover {
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+	transition: all 1.5s linear;
+}
+
+
+
+/* Breite des Blogs ändern */
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    max-width: 110rem;
+		/* das war bereits drin:
+    width: calc(100% - 4rem);*/
+}
+
+
+
+/* Menüposition tiefer */
+.menu-wrapper .menu-item {
+    padding-top: 15px;
+}
+
+/* auf kleineren Displays kein Parallax wegen Problemen mit iOS*/
+@media (max-width: 200px) {
+  .para_img {
+     background-attachment: scroll;
+  }
+}
+
+/* auf größeren Displays Parallax */
+@media (min-width: 201px) {
+	.para_img {
+		 z-index:-1;
+		 background-attachment: fixed;
+		 background-size: cover;
+		 background-position: center;
+		 background-size: cover;
+	}
+}
+
+/*
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    max-width: 188rem;
+}
+
+
+body.template-full-width .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide), body.template-full-width [class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    max-width: 2000px!important;
+}
+*/

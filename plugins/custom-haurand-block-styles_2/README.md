@@ -18,6 +18,11 @@ All you really need to get started is:
 - Knowledge of CSS.
 - A WordPress site to upload this plugin to (Alternatively, you can run a single Terminal command to create a quick development environment instead).  
 
+## Update
+
+7.10.2021: Zusätzlich einen Style für einen Absatz mit Hintergrundfarbe (jetzt hellgrün) und Rahmen.
+
+
 ## Customization
 
 Adding + editing block styles is a three step process: 

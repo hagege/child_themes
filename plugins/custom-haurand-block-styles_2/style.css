@@ -23,6 +23,14 @@
     margin-right: 10px;
 }
 
+/* Absatz mit Rahmen */
+.is-style-haurand-paragraph {
+	background-color: #90ee90;
+    padding: 1em;
+	box-shadow: 2px 2px 4px #969e95;
+}
+
+
 /* fancy button*/
 .wp-block-button.is-style-fancy-button .wp-block-button__link {
     color: #fff;
@@ -59,7 +67,6 @@
     -webkit-background-clip: text;
     border-bottom: 3px solid #ccc;
 }
-
 
 /**
  * 2. Custom Block Patterns
