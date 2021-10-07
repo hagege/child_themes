@@ -12,6 +12,9 @@ Version: 1.53
 /**
  * 1. Register Custom Block Styles
  */
+ 
+if ( ! defined( 'ABSPATH' ) ) exit; 
+ 
 if ( function_exists( 'register_block_style' ) ) {
 	function block_styles_register_block_styles() {
 		/**
