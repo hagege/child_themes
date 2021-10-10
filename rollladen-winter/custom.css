@@ -1,0 +1,83 @@
+
+/* Rahmenfarbe für Checkbox */
+input[type="checkbox"] {
+    border: 3px solid #0062b0;
+}
+
+/* Credits linksbündig */
+footer#footer .colophon p, footer#footer .colophon a {
+    text-align: left;
+}
+
+/* h2: kleinere Schrift */
+h2 {
+	font-size:1.3em;
+}
+
+
+/* Formatierung des Formulars Contact Form 7 */
+.wps-form {
+    width: 100%;
+    margin: 0 auto;
+}
+.wps-form-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.wps-form-row .wpcf7-form-control {
+    width: 100%;
+}
+.wps-form-column {
+    flex: 1;
+    padding: 0.5rem 0;
+    width: 100%;
+}
+
+h4.schrift_schwarz {
+	color:black;
+}
+
+/* Notebook / Desktop */
+@media only screen and ( min-width: 48em ) { 
+    .wps-form-row {
+        flex-direction: row;
+    }
+    .wps-form-column {
+        padding: 0.5rem 1rem;
+    }
+}
+
+/*
+#anfrage {
+	background:#303F9F;
+	padding:20px 15px 0 15px;
+	border-radius:5px;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+}
+.form_half {
+width: 49.5%;
+float: left;
+margin-right: 1%;
+}
+.form_half_last {margin-right:0;
+}
+#anfrage input {
+	width:100%;
+}
+#anfrage input[type="submit"] {
+	background:#FFA500;
+  padding:20px;
+	font-size:18px;
+}
+#anfrage input[type="submit"]:hover {      background:#8BC34A;
+}
+#anfrage input:focus {
+	border:1px solid #ffa500;
+	background:#FFF9C4;
+}
+#anfrage div.wpcf7-response-output {
+	background:#fff;
+	padding: 1.5em 1em;
+}
+*/
