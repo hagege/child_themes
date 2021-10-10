@@ -9,6 +9,14 @@ FARBWERTE
 Web und Bildschirm Druck
 */
 
+
+/* Breakpoint bei Archive 1-Spaltig bis 1024px */
+@media (min-width: 768px) and (max-width: 1024px){
+	.generate-columns.tablet-grid-50, .grid-sizer.tablet-grid-50 {
+			width: 100%;
+	}
+}
+
 /* damit der Anker korrekt angesteuert werden kann */
 [id^="htoc-"] { 
 	padding-top: 130px; 
