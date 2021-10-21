@@ -4,6 +4,29 @@
 }
 */
 
+/* Cover-Bild mit Hover-Effekt - Text und Hintergrundfarbe werden bei Hover gezeigt:
+https://test3.haurand.com/bild-mit-hover-effekt/ */
+
+
+div.wp-block-cover.has-accent-background-color.has-background-dim.cover_hover
+{
+    background-color: transparent;
+}
+
+
+.wp-block-cover.has-accent-background-color.has-background-dim.cover_hover:hover{
+    background-color: blue;
+}
+
+div.wp-block-cover.has-accent-background-color.has-background-dim.cover_hover p {
+    visibility: hidden;
+}
+
+
+.wp-block-cover.has-accent-background-color.has-background-dim.cover_hover:hover p {
+    visibility: initial;
+}
+
 /* Breite von einem Cover im Cover 
 [class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
     max-width: 90%;
@@ -14,6 +37,12 @@
 /* Breite von einem Cover im Cover 
 div[class*="breiteres_bild"]  > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
     max-width: 90%;
+}
+*/
+
+/* Änderung der font-family 
+body {
+font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 */
 
