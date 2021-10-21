@@ -4,6 +4,14 @@
 }
 */
 
+/* AINO Info-Box mit mehr Rand 
+ * https://test3.haurand.com/aino-accordion-faq-block-und-aino-notification-banner-block/
+*/
+p.has-xs-font-size {
+    margin: 1em 2em 1em 2em;
+}
+
+
 /* Cover-Bild mit Hover-Effekt - Text und Hintergrundfarbe werden bei Hover gezeigt:
 https://test3.haurand.com/bild-mit-hover-effekt/ */
 
