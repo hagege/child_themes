@@ -79,15 +79,19 @@ font-family: "Comic Sans MS", "Comic Sans", cursive;
 div.wp-block-column.drei_kacheln_ohne_rand_cover {
 	  opacity: 1;
  		transition: .5s ease;
-/*		background-color: rgba(0, 0, 0, 0.1); */
-/*     color: green; */
-    font-size: 1.5rem;
+	  display: block;
+    max-width: 100%;
 		padding: 2px;
-    margin: 0px;
-/*		background-color: white;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    line-height: 0;
+    font-size: 1.5rem;
+	  /*		padding: 2px;
+    margin: 0px; */
 		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
     filter: drop-shadow(2px 2px 5px #CCCCCC); 
-		margin-bottom: 3rem;*/
+		margin-bottom: 3rem;
 }
 
 /* kein Rand */
@@ -122,8 +126,9 @@ div.wp-block-column.drei_kacheln_ohne_rand_cover {
 /* beim Hover leicht größer mit mehr Schatten */
 div.wp-block-column.drei_kacheln_ohne_rand_cover:hover {
 		opacity: 0.4;
-/*		background-color: rgba(0, 0, 0, 0.7); */
+	background-color: rgba(110, 193, 228, 0.8);
     /* Kachel etwas größer: */
+	 transform: scale(1.1);
 /*  	transform: scale(1.01, 1.01);
 		-webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
     filter: drop-shadow(5px 5px 3px #CCCCCC);
