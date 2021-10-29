@@ -97,6 +97,8 @@ code {
 /* ------------------------------ */
 /* Bild auf dem Video */
 /* ------------------------------ */
+/* Animation deaktiviert, 29.10.2021
+ * 
 img.wp-image-3780 {
 		width: 50%;
     animation-name: video_logo;
@@ -116,11 +118,13 @@ img.wp-image-3780 {
 			}
 
 	}
-
+/* ------------------------------ */
 
 /* ------------------------------ */
 /* Text auf dem Video */
 /* ------------------------------ */
+/* Animation deaktiviert, 29.10.2021
+ * 
 h2.video_text{
     font-weight: 700;
     font-size: 2rem;
@@ -162,7 +166,7 @@ h2.video_text{
 
 	}
 }
-
+/* ------------------------------ */
 /*
 .wp-block-cover__inner-container {
     padding: 20px;
