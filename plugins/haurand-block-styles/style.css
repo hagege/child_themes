@@ -57,5 +57,62 @@
     border-bottom: 3px solid #ccc;
 }
 
+/**
+ * 1. Register Custom Block Styles
+ */
+ 
+/* Blauer Absatz */
+.is-style-blue-paragraph {
+	background-color: #0087be;
+	color: #FFF;
+	padding: 16px;
+}
+
+/* Absatz mit voller Breite */
+.is-style-full.width.Paragraph {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Absatz mit Rahmen */
+.is-style-haurand-paragraph {
+	background-color: #90ee90;
+    padding: 1em;
+	box-shadow: 2px 2px 4px #969e95;
+}
+
+.is-style-haurand-paragraph-ligthgrey-border-top {
+	border-top: 10px solid;
+	border-image: linear-gradient(135deg, var(--wp--preset--color--purple), var(--wp--preset--color--pink));
+	border-image-slice: 10;
+	background-color: var(--wp--preset--color--lightgrey);
+}
+
+/* fancy button*/
+.wp-block-button.is-style-fancy-button .wp-block-button__link {
+    color: #fff;
+    background-color: #ff7052;
+    border-radius: 50px 50px 50px 50px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #ff7052;
+    box-shadow: 0px 10px 30px -8px rgba(0,0,0,0.16);
+}
+.wp-block-button.is-style-fancy-button .wp-block-button__link a:hover {
+	background-color: orange;
+}
+
+/* 2-spaltige Liste */
+.is-style-2col-list {
+    /* background: #f8f8f8; */
+    padding: 20px 0 20px 40px;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 40px;
+    column-gap: 40px;
+    -moz-column-gap: 40px;
+    margin:0;
+}
 
 
