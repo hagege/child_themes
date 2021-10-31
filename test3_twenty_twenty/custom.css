@@ -4,6 +4,20 @@
 }
 */
 
+/* Untermenü mit anderer Hintergrundfarbe */
+body:not(.overlay-header) .primary-menu ul {
+    background-color: whitesmoke;
+    /* Untermenüpunkte etwas breiter */
+	  width: 30rem;
+}
+
+
+h3.hintergrund_bild {
+background-image: url("https://test3.haurand.com/wp-content/uploads/2021/10/20210606_174200-1024x768.jpg");
+	padding: 100px;
+;
+}
+
 /* AINO Info-Box mit mehr Rand 
  * https://test3.haurand.com/aino-accordion-faq-block-und-aino-notification-banner-block/
 */
@@ -81,6 +95,7 @@ div.wp-block-column.drei_kacheln_ohne_rand_cover {
  		transition: .5s ease;
 	  display: block;
     max-width: 100%;
+		overflow: hidden;
 		padding: 2px;
     margin: 0 auto;
     width: 100%;
@@ -398,6 +413,7 @@ clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
 	margin-top: -150px;
 }
 
+/* alle Elemente des Plugins htoc (Inhaltsverzeichnis) */
 [id^="htoc-"] { 
 	padding-top: 150px; 
 	margin-top: -150px!important;
@@ -596,7 +612,10 @@ figure.wp-block-image.size-large.zoomeffekt img {
 
 figure.wp-block-image.size-large.zoomeffekt img:hover {
 	-webkit-transform: scale(1.5);
-	transform: scale(1.5);
+	/* transform: scale(1.5); */
+	transform:scale(1.5);
+	overflow: hidden;
+	max-height: 768px;
 	transition: all 1.5s linear;
 }
 
