@@ -4,6 +4,16 @@
 }
 */
 
+/* Untermenüs: */
+img.bild-menue {
+    float: left;
+		padding-right: 10px;
+}
+
+ul.sub-menu {
+    text-align: left;
+}
+
 /* Untermenü mit anderer Hintergrundfarbe */
 body:not(.overlay-header) .primary-menu ul {
     background-color: whitesmoke;
