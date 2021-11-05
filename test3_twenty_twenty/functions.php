@@ -151,4 +151,38 @@ register_block_pattern(
           <!-- /wp:columns -->",
     )
   );
+  
+  
+/*-----------------------------------------------------------------------------------*/
+/* Einige Funktionen für das Dashboard  
+/*-----------------------------------------------------------------------------------*/
+//* Custom Style
+/*-----------------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------*/
+//* Dashboard Custom Style
+/*------------------------------------------------------------------*/
+add_action('admin_head', 'my_custom_style');
+
+function my_custom_style() {
+  echo '<style>
+	/*
+    @media (min-width: 600px) {
+      .edit-post-text-editor__body {
+        max-width: 1920px;
+      }
+      .wp-block {
+        max-width: 1920px;
+       }
+    }
+	*/
+	.is-reusable.wp-block-block {
+		  border: 2px solid red;
+		  background-color: lavenderblush;
+	}
+  </style>';
+}
+
+
 ?>
