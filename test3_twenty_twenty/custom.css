@@ -209,6 +209,94 @@ div.wp-block-column.drei_kacheln_ohne_rand:hover {
 }
 
 
+
+/* ------------------------------ */
+/* Spalten umbrechen
+ * https://die-netzialisten.de/responsiveness-spalten-block-anpassen/ */
+/* ------------------------------ */
+.wp-block-columns {
+  display: flex;
+  margin-bottom: 1.75em;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 782px) {
+  .wp-block-columns {
+    flex-wrap: nowrap;
+  }
+}
+.wp-block-column {
+  flex-grow: 1;
+  min-width: 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+/* Bis hierher alles einspaltig*/
+@media (max-width: 881px) {
+	.wp-block-columns {
+			display: block;		
+	}
+}
+
+/*Ab hier Spaltenanzahl wie eingestellt*/
+@media (min-width: 882px) {
+  .wp-block-column {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+  .wp-block-column[style*="flex-basis"] {
+    flex-grow: 0;
+  }
+  .wp-block-column:not(:first-child) {
+    margin-left: 2em;
+  }
+}
+
+
+
+
+
+/* ------------------------------ */
+/* Zwei Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln" */
+/* ------------------------------ */
+/* Titel unter Bildern größer */
+div.wp-block-column.zwei_kacheln {
+    font-size: 1.5rem;
+		padding: 0px 0px 24px 0px;
+    margin: 0px 20px 0px 0px;
+		background-color: white;
+		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+    filter: drop-shadow(2px 2px 5px #CCCCCC); 
+		margin-bottom: 3rem;
+}
+
+/* beim letzten Bild ein kleiner rechter Rand */
+@media (min-width: 600px) {
+div.wp-block-column.zwei_kacheln:last-child {
+	margin-right: 5px;
+	}
+}
+
+
+/* wenn die Bilder untereinander stehen, dann kein rechter Rand, damit die Bilder zentriert sind 
+@media (min-width: 600px) and (max-width: 781px) {
+div.wp-block-column.zwei_kacheln {
+	margin-right: 5px;
+	}
+}
+*/
+
+/* beim Hover leicht größer mit mehr Schatten */
+div.wp-block-column.zwei_kacheln:hover {
+		opacity:0.7;
+    /* Kachel etwas größer: */
+  	transform: scale(1.01, 1.01);
+		-webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
+    filter: drop-shadow(5px 5px 3px #CCCCCC);
+	transition-duration: 1s;
+}
+/* ------------------------------ */
+
 /* ------------------------------ */
 /* Drei Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln" */
 /* ------------------------------ */
@@ -224,22 +312,128 @@ div.wp-block-column.drei_kacheln {
 		margin-bottom: 3rem;
 }
 
+/* bei drei Spalten und beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind */
+@media (min-width: 882px) {
+div.wp-block-column.drei_kacheln:last-child {
+	margin-right: 0px;
+	}
+}
+
+/* bei einspaltiger Ansicht kein rechter Rand */
+@media (max-width: 881px) {
+div.wp-block-column.drei_kacheln {
+	margin-right: 0px;
+	}
+}
+
+
+
+/* beim Hover leicht größer mit mehr Schatten */
+div.wp-block-column.drei_kacheln:hover {
+		opacity:0.7;
+    /* Kachel etwas größer: */
+  	transform: scale(1.01, 1.01);
+		-webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
+    filter: drop-shadow(5px 5px 3px #CCCCCC);
+	transition-duration: 1s;
+}
+
+/*
+@media (max-width: 799px)
+.wp-block-column {
+    flex-basis: 100%!important;
+}
+*/
+
+/* wenn die Bilder untereinander stehen, dann kein rechter Rand, damit die Bilder zentriert sind */
+/* Umschalten von 3 auf 1 Spalte 
+@media (min-width: 600px) and (max-width: 781px) {
+div.wp-block-column.drei_kacheln {
+	margin-right: 0px;
+	display: contents; 
+	}
+}
+
+@media (min-width: 600px) and (max-width: 781px) {
+div.wp-block-column.drei_kacheln:nth-child(2n) {
+    margin-left: 0;
+	}	
+}	
+
+/* Unterschriften bei Bildern */
+.wp-block-image figcaption {
+		color: black;
+		margin-bottom: 0;	
+}
+
+@media (max-width: 881px) {
+	.wp-block-image figcaption {
+				font-size: x-large;
+	}
+}
+
+/* Bilder in den Kacheln */
+div.wp-block-column.drei_kacheln .wp-block-image:not(.is-style-rounded) img {
+    height: 25rem;
+	  object-fit: cover;
+}
+
+@media (min-width: 882px) and (max-width: 981px) {
+	.wp-block-image figcaption {
+				font-size: large;
+	}
+	div.wp-block-column.drei_kacheln .wp-block-image:not(.is-style-rounded) img {
+			height: 15rem;
+	}	
+}
+
+@media (min-width: 982px) {
+	.wp-block-image figcaption {
+			font-size: x-large;
+	}
+}
+	
+
+div.wp-block-column.drei_kacheln p {
+    margin-bottom: 1.5em;
+    color: black;
+    font-size: small;
+    padding: 0 20px;
+}
+/* ------------------------------ */
+
+
+/* ------------------------------ */
+/* Drei Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln" */
+/* ------------------------------ */
+/* Titel unter Bildern größer */
+div.wp-block-column.drei_kacheln_alt {
+    color: green;
+    font-size: 1.5rem;
+		padding: 0px 0px 24px 0px;
+    margin: 0px 20px 0px 0px;
+		background-color: white;
+		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+    filter: drop-shadow(2px 2px 5px #CCCCCC); 
+		margin-bottom: 3rem;
+}
+
 /* beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind */
 @media (min-width: 782px) {
-div.wp-block-column.drei_kacheln:last-child {
+div.wp-block-column.drei_kacheln_alt:last-child {
 	margin-right: 0px;
 	}
 }
 
 /* wenn die Bilder untereinander stehen, dann kein rechter Rand, damit die Bilder zentriert sind */
 @media (min-width: 600px) and (max-width: 781px) {
-div.wp-block-column.drei_kacheln {
+div.wp-block-column.drei_kacheln_alt {
 	margin-right: 0px;
 	}
 }
 
 /* beim Hover leicht größer mit mehr Schatten */
-div.wp-block-column.drei_kacheln:hover {
+div.wp-block-column.drei_kacheln_alt:hover {
 		opacity:0.7;
     /* Kachel etwas größer: */
   	transform: scale(1.01, 1.01);
