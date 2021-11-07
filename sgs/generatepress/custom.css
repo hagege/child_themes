@@ -163,10 +163,19 @@
       }
   }
   
+  /* Bilder in den Kacheln */
+  div.wp-block-column.drei_kacheln .wp-block-image:not(.is-style-rounded) img {
+      height: 15rem;
+        object-fit: cover;
+  }
+  
   @media (min-width: 882px) and (max-width: 981px) {
       .wp-block-image figcaption {
                   font-size: large;
       }
+      div.wp-block-column.drei_kacheln .wp-block-image:not(.is-style-rounded) img {
+              height: 10rem;
+      }	
   }
   
   @media (min-width: 982px) {
@@ -175,11 +184,6 @@
       }
   }
       
-  /* Bilder in den Kacheln */
-  div.wp-block-column.drei_kacheln .wp-block-image:not(.is-style-rounded) img {
-      height: 15rem;
-        object-fit: cover;
-  }
   
   div.wp-block-column.drei_kacheln p {
       margin-bottom: 1.5em;
