@@ -103,9 +103,16 @@
           margin-bottom: 3rem;
   }
   
-  /* beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind */
+  /* bei drei Spalten und beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind */
   @media (min-width: 882px) {
   div.wp-block-column.drei_kacheln:last-child {
+      margin-right: 0px;
+      }
+  }
+  
+  /* bei einspaltiger Ansicht kein rechter Rand */
+  @media (max-width: 881px) {
+  div.wp-block-column.drei_kacheln {
       margin-right: 0px;
       }
   }
