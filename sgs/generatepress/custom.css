@@ -56,8 +56,10 @@
           padding: 0px 0px 24px 0px;
       margin: 0px 20px 0px 0px;
           background-color: white;
+          box-shadow:  12px 12px 24px #bebebe,
+               -12px -12px 24px #ffffff;
           -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
-      filter: drop-shadow(2px 2px 5px #CCCCCC); 
+      filter: drop-shadow(2px 2px 5px #CCCCCC);  
           margin-bottom: 3rem;
   }
   
@@ -98,6 +100,8 @@
           padding: 0px 0px 24px 0px;
       margin: 0px 20px 0px 0px;
           background-color: white;
+          box-shadow:  12px 12px 24px #bebebe,
+               -12px -12px 24px #ffffff;
           -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
       filter: drop-shadow(2px 2px 5px #CCCCCC); 
           margin-bottom: 3rem;
