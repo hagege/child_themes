@@ -101,6 +101,8 @@
           -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
       filter: drop-shadow(2px 2px 5px #CCCCCC); 
           margin-bottom: 3rem;
+        /* abgerundete Ecken 
+        border-radius: 20px 20px 0px 0px; */
   }
   
   /* bei drei Spalten und beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind */
@@ -166,7 +168,9 @@
   /* Bilder in den Kacheln */
   div.wp-block-column.drei_kacheln .wp-block-image:not(.is-style-rounded) img {
       height: 15rem;
-        object-fit: cover;
+      object-fit: cover;
+      /* abgerundete Ecken 
+      border-radius: 20px 20px 0px 0px; */
   }
   
   @media (min-width: 882px) and (max-width: 981px) {
@@ -196,7 +200,8 @@
   p.bg_gelb {
       background-color:#f7f8f9;
       font-weight:bold;
-      padding:10px
+      font-size: large;
+      padding:10px;
   }
   
   /* Buttons auf dem Cover */
