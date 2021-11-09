@@ -43,7 +43,10 @@
     }
   }
   
-  
+  /* Überschrift mit Padding nach links und rechts */
+  div.wp-block-column h2 {
+      padding: 0px 10px 0px 10px;
+  }
   
   
   
@@ -157,6 +160,14 @@
       }	
   }	
   
+  /* Bilder in den Kacheln */
+  div.wp-block-column.drei_kacheln .wp-block-image:not(.is-style-rounded) img {
+      height: 15rem;
+      object-fit: cover;
+      /* abgerundete Ecken 
+      border-radius: 20px 20px 0px 0px; */
+  }
+  
   /* Unterschriften bei Bildern */
   .wp-block-image figcaption {
           color: black;
@@ -169,13 +180,6 @@
       }
   }
   
-  /* Bilder in den Kacheln */
-  div.wp-block-column.drei_kacheln .wp-block-image:not(.is-style-rounded) img {
-      height: 15rem;
-      object-fit: cover;
-      /* abgerundete Ecken 
-      border-radius: 20px 20px 0px 0px; */
-  }
   
   @media (min-width: 882px) and (max-width: 981px) {
       .wp-block-image figcaption {
@@ -191,7 +195,9 @@
               font-size: x-large;
       }
   }
-      
+  
+  
+  
   
   div.wp-block-column.drei_kacheln p {
       margin-bottom: 1.5em;
