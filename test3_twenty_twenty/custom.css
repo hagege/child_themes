@@ -6,33 +6,33 @@
 
 /* Untermenüs: */
 img.bild-menue {
-    float: left;
-		padding-right: 10px;
+  float: left;
+  padding-right: 10px;
 }
 
 ul.sub-menu {
-    text-align: left;
+  text-align: left;
 }
 
 /* Untermenü mit anderer Hintergrundfarbe */
 body:not(.overlay-header) .primary-menu ul {
-    background-color: whitesmoke;
-    /* Untermenüpunkte etwas breiter */
-	  width: 30rem;
+  background-color: whitesmoke;
+  /* Untermenüpunkte etwas breiter */
+  width: 30rem;
 }
 
 
 h3.hintergrund_bild {
 background-image: url("https://test3.haurand.com/wp-content/uploads/2021/10/20210606_174200-1024x768.jpg");
-	padding: 100px;
+padding: 100px;
 ;
 }
 
 /* AINO Info-Box mit mehr Rand 
- * https://test3.haurand.com/aino-accordion-faq-block-und-aino-notification-banner-block/
+* https://test3.haurand.com/aino-accordion-faq-block-und-aino-notification-banner-block/
 */
 p.has-xs-font-size {
-    margin: 1em 2em 1em 2em;
+  margin: 1em 2em 1em 2em;
 }
 
 
@@ -42,33 +42,33 @@ https://test3.haurand.com/bild-mit-hover-effekt/ */
 
 div.wp-block-cover.has-accent-background-color.has-background-dim.cover_hover
 {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 
 .wp-block-cover.has-accent-background-color.has-background-dim.cover_hover:hover{
-    background-color: blue;
+  background-color: blue;
 }
 
 div.wp-block-cover.has-accent-background-color.has-background-dim.cover_hover p {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 
 .wp-block-cover.has-accent-background-color.has-background-dim.cover_hover:hover p {
-    visibility: initial;
+  visibility: initial;
 }
 
 /* Breite von einem Cover im Cover 
 [class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-    max-width: 90%;
-    width: 100%;
+  max-width: 90%;
+  width: 100%;
 }
 
 
 /* Breite von einem Cover im Cover 
 div[class*="breiteres_bild"]  > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-    max-width: 90%;
+  max-width: 90%;
 }
 */
 
@@ -83,15 +83,15 @@ font-family: "Comic Sans MS", "Comic Sans", cursive;
 /* Beitrag "bild-und-text-nebeneinander": Bild und Text untereinander bei schmaleren Displays */
 /* ------------------------------ */
 @media (max-width: 781px) {
-	.wp-block-columns.umgekehrt {
-			display: flex;
-			flex-direction: column-reverse;
-	}
+.wp-block-columns.umgekehrt {
+    display: flex;
+    flex-direction: column-reverse;
+}
 }
 
 /* Rand oben wie beim Bild */
 .wp-block-column > p {
-	margin-top: 4rem!important;
+margin-top: 4rem!important;
 }
 
 
@@ -101,63 +101,63 @@ font-family: "Comic Sans MS", "Comic Sans", cursive;
 /* ------------------------------ */
 /* Titel unter Bildern größer */
 div.wp-block-column.drei_kacheln_ohne_rand_cover {
-	  opacity: 1;
- 		transition: .5s ease;
-	  display: block;
-    max-width: 100%;
-		overflow: hidden;
-		padding: 2px;
-    margin: 0 auto;
-    width: 100%;
-    height: auto;
-    line-height: 0;
-    font-size: 1.5rem;
-	  /*		padding: 2px;
-    margin: 0px; */
-		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
-    filter: drop-shadow(2px 2px 5px #CCCCCC); 
-		margin-bottom: 3rem;
+  opacity: 1;
+   transition: .5s ease;
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 2px;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  line-height: 0;
+  font-size: 1.5rem;
+  /*		padding: 2px;
+  margin: 0px; */
+  -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+  filter: drop-shadow(2px 2px 5px #CCCCCC); 
+  margin-bottom: 3rem;
 }
 
 /* kein Rand */
 div.wp-block-column.drei_kacheln_ohne_rand_cover div {
-	margin: 0px!important;
+margin: 0px!important;
 }
 
 /* Text auf Bild erst bei Hover
 div.wp-block-column.drei_kacheln_ohne_rand_cover p {
-    visibility: hidden;	
+  visibility: hidden;	
 }
 
 div.wp-block-column.drei_kacheln_ohne_rand_cover:hover p {
-    visibility: inherit;	
+  visibility: inherit;	
 }
- */
+*/
 
 /* beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind */
 @media (min-width: 782px) {
 div.wp-block-column.drei_kacheln_ohne_rand_cover:last-child {
-	margin-right: 0px;
-	}
+margin-right: 0px;
+}
 }
 
 /* wenn die Bilder untereinander stehen, dann kein rechter Rand, damit die Bilder zentriert sind */
 @media (min-width: 600px) and (max-width: 781px) {
 div.wp-block-column.drei_kacheln_ohne_rand_cover {
-	margin-right: 0px;
-	}
+margin-right: 0px;
+}
 }
 
 /* beim Hover leicht größer mit mehr Schatten */
 div.wp-block-column.drei_kacheln_ohne_rand_cover:hover {
-		opacity: 0.4;
-	background-color: rgba(110, 193, 228, 0.8);
-    /* Kachel etwas größer: */
-	 transform: scale(1.1);
+  opacity: 0.4;
+background-color: rgba(110, 193, 228, 0.8);
+  /* Kachel etwas größer: */
+ transform: scale(1.1);
 /*  	transform: scale(1.01, 1.01);
-		-webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
-    filter: drop-shadow(5px 5px 3px #CCCCCC);
-	transition-duration: 1s; */
+  -webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
+  filter: drop-shadow(5px 5px 3px #CCCCCC);
+transition-duration: 1s; */
 }
 
 
@@ -166,90 +166,90 @@ div.wp-block-column.drei_kacheln_ohne_rand_cover:hover {
 /* ------------------------------ */
 /* Titel unter Bildern größer */
 div.wp-block-column.drei_kacheln_ohne_rand {
-	  opacity: 1;
- 		transition: .5s ease;
-		background-color: rgba(0, 0, 0, 0.1);
+  opacity: 1;
+   transition: .5s ease;
+  background-color: rgba(0, 0, 0, 0.1);
 /*     color: green; */
-    font-size: 1.5rem;
-		padding: 0px;
-    margin: 0px;
+  font-size: 1.5rem;
+  padding: 0px;
+  margin: 0px;
 /*		background-color: white;
-		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
-    filter: drop-shadow(2px 2px 5px #CCCCCC); 
-		margin-bottom: 3rem;*/
+  -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+  filter: drop-shadow(2px 2px 5px #CCCCCC); 
+  margin-bottom: 3rem;*/
 }
 
 div.wp-block-column.drei_kacheln_ohne_rand figure {
-    margin: 0px!important;
+  margin: 0px!important;
 }
 
 /* beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind */
 @media (min-width: 782px) {
 div.wp-block-column.drei_kacheln_ohne_rand:last-child {
-	margin-right: 0px;
-	}
+margin-right: 0px;
+}
 }
 
 /* wenn die Bilder untereinander stehen, dann kein rechter Rand, damit die Bilder zentriert sind */
 @media (min-width: 600px) and (max-width: 781px) {
 div.wp-block-column.drei_kacheln_ohne_rand {
-	margin-right: 0px;
-	}
+margin-right: 0px;
+}
 }
 
 /* beim Hover leicht größer mit mehr Schatten */
 div.wp-block-column.drei_kacheln_ohne_rand:hover {
-		opacity: 0.4;
-		background-color: rgba(0, 0, 0, 0.7);
-    /* Kachel etwas größer: */
+  opacity: 0.4;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Kachel etwas größer: */
 /*  	transform: scale(1.01, 1.01);
-		-webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
-    filter: drop-shadow(5px 5px 3px #CCCCCC);
-	transition-duration: 1s; */
+  -webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
+  filter: drop-shadow(5px 5px 3px #CCCCCC);
+transition-duration: 1s; */
 }
 
 
 
 /* ------------------------------ */
 /* Spalten umbrechen
- * https://die-netzialisten.de/responsiveness-spalten-block-anpassen/ */
+* https://die-netzialisten.de/responsiveness-spalten-block-anpassen/ */
 /* ------------------------------ */
 .wp-block-columns {
-  display: flex;
-  margin-bottom: 1.75em;
-  flex-wrap: wrap;
+display: flex;
+margin-bottom: 1.75em;
+flex-wrap: wrap;
 }
 
 @media (min-width: 782px) {
-  .wp-block-columns {
-    flex-wrap: nowrap;
-  }
+.wp-block-columns {
+  flex-wrap: nowrap;
+}
 }
 .wp-block-column {
-  flex-grow: 1;
-  min-width: 0;
-  word-break: break-word;
-  overflow-wrap: break-word;
+flex-grow: 1;
+min-width: 0;
+word-break: break-word;
+overflow-wrap: break-word;
 }
 /* Bis hierher alles einspaltig*/
 @media (max-width: 881px) {
-	.wp-block-columns {
-			display: block;		
-	}
+.wp-block-columns {
+    display: block;		
+}
 }
 
 /*Ab hier Spaltenanzahl wie eingestellt*/
 @media (min-width: 882px) {
-  .wp-block-column {
-    flex-basis: 0;
-    flex-grow: 1;
-  }
-  .wp-block-column[style*="flex-basis"] {
-    flex-grow: 0;
-  }
-  .wp-block-column:not(:first-child) {
-    margin-left: 2em;
-  }
+.wp-block-column {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+.wp-block-column[style*="flex-basis"] {
+  flex-grow: 0;
+}
+.wp-block-column:not(:first-child) {
+  margin-left: 2em;
+}
 }
 
 
@@ -261,39 +261,41 @@ div.wp-block-column.drei_kacheln_ohne_rand:hover {
 /* ------------------------------ */
 /* Titel unter Bildern größer */
 div.wp-block-column.zwei_kacheln {
-    font-size: 1.5rem;
-		padding: 0px 0px 24px 0px;
-    margin: 0px 20px 0px 0px;
-		background-color: white;
-		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
-    filter: drop-shadow(2px 2px 5px #CCCCCC); 
-		margin-bottom: 3rem;
+  font-size: 1.5rem;
+  padding: 0px 0px 24px 0px;
+  margin: 0px 40px 0px 0px;
+  background-color: white;
+  box-shadow:  12px 12px 24px #bebebe,
+           -12px -12px 24px #ffffff;
+  -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+  filter: drop-shadow(2px 2px 5px #CCCCCC);  
+  margin-bottom: 3rem;
 }
 
 /* beim letzten Bild ein kleiner rechter Rand */
 @media (min-width: 600px) {
 div.wp-block-column.zwei_kacheln:last-child {
-	margin-right: 5px;
-	}
+margin-right: 5px;
+}
 }
 
 
 /* wenn die Bilder untereinander stehen, dann kein rechter Rand, damit die Bilder zentriert sind 
 @media (min-width: 600px) and (max-width: 781px) {
 div.wp-block-column.zwei_kacheln {
-	margin-right: 5px;
-	}
+margin-right: 5px;
+}
 }
 */
 
 /* beim Hover leicht größer mit mehr Schatten */
 div.wp-block-column.zwei_kacheln:hover {
-		opacity:0.7;
-    /* Kachel etwas größer: */
-  	transform: scale(1.01, 1.01);
-		-webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
-    filter: drop-shadow(5px 5px 3px #CCCCCC);
-	transition-duration: 1s;
+  opacity:0.7;
+  /* Kachel etwas größer: */
+  transform: scale(1.01, 1.01);
+  -webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
+  filter: drop-shadow(5px 5px 3px #CCCCCC);
+transition-duration: 1s;
 }
 /* ------------------------------ */
 
@@ -302,46 +304,50 @@ div.wp-block-column.zwei_kacheln:hover {
 /* ------------------------------ */
 /* Titel unter Bildern größer */
 div.wp-block-column.drei_kacheln {
-    color: green;
-    font-size: 1.5rem;
-		padding: 0px 0px 24px 0px;
-    margin: 0px 20px 0px 0px;
-		background-color: white;
-		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
-    filter: drop-shadow(2px 2px 5px #CCCCCC); 
-		margin-bottom: 3rem;
+  color: green;
+  font-size: 1.5rem;
+  padding: 0px 0px 24px 0px;
+  margin: 0px 40px 0px 0px;
+  background-color: white;
+  box-shadow:  12px 12px 24px #bebebe,
+           -12px -12px 24px #ffffff;
+  -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+  filter: drop-shadow(2px 2px 5px #CCCCCC); 
+  margin-bottom: 3rem;
+  /* abgerundete Ecken 
+  border-radius: 20px 20px 0px 0px; */
 }
 
 /* bei drei Spalten und beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind */
 @media (min-width: 882px) {
 div.wp-block-column.drei_kacheln:last-child {
-	margin-right: 0px;
-	}
+margin-right: 0px;
+}
 }
 
 /* bei einspaltiger Ansicht kein rechter Rand */
 @media (max-width: 881px) {
 div.wp-block-column.drei_kacheln {
-	margin-right: 0px;
-	}
+margin-right: 0px;
+}
 }
 
 
 
 /* beim Hover leicht größer mit mehr Schatten */
 div.wp-block-column.drei_kacheln:hover {
-		opacity:0.7;
-    /* Kachel etwas größer: */
-  	transform: scale(1.01, 1.01);
-		-webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
-    filter: drop-shadow(5px 5px 3px #CCCCCC);
-	transition-duration: 1s;
+  opacity:0.7;
+  /* Kachel etwas größer: */
+  transform: scale(1.01, 1.01);
+  -webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
+  filter: drop-shadow(5px 5px 3px #CCCCCC);
+transition-duration: 1s;
 }
 
 /*
 @media (max-width: 799px)
 .wp-block-column {
-    flex-basis: 100%!important;
+  flex-basis: 100%!important;
 }
 */
 
@@ -349,56 +355,61 @@ div.wp-block-column.drei_kacheln:hover {
 /* Umschalten von 3 auf 1 Spalte 
 @media (min-width: 600px) and (max-width: 781px) {
 div.wp-block-column.drei_kacheln {
-	margin-right: 0px;
-	display: contents; 
-	}
+margin-right: 0px;
+display: contents; 
+}
 }
 
 @media (min-width: 600px) and (max-width: 781px) {
 div.wp-block-column.drei_kacheln:nth-child(2n) {
-    margin-left: 0;
-	}	
+  margin-left: 0;
 }	
-
-/* Unterschriften bei Bildern */
-.wp-block-image figcaption {
-		color: black;
-		margin-bottom: 0;	
-}
-
-@media (max-width: 881px) {
-	.wp-block-image figcaption {
-				font-size: x-large;
-	}
-}
+}	
 
 /* Bilder in den Kacheln */
 div.wp-block-column.drei_kacheln .wp-block-image:not(.is-style-rounded) img {
-    height: 25rem;
-	  object-fit: cover;
+height: 25rem;
+object-fit: cover;
+/* abgerundete Ecken 
+border-radius: 20px 20px 0px 0px; */
 }
 
+/* Unterschriften bei Bildern */
+.wp-block-image figcaption {
+  color: black;
+  margin-bottom: 0;	
+}
+
+@media (max-width: 881px) {
+.wp-block-image figcaption {
+      font-size: x-large;
+}
+}
+
+
 @media (min-width: 882px) and (max-width: 981px) {
-	.wp-block-image figcaption {
-				font-size: large;
-	}
-	div.wp-block-column.drei_kacheln .wp-block-image:not(.is-style-rounded) img {
-			height: 15rem;
-	}	
+.wp-block-image figcaption {
+      font-size: large;
+}
+div.wp-block-column.drei_kacheln .wp-block-image:not(.is-style-rounded) img {
+    height: 15rem;
+}	
 }
 
 @media (min-width: 982px) {
-	.wp-block-image figcaption {
-			font-size: x-large;
-	}
+.wp-block-image figcaption {
+    font-size: x-large;
 }
-	
+}
+
+
+
 
 div.wp-block-column.drei_kacheln p {
-    margin-bottom: 1.5em;
-    color: black;
-    font-size: small;
-    padding: 0 20px;
+  margin-bottom: 1.5em;
+  color: black;
+  font-size: small;
+  padding: 0 20px;
 }
 /* ------------------------------ */
 
@@ -408,38 +419,38 @@ div.wp-block-column.drei_kacheln p {
 /* ------------------------------ */
 /* Titel unter Bildern größer */
 div.wp-block-column.drei_kacheln_alt {
-    color: green;
-    font-size: 1.5rem;
-		padding: 0px 0px 24px 0px;
-    margin: 0px 20px 0px 0px;
-		background-color: white;
-		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
-    filter: drop-shadow(2px 2px 5px #CCCCCC); 
-		margin-bottom: 3rem;
+  color: green;
+  font-size: 1.5rem;
+  padding: 0px 0px 24px 0px;
+  margin: 0px 20px 0px 0px;
+  background-color: white;
+  -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+  filter: drop-shadow(2px 2px 5px #CCCCCC); 
+  margin-bottom: 3rem;
 }
 
 /* beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind */
 @media (min-width: 782px) {
 div.wp-block-column.drei_kacheln_alt:last-child {
-	margin-right: 0px;
-	}
+margin-right: 0px;
+}
 }
 
 /* wenn die Bilder untereinander stehen, dann kein rechter Rand, damit die Bilder zentriert sind */
 @media (min-width: 600px) and (max-width: 781px) {
 div.wp-block-column.drei_kacheln_alt {
-	margin-right: 0px;
-	}
+margin-right: 0px;
+}
 }
 
 /* beim Hover leicht größer mit mehr Schatten */
 div.wp-block-column.drei_kacheln_alt:hover {
-		opacity:0.7;
-    /* Kachel etwas größer: */
-  	transform: scale(1.01, 1.01);
-		-webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
-    filter: drop-shadow(5px 5px 3px #CCCCCC);
-	transition-duration: 1s;
+  opacity:0.7;
+  /* Kachel etwas größer: */
+  transform: scale(1.01, 1.01);
+  -webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
+  filter: drop-shadow(5px 5px 3px #CCCCCC);
+transition-duration: 1s;
 }
 
 
@@ -447,32 +458,32 @@ div.wp-block-column.drei_kacheln_alt:hover {
 /* Lauftext */
 /* --------------------------- */
 p.typewriter {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+overflow: hidden; /* Ensures the content is not revealed until the animation */
+border-right: .15em solid orange; /* The typwriter cursor */
+white-space: nowrap; /* Keeps the content on a single line */
+margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+letter-spacing: .15em; /* Adjust as needed */
+animation: 
+  typing 3.5s steps(40, end),
+  blink-caret .75s step-end infinite;
 }
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+from { width: 0 }
+to { width: 100% }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
+from, to { border-color: transparent }
+50% { border-color: orange; }
 }
 
 /* funktioniert leider nicht: */
 p.lauftext {
-	animation: typewriter 4s steps(character count) 1s 1 normal both,
-		blinkCursor 500ms steps(character count) infinite normal;
+animation: typewriter 4s steps(character count) 1s 1 normal both,
+  blinkCursor 500ms steps(character count) infinite normal;
 }
 
 /* --------------------------- */
@@ -480,9 +491,9 @@ p.lauftext {
 /* ------------------------------ */
 h2.text_auf_bild,
 p.text_auf_bild {
-	margin-top: -35vh;
-	margin-bottom: 35vh!important; 
-	color: white;
+margin-top: -35vh;
+margin-bottom: 35vh!important; 
+color: white;
 }
 
 
@@ -497,15 +508,15 @@ clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
 
 /* Balken nach links */
 .tag {
-  background: #FB8C00;
-  color: #222;
-  font: bold 32px system-ui;
-  padding: 2rem 3rem 2rem 4rem;
-	clip-path: polygon(30px 0%, 100% 0%, 100% 100%, 30px 100%, 0 50%)
+background: #FB8C00;
+color: #222;
+font: bold 32px system-ui;
+padding: 2rem 3rem 2rem 4rem;
+clip-path: polygon(30px 0%, 100% 0%, 100% 100%, 30px 100%, 0 50%)
 }
 
 .tag-wrap {
-  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
 }
 
 
@@ -515,24 +526,24 @@ clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
 }
 
 .schraeg_2-wrap {
-	filter: drop-shadow(15px 10px 4px rgba(50, 50, 0, 0.5));
+filter: drop-shadow(15px 10px 4px rgba(50, 50, 0, 0.5));
 }
 
 /* oben mehr padding */
 @media only screen and (max-width: 767px) {
-	main#site-content {
-			padding-top: 5rem;
-	}
+main#site-content {
+    padding-top: 5rem;
+}
 }
 
 .alignfull > figcaption, .alignfull > .wp-caption-text {
-    font-size: 4vmax;
-		font-weight: 800;
-	  margin-top: calc(-100vh + 10vw); 
-    /* margin-top: -100vH; */
-	  color: white;
-		margin-bottom: calc(80vH + 2vw);  		/* margin-bottom: 80vH; */
-		text-shadow: 0px 0px 0.2rem #f9b81e;
+  font-size: 4vmax;
+  font-weight: 800;
+  margin-top: calc(-100vh + 10vw); 
+  /* margin-top: -100vH; */
+  color: white;
+  margin-bottom: calc(80vH + 2vw);  		/* margin-bottom: 80vH; */
+  text-shadow: 0px 0px 0.2rem #f9b81e;
 }
 
 
@@ -542,181 +553,181 @@ clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
 /* ----------------------------- */
 /* Animationen für Text in Elements */
 
-	/* Animation (Fade) */
-	.animated_1 {
-			-webkit-animation-duration: 1s;
-			-webkit-animation-fill-mode: both;
-			animation-duration: 2s;
-			animation-fill-mode: both;
-	}
+/* Animation (Fade) */
+.animated_1 {
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
 
-	.animated_2 {
-			-webkit-animation-duration: 1s;
-			-webkit-animation-fill-mode: both;
-			animation-duration: 4s;
-			animation-fill-mode: both;
-	}
+.animated_2 {
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-duration: 4s;
+    animation-fill-mode: both;
+}
 
 
 
 .fadeInLeftBig {
-    -webkit-animation-name: fadeInLeftBig;
-    animation-name: fadeInLeftBig
+  -webkit-animation-name: fadeInLeftBig;
+  animation-name: fadeInLeftBig
 }
 
 @-webkit-keyframes fadeInLeftBig {
-    0% {
-        -webkit-transform: translate3d(-2000px,0,0);
-        opacity: 0;
-        transform: translate3d(-2000px,0,0)
-    }
+  0% {
+      -webkit-transform: translate3d(-2000px,0,0);
+      opacity: 0;
+      transform: translate3d(-2000px,0,0)
+  }
 
-    to {
-        -webkit-transform: translateZ(0);
-        opacity: 1;
-        transform: translateZ(0)
-    }
+  to {
+      -webkit-transform: translateZ(0);
+      opacity: 1;
+      transform: translateZ(0)
+  }
 }
 
 @keyframes fadeInLeftBig {
-    0% {
-        -webkit-transform: translate3d(-2000px,0,0);
-        opacity: 0;
-        transform: translate3d(-2000px,0,0)
-    }
+  0% {
+      -webkit-transform: translate3d(-2000px,0,0);
+      opacity: 0;
+      transform: translate3d(-2000px,0,0)
+  }
 
-    to {
-        -webkit-transform: translateZ(0);
-        opacity: 1;
-        transform: translateZ(0)
-    }
+  to {
+      -webkit-transform: translateZ(0);
+      opacity: 1;
+      transform: translateZ(0)
+  }
 }
 
 
 /* Umschalten von 3 auf 1 Spalte */
 @media (max-width:781px){
 .wp-block-columns {
-    display: block; 
-	}
+  display: block; 
+}
 }
 
 @media (min-width: 600px) and (max-width: 781px) {
 .wp-block-column:nth-child(2n) {
-    margin-left: 0;
+  margin-left: 0;
 }	
 }	
 
 /* Beiträge mit zusätzlichem oberen Rand */
 .post-inner.thin {
-    margin-top: 15rem;
+  margin-top: 15rem;
 }
 
 /* Anker auf Beitrag ohne Plugin */
 #erster, #zweiter, #dritter, #vierter, #fuenfter {
-	padding-top: 150px; 
-	margin-top: -150px;
+padding-top: 150px; 
+margin-top: -150px;
 }
 
 /* alle Elemente des Plugins htoc (Inhaltsverzeichnis) */
 [id^="htoc-"] { 
-	padding-top: 150px; 
-	margin-top: -150px!important;
+padding-top: 150px; 
+margin-top: -150px!important;
 }
 
 /* Button mit runden Ecken */
 .wp-block-buttons .mein_runder_button a {
-  border-radius: 20px;
+border-radius: 20px;
 }
 
 /* ersten Absatz im Beitrag kursiv, wenn der Absatz fett ausgezeichnet ist 
 .entry-content p:first-child strong{
-    font-style: italic;
+  font-style: italic;
 }
 */
 
 /* mehr Platz oben für Anker */
 h2.anker_h2 {
-	padding-top: 150px; 
+padding-top: 150px; 
 }
 
 .container_aussen{
-    background-color: antiquewhite;
+  background-color: antiquewhite;
 }
 
 div.erste {
-	background-image: url(https://test3.haurand.com/wp-content/uploads/2021/02/floetenspieler_eilendorf_2.jpg); 
+background-image: url(https://test3.haurand.com/wp-content/uploads/2021/02/floetenspieler_eilendorf_2.jpg); 
 }
 
 div.zweite {
-	background-image: url(https://test3.haurand.com/wp-content/uploads/2021/02/dom_3.jpg); 
+background-image: url(https://test3.haurand.com/wp-content/uploads/2021/02/dom_3.jpg); 
 }
 
 div.dritte {
-	background-image: url(https://test3.haurand.com/wp-content/uploads/2021/02/bild_3_vortrag.jpg); 
+background-image: url(https://test3.haurand.com/wp-content/uploads/2021/02/bild_3_vortrag.jpg); 
 }
 
 
 .container_innen {
-    display: flex;
-    margin-bottom: 1.75em;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  margin-bottom: 1.75em;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
 /* Buttons zentriert */
 .wp-block-buttons.is-content-justification-center, .wp-block-buttons
 {
-    text-align: center;
+  text-align: center;
 }
 
 
 .wp-block-buttons .ein_button a {
-	background-color: #B70000;
+background-color: #B70000;
 }
 
 .wp-block-buttons .ein_button a:hover{
-	color: #fff;
-	text-decoration: none;
-	background-color: #B70000;
-  box-shadow: 15px 15px 15px #a9b2b5;
-  -webkit-transform: scale(1.02);
-  -moz-transform: scale(1.02);
-  -ms-transform: scale(1.02);
-  -o-transform: scale(1.02);
-  transform: scale(1.02);
-  opacity: 1.0;
-  /* VERZÖGERUNG */
- -webkit-transition: all 0.5s linear;
- -moz-transition: all 0.5s linear;
- -ms-transition: all 0.5s linear;
- -o-transition: all 0.5s linear;
- transition: all 0.5s linear;
+color: #fff;
+text-decoration: none;
+background-color: #B70000;
+box-shadow: 15px 15px 15px #a9b2b5;
+-webkit-transform: scale(1.02);
+-moz-transform: scale(1.02);
+-ms-transform: scale(1.02);
+-o-transform: scale(1.02);
+transform: scale(1.02);
+opacity: 1.0;
+/* VERZÖGERUNG */
+-webkit-transition: all 0.5s linear;
+-moz-transition: all 0.5s linear;
+-ms-transition: all 0.5s linear;
+-o-transition: all 0.5s linear;
+transition: all 0.5s linear;
 }
 
 a.mein_button {
-	background-color: #B70000!important;
+background-color: #B70000!important;
 }
 
 a.mein_button:hover{
-	color: #fff;
-	text-decoration: none!important;
-	background-color: #B70000;
-  box-shadow: 15px 15px 15px #a9b2b5;
-  -webkit-transform: scale(1.02);
-  -moz-transform: scale(1.02);
-  -ms-transform: scale(1.02);
-  -o-transform: scale(1.02);
-  transform: scale(1.02);
-  opacity: 1.0;
-  /* VERZÖGERUNG */
- -webkit-transition: all 0.5s linear;
- -moz-transition: all 0.5s linear;
- -ms-transition: all 0.5s linear;
- -o-transition: all 0.5s linear;
- transition: all 0.5s linear;
+color: #fff;
+text-decoration: none!important;
+background-color: #B70000;
+box-shadow: 15px 15px 15px #a9b2b5;
+-webkit-transform: scale(1.02);
+-moz-transform: scale(1.02);
+-ms-transform: scale(1.02);
+-o-transform: scale(1.02);
+transform: scale(1.02);
+opacity: 1.0;
+/* VERZÖGERUNG */
+-webkit-transition: all 0.5s linear;
+-moz-transition: all 0.5s linear;
+-ms-transition: all 0.5s linear;
+-o-transition: all 0.5s linear;
+transition: all 0.5s linear;
 }
 
 /* ---------------------------- */
@@ -726,101 +737,101 @@ a.mein_button:hover{
 /* Randdarstellung für Kacheln 
 */
 div.kacheln {
-    flex-basis: calc(50% - 16px);
-    flex-grow: 0;
-    box-shadow: 5px 5px 10px #888888;
-    padding-right: 15px;
-		padding-left: 15px;
+  flex-basis: calc(50% - 16px);
+  flex-grow: 0;
+  box-shadow: 5px 5px 10px #888888;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 /* Beim Überfahren mehr Schatten 
- */
+*/
 div.kacheln:hover{
-    box-shadow: 10px 10px 15px #888888;
+  box-shadow: 10px 10px 15px #888888;
 }
 
 /* Beschriftung der Kachel */
 figcaption {
-    padding: 10px;
+  padding: 10px;
 }
 
 /* Absatz für Spaltentext */
 p.blue-background {
-   padding: 20px 38px;
+ padding: 20px 38px;
 }
 
 /* kein Rand bei Bildern animieren */
 figure.wp-block-image.size-large {
-    margin-top: 0px!important;
+  margin-top: 0px!important;
 }
 
 
 /* Spaltenblock */
 p.blue-background,
 div.blue-background {
-    background-color: #22405a;
-    color: white;
-	/* box-shadow: 5px 5px 10px #888888; */
+  background-color: #22405a;
+  color: white;
+/* box-shadow: 5px 5px 10px #888888; */
 }
 
 /* Beim Überfahren mehr Schatten 
- */
+*/
 div.blue-background:hover{
-    box-shadow: 10px 10px 15px #888888;
-		/* kommt beim Vortrag dazu: */
-  	-webkit-transform: scale(1.1);
-		-moz-transform: scale(1.01);
-		-ms-transform: scale(1.01);
-		-o-transform: scale(1.01);
-		transform: scale(1.01);
-	  opacity: 1.0;
-		/* VERZÖGERUNG */
-	 -webkit-transition: all 0.7s linear;
-	 -moz-transition: all 0.7s linear;
-	 -ms-transition: all 0.7s linear;
-	 -o-transition: all 0.7s linear;
-	 transition: all 0.7s linear;
-	 /* Schatten bei allen Elementen 
-	 -webkit-filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
-   filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));*/
+  box-shadow: 10px 10px 15px #888888;
+  /* kommt beim Vortrag dazu: */
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  -o-transform: scale(1.01);
+  transform: scale(1.01);
+  opacity: 1.0;
+  /* VERZÖGERUNG */
+ -webkit-transition: all 0.7s linear;
+ -moz-transition: all 0.7s linear;
+ -ms-transition: all 0.7s linear;
+ -o-transition: all 0.7s linear;
+ transition: all 0.7s linear;
+ /* Schatten bei allen Elementen 
+ -webkit-filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
+ filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));*/
 }
 
 /* damit die Spalten nicht direkt zusammenhängen */
 @media (max-width: 599px){
-	.wp-block-column {
-			/* statt 0px */
-			margin-top: 20px;    
-	}
+.wp-block-column {
+    /* statt 0px */
+    margin-top: 20px;    
+}
 }
 
 /* Foto bei den dunkelblauen Spalten animieren (Hover) */
 figure.zoomeffekt {
-	margin: 0;
-	padding: 0;
-	background: #fff;
-	overflow: hidden;
+margin: 0;
+padding: 0;
+background: #fff;
+overflow: hidden;
 }
 
 figure.zoomeffekt:hover+span {
-	bottom: -36px;
-	opacity: 0.1;
+bottom: -36px;
+opacity: 0.1;
 }
 
 
 figure.wp-block-image.size-large.zoomeffekt img {
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+-webkit-transform: scale(1);
+transform: scale(1);
+-webkit-transition: .3s ease-in-out;
+transition: .3s ease-in-out;
 }
 
 figure.wp-block-image.size-large.zoomeffekt img:hover {
-	-webkit-transform: scale(1.5);
-	/* transform: scale(1.5); */
-	transform:scale(1.5);
-	overflow: hidden;
-	max-height: 768px;
-	transition: all 1.5s linear;
+-webkit-transform: scale(1.5);
+/* transform: scale(1.5); */
+transform:scale(1.5);
+overflow: hidden;
+max-height: 768px;
+transition: all 1.5s linear;
 }
 
 /* ----------------------------- */
@@ -828,31 +839,31 @@ figure.wp-block-image.size-large.zoomeffekt img:hover {
 /* klappt hier noch nicht */
 /* ----------------------------- */
 .hero_bild {
-    position: relative;
+  position: relative;
 }
 
 .hero_bild:before, .hero1:after {
-    box-sizing: border-box;
-    content: " ";
-    position: absolute;
-    top:0;
-    display: block;
-    width: 50%;
-    height: 100%;
-    border: 30px solid white;
-    border-bottom-color: white; 
+  box-sizing: border-box;
+  content: " ";
+  position: absolute;
+  top:0;
+  display: block;
+  width: 50%;
+  height: 100%;
+  border: 30px solid white;
+  border-bottom-color: white; 
 }
 
 .hero_bild:before {
-    left: 0;
-    border-right: 50px solid transparent ;
-    border-left: 0;
+  left: 0;
+  border-right: 50px solid transparent ;
+  border-left: 0;
 }
 
 .hero_bild:after {
-    right: 0;
-    border-left: 50px solid transparent;
-    border-right: 0;
+  right: 0;
+  border-left: 50px solid transparent;
+  border-right: 0;
 }
 
 
@@ -862,33 +873,33 @@ figure.wp-block-image.size-large.zoomeffekt img:hover {
 /* Dreieck oben und unten (Original) */
 /* ----------------------------- */
 .hero {
-    background: url(https://test3.haurand.com/wp-content/uploads/2021/07/platzhalter_natur_mit_biene.jpg);
-    height: 200px;
-    position: relative;
+  background: url(https://test3.haurand.com/wp-content/uploads/2021/07/platzhalter_natur_mit_biene.jpg);
+  height: 200px;
+  position: relative;
 }
 
 .hero:before, .hero:after {
-    box-sizing: border-box;
-    content: " ";
-    position: absolute;
-    top:0;
-    display: block;
-    width: 50%;
-    height: 100%;
-    border: 30px solid white;
-    border-bottom-color: white;
+  box-sizing: border-box;
+  content: " ";
+  position: absolute;
+  top:0;
+  display: block;
+  width: 50%;
+  height: 100%;
+  border: 30px solid white;
+  border-bottom-color: white;
 }
 
 .hero:before {
-    left: 0;
-    border-right: 20px solid transparent;
-    border-left: 0;
+  left: 0;
+  border-right: 20px solid transparent;
+  border-left: 0;
 }
 
 .hero:after {
-    right: 0;
-    border-left: 20px solid transparent;
-    border-right: 0;
+  right: 0;
+  border-left: 20px solid transparent;
+  border-right: 0;
 }
 
 
@@ -900,32 +911,32 @@ figure.wp-block-image.size-large.zoomeffekt img:hover {
 
 .dreieck {
 /*    background: url(http://d.pr/i/eqn9+);
-    height: 200px;*/
-    position: relative;
+  height: 200px;*/
+  position: relative;
 }
 
 .dreieck:before, .dreieck:after {
-    box-sizing: border-box;
-    content: " ";
-    position: absolute;
-    top:0;
-    display: block;
-    width: 50%;
-    height: 100%;
-    border-bottom: 30px solid white; 
+  box-sizing: border-box;
+  content: " ";
+  position: absolute;
+  top:0;
+  display: block;
+  width: 50%;
+  height: 100%;
+  border-bottom: 30px solid white; 
 /*    border-bottom-color: white; */
 }
 
 .dreieck:before {
-    left: 0;
-    border-right: 50px solid transparent; 
-    border-left: 0;
+  left: 0;
+  border-right: 50px solid transparent; 
+  border-left: 0;
 }
 
 .dreieck:after {
-    right: 0;
-    border-left: 50px solid transparent;
-    border-right: 0;
+  right: 0;
+  border-left: 50px solid transparent;
+  border-right: 0;
 }
 /* ----------------------------- */
 
@@ -936,31 +947,31 @@ figure.wp-block-image.size-large.zoomeffekt img:hover {
 
 .film {
 /*    background: url(http://d.pr/i/eqn9+);
-    height: 200px;*/
-    position: relative;
+  height: 200px;*/
+  position: relative;
 }
 
 .film:before, .hero1:after {
-    box-sizing: border-box;
-    content: " ";
-    position: absolute;
-    display: block;
-    width: 50%;
-    height: 100%;
-    border-bottom: 30px solid white; 
+  box-sizing: border-box;
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 50%;
+  height: 100%;
+  border-bottom: 30px solid white; 
 }
 
 
 .film:before {
-    left: 0;
-    border-right: 50px solid transparent; 
-    border-left: 0;
+  left: 0;
+  border-right: 50px solid transparent; 
+  border-left: 0;
 }
 
 .film:after {
-    right: 0;
-    border-left: 50px solid transparent;
-    border-right: 0;
+  right: 0;
+  border-left: 50px solid transparent;
+  border-right: 0;
 }
 /* ----------------------------- */
 
