@@ -9,6 +9,11 @@ FARBWERTE
 Web und Bildschirm Druck
 */
 
+/* Absatzstyle für Copyrigth oben */
+p.em_bild {
+	font-style: italic;
+	margin-bottom: 4rem;
+}
 
 /* Breakpoint bei Archive 1-Spaltig bis 1024px */
 @media (min-width: 768px) and (max-width: 1024px){

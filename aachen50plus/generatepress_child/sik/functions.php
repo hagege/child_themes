@@ -35,25 +35,6 @@ add_filter( 'generate_blog_columns', function( $columns ) {
 
 
 /*----------------------------------------------------------------*/
-/* Start: Shortcode zur Anzeige des Copyrights
-/* Datum: 11.11.2021
-/* Autor: hgg
-/* Aufruf mit [bild_copyright]
-/* Definition z. Zt. in custom.css
-/*---------------------------------------------------------------- */
-add_shortcode( 'bild_copyright', 'bild_shortcode' );
-function bild_shortcode () {
-  $bild_unterschrift = '<p class="em_bild">' . get_post(get_post_thumbnail_id())->post_excerpt  . '</p>';
-  return $bild_unterschrift;
-}
-/*----------------------------------------------------------------*/
-/* Ende: Shortcode zur Anzeige des Copyrights
-/* Datum: 11.11.2021
-/* Autor: hgg
-/*---------------------------------------------------------------- */
-
-
-/*----------------------------------------------------------------*/
 /* Start: Read-More Button, wenn der Beitrag einen Custom Excerpt hat
 /* Datum: 31.12.2020
 /* nicht mehr notwendig, wenn keine custom excerpts angelegt werden (3.1.2021)
