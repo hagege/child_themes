@@ -183,10 +183,10 @@
   
   @media (max-width: 881px) {
       .wp-block-image figcaption {
-            font-size: x-large;
+                  font-size: x-large;
       }
       .wp-block-column:nth-child(2n) {
-            margin-left: 0em;
+      margin-left: 0em;
     }
   }
   
@@ -212,7 +212,7 @@
   div.wp-block-column.drei_kacheln p {
       margin-bottom: 1.5em;
       color: black;
-      font-size: small;
+      font-size: 14px;
       padding: 0 20px;
   }
   
