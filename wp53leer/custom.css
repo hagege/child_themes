@@ -8,10 +8,10 @@
 }
 
 div.wp-block-column.drei_kacheln {
-    color: black;
+		color: black;
+		background-color: white;
     font-size: 1.5rem;
 		padding: 2rem 2rem 2rem 2rem;
-		background-color: white;
 		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
     filter: drop-shadow(2px 2px 5px #CCCCCC); 
 		margin-bottom: 3rem;
@@ -87,6 +87,83 @@ body {
     font-family: unset;
     background-color: whitesmoke;
 }
+
+
+/* ------------------------------ */
+/* Text in Spalten überlappend */
+/* ------------------------------ */
+@media (max-width: 881px) {
+.wp-block-column.spalte_links_ueberlappend,
+.wp-block-column.spalte_rechts_ueberlappend
+	{
+	  background: rgb(255,228,196,70%);
+		justify-content:center;
+    padding: 1em;
+		margin: 0px;
+ }
+	.wp-block-column.spalte_bild_ueberlappend {
+    margin: 0px;
+	}
+	.wp-block-columns.spalten_ueberlappend {
+			display: flex;
+			flex-direction: column-reverse;
+	}	
+	/*
+	.wp-block-column.spalte_links_ueberlappend {
+		  margin-bottom: -10rem!important;
+	}
+	.wp-block-column.spalte_rechts_ueberlappend {
+		  margin-top: -10rem!important;
+			z-index:9999;
+	}	
+	*/
+}
+
+@media (min-width: 882px) {
+	/*
+.wp-block-columns.alignwide.spalten_ueberlappend  {
+			margin-top: 0px!important;
+			margin-bottom: 0px!important;
+	}	
+	*/
+	.wp-block-column.spalte_links_ueberlappend {
+		  margin-left: -15rem!important;
+	}
+	.wp-block-column.spalte_rechts_ueberlappend {
+		  margin-right: -15rem!important;
+			z-index:0;
+	}
+.wp-block-column.spalte_links_ueberlappend,
+.wp-block-column.spalte_rechts_ueberlappend
+	{
+/*		margin-top: 25vh;
+		margin-bottom: 25vh;
+*/		
+	  background: rgb(255,228,196,70%);
+    padding: 10vh;
+		justify-content:center;
+}
+}
+
+p.text_ueberlappend {
+    padding: 0rem;
+}
+
+/* ------------------------------ */
+
+
+/* ----------------------------- */
+/* Menü */
+/* ----------------------------- */
+.primary-menu a,
+li.current-menu-item a,
+li.current-menu-item > .link-icon-wrapper a{
+    color: black!important;
+		text-decoration: none!important;
+/*				text-decoration-style: dotted!important;
+		text-underline-offset: 6px; */
+}
+
 
 
 /* ----------------------------- */
