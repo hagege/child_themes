@@ -125,8 +125,8 @@ register_block_pattern(
     'description' => _x( 'Roter Container H2', 'Roter Container H2', 'container_h2_rot' ),
     'categories'  => array('Haurand'),
     'content'     =>
-    "<!-- wp:heading {\"textAlign\":\"center\",\"style\":{\"color\":{\"background\":\"#E62115\"}},\"className\":\"h2_rot\"} -->
-    <h2 class=\"has-text-align-center h2_rot has-background\" style=\"background-color:#E62115\">Roter Container H2</h2>
+    "<!-- wp:heading {\"textAlign\":\"center\",\"style\":{\"color\":{\"background\":\"#B70000\"}},\"className\":\"h2_rot\"} -->
+    <h2 class=\"has-text-align-center h2_rot has-background\" style=\"background-color:#B70000\">Roter Container H2</h2>
     <!-- /wp:heading -->",
   )
 );
