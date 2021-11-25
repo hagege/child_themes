@@ -4,7 +4,8 @@
 }
 */
 
-/* Spalten mit Text und Hover */
+
+/* Spalten mit Text animiert und hover */
 .wp-block-column.cube_spalte {
   background-color: rgb(255 255 255);
   color: black;
@@ -17,7 +18,8 @@
 .wp-block-column.cube_spalte:hover {
   background-color: rgba(108, 7, 7, 1);
   color: white;
-  transition: color .4s,border-color .4s,background-color .4s,box-shadow .4s,-webkit-box-shadow .4s;
+  transition: color .6s,border-color .6s,background-color .6s,box-shadow .6s,-webkit-box-shadow .6s;
+  cursor: pointer;
 }
 
 /* Menüfarbe schwarz */
