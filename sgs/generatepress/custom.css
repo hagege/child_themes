@@ -97,6 +97,14 @@ table.responsive_tabelle{
 }
 
 
+/* accordion - block */
+/* Akkordion: Ränder und Zeilenhöhe */
+.panel p {
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+}
+
 /* Akkordion: Farbe weiß */
 .wp-block-ainoblocks-accordion-faq-block.icon__right.br__xxs.pt__5.pb__5.pl__5.pr__5.has-base-3-color.has-text-color.has-background.open a {
 		color: white;
