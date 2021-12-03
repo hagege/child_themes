@@ -282,7 +282,7 @@ div.wp-block-column.drei_kacheln:hover {
   	transform: scale(1.01, 1.01);
 		-webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
     filter: drop-shadow(5px 5px 3px #CCCCCC);
-	transition-duration: 1s;
+	transition-duration: 0.8s;
 }
 
 /*
@@ -360,7 +360,7 @@ div.wp-block-column.drei_kacheln ul{
     font-size: 1rem;
 }
 
-div.wp-block-column.drei_kacheln h3{
+div.wp-block-column.drei_kacheln h3, h4{
     padding: 0 20px;
 }
 
