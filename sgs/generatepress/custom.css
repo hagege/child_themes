@@ -5,6 +5,7 @@
 /* hellgrau: #a2a2a4 */
 /* Breakpoint bei 1150px */
 
+
 /* Lehrer-Tabelle */
 @media screen and (max-width: 1424px) {	
     table.lehrer {
@@ -16,7 +17,7 @@
           display: none;
       }
       
-      td, tr {
+      table, td, tr {
           border: none;
       }
       
@@ -24,6 +25,10 @@
               background: #f0f0f0; 
               font-weight:bold;
               font-size:1.3em;
+      }
+  
+      tr td:nth-child(1) {
+          border-top: 1px solid #000;
       }
       
       tbody td {
