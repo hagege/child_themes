@@ -7,7 +7,7 @@
 
 
 /* Icon für PPT, Word, etc. mit fester Größe */
-.wp-block-image .office.icon img 
+.wp-block-image.office-icon figure.aligncenter.size-full.is-resized img
 {
     height: 3rem;
     width: 3rem;
