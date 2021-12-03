@@ -129,60 +129,44 @@ function haurand_register_block_categories() {
      'content'     =>
         '<!-- wp:columns -->
 		<div class="wp-block-columns"><!-- wp:column {"className":"drei_kacheln"} -->
-		<div class="wp-block-column drei_kacheln"><!-- wp:image {"align":"center","id":3772,"sizeSlug":"full","linkDestination":"custom","style":{"color":{}}} -->
-		<div class="wp-block-image"><figure class="aligncenter size-full"><a href="https://test.gesamtschule-stolberg.de/soziales-miteinander/"><img src="https://test.gesamtschule-stolberg.de/wp-content/uploads/2020/11/rundgang_016.jpg" alt="Städtische Gesamtschule Stolberg" class="wp-image-3772"/></a></figure></div>
+		<div class="wp-block-column drei_kacheln"><!-- wp:image {"align":"center","id":2411,"sizeSlug":"full","linkDestination":"custom","style":{"color":{}}} -->
+		<div class="wp-block-image"><figure class="aligncenter size-full"><a href="https://test.gesamtschule-stolberg.de/sgs-testet-neues-programm-des-schuelerlabors/"><img src="https://test.gesamtschule-stolberg.de/wp-content/uploads/2019/07/julab_002.jpg" alt="" class="wp-image-2411"/></a></figure></div>
 		<!-- /wp:image -->
 		
-		<!-- wp:heading {"textAlign":"center","level":3} -->
-		<h3 class="has-text-align-center" id="htoc-soziales-miteinander">Soziales Miteinander</h3>
+		<!-- wp:heading {"textAlign":"center"} -->
+		<h2 class="has-text-align-center" id="htoc-mint-julab">MINT / Julab</h2>
 		<!-- /wp:heading -->
 		
 		<!-- wp:paragraph -->
-		<p>Klassenrat, Klassentraining, Klassenleiterstunde usw.</p>
+		<p>In die Welt des Programmierens von Mikrochips tauchten Schüler der Jahrgänge 7 bis 9 im Schülerlabor JuLab des Forschungszentrums Jülich ein.</p>
 		<!-- /wp:paragraph --></div>
 		<!-- /wp:column -->
 		
 		<!-- wp:column {"className":"drei_kacheln"} -->
-		<div class="wp-block-column drei_kacheln"><!-- wp:image {"align":"center","id":2243,"sizeSlug":"full","linkDestination":"none","style":{"color":{}}} -->
-		<div class="wp-block-image"><figure class="aligncenter size-full"><img src="https://test.gesamtschule-stolberg.de/wp-content/uploads/2019/04/frontseiten_foto_skifahrt.jpg" alt="Skifahrt Oberzauch" class="wp-image-2243"/></figure></div>
+		<div class="wp-block-column drei_kacheln"><!-- wp:image {"align":"center","id":1059,"sizeSlug":"full","linkDestination":"none","style":{"color":{}}} -->
+		<div class="wp-block-image"><figure class="aligncenter size-full"><img src="https://test.gesamtschule-stolberg.de/wp-content/uploads/2017/10/platzhalter_apfel_apple-1644393_640.jpg" alt="" class="wp-image-1059"/></figure></div>
 		<!-- /wp:image -->
 		
-		<!-- wp:heading {"textAlign":"center","level":3} -->
-		<h3 class="has-text-align-center" id="htoc-wandertage-und-klassen-bzw-studienfahrten">Wandertage und Klassen- bzw. Studienfahrten</h3>
+		<!-- wp:heading {"textAlign":"center"} -->
+		<h2 class="has-text-align-center" id="htoc-gesunde-schule">Gesunde Schule / Mensa</h2>
 		<!-- /wp:heading -->
 		
 		<!-- wp:paragraph -->
-		<p></p>
-		<!-- /wp:paragraph -->
-		
-		<!-- wp:paragraph -->
-		<p>Wandertage und Klassen- bzw. Studienfahrten sind zentraler Bestandteil unseres Schullebens und pädagogischen Konzeptes. Zur Zeit finden folgende Fahrten statt, an denen die Teilnahme verpflichtend ist!</p>
-		<!-- /wp:paragraph -->
-		
-		<!-- wp:list {"fontSize":"small"} -->
-		<ul class="has-small-font-size"><li>Klasse 5: 3-tägige Fahrt, z.B. Jugendherberge Nideggen oder Prüm</li><li>Klasse 7: 5-tägige Fahrt, z.B. Trier</li><li>Klasse 10: 5-tägige Fahrt, z.B. Berlin oder Gardasee</li><li>Jahrgang 11: 3-tägige Orientierungstage, z.B. Kloster Steinfeld</li><li>Jahrgang 13: 5-tägige Studienfahrt, z.B. in eine europäische Großstadt</li></ul>
-		<!-- /wp:list -->
-		
-		<!-- wp:paragraph -->
-		<p>Die Klassenfahrten finden zeitlich immer vor den Herbstferien statt. </p>
-		<!-- /wp:paragraph -->
-		
-		<!-- wp:paragraph -->
-		<p>In jedem Schuljahr finden pro Jahrgang zu dem zwei Wandertage statt.</p>
+		<p>Unsere Schule nutzt die <a href="https://test.gesamtschule-stolberg.de/mensa-schulessen/" data-type="URL" data-id="https://test.gesamtschule-stolberg.de/mensa-schulessen/">gemeinsame Mensa</a> auf dem Gelände des Goethe-Gymnasiums.&nbsp;</p>
 		<!-- /wp:paragraph --></div>
 		<!-- /wp:column -->
 		
 		<!-- wp:column {"className":"drei_kacheln"} -->
-		<div class="wp-block-column drei_kacheln"><!-- wp:image {"align":"center","id":2234,"sizeSlug":"full","linkDestination":"none","style":{"color":{}}} -->
-		<div class="wp-block-image"><figure class="aligncenter size-full"><img src="https://test.gesamtschule-stolberg.de/wp-content/uploads/2019/03/karneval_001.jpg" alt="Karneval" class="wp-image-2234"/></figure></div>
+		<div class="wp-block-column drei_kacheln"><!-- wp:image {"align":"center","id":990,"sizeSlug":"full","linkDestination":"custom","style":{"color":{}}} -->
+		<div class="wp-block-image"><figure class="aligncenter size-full"><a href="https://gesamtschule-stolberg.de/schule-ohne-rassismus/"><img src="https://test.gesamtschule-stolberg.de/wp-content/uploads/2018/09/schule_ohne_rassismus.jpg" alt="Schule ohne Rassismus" class="wp-image-990"/></a><figcaption> </figcaption></figure></div>
 		<!-- /wp:image -->
 		
-		<!-- wp:heading {"textAlign":"center","level":3} -->
-		<h3 class="has-text-align-center" id="htoc-feste-und-feiern">Feste und Feiern</h3>
+		<!-- wp:heading {"textAlign":"center"} -->
+		<h2 class="has-text-align-center" id="htoc-schule-ohne-rassismus">Schule ohne Rassismus</h2>
 		<!-- /wp:heading -->
 		
 		<!-- wp:paragraph -->
-		<p>Einschulung, Abschlussfeiern, Karneval usw.</p>
+		<p>An der Gesamtschule Stolberg wird Toleranz gegenüber allen Mitmenschen “groß geschrieben”. Dies ist ein fester Bestandteil des schulischen Lebens. In diesem Zusammenhang nimmt die Schule an dem Projekt “Schule ohne Rassismus – Schule mit Courage” teil.</p>
 		<!-- /wp:paragraph --></div>
 		<!-- /wp:column --></div>
 		<!-- /wp:columns -->',

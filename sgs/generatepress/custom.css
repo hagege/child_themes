@@ -322,9 +322,6 @@ div.wp-block-column.drei_kacheln .wp-block-image:not(.is-style-rounded) img {
 }
 
 @media (max-width: 881px) {
-	.wp-block-image figcaption {
-				font-size: x-large;
-	}
 	.wp-block-column:nth-child(2n) {
     margin-left: 0em;
   }
@@ -332,19 +329,11 @@ div.wp-block-column.drei_kacheln .wp-block-image:not(.is-style-rounded) img {
 
 
 @media (min-width: 882px) and (max-width: 981px) {
-	.wp-block-image figcaption {
-				font-size: large;
-	}
 	div.wp-block-column.drei_kacheln .wp-block-image:not(.is-style-rounded) img {
 			height: 10rem;
 	}	
 }
 
-@media (min-width: 982px) {
-	.wp-block-image figcaption {
-			font-size: x-large;
-	}
-}
 
 
 
