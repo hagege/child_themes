@@ -245,8 +245,8 @@ div.wp-block-column h2 {
 /* ------------------------------ */
 /* Titel unter Bildern größer */
 div.wp-block-column.drei_kacheln {
-/*    color: green;
-    font-size: 1.5rem; */
+/*    color: green; */
+    font-size: 1.5rem; 
 		padding: 0px 0px 24px 0px;
     margin: 0px 40px 0px 0px;
 		background-color: white;
@@ -348,13 +348,22 @@ div.wp-block-column.drei_kacheln .wp-block-image:not(.is-style-rounded) img {
 
 
 
-
-div.wp-block-column.drei_kacheln p {
+/* Schriftgröße, etc. ändern auf Kacheln */
+div.wp-block-column.drei_kacheln p{
     margin-bottom: 1.5em;
     color: black;
-    font-size: 14px;
+    font-size: 1rem;
     padding: 0 20px;
 }
+
+div.wp-block-column.drei_kacheln ul{
+    font-size: 1rem;
+}
+
+div.wp-block-column.drei_kacheln h3{
+    padding: 0 20px;
+}
+
 
 /* ------------------------------ */
 
