@@ -129,39 +129,90 @@ function haurand_register_block_categories() {
      'content'     =>
         '<!-- wp:columns -->
 		<div class="wp-block-columns"><!-- wp:column {"className":"drei_kacheln"} -->
-		<div class="wp-block-column drei_kacheln"><!-- wp:image {"align":"center","id":2176,"sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":["#c7005a","#fff278"]}}} -->
-		<div class="wp-block-image"><figure class="aligncenter size-full"><img src="https://test.gesamtschule-stolberg.de/wp-content/uploads/2019/03/skifahrt_014.jpg" alt="" class="wp-image-2176"/><figcaption>Klassenfahrten</figcaption></figure></div>
+		<div class="wp-block-column drei_kacheln"><!-- wp:image {"align":"center","id":3772,"sizeSlug":"full","linkDestination":"custom","style":{"color":{}}} -->
+		<div class="wp-block-image"><figure class="aligncenter size-full"><a href="https://test.gesamtschule-stolberg.de/soziales-miteinander/"><img src="https://test.gesamtschule-stolberg.de/wp-content/uploads/2020/11/rundgang_016.jpg" alt="Städtische Gesamtschule Stolberg" class="wp-image-3772"/></a></figure></div>
 		<!-- /wp:image -->
-
+		
+		<!-- wp:heading {"textAlign":"center","level":3} -->
+		<h3 class="has-text-align-center" id="htoc-soziales-miteinander">Soziales Miteinander</h3>
+		<!-- /wp:heading -->
+		
 		<!-- wp:paragraph -->
-		<p>Fahrt nach Oberzauch: 26.1.2022 – 5.2.2022</p>
+		<p>Klassenrat, Klassentraining, Klassenleiterstunde usw.</p>
 		<!-- /wp:paragraph --></div>
 		<!-- /wp:column -->
-
+		
 		<!-- wp:column {"className":"drei_kacheln"} -->
-		<div class="wp-block-column drei_kacheln"><!-- wp:image {"align":"center","id":4126,"sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":["#000000","#00a5ff"]}}} -->
-		<div class="wp-block-image"><figure class="aligncenter size-full"><img src="https://test.gesamtschule-stolberg.de/wp-content/uploads/2021/09/schuelerlabor_003-1.jpg" alt="" class="wp-image-4126"/><figcaption> Praktikum </figcaption></figure></div>
+		<div class="wp-block-column drei_kacheln"><!-- wp:image {"align":"center","id":2243,"sizeSlug":"full","linkDestination":"none","style":{"color":{}}} -->
+		<div class="wp-block-image"><figure class="aligncenter size-full"><img src="https://test.gesamtschule-stolberg.de/wp-content/uploads/2019/04/frontseiten_foto_skifahrt.jpg" alt="Skifahrt Oberzauch" class="wp-image-2243"/></figure></div>
 		<!-- /wp:image -->
-
+		
+		<!-- wp:heading {"textAlign":"center","level":3} -->
+		<h3 class="has-text-align-center" id="htoc-wandertage-und-klassen-bzw-studienfahrten">Wandertage und Klassen- bzw. Studienfahrten</h3>
+		<!-- /wp:heading -->
+		
 		<!-- wp:paragraph -->
-		<p><strong>Praktikum 9</strong>: 20. September – 8. Oktober 2021<br><strong>Praktikum 10er/Oberstufenpraktikum</strong>: Mo, 17.01.2022 bis Fr, 28.01.2022</p>
+		<p></p>
+		<!-- /wp:paragraph -->
+		
+		<!-- wp:paragraph -->
+		<p>Wandertage und Klassen- bzw. Studienfahrten sind zentraler Bestandteil unseres Schullebens und pädagogischen Konzeptes. Zur Zeit finden folgende Fahrten statt, an denen die Teilnahme verpflichtend ist!</p>
+		<!-- /wp:paragraph -->
+		
+		<!-- wp:list {"fontSize":"small"} -->
+		<ul class="has-small-font-size"><li>Klasse 5: 3-tägige Fahrt, z.B. Jugendherberge Nideggen oder Prüm</li><li>Klasse 7: 5-tägige Fahrt, z.B. Trier</li><li>Klasse 10: 5-tägige Fahrt, z.B. Berlin oder Gardasee</li><li>Jahrgang 11: 3-tägige Orientierungstage, z.B. Kloster Steinfeld</li><li>Jahrgang 13: 5-tägige Studienfahrt, z.B. in eine europäische Großstadt</li></ul>
+		<!-- /wp:list -->
+		
+		<!-- wp:paragraph -->
+		<p>Die Klassenfahrten finden zeitlich immer vor den Herbstferien statt. </p>
+		<!-- /wp:paragraph -->
+		
+		<!-- wp:paragraph -->
+		<p>In jedem Schuljahr finden pro Jahrgang zu dem zwei Wandertage statt.</p>
 		<!-- /wp:paragraph --></div>
 		<!-- /wp:column -->
-
+		
 		<!-- wp:column {"className":"drei_kacheln"} -->
-		<div class="wp-block-column drei_kacheln"><!-- wp:image {"align":"center","id":3781,"sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":["#1900d8","#ffa96b"]}}} -->
-		<div class="wp-block-image"><figure class="aligncenter size-full"><img src="https://test.gesamtschule-stolberg.de/wp-content/uploads/2020/11/rundgang_025.jpg" alt="Städtische Gesamtschule Stolberg" class="wp-image-3781"/><figcaption>Elternsprechtag</figcaption></figure></div>
+		<div class="wp-block-column drei_kacheln"><!-- wp:image {"align":"center","id":2234,"sizeSlug":"full","linkDestination":"none","style":{"color":{}}} -->
+		<div class="wp-block-image"><figure class="aligncenter size-full"><img src="https://test.gesamtschule-stolberg.de/wp-content/uploads/2019/03/karneval_001.jpg" alt="Karneval" class="wp-image-2234"/></figure></div>
 		<!-- /wp:image -->
-
+		
+		<!-- wp:heading {"textAlign":"center","level":3} -->
+		<h3 class="has-text-align-center" id="htoc-feste-und-feiern">Feste und Feiern</h3>
+		<!-- /wp:heading -->
+		
 		<!-- wp:paragraph -->
-		<p>Elternsprechzeiten: es erfolgt eine Terminvergabe durch die Klassenlehrer<br><strong>Elternsprechtag</strong>: 10. November 2021</p>
+		<p>Einschulung, Abschlussfeiern, Karneval usw.</p>
 		<!-- /wp:paragraph --></div>
 		<!-- /wp:column --></div>
 		<!-- /wp:columns -->',
    )
  );
 
-
+ register_block_pattern(
+	/* https://developer.wordpress.org/block-editor/reference-guides/block-api/block-patterns/ */
+	/* maskieren ist nicht mehr nötig, wenn man einfache Hochkommatas nimmt */
+   'icon-block-office',
+     array(
+     'title' => __( 'Icons with office Application', 'icon-block-office' ),
+     'description' => _x( 'Icons with office Application (ppt)', 'Block pattern description', 'icon-block-office' ),
+     'categories'  => array('sgs'),
+     'content'     =>
+        '<!-- wp:group {"align":"full"} -->
+		<div class="wp-block-group alignfull"><!-- wp:paragraph {"align":"center"} -->
+		<p class="has-text-align-center"><strong>Powerpoint Präsentation </strong><br><strong>(bitte klicken):</strong></p>
+		<!-- /wp:paragraph -->
+		
+		<!-- wp:paragraph {"align":"center"} -->
+		<p class="has-text-align-center"><a rel="noreferrer noopener" href="https://test.gesamtschule-stolberg.de/wp-content/uploads/2018/11/Differenzierung2_neu.pptx" target="_blank">Fachleistungsdifferenzierung</a></p>
+		<!-- /wp:paragraph -->
+		
+		<!-- wp:image {"align":"center","id":1354,"width":64,"height":64,"sizeSlug":"full","linkDestination":"custom","className":"office-icon"} -->
+		<div class="wp-block-image office-icon"><figure class="aligncenter size-full is-resized"><a href="https://test.gesamtschule-stolberg.de/wp-content/uploads/2018/11/Differenzierung2_neu.pptx"><img src="https://test.gesamtschule-stolberg.de/wp-content/uploads/2018/10/ppt-3.png" alt="" class="wp-image-1354" width="64" height="64"/></a></figure></div>
+		<!-- /wp:image --></div>
+		<!-- /wp:group -->',
+		)
+);
 
 /*----------------------------------------------------------------*/
 /* Ende: Block Patterns von sgs 
