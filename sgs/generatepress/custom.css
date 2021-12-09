@@ -13,82 +13,78 @@
     width: 3rem;
 }
 
-
-figure.klassenteams tr td:nth-child(1), td:nth-child(2), td:nth-child(4) {
-			background: #f0f0f0; 
-			font-weight:bold;
-			font-size:1.3em;
+figure.wp-block-table.is-style-regular.ansprechpartner table tr td {
+			font-size:1.0em;
+			background: #ffffff;
+      font-weight: inherit;
 }
 
-/* Klassenteam-Tabelle */
+
+/* Ansprechpartner-Tabelle */
 @media screen and (max-width: 495px) {	
-  figure.klassenteams {
+  figure.wp-block-table.is-style-regular.ansprechpartner table{
 		width:100%;
-		border: none;
 	}
 
-  figure.klassenteams thead {
+  figure.wp-block-table.is-style-regular.ansprechpartner table thead {
 		display: none;
 	}
 	
-	figure.klassenteams td, tr {
-		border: none;
-	}
-	
-	figure.klassenteams tr td:nth-child(1) {
+	figure.wp-block-table.is-style-regular.ansprechpartner table tr td:nth-child(1) {
 		border-top: 1px solid #000;
+		background: #f0f0f0; 
+		font-weight:bold;
+		font-size:1.3em;
 	}
 	
-	figure.klassenteams tbody td {
+	figure.wp-block-table.is-style-regular.ansprechpartner table tbody td {
 		display: block;  
 	  text-align:center;
 	}
 
-	figure.klassenteams tbody td:before {
+	figure.wp-block-table.is-style-regular.ansprechpartner table tbody td:before {
       content: attr(data-th);
       display: block;
       text-align:center; 
   }
 }
-
 
 /* Lehrer-Tabelle */
 @media screen and (max-width: 1424px) {	
-  figure.lehrer {
+  table.lehrer {
 		width:100%;
 		border: none;
 	}
 
-  figure.lehrer thead {
+  table.lehrer thead {
 		display: none;
 	}
-	
-	figure.lehrer td, tr {
+
+	table.lehrer td, tr {
 		border: none;
 	}
-	
-  figure.lehrer tr td:nth-child(1), td:nth-child(2) {
+
+  table.lehrer tr td:nth-child(1), td:nth-child(2) {
 			background: #f0f0f0; 
 			font-weight:bold;
 			font-size:1.3em;
 	}
 
-	figure.lehrer tr td:nth-child(1) {
+	table.lehrer tr td:nth-child(1) {
 		border-top: 1px solid #000;
 	}
-	
-	figure.lehrer tbody td {
+
+	table.lehrer tbody td {
 		display: block;  
 	  text-align:center;
 	}
 
-	figure.lehrer tbody td:before {
+	table.lehrer tbody td:before {
       content: attr(data-th);
       display: block;
       text-align:center; 
   }
 }
-
 
 table.responsive_tabelle{
 	overflow: hidden;
