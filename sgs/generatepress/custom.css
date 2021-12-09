@@ -13,83 +13,35 @@
     width: 3rem;
 }
 
-figure.wp-block-table.is-style-regular.ansprechpartner, figure.wp-block-table.is-style-regular.klassenteams table tr td {
-			font-size:1.0em;
-			background: #ffffff;
-      font-weight: inherit;
-}
 
+/* ----------------------------- */
+/* Start Tabellen 
+/* ----------------------------- */
 
-/* Klassenteams-Tabelle */
-@media screen and (max-width: 395px) {	
-  figure.wp-block-table.aligncenter.klassenteams table{
-		width:100%;
-	}
-
-  figure.wp-block-table.aligncenter.klassenteams table thead {
-		display: none;
-	}
-	
-	figure.wp-block-table.aligncenter.klassenteams table tr td:nth-child(1) {
-		border-top: 1px solid #000;
-	}	
-	
-	figure.wp-block-table.aligncenter.klassenteams table tr td:nth-child(1), td:nth-child(2), td:nth-child(4) {
+@media (min-width: 396px) {
+figure.wp-block-table.aligncenter.klassenteams table tr td:nth-child(1), td:nth-child(2), td:nth-child(4) {
 		background: #f0f0f0; 
 		font-weight:bold;
-		font-size:1.3em;
 	}
-	
-	figure.wp-block-table.aligncenter.klassenteams table tbody td {
-		display: block;  
-	  text-align:center;
-	}
-
-	figure.wp-block-table.aligncenter.klassenteams table tbody td:before {
-      content: attr(data-th);
-      display: block;
-      text-align:center; 
-  }
 }
 
-
-
-/* Ansprechpartner-Tabelle */
-@media screen and (max-width: 495px) {	
-  figure.wp-block-table.is-style-regular.ansprechpartner table{
-		width:100%;
-	}
-	
-  figure.wp-block-table.is-style-regular.ansprechpartner table td tr {
-		border: none;
-	}
-
-  figure.wp-block-table.is-style-regular.ansprechpartner table thead {
-		display: none;
-	}
-	
-	figure.wp-block-table.is-style-regular.ansprechpartner table tr td:nth-child(1) {
-		border-top: 1px solid #000;
+@media (min-width: 496px) {
+	figure.wp-block-table.is-style-regular.ansprechpartner table tr td:nth-child(1), td:nth-child(2) {
 		background: #f0f0f0; 
 		font-weight:bold;
-		font-size:1.3em;
 	}
-	
-	
-	figure.wp-block-table.is-style-regular.ansprechpartner table tbody td {
-		display: block;  
-	  text-align:center;
-	}
-
-	figure.wp-block-table.is-style-regular.ansprechpartner table tbody td:before {
-      content: attr(data-th);
-      display: block;
-      text-align:center; 
-  }
 }
 
-/* Lehrer-Tabelle */
-@media screen and (max-width: 1424px) {	
+@media (min-width: 1496px) {	
+  table.lehrer tr td:nth-child(1), td:nth-child(2){
+		width:100%;
+		background: #f0f0f0; 
+		font-weight:bold;
+	}
+}
+
+/* Lehrer-Tabelle als HTML-Block wegen Anker */
+@media (max-width: 1495px) {	
   table.lehrer {
 		width:100%;
 		border: none;
@@ -124,6 +76,81 @@ figure.wp-block-table.is-style-regular.ansprechpartner, figure.wp-block-table.is
       text-align:center; 
   }
 }
+
+
+
+/* Klassenteams-Tabelle */
+
+@media screen and (max-width: 395px) {	
+  figure.wp-block-table.aligncenter.klassenteams table{
+		width:100%;
+	}
+
+  figure.wp-block-table.aligncenter.klassenteams table thead {
+		display: none;
+	}
+	
+	figure.wp-block-table.aligncenter.klassenteams table tr td:nth-child(1) {
+		border-top: 1px solid #000;
+	}	
+	
+	figure.wp-block-table.aligncenter.klassenteams tr td:nth-child(1), td:nth-child(2), td:nth-child(4) {
+		background: #f0f0f0; 
+		font-weight:bold;
+		font-size:1.3em;
+	}
+	
+	figure.wp-block-table.aligncenter.klassenteams table tbody td {
+		display: block;  
+	  text-align:center;
+	}
+
+	figure.wp-block-table.aligncenter.klassenteams table tbody td:before {
+      content: attr(data-th);
+      display: block;
+      text-align:center; 
+  }
+}
+
+
+
+/* Ansprechpartner-Tabelle */
+@media screen and (max-width: 495px) {	
+  figure.wp-block-table.is-style-regular.ansprechpartner table{
+		width:100%;
+	}
+	
+  figure.wp-block-table.is-style-regular.ansprechpartner table td tr {
+		border: none;
+	}
+
+  figure.wp-block-table.is-style-regular.ansprechpartner table thead {
+		display: none;
+	}
+	
+	figure.wp-block-table.is-style-regular.ansprechpartner table tr td:nth-child(1) {	
+			border-top: 1px solid #000;
+	}
+	
+figure.wp-block-table.is-style-regular.ansprechpartner table tr td:nth-child(1), td:nth-child(2) {
+		background: #f0f0f0; 
+		font-weight:bold;
+		font-size:1.3em;
+	}
+	
+	
+	figure.wp-block-table.is-style-regular.ansprechpartner table tbody td {
+		display: block;  
+	  text-align:center;
+	}
+
+	figure.wp-block-table.is-style-regular.ansprechpartner table tbody td:before {
+      content: attr(data-th);
+      display: block;
+      text-align:center; 
+  }
+}
+
 
 table.responsive_tabelle{
 	overflow: hidden;
@@ -161,15 +188,19 @@ table.responsive_tabelle{
   background-color: rgba(0, 0, 0, .3);
 }
 
+/* ----------------------------- */
+/* Ende Tabellen 
+/* ----------------------------- */
 
-/* dieser Filter wird beim Duotone-Effekt (Glanzlichter) zusätzlich angewendet */
+
+/* dieser Filter wird beim Duotone-Effekt (Glanzlichter) zusätzlich angewendet
 .page-id-1480 div.wp-block-column.drei_kacheln figure
 {
-/* 	object-position: center top; */
+/* 	object-position: center top; 
 	filter: brightness(2.0) hue-rotate(25deg) opacity(0.9) saturate(1.5) sepia(0.5);
-	/* filter: brightness(1.8) hue-rotate(45deg) opacity(0.9) saturate(1.5) sepia(0.3); */
+	/* filter: brightness(1.8) hue-rotate(45deg) opacity(0.9) saturate(1.5) sepia(0.3); 
 }
-
+*/
 
 /* accordion - block */
 /* Akkordion: Ränder und Zeilenhöhe */
