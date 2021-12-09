@@ -13,37 +13,76 @@
     width: 3rem;
 }
 
-/* Lehrer-Tabelle */
-@media screen and (max-width: 1424px) {	
-  table.lehrer {
+
+figure.klassenteams tr td:nth-child(1), td:nth-child(2), td:nth-child(4) {
+			background: #f0f0f0; 
+			font-weight:bold;
+			font-size:1.3em;
+}
+
+/* Klassenteam-Tabelle */
+@media screen and (max-width: 495px) {	
+  figure.klassenteams {
 		width:100%;
 		border: none;
 	}
 
-  thead {
+  figure.klassenteams thead {
 		display: none;
 	}
 	
-	table, td, tr {
+	figure.klassenteams td, tr {
 		border: none;
 	}
 	
-  tr td:nth-child(1), td:nth-child(2) {
+	figure.klassenteams tr td:nth-child(1) {
+		border-top: 1px solid #000;
+	}
+	
+	figure.klassenteams tbody td {
+		display: block;  
+	  text-align:center;
+	}
+
+	figure.klassenteams tbody td:before {
+      content: attr(data-th);
+      display: block;
+      text-align:center; 
+  }
+}
+
+
+/* Lehrer-Tabelle */
+@media screen and (max-width: 1424px) {	
+  figure.lehrer {
+		width:100%;
+		border: none;
+	}
+
+  figure.lehrer thead {
+		display: none;
+	}
+	
+	figure.lehrer td, tr {
+		border: none;
+	}
+	
+  figure.lehrer tr td:nth-child(1), td:nth-child(2) {
 			background: #f0f0f0; 
 			font-weight:bold;
 			font-size:1.3em;
 	}
 
-	tr td:nth-child(1) {
+	figure.lehrer tr td:nth-child(1) {
 		border-top: 1px solid #000;
 	}
 	
-	tbody td {
+	figure.lehrer tbody td {
 		display: block;  
 	  text-align:center;
 	}
 
-	tbody td:before {
+	figure.lehrer tbody td:before {
       content: attr(data-th);
       display: block;
       text-align:center; 
