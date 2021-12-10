@@ -19,7 +19,7 @@
 /* ----------------------------- */
 
 @media (min-width: 396px) {
-figure.wp-block-table.aligncenter.klassenteams td:nth-child(1), td:nth-child(2) {
+figure.wp-block-table.aligncenter.klassenteams tr td:nth-child(1), figure.wp-block-table.aligncenter.klassenteams tr td:nth-child(2), figure.wp-block-table.aligncenter.klassenteams tr td:nth-child(4) {
 		background: #f0f0f0; 
 		font-weight:bold;
 	}
@@ -29,7 +29,7 @@ figure.wp-block-table.aligncenter.klassenteams td{
 }
 
 @media (min-width: 496px) {
-	figure.wp-block-table.is-style-regular.ansprechpartner td:nth-child(1), td:nth-child(2) {
+	figure.wp-block-table.is-style-regular.ansprechpartner tr td:nth-child(1), 	figure.wp-block-table.is-style-regular.ansprechpartner tr td:nth-child(2) {
 		background: #f0f0f0; 
 		font-weight:bold;
 	}
@@ -39,7 +39,7 @@ figure.wp-block-table.aligncenter.klassenteams td{
 }
 
 @media (min-width: 1496px) {	
-  table.lehrer tr td:nth-child(1), td:nth-child(2){
+  table.lehrer tr td:nth-child(1), table.lehrer tr td:nth-child(2){
 		background: #f0f0f0; 
 		font-weight:bold;
 		word-break: unset;
@@ -61,7 +61,7 @@ figure.wp-block-table.aligncenter.klassenteams td{
 		border: none;
 	}
 
-  table.lehrer tr td:nth-child(1), td:nth-child(2) {
+  table.lehrer tr td:nth-child(1), table.lehrer tr td:nth-child(2) {
 			background: #f0f0f0; 
 			font-weight:bold;
 			font-size:1.3em;
@@ -100,7 +100,7 @@ figure.wp-block-table.aligncenter.klassenteams td{
 		border-top: 1px solid #000;
 	}	
 	
-	figure.wp-block-table.aligncenter.klassenteams tr td:nth-child(1), td:nth-child(2), td:nth-child(4) {
+	figure.wp-block-table.aligncenter.klassenteams tr td:nth-child(1), figure.wp-block-table.aligncenter.klassenteams tr td:nth-child(2), figure.wp-block-table.aligncenter.klassenteams tr  td:nth-child(4) {
 		background: #f0f0f0; 
 		font-weight:bold;
 		font-size:1.3em;
@@ -134,11 +134,11 @@ figure.wp-block-table.aligncenter.klassenteams td{
 		display: none;
 	}
 	
-	figure.wp-block-table.is-style-regular.ansprechpartner table tr td:nth-child(1) {	
+	figure.wp-block-table.is-style-regular.ansprechpartner tr td:nth-child(1) {	
 			border-top: 1px solid #000;
 	}
 	
-figure.wp-block-table.is-style-regular.ansprechpartner table tr td:nth-child(1), td:nth-child(2) {
+figure.wp-block-table.is-style-regular.ansprechpartner tr td:nth-child(1), figure.wp-block-table.is-style-regular.ansprechpartner tr td:nth-child(2) {
 		background: #f0f0f0; 
 		font-weight:bold;
 		font-size:1.3em;
