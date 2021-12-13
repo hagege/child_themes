@@ -5,7 +5,7 @@
  Author:       Hans-Gerd Gerhards 
  Author URI:   https://haurand.com/ 
  Template:     generatepress
- Version:      1.0 (2020-04-21)
+ Version:      1.1 (2021-12-13)
 */
 
 
@@ -15,12 +15,12 @@
 /* ----------------------------------------------------------------------------- */
 
 /* ----------------------------------- */
-/* Schriftgröße bei schmaleren Geräten */
+/* SchriftgrÃ¶ÃŸe bei schmaleren GerÃ¤ten */
 /* ----------------------------------- */
 
 
 /* ------------------------------ */
-/* Schriftgröße und -art bei Code*/
+/* SchriftgrÃ¶ÃŸe und -art bei Code*/
 /* ------------------------------ */
 .sourcecode { 
 	font-size: 0.8em;
@@ -37,7 +37,7 @@
 }
 
 
-/* bei schmaleren Displays nicht so großes padding */
+/* bei schmaleren Displays nicht so groÃŸes padding */
 @media only screen and (max-width: 768px) {
 	.wp-block-columns.alignfull.has-background {
 			padding-left: 1rem;
@@ -81,7 +81,7 @@ input#submit {
 
 
 
-/* für wichtige Infos */
+/* fÃ¼r wichtige Infos */
 p.links_wichtig, p.links_orange{
     border-left: 5px solid #B70000;
     padding: 10px;
@@ -90,9 +90,9 @@ p.links_wichtig, p.links_orange{
 
    
 /* ------------------------------ */
-/* Schriftdicke bei Überschriften */
+/* Schriftdicke bei Ãœberschriften */
 /* ------------------------------ */
-
+/*
 h1, h2  {
   text-align: center;
 }
@@ -103,28 +103,29 @@ h1.entry-title {
   font-weight: 700;
 }
 
+/*
 h2 {
     font-weight: 700;
 }
 
-/* h3 immer linksbündig */
+/* h3 immer linksbÃ¼ndig 
 h3, h4, h5 {
     font-weight: 600;
     text-align: left;
 }
+*/
 
 
 
 
-
-/* für Zitate */
+/* fÃ¼r Zitate */
    blockquote.wp-block-quote.links_schwarz {
      border-left: 5px solid #000000;
      padding: 10px;
      padding-left: 1.5em;
 }
  
-/* Links in Seiten und Beiträgen */
+/* Links in Seiten und BeitrÃ¤gen */
 body.single .entry-content a,
 body.single .entry-content a:visited,
 body.page .entry-content a,
@@ -143,17 +144,13 @@ body.page .entry-content a:hover {
 
 
 
-/* Beitragsübersicht nicht mehr zweispaltig, sondern einspaltig: */
+/* BeitragsÃ¼bersicht nicht mehr zweispaltig, sondern einspaltig: */
 @media (min-width: 768px) and (max-width: 1024px) {
 	.generate-columns.tablet-grid-50, .grid-sizer.tablet-grid-50 {
 			width: 100%;
 	}
 }   
 
-/* h2 etwas kleiner */
-h2 {
-    font-size: 26px;
-}
 
 
 /* ---------------------------------------------------- */
@@ -209,7 +206,7 @@ aside#search-2 {
 }
 
 
-/* für Contact Form7 */
+/* fÃ¼r Contact Form7 */
 span.wpcf7-list-item {
     display: block;
 }
@@ -219,7 +216,7 @@ span.wpcf7-list-item {
 /* ---------------------------------------------------- */
 /* 1.4. Fuss                                        */
 /* ---------------------------------------------------- */  
-/* Fußzeile bündig */ 
+/* FuÃŸzeile bÃ¼ndig */ 
 .footer-bar-align-right .copyright-bar {
     float: left;
     margin-top: 9px;
@@ -233,7 +230,7 @@ span.wpcf7-list-item {
 
 
 /*----------------------------------------------------------------*/
-/* 4. Nicht mehr benötigt ??
+/* 4. Nicht mehr benÃ¶tigt ??
 /*----------------------------------------------------------------*/
 
 
