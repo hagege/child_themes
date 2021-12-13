@@ -1,85 +1,26 @@
-/* Bild unter Menü
-@media only screen and (min-width: 769px){
-	.site-header .header-image {
-			height: 1000px;
-	}
-}
- */
+/* Farben 
+hellgrau: #D4DaDB - RGB: (212, 218, 219)
+weiß: #FFFFFF - RGB: (255, 255, 255)
+dunkelgrau: #3C4346 - RGB: (60, 67, 70)
+rot: #B70000 - RGB: (183, 0, 0)
+mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
+*/
 
 
 /* Seitentitel nicht zeigen */
 .page .entry-header {
-		/* visibility: hidden; */
-		display: none;
+    /* visibility: hidden; */
+    display: none;
 }
 
 /* ---------------------------- */
 
 /* Animation für Text über Video */
 p.has-text-align-left.animated_1.animated.fadeInLeft.slow.has-background-color.has-text-color {
-    padding-top: 30rem;
-		margin-bottom: 1rem;
+padding-top: 30rem;
+    margin-bottom: 1rem;
 }
 
-
-
-/* Alte Einstellungen */
-/* Bild auf allen anderen Seiten außer der Startseite zeigen */
-/*.page .header-image {
-	display: inherit;
-}
-
-.page-id-75 .header-image {
-	Display: none;
-}
-*/
-
-/* zusätzlicher oberer Rand
-.site-header .header-image {
-	    margin-top: 50px;
-}
-
-
-@media only screen and (min-width: 769px) and (max-width: 1004px){
-	.site-header .header-image {
-	    margin-top: 100px;
-	}
-}
-
-/* Bild unter Menü 
-@media only screen and (min-width: 1386px){
-	.site-header .header-image {
-			max-height: 400px;
-	}
-}
-
-
-@media only screen and (min-width: 769px) and (max-width: 1385px){
-	.site-header .header-image {
-			max-height: 300px;
-	}
-}
-
-
-
-@media only screen and (min-width: 651px) and (max-width: 768px){
-	.site-header .header-image {
-			height: 180px;
-	}
-}
-
-@media only screen and (min-width: 321px) and (max-width: 650px){
-	.site-header .header-image {
-		height: 100px;
-    margin-top: 50px;
-	}
-}
-@media only screen and (max-width: 320px) {
-	.site-header .header-image {
-		height: 80px;
-    margin-top: 50px;
-	}
-}
 
 
 /*------------------------------------*/
@@ -88,35 +29,12 @@ p.has-text-align-left.animated_1.animated.fadeInLeft.slow.has-background-color.h
 /* Autor: hgg
 /*------------------------------------*/
 .para_img-11, .para_img-2, .para_img-3 {
-  position: relative;
-  /* opacity: 0.65; */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-	/* transform: translateZ(5px)		scale(0.8); */
+position: relative;
+/* opacity: 0.65; */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+/* transform: translateZ(5px)		scale(0.8); */
 }
-
-/*------------------------------------*/
-/* Bild 1
-/*------------------------------------*/
-	/*
-.para_img-1 {
-
-  background-image: url("http://50plusaachen.de/wp-content/uploads/2020/01/platzhalter_slider_beach-2585264_1280.jpg");
-	
-  min-height: 400px;
-	z-index:-1;
-	/* Verschiebung innerhalb des Containers */
-	/* transform: translateZ(3px)		scale(1.125); */
-
-
-/*  margin-left:-410px;
-  margin-right:-410px;  */
-
-
-/*  margin-left:-410px;
-  margin-right:-410px;  
-}
-*/
 
