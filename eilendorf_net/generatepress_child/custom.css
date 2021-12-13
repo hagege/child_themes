@@ -11,10 +11,10 @@ Türkis:       #00FFFF
     display: none;
 }
 
-/* ---------------------------- */
-
+/* ----------------------------- */
 /* Animation für Text über Video */
-p.has-text-align-left.animated_1.animated.fadeInLeft.slow.has-background-color.has-text-color {
+/* ----------------------------- */
+p.has-text-align-center.animated.fadeInLeft.slow{
 padding-top: 30rem;
     margin-bottom: 1rem;
 }
