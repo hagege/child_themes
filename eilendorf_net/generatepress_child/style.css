@@ -196,11 +196,6 @@ aside#search-2 {
     background-color: white;
 }
 
-.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .one-container .container, .separate-containers .paging-navigation, .inside-page-header {
-    background-color: whitesmoke;
-}
-
-
 .inside-header {
     padding: 0px;
 }
