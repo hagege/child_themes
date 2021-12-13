@@ -1,0 +1,63 @@
+/*
+ Theme Name:   GeneratePress Child
+ Theme URI:    https://haurand.com/
+ Description:  Default GeneratePress child theme
+ Author:       Hans-Gerd Gerhards 
+ Author URI:   https://haurand.com/ 
+ Template:     generatepress
+ Version:      1.0 (2020-04-21)
+*/
+
+
+/* Fußzeile bündig mit haurand.com */ 
+.footer-bar-align-right .copyright-bar {
+    float: left;
+    margin-top: 9px;
+}
+
+/* h2 etwas kleiner */
+h2 {
+    font-size: 26px;
+}
+
+/* Breakpoint anders setzen, damit die Spalten nicht zu schmal sind */
+@media (max-width: 1199px) {
+.wp-block-columns {
+    display: inherit;
+    flex-wrap: wrap;
+}
+}
+
+/* Innenrand bei Elementen in der sidebar verkleinern */
+aside#search-2 {
+    padding: 10px;
+}
+
+.widget:last-child, .separate-containers .widget:last-child {
+    padding: 10px;
+}
+
+/* Gestaltung der Kacheln (Grid) */
+
+.wp-block-column {
+    flex-basis: 0;
+    flex-grow: 1;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+}
+
+.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .one-container .container, .separate-containers .paging-navigation, .inside-page-header {
+    background-color: whitesmoke;
+}
+
+
+.inside-header {
+    padding: 0px;
+}
+
+
+/* für Contact Form7 */
+span.wpcf7-list-item {
+    display: block;
+}
