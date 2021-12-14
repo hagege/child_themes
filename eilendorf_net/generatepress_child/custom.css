@@ -2,150 +2,181 @@
 Hellgrau:     #D9D9D9
 Blau:         #0B3043
 Türkis:       #00FFFF
+
+Breakpoint bei 1200px (einspaltig)
 */
 
-/* ------------------------------ */
-/* Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln abgerundet" */
-/* ------------------------------ */
-/* Titel unter Bildern größer */
-div.wp-block-column.kacheln_abgerundet {
-    color: green;
-    font-size: 1.5rem;
-		padding: 0px 0px 24px 0px;
-    margin: 0px 40px 0px 0px;
-		background-color: white;
-    border-radius: 30px 0px;
-		box-shadow:  12px 12px 24px #bebebe,
-             -12px -12px 24px #ffffff;
-		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
-    filter: drop-shadow(2px 2px 5px #CCCCCC); 
-		margin-bottom: 3rem;
+/* Variablen */
+:root {
+	--hellgrau-color: rgba(217,217,217,1);
+	--grau_1-color: rgba(190,190,190,1);
+	  --grau_2-color: rgba(204,204,204,1);
+	  --blau-color: rgba(11,48,67,1);
+	--tuerkis-color: rgba(0,255,255,1);
+  }
+  
+  
+  /* ------------------------------ */
+  /* Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln abgerundet" */
+  /* ------------------------------ */
+  /* Titel unter Bildern größer */
+  div.wp-block-column.kacheln_abgerundet {
+	  color: var(--blau-color);
+	  font-size: 1.5rem;
+		  padding: 0px 0px 24px 0px;
+	  margin: 0px 40px 0px 0px;
+		  background-color: white;
+	  border-radius: 30px 0px;
+		  box-shadow:  12px 12px 24px var(--grau_1-color),
+			   -12px -12px 24px #ffffff;
+		  -webkit-filter: drop-shadow(3px 3px 1px var(--grau_2-color));
+	  filter: drop-shadow(2px 2px 5px var(--grau_2-color)); 
+		  margin-bottom: 3rem;
+		/* abgerundete Ecken 
+		border-radius: 20px 20px 0px 0px; */
+  }
+  
+  /* bei drei Spalten und beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind */
+  @media (min-width: 882px) {
+  div.wp-block-column.kacheln_abgerundet:last-child {
+	  margin-right: 0px;
+	  }
+  }
+  
+  /* bei einspaltiger Ansicht kein rechter Rand */
+  @media (max-width: 881px) {
+  div.wp-block-column.kacheln_abgerundet {
+	  margin-right: 0px;
+	  }
+  }
+  
+  
+  .wp-block-image.kachelbild_abgerundet img {
+	  border-radius: 30px 0px;
+		  object-fit: cover;
+		height: 15rem;
+		  width: 100rem
+  }
+  
+  @media (max-width: 1199px) {
+	  div.wp-block-column.kacheln_abgerundet{
+		  margin: 0em 0em 2em 0em;
+	  }
+  }
+  
+  
+  /* beim Hover leicht größer mit mehr Schatten 
+  div.wp-block-column.kacheln_abgerundet:hover {
+		  opacity:0.7;
+		transform: scale(1.01, 1.01);
+		  -webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
+	  filter: drop-shadow(5px 5px 3px #CCCCCC);
+	  transition-duration: 1s;
+  }
+  
+  */
+  
+  
+  
+  /*
+  @media (max-width: 799px)
+  .wp-block-column {
+	  flex-basis: 100%!important;
+  }
+  */
+  
+  /* wenn die Bilder untereinander stehen, dann kein rechter Rand, damit die Bilder zentriert sind */
+  /* Umschalten von 3 auf 1 Spalte 
+  @media (min-width: 600px) and (max-width: 781px) {
+  div.wp-block-column.drei_kacheln {
+	  margin-right: 0px;
+	  display: contents; 
+	  }
+  }
+  
+  @media (min-width: 600px) and (max-width: 781px) {
+  div.wp-block-column.drei_kacheln:nth-child(2n) {
+	  margin-left: 0;
+	  }	
+  }	
+  
+  /* Bilder in den Kacheln */
+  div.wp-block-column.drei_kacheln_abgerundet .wp-block-image:not(.is-style-rounded) img {
+	  height: 35rem;
+	  object-fit: cover;
 	  /* abgerundete Ecken 
 	  border-radius: 20px 20px 0px 0px; */
-}
-
-/* bei drei Spalten und beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind */
-@media (min-width: 882px) {
-div.wp-block-column.kacheln_abgerundet:last-child {
-	margin-right: 0px;
-	}
-}
-
-/* bei einspaltiger Ansicht kein rechter Rand */
-@media (max-width: 881px) {
-div.wp-block-column.kacheln_abgerundet {
-	margin-right: 0px;
-	}
-}
-
-
-.wp-block-image.kachelbild_abgerundet img {
-    border-radius: 30px 0px;
-		object-fit: cover;
-	  max-height: 15rem;
-}
-
-/* beim Hover leicht größer mit mehr Schatten 
-div.wp-block-column.kacheln_abgerundet:hover {
-		opacity:0.7;
-  	transform: scale(1.01, 1.01);
-		-webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
-    filter: drop-shadow(5px 5px 3px #CCCCCC);
-	transition-duration: 1s;
-}
-
-*/
-
-
-
-/*
-@media (max-width: 799px)
-.wp-block-column {
-    flex-basis: 100%!important;
-}
-*/
-
-/* wenn die Bilder untereinander stehen, dann kein rechter Rand, damit die Bilder zentriert sind */
-/* Umschalten von 3 auf 1 Spalte 
-@media (min-width: 600px) and (max-width: 781px) {
-div.wp-block-column.drei_kacheln {
-	margin-right: 0px;
-	display: contents; 
-	}
-}
-
-@media (min-width: 600px) and (max-width: 781px) {
-div.wp-block-column.drei_kacheln:nth-child(2n) {
-    margin-left: 0;
-	}	
-}	
-
-/* Bilder in den Kacheln */
-div.wp-block-column.drei_kacheln_abgerundet .wp-block-image:not(.is-style-rounded) img {
-	height: 35rem;
-	object-fit: cover;
-	/* abgerundete Ecken 
-	border-radius: 20px 20px 0px 0px; */
-}
-
-
-
-
-/* Kacheln auf der Hauptseite */
-
-.wp-block-column.kacheln_eilendorf {
-   box-shadow:  12px 12px 24px #bebebe,
-               -12px -12px 24px #ffffff;
-   -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
-   filter: drop-shadow(2px 2px 5px #CCCCCC);
-	border-radius: 30px 0px 30px 0px;
-}
-
-
-.wp-block-columns.kacheln_eilendorf ul {
-    margin: 0 0 1.5em 4em;
-    font-size: 1.3em;
-}
-
-.wp-block-columns.kacheln_eilendorf ul a { 
-  text-underline-offset: 3px;
-	text-decoration: none;
-}
-
-.wp-block-columns.kacheln_eilendorf ul a:hover { 
-  text-underline-offset: 3px;
-	text-decoration: inherit;
-}
-
-
-/* Seitentitel nicht zeigen - evtl. überflüssig, siehe child theme */
-.page .entry-header {
-		/* visibility: hidden; */
-		display: none;
-}
-
-/* ----------------------------- */
-/* Animation für Text über Video */
-/* ----------------------------- */
-p.has-text-align-center.animated.fadeInLeft.slow{
-    padding-top: 30rem;
-		margin-bottom: 1rem;
-}
-
-
-
-/*------------------------------------*/
-/* Start: Parallax Scrolling Effekt
-/* Datum: 24.10.2018
-/* Autor: hgg
-/*------------------------------------*/
-.para_img-11, .para_img-2, .para_img-3 {
-  position: relative;
-  /* opacity: 0.65; */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-	/* transform: translateZ(5px)		scale(0.8); */
-}
-
+  }
+  
+  
+  
+  
+  /* Kacheln auf der Hauptseite */
+  
+  .wp-block-column.kacheln_eilendorf {
+	 box-shadow:  12px 12px 24px #bebebe,
+				 -12px -12px 24px #ffffff;
+	 -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+	 filter: drop-shadow(2px 2px 5px #CCCCCC);
+	  border-radius: 30px 0px 30px 0px;
+  }
+  
+  /* Bilder in der Kachel */
+  .wp-block-column.kacheln_eilendorf img {
+	  height: 200px;
+	  object-fit: cover;
+  }
+  
+  /* Links in der Kachel */
+  .wp-block-columns.kacheln_eilendorf ul {
+	  margin: 0 0 1.5em 4em;
+	  font-size: 1.3em;
+  }
+  
+  
+  .wp-block-columns.kacheln_eilendorf ul a { 
+	text-underline-offset: 3px;
+	  text-decoration: none;
+  }
+  
+  /*
+  .wp-block-columns.kacheln_eilendorf ul a:hover { 
+	text-underline-offset: 3px;
+	  text-decoration: inherit;
+  }
+  
+  
+  /* Seitentitel nicht zeigen - evtl. überflüssig, siehe child theme 
+  .page .entry-header {
+		  /* visibility: hidden; 
+		  display: none;
+  }
+  */
+  
+  
+  /* ----------------------------- */
+  /* Animation für Text über Video */
+  /* ----------------------------- */
+  p.has-text-align-center.animated.fadeInLeft.slow{
+	  padding-top: 30rem;
+		  margin-bottom: 1rem;
+  }
+  
+  
+  
+  /*------------------------------------*/
+  /* Start: Parallax Scrolling Effekt
+  /* Datum: 24.10.2018
+  /* Autor: hgg
+  /*------------------------------------*/
+  .para_img-11, .para_img-2, .para_img-3 {
+	position: relative;
+	/* opacity: 0.65; */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	  /* transform: translateZ(5px)		scale(0.8); */
+  }
+  
+  
