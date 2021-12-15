@@ -6,6 +6,12 @@
 /* Breakpoint bei 1150px */
 
 
+figure.aligncenter.size-full:hover > img.wp-image-2603 {
+	opacity: 0.2;
+}
+
+
+
 /* Icon für PPT, Word, etc. mit fester Größe */
 .wp-block-image.office-icon figure.aligncenter.size-full.is-resized img
 {
@@ -273,6 +279,7 @@ figure.wp-block-table.is-style-regular.ansprechpartner tr td:nth-child(1), figur
   word-break: break-word;
   overflow-wrap: break-word;
 }
+
 /* Bis hierher alles einspaltig*/
 @media (max-width: 1150px) {
 	.wp-block-columns {
@@ -388,6 +395,105 @@ div.wp-block-column.drei_kacheln {
 
 /* beim Hover leicht größer mit mehr Schatten */
 div.wp-block-column.drei_kacheln:hover {
+		opacity:0.7;
+    /* Kachel etwas größer: */
+  	transform: scale(1.01, 1.01);
+		-webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
+    filter: drop-shadow(5px 5px 3px #CCCCCC);
+	transition-duration: 0.8s;
+}
+
+
+/* ------------------------------ */
+/* Vier Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln" */
+/* ------------------------------ */
+/* Titel unter Bildern größer */
+div.wp-block-column.vier_kacheln {
+/*    color: green; 
+    font-size: 1.5rem; */
+		padding: 20px 0px 24px 0px;
+    margin: 0px 40px 0px 0px;
+		background-color: white;
+		box-shadow:  12px 12px 24px #bebebe,
+             -12px -12px 24px #ffffff;
+		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+    filter: drop-shadow(2px 2px 5px #CCCCCC); 
+		margin-bottom: 3rem;
+	  /* abgerundete Ecken 
+	  border-radius: 20px 20px 0px 0px; */
+}
+
+div.wp-block-column.vier_kacheln p {
+	font-size: 0.7em;
+}
+
+div.wp-block-column.vier_kacheln h3 {
+	font-size: 1em;
+}
+
+/* bei drei Spalten und beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind */
+@media (min-width: 1151px) {
+div.wp-block-column.vier_kacheln:last-child {
+	margin-right: 0px;
+	}
+}
+
+/* ------------------------------ */
+/* Spalten umbrechen
+ * https://die-netzialisten.de/responsiveness-spalten-block-anpassen/ */
+/* ------------------------------ */
+.wp-block-columns {
+  display: flex;
+  margin-bottom: 1.75em;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 751px) {
+  .wp-block-column.vier_kacheln {
+    flex-wrap: nowrap;
+  }
+}
+.wp-block-column {
+  flex-grow: 1;
+  min-width: 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Bis hierher alles einspaltig*/
+@media (max-width: 750px) {
+	.wp-block-column.vier_kacheln {
+			display: block;		
+	}
+}
+
+/*Ab hier Spaltenanzahl wie eingestellt*/
+@media (min-width: 751px) {
+  .wp-block-column.vier_kacheln {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+  .wp-block-column.vier_kacheln[style*="flex-basis"] {
+    flex-grow: 0;
+  }
+  .wp-block-column.vier_kacheln:not(:first-child) {
+    margin-left: 2em;
+  }
+}
+
+
+
+/* bei einspaltiger Ansicht kein rechter Rand */
+@media (max-width: 1150px) {
+div.wp-block-column.vier_kacheln {
+	margin-right: 0px;
+	}
+}
+
+
+
+/* beim Hover leicht größer mit mehr Schatten */
+div.wp-block-column.vier_kacheln:hover {
 		opacity:0.7;
     /* Kachel etwas größer: */
   	transform: scale(1.01, 1.01);
