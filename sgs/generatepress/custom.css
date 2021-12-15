@@ -6,12 +6,6 @@
 /* Breakpoint bei 1150px */
 
 
-figure.aligncenter.size-full:hover > img.wp-image-2603 {
-	opacity: 0.2;
-}
-
-
-
 /* Icon für PPT, Word, etc. mit fester Größe */
 .wp-block-image.office-icon figure.aligncenter.size-full.is-resized img
 {
@@ -279,7 +273,6 @@ figure.wp-block-table.is-style-regular.ansprechpartner tr td:nth-child(1), figur
   word-break: break-word;
   overflow-wrap: break-word;
 }
-
 /* Bis hierher alles einspaltig*/
 @media (max-width: 1150px) {
 	.wp-block-columns {
@@ -438,69 +431,6 @@ div.wp-block-column.vier_kacheln:last-child {
 	}
 }
 
-/* ------------------------------ */
-/* Spalten umbrechen
- * https://die-netzialisten.de/responsiveness-spalten-block-anpassen/ */
-/* ------------------------------ */
-.wp-block-columns {
-  display: flex;
-  margin-bottom: 1.75em;
-  flex-wrap: wrap;
-}
-
-@media (min-width: 751px) {
-  .wp-block-column.vier_kacheln {
-    flex-wrap: nowrap;
-  }
-}
-.wp-block-column {
-  flex-grow: 1;
-  min-width: 0;
-  word-break: break-word;
-  overflow-wrap: break-word;
-}
-
-/* Bis hierher alles einspaltig*/
-@media (max-width: 750px) {
-	.wp-block-column.vier_kacheln {
-			display: block;		
-	}
-}
-
-/*Ab hier Spaltenanzahl wie eingestellt*/
-@media (min-width: 751px) {
-  .wp-block-column.vier_kacheln {
-    flex-basis: 0;
-    flex-grow: 1;
-  }
-  .wp-block-column.vier_kacheln[style*="flex-basis"] {
-    flex-grow: 0;
-  }
-  .wp-block-column.vier_kacheln:not(:first-child) {
-    margin-left: 2em;
-  }
-}
-
-
-
-/* bei einspaltiger Ansicht kein rechter Rand */
-@media (max-width: 1150px) {
-div.wp-block-column.vier_kacheln {
-	margin-right: 0px;
-	}
-}
-
-
-
-/* beim Hover leicht größer mit mehr Schatten */
-div.wp-block-column.vier_kacheln:hover {
-		opacity:0.7;
-    /* Kachel etwas größer: */
-  	transform: scale(1.01, 1.01);
-		-webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
-    filter: drop-shadow(5px 5px 3px #CCCCCC);
-	transition-duration: 0.8s;
-}
 
 /*
 @media (max-width: 799px)
@@ -903,5 +833,4 @@ div.farbige_kachel {
 /* ----------------------------- */
 /* Ende nicht verwendet */
 /* ----------------------------- */
-
 
