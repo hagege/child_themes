@@ -1,0 +1,72 @@
+/* ----------------------------- */
+/* universelle Lösung für Spalten und Breakpoints */
+/* Variablen können leider für media queries nicht benutzt werden */
+/* ----------------------------- */
+/* ----------------------------- */
+/* drei Spalten auf eine Spalte  */
+/* 3 --> 1                       */
+/* ----------------------------- */
+
+@media (min-width: 600px) and (max-width: 881px) {
+	.wp-block-columns.drei_spalten {
+    display: block;
+}
+	.wp-block-column.drei_spalten{
+			margin-left: 0;
+	}
+}
+
+
+/* ----------------------------- */
+/* drei Spalten auf eine Spalte  */
+/* 3 --> 2 --> 1                 */
+/* ----------------------------- */
+
+@media (min-width: 600px) and (max-width: 1064px) {
+  .wp-block-columns.drei_spalten_2 {
+    flex-flow: row wrap;
+  }
+
+  .wp-block-column.drei_spalten_2:first-child {
+    flex-basis: 100%!important;
+  }
+	
+	.wp-block-column.drei_spalten_2:nth-child(1),
+		.wp-block-column.drei_spalten_2:nth-child(2){
+			margin-left: 1px;
+	}
+	
+	.wp-block-column.drei_spalten_2:nth-child(3){
+			margin-left: 20px;
+	}
+}
+
+
+
+/* --------------------------- */
+/* vier Spalten                */
+/* Umbruch auf 2 Spalten       */
+/* --------------------------- */
+@media (min-width: 600px) and (max-width: 1064px) {
+	.wp-block-columns.vier_spalten {
+			display: flex;
+			margin-bottom: 1.75em;
+			box-sizing: border-box;
+			flex-direction: row;
+			flex-wrap: wrap;
+	}
+	
+/* hier ggfs den Prozentsatz anpassen */
+	.wp-block-column.vier_spalten:not(:only-child) {
+    flex-basis: calc(50% - 1em) !important;
+    flex-grow: 0;
+	}
+	/* gerade Spalten */
+	.wp-block-column.vier_spalten:nth-child(odd){
+			margin-left: 1px;
+	}
+	/* ungerade Spalten */
+	.wp-block-column.vier_spalten:nth-child(even){
+			margin-left: 15px;
+	}
+}
