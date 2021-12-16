@@ -256,18 +256,21 @@ figure.wp-block-table.is-style-regular.ansprechpartner tr td:nth-child(1), figur
 /* Spalten umbrechen
  * https://die-netzialisten.de/responsiveness-spalten-block-anpassen/ */
 /* ------------------------------ */
-.wp-block-columns {
+.wp-block-columns.drei_kacheln,
+.wp-block-columns.zwei_kacheln{
   display: flex;
   margin-bottom: 1.75em;
   flex-wrap: wrap;
 }
 
 @media (min-width: 1151px) {
-  .wp-block-columns {
+  .wp-block-columns.drei_kacheln,
+	.wp-block-columns.zwei_kacheln {
     flex-wrap: nowrap;
   }
 }
-.wp-block-column {
+.wp-block-column.drei_kacheln,
+.wp-block-column.zwei_kacheln {
   flex-grow: 1;
   min-width: 0;
   word-break: break-word;
@@ -275,21 +278,25 @@ figure.wp-block-table.is-style-regular.ansprechpartner tr td:nth-child(1), figur
 }
 /* Bis hierher alles einspaltig*/
 @media (max-width: 1150px) {
-	.wp-block-columns {
+	.wp-block-columns.drei_kacheln,
+	.wp-block-columns.zwei_kacheln {
 			display: block;		
 	}
 }
 
 /*Ab hier Spaltenanzahl wie eingestellt*/
 @media (min-width: 1151px) {
-  .wp-block-column {
+  .wp-block-column.drei_kacheln,
+	.wp-block-column.zwei_kacheln {
     flex-basis: 0;
     flex-grow: 1;
   }
   .wp-block-column[style*="flex-basis"] {
     flex-grow: 0;
   }
-  .wp-block-column:not(:first-child) {
+  .wp-block-column.drei_kacheln:not(:first-child),
+	.wp-block-column.zwei_kacheln:not(:first-child)
+	{
     margin-left: 2em;
   }
 }
@@ -300,6 +307,35 @@ div.wp-block-column h2 {
 }
 
 
+/* --------------------------- */
+/* vier Spalten umbrechen      */
+/* --------------------------- */
+@media (min-width: 600px) and (max-width: 1264px) {
+	.wp-block-columns.vier_kacheln {
+			display: flex;
+			margin-bottom: 1.75em;
+			box-sizing: border-box;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+	}
+/* hier ggfs den Prozentsatz und die Ränder anpassen */
+	.wp-block-column.vier_kacheln:not(:only-child) {
+		/* durch Änderung des Prozentsatzes kann der Platz besser ausgenutzt werden */
+    flex-basis: calc(47% - 1em)!important;
+    flex-grow: 0;
+		margin: 10px;
+		padding: 10px;
+	}
+	/* gerade Spalten */
+	.wp-block-column.vier_kacheln:nth-child(odd){
+			margin-left: 1px;
+	}
+	/* ungerade Spalten */
+	.wp-block-column.vier_kacheln:nth-child(even){
+			margin-left: 15px;
+	}
+}
 
   /* ------------------------------ */
   /* Zwei Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln" */
@@ -412,16 +448,17 @@ div.wp-block-column.vier_kacheln {
 		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
     filter: drop-shadow(2px 2px 5px #CCCCCC); 
 		margin-bottom: 3rem;
+		justify-content: center;
 	  /* abgerundete Ecken 
 	  border-radius: 20px 20px 0px 0px; */
 }
 
 div.wp-block-column.vier_kacheln p {
-	font-size: 0.7em;
+	font-size: 0.8em;
 }
 
 div.wp-block-column.vier_kacheln h3 {
-	font-size: 1em;
+	font-size: 1.1em;
 }
 
 /* bei drei Spalten und beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind */
@@ -430,6 +467,7 @@ div.wp-block-column.vier_kacheln:last-child {
 	margin-right: 0px;
 	}
 }
+
 
 
 /*
