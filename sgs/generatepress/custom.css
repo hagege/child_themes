@@ -13,6 +13,7 @@
   .generate-columns.mobile-grid-100, .grid-sizer.mobile-grid-100 {
       width: 100%;
   }
+  }
   
   @media (min-width: 968px){
   .generate-columns.tablet-grid-50, .grid-sizer.tablet-grid-50 {
@@ -430,7 +431,9 @@
   
   /* Bei Beiträgen kleinere Schrift */
   .inside-article  {
-      font-size: inherit; 
+      font-size: inherit;
+      padding: inherit;
+      margin: inherit;
   }
   
   /* bei einspaltiger Ansicht kein rechter Rand */
