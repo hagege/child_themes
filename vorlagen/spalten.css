@@ -1,3 +1,11 @@
+/* Breite des Blogs bei Twenty Twenty ändern */
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    max-width: 120rem;
+		/* das war bereits drin:
+    width: calc(100% - 4rem);*/
+}
+
+
 /* ----------------------------- */
 /* universelle Lösung für Spalten und Breakpoints */
 /* Variablen können leider für media queries nicht benutzt werden */
