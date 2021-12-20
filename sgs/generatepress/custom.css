@@ -444,8 +444,7 @@
   
   
   /* beim Hover leicht größer mit mehr Schatten */
-  div.wp-block-column.drei_kacheln:hover,
-  .inside-article:hover{
+  div.wp-block-column.drei_kacheln:hover{
       opacity:0.7;
       /* Kachel etwas größer: */
       transform: scale(1.01, 1.01);
