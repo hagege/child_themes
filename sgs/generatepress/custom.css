@@ -8,6 +8,7 @@
 
 /* ----------------------------- */
 /* Breakpoints für Anzeige Posts */
+/* ein- oder zweispaltig         */
 /* ----------------------------- */
 @media (max-width: 967px) {
   .generate-columns.mobile-grid-100, .grid-sizer.mobile-grid-100 {
