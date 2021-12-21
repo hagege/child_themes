@@ -334,7 +334,7 @@
         box-sizing: border-box;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: center; 
     }
   /* hier ggfs den Prozentsatz und die Ränder anpassen */
     .wp-block-column.vier_kacheln:not(:only-child) {
@@ -353,6 +353,8 @@
         margin-left: 15px;
     }
   }
+  
+  
   
     /* ------------------------------ */
     /* Zwei Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln" */
@@ -465,11 +467,11 @@
       padding: 20px 5px 24px 5px;
       margin: 0px 40px 0px 0px;
       background-color: white;
-  /*		box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+      box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
       -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
-      filter: drop-shadow(2px 2px 5px #CCCCCC); */
+      filter: drop-shadow(2px 2px 5px #CCCCCC); 
       margin-bottom: 3rem;
-      justify-content: center;
+      justify-content: center; 
       /* abgerundete Ecken 
       border-radius: 20px 20px 0px 0px; */
   }
@@ -480,6 +482,7 @@
   
   div.wp-block-column.vier_kacheln h3 {
     font-size: 1.1em;
+    margin-bottom: 0px;
   }
   
   
@@ -492,13 +495,27 @@
     }
   }
   
-  /* bei drei Spalten und beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind */
+  
+  /* klappt nicht richtig, ist nicht zentriert
+  @media (min-width: 1265px) {
+    .wp-block-columns.vier_kacheln {
+       justify-content:center;
+    }
+    .wp-block-column.vier_kacheln {
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+  
+  */
+  
+  /* bei vier Spalten und beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind 
   @media (min-width: 1151px) {
   div.wp-block-column.vier_kacheln:last-child {
     margin-right: 0px;
     }
   }
-  
+  */
   
   
   /*
