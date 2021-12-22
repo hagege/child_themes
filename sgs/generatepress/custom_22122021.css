@@ -41,43 +41,6 @@ div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.a
 }
 }
 
-/* ------------------------------ */
-/* Vier Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln" */
-/* ------------------------------ */
-/* Titel unter Bildern größer */
-div.wp-block-column.vier_kacheln {
-		padding: 20px 5px 24px 5px;
-    margin: 0px 15px 0px 15px;
-		background-color: white;
-		box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
-		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
-    filter: drop-shadow(2px 2px 5px #CCCCCC); 
-		margin-bottom: 3rem;
-		justify-content: center; 
-	  /* abgerundete Ecken 
-	  border-radius: 20px 20px 0px 0px; */
-}
-
-div.wp-block-column.vier_kacheln p {
-	font-size: 0.8em;
-}
-
-div.wp-block-column.vier_kacheln h3 {
-	font-size: 1.1em;
-	margin-bottom: 0px;
-}
-
-
-@media (max-width: 999px) {
-	div.wp-block-column.vier_kacheln {
-			/* nur Rand unten */
-			padding: 20px 0px 24px 0px;
-      margin: 0px 0px 40px 0px;
-			justify-content: center;
-	}
-}
-
-
 /* ----------------------------- */
 /* Breakpoints für Anzeige Posts */
 /* ein- oder zweispaltig         */
@@ -396,6 +359,36 @@ div.wp-block-column h2 {
 }
 
 
+/* --------------------------- */
+/* vier Spalten umbrechen      */
+/* --------------------------- */
+@media (min-width: 600px) and (max-width: 1264px) {
+	.wp-block-columns.vier_kacheln {
+			display: flex;
+			margin-bottom: 1.75em;
+			box-sizing: border-box;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center; 
+	}
+/* hier ggfs den Prozentsatz und die Ränder anpassen */
+	.wp-block-column.vier_kacheln:not(:only-child) {
+		/* durch Änderung des Prozentsatzes kann der Platz besser ausgenutzt werden */
+    flex-basis: calc(47% - 1em)!important;
+    flex-grow: 0;
+		margin: 10px;
+		padding: 10px;
+	}
+	/* gerade Spalten */
+	.wp-block-column.vier_kacheln:nth-child(odd){
+			margin-left: 1px;
+	}
+	/* ungerade Spalten */
+	.wp-block-column.vier_kacheln:nth-child(even){
+			margin-left: 15px;
+	}
+}
+
 
 
   /* ------------------------------ */
@@ -499,7 +492,88 @@ div.wp-block-column.drei_kacheln:hover{
 }
 
 
+/* ------------------------------ */
+/* Vier Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln" */
+/* ------------------------------ */
+/* Titel unter Bildern größer */
+div.wp-block-column.vier_kacheln {
+/*    color: green; 
+    font-size: 1.5rem; */
+		padding: 20px 5px 24px 5px;
+    margin: 0px 40px 0px 0px;
+		background-color: white;
+		box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+    filter: drop-shadow(2px 2px 5px #CCCCCC); 
+		margin-bottom: 3rem;
+		justify-content: center; 
+	  /* abgerundete Ecken 
+	  border-radius: 20px 20px 0px 0px; */
+}
 
+div.wp-block-column.vier_kacheln p {
+	font-size: 0.8em;
+}
+
+div.wp-block-column.vier_kacheln h3 {
+	font-size: 1.1em;
+	margin-bottom: 0px;
+}
+
+
+@media (max-width: 599px) {
+	div.wp-block-column.vier_kacheln {
+			/* nur Rand unten */
+			padding: 20px 0px 24px 0px;
+      margin: 0px 0px 40px 0px;
+			justify-content: center;
+	}
+}
+
+
+/* klappt nicht richtig, ist nicht zentriert
+@media (min-width: 1265px) {
+	.wp-block-columns.vier_kacheln {
+	   justify-content:center;
+	}
+	.wp-block-column.vier_kacheln {
+		margin: 0px;
+		padding: 0px;
+	}
+}
+
+*/
+
+/* bei vier Spalten und beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind 
+@media (min-width: 1151px) {
+div.wp-block-column.vier_kacheln:last-child {
+	margin-right: 0px;
+	}
+}
+*/
+
+
+/*
+@media (max-width: 799px)
+.wp-block-column {
+    flex-basis: 100%!important;
+}
+*/
+
+/* wenn die Bilder untereinander stehen, dann kein rechter Rand, damit die Bilder zentriert sind */
+/* Umschalten von 3 auf 1 Spalte 
+@media (min-width: 600px) and (max-width: 781px) {
+div.wp-block-column.drei_kacheln {
+	margin-right: 0px;
+	display: contents; 
+	}
+}
+
+@media (min-width: 600px) and (max-width: 781px) {
+div.wp-block-column.drei_kacheln:nth-child(2n) {
+    margin-left: 0;
+	}	
+}	
 
 /* Bilder in den Kacheln */
 div.wp-block-column.drei_kacheln .wp-block-image:not(.is-style-rounded) img {
@@ -863,6 +937,9 @@ img.rund {
     border-left: 30px solid transparent;
     border-right: 0;
 }
+
+
+
 
 
 div.farbige_kachel {
