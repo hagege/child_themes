@@ -25,25 +25,19 @@ div.flexible_spalten .wp-block-group__inner-container{
 
 @media (min-width: 1500px)  {
 div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-    max-width: 58rem;
     width: 25%;
-    display: flex;
 }
 }
 
 @media (min-width: 1000px) and (max-width: 1499px) {
 div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-    max-width: 58rem;
     width: 50%;
-    display: flex;
 }
 }
 
 @media (max-width: 999px) {
 div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-    max-width: 58rem;
     width: 100%;
-    display: flex;
 }
 }
 
