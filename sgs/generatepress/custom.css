@@ -495,17 +495,12 @@
     }
   }
   
-  
-  /* klappt nicht richtig, ist nicht zentriert
   @media (min-width: 1265px) {
-    .wp-block-columns.vier_kacheln {
-       justify-content:center;
-    }
-    .wp-block-column.vier_kacheln {
-      margin: 0px;
-      padding: 0px;
-    }
+  div.wp-block-column.vier_kacheln {
+      margin: 0px 10px 0px 10px;
   }
+  }
+  
   
   */
   
