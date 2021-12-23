@@ -33,6 +33,31 @@ add_filter( 'generate_blog_columns', function( $columns ) {
     return $columns;
 } );
 
+/*----------------------------------------------------------------*/
+/* Start: Keine Überschrift im Excerpt
+/* Datum: 01.01.2021
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+/* Klappt zwar so weit, aber bei einem customer excerpt wird zwei Mal der Button gezeigt */
+function wp_strip_header_tags( $excerpt='' ) {
+
+	$raw_excerpt = $excerpt;
+	if ( '' == $excerpt ) {
+			$excerpt = get_the_content('');
+			$excerpt = strip_shortcodes( $excerpt );
+			$excerpt = apply_filters('the_content', $excerpt);
+			$excerpt = str_replace(']]>', ']]>', $excerpt);
+	}
+	$regex = '#(<h([1-6])[^>]*>)\s?(.*)?\s?(<\/h\2>)#';
+	$excerpt = preg_replace($regex,'', $excerpt);
+	$excerpt_length = apply_filters('excerpt_length', 55);
+	$excerpt_more = apply_filters('excerpt_more', ' ' . '[...]');
+	$excerpt = wp_trim_words( $excerpt, $excerpt_length, $excerpt_more );
+
+return apply_filters('wp_trim_excerpt', preg_replace($regex,'', $excerpt), $raw_excerpt);
+}
+add_filter( 'get_the_excerpt', 'wp_strip_header_tags', 9);
+
 
 /*----------------------------------------------------------------*/
 /* Start: Block Patterns von sgs

@@ -86,32 +86,32 @@ function haurand_register_block_categories() {
      'description' => _x( 'Two columns with pictures (tiles)', 'Block pattern description', 'zwei-kacheln-block-pattern' ),
      'categories'  => array('sgs'),
      'content'     =>
-        '<!-- wp:columns -->
-		<div class="wp-block-columns"><!-- wp:column {"className":"zwei_kacheln"} -->
+        '<!-- wp:columns {"className":"zwei_kacheln"} -->
+		<div class="wp-block-columns zwei_kacheln"><!-- wp:column {"className":"zwei_kacheln"} -->
 		<div class="wp-block-column zwei_kacheln"><!-- wp:image {"align":"center","id":4298,"sizeSlug":"full","linkDestination":"custom","style":{"color":{}}} -->
-		<div class="wp-block-image"><figure class="aligncenter size-full"><a href="https://test.gesamtschule-stolberg.de/infos-fuer-die-neuen-5er/"><img src="https://test.gesamtschule-stolberg.de/wp-content/uploads/2021/11/sperberweg_kachel_800.jpg" alt="" class="wp-image-4298"/></a></figure></div>
+		<div class="wp-block-image"><figure class="aligncenter size-full"><a href="https://test.gesamtschule-stolberg.de/sekundarstufe-i/"><img src="https://test.gesamtschule-stolberg.de/wp-content/uploads/2021/11/sperberweg_kachel_800.jpg" alt="" class="wp-image-4298"/></a></figure></div>
 		<!-- /wp:image -->
-
+		
 		<!-- wp:heading {"textAlign":"center"} -->
-		<h2 class="has-text-align-center">Anmeldung 5. Klasse</h2>
+		<h2 class="has-text-align-center"> Sekundarstufe I (Stufen 5-10) </h2>
 		<!-- /wp:heading -->
-
+		
 		<!-- wp:paragraph {"align":"center","className":"bg_gelb"} -->
-		<p class="has-text-align-center bg_gelb"> Tag der offenen Tür, Schnuppertage und Infoveranstaltung<br> Informationen für Schülerinnen und Schüler der 4. Klasse!  </p>
+		<p class="has-text-align-center bg_gelb">  Stufen 5 - 7 im Sperberweg,  Stufen 8 - 10 in der Walther-Dobbelmann-Straße </p>
 		<!-- /wp:paragraph --></div>
 		<!-- /wp:column -->
-
+		
 		<!-- wp:column {"className":"zwei_kacheln"} -->
 		<div class="wp-block-column zwei_kacheln"><!-- wp:image {"align":"center","id":4294,"sizeSlug":"full","linkDestination":"custom","style":{"color":{}}} -->
-		<div class="wp-block-image"><figure class="aligncenter size-full"><a href="https://test.gesamtschule-stolberg.de/oberstufe-sgs/"><img src="https://test.gesamtschule-stolberg.de/wp-content/uploads/2021/11/wds_kachel_800.jpg" alt="" class="wp-image-4294"/></a></figure></div>
+		<div class="wp-block-image"><figure class="aligncenter size-full"><a href="https://test.gesamtschule-stolberg.de/abteilung-iii/"><img src="https://test.gesamtschule-stolberg.de/wp-content/uploads/2021/11/wds_kachel_800.jpg" alt="" class="wp-image-4294"/></a></figure></div>
 		<!-- /wp:image -->
-
+		
 		<!-- wp:heading {"textAlign":"center"} -->
-		<h2 class="has-text-align-center">Anmeldung Oberstufe</h2>
+		<h2 class="has-text-align-center">Sekundarstufe II (EF, Q1, Q2)</h2>
 		<!-- /wp:heading -->
-
+		
 		<!-- wp:paragraph {"align":"center","className":"bg_gelb"} -->
-		<p class="has-text-align-center bg_gelb">Tag der offenen Tür und Infoveranstaltung <br>Informationen für angehende Abiturienten. </p>
+		<p class="has-text-align-center bg_gelb"> Oberstufe in der Walther-Dobbelmann-Straße </p>
 		<!-- /wp:paragraph --></div>
 		<!-- /wp:column --></div>
 		<!-- /wp:columns -->',
@@ -119,16 +119,14 @@ function haurand_register_block_categories() {
  );
 
  register_block_pattern(
-	/* https://developer.wordpress.org/block-editor/reference-guides/block-api/block-patterns/ */
-	/* maskieren ist nicht mehr nötig, wenn man einfache Hochkommatas nimmt */
    'three-tile-card-pattern',
      array(
      'title' => __( 'Three columns with pictures', 'drei-kacheln-block-pattern' ),
      'description' => _x( 'Three columns with pictures (tiles)', 'Block pattern description', 'drei-kacheln-block-pattern' ),
      'categories'  => array('sgs'),
      'content'     =>
-        '<!-- wp:columns -->
-		<div class="wp-block-columns"><!-- wp:column {"className":"drei_kacheln"} -->
+        '<!-- wp:columns {"className":"drei_kacheln"} -->
+		<div class="wp-block-columns drei_kacheln"><!-- wp:column {"className":"drei_kacheln"} -->
 		<div class="wp-block-column drei_kacheln"><!-- wp:image {"align":"center","id":2411,"sizeSlug":"full","linkDestination":"custom","style":{"color":{}}} -->
 		<div class="wp-block-image"><figure class="aligncenter size-full"><a href="https://test.gesamtschule-stolberg.de/sgs-testet-neues-programm-des-schuelerlabors/"><img src="https://test.gesamtschule-stolberg.de/wp-content/uploads/2019/07/julab_002.jpg" alt="" class="wp-image-2411"/></a></figure></div>
 		<!-- /wp:image -->
@@ -174,8 +172,90 @@ function haurand_register_block_categories() {
  );
 
  register_block_pattern(
-	/* https://developer.wordpress.org/block-editor/reference-guides/block-api/block-patterns/ */
-	/* maskieren ist nicht mehr nötig, wenn man einfache Hochkommatas nimmt */
+   'four-tile-card-pattern',
+     array(
+     'title' => __( 'four columns with pictures', 'vier-kacheln-block-pattern' ),
+     'description' => _x( 'Four columns with pictures (tiles)', 'Block pattern description', 'vier-kacheln-block-pattern' ),
+     'categories'  => array('sgs'),
+     'content'     =>
+        '<!-- wp:columns {"className":"vier_kacheln"} -->
+		<div class="wp-block-columns vier_kacheln"><!-- wp:column {"className":"vier_kacheln"} -->
+		<div class="wp-block-column vier_kacheln"><!-- wp:image {"align":"center","id":2603,"sizeSlug":"full","linkDestination":"none"} -->
+		<div class="wp-block-image"><figure class="aligncenter size-full"><img src="https://test.gesamtschule-stolberg.de/wp-content/uploads/2019/09/kollegium_0010.jpg" alt="Agron, Alimi" class="wp-image-2603"/></figure></div>
+		<!-- /wp:image -->
+		
+		<!-- wp:heading {"textAlign":"center","level":3} -->
+		<h3 class="has-text-align-center"> Agron Alimi</h3>
+		<!-- /wp:heading -->
+		
+		<!-- wp:paragraph {"align":"center"} -->
+		<p class="has-text-align-center"> a.alimi@gesamtschule-stolberg.de </p>
+		<!-- /wp:paragraph -->
+		
+		<!-- wp:paragraph {"align":"center"} -->
+		<p class="has-text-align-center"> Biologie, Geschichte </p>
+		<!-- /wp:paragraph --></div>
+		<!-- /wp:column -->
+		
+		<!-- wp:column {"className":"vier_kacheln"} -->
+		<div class="wp-block-column vier_kacheln"><!-- wp:image {"align":"center","id":1846,"sizeSlug":"full","linkDestination":"none"} -->
+		<div class="wp-block-image"><figure class="aligncenter size-full"><img src="https://test.gesamtschule-stolberg.de/wp-content/uploads/2018/11/Josef_Artz.jpg" alt="" class="wp-image-1846"/></figure></div>
+		<!-- /wp:image -->
+		
+		<!-- wp:heading {"textAlign":"center","level":3} -->
+		<h3 class="has-text-align-center">Josef Artz</h3>
+		<!-- /wp:heading -->
+		
+		<!-- wp:paragraph {"align":"center"} -->
+		<p class="has-text-align-center"> j.artz@gesamtschule-stolberg.de</p>
+		<!-- /wp:paragraph -->
+		
+		<!-- wp:paragraph {"align":"center"} -->
+		<p class="has-text-align-center"> Sport, Spanisch, Biologie, Informatik  </p>
+		<!-- /wp:paragraph --></div>
+		<!-- /wp:column -->
+		
+		<!-- wp:column {"className":"vier_kacheln"} -->
+		<div class="wp-block-column vier_kacheln"><!-- wp:image {"align":"center","id":1819,"sizeSlug":"full","linkDestination":"none"} -->
+		<div class="wp-block-image"><figure class="aligncenter size-full"><img src="https://test.gesamtschule-stolberg.de/wp-content/uploads/2018/11/Johann_Bauerdick.jpg" alt="" class="wp-image-1819"/></figure></div>
+		<!-- /wp:image -->
+		
+		<!-- wp:heading {"textAlign":"center","level":3} -->
+		<h3 class="has-text-align-center">Johann Bauerdick</h3>
+		<!-- /wp:heading -->
+		
+		<!-- wp:paragraph {"align":"center"} -->
+		<p class="has-text-align-center"> j.bauerdick@gesamtschule-stolberg.de </p>
+		<!-- /wp:paragraph -->
+		
+		<!-- wp:paragraph {"align":"center"} -->
+		<p class="has-text-align-center"> Geschichte, Sozialwissenschaften, Musik, Erdkunde </p>
+		<!-- /wp:paragraph --></div>
+		<!-- /wp:column -->
+		
+		<!-- wp:column {"className":"vier_kacheln"} -->
+		<div class="wp-block-column vier_kacheln"><!-- wp:image {"align":"center","id":1844,"sizeSlug":"full","linkDestination":"none"} -->
+		<div class="wp-block-image"><figure class="aligncenter size-full"><img src="https://test.gesamtschule-stolberg.de/wp-content/uploads/2018/11/Ursula_Baumann-Groten.jpg" alt="" class="wp-image-1844"/></figure></div>
+		<!-- /wp:image -->
+		
+		<!-- wp:heading {"textAlign":"center","level":3} -->
+		<h3 class="has-text-align-center">Ursula Baumann-Groten</h3>
+		<!-- /wp:heading -->
+		
+		<!-- wp:paragraph {"align":"center"} -->
+		<p class="has-text-align-center"> u.baumann-groten@gesamtschule-stolberg.de </p>
+		<!-- /wp:paragraph -->
+		
+		<!-- wp:paragraph {"align":"center"} -->
+		<p class="has-text-align-center"> Deutsch, Naturwissenschaften </p>
+		<!-- /wp:paragraph --></div>
+		<!-- /wp:column --></div>
+		<!-- /wp:columns -->',
+	)
+ );
+
+
+ register_block_pattern(
    'icon-block-office',
      array(
      'title' => __( 'Icons with office Application', 'icon-block-office' ),
@@ -203,25 +283,6 @@ function haurand_register_block_categories() {
 /* Datum: 18.11.2021
 /* Autor: hgg
 /*----------------------------------------------------------------*/
-
-/*----------------------------------------------------------------*/
-/* Start: Beiträge der Kategorie "Keine Anzeige" nicht zeigen
-/* Datum: 25.05.2021
-/* Autor: hgg
-/*----------------------------------------------------------------*/
-function exclude_single_posts_home($query) {
-  if ( $query->is_home() && $query->is_main_query() ) {
-      /* $query->set( 'post__not_in', array(6873) ); */ /* zeigt einen bestimmten Beitrag nicht */
-      $query->set('cat', '-1486'); /* zeigt eine bestimmte Kategorie (in dem Fall "Keine Anzeige" nicht */
-  }
-}
-add_action( 'pre_get_posts', 'exclude_single_posts_home' );
-/*----------------------------------------------------------------*/
-/* Ende: Beiträge der Kategorie "Keine Anzeige" nicht zeigen
-/* Datum: 25.05.2021
-/* Autor: hgg
-/*----------------------------------------------------------------*/
-
 
 /*----------------------------------------------------------------*/
 /* Start: Weiterlesen-Button, auch wenn der Textauszug eingetragen ist
