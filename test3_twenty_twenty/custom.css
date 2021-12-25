@@ -4,1090 +4,1504 @@
 }
 */
 
+
+/* ------------------------------ */
+/* Variable Spalten bei Kollegium */
+/* ------------------------------ */
+div.flexible_spalten {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.flexible_spalten .wp-block-group__inner-container{
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* 4 Spalten */
+@media (min-width: 1500px)  {
+div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    width: 25%;
+}
+}
+
+
+/* 3 Spalten */
+@media (min-width: 1321px) and (max-width: 1499px) {
+div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    width: 33%;
+}
+}
+
+/* 2 Spalten */
+@media (min-width: 1000px) and (max-width: 1320px) {
+div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    width: 50%;
+}
+}
+
+/* 1 Spalte */
+@media (min-width: 769px) and (max-width: 999px) {
+div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    width: 100%;
+}
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    width: 50%;
+    padding: 10px;
+}
+}
+
+/* 1 Spalte */
+@media (max-width: 599px) {
+div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    width: 100%;
+}
+}
+	
+/* dezenter Hover-Effekt */
+.wp-block-columns.vier_kacheln:hover {
+ 		opacity:0.7;
+  	transform: scale(1.01, 1.01);	
+}
+
+/* Schriftgröße auf Kollegiumsseite bei Anker */
+p.has-text-align-center.kollegium_anker a {
+    font-size: 1.8rem;
+    padding: 0.2rem;
+}
+
+
+
+/* Animation für Text über Video */
+p.has-text-align-left.animated_1.animated.fadeInLeft.slow.has-background-color.has-text-color {
+    padding-top: 30rem;
+		margin-bottom: 1rem;
+}
+
+
+/* ------------------------------ */
+/* Vier Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln" */
+/* ------------------------------ */
+/* Titel unter Bildern größer */
+div.wp-block-column.vier_kacheln {
+		padding: 20px 5px 24px 5px;
+    margin: 0px 15px 0px 15px;
+		background-color: white;
+		/* box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff; */
+		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+    filter: drop-shadow(2px 2px 5px #CCCCCC); 
+		margin-bottom: 3rem;
+		justify-content: center; 
+	  /* abgerundete Ecken 
+	  border-radius: 20px 20px 0px 0px; */
+}
+
+div.wp-block-column.vier_kacheln p {
+	font-size: 0.8em;
+}
+
+div.wp-block-column.vier_kacheln h3 {
+	font-size: 1.1em;
+	margin-bottom: 0px;
+}
+
+
+@media (max-width: 999px) {
+	div.wp-block-column.vier_kacheln {
+			/* nur Rand unten */
+			padding: 20px 0px 24px 0px;
+      margin: 0px 0px 40px 0px;
+			justify-content: center;
+	}
+}
+
+
+/* ----------------------------- */
+/* Start Tabellen 
+/* ----------------------------- */
+
+@media (min-width: 396px) {
+figure.wp-block-table.aligncenter.klassenteams tr td:nth-child(1), figure.wp-block-table.aligncenter.klassenteams tr td:nth-child(2), figure.wp-block-table.aligncenter.klassenteams tr td:nth-child(4) {
+		background: #f0f0f0; 
+		font-weight:bold;
+	}
+figure.wp-block-table.aligncenter.klassenteams td{
+		word-break: unset;
+	}
+}
+
+@media (min-width: 496px) {
+	figure.wp-block-table.is-style-regular.ansprechpartner tr td:nth-child(1), 	figure.wp-block-table.is-style-regular.ansprechpartner tr td:nth-child(2) {
+		background: #f0f0f0; 
+		font-weight:bold;
+	}
+		figure.wp-block-table.is-style-regular.ansprechpartner td {
+		word-break: unset;
+	}
+}
+
+@media (min-width: 1496px) {	
+  table.lehrer tr td:nth-child(1), table.lehrer tr td:nth-child(2){
+		background: #f0f0f0; 
+		font-weight:bold;
+		word-break: unset;
+	}
+}
+
+/* Lehrer-Tabelle als HTML-Block wegen Anker */
+@media (max-width: 1495px) {	
+  table.lehrer {
+		width:100%;
+		border: none;
+	}
+
+  table.lehrer thead {
+		display: none;
+	}
+
+	table.lehrer td, tr {
+		border: none;
+	}
+
+  table.lehrer tr td:nth-child(1), table.lehrer tr td:nth-child(2) {
+			background: #f0f0f0; 
+			font-weight:bold;
+			font-size:1.3em;
+	}
+
+	table.lehrer tr td:nth-child(1) {
+		border-top: 1px solid #000;
+	}
+
+	table.lehrer tbody td {
+		display: block;  
+	  text-align:center;
+	}
+
+	table.lehrer tbody td:before {
+      content: attr(data-th);
+      display: block;
+      text-align:center; 
+  }
+}
+
+
+
+/* Klassenteams-Tabelle */
+
+@media screen and (max-width: 395px) {	
+  figure.wp-block-table.aligncenter.klassenteams table{
+		width:100%;
+	}
+
+  figure.wp-block-table.aligncenter.klassenteams table thead {
+		display: none;
+	}
+	
+	figure.wp-block-table.aligncenter.klassenteams table tr td:nth-child(1) {
+		border-top: 1px solid #000;
+	}	
+	
+	figure.wp-block-table.aligncenter.klassenteams tr td:nth-child(1), figure.wp-block-table.aligncenter.klassenteams tr td:nth-child(2), figure.wp-block-table.aligncenter.klassenteams tr  td:nth-child(4) {
+		background: #f0f0f0; 
+		font-weight:bold;
+		font-size:1.3em;
+	}
+	
+	figure.wp-block-table.aligncenter.klassenteams table tbody td {
+		display: block;  
+	  text-align:center;
+	}
+
+	figure.wp-block-table.aligncenter.klassenteams table tbody td:before {
+      content: attr(data-th);
+      display: block;
+      text-align:center; 
+  }
+}
+
+
+
+/* Ansprechpartner-Tabelle */
+@media screen and (max-width: 495px) {	
+  figure.wp-block-table.is-style-regular.ansprechpartner table{
+		width:100%;
+	}
+	
+  figure.wp-block-table.is-style-regular.ansprechpartner table td tr {
+		border: none;
+	}
+
+  figure.wp-block-table.is-style-regular.ansprechpartner table thead {
+		display: none;
+	}
+	
+	figure.wp-block-table.is-style-regular.ansprechpartner tr td:nth-child(1) {	
+			border-top: 1px solid #000;
+	}
+	
+figure.wp-block-table.is-style-regular.ansprechpartner tr td:nth-child(1), figure.wp-block-table.is-style-regular.ansprechpartner tr td:nth-child(2) {
+		background: #f0f0f0; 
+		font-weight:bold;
+		font-size:1.3em;
+	}
+	
+	
+	figure.wp-block-table.is-style-regular.ansprechpartner table tbody td {
+		display: block;  
+	  text-align:center;
+	}
+
+	figure.wp-block-table.is-style-regular.ansprechpartner table tbody td:before {
+      content: attr(data-th);
+      display: block;
+      text-align:center; 
+  }
+}
+
+
 /* Spalten mit Text, animiert mit einem Fade-Effekt: 
 https://test3.haurand.com/spalten-ohne-bilder/ */
 @media (min-width: 782px) {
-  .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column:not(:first-child) {
-      margin-left: 0px;
-  }
-  }
-  
-  /* dieser Filter wird beim Duotone-Effekt (Glanzlichter) zusätzlich angewendet */
-  figure.zusaetzlicher_filter {
-      filter: blur(0.2px) brightness(1.7) hue-rotate(5deg) opacity(0.9) saturate(1.3) sepia(0.4);
-  }
-  
-  /* Menü mit geändertem Unterstrich */
-  .primary-menu a {
-    text-decoration: none!important;
-    
-    background-image: linear-gradient(to right, #e45a3c 50%, #4faeae 50%);
-    background-size: 200% 3px;
-    background-repeat: no-repeat;
-    background-position: 100% 100%;
-    transition: background-position .8s;
-    padding-bottom: 6px;
-  }
-  
-  .primary-menu a:hover{
-    background-position: 0% 100%;
-  }
-  
-  /* Spalten mit Text animiert und hover */
-  .wp-block-column.cube_spalte {
-      background-color: rgb(255 255 255);
-      color: black;
-      padding: 20px;
-      border-style: solid;
-      border-width: 2px;
-      border-radius: 25px;
-  }
-  
-  .wp-block-column.cube_spalte:hover {
-      background-color: rgba(108, 7, 7, 1);
-      color: white;
-      transition: color .6s,border-color .6s,background-color .6s,box-shadow .6s,-webkit-box-shadow .6s;
-      cursor: pointer;
-  }
-  
-  /* Menüfarbe schwarz */
-  .primary-menu a {
-      color: #000000!important;
-      font-weight: 400;
-  }
-  
-  /* ------------------------------ */
-  /* Text in Spalten überlappend */
-  /* ------------------------------ */
-  @media (max-width: 881px) {
-  .wp-block-column.spalte_links_ueberlappend,
-  .wp-block-column.spalte_rechts_ueberlappend
-    {
-      background: rgb(255,228,196,70%);
-      justify-content:center;
-      padding: 1em;
-      margin: 0px;
-   }
-    .wp-block-column.spalte_bild_ueberlappend {
-      margin: 0px;
-    }
-    .wp-block-columns.spalten_ueberlappend {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-  /*	
-      .wp-block-column.spalte_links_ueberlappend {
-        margin-bottom: -10rem!important;
-    }
-    .wp-block-column.spalte_rechts_ueberlappend {
-        margin-top: -10rem!important;
-        z-index:0;
-    }
-  */	
-  }
-  
-  @media (min-width: 882px) {
-    /*
-  .wp-block-columns.alignwide.spalten_ueberlappend  {
-        margin-top: 0px!important;
-        margin-bottom: 0px!important;
-    }	
-    */
-    .wp-block-column.spalte_links_ueberlappend {
-        margin-left: -15rem!important;
-    }
-    .wp-block-column.spalte_rechts_ueberlappend {
-        margin-right: -15rem!important;
-        z-index:0;
-    }
-  .wp-block-column.spalte_links_ueberlappend,
-  .wp-block-column.spalte_rechts_ueberlappend
-    {
-  /*		margin-top: 25vh;
-      margin-bottom: 25vh;
-  */		
-      background: rgb(255,228,196,70%);
-      padding: 10vh;
-      justify-content:center;
-  }
-  }
-  
-  p.text_ueberlappend {
-      padding: 0rem;
-  }
-  
-  /* ------------------------------ */
-  
-  /* Untermenüs: */
-  img.bild-menue {
-      float: left;
-      padding-right: 10px;
-  }
-  
-  ul.sub-menu {
-      text-align: left;
-  }
-  
-  /* Untermenü mit anderer Hintergrundfarbe */
-  body:not(.overlay-header) .primary-menu ul {
-      background-color: whitesmoke;
-      /* Untermenüpunkte etwas breiter */
-      width: 30rem;
-  }
-  
-  
-  h3.hintergrund_bild {
-  background-image: url("https://test3.haurand.com/wp-content/uploads/2021/10/20210606_174200-1024x768.jpg");
-    padding: 100px;
-  ;
-  }
-  
-  /* AINO Info-Box mit mehr Rand 
-   * https://test3.haurand.com/aino-accordion-faq-block-und-aino-notification-banner-block/
-  */
-  p.has-xs-font-size {
-      margin: 1em 2em 1em 2em;
-  }
-  
-  
-  /* Cover-Bild mit Hover-Effekt - Text und Hintergrundfarbe werden bei Hover gezeigt:
-  https://test3.haurand.com/bild-mit-hover-effekt/ */
-  
-  
-  div.wp-block-cover.has-accent-background-color.has-background-dim.cover_hover
-  {
-      background-color: transparent;
-  }
-  
-  
-  .wp-block-cover.has-accent-background-color.has-background-dim.cover_hover:hover{
-      background-color: blue;
-  }
-  
-  div.wp-block-cover.has-accent-background-color.has-background-dim.cover_hover p {
-      visibility: hidden;
-  }
-  
-  
-  .wp-block-cover.has-accent-background-color.has-background-dim.cover_hover:hover p {
-      visibility: initial;
-  }
-  
-  /* Breite von einem Cover im Cover 
-  [class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-      max-width: 90%;
-      width: 100%;
-  }
-  
-  
-  /* Breite von einem Cover im Cover 
-  div[class*="breiteres_bild"]  > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-      max-width: 90%;
-  }
-  */
-  
-  /* Änderung der font-family 
-  body {
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
-  }
-  */
-  
-  
-  /* ------------------------------ */
-  /* Beitrag "bild-und-text-nebeneinander": Bild und Text untereinander bei schmaleren Displays */
-  /* ------------------------------ */
-  @media (max-width: 781px) {
-    .wp-block-columns.umgekehrt {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-  }
-  
-  /* Rand oben wie beim Bild 
-   * wahrscheinlich nicht nötig */
-  .wp-block-column > p.umgekehrt {
-    margin-top: 4rem!important;
-  }
-  
-  
-  
-  /* ------------------------------ */
-  /* Drei Spalten mit Bild schattiert und hover-Effekt - hier für Cover, siehe Beitrag: "Drei Spalten mit Kacheln ohne Rand" */
-  /* ------------------------------ */
-  /* Titel unter Bildern größer */
-  div.wp-block-column.drei_kacheln_ohne_rand_cover {
-      opacity: 1;
-       transition: .5s ease;
-      display: block;
-      max-width: 100%;
-      overflow: hidden;
-      padding: 2px;
-      margin: 0 auto;
-      width: 100%;
-      height: auto;
-      line-height: 0;
-      font-size: 1.5rem;
-      /*		padding: 2px;
-      margin: 0px; */
-      -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
-      filter: drop-shadow(2px 2px 5px #CCCCCC); 
-      margin-bottom: 3rem;
-  }
-  
-  /* kein Rand */
-  div.wp-block-column.drei_kacheln_ohne_rand_cover div {
+.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column:not(:first-child) {
+    margin-left: 0px;
+}
+}
+
+/* dieser Filter wird beim Duotone-Effekt (Glanzlichter) zusätzlich angewendet */
+figure.zusaetzlicher_filter {
+    filter: blur(0.2px) brightness(1.7) hue-rotate(5deg) opacity(0.9) saturate(1.3) sepia(0.4);
+}
+
+/* Menü mit geändertem Unterstrich */
+.primary-menu a {
+	text-decoration: none!important;
+	
+	background-image: linear-gradient(to right, #e45a3c 50%, #4faeae 50%);
+	background-size: 200% 3px;
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+	transition: background-position .8s;
+	padding-bottom: 6px;
+}
+
+.primary-menu a:hover{
+	background-position: 0% 100%;
+}
+
+/* Spalten mit Text animiert und hover */
+.wp-block-column.cube_spalte {
+    background-color: rgb(255 255 255);
+    color: black;
+    padding: 20px;
+    border-style: solid;
+    border-width: 2px;
+		border-radius: 25px;
+}
+
+.wp-block-column.cube_spalte:hover {
+    background-color: rgba(108, 7, 7, 1);
+    color: white;
+		transition: color .6s,border-color .6s,background-color .6s,box-shadow .6s,-webkit-box-shadow .6s;
+		cursor: pointer;
+}
+
+/* Menüfarbe schwarz */
+.primary-menu a {
+    color: #000000!important;
+		font-weight: 400;
+}
+
+/* ------------------------------ */
+/* Text in Spalten überlappend */
+/* ------------------------------ */
+@media (max-width: 881px) {
+.wp-block-column.spalte_links_ueberlappend,
+.wp-block-column.spalte_rechts_ueberlappend
+	{
+	  background: rgb(255,228,196,70%);
+		justify-content:center;
+    padding: 1em;
+		margin: 0px;
+ }
+	.wp-block-column.spalte_bild_ueberlappend {
+    margin: 0px;
+	}
+	.wp-block-columns.spalten_ueberlappend {
+			display: flex;
+			flex-direction: column-reverse;
+	}
+/*	
+		.wp-block-column.spalte_links_ueberlappend {
+		  margin-bottom: -10rem!important;
+	}
+	.wp-block-column.spalte_rechts_ueberlappend {
+		  margin-top: -10rem!important;
+			z-index:0;
+	}
+*/	
+}
+
+@media (min-width: 882px) {
+	/*
+.wp-block-columns.alignwide.spalten_ueberlappend  {
+			margin-top: 0px!important;
+			margin-bottom: 0px!important;
+	}	
+	*/
+	.wp-block-column.spalte_links_ueberlappend {
+		  margin-left: -15rem!important;
+	}
+	.wp-block-column.spalte_rechts_ueberlappend {
+		  margin-right: -15rem!important;
+			z-index:0;
+	}
+.wp-block-column.spalte_links_ueberlappend,
+.wp-block-column.spalte_rechts_ueberlappend
+	{
+/*		margin-top: 25vh;
+		margin-bottom: 25vh;
+*/		
+	  background: rgb(255,228,196,70%);
+    padding: 10vh;
+		justify-content:center;
+}
+}
+
+p.text_ueberlappend {
+    padding: 0rem;
+}
+
+/* ------------------------------ */
+
+/* Untermenüs: */
+img.bild-menue {
+    float: left;
+		padding-right: 10px;
+}
+
+ul.sub-menu {
+    text-align: left;
+}
+
+/* Untermenü mit anderer Hintergrundfarbe */
+body:not(.overlay-header) .primary-menu ul {
+    background-color: whitesmoke;
+    /* Untermenüpunkte etwas breiter */
+	  width: 30rem;
+}
+
+
+h3.hintergrund_bild {
+background-image: url("https://test3.haurand.com/wp-content/uploads/2021/10/20210606_174200-1024x768.jpg");
+	padding: 100px;
+;
+}
+
+/* AINO Info-Box mit mehr Rand 
+ * https://test3.haurand.com/aino-accordion-faq-block-und-aino-notification-banner-block/
+*/
+p.has-xs-font-size {
+    margin: 1em 2em 1em 2em;
+}
+
+
+/* Cover-Bild mit Hover-Effekt - Text und Hintergrundfarbe werden bei Hover gezeigt:
+https://test3.haurand.com/bild-mit-hover-effekt/ */
+
+
+div.wp-block-cover.has-accent-background-color.has-background-dim.cover_hover
+{
+    background-color: transparent;
+}
+
+
+.wp-block-cover.has-accent-background-color.has-background-dim.cover_hover:hover{
+    background-color: blue;
+}
+
+div.wp-block-cover.has-accent-background-color.has-background-dim.cover_hover p {
+    visibility: hidden;
+}
+
+
+.wp-block-cover.has-accent-background-color.has-background-dim.cover_hover:hover p {
+    visibility: initial;
+}
+
+/* Breite von einem Cover im Cover 
+[class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    max-width: 90%;
+    width: 100%;
+}
+
+
+/* Breite von einem Cover im Cover 
+div[class*="breiteres_bild"]  > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    max-width: 90%;
+}
+*/
+
+/* Änderung der font-family 
+body {
+font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+*/
+
+
+/* ------------------------------ */
+/* Beitrag "bild-und-text-nebeneinander": Bild und Text untereinander bei schmaleren Displays */
+/* ------------------------------ */
+@media (max-width: 781px) {
+	.wp-block-columns.umgekehrt {
+			display: flex;
+			flex-direction: column-reverse;
+	}
+}
+
+/* Rand oben wie beim Bild 
+ * wahrscheinlich nicht nötig */
+.wp-block-column > p.umgekehrt {
+	margin-top: 4rem!important;
+}
+
+
+
+/* ------------------------------ */
+/* Drei Spalten mit Bild schattiert und hover-Effekt - hier für Cover, siehe Beitrag: "Drei Spalten mit Kacheln ohne Rand" */
+/* ------------------------------ */
+/* Titel unter Bildern größer */
+div.wp-block-column.drei_kacheln_ohne_rand_cover {
+	  opacity: 1;
+ 		transition: .5s ease;
+	  display: block;
+    max-width: 100%;
+		overflow: hidden;
+		padding: 2px;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    line-height: 0;
+    font-size: 1.5rem;
+	  /*		padding: 2px;
+    margin: 0px; */
+		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+    filter: drop-shadow(2px 2px 5px #CCCCCC); 
+		margin-bottom: 3rem;
+}
+
+/* kein Rand */
+div.wp-block-column.drei_kacheln_ohne_rand_cover div {
+	margin: 0px!important;
+}
+
+/* Text auf Bild erst bei Hover
+div.wp-block-column.drei_kacheln_ohne_rand_cover p {
+    visibility: hidden;	
+}
+
+div.wp-block-column.drei_kacheln_ohne_rand_cover:hover p {
+    visibility: inherit;	
+}
+ */
+
+/* beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind */
+@media (min-width: 782px) {
+div.wp-block-column.drei_kacheln_ohne_rand_cover:last-child {
+	margin-right: 0px;
+	}
+}
+
+/* wenn die Bilder untereinander stehen, dann kein rechter Rand, damit die Bilder zentriert sind */
+@media (min-width: 600px) and (max-width: 781px) {
+div.wp-block-column.drei_kacheln_ohne_rand_cover {
+	margin-right: 0px;
+	}
+}
+
+/* beim Hover leicht größer mit mehr Schatten */
+div.wp-block-column.drei_kacheln_ohne_rand_cover:hover {
+		opacity: 0.4;
+	background-color: rgba(110, 193, 228, 0.8);
+    /* Kachel etwas größer: */
+	 transform: scale(1.1);
+/*  	transform: scale(1.01, 1.01);
+		-webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
+    filter: drop-shadow(5px 5px 3px #CCCCCC);
+	transition-duration: 1s; */
+}
+
+
+/* ------------------------------ */
+/* Drei Spalten mit Bild schattiert und hover-Effekt - hier für Bild, siehe Beitrag: "Drei Spalten mit Kacheln ohne Rand" */
+/* ------------------------------ */
+/* Titel unter Bildern größer */
+div.wp-block-column.drei_kacheln_ohne_rand {
+	  opacity: 1;
+ 		transition: .5s ease;
+		background-color: rgba(0, 0, 0, 0.1);
+/*     color: green; */
+    font-size: 1.5rem;
+		padding: 0px;
+    margin: 0px;
+/*		background-color: white;
+		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+    filter: drop-shadow(2px 2px 5px #CCCCCC); 
+		margin-bottom: 3rem;*/
+}
+
+div.wp-block-column.drei_kacheln_ohne_rand figure {
     margin: 0px!important;
-  }
-  
-  /* Text auf Bild erst bei Hover
-  div.wp-block-column.drei_kacheln_ohne_rand_cover p {
-      visibility: hidden;	
-  }
-  
-  div.wp-block-column.drei_kacheln_ohne_rand_cover:hover p {
-      visibility: inherit;	
-  }
-   */
-  
-  /* beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind */
-  @media (min-width: 782px) {
-  div.wp-block-column.drei_kacheln_ohne_rand_cover:last-child {
-    margin-right: 0px;
-    }
-  }
-  
-  /* wenn die Bilder untereinander stehen, dann kein rechter Rand, damit die Bilder zentriert sind */
-  @media (min-width: 600px) and (max-width: 781px) {
-  div.wp-block-column.drei_kacheln_ohne_rand_cover {
-    margin-right: 0px;
-    }
-  }
-  
-  /* beim Hover leicht größer mit mehr Schatten */
-  div.wp-block-column.drei_kacheln_ohne_rand_cover:hover {
-      opacity: 0.4;
-    background-color: rgba(110, 193, 228, 0.8);
-      /* Kachel etwas größer: */
-     transform: scale(1.1);
-  /*  	transform: scale(1.01, 1.01);
-      -webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
-      filter: drop-shadow(5px 5px 3px #CCCCCC);
-    transition-duration: 1s; */
-  }
-  
-  
-  /* ------------------------------ */
-  /* Drei Spalten mit Bild schattiert und hover-Effekt - hier für Bild, siehe Beitrag: "Drei Spalten mit Kacheln ohne Rand" */
-  /* ------------------------------ */
-  /* Titel unter Bildern größer */
-  div.wp-block-column.drei_kacheln_ohne_rand {
-      opacity: 1;
-       transition: .5s ease;
-      background-color: rgba(0, 0, 0, 0.1);
-  /*     color: green; */
-      font-size: 1.5rem;
-      padding: 0px;
-      margin: 0px;
-  /*		background-color: white;
-      -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
-      filter: drop-shadow(2px 2px 5px #CCCCCC); 
-      margin-bottom: 3rem;*/
-  }
-  
-  div.wp-block-column.drei_kacheln_ohne_rand figure {
-      margin: 0px!important;
-  }
-  
-  /* beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind */
-  @media (min-width: 782px) {
-  div.wp-block-column.drei_kacheln_ohne_rand:last-child {
-    margin-right: 0px;
-    }
-  }
-  
-  /* wenn die Bilder untereinander stehen, dann kein rechter Rand, damit die Bilder zentriert sind */
-  @media (min-width: 600px) and (max-width: 781px) {
-  div.wp-block-column.drei_kacheln_ohne_rand {
-    margin-right: 0px;
-    }
-  }
-  
-  /* beim Hover leicht größer mit mehr Schatten */
-  div.wp-block-column.drei_kacheln_ohne_rand:hover {
-      opacity: 0.4;
-      background-color: rgba(0, 0, 0, 0.7);
-      /* Kachel etwas größer: */
-  /*  	transform: scale(1.01, 1.01);
-      -webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
-      filter: drop-shadow(5px 5px 3px #CCCCCC);
-    transition-duration: 1s; */
-  }
-  
-  
-  
-  /* ------------------------------ */
-  /* Spalten umbrechen
-   * https://die-netzialisten.de/responsiveness-spalten-block-anpassen/ */
-  /* ------------------------------ */
+}
+
+/* beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind */
+@media (min-width: 782px) {
+div.wp-block-column.drei_kacheln_ohne_rand:last-child {
+	margin-right: 0px;
+	}
+}
+
+/* wenn die Bilder untereinander stehen, dann kein rechter Rand, damit die Bilder zentriert sind */
+@media (min-width: 600px) and (max-width: 781px) {
+div.wp-block-column.drei_kacheln_ohne_rand {
+	margin-right: 0px;
+	}
+}
+
+/* beim Hover leicht größer mit mehr Schatten */
+div.wp-block-column.drei_kacheln_ohne_rand:hover {
+		opacity: 0.4;
+		background-color: rgba(0, 0, 0, 0.7);
+    /* Kachel etwas größer: */
+/*  	transform: scale(1.01, 1.01);
+		-webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
+    filter: drop-shadow(5px 5px 3px #CCCCCC);
+	transition-duration: 1s; */
+}
+
+
+
+/* ------------------------------ */
+/* Spalten umbrechen
+ * https://die-netzialisten.de/responsiveness-spalten-block-anpassen/ */
+/* ------------------------------ */
+.wp-block-columns {
+  display: flex;
+  margin-bottom: 1.75em;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 782px) {
   .wp-block-columns {
+    flex-wrap: nowrap;
+  }
+}
+.wp-block-column {
+  flex-grow: 1;
+  min-width: 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+/* Bis hierher alles einspaltig*/
+@media (max-width: 881px) {
+	.wp-block-columns {
+			display: block;		
+	}
+}
+
+/*Ab hier Spaltenanzahl wie eingestellt*/
+@media (min-width: 882px) {
+  .wp-block-column {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+  .wp-block-column[style*="flex-basis"] {
+    flex-grow: 0;
+  }
+  .wp-block-column:not(:first-child) {
+    margin-left: 2em;
+  }
+}
+
+
+
+
+
+/* ------------------------------ */
+/* Zwei Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln" */
+/* ------------------------------ */
+/* Titel unter Bildern größer */
+div.wp-block-column.zwei_kacheln {
+    font-size: 1.5rem;
+		padding: 0px 0px 24px 0px;
+    margin: 0px 40px 0px 0px;
+		background-color: white;
+		box-shadow:  12px 12px 24px #bebebe,
+             -12px -12px 24px #ffffff;
+		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+    filter: drop-shadow(2px 2px 5px #CCCCCC);  
+		margin-bottom: 3rem;
+}
+
+/* beim letzten Bild ein kleiner rechter Rand */
+@media (min-width: 600px) {
+div.wp-block-column.zwei_kacheln:last-child {
+	margin-right: 5px;
+	}
+}
+
+
+/* wenn die Bilder untereinander stehen, dann kein rechter Rand, damit die Bilder zentriert sind 
+@media (min-width: 600px) and (max-width: 781px) {
+div.wp-block-column.zwei_kacheln {
+	margin-right: 5px;
+	}
+}
+*/
+
+/* beim Hover leicht größer mit mehr Schatten */
+div.wp-block-column.zwei_kacheln:hover {
+		opacity:0.7;
+    /* Kachel etwas größer: */
+  	transform: scale(1.01, 1.01);
+		-webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
+    filter: drop-shadow(5px 5px 3px #CCCCCC);
+	transition-duration: 1s;
+}
+/* ------------------------------ */
+
+/* ------------------------------ */
+/* Drei Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln abgerundet" */
+/* ------------------------------ */
+/* Titel unter Bildern größer */
+div.wp-block-column.drei_kacheln_abgerundet {
+    color: green;
+    font-size: 1.5rem;
+		padding: 0px 0px 24px 0px;
+    margin: 0px 40px 0px 0px;
+		background-color: white;
+    border-radius: 30px 0px;
+		box-shadow:  12px 12px 24px #bebebe,
+             -12px -12px 24px #ffffff;
+		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+    filter: drop-shadow(2px 2px 5px #CCCCCC); 
+		margin-bottom: 3rem;
+	  /* abgerundete Ecken 
+	  border-radius: 20px 20px 0px 0px; */
+}
+
+/* bei drei Spalten und beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind */
+@media (min-width: 882px) {
+div.wp-block-column.drei_kacheln_abgerundet:last-child {
+	margin-right: 0px;
+	}
+}
+
+/* bei einspaltiger Ansicht kein rechter Rand */
+@media (max-width: 881px) {
+div.wp-block-column.drei_kacheln_abgerundet {
+	margin-right: 0px;
+	}
+}
+
+
+
+/* beim Hover leicht größer mit mehr Schatten */
+div.wp-block-column.drei_kacheln_abgerundet:hover {
+		opacity:0.7;
+    /* Kachel etwas größer: */
+  	transform: scale(1.01, 1.01);
+		-webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
+    filter: drop-shadow(5px 5px 3px #CCCCCC);
+	transition-duration: 1s;
+}
+
+
+figure.wp-block-image.size-large.kachelbild_abgerundet {
+    border-radius: 30px 0px;
+}
+
+/*
+@media (max-width: 799px)
+.wp-block-column {
+    flex-basis: 100%!important;
+}
+*/
+
+/* wenn die Bilder untereinander stehen, dann kein rechter Rand, damit die Bilder zentriert sind */
+/* Umschalten von 3 auf 1 Spalte 
+@media (min-width: 600px) and (max-width: 781px) {
+div.wp-block-column.drei_kacheln {
+	margin-right: 0px;
+	display: contents; 
+	}
+}
+
+@media (min-width: 600px) and (max-width: 781px) {
+div.wp-block-column.drei_kacheln:nth-child(2n) {
+    margin-left: 0;
+	}	
+}	
+
+/* Bilder in den Kacheln */
+div.wp-block-column.drei_kacheln_abgerundet .wp-block-image:not(.is-style-rounded) img {
+	height: 35rem;
+	object-fit: cover;
+	/* abgerundete Ecken 
+	border-radius: 20px 20px 0px 0px; */
+}
+
+
+
+
+/* ------------------------------ */
+/* Drei Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln" */
+/* ------------------------------ */
+/* Titel unter Bildern größer */
+div.wp-block-column.drei_kacheln {
+    color: green;
+    font-size: 1.5rem;
+		padding: 0px 0px 24px 0px;
+    margin: 0px 40px 0px 0px;
+		background-color: white;
+		box-shadow:  12px 12px 24px #bebebe,
+             -12px -12px 24px #ffffff;
+		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+    filter: drop-shadow(2px 2px 5px #CCCCCC); 
+		margin-bottom: 3rem;
+	  /* abgerundete Ecken 
+	  border-radius: 20px 20px 0px 0px; */
+}
+
+/* bei drei Spalten und beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind */
+@media (min-width: 882px) {
+div.wp-block-column.drei_kacheln:last-child {
+	margin-right: 0px;
+	}
+}
+
+/* bei einspaltiger Ansicht kein rechter Rand */
+@media (max-width: 881px) {
+div.wp-block-column.drei_kacheln {
+	margin-right: 0px;
+	}
+}
+
+
+
+/* beim Hover leicht größer mit mehr Schatten */
+div.wp-block-column.drei_kacheln:hover {
+		opacity:0.7;
+    /* Kachel etwas größer: */
+  	transform: scale(1.01, 1.01);
+		-webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
+    filter: drop-shadow(5px 5px 3px #CCCCCC);
+	transition-duration: 1s;
+}
+
+/*
+@media (max-width: 799px)
+.wp-block-column {
+    flex-basis: 100%!important;
+}
+*/
+
+/* wenn die Bilder untereinander stehen, dann kein rechter Rand, damit die Bilder zentriert sind */
+/* Umschalten von 3 auf 1 Spalte 
+@media (min-width: 600px) and (max-width: 781px) {
+div.wp-block-column.drei_kacheln {
+	margin-right: 0px;
+	display: contents; 
+	}
+}
+
+@media (min-width: 600px) and (max-width: 781px) {
+div.wp-block-column.drei_kacheln:nth-child(2n) {
+    margin-left: 0;
+	}	
+}	
+
+/* Bilder in den Kacheln */
+div.wp-block-column.drei_kacheln .wp-block-image:not(.is-style-rounded) img {
+	height: 35rem;
+	object-fit: cover;
+	/* abgerundete Ecken 
+	border-radius: 20px 20px 0px 0px; */
+}
+
+/* Unterschriften bei Bildern */
+.wp-block-image figcaption {
+		color: black;
+		margin-bottom: 0;	
+}
+
+@media (max-width: 881px) {
+	.wp-block-image figcaption {
+				font-size: x-large;
+	}
+}
+
+
+@media (min-width: 882px) and (max-width: 981px) {
+	.wp-block-image figcaption {
+				font-size: large;
+	}
+	div.wp-block-column.drei_kacheln .wp-block-image:not(.is-style-rounded) img {
+			height: 15rem;
+	}	
+}
+
+@media (min-width: 982px) {
+	.wp-block-image figcaption {
+			font-size: x-large;
+	}
+}
+
+
+
+
+div.wp-block-column.drei_kacheln p {
+    margin-bottom: 1.5em;
+    color: black;
+    font-size: small;
+    padding: 0 20px;
+}
+/* ------------------------------ */
+
+
+/* ------------------------------ */
+/* Drei Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln" */
+/* ------------------------------ */
+/* Titel unter Bildern größer */
+div.wp-block-column.drei_kacheln_alt {
+    color: green;
+    font-size: 1.5rem;
+		padding: 0px 0px 24px 0px;
+    margin: 0px 20px 0px 0px;
+		background-color: white;
+		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+    filter: drop-shadow(2px 2px 5px #CCCCCC); 
+		margin-bottom: 3rem;
+}
+
+/* beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind */
+@media (min-width: 782px) {
+div.wp-block-column.drei_kacheln_alt:last-child {
+	margin-right: 0px;
+	}
+}
+
+/* wenn die Bilder untereinander stehen, dann kein rechter Rand, damit die Bilder zentriert sind */
+@media (min-width: 600px) and (max-width: 781px) {
+div.wp-block-column.drei_kacheln_alt {
+	margin-right: 0px;
+	}
+}
+
+/* beim Hover leicht größer mit mehr Schatten */
+div.wp-block-column.drei_kacheln_alt:hover {
+		opacity:0.7;
+    /* Kachel etwas größer: */
+  	transform: scale(1.01, 1.01);
+		-webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
+    filter: drop-shadow(5px 5px 3px #CCCCCC);
+	transition-duration: 1s;
+}
+
+
+/* --------------------------- */
+/* Lauftext */
+/* --------------------------- */
+p.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+/* funktioniert leider nicht: */
+p.lauftext {
+	animation: typewriter 4s steps(character count) 1s 1 normal both,
+		blinkCursor 500ms steps(character count) infinite normal;
+}
+
+/* --------------------------- */
+/* siehe Beitrag "Mehrere Bilder und Text" */
+/* ------------------------------ */
+h2.text_auf_bild,
+p.text_auf_bild {
+	margin-top: -35vh;
+	margin-bottom: 35vh!important; 
+	color: white;
+}
+
+
+/* ------------------------------ */
+/* schräge Kante beim Bild, siehe Beitrag: Bilder mit abgeschrägter Kante */ 
+/* ------------------------------ */
+.schraeg {
+clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);	
+/* clip-path: polygon(0 0, 100% 0, 100% 85%, 66% 100%, 0 85%); */
+}
+
+
+/* Balken nach links */
+.tag {
+  background: #FB8C00;
+  color: #222;
+  font: bold 32px system-ui;
+  padding: 2rem 3rem 2rem 4rem;
+	clip-path: polygon(30px 0%, 100% 0%, 100% 100%, 30px 100%, 0 50%)
+}
+
+.tag-wrap {
+  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+}
+
+
+/* Bild mit abgeschägter Kante und Schatten */
+.schraeg_2 {
+clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+}
+
+.schraeg_2-wrap {
+	filter: drop-shadow(15px 10px 4px rgba(50, 50, 0, 0.5));
+}
+
+/* oben mehr padding */
+@media only screen and (max-width: 767px) {
+	main#site-content {
+			padding-top: 5rem;
+	}
+}
+
+.alignfull > figcaption, .alignfull > .wp-caption-text {
+    font-size: 4vmax;
+		font-weight: 800;
+	  margin-top: calc(-100vh + 10vw); 
+    /* margin-top: -100vH; */
+	  color: white;
+		margin-bottom: calc(80vH + 2vw);  		/* margin-bottom: 80vH; */
+		text-shadow: 0px 0px 0.2rem #f9b81e;
+}
+
+
+
+/* ----------------------------- */
+/* Animation auf Bild */
+/* ----------------------------- */
+/* Animationen für Text in Elements */
+
+	/* Animation (Fade) */
+	.animated_1 {
+			-webkit-animation-duration: 1s;
+			-webkit-animation-fill-mode: both;
+			animation-duration: 2s;
+			animation-fill-mode: both;
+	}
+
+	.animated_2 {
+			-webkit-animation-duration: 1s;
+			-webkit-animation-fill-mode: both;
+			animation-duration: 4s;
+			animation-fill-mode: both;
+	}
+
+
+
+.fadeInLeftBig {
+    -webkit-animation-name: fadeInLeftBig;
+    animation-name: fadeInLeftBig
+}
+
+@-webkit-keyframes fadeInLeftBig {
+    0% {
+        -webkit-transform: translate3d(-2000px,0,0);
+        opacity: 0;
+        transform: translate3d(-2000px,0,0)
+    }
+
+    to {
+        -webkit-transform: translateZ(0);
+        opacity: 1;
+        transform: translateZ(0)
+    }
+}
+
+@keyframes fadeInLeftBig {
+    0% {
+        -webkit-transform: translate3d(-2000px,0,0);
+        opacity: 0;
+        transform: translate3d(-2000px,0,0)
+    }
+
+    to {
+        -webkit-transform: translateZ(0);
+        opacity: 1;
+        transform: translateZ(0)
+    }
+}
+
+
+/* Umschalten von 3 auf 1 Spalte */
+@media (max-width:781px){
+.wp-block-columns {
+    display: block; 
+	}
+}
+
+@media (min-width: 600px) and (max-width: 781px) {
+.wp-block-column:nth-child(2n) {
+    margin-left: 0;
+}	
+}	
+
+/* Beiträge mit zusätzlichem oberen Rand */
+.post-inner.thin {
+    margin-top: 15rem;
+}
+
+/* Anker auf Beitrag ohne Plugin */
+#erster, #zweiter, #dritter, #vierter, #fuenfter {
+	padding-top: 150px; 
+	margin-top: -150px;
+}
+
+/* alle Elemente des Plugins htoc (Inhaltsverzeichnis) */
+[id^="htoc-"] { 
+	padding-top: 150px; 
+	margin-top: -150px!important;
+}
+
+/* Button mit runden Ecken */
+.wp-block-buttons .mein_runder_button a {
+  border-radius: 20px;
+}
+
+/* ersten Absatz im Beitrag kursiv, wenn der Absatz fett ausgezeichnet ist 
+.entry-content p:first-child strong{
+    font-style: italic;
+}
+*/
+
+/* mehr Platz oben für Anker */
+h2.anker_h2 {
+	padding-top: 150px; 
+}
+
+.container_aussen{
+    background-color: antiquewhite;
+}
+
+div.erste {
+	background-image: url(https://test3.haurand.com/wp-content/uploads/2021/02/floetenspieler_eilendorf_2.jpg); 
+}
+
+div.zweite {
+	background-image: url(https://test3.haurand.com/wp-content/uploads/2021/02/dom_3.jpg); 
+}
+
+div.dritte {
+	background-image: url(https://test3.haurand.com/wp-content/uploads/2021/02/bild_3_vortrag.jpg); 
+}
+
+
+.container_innen {
     display: flex;
     margin-bottom: 1.75em;
     flex-wrap: wrap;
-  }
-  
-  @media (min-width: 782px) {
-    .wp-block-columns {
-      flex-wrap: nowrap;
-    }
-  }
-  .wp-block-column {
-    flex-grow: 1;
-    min-width: 0;
-    word-break: break-word;
-    overflow-wrap: break-word;
-  }
-  /* Bis hierher alles einspaltig*/
-  @media (max-width: 881px) {
-    .wp-block-columns {
-        display: block;		
-    }
-  }
-  
-  /*Ab hier Spaltenanzahl wie eingestellt*/
-  @media (min-width: 882px) {
-    .wp-block-column {
-      flex-basis: 0;
-      flex-grow: 1;
-    }
-    .wp-block-column[style*="flex-basis"] {
-      flex-grow: 0;
-    }
-    .wp-block-column:not(:first-child) {
-      margin-left: 2em;
-    }
-  }
-  
-  
-  
-  
-  
-  /* ------------------------------ */
-  /* Zwei Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln" */
-  /* ------------------------------ */
-  /* Titel unter Bildern größer */
-  div.wp-block-column.zwei_kacheln {
-      font-size: 1.5rem;
-      padding: 0px 0px 24px 0px;
-      margin: 0px 40px 0px 0px;
-      background-color: white;
-      box-shadow:  12px 12px 24px #bebebe,
-               -12px -12px 24px #ffffff;
-      -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
-      filter: drop-shadow(2px 2px 5px #CCCCCC);  
-      margin-bottom: 3rem;
-  }
-  
-  /* beim letzten Bild ein kleiner rechter Rand */
-  @media (min-width: 600px) {
-  div.wp-block-column.zwei_kacheln:last-child {
-    margin-right: 5px;
-    }
-  }
-  
-  
-  /* wenn die Bilder untereinander stehen, dann kein rechter Rand, damit die Bilder zentriert sind 
-  @media (min-width: 600px) and (max-width: 781px) {
-  div.wp-block-column.zwei_kacheln {
-    margin-right: 5px;
-    }
-  }
-  */
-  
-  /* beim Hover leicht größer mit mehr Schatten */
-  div.wp-block-column.zwei_kacheln:hover {
-      opacity:0.7;
-      /* Kachel etwas größer: */
-      transform: scale(1.01, 1.01);
-      -webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
-      filter: drop-shadow(5px 5px 3px #CCCCCC);
-    transition-duration: 1s;
-  }
-  /* ------------------------------ */
-  
-  /* ------------------------------ */
-  /* Drei Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln" */
-  /* ------------------------------ */
-  /* Titel unter Bildern größer */
-  div.wp-block-column.drei_kacheln {
-      color: green;
-      font-size: 1.5rem;
-      padding: 0px 0px 24px 0px;
-      margin: 0px 40px 0px 0px;
-      background-color: white;
-      box-shadow:  12px 12px 24px #bebebe,
-               -12px -12px 24px #ffffff;
-      -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
-      filter: drop-shadow(2px 2px 5px #CCCCCC); 
-      margin-bottom: 3rem;
-      /* abgerundete Ecken 
-      border-radius: 20px 20px 0px 0px; */
-  }
-  
-  /* bei drei Spalten und beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind */
-  @media (min-width: 882px) {
-  div.wp-block-column.drei_kacheln:last-child {
-    margin-right: 0px;
-    }
-  }
-  
-  /* bei einspaltiger Ansicht kein rechter Rand */
-  @media (max-width: 881px) {
-  div.wp-block-column.drei_kacheln {
-    margin-right: 0px;
-    }
-  }
-  
-  
-  
-  /* beim Hover leicht größer mit mehr Schatten */
-  div.wp-block-column.drei_kacheln:hover {
-      opacity:0.7;
-      /* Kachel etwas größer: */
-      transform: scale(1.01, 1.01);
-      -webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
-      filter: drop-shadow(5px 5px 3px #CCCCCC);
-    transition-duration: 1s;
-  }
-  
-  /*
-  @media (max-width: 799px)
-  .wp-block-column {
-      flex-basis: 100%!important;
-  }
-  */
-  
-  /* wenn die Bilder untereinander stehen, dann kein rechter Rand, damit die Bilder zentriert sind */
-  /* Umschalten von 3 auf 1 Spalte 
-  @media (min-width: 600px) and (max-width: 781px) {
-  div.wp-block-column.drei_kacheln {
-    margin-right: 0px;
-    display: contents; 
-    }
-  }
-  
-  @media (min-width: 600px) and (max-width: 781px) {
-  div.wp-block-column.drei_kacheln:nth-child(2n) {
-      margin-left: 0;
-    }	
-  }	
-  
-  /* Bilder in den Kacheln */
-  div.wp-block-column.drei_kacheln .wp-block-image:not(.is-style-rounded) img {
-    height: 35rem;
-    object-fit: cover;
-    /* abgerundete Ecken 
-    border-radius: 20px 20px 0px 0px; */
-  }
-  
-  /* Unterschriften bei Bildern */
-  .wp-block-image figcaption {
-      color: black;
-      margin-bottom: 0;	
-  }
-  
-  @media (max-width: 881px) {
-    .wp-block-image figcaption {
-          font-size: x-large;
-    }
-  }
-  
-  
-  @media (min-width: 882px) and (max-width: 981px) {
-    .wp-block-image figcaption {
-          font-size: large;
-    }
-    div.wp-block-column.drei_kacheln .wp-block-image:not(.is-style-rounded) img {
-        height: 15rem;
-    }	
-  }
-  
-  @media (min-width: 982px) {
-    .wp-block-image figcaption {
-        font-size: x-large;
-    }
-  }
-  
-  
-  
-  
-  div.wp-block-column.drei_kacheln p {
-      margin-bottom: 1.5em;
-      color: black;
-      font-size: small;
-      padding: 0 20px;
-  }
-  /* ------------------------------ */
-  
-  
-  /* ------------------------------ */
-  /* Drei Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln" */
-  /* ------------------------------ */
-  /* Titel unter Bildern größer */
-  div.wp-block-column.drei_kacheln_alt {
-      color: green;
-      font-size: 1.5rem;
-      padding: 0px 0px 24px 0px;
-      margin: 0px 20px 0px 0px;
-      background-color: white;
-      -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
-      filter: drop-shadow(2px 2px 5px #CCCCCC); 
-      margin-bottom: 3rem;
-  }
-  
-  /* beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind */
-  @media (min-width: 782px) {
-  div.wp-block-column.drei_kacheln_alt:last-child {
-    margin-right: 0px;
-    }
-  }
-  
-  /* wenn die Bilder untereinander stehen, dann kein rechter Rand, damit die Bilder zentriert sind */
-  @media (min-width: 600px) and (max-width: 781px) {
-  div.wp-block-column.drei_kacheln_alt {
-    margin-right: 0px;
-    }
-  }
-  
-  /* beim Hover leicht größer mit mehr Schatten */
-  div.wp-block-column.drei_kacheln_alt:hover {
-      opacity:0.7;
-      /* Kachel etwas größer: */
-      transform: scale(1.01, 1.01);
-      -webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
-      filter: drop-shadow(5px 5px 3px #CCCCCC);
-    transition-duration: 1s;
-  }
-  
-  
-  /* --------------------------- */
-  /* Lauftext */
-  /* --------------------------- */
-  p.typewriter {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-      typing 3.5s steps(40, end),
-      blink-caret .75s step-end infinite;
-  }
-  
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange; }
-  }
-  
-  /* funktioniert leider nicht: */
-  p.lauftext {
-    animation: typewriter 4s steps(character count) 1s 1 normal both,
-      blinkCursor 500ms steps(character count) infinite normal;
-  }
-  
-  /* --------------------------- */
-  /* siehe Beitrag "Mehrere Bilder und Text" */
-  /* ------------------------------ */
-  h2.text_auf_bild,
-  p.text_auf_bild {
-    margin-top: -35vh;
-    margin-bottom: 35vh!important; 
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Buttons zentriert */
+.wp-block-buttons.is-content-justification-center, .wp-block-buttons
+{
+    text-align: center;
+}
+
+
+.wp-block-buttons .ein_button a {
+	background-color: #B70000;
+}
+
+.wp-block-buttons .ein_button a:hover{
+	color: #fff;
+	text-decoration: none;
+	background-color: #B70000;
+  box-shadow: 15px 15px 15px #a9b2b5;
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  transform: scale(1.02);
+  opacity: 1.0;
+  /* VERZÖGERUNG */
+ -webkit-transition: all 0.5s linear;
+ -moz-transition: all 0.5s linear;
+ -ms-transition: all 0.5s linear;
+ -o-transition: all 0.5s linear;
+ transition: all 0.5s linear;
+}
+
+a.mein_button {
+	background-color: #B70000!important;
+}
+
+a.mein_button:hover{
+	color: #fff;
+	text-decoration: none!important;
+	background-color: #B70000;
+  box-shadow: 15px 15px 15px #a9b2b5;
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  transform: scale(1.02);
+  opacity: 1.0;
+  /* VERZÖGERUNG */
+ -webkit-transition: all 0.5s linear;
+ -moz-transition: all 0.5s linear;
+ -ms-transition: all 0.5s linear;
+ -o-transition: all 0.5s linear;
+ transition: all 0.5s linear;
+}
+
+/* ---------------------------- */
+/* Blaue Spalten */
+/* ---------------------------- */
+
+/* Randdarstellung für Kacheln 
+*/
+div.kacheln {
+    flex-basis: calc(50% - 16px);
+    flex-grow: 0;
+    box-shadow: 5px 5px 10px #888888;
+    padding-right: 15px;
+		padding-left: 15px;
+}
+
+/* Beim Überfahren mehr Schatten 
+ */
+div.kacheln:hover{
+    box-shadow: 10px 10px 15px #888888;
+}
+
+/* Beschriftung der Kachel */
+figcaption {
+    padding: 10px;
+}
+
+/* Absatz für Spaltentext */
+p.blue-background {
+   padding: 20px 38px;
+}
+
+/* kein Rand bei Bildern animieren */
+figure.wp-block-image.size-large {
+    margin-top: 0px!important;
+}
+
+
+/* Spaltenblock */
+p.blue-background,
+div.blue-background {
+    background-color: #22405a;
     color: white;
+	/* box-shadow: 5px 5px 10px #888888; */
+}
+
+/* Beim Überfahren mehr Schatten 
+ */
+div.blue-background:hover{
+    box-shadow: 10px 10px 15px #888888;
+		/* kommt beim Vortrag dazu: */
+  	-webkit-transform: scale(1.1);
+		-moz-transform: scale(1.01);
+		-ms-transform: scale(1.01);
+		-o-transform: scale(1.01);
+		transform: scale(1.01);
+	  opacity: 1.0;
+		/* VERZÖGERUNG */
+	 -webkit-transition: all 0.7s linear;
+	 -moz-transition: all 0.7s linear;
+	 -ms-transition: all 0.7s linear;
+	 -o-transition: all 0.7s linear;
+	 transition: all 0.7s linear;
+	 /* Schatten bei allen Elementen 
+	 -webkit-filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
+   filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));*/
+}
+
+/* damit die Spalten nicht direkt zusammenhängen */
+@media (max-width: 599px){
+	.wp-block-column {
+			/* statt 0px */
+			margin-top: 20px;    
+	}
+}
+
+/* Foto bei den dunkelblauen Spalten animieren (Hover) */
+figure.zoomeffekt {
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	overflow: hidden;
+}
+
+figure.zoomeffekt:hover+span {
+	bottom: -36px;
+	opacity: 0.1;
+}
+
+
+figure.wp-block-image.size-large.zoomeffekt img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+figure.wp-block-image.size-large.zoomeffekt img:hover {
+	-webkit-transform: scale(1.5);
+	/* transform: scale(1.5); */
+	transform:scale(1.5);
+	overflow: hidden;
+	max-height: 768px;
+	transition: all 1.5s linear;
+}
+
+/* ----------------------------- */
+/* Dreieck oben und unten */
+/* klappt hier noch nicht */
+/* ----------------------------- */
+.hero_bild {
+    position: relative;
+}
+
+.hero_bild:before, .hero1:after {
+    box-sizing: border-box;
+    content: " ";
+    position: absolute;
+    top:0;
+    display: block;
+    width: 50%;
+    height: 100%;
+    border: 30px solid white;
+    border-bottom-color: white; 
+}
+
+.hero_bild:before {
+    left: 0;
+    border-right: 50px solid transparent ;
+    border-left: 0;
+}
+
+.hero_bild:after {
+    right: 0;
+    border-left: 50px solid transparent;
+    border-right: 0;
+}
+
+
+
+
+/* ----------------------------- */
+/* Dreieck oben und unten (Original) */
+/* ----------------------------- */
+.hero {
+    background: url(https://test3.haurand.com/wp-content/uploads/2021/07/platzhalter_natur_mit_biene.jpg);
+    height: 200px;
+    position: relative;
+}
+
+.hero:before, .hero:after {
+    box-sizing: border-box;
+    content: " ";
+    position: absolute;
+    top:0;
+    display: block;
+    width: 50%;
+    height: 100%;
+    border: 30px solid white;
+    border-bottom-color: white;
+}
+
+.hero:before {
+    left: 0;
+    border-right: 20px solid transparent;
+    border-left: 0;
+}
+
+.hero:after {
+    right: 0;
+    border-left: 20px solid transparent;
+    border-right: 0;
+}
+
+
+
+
+/* ----------------------------- */
+/* Bilder mit Dreieck nur unten */
+
+
+.dreieck {
+/*    background: url(http://d.pr/i/eqn9+);
+    height: 200px;*/
+    position: relative;
+}
+
+.dreieck:before, .dreieck:after {
+    box-sizing: border-box;
+    content: " ";
+    position: absolute;
+    top:0;
+    display: block;
+    width: 50%;
+    height: 100%;
+    border-bottom: 30px solid white; 
+/*    border-bottom-color: white; */
+}
+
+.dreieck:before {
+    left: 0;
+    border-right: 50px solid transparent; 
+    border-left: 0;
+}
+
+.dreieck:after {
+    right: 0;
+    border-left: 50px solid transparent;
+    border-right: 0;
+}
+/* ----------------------------- */
+
+
+
+/* ----------------------------- */
+/* Bilder mit Dreieck nur unten */
+
+.film {
+/*    background: url(http://d.pr/i/eqn9+);
+    height: 200px;*/
+    position: relative;
+}
+
+.film:before, .hero1:after {
+    box-sizing: border-box;
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 50%;
+    height: 100%;
+    border-bottom: 30px solid white; 
+}
+
+
+.film:before {
+    left: 0;
+    border-right: 50px solid transparent; 
+    border-left: 0;
+}
+
+.film:after {
+    right: 0;
+    border-left: 50px solid transparent;
+    border-right: 0;
+}
+/* ----------------------------- */
+
+/* ----------------------------- */
+/* universelle Lösung für Spalten und Breakpoints */
+/* Variablen können leider für media queries nicht benutzt werden */
+/* ----------------------------- */
+/* ----------------------------- */
+/* drei Spalten auf eine Spalte  */
+/* 3 --> 1                       */
+/* ----------------------------- */
+
+@media (min-width: 600px) and (max-width: 881px) {
+	.wp-block-columns.drei_spalten {
+    display: block;
+}
+	.wp-block-column.drei_spalten{
+			margin-left: 0;
+	}
+}
+
+
+/* ----------------------------- */
+/* drei Spalten auf eine Spalte  */
+/* 3 --> 2 --> 1                 */
+/* ----------------------------- */
+
+@media (min-width: 600px) and (max-width: 1064px) {
+  .wp-block-columns.drei_spalten_2 {
+    flex-flow: row wrap;
   }
-  
-  
-  /* ------------------------------ */
-  /* schräge Kante beim Bild, siehe Beitrag: Bilder mit abgeschrägter Kante */ 
-  /* ------------------------------ */
-  .schraeg {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);	
-  /* clip-path: polygon(0 0, 100% 0, 100% 85%, 66% 100%, 0 85%); */
+
+  .wp-block-column.drei_spalten_2:first-child {
+    flex-basis: 100%!important;
   }
-  
-  
-  /* Balken nach links */
-  .tag {
-    background: #FB8C00;
-    color: #222;
-    font: bold 32px system-ui;
-    padding: 2rem 3rem 2rem 4rem;
-    clip-path: polygon(30px 0%, 100% 0%, 100% 100%, 30px 100%, 0 50%)
-  }
-  
-  .tag-wrap {
-    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
-  }
-  
-  
-  /* Bild mit abgeschägter Kante und Schatten */
-  .schraeg_2 {
-  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
-  }
-  
-  .schraeg_2-wrap {
-    filter: drop-shadow(15px 10px 4px rgba(50, 50, 0, 0.5));
-  }
-  
-  /* oben mehr padding */
-  @media only screen and (max-width: 767px) {
-    main#site-content {
-        padding-top: 5rem;
-    }
-  }
-  
-  .alignfull > figcaption, .alignfull > .wp-caption-text {
-      font-size: 4vmax;
-      font-weight: 800;
-      margin-top: calc(-100vh + 10vw); 
-      /* margin-top: -100vH; */
-      color: white;
-      margin-bottom: calc(80vH + 2vw);  		/* margin-bottom: 80vH; */
-      text-shadow: 0px 0px 0.2rem #f9b81e;
-  }
-  
-  
-  
-  /* ----------------------------- */
-  /* Animation auf Bild */
-  /* ----------------------------- */
-  /* Animationen für Text in Elements */
-  
-    /* Animation (Fade) */
-    .animated_1 {
-        -webkit-animation-duration: 1s;
-        -webkit-animation-fill-mode: both;
-        animation-duration: 2s;
-        animation-fill-mode: both;
-    }
-  
-    .animated_2 {
-        -webkit-animation-duration: 1s;
-        -webkit-animation-fill-mode: both;
-        animation-duration: 4s;
-        animation-fill-mode: both;
-    }
-  
-  
-  
-  .fadeInLeftBig {
-      -webkit-animation-name: fadeInLeftBig;
-      animation-name: fadeInLeftBig
-  }
-  
-  @-webkit-keyframes fadeInLeftBig {
-      0% {
-          -webkit-transform: translate3d(-2000px,0,0);
-          opacity: 0;
-          transform: translate3d(-2000px,0,0)
-      }
-  
-      to {
-          -webkit-transform: translateZ(0);
-          opacity: 1;
-          transform: translateZ(0)
-      }
-  }
-  
-  @keyframes fadeInLeftBig {
-      0% {
-          -webkit-transform: translate3d(-2000px,0,0);
-          opacity: 0;
-          transform: translate3d(-2000px,0,0)
-      }
-  
-      to {
-          -webkit-transform: translateZ(0);
-          opacity: 1;
-          transform: translateZ(0)
-      }
-  }
-  
-  
-  /* Umschalten von 3 auf 1 Spalte */
-  @media (max-width:781px){
-  .wp-block-columns {
-      display: block; 
-    }
-  }
-  
-  @media (min-width: 600px) and (max-width: 781px) {
-  .wp-block-column:nth-child(2n) {
-      margin-left: 0;
-  }	
-  }	
-  
-  /* Beiträge mit zusätzlichem oberen Rand */
-  .post-inner.thin {
-      margin-top: 15rem;
-  }
-  
-  /* Anker auf Beitrag ohne Plugin */
-  #erster, #zweiter, #dritter, #vierter, #fuenfter {
-    padding-top: 150px; 
-    margin-top: -150px;
-  }
-  
-  /* alle Elemente des Plugins htoc (Inhaltsverzeichnis) */
-  [id^="htoc-"] { 
-    padding-top: 150px; 
-    margin-top: -150px!important;
-  }
-  
-  /* Button mit runden Ecken */
-  .wp-block-buttons .mein_runder_button a {
-    border-radius: 20px;
-  }
-  
-  /* ersten Absatz im Beitrag kursiv, wenn der Absatz fett ausgezeichnet ist 
-  .entry-content p:first-child strong{
-      font-style: italic;
-  }
-  */
-  
-  /* mehr Platz oben für Anker */
-  h2.anker_h2 {
-    padding-top: 150px; 
-  }
-  
-  .container_aussen{
-      background-color: antiquewhite;
-  }
-  
-  div.erste {
-    background-image: url(https://test3.haurand.com/wp-content/uploads/2021/02/floetenspieler_eilendorf_2.jpg); 
-  }
-  
-  div.zweite {
-    background-image: url(https://test3.haurand.com/wp-content/uploads/2021/02/dom_3.jpg); 
-  }
-  
-  div.dritte {
-    background-image: url(https://test3.haurand.com/wp-content/uploads/2021/02/bild_3_vortrag.jpg); 
-  }
-  
-  
-  .container_innen {
-      display: flex;
-      margin-bottom: 1.75em;
-      flex-wrap: wrap;
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
-  }
-  
-  
-  /* Buttons zentriert */
-  .wp-block-buttons.is-content-justification-center, .wp-block-buttons
-  {
-      text-align: center;
-  }
-  
-  
-  .wp-block-buttons .ein_button a {
-    background-color: #B70000;
-  }
-  
-  .wp-block-buttons .ein_button a:hover{
-    color: #fff;
-    text-decoration: none;
-    background-color: #B70000;
-    box-shadow: 15px 15px 15px #a9b2b5;
-    -webkit-transform: scale(1.02);
-    -moz-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-    -o-transform: scale(1.02);
-    transform: scale(1.02);
-    opacity: 1.0;
-    /* VERZÖGERUNG */
-   -webkit-transition: all 0.5s linear;
-   -moz-transition: all 0.5s linear;
-   -ms-transition: all 0.5s linear;
-   -o-transition: all 0.5s linear;
-   transition: all 0.5s linear;
-  }
-  
-  a.mein_button {
-    background-color: #B70000!important;
-  }
-  
-  a.mein_button:hover{
-    color: #fff;
-    text-decoration: none!important;
-    background-color: #B70000;
-    box-shadow: 15px 15px 15px #a9b2b5;
-    -webkit-transform: scale(1.02);
-    -moz-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-    -o-transform: scale(1.02);
-    transform: scale(1.02);
-    opacity: 1.0;
-    /* VERZÖGERUNG */
-   -webkit-transition: all 0.5s linear;
-   -moz-transition: all 0.5s linear;
-   -ms-transition: all 0.5s linear;
-   -o-transition: all 0.5s linear;
-   transition: all 0.5s linear;
-  }
-  
-  /* ---------------------------- */
-  /* Blaue Spalten */
-  /* ---------------------------- */
-  
-  /* Randdarstellung für Kacheln 
-  */
-  div.kacheln {
-      flex-basis: calc(50% - 16px);
-      flex-grow: 0;
-      box-shadow: 5px 5px 10px #888888;
-      padding-right: 15px;
-      padding-left: 15px;
-  }
-  
-  /* Beim Überfahren mehr Schatten 
-   */
-  div.kacheln:hover{
-      box-shadow: 10px 10px 15px #888888;
-  }
-  
-  /* Beschriftung der Kachel */
-  figcaption {
-      padding: 10px;
-  }
-  
-  /* Absatz für Spaltentext */
-  p.blue-background {
-     padding: 20px 38px;
-  }
-  
-  /* kein Rand bei Bildern animieren */
-  figure.wp-block-image.size-large {
-      margin-top: 0px!important;
-  }
-  
-  
-  /* Spaltenblock */
-  p.blue-background,
-  div.blue-background {
-      background-color: #22405a;
-      color: white;
-    /* box-shadow: 5px 5px 10px #888888; */
-  }
-  
-  /* Beim Überfahren mehr Schatten 
-   */
-  div.blue-background:hover{
-      box-shadow: 10px 10px 15px #888888;
-      /* kommt beim Vortrag dazu: */
-      -webkit-transform: scale(1.1);
-      -moz-transform: scale(1.01);
-      -ms-transform: scale(1.01);
-      -o-transform: scale(1.01);
-      transform: scale(1.01);
-      opacity: 1.0;
-      /* VERZÖGERUNG */
-     -webkit-transition: all 0.7s linear;
-     -moz-transition: all 0.7s linear;
-     -ms-transition: all 0.7s linear;
-     -o-transition: all 0.7s linear;
-     transition: all 0.7s linear;
-     /* Schatten bei allen Elementen 
-     -webkit-filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
-     filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));*/
-  }
-  
-  /* damit die Spalten nicht direkt zusammenhängen */
-  @media (max-width: 599px){
-    .wp-block-column {
-        /* statt 0px */
-        margin-top: 20px;    
-    }
-  }
-  
-  /* Foto bei den dunkelblauen Spalten animieren (Hover) */
-  figure.zoomeffekt {
-    margin: 0;
-    padding: 0;
-    background: #fff;
-    overflow: hidden;
-  }
-  
-  figure.zoomeffekt:hover+span {
-    bottom: -36px;
-    opacity: 0.1;
-  }
-  
-  
-  figure.wp-block-image.size-large.zoomeffekt img {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
-  }
-  
-  figure.wp-block-image.size-large.zoomeffekt img:hover {
-    -webkit-transform: scale(1.5);
-    /* transform: scale(1.5); */
-    transform:scale(1.5);
-    overflow: hidden;
-    max-height: 768px;
-    transition: all 1.5s linear;
-  }
-  
-  /* ----------------------------- */
-  /* Dreieck oben und unten */
-  /* klappt hier noch nicht */
-  /* ----------------------------- */
-  .hero_bild {
-      position: relative;
-  }
-  
-  .hero_bild:before, .hero1:after {
-      box-sizing: border-box;
-      content: " ";
-      position: absolute;
-      top:0;
-      display: block;
-      width: 50%;
-      height: 100%;
-      border: 30px solid white;
-      border-bottom-color: white; 
-  }
-  
-  .hero_bild:before {
-      left: 0;
-      border-right: 50px solid transparent ;
-      border-left: 0;
-  }
-  
-  .hero_bild:after {
-      right: 0;
-      border-left: 50px solid transparent;
-      border-right: 0;
-  }
-  
-  
-  
-  
-  /* ----------------------------- */
-  /* Dreieck oben und unten (Original) */
-  /* ----------------------------- */
-  .hero {
-      background: url(https://test3.haurand.com/wp-content/uploads/2021/07/platzhalter_natur_mit_biene.jpg);
-      height: 200px;
-      position: relative;
-  }
-  
-  .hero:before, .hero:after {
-      box-sizing: border-box;
-      content: " ";
-      position: absolute;
-      top:0;
-      display: block;
-      width: 50%;
-      height: 100%;
-      border: 30px solid white;
-      border-bottom-color: white;
-  }
-  
-  .hero:before {
-      left: 0;
-      border-right: 20px solid transparent;
-      border-left: 0;
-  }
-  
-  .hero:after {
-      right: 0;
-      border-left: 20px solid transparent;
-      border-right: 0;
-  }
-  
-  
-  
-  
-  /* ----------------------------- */
-  /* Bilder mit Dreieck nur unten */
-  
-  
-  .dreieck {
-  /*    background: url(http://d.pr/i/eqn9+);
-      height: 200px;*/
-      position: relative;
-  }
-  
-  .dreieck:before, .dreieck:after {
-      box-sizing: border-box;
-      content: " ";
-      position: absolute;
-      top:0;
-      display: block;
-      width: 50%;
-      height: 100%;
-      border-bottom: 30px solid white; 
-  /*    border-bottom-color: white; */
-  }
-  
-  .dreieck:before {
-      left: 0;
-      border-right: 50px solid transparent; 
-      border-left: 0;
-  }
-  
-  .dreieck:after {
-      right: 0;
-      border-left: 50px solid transparent;
-      border-right: 0;
-  }
-  /* ----------------------------- */
-  
-  
-  
-  /* ----------------------------- */
-  /* Bilder mit Dreieck nur unten */
-  
-  .film {
-  /*    background: url(http://d.pr/i/eqn9+);
-      height: 200px;*/
-      position: relative;
-  }
-  
-  .film:before, .hero1:after {
-      box-sizing: border-box;
-      content: " ";
-      position: absolute;
-      display: block;
-      width: 50%;
-      height: 100%;
-      border-bottom: 30px solid white; 
-  }
-  
-  
-  .film:before {
-      left: 0;
-      border-right: 50px solid transparent; 
-      border-left: 0;
-  }
-  
-  .film:after {
-      right: 0;
-      border-left: 50px solid transparent;
-      border-right: 0;
-  }
-  /* ----------------------------- */
-  
-  
+	
+	.wp-block-column.drei_spalten_2:nth-child(1),
+		.wp-block-column.drei_spalten_2:nth-child(2){
+			margin-left: 1px;
+	}
+	
+	.wp-block-column.drei_spalten_2:nth-child(3){
+			margin-left: 20px;
+	}
+}
+
+
+
+/* --------------------------- */
+/* vier Spalten                */
+/* --------------------------- */
+@media (min-width: 600px) and (max-width: 1064px) {
+	.wp-block-columns.vier_spalten {
+			display: flex;
+			margin-bottom: 1.75em;
+			box-sizing: border-box;
+			flex-direction: row;
+			flex-wrap: wrap;
+	}
+	.wp-block-column.vier_spalten:not(:only-child) {
+    flex-basis: calc(50% - 1em) !important;
+    flex-grow: 0;
+	}
+	/* gerade Spalten */
+	.wp-block-column.vier_spalten:nth-child(odd){
+			margin-left: 1px;
+	}
+	/* ungerade Spalten */
+	.wp-block-column.vier_spalten:nth-child(even){
+			margin-left: 15px;
+	}
+}
