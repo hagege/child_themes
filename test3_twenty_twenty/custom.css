@@ -37,25 +37,29 @@ div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.a
 }
 
 /* 2 Spalten */
-@media (min-width: 1000px) and (max-width: 1320px) {
+@media (min-width: 600px) and (max-width: 1320px) {
 div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
     width: 50%;
 }
 }
 
+
+
 /* 1 Spalte */
+/*
 @media (min-width: 769px) and (max-width: 999px) {
 div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
     width: 100%;
 }
 }
 
-@media (min-width: 600px) and (max-width: 768px) {
+@media (min-width: 600px) and (max-width: 999px) {
 div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
     width: 50%;
     padding: 10px;
 }
 }
+*/
 
 /* 1 Spalte */
 @media (max-width: 599px) {
