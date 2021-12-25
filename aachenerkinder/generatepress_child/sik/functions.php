@@ -326,19 +326,6 @@ add_filter( 'wp_headers', 'AH_remove_x_pingback' );
  }
 
 
-/*
- +===========================================================================================+
- | NinjaFirewall optional configuration file                                                 |
- |                                                                                           |
- | See: https://blog.nintechnet.com/ninjafirewall-wp-edition-the-htninja-configuration-file/ |
- +===========================================================================================+
-*/
-if ( isset( $_SERVER['REMOTE_ADDR'] ) && $_SERVER['REMOTE_ADDR'] == '185.30.32.248' ) {
-  define('NFW_UWL', true);
-  return 'ALLOW';
-}
-
-
 /*----------------------------------------------------------------*/
 /* Start: Hinweistext vor dem Content
 /* Datum: 22.03.2020
