@@ -101,6 +101,41 @@ function haurand_register_block_categories() {
  add_action( 'init', 'haurand_register_block_categories' );
 
 
+ register_block_pattern(
+	/* https://developer.wordpress.org/block-editor/reference-guides/block-api/block-patterns/ */
+	/* maskieren ist nicht mehr nötig, wenn man einfache Hochkommatas nimmt */
+   'one-tile-card-pattern',
+     array(
+     'title' => __( 'One column with pictures', 'eine-kachel-block-pattern' ),
+     'description' => _x( 'One column with pictures (tiles)', 'Block pattern description', 'eine-kachel-block-pattern' ),
+     'categories'  => array('sgs'),
+     'content'     =>
+        '<!-- wp:columns {"className":"vier_kacheln"} -->
+		<div class="wp-block-columns vier_kacheln"><!-- wp:column {"className":"vier_kacheln"} -->
+		<div class="wp-block-column vier_kacheln"><!-- wp:image {"align":"center","id":2603,"sizeSlug":"full","linkDestination":"none"} -->
+		<div class="wp-block-image"><figure class="aligncenter size-full"><img src="https://test.gesamtschule-stolberg.de/wp-content/uploads/2019/09/kollegium_0010.jpg" alt="Agron, Alimi" class="wp-image-2603"/></figure></div>
+		<!-- /wp:image -->
+		
+		<!-- wp:heading {"textAlign":"center","level":3} -->
+		<h3 class="has-text-align-center"> Agron Alimi</h3>
+		<!-- /wp:heading -->
+		
+		<!-- wp:paragraph {"align":"center"} -->
+		<p class="has-text-align-center">ALM</p>
+		<!-- /wp:paragraph -->
+		
+		<!-- wp:paragraph {"align":"center"} -->
+		<p class="has-text-align-center"> Biologie, Geschichte </p>
+		<!-- /wp:paragraph -->
+		
+		<!-- wp:paragraph {"align":"center"} -->
+		<p class="has-text-align-center"> a.alimi@gesamtschule-stolberg.de </p>
+		<!-- /wp:paragraph --></div>
+		<!-- /wp:column --></div>
+		<!-- /wp:columns -->',
+ )
+);
+
 
  register_block_pattern(
 	/* https://developer.wordpress.org/block-editor/reference-guides/block-api/block-patterns/ */
