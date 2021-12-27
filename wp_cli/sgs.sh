@@ -91,8 +91,10 @@ dir='sgs'
 	# UpdraftPlus Premium muss aktiviert sein:
 	# Doku: https://updraftplus.com/wp-cli-updraftplus-documentation/
 	# Achtung: Falls die Datenbank aus einer anderen Sicherung stammt: Immer prüfen, ob die DB im Set enthalten ist (siehe job_id)
-	# Nach Korrektur der Nonce und Restore aus einer anderen Sicherung hat es funktioniert:
-	# Schneller klappt es mit dem Import direkt in phpMyAdmin und anschließend Korrektur über Better Search and Replace
+	# Nach Korrektur der Job_id und Restore aus einer anderen Sicherung hat es funktioniert:
+	# Schneller klappt es mit dem Import direkt in phpMyAdmin und anschließend Korrektur über Better Search and Replace oder über 
+	# php ../wp-cli.phar search-replace "https://gesamtschule-stolberg.de/" "http://sgs.test/"
+	
 	php ../wp-cli.phar updraftplus restore 6615b4685829 --components="db"
 	# Create User HGG:
 	php ../wp-cli.phar user create HGG gerhards@haurand.com --role=administrator --user_pass=Test_2019
