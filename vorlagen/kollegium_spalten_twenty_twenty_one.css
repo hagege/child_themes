@@ -1,0 +1,115 @@
+:root {
+	--column--vertical: 3rem;	
+	--column--horizontal: 3rem;		
+  --column--font-size-h2: 2rem;
+	--kachel--vertical: 2rem;
+	--kachel--horizontal: 2rem;
+	--kachel--margin: 0.5rem;
+	--kachel--background: #ffffff;
+}
+
+/* ------------------------------ */
+/* Variable Spalten von 4 bis 1   */
+/* ------------------------------ */
+/* ------------------------------ */
+/* Variable Spalten von 4 bis 1   */
+/* ------------------------------ */
+div.flexible_spalten {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.flexible_spalten .wp-block-group__inner-container{
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+
+.wp-block-group .wp-block-group__inner-container > * {
+    margin-top: var(--column--vertical);
+    margin-bottom: var(--column--vertical);
+}
+
+.wp-block-group .wp-block-group__inner-container > *:first-child {
+    margin-top: var(--column--vertical);
+    margin-bottom: var(--column--vertical);
+}
+
+.wp-block-group .wp-block-group__inner-container > *:last-child {
+    margin-top: var(--column--vertical);
+    margin-bottom: var(--column--vertical);
+}
+
+.wp-block-group .wp-block-group__inner-container h2{
+	font-size: var(--column--font-size-h2);
+}
+
+
+/* 4 Spalten */
+@media (min-width: 1500px)  {
+div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    width: 25%;
+		margin: var(--kachel--margin);	
+}
+}
+
+
+/* 3 Spalten */
+@media (min-width: 1321px) and (max-width: 1499px) {
+div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    width: 33%;
+}
+}
+
+/* 2 Spalten */
+@media (min-width: 600px) and (max-width: 1320px) {
+div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    width: 50%;
+}
+}
+
+
+
+/* 1 Spalte */
+/*
+@media (min-width: 769px) and (max-width: 999px) {
+div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    width: 100%;
+}
+}
+
+@media (min-width: 600px) and (max-width: 999px) {
+div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    width: 50%;
+    padding: 10px;
+}
+}
+*/
+
+/* 1 Spalte */
+@media (max-width: 599px) {
+div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    width: 100%;
+}
+}
+
+/* Padding und Margin Kacheln */
+div.wp-block-columns.kacheln {
+    padding-right: var(--kachel--vertical);
+    padding-left: var(--kachel--vertical);
+		padding-top: var(--kachel--horizontal);
+		padding-bottom: var(--kachel--horizontal);
+		background-color: var(--kachel--background);
+}
+
+
+	
+/* dezenter Hover-Effekt bei Kacheln */
+.wp-block-columns.kacheln:hover {
+ 		opacity:0.7;
+  	transform: scale(1.01, 1.01);	
+}

@@ -1,0 +1,108 @@
+:root {
+	--column--vertical: 3rem;	
+	--column--horizontal: 3rem;		
+  --column--font-size-h2: 2rem;
+	--kachel--margin: 0.5rem;
+	--kachel--vertical: 2rem;
+	--kachel--horizontal: 2rem;
+	--kachel--background: #ffffff;
+}
+
+
+
+/* ------------------------------ */
+/* Variable Spalten von 4 bis 1   */
+/* ------------------------------ */
+div.flexible_spalten {
+  display: flex;
+	flex-direction: column;
+/*  justify-content: center;
+  align-items: center; */
+}
+
+div.flexible_spalten .wp-block-group__inner-container{
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+		/* Flexelemente werden gleichmäßig innerhalb der Zeile verteilt, sodass die Leerräume zwischen zwei angrenzenden Elementen gleich sind. 
+		justify-content: space-around;*/
+}
+
+
+/* ggfs. zusätzlicher Rand oben und unten */
+/*
+.wp-block-group .wp-block-group__inner-container > * {
+    margin-top: var(--column--vertical);
+    margin-bottom: var(--column--vertical);
+}
+*/
+
+
+/* unnötig bei twenty twenty, aber notwendig z. B. bei twenty twenty one */
+/*.wp-block-group .wp-block-group__inner-container > *:first-child {
+    margin-top: var(--column--vertical);
+    margin-bottom: var(--column--vertical);
+}
+
+.wp-block-group .wp-block-group__inner-container > *:last-child {
+    margin-top: var(--column--vertical);
+    margin-bottom: var(--column--vertical);
+}
+*/
+
+
+/* Schriftgröße für h2 bei Spalten */
+.wp-block-group .wp-block-group__inner-container h2{
+	font-size: var(--column--font-size-h2);
+}
+
+
+/* 4 Spalten (Spaltenbreite jeweils 24%)*/
+@media (min-width: 1500px)  {
+div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    width: 24%;
+}
+}
+
+
+/* 3 Spalten (Spaltenbreite jeweils 30%) */
+@media (min-width: 1321px) and (max-width: 1499px) {
+div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    width: 30%;
+		/* damit bei 3 Spalten die Spalten nicht zentriert, sondern links ausgerichtet sind: */
+	  margin-left: 0;
+}
+}
+
+/* 2 Spalten (Spaltenbreite jeweils 40%)*/
+@media (min-width: 600px) and (max-width: 1320px) {
+div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    width: 40%;
+}
+}
+
+
+/* 1 Spalte - Spaltenbreite: 90% */
+@media (max-width: 599px) {
+div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    width: 90%;
+}
+}
+
+/* Hintergrundfarbe und evtl. zusätzliches Padding und Margin Kacheln */
+div.wp-block-columns.kacheln {
+
+/*    padding-right: var(--kachel--vertical);
+    padding-left: var(--kachel--vertical);
+		padding-top: var(--kachel--horizontal);
+		padding-bottom: var(--kachel--horizontal); */
+		background-color: var(--kachel--background);
+}
+
+
+	
+/* dezenter Hover-Effekt bei Kacheln */
+.wp-block-columns.kacheln:hover {
+ 		opacity:0.7;
+  	transform: scale(1.01, 1.01);	
+}
