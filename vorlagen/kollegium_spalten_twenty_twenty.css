@@ -21,13 +21,16 @@ div.flexible_spalten {
 }
 
 div.flexible_spalten .wp-block-group__inner-container{
-    max-width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-		/* Flexelemente werden gleichmäßig innerhalb der Zeile verteilt, sodass die Leerräume zwischen zwei angrenzenden Elementen gleich sind. 
-		justify-content: space-around;*/
+  display: flex;
+  flex-wrap: wrap;
+  /* Flexelemente werden gleichmäßig innerhalb der Zeile verteilt, sodass die Leerräume zwischen zwei angrenzenden Elementen gleich sind. 
+  justify-content: space-around;*/
 }
 
+/* Absatz innerhalb der Spalte */
+div.flexible_spalten .wp-block-group__inner-container p{
+		padding: 1rem;
+}
 
 /* ggfs. zusätzlicher Rand oben und unten */
 /*
@@ -61,7 +64,10 @@ div.flexible_spalten .wp-block-group__inner-container{
 @media (min-width: 1500px)  {
 div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
     width: 24%;
-}
+		/*linksbündig mit Rand */
+		margin-left: 0.6rem;
+    margin-right: 0.6rem;
+  }
 }
 
 
@@ -70,8 +76,10 @@ div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.a
 div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
     width: 30%;
 		/* damit bei 3 Spalten die Spalten nicht zentriert, sondern links ausgerichtet sind: */
-	  margin-left: 0;
-}
+		/*linksbündig mit Rand */
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 }
 
 /* 2 Spalten (Spaltenbreite jeweils 40%)*/
