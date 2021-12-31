@@ -6,8 +6,16 @@
 	--kachel--vertical: 2rem;
 	--kachel--horizontal: 2rem;
 	--kachel--background: #ffffff;
+	--columns--margin: 10vw;
+	--columns--width: 90vw;
 }
 
+
+.wp-block-group.alignwide.flexible_spalten {
+    max-width: calc(var(--columns--width) - var(--columns--margin));
+    width: calc(var(--columns--width) - var(--columns--margin));
+	margin-left:var(--columns--margin);
+}
 
 
 /* ------------------------------ */
@@ -16,15 +24,17 @@
 div.flexible_spalten {
   display: flex;
 	flex-direction: column;
-/*  justify-content: center;
-  align-items: center; */
 }
 
 div.flexible_spalten .wp-block-group__inner-container{
   display: flex;
   flex-wrap: wrap;
-  /* Flexelemente werden gleichmäßig innerhalb der Zeile verteilt, sodass die Leerräume zwischen zwei angrenzenden Elementen gleich sind. 
-  justify-content: space-around;*/
+	/* Standardwert:
+	justify-content: flex-start; */
+	/* eingestellt: space-around*/
+	justify-content: flex-start; 
+  /* Flexelemente werden gleichmäßig innerhalb der Zeile verteilt, sodass die Leerräume zwischen zwei angrenzenden Elementen gleich sind. Sonst:
+  justify-content: center;*/
 }
 
 /* Absatz innerhalb der Spalte */
