@@ -2,107 +2,125 @@
 	--column--vertical: 3rem;	
 	--column--horizontal: 3rem;		
   --column--font-size-h2: 2rem;
+	--kachel--margin: 0.5rem;
 	--kachel--vertical: 2rem;
 	--kachel--horizontal: 2rem;
-	--kachel--margin: 0.5rem;
 	--kachel--background: #ffffff;
+	--columns--margin: 10vw;
+	--columns--width: 90vw;
+	--column--width--1: 90%;
+	--column--width--2: 37%;
+	--column--width--3: 29%;
+	--column--width--4: 22%;
 }
 
-/* ------------------------------ */
-/* Variable Spalten von 4 bis 1   */
-/* ------------------------------ */
+
+div.wp-block-group.alignwide.flexible_spalten {
+    max-width: calc(var(--columns--width) - var(--columns--margin));
+    width: calc(var(--columns--width) - var(--columns--margin));
+	margin-left:var(--columns--margin);
+}
+
+
 /* ------------------------------ */
 /* Variable Spalten von 4 bis 1   */
 /* ------------------------------ */
 div.flexible_spalten {
   display: flex;
-  justify-content: center;
-  align-items: center;
+	flex-direction: column;
+	/* Standardwert:
+	justify-content: flex-start; */
+	/* eingestellt: space-around
+	justify-content: flex-start; 
+  /* Flexelemente werden gleichmäßig innerhalb der Zeile verteilt, sodass die Leerräume zwischen zwei angrenzenden Elementen gleich sind. Sonst:
+  justify-content: center;*/
 }
 
 div.flexible_spalten .wp-block-group__inner-container{
-    max-width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
+/* Absatz innerhalb der Spalte */
+div.flexible_spalten .wp-block-group__inner-container p{
+		padding: 1rem;
+}
 
-
+/* ggfs. zusätzlicher Rand oben und unten */
+/*
 .wp-block-group .wp-block-group__inner-container > * {
     margin-top: var(--column--vertical);
     margin-bottom: var(--column--vertical);
 }
+*/
 
+
+/* unnötig bei twenty twenty, aber notwendig z. B. bei twenty twenty one */
 .wp-block-group .wp-block-group__inner-container > *:first-child {
-    margin-top: var(--column--vertical);
-    margin-bottom: var(--column--vertical);
+    margin-top: var(--global--spacing-vertical);
+    margin-bottom: var(--global--spacing-vertical);
 }
 
 .wp-block-group .wp-block-group__inner-container > *:last-child {
-    margin-top: var(--column--vertical);
-    margin-bottom: var(--column--vertical);
+    margin-top: var(--global--spacing-vertical);
+    margin-bottom: var(--global--spacing-vertical);
 }
 
+
+
+/* Schriftgröße für h2 bei Spalten */
 .wp-block-group .wp-block-group__inner-container h2{
 	font-size: var(--column--font-size-h2);
 }
 
 
-/* 4 Spalten */
+/* 4 Spalten (Spaltenbreite jeweils 24%)*/
 @media (min-width: 1500px)  {
 div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-    width: 25%;
-		margin: var(--kachel--margin);	
-}
+    width: var(--column--width--4);
+		/*linksbündig mit Rand - nicht ideal*/
+		margin-left: 1.6vw!important;
+    margin-right: 0.4vw!important;
+  }
 }
 
 
-/* 3 Spalten */
+/* 3 Spalten (Spaltenbreite jeweils 30%) */
 @media (min-width: 1321px) and (max-width: 1499px) {
 div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-    width: 33%;
-}
+    width: var(--column--width--3);
+		/* damit bei 3 Spalten die Spalten nicht zentriert, sondern links ausgerichtet sind: */
+		/*linksbündig mit Rand - nicht ideal*/
+    margin-left: 1.9vw!important;
+    margin-right: 1vw!important;
+  }
 }
 
-/* 2 Spalten */
+/* 2 Spalten (Spaltenbreite jeweils 40%)*/
 @media (min-width: 600px) and (max-width: 1320px) {
 div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-    width: 50%;
+    width: var(--column--width--2);
+		/*linksbündig mit Rand - nicht ideal*/
+		margin-left: 5.5vw!important;
+    margin-right: 4vw!important;
 }
 }
 
 
-
-/* 1 Spalte */
-/*
-@media (min-width: 769px) and (max-width: 999px) {
-div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-    width: 100%;
-}
-}
-
-@media (min-width: 600px) and (max-width: 999px) {
-div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-    width: 50%;
-    padding: 10px;
-}
-}
-*/
-
-/* 1 Spalte */
+/* 1 Spalte - Spaltenbreite: 90% */
 @media (max-width: 599px) {
 div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-    width: 100%;
+    width: var(--column--width--1);
 }
 }
 
-/* Padding und Margin Kacheln */
+/* Hintergrundfarbe und evtl. zusätzliches Padding und Margin Kacheln */
 div.wp-block-columns.kacheln {
-    padding-right: var(--kachel--vertical);
+
+/*    padding-right: var(--kachel--vertical);
     padding-left: var(--kachel--vertical);
 		padding-top: var(--kachel--horizontal);
-		padding-bottom: var(--kachel--horizontal);
+		padding-bottom: var(--kachel--horizontal); */
 		background-color: var(--kachel--background);
 }
 
@@ -113,3 +131,33 @@ div.wp-block-columns.kacheln {
  		opacity:0.7;
   	transform: scale(1.01, 1.01);	
 }
+
+/* -------- weitere Tests -------- */
+
+.wp-block-group.container {
+    background-color: #cacaca;
+		padding: 10px;
+		margin: 50px;
+	  margin-left: auto;
+    margin-right: auto;
+}
+
+
+.wp-block-columns.item {
+    background-color: #ff0037;
+		color: #fff;
+		font-size: 35px;
+		padding: 20px;
+		margin: 10px;
+}
+
+/*
+header.entry-header.has-text-align-center.header-footer-group {
+    display: none;
+}
+
+main#site-content {
+    margin-top: -18rem;
+}
+*/
+
