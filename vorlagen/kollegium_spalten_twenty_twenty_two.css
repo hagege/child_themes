@@ -1,12 +1,10 @@
 :root {
-	--column--vertical: 1rem;	
-	--column--horizontal: 3rem;		
+	--column--margin-bottom: 1rem;	
+	--column--margin-top: 3rem;		
   --column--font-size-h2: 2rem;
-/*	--kachel--margin: 0.5rem;
-	--kachel--vertical: 2rem;
-	--kachel--horizontal: 2rem; */
-	--kachel--background: #fafafa;
+	--columns--background: #f0f0f0;
 	--columns--margin: 10vw;
+	--columns--padding: 0.5rem;
 	--columns--width: 90vw;
 	--column--width--1: 95%;
 	--column--width--2: 38%;
@@ -71,11 +69,13 @@ div.wp-block-columns.kacheln h2{
 
 /* Hintergrundfarbe und evtl. zusätzliches Padding und Margin Kacheln */
 div.wp-block-columns.kacheln {
-	  margin-top: var(--column--vertical);
-    margin-bottom: var(--column--vertical);
+	  margin-top: var(--column--margin-top);
+    margin-bottom: var(--column--margin-bottom);
 	  padding-top: var(--column--vertical);
     padding-bottom: var(--column--vertical);
-		background-color: var(--kachel--background);
+		padding-left: var(--columns--padding);
+		padding-right: var(--columns--padding);
+		background-color: var(--columns--background);
 }
 
 /* 4 Spalten (Spaltenbreite jeweils 24%)*/
