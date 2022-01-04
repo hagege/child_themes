@@ -37,8 +37,9 @@ add_filter( 'generate_blog_columns', function( $columns ) {
 /* Start: Keine Überschrift im Excerpt
 /* Datum: 01.01.2021
 /* Autor: hgg
+/* deaktiviert am 4.1.2022, weil es Probleme mit der function bei Seiten gibt, die einen Block "Neueste Beiträge" enthalten.
 /*----------------------------------------------------------------*/
-/* Klappt zwar so weit, aber bei einem customer excerpt wird zwei Mal der Button gezeigt */
+/* Klappt zwar so weit, aber bei einem customer excerpt wird zwei Mal der Button gezeigt 
 function wp_strip_header_tags( $excerpt='' ) {
 
 	$raw_excerpt = $excerpt;
@@ -58,6 +59,7 @@ return apply_filters('wp_trim_excerpt', preg_replace($regex,'', $excerpt), $raw_
 }
 add_filter( 'get_the_excerpt', 'wp_strip_header_tags', 9);
 
+*/
 
 /*----------------------------------------------------------------*/
 /* Start: Block Patterns von sgs

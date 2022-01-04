@@ -33,6 +33,31 @@ add_filter( 'generate_blog_columns', function( $columns ) {
     return $columns;
 } );
 
+/*----------------------------------------------------------------*/
+/* Start: Keine Überschrift im Excerpt
+/* Datum: 01.01.2021
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+/* Klappt zwar so weit, aber bei einem customer excerpt wird zwei Mal der Button gezeigt */
+function wp_strip_header_tags( $excerpt='' ) {
+
+	$raw_excerpt = $excerpt;
+	if ( '' == $excerpt ) {
+			$excerpt = get_the_content('');
+			$excerpt = strip_shortcodes( $excerpt );
+			$excerpt = apply_filters('the_content', $excerpt);
+			$excerpt = str_replace(']]>', ']]>', $excerpt);
+	}
+	$regex = '#(<h([1-6])[^>]*>)\s?(.*)?\s?(<\/h\2>)#';
+	$excerpt = preg_replace($regex,'', $excerpt);
+	$excerpt_length = apply_filters('excerpt_length', 55);
+	$excerpt_more = apply_filters('excerpt_more', ' ' . '[...]');
+	$excerpt = wp_trim_words( $excerpt, $excerpt_length, $excerpt_more );
+
+return apply_filters('wp_trim_excerpt', preg_replace($regex,'', $excerpt), $raw_excerpt);
+}
+add_filter( 'get_the_excerpt', 'wp_strip_header_tags', 9);
+
 
 /*----------------------------------------------------------------*/
 /* Start: Block Patterns von sgs
@@ -75,6 +100,41 @@ function haurand_register_block_categories() {
  }
  add_action( 'init', 'haurand_register_block_categories' );
 
+
+ register_block_pattern(
+	/* https://developer.wordpress.org/block-editor/reference-guides/block-api/block-patterns/ */
+	/* maskieren ist nicht mehr nötig, wenn man einfache Hochkommatas nimmt */
+   'one-tile-card-pattern',
+     array(
+     'title' => __( 'One column with pictures', 'eine-kachel-block-pattern' ),
+     'description' => _x( 'One column with pictures (tiles)', 'Block pattern description', 'eine-kachel-block-pattern' ),
+     'categories'  => array('sgs'),
+     'content'     =>
+        '<!-- wp:columns {"className":"vier_kacheln"} -->
+		<div class="wp-block-columns vier_kacheln"><!-- wp:column {"className":"vier_kacheln"} -->
+		<div class="wp-block-column vier_kacheln"><!-- wp:image {"align":"center","id":2603,"sizeSlug":"full","linkDestination":"none"} -->
+		<div class="wp-block-image"><figure class="aligncenter size-full"><img src="https://test.gesamtschule-stolberg.de/wp-content/uploads/2019/09/kollegium_0010.jpg" alt="Agron, Alimi" class="wp-image-2603"/></figure></div>
+		<!-- /wp:image -->
+		
+		<!-- wp:heading {"textAlign":"center","level":3} -->
+		<h3 class="has-text-align-center"> Agron Alimi</h3>
+		<!-- /wp:heading -->
+		
+		<!-- wp:paragraph {"align":"center"} -->
+		<p class="has-text-align-center">ALM</p>
+		<!-- /wp:paragraph -->
+		
+		<!-- wp:paragraph {"align":"center"} -->
+		<p class="has-text-align-center"> Biologie, Geschichte </p>
+		<!-- /wp:paragraph -->
+		
+		<!-- wp:paragraph {"align":"center"} -->
+		<p class="has-text-align-center"> a.alimi@gesamtschule-stolberg.de </p>
+		<!-- /wp:paragraph --></div>
+		<!-- /wp:column --></div>
+		<!-- /wp:columns -->',
+ )
+);
 
 
  register_block_pattern(
