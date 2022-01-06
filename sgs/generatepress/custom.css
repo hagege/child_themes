@@ -18,6 +18,81 @@
 	--tec-color-background-events-bar-submit-button-hover: rgba(102, 98, 97, 1);
 }
 
+/* Beiträge auch mit Schatten */
+.generate-columns .inside-article {
+    -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+    filter: drop-shadow(2px 2px 5px #CCCCCC);
+}
+
+
+/* Animation auf der Hauptseite */
+
+div.sgs_hintergrund {
+	background-color: black;
+	width: 50vw;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2rem;
+	opacity: 0.6;
+}
+
+@media (max-width: 450px){
+	h2.sgs_animation {
+ 		font-size: 1rem;
+	}
+}
+
+@media (min-width: 451px){
+	h2.sgs_animation {
+ 		font-size: 2rem;
+	}
+}
+
+h2.sgs_animation {
+		color: white;
+    opacity: 1;
+    -webkit-animation: fadeInlinks 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadeInlinks 2s; /* Firefox < 16 */
+        -ms-animation: fadeInlinks 2s; /* Internet Explorer */
+         -o-animation: fadeInlinks 2s; /* Opera < 12.1 */
+            animation: fadeInlinks 2s;
+}
+
+@media (min-width: 968px){
+
+@-webkit-keyframes fadeInlinks {
+    0% {
+        -webkit-transform: translate3d(-100%,0,0);
+        opacity: 0;
+        transform: translate3d(-100%,0,0)
+    }
+
+    to {
+        -webkit-transform: translateZ(0);
+        opacity: 1;
+        transform: translateZ(0)
+    }
+}
+
+@keyframes fadeInlinks {
+    0% {
+        -webkit-transform: translate3d(-100%,0,0);
+        opacity: 0;
+        transform: translate3d(-100%,0,0)
+    }
+
+    to {
+        -webkit-transform: translateZ(0);
+        opacity: 1;
+        transform: translateZ(0)
+    }
+}
+
+.fadeInlinks {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft
+}
+
 /* damit bei Beiträgen die Bilder gleich hoch sind 
 .generate-columns .inside-article img {
 		object-fit: cover;
@@ -446,9 +521,8 @@ div.wp-block-column h2 {
       font-size: 1.5rem;
       padding: 0px 0px 2rem 0px;
       background-color: white;
-/*		box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
-          -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
-      filter: drop-shadow(2px 2px 5px #CCCCCC) ; */ 
+      -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+      filter: drop-shadow(2px 2px 5px #CCCCCC);
   }
   
 /* Rand unten */
