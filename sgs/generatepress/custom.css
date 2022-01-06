@@ -18,6 +18,11 @@
 	--tec-color-background-events-bar-submit-button-hover: rgba(102, 98, 97, 1);
 }
 
+/* Button ohne runde Ecken */
+.wp-block-button__link {
+    border-radius: 0px;
+}
+
 /* Beiträge auch mit Schatten */
 .generate-columns .inside-article {
     -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
@@ -86,6 +91,7 @@ h2.sgs_animation {
         opacity: 1;
         transform: translateZ(0)
     }
+}
 }
 
 .fadeInlinks {
@@ -568,9 +574,11 @@ div.wp-block-column h2 {
 div.wp-block-column.drei_kacheln,
 .inside-article  {
     font-size: 1.5rem; 
-		padding: 0px 0px 24px 0px;
+		padding: 10px 0px 24px 0px;
     margin: 0px 40px 0px 0px;
 		background-color: white;
+		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+  filter: drop-shadow(2px 2px 5px #CCCCCC);
 /*		box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
 		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
     filter: drop-shadow(2px 2px 5px #CCCCCC); 
@@ -597,6 +605,7 @@ div.wp-block-column.drei_kacheln:last-child {
 @media (max-width: 1150px) {
 div.wp-block-column.drei_kacheln {
 	margin-right: 0px;
+	margin-bottom: 2rem;
 	}
 }
 
@@ -617,7 +626,6 @@ div.wp-block-column.drei_kacheln:hover{
 
 /* Bilder in den Kacheln */
 div.wp-block-column.drei_kacheln .wp-block-image:not(.is-style-rounded) img {
-	height: 15rem;
 	object-fit: cover;
 	/* abgerundete Ecken 
 	border-radius: 20px 20px 0px 0px; */
