@@ -18,6 +18,19 @@
 	--tec-color-background-events-bar-submit-button-hover: rgba(102, 98, 97, 1);
 }
 
+/* damit bei Beiträgen die Bilder gleich hoch sind 
+.generate-columns .inside-article img {
+		object-fit: cover;
+  	max-height: 250px;
+}
+*/
+
+/* damit bei Ansprechpartnern die Bilder gleich hoch sind */
+.wp-block-column.vier_kacheln img{
+	object-fit: cover;
+  height: 180px;
+}
+
 
 /* ------------------------------ */
 /* Terminkalender */
