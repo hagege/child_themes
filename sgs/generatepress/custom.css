@@ -8,995 +8,1004 @@
 
 /* Variablen */
 :root {
-  --rot-color: rgba(189, 0, 20, 1);
-  --grau_hell-color: rgba(162, 162, 164, 1);
-	--grau_dunkel-color: rgba(102, 98, 97, 1);
-	--gruen-color: rgba(36, 152, 42, 1);
-	--tec-color-button-primary: rgba(189, 0, 20, 1);
-	--tec-color-accent-primary: rgba(189, 0, 20, 1);
-	--tec-color-text-events-bar-submit-button-hover: white;
-	--tec-color-background-events-bar-submit-button-hover: rgba(102, 98, 97, 1);
-}
-
-/* Button ohne runde Ecken */
-.wp-block-button__link {
-    border-radius: 0px;
-}
-
-/* Beiträge auch mit Schatten */
-.generate-columns .inside-article {
-    -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
-    filter: drop-shadow(2px 2px 5px #CCCCCC);
-}
-
-
-/* Animation auf der Hauptseite */
-
-div.sgs_hintergrund {
-	background-color: black;
-	width: 50vw;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 2rem;
-	opacity: 0.6;
-}
-
-@media (max-width: 450px){
-	h2.sgs_animation {
- 		font-size: 1rem;
-	}
-}
-
-@media (min-width: 451px){
-	h2.sgs_animation {
- 		font-size: 2rem;
-	}
-}
-
-h2.sgs_animation {
-		color: white;
-    opacity: 1;
-    -webkit-animation: fadeInlinks 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadeInlinks 2s; /* Firefox < 16 */
-        -ms-animation: fadeInlinks 2s; /* Internet Explorer */
-         -o-animation: fadeInlinks 2s; /* Opera < 12.1 */
-            animation: fadeInlinks 2s;
-}
-
-@media (min-width: 968px){
-
-@-webkit-keyframes fadeInlinks {
-    0% {
-        -webkit-transform: translate3d(-100%,0,0);
-        opacity: 0;
-        transform: translate3d(-100%,0,0)
-    }
-
-    to {
-        -webkit-transform: translateZ(0);
-        opacity: 1;
-        transform: translateZ(0)
-    }
-}
-
-@keyframes fadeInlinks {
-    0% {
-        -webkit-transform: translate3d(-100%,0,0);
-        opacity: 0;
-        transform: translate3d(-100%,0,0)
-    }
-
-    to {
-        -webkit-transform: translateZ(0);
-        opacity: 1;
-        transform: translateZ(0)
-    }
-}
-}
-
-.fadeInlinks {
-    -webkit-animation-name: fadeInLeft;
-    animation-name: fadeInLeft
-}
-
-/* damit bei Beiträgen die Bilder gleich hoch sind 
-.generate-columns .inside-article img {
-		object-fit: cover;
-  	max-height: 250px;
-}
-*/
-
-/* damit bei Ansprechpartnern die Bilder gleich hoch sind */
-.wp-block-column.vier_kacheln img{
-	object-fit: cover;
-  height: 180px;
-}
-
-
-/* ------------------------------ */
-/* Terminkalender */
-/* ------------------------------ */
-
-
-@media (min-width: 968px){
-.tribe-events-calendar-month .generate-columns.tablet-grid-50, .grid-sizer.tablet-grid-50 {
-    width: 100%;
-}
-}
-
-/* ------------------------------ */
-/* Schulleitung */
-/* ------------------------------ */
-p.has-text-align-center.schulleitung {
-    font-weight: 700;
-}
-
-h2.has-text-align-center.schulleitungsteam {
-    margin-bottom: 0.3rem;
-}
-
-/* ------------------------------ */
-/* Variable Spalten bei Kollegium */
-/* ------------------------------ */
-div.flexible_spalten {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-div.flexible_spalten .wp-block-group__inner-container{
-    max-width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-/* 4 Spalten */
-@media (min-width: 1500px)  {
-div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-    width: 25%;
-}
-}
-
-
-/* 3 Spalten */
-@media (min-width: 1321px) and (max-width: 1499px) {
-div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-    width: 33%;
-}
-}
-
-/* 2 Spalten */
-@media (min-width: 1000px) and (max-width: 1320px) {
-div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-    width: 50%;
-}
-}
-
-/* 1 Spalte */
-@media (min-width: 769px) and (max-width: 999px) {
-div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-    width: 100%;
-}
-}
-
-@media (min-width: 600px) and (max-width: 768px) {
-div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-    width: 50%;
-    padding: 10px;
-}
-}
-
-/* 1 Spalte */
-@media (max-width: 599px) {
-div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-    width: 100%;
-}
-}
-	
-/* dezenter Hover-Effekt */
-.wp-block-columns.vier_kacheln:hover {
- 		opacity:0.7;
-  	transform: scale(1.01, 1.01);	
-}
-
-/* Schriftgröße auf Kollegiumsseite bei Anker */
-p.has-text-align-center.kollegium_anker a {
-    font-size: 1.8rem;
-    padding: 0.2rem;
-}
-
-
-/* ------------------------------ */
-/* Vier Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln" */
-/* ------------------------------ */
-/* Titel unter Bildern größer */
-div.wp-block-column.vier_kacheln {
-		padding: 20px 5px 24px 5px;
-    margin: 0px 15px 0px 15px;
-		background-color: white;
-		/* box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff; */
-		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
-    filter: drop-shadow(2px 2px 5px #CCCCCC); 
-		margin-bottom: 3rem;
-		justify-content: center; 
-	  /* abgerundete Ecken 
-	  border-radius: 20px 20px 0px 0px; */
-}
-
-div.wp-block-column.vier_kacheln p {
-	font-size: 0.8em;
-}
-
-div.wp-block-column.vier_kacheln h3 {
-	font-size: 1.1em;
-	margin-bottom: 0px;
-}
-
-
-@media (max-width: 999px) {
-	div.wp-block-column.vier_kacheln {
-			/* nur Rand unten */
-			padding: 20px 0px 24px 0px;
-      margin: 0px 0px 40px 0px;
-			justify-content: center;
-	}
-}
-
-
-/* ----------------------------- */
-/* Breakpoints für Anzeige Posts */
-/* ein- oder zweispaltig         */
-/* ----------------------------- */
-@media (max-width: 967px) {
-.generate-columns.mobile-grid-100, .grid-sizer.mobile-grid-100 {
-    width: 100%;
-}
-}
-
-@media (min-width: 968px){
-.generate-columns.tablet-grid-50, .grid-sizer.tablet-grid-50 {
-    width: 50%;
-}
-}
-
-
-/* Icon für PPT, Word, etc. mit fester Größe */
-.wp-block-image.office-icon figure.aligncenter.size-full.is-resized img
-{
-    height: 3rem;
-    width: 3rem;
-}
-
-
-/* ----------------------------- */
-/* Tabellen 
-/* ----------------------------- */
-
-@media (min-width: 396px) {
-figure.wp-block-table.aligncenter.klassenteams tr td:nth-child(1), figure.wp-block-table.aligncenter.klassenteams tr td:nth-child(2), figure.wp-block-table.aligncenter.klassenteams tr td:nth-child(4) {
-		background: #f0f0f0; 
-		font-weight:bold;
-	}
-figure.wp-block-table.aligncenter.klassenteams td{
-		word-break: unset;
-	}
-}
-
-@media (min-width: 496px) {
-	figure.wp-block-table.is-style-regular.ansprechpartner tr td:nth-child(1), 	figure.wp-block-table.is-style-regular.ansprechpartner tr td:nth-child(2) {
-		background: #f0f0f0; 
-		font-weight:bold;
-	}
-		figure.wp-block-table.is-style-regular.ansprechpartner td {
-		word-break: unset;
-	}
-}
-
-@media (min-width: 1496px) {	
-  table.lehrer tr td:nth-child(1), table.lehrer tr td:nth-child(2){
-		background: #f0f0f0; 
-		font-weight:bold;
-		word-break: unset;
-	}
-}
-
-/* Lehrer-Tabelle als HTML-Block wegen Anker */
-@media (max-width: 1495px) {	
-  table.lehrer {
-		width:100%;
-		border: none;
-	}
-
-  table.lehrer thead {
-		display: none;
-	}
-
-	table.lehrer td, tr {
-		border: none;
-	}
-
-  table.lehrer tr td:nth-child(1), table.lehrer tr td:nth-child(2) {
-			background: #f0f0f0; 
-			font-weight:bold;
-			font-size:1.3em;
-	}
-
-	table.lehrer tr td:nth-child(1) {
-		border-top: 1px solid #000;
-	}
-
-	table.lehrer tbody td {
-		display: block;  
-	  text-align:center;
-	}
-
-	table.lehrer tbody td:before {
-      content: attr(data-th);
-      display: block;
-      text-align:center; 
+    --rot-color: rgba(189, 0, 20, 1);
+    --grau_hell-color: rgba(162, 162, 164, 1);
+      --grau_dunkel-color: rgba(102, 98, 97, 1);
+      --gruen-color: rgba(36, 152, 42, 1);
+      --tec-color-button-primary: rgba(189, 0, 20, 1);
+      --tec-color-accent-primary: rgba(189, 0, 20, 1);
+      --tec-color-text-events-bar-submit-button-hover: white;
+      --tec-color-background-events-bar-submit-button-hover: rgba(102, 98, 97, 1);
   }
-}
-
-
-
-/* Klassenteams-Tabelle */
-
-@media screen and (max-width: 395px) {	
-  figure.wp-block-table.aligncenter.klassenteams table{
-		width:100%;
-	}
-
-  figure.wp-block-table.aligncenter.klassenteams table thead {
-		display: none;
-	}
-	
-	figure.wp-block-table.aligncenter.klassenteams table tr td:nth-child(1) {
-		border-top: 1px solid #000;
-	}	
-	
-	figure.wp-block-table.aligncenter.klassenteams tr td:nth-child(1), figure.wp-block-table.aligncenter.klassenteams tr td:nth-child(2), figure.wp-block-table.aligncenter.klassenteams tr  td:nth-child(4) {
-		background: #f0f0f0; 
-		font-weight:bold;
-		font-size:1.3em;
-	}
-	
-	figure.wp-block-table.aligncenter.klassenteams table tbody td {
-		display: block;  
-	  text-align:center;
-	}
-
-	figure.wp-block-table.aligncenter.klassenteams table tbody td:before {
-      content: attr(data-th);
-      display: block;
-      text-align:center; 
+  
+  /* Button ohne runde Ecken */
+  .wp-block-button__link {
+      border-radius: 0px;
   }
-}
-
-
-
-/* Ansprechpartner-Tabelle */
-@media screen and (max-width: 495px) {	
-  figure.wp-block-table.is-style-regular.ansprechpartner table{
-		width:100%;
-	}
-	
-  figure.wp-block-table.is-style-regular.ansprechpartner table td tr {
-		border: none;
-	}
-
-  figure.wp-block-table.is-style-regular.ansprechpartner table thead {
-		display: none;
-	}
-	
-	figure.wp-block-table.is-style-regular.ansprechpartner tr td:nth-child(1) {	
-			border-top: 1px solid #000;
-	}
-	
-figure.wp-block-table.is-style-regular.ansprechpartner tr td:nth-child(1), figure.wp-block-table.is-style-regular.ansprechpartner tr td:nth-child(2) {
-		background: #f0f0f0; 
-		font-weight:bold;
-		font-size:1.3em;
-	}
-	
-	
-	figure.wp-block-table.is-style-regular.ansprechpartner table tbody td {
-		display: block;  
-	  text-align:center;
-	}
-
-	figure.wp-block-table.is-style-regular.ansprechpartner table tbody td:before {
-      content: attr(data-th);
-      display: block;
-      text-align:center; 
-  }
-}
-
-
-
-/* ----------------------------- */
-/* Ende Tabellen 
-/* ----------------------------- */
-
-/* accordion - block */
-/* Akkordion: Ränder und Zeilenhöhe */
-.panel p {
-    margin-bottom: 1.5rem;
-    line-height: 1.5;
-    margin-top: 1rem;
-}
-
-/* Akkordion: Farbe weiß */
-.wp-block-ainoblocks-accordion-faq-block.icon__right.br__xxs.pt__5.pb__5.pl__5.pr__5.has-base-3-color.has-text-color.has-background.open a {
-		color: white;
-}
-
-/* Anstehende Veranstaltungen statt 50% */
-.tribe-events-widget-events-list__event-wrapper.tribe-common-g-col article {
-    width: 100%;	
-}
-
-
-
-/* Cover auf der Startseite */
-.wp-block-cover__inner-container {
-    padding: 0rem 5rem 5rem 5rem;
-}
-
-
-/* größere Schrift bein den Veranstaltungen */
-
-@media (max-width: 1150px) {
-	h3.tribe-events-widget-events-list__event-title.tribe-common-h7 {
-    font-size: 0.8rem;
-	}
-}
-
-@media (min-width: 1151px) {
-	h3.tribe-events-widget-events-list__event-title.tribe-common-h7 {
-    font-size: 1.1rem;
-	}
-}
-
-
-
-
-
-/* ------------------------------ */
-/* Spalten umbrechen
- * https://die-netzialisten.de/responsiveness-spalten-block-anpassen/ */
-/* ------------------------------ */
-.wp-block-columns.drei_kacheln,
-.wp-block-columns.zwei_kacheln{
-  display: flex;
-  margin-bottom: 1.75em;
-  flex-wrap: wrap;
-}
-
-@media (min-width: 1151px) {
-  .wp-block-columns.drei_kacheln,
-	.wp-block-columns.zwei_kacheln {
-    flex-wrap: nowrap;
-  }
-}
-.wp-block-column.drei_kacheln,
-.wp-block-column.zwei_kacheln {
-  flex-grow: 1;
-  min-width: 0;
-  word-break: break-word;
-  overflow-wrap: break-word;
-}
-/* Bis hierher alles einspaltig*/
-@media (max-width: 1150px) {
-	.wp-block-columns.drei_kacheln,
-	.wp-block-columns.zwei_kacheln {
-			display: block;		
-	}
-}
-
-/*Ab hier Spaltenanzahl wie eingestellt*/
-@media (min-width: 1151px) {
-  .wp-block-column.drei_kacheln,
-	.wp-block-column.zwei_kacheln {
-    flex-basis: 0;
-    flex-grow: 1;
-  }
-  .wp-block-column[style*="flex-basis"] {
-    flex-grow: 0;
-  }
-  .wp-block-column.drei_kacheln:not(:first-child),
-	.wp-block-column.zwei_kacheln:not(:first-child)
-	{
-    margin-left: 2em;
-  }
-}
-
-/* Überschrift mit Padding nach links und rechts */
-div.wp-block-column h2 {
-	padding: 0px 10px 0px 10px;
-}
-
-
-
-
-  /* ------------------------------ */
-  /* Zwei Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln" */
-  /* ------------------------------ */
-  /* Titel unter Bildern größer */
-  div.wp-block-column.zwei_kacheln {
-      font-size: 1.5rem;
-      padding: 0px 0px 2rem 0px;
-      background-color: white;
+  
+  /* Beiträge auch mit Schatten */
+  .generate-columns .inside-article {
       -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
       filter: drop-shadow(2px 2px 5px #CCCCCC);
   }
   
-/* Rand unten */
-@media (max-width: 1150px) {
-  div.wp-block-column.zwei_kacheln {
-       margin: 0px 0rem 3rem 0px;
+  
+  /* Animation auf der Hauptseite */
+  
+  div.sgs_hintergrund {
+      background-color: black;
+      width: 50vw;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 2rem;
+      opacity: 0.6;
+  }
+  
+  @media (max-width: 450px){
+      h2.sgs_animation {
+           font-size: 1rem;
       }
   }
-
-/* beim ersten Bild kein Rand */
-@media (min-width: 1151px) {
-  div.wp-block-column.zwei_kacheln:first-child {
-       margin: 0px 0rem 0rem 0px;
+  
+  @media (min-width: 451px){
+      h2.sgs_animation {
+           font-size: 2rem;
       }
   }
-
-
-
-
-  /* wenn die Bilder untereinander stehen, dann kein rechter Rand, damit die Bilder zentriert sind 
-  @media (min-width: 600px) and (max-width: 781px) {
-  div.wp-block-column.zwei_kacheln {
-      margin-right: 5px;
+  
+  h2.sgs_animation {
+          color: white;
+      opacity: 1;
+      -webkit-animation: fadeInlinks 2s; /* Safari, Chrome and Opera > 12.1 */
+         -moz-animation: fadeInlinks 2s; /* Firefox < 16 */
+          -ms-animation: fadeInlinks 2s; /* Internet Explorer */
+           -o-animation: fadeInlinks 2s; /* Opera < 12.1 */
+              animation: fadeInlinks 2s;
+  }
+  
+  @media (min-width: 968px){
+  
+  @-webkit-keyframes fadeInlinks {
+      0% {
+          -webkit-transform: translate3d(-100%,0,0);
+          opacity: 0;
+          transform: translate3d(-100%,0,0)
       }
+  
+      to {
+          -webkit-transform: translateZ(0);
+          opacity: 1;
+          transform: translateZ(0)
+      }
+  }
+  
+  @keyframes fadeInlinks {
+      0% {
+          -webkit-transform: translate3d(-100%,0,0);
+          opacity: 0;
+          transform: translate3d(-100%,0,0)
+      }
+  
+      to {
+          -webkit-transform: translateZ(0);
+          opacity: 1;
+          transform: translateZ(0)
+      }
+  }
+  }
+  
+  .fadeInlinks {
+      -webkit-animation-name: fadeInLeft;
+      animation-name: fadeInLeft
+  }
+  
+  /* damit bei Beiträgen die Bilder gleich hoch sind 
+  .generate-columns .inside-article img {
+          object-fit: cover;
+        max-height: 250px;
   }
   */
   
+  /* damit bei Ansprechpartnern die Bilder gleich hoch sind */
+  .wp-block-column.vier_kacheln img{
+      object-fit: cover;
+    height: 180px;
+  }
+  
+  
+  /* ------------------------------ */
+  /* Terminkalender */
+  /* ------------------------------ */
+  
+  
+  @media (min-width: 968px){
+  .tribe-events-calendar-month .generate-columns.tablet-grid-50, .grid-sizer.tablet-grid-50 {
+      width: 100%;
+  }
+  }
+  
+  /* ------------------------------ */
+  /* Schulleitung */
+  /* ------------------------------ */
+  p.has-text-align-center.schulleitung {
+      font-weight: 700;
+  }
+  
+  h2.has-text-align-center.schulleitungsteam {
+      margin-bottom: 0.3rem;
+  }
+  
+  /* ------------------------------ */
+  /* Variable Spalten bei Kollegium */
+  /* ------------------------------ */
+  div.flexible_spalten {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  div.flexible_spalten .wp-block-group__inner-container{
+      max-width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+  
+  /* 4 Spalten */
+  @media (min-width: 1500px)  {
+  div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+      width: 25%;
+  }
+  }
+  
+  
+  /* 3 Spalten */
+  @media (min-width: 1321px) and (max-width: 1499px) {
+  div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+      width: 33%;
+  }
+  }
+  
+  /* 2 Spalten */
+  @media (min-width: 1000px) and (max-width: 1320px) {
+  div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+      width: 50%;
+  }
+  }
+  
+  /* 1 Spalte */
+  @media (min-width: 769px) and (max-width: 999px) {
+  div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+      width: 100%;
+  }
+  }
+  
+  @media (min-width: 600px) and (max-width: 768px) {
+  div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+      width: 50%;
+      padding: 10px;
+  }
+  }
+  
+  /* 1 Spalte */
+  @media (max-width: 599px) {
+  div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+      width: 100%;
+  }
+  }
+      
+  /* dezenter Hover-Effekt */
+  .wp-block-columns.vier_kacheln:hover {
+           opacity:0.7;
+        transform: scale(1.01, 1.01);	
+  }
+  
+  /* Schriftgröße auf Kollegiumsseite bei Anker */
+  p.has-text-align-center.kollegium_anker a {
+      font-size: 1.8rem;
+      padding: 0.2rem;
+  }
+  
+  
+  /* ------------------------------ */
+  /* Vier Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln" */
+  /* ------------------------------ */
+  /* Titel unter Bildern größer */
+  div.wp-block-column.vier_kacheln {
+          padding: 20px 5px 24px 5px;
+      margin: 0px 15px 0px 15px;
+          background-color: white;
+          /* box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff; */
+          -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+      filter: drop-shadow(2px 2px 5px #CCCCCC); 
+          margin-bottom: 3rem;
+          justify-content: center; 
+        /* abgerundete Ecken 
+        border-radius: 20px 20px 0px 0px; */
+  }
+  
+  div.wp-block-column.vier_kacheln p {
+      font-size: 0.8em;
+  }
+  
+  div.wp-block-column.vier_kacheln h3 {
+      font-size: 1.1em;
+      margin-bottom: 0px;
+  }
+  
+  
+  @media (max-width: 999px) {
+      div.wp-block-column.vier_kacheln {
+              /* nur Rand unten */
+              padding: 20px 0px 24px 0px;
+        margin: 0px 0px 40px 0px;
+              justify-content: center;
+      }
+  }
+  
+  
+  /* ----------------------------- */
+  /* Breakpoints für Anzeige Posts */
+  /* ein- oder zweispaltig         */
+  /* ----------------------------- */
+  @media (max-width: 967px) {
+  .generate-columns.mobile-grid-100, .grid-sizer.mobile-grid-100 {
+      width: 100%;
+  }
+  }
+  
+  @media (min-width: 968px){
+  .generate-columns.tablet-grid-50, .grid-sizer.tablet-grid-50 {
+      width: 50%;
+  }
+  }
+  
+  
+  /* Icon für PPT, Word, etc. mit fester Größe */
+  .wp-block-image.office-icon figure.aligncenter.size-full.is-resized img
+  {
+      height: 3rem;
+      width: 3rem;
+  }
+  
+  
+  /* ----------------------------- */
+  /* Tabellen 
+  /* ----------------------------- */
+  
+  @media (min-width: 396px) {
+  figure.wp-block-table.aligncenter.klassenteams tr td:nth-child(1), figure.wp-block-table.aligncenter.klassenteams tr td:nth-child(2), figure.wp-block-table.aligncenter.klassenteams tr td:nth-child(4) {
+          background: #f0f0f0; 
+          font-weight:bold;
+      }
+  figure.wp-block-table.aligncenter.klassenteams td{
+          word-break: unset;
+      }
+  }
+  
+  @media (min-width: 496px) {
+      figure.wp-block-table.is-style-regular.ansprechpartner tr td:nth-child(1), 	figure.wp-block-table.is-style-regular.ansprechpartner tr td:nth-child(2) {
+          background: #f0f0f0; 
+          font-weight:bold;
+      }
+          figure.wp-block-table.is-style-regular.ansprechpartner td {
+          word-break: unset;
+      }
+  }
+  
+  @media (min-width: 1496px) {	
+    table.lehrer tr td:nth-child(1), table.lehrer tr td:nth-child(2){
+          background: #f0f0f0; 
+          font-weight:bold;
+          word-break: unset;
+      }
+  }
+  
+  /* Lehrer-Tabelle als HTML-Block wegen Anker */
+  @media (max-width: 1495px) {	
+    table.lehrer {
+          width:100%;
+          border: none;
+      }
+  
+    table.lehrer thead {
+          display: none;
+      }
+  
+      table.lehrer td, tr {
+          border: none;
+      }
+  
+    table.lehrer tr td:nth-child(1), table.lehrer tr td:nth-child(2) {
+              background: #f0f0f0; 
+              font-weight:bold;
+              font-size:1.3em;
+      }
+  
+      table.lehrer tr td:nth-child(1) {
+          border-top: 1px solid #000;
+      }
+  
+      table.lehrer tbody td {
+          display: block;  
+        text-align:center;
+      }
+  
+      table.lehrer tbody td:before {
+        content: attr(data-th);
+        display: block;
+        text-align:center; 
+    }
+  }
+  
+  
+  
+  /* Klassenteams-Tabelle */
+  
+  @media screen and (max-width: 395px) {	
+    figure.wp-block-table.aligncenter.klassenteams table{
+          width:100%;
+      }
+  
+    figure.wp-block-table.aligncenter.klassenteams table thead {
+          display: none;
+      }
+      
+      figure.wp-block-table.aligncenter.klassenteams table tr td:nth-child(1) {
+          border-top: 1px solid #000;
+      }	
+      
+      figure.wp-block-table.aligncenter.klassenteams tr td:nth-child(1), figure.wp-block-table.aligncenter.klassenteams tr td:nth-child(2), figure.wp-block-table.aligncenter.klassenteams tr  td:nth-child(4) {
+          background: #f0f0f0; 
+          font-weight:bold;
+          font-size:1.3em;
+      }
+      
+      figure.wp-block-table.aligncenter.klassenteams table tbody td {
+          display: block;  
+        text-align:center;
+      }
+  
+      figure.wp-block-table.aligncenter.klassenteams table tbody td:before {
+        content: attr(data-th);
+        display: block;
+        text-align:center; 
+    }
+  }
+  
+  
+  
+  /* Ansprechpartner-Tabelle */
+  @media screen and (max-width: 495px) {	
+    figure.wp-block-table.is-style-regular.ansprechpartner table{
+          width:100%;
+      }
+      
+    figure.wp-block-table.is-style-regular.ansprechpartner table td tr {
+          border: none;
+      }
+  
+    figure.wp-block-table.is-style-regular.ansprechpartner table thead {
+          display: none;
+      }
+      
+      figure.wp-block-table.is-style-regular.ansprechpartner tr td:nth-child(1) {	
+              border-top: 1px solid #000;
+      }
+      
+  figure.wp-block-table.is-style-regular.ansprechpartner tr td:nth-child(1), figure.wp-block-table.is-style-regular.ansprechpartner tr td:nth-child(2) {
+          background: #f0f0f0; 
+          font-weight:bold;
+          font-size:1.3em;
+      }
+      
+      
+      figure.wp-block-table.is-style-regular.ansprechpartner table tbody td {
+          display: block;  
+        text-align:center;
+      }
+  
+      figure.wp-block-table.is-style-regular.ansprechpartner table tbody td:before {
+        content: attr(data-th);
+        display: block;
+        text-align:center; 
+    }
+  }
+  
+  
+  
+  /* ----------------------------- */
+  /* Ende Tabellen 
+  /* ----------------------------- */
+  
+  /* accordion - block */
+  /* Akkordion: Ränder und Zeilenhöhe */
+  .panel p {
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+      margin-top: 1rem;
+  }
+  
+  /* Akkordion: Farbe weiß */
+  .wp-block-ainoblocks-accordion-faq-block.icon__right.br__xxs.pt__5.pb__5.pl__5.pr__5.has-base-3-color.has-text-color.has-background.open a {
+          color: white;
+  }
+  
+  /* Anstehende Veranstaltungen statt 50% */
+  .tribe-events-widget-events-list__event-wrapper.tribe-common-g-col article {
+      width: 100%;	
+  }
+  
+  
+  
+  /* Cover auf der Startseite */
+  .wp-block-cover__inner-container {
+      padding: 0rem 5rem 5rem 5rem;
+  }
+  
+  
+  /* größere Schrift bein den Veranstaltungen */
+  
+  @media (max-width: 1150px) {
+      h3.tribe-events-widget-events-list__event-title.tribe-common-h7 {
+      font-size: 0.8rem;
+      }
+  }
+  
+  @media (min-width: 1151px) {
+      h3.tribe-events-widget-events-list__event-title.tribe-common-h7 {
+      font-size: 1.1rem;
+      }
+  }
+  
+  
+  
+  
+  
+  /* ------------------------------ */
+  /* Spalten umbrechen
+   * https://die-netzialisten.de/responsiveness-spalten-block-anpassen/ */
+  /* ------------------------------ */
+  .wp-block-columns.drei_kacheln,
+  .wp-block-columns.zwei_kacheln{
+    display: flex;
+    margin-bottom: 1.75em;
+    flex-wrap: wrap;
+  }
+  
+  @media (min-width: 1151px) {
+    .wp-block-columns.drei_kacheln,
+      .wp-block-columns.zwei_kacheln {
+      flex-wrap: nowrap;
+    }
+  }
+  .wp-block-column.drei_kacheln,
+  .wp-block-column.zwei_kacheln {
+    flex-grow: 1;
+    min-width: 0;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  /* Bis hierher alles einspaltig*/
+  @media (max-width: 1150px) {
+      .wp-block-columns.drei_kacheln,
+      .wp-block-columns.zwei_kacheln {
+              display: block;		
+      }
+  }
+  
+  /*Ab hier Spaltenanzahl wie eingestellt*/
+  @media (min-width: 1151px) {
+    .wp-block-column.drei_kacheln,
+      .wp-block-column.zwei_kacheln {
+      flex-basis: 0;
+      flex-grow: 1;
+    }
+    .wp-block-column[style*="flex-basis"] {
+      flex-grow: 0;
+    }
+    .wp-block-column.drei_kacheln:not(:first-child),
+      .wp-block-column.zwei_kacheln:not(:first-child)
+      {
+      margin-left: 2em;
+    }
+  }
+  
+  /* Überschrift mit Padding nach links und rechts */
+  div.wp-block-column h2 {
+      padding: 0px 10px 0px 10px;
+  }
+  
+  
+  
+  
+    /* ------------------------------ */
+    /* Zwei Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln" */
+    /* ------------------------------ */
+    /* Titel unter Bildern größer */
+    div.wp-block-column.zwei_kacheln {
+        font-size: 1.5rem;
+        padding: 0px 0px 2rem 0px;
+        background-color: white;
+        -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+        filter: drop-shadow(2px 2px 5px #CCCCCC);
+    }
+    
+  /* Rand unten */
+  @media (max-width: 1150px) {
+    div.wp-block-column.zwei_kacheln {
+         margin: 0px 0rem 3rem 0px;
+        }
+    }
+  
+  /* beim ersten Bild kein Rand */
+  @media (min-width: 1151px) {
+    div.wp-block-column.zwei_kacheln:first-child {
+         margin: 0px 0rem 0rem 0px;
+        }
+    }
+  
+  
+  
+  
+    /* wenn die Bilder untereinander stehen, dann kein rechter Rand, damit die Bilder zentriert sind 
+    @media (min-width: 600px) and (max-width: 781px) {
+    div.wp-block-column.zwei_kacheln {
+        margin-right: 5px;
+        }
+    }
+    */
+    
+    /* beim Hover leicht größer mit mehr Schatten 
+    div.wp-block-column.zwei_kacheln:hover {
+            opacity:0.7;
+  
+          transform: scale(1.01, 1.01);
+            -webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
+        filter: drop-shadow(5px 5px 3px #CCCCCC);
+        transition-duration: 1s;
+    }
+    /* ------------------------------ */
+  
+  /* ------------------------------ */
+  /* Drei Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln" */
+  /* ------------------------------ */
+  /* Titel unter Bildern größer */
+  div.wp-block-column.drei_kacheln,
+  .inside-article  {
+      font-size: 1.5rem; 
+          padding: 10px 0px 24px 0px;
+      margin: 0px 40px 0px 0px;
+          background-color: white;
+          -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+    filter: drop-shadow(2px 2px 5px #CCCCCC);
+  /*		box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+          -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+      filter: drop-shadow(2px 2px 5px #CCCCCC); 
+          margin-bottom: 3rem;
+        /* abgerundete Ecken 
+        border-radius: 20px 20px 0px 0px; */
+  }
+  
+  /* bei drei Spalten und beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind */
+  @media (min-width: 1151px) {
+  div.wp-block-column.drei_kacheln:last-child {
+      margin-right: 0px;
+      }
+  }
+  
+  /* Bei Beiträgen kleinere Schrift */
+  .inside-article  {
+      font-size: inherit;
+          padding: inherit;
+          margin: inherit;
+  }
+  
+  /* bei einspaltiger Ansicht kein rechter Rand */
+  @media (max-width: 1150px) {
+  div.wp-block-column.drei_kacheln {
+      margin-right: 0px;
+      margin-bottom: 2rem;
+      }
+  }
+  
+  
+  
   /* beim Hover leicht größer mit mehr Schatten 
-  div.wp-block-column.zwei_kacheln:hover {
+  div.wp-block-column.drei_kacheln:hover{
           opacity:0.7;
-
+  
         transform: scale(1.01, 1.01);
           -webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
       filter: drop-shadow(5px 5px 3px #CCCCCC);
-      transition-duration: 1s;
+      transition-duration: 0.8s;
   }
+  
+  
+  
+  
+  /* Bilder in den Kacheln */
+  div.wp-block-column.drei_kacheln .wp-block-image:not(.is-style-rounded) img {
+      object-fit: cover;
+      /* abgerundete Ecken 
+      border-radius: 20px 20px 0px 0px; */
+  }
+  
+  /* Unterschriften bei Bildern */
+  .wp-block-image figcaption {
+          color: black;
+          margin-bottom: 0;	
+  }
+  
+  @media (max-width: 881px) {
+      .wp-block-column:nth-child(2n) {
+      margin-left: 0em;
+    }
+  }
+  
+  
+  @media (min-width: 882px) and (max-width: 981px) {
+      div.wp-block-column.drei_kacheln .wp-block-image:not(.is-style-rounded) img {
+              height: 10rem;
+      }	
+  }
+  
+  
+  
+  
+  /* Schriftgröße, etc. ändern auf Kacheln */
+  div.wp-block-column.drei_kacheln p{
+      margin-bottom: 1.5em;
+      color: black;
+      font-size: 1rem;
+      padding: 0 20px;
+  }
+  
+  div.wp-block-column.drei_kacheln ul{
+      font-size: 1rem;
+  }
+  
+  div.wp-block-column.drei_kacheln h3, h4{
+      padding: 0 20px;
+  }
+  
+  
   /* ------------------------------ */
-
-/* ------------------------------ */
-/* Drei Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln" */
-/* ------------------------------ */
-/* Titel unter Bildern größer */
-div.wp-block-column.drei_kacheln,
-.inside-article  {
-    font-size: 1.5rem; 
-		padding: 10px 0px 24px 0px;
-    margin: 0px 40px 0px 0px;
-		background-color: white;
-		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
-  filter: drop-shadow(2px 2px 5px #CCCCCC);
-/*		box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
-		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
-    filter: drop-shadow(2px 2px 5px #CCCCCC); 
-		margin-bottom: 3rem;
-	  /* abgerundete Ecken 
-	  border-radius: 20px 20px 0px 0px; */
-}
-
-/* bei drei Spalten und beim letzten Bild kein rechter Rand, weil sonst die Spalten nicht zentriert sind */
-@media (min-width: 1151px) {
-div.wp-block-column.drei_kacheln:last-child {
-	margin-right: 0px;
-	}
-}
-
-/* Bei Beiträgen kleinere Schrift */
-.inside-article  {
-    font-size: inherit;
-		padding: inherit;
-		margin: inherit;
-}
-
-/* bei einspaltiger Ansicht kein rechter Rand */
-@media (max-width: 1150px) {
-div.wp-block-column.drei_kacheln {
-	margin-right: 0px;
-	margin-bottom: 2rem;
-	}
-}
-
-
-
-/* beim Hover leicht größer mit mehr Schatten 
-div.wp-block-column.drei_kacheln:hover{
-		opacity:0.7;
-
-  	transform: scale(1.01, 1.01);
-		-webkit-filter: drop-shadow(5px 5px 3px #CCCCCC);
-    filter: drop-shadow(5px 5px 3px #CCCCCC);
-	transition-duration: 0.8s;
-}
-
-
-
-
-/* Bilder in den Kacheln */
-div.wp-block-column.drei_kacheln .wp-block-image:not(.is-style-rounded) img {
-	object-fit: cover;
-	/* abgerundete Ecken 
-	border-radius: 20px 20px 0px 0px; */
-}
-
-/* Unterschriften bei Bildern */
-.wp-block-image figcaption {
-		color: black;
-		margin-bottom: 0;	
-}
-
-@media (max-width: 881px) {
-	.wp-block-column:nth-child(2n) {
-    margin-left: 0em;
+  
+  p.bg_gelb {
+      background-color:#f7f8f9;
+      font-weight:bold;
+      font-size: large;
+      padding: 0.6rem;
   }
-}
-
-
-@media (min-width: 882px) and (max-width: 981px) {
-	div.wp-block-column.drei_kacheln .wp-block-image:not(.is-style-rounded) img {
-			height: 10rem;
-	}	
-}
-
-
-
-
-/* Schriftgröße, etc. ändern auf Kacheln */
-div.wp-block-column.drei_kacheln p{
-    margin-bottom: 1.5em;
-    color: black;
-    font-size: 1rem;
-    padding: 0 20px;
-}
-
-div.wp-block-column.drei_kacheln ul{
-    font-size: 1rem;
-}
-
-div.wp-block-column.drei_kacheln h3, h4{
-    padding: 0 20px;
-}
-
-
-/* ------------------------------ */
-
-p.bg_gelb {
-	background-color:#f7f8f9;
-	font-weight:bold;
-	font-size: large;
-	padding:10px;
-}
-
-/* Buttons auf dem Cover
-a.btn.d-none.d-sm-inline-block {
-    margin: 4px;
-    background-color: #BD0014;
-    padding: 10px;
-    color: white;
-}
-
-.wp-block-cover__inner-container {
-    margin-left: 50px;
-}
-h5 {
-    margin: 30px;
-}
- */
-
-/* Link bei hover auf rot */
-a.bg_red:hover {
-    text-decoration: none;
-		background-color: #BD0014;
-		color: #fff;
-}
-
-/* Schrift vom Link schwarz */
-a.bg_red {
-    text-decoration: none;
-    border-bottom: .1em dotted grey;
-	  color: black;
-	  font-weight:bold;
-    /* font-weight: bold; */
-}
-
-/*
-a.bg_red {
-    background-color: #BD0014;
-    color: white;
-}
-*/
-
-
-
-/* Text im Slider */
-p.d-none.d-md-block {
-    background-color: black;
-    opacity: 0.8;
-    font-weight: 300!important;
-}
-
-
-/* Breakpoint für mobiles Menü bei 1024 px 
- * funktioniert nicht
-@media (max-width: 1023px) {
-    .navbar-expand-md .navbar-toggler {
-        margin: 0 auto;
-				display:inherit;
-    }
-
-}
-
-
-@media (max-width: 1023px){
-.navbar-expand-md .navbar-collapse {
-    display: none!important;
-}
-}
-
-@media (min-width: 1024px){
-    .navbar-expand-md .navbar-toggler {
-    display: none!important;
-}
-}
-
-@media (min-width: 1024px){
-.navbar-expand-md .navbar-collapse {
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -ms-flex-preferred-size: auto;
-    flex-basis: auto;
-}
-}
-*/
-
-
-
-
-/* Auswahl Datum in TEC 5.x */
-span.tribe-events-c-top-bar__datepicker-desktop.tribe-common-a11y-hidden {
-    background-color: whitesmoke;
-}
-
-/* Textbox erst bei 990px zusammenschieben */
-@media (min-width: 990px) {
-    .carousel .layout-left {
-        right: 15%!important;
-    }
-
-    .carousel .layout-right {
-        left: 50%;
-        right: 15%;
-    }
-
-    #posts-slider .layout-left {
-        right: 55%;
-    }
-}
-
-/* Listen werden so schöner dargestellt */
-li.liste {
-    display: list-item;
-		margin:2rem;
-	  list-style-type: square;
-}
-
-/* Anzeige Foto in Einzelansicht 
-.wp-post-image {
-	width: 70% !important;
-}
-
-/* Anzeige Foto in Einzelansicht  
-.thumbnail-post {
-	width: 100% !important;
-}
-*/
-
-/* Autor nicht zeigen */
-.container .post .post-meta .author :not(.published) {
-     color: white;
- }
- .container .post .post-meta span {
-     color: #249a25;
- }
- .container .post .post-meta {
-     color: white;
- }
-
-
-.events-archive.events-gridview #tribe-events-content.tribe-events-month .hentry.vevent.type-tribe_events {
-    width: 100%;
-    margin: 0;
-    padding: 0%;
-}
-
-/* Kein Rahmen */
-.card {
-		border: 0px;
-}
-
-/* https://theeventscalendar.com/support/forums/topic/calendar-view-event-title-font-too-big/ */ 
-h3.tribe-events-month-event-title a, h3.tribe-events-month-event-title a:visited {
-  font-size: 11px !important;
-	color:#51545C !important; 
-}
-
-#tagline {
-    font-size:40px !important;
-    text-align:right !important;
-}
-
-h3.tribe-events-month-event-title.entry-title.summary{
-	font-size: 14px !important;
-}
-
-/* Farbliche Gestaltung im Untermenue */
-ul.nav-menu a {
-      color: #ffffff !important;
-      border-style: none !important;
-      text-shadow: none;
-}
-.menu-header {
-    border-color: #e0dddd!important;
-    border-style: none!important;
-    border-width: 0px!important;
-}
-
-ul.nav-menu ul {
-    border-style: none!important;
-}
-
-/* Logo nicht über dem Menü anzeigen */
-.header-logo-container img {
-    display: none;
-}
-
-/* Box über Terminen nicht anzeigen */
-.alert {
-    display: none;
-}
-
-/* Menue soll ausgeklappt grau sein */ 
-.dropdown-item {
-    background-color: #565358;
-		/* hellgrau: #A2A3A1; */
-		/* dunkelgrau: #565358; */
-		/* grün: #249a25; */
-}
-
-a, .page-link, .page-link:hover, code, .widget_calendar tbody a, .page-numbers.current {
-    color: #249a25;
-}
-
-div.anschrift{
-	border-color: whitesmoke;
-	border-width: 5px;
-	border-style: solid;
-	padding:20px 20px 20px 20px;
-}
-
-/* Sprungmarke Position – Abstand hinzufügen */
-.position::before {
-	display: block;
-	content: "";
-	height: 140px;
-	margin-top: -140px;
-	visibility: hidden;
-}
-
-/*
-#envirabox-title-float-wrap td {
-    background-color: #000000;
-}
-*/
-
-#envirabox-title-float-wrap { 	
-	background: none; 
-}
-
-/* Runde Bilder */
-img.rund {
-	  float: right;
-    margin: 0 0 2rem 2rem;
-    border-radius: 50%;
-}
-
-/* Für Footer 1 */
-.impressum {
-	text-align:center;
-	color:white;
-}
-
-
-/* Für Anmeldeformular */
-/* hgg, 27.10.2020 */
-.form_half {
-    width: 49.5%;
-    float: left;
-    margin-right: 1%;
-}
-
-.form_half_last {
-    margin-right: 0px;
-}
-
-
-@media (max-width: 767px) {
-
-.form_half {
-	width: 100%;
-
-	}
-}
-
-
-.wpcf7 input[type="text"],
-.wpcf7 input[type="email"],
-.wpcf7 textarea {
-    background-color: aliceblue;
-    border-color: #BD0014;
-    color: black;
-}
-
-
-
-/* ------------------------------ */
-/* Bilder mit Dreieck nur unten   */
-/* nicht verwendet                */
-/* ------------------------------ */
-
-.dreieck {
-/*    background: url(http://d.pr/i/eqn9+);
-    height: 200px;*/
-    position: relative;
-}
-
-.dreieck:before, .dreieck:after {
-    box-sizing: border-box;
-    content: " ";
-    position: absolute;
-    top:0;
-    display: block;
-    width: 50%;
-    height: 100%;
-    border-bottom: 20px solid white; 
-/*    border-bottom-color: white; */
-}
-
-.dreieck:before {
-    left: 0;
-    border-right: 30px solid transparent; 
-    border-left: 0;
-}
-
-.dreieck:after {
-    right: 0;
-    border-left: 30px solid transparent;
-    border-right: 0;
-}
-
-
-div.farbige_kachel {
-    height: 10%;
-    width: 10%;
-    padding: 60px 20px 60px 20px;
-    margin: 5px;
-    color: white;
-    background-color: green;
-    text-align: center;
-}
-/* ----------------------------- */
-/* Ende nicht verwendet */
-/* ----------------------------- */
-
+  
+  /* Absatz auf Schullaufbahn */
+  p.schullaufbahn {
+      background-color:#f7f8f9;
+      font-size: 1rem;
+      padding: 1rem;
+  }
+  
+  
+  /* Buttons auf dem Cover
+  a.btn.d-none.d-sm-inline-block {
+      margin: 4px;
+      background-color: #BD0014;
+      padding: 10px;
+      color: white;
+  }
+  
+  .wp-block-cover__inner-container {
+      margin-left: 50px;
+  }
+  h5 {
+      margin: 30px;
+  }
+   */
+  
+  /* Link bei hover auf rot */
+  a.bg_red:hover {
+      text-decoration: none;
+          background-color: #BD0014;
+          color: #fff;
+  }
+  
+  /* Schrift vom Link schwarz */
+  a.bg_red {
+      text-decoration: none;
+      border-bottom: .1em dotted grey;
+        color: black;
+        font-weight:bold;
+      /* font-weight: bold; */
+  }
+  
+  /*
+  a.bg_red {
+      background-color: #BD0014;
+      color: white;
+  }
+  */
+  
+  
+  
+  /* Text im Slider */
+  p.d-none.d-md-block {
+      background-color: black;
+      opacity: 0.8;
+      font-weight: 300!important;
+  }
+  
+  
+  /* Breakpoint für mobiles Menü bei 1024 px 
+   * funktioniert nicht
+  @media (max-width: 1023px) {
+      .navbar-expand-md .navbar-toggler {
+          margin: 0 auto;
+                  display:inherit;
+      }
+  
+  }
+  
+  
+  @media (max-width: 1023px){
+  .navbar-expand-md .navbar-collapse {
+      display: none!important;
+  }
+  }
+  
+  @media (min-width: 1024px){
+      .navbar-expand-md .navbar-toggler {
+      display: none!important;
+  }
+  }
+  
+  @media (min-width: 1024px){
+  .navbar-expand-md .navbar-collapse {
+      display: -ms-flexbox !important;
+      display: flex !important;
+      -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  }
+  }
+  */
+  
+  
+  
+  
+  /* Auswahl Datum in TEC 5.x */
+  span.tribe-events-c-top-bar__datepicker-desktop.tribe-common-a11y-hidden {
+      background-color: whitesmoke;
+  }
+  
+  /* Textbox erst bei 990px zusammenschieben */
+  @media (min-width: 990px) {
+      .carousel .layout-left {
+          right: 15%!important;
+      }
+  
+      .carousel .layout-right {
+          left: 50%;
+          right: 15%;
+      }
+  
+      #posts-slider .layout-left {
+          right: 55%;
+      }
+  }
+  
+  /* Listen werden so schöner dargestellt */
+  li.liste {
+      display: list-item;
+          margin:2rem;
+        list-style-type: square;
+  }
+  
+  /* Anzeige Foto in Einzelansicht 
+  .wp-post-image {
+      width: 70% !important;
+  }
+  
+  /* Anzeige Foto in Einzelansicht  
+  .thumbnail-post {
+      width: 100% !important;
+  }
+  */
+  
+  /* Autor nicht zeigen */
+  .container .post .post-meta .author :not(.published) {
+       color: white;
+   }
+   .container .post .post-meta span {
+       color: #249a25;
+   }
+   .container .post .post-meta {
+       color: white;
+   }
+  
+  
+  .events-archive.events-gridview #tribe-events-content.tribe-events-month .hentry.vevent.type-tribe_events {
+      width: 100%;
+      margin: 0;
+      padding: 0%;
+  }
+  
+  /* Kein Rahmen */
+  .card {
+          border: 0px;
+  }
+  
+  /* https://theeventscalendar.com/support/forums/topic/calendar-view-event-title-font-too-big/ */ 
+  h3.tribe-events-month-event-title a, h3.tribe-events-month-event-title a:visited {
+    font-size: 11px !important;
+      color:#51545C !important; 
+  }
+  
+  #tagline {
+      font-size:40px !important;
+      text-align:right !important;
+  }
+  
+  h3.tribe-events-month-event-title.entry-title.summary{
+      font-size: 14px !important;
+  }
+  
+  /* Farbliche Gestaltung im Untermenue */
+  ul.nav-menu a {
+        color: #ffffff !important;
+        border-style: none !important;
+        text-shadow: none;
+  }
+  .menu-header {
+      border-color: #e0dddd!important;
+      border-style: none!important;
+      border-width: 0px!important;
+  }
+  
+  ul.nav-menu ul {
+      border-style: none!important;
+  }
+  
+  /* Logo nicht über dem Menü anzeigen */
+  .header-logo-container img {
+      display: none;
+  }
+  
+  /* Box über Terminen nicht anzeigen */
+  .alert {
+      display: none;
+  }
+  
+  /* Menue soll ausgeklappt grau sein */ 
+  .dropdown-item {
+      background-color: #565358;
+          /* hellgrau: #A2A3A1; */
+          /* dunkelgrau: #565358; */
+          /* grün: #249a25; */
+  }
+  
+  a, .page-link, .page-link:hover, code, .widget_calendar tbody a, .page-numbers.current {
+      color: #249a25;
+  }
+  
+  div.anschrift{
+      border-color: whitesmoke;
+      border-width: 5px;
+      border-style: solid;
+      padding:20px 20px 20px 20px;
+  }
+  
+  /* Sprungmarke Position – Abstand hinzufügen */
+  .position::before {
+      display: block;
+      content: "";
+      height: 140px;
+      margin-top: -140px;
+      visibility: hidden;
+  }
+  
+  /*
+  #envirabox-title-float-wrap td {
+      background-color: #000000;
+  }
+  */
+  
+  #envirabox-title-float-wrap { 	
+      background: none; 
+  }
+  
+  /* Runde Bilder */
+  img.rund {
+        float: right;
+      margin: 0 0 2rem 2rem;
+      border-radius: 50%;
+  }
+  
+  /* Für Footer 1 */
+  .impressum {
+      text-align:center;
+      color:white;
+  }
+  
+  
+  /* Für Anmeldeformular */
+  /* hgg, 27.10.2020 */
+  .form_half {
+      width: 49.5%;
+      float: left;
+      margin-right: 1%;
+  }
+  
+  .form_half_last {
+      margin-right: 0px;
+  }
+  
+  
+  @media (max-width: 767px) {
+  
+  .form_half {
+      width: 100%;
+  
+      }
+  }
+  
+  
+  .wpcf7 input[type="text"],
+  .wpcf7 input[type="email"],
+  .wpcf7 textarea {
+      background-color: aliceblue;
+      border-color: #BD0014;
+      color: black;
+  }
+  
+  
+  
+  /* ------------------------------ */
+  /* Bilder mit Dreieck nur unten   */
+  /* nicht verwendet                */
+  /* ------------------------------ */
+  
+  .dreieck {
+  /*    background: url(http://d.pr/i/eqn9+);
+      height: 200px;*/
+      position: relative;
+  }
+  
+  .dreieck:before, .dreieck:after {
+      box-sizing: border-box;
+      content: " ";
+      position: absolute;
+      top:0;
+      display: block;
+      width: 50%;
+      height: 100%;
+      border-bottom: 20px solid white; 
+  /*    border-bottom-color: white; */
+  }
+  
+  .dreieck:before {
+      left: 0;
+      border-right: 30px solid transparent; 
+      border-left: 0;
+  }
+  
+  .dreieck:after {
+      right: 0;
+      border-left: 30px solid transparent;
+      border-right: 0;
+  }
+  
+  
+  div.farbige_kachel {
+      height: 10%;
+      width: 10%;
+      padding: 60px 20px 60px 20px;
+      margin: 5px;
+      color: white;
+      background-color: green;
+      text-align: center;
+  }
+  /* ----------------------------- */
+  /* Ende nicht verwendet */
+  /* ----------------------------- */
+  
+  
