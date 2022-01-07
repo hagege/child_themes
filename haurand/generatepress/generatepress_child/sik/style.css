@@ -146,21 +146,27 @@ p.links_wichtig, p.links_orange{
 /* Schriftdicke bei Überschriften */
 /* ------------------------------ */
 
-h1, h2, h3, h4, h5 {
+h1, h2  {
   text-align: center;
 }
 
-h1 {
-    font-weight: 700;
+/* h1 nicht zeigen */
+h1.entry-title {
+  display: none;
+  font-weight: 700;
 }
 
 h2 {
     font-weight: 700;
 }
 
-h3 {
+/* h3 immer linksbündig */
+h3, h4, h5 {
     font-weight: 600;
+    text-align: left;
 }
+
+
 
 
 
@@ -270,7 +276,10 @@ body.page .entry-content a:hover {
 
 
 ul.rote_liste,
-ul.ueber_uns {
+ul.ueber_uns,
+ul.ueber_uns_mit_bild,
+ul.ueber_uns_mag_nicht,
+ul.weisse_liste {
 	list-style: square;
 }
 
@@ -286,10 +295,6 @@ figcaption {
 /* Liste mit roten Markern */
 ul.weisse_liste li::marker {
   color: #B70000;
-}
-
-ul.weisse_liste {
-  list-style: square;
 }
 
 /* Links bei Listen */
@@ -343,6 +348,8 @@ div.wp-block-latest-posts__featured-image.aligncenter > a:hover
 	filter: invert(23%) sepia(23%) saturate(199%) hue-rotate(152deg) brightness(97%) contrast(90%);
 }
 
+
+/* bei Kontaktdaten */
 .icon-telefon {
     display: block;
     width: 86px;
@@ -350,7 +357,7 @@ div.wp-block-latest-posts__featured-image.aligncenter > a:hover
     background-size: cover;
     margin-left: auto;
     margin-right: auto;
-	filter: invert(85%) sepia(1%) saturate(2029%) hue-rotate(149deg) brightness(96%) contrast(60%);
+	  filter: invert(93%) sepia(4%) saturate(197%) hue-rotate(141deg) brightness(96%) contrast(88%);
 }
 
 
@@ -381,9 +388,13 @@ h3.ueber_uns {
   padding: 5px 0px 10px 0px;
   font-size: 1.6rem;
   font-weight: 500;
+  margin-bottom: 0px;
 }
   
-ul.ueber_uns li::marker {
+ul.ueber_uns li::marker,
+ul.ueber_uns_mit_bild li::marker,
+ul.ueber_uns_mit_bild li::marker,
+ul.ueber_uns_mag_nicht li::marker {
   color: #B70000;
 }
   
@@ -780,7 +791,8 @@ h2.entry-title {
     margin-left: 2rem;
     margin-right: 2rem;
     padding-top: 2rem;
-    height: calc(13rem + 5px);
+    /* Bild ist jetzt oben */
+    /* height: calc(13rem + 5px); */
 }
   
 @media (max-width:768px) { 
@@ -788,7 +800,7 @@ h2.entry-title {
       margin-left: 1rem;
       margin-right: 1rem;
       padding-top: 2rem;
-      font-size: 1.5rem;
+      /* font-size: 1.5rem; */
   }
   footer.entry-meta {
       font-size: 0.8em;
@@ -798,7 +810,8 @@ h2.entry-title {
     padding: 1rem; 
   }
 }
-  
+ 
+/* damit in der Beitrags-Übersicht die Ränder eingehalten werden */
 .entry-meta,
 .entry-summary {
     margin-left: 2rem;
