@@ -18,6 +18,11 @@
       --tec-color-background-events-bar-submit-button-hover: rgba(102, 98, 97, 1);
   }
   
+  /* oberer Rand bei Schulleitung */
+  .wp-block-image.schulleitung {
+      margin-top: 2rem;
+  }
+  
   /* Button ohne runde Ecken */
   .wp-block-button__link {
       border-radius: 0px;
@@ -27,6 +32,12 @@
   .generate-columns .inside-article {
       -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
       filter: drop-shadow(2px 2px 5px #CCCCCC);
+  }
+  
+  /* Text wird nicht gezeigt */
+  p.unsichtbar,
+  h2.unsichtbar {
+      display: none;
   }
   
   
