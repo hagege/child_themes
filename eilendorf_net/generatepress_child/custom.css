@@ -1,13 +1,34 @@
-/* Farben 
+/* Farben */
+/* 
+
+Alte Farben:
 Hellgrau:     #D9D9D9
 Blau:         #0B3043
 Türkis:       #00FFFF
+
+Neue Farben:
+Hellblau:     #08ADAD
+Orange:       #FA660F
+Braun:        #AD4609
+Braunorange:  #FF9354
+Dunkeltürkis: #08ADAD
+Helltürkis:   #00F5F6
+
+
 
 Breakpoint bei 1200px (einspaltig)
 */
 
 /* Variablen */
 :root {
+	--orange-color: rgba(250, 102, 15, 1);
+	--braun-color: rgba(173, 70, 9, 1);
+	--braunorange-color: rgba(255, 147, 84, 1);
+	--dunkeltuerkis-color: rgba(8, 173, 173, 1);
+  --dunkeltuerkis-color-opacity: rgba(8, 173, 173, 0.2);
+	--helltuerkis-color: rgba(0, 245, 246, 1);
+	
+/* "alte" Farben */	
   --hellgrau-color: rgba(217,217,217,1);
   --grau_1-color: rgba(190,190,190,1);
 	--grau_2-color: rgba(204,204,204,1);
@@ -15,6 +36,22 @@ Breakpoint bei 1200px (einspaltig)
   --tuerkis-color: rgba(0,255,255,1);
 }
 
+
+/* Read more und Buttons */
+div.wp-block-buttons.eilendorf_button a,
+.entry-content p.read-more-container a {
+	  font-weight: 600;
+	  border: 3px solid var(--dunkeltuerkis-color);
+	  background-color: white;
+    text-decoration: none!important;
+		border-radius: 20px 0px;
+	  color: var(--dunkeltuerkis-color);
+}
+
+div.wp-block-buttons.eilendorf_button a:hover, .entry-content p.read-more-container a:hover {
+	  background-color: var(--dunkeltuerkis-color-opacity);
+	  color: var(--orange-color); 
+}
 
 /* ------------------------------ */
 /* Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln abgerundet" */
