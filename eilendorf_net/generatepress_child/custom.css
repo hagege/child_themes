@@ -196,11 +196,17 @@ div.wp-block-column.drei_kacheln_abgerundet .wp-block-image:not(.is-style-rounde
 /* ----------------------------- */
 /* Animation für Text über Video */
 /* ----------------------------- */
-p.has-text-align-center.animated.fadeInLeft.slow{
+p.has-text-align-center.animated.fadeInLeft.slow {
     padding-top: 30rem;
-		margin-bottom: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 15rem;
+    text-align: left;
 }
 
+p.has-text-align-center.animated.fadeInLeft.slower {
+    margin-left: 15rem;
+    text-align: left;
+}
 
 
 /*------------------------------------*/
