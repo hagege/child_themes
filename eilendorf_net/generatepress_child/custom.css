@@ -37,6 +37,21 @@ Breakpoint bei 1200px (einspaltig)
 }
 
 
+ul.wp-block-latest-posts__list.aligncenter.beitrag_in_kachel.wp-block-latest-posts {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+ul.wp-block-latest-posts__list.aligncenter.beitrag_in_kachel.wp-block-latest-posts li p.read-more-container a {
+    display: unset;
+    text-align: left;
+}
+
+
+ul.wp-block-latest-posts__list.aligncenter.beitrag_in_kachel.wp-block-latest-posts li p.read-more-container {
+    margin-top: 2rem;
+}
+
 /* Read more und Buttons */
 div.wp-block-buttons.eilendorf_button a,
 .entry-content p.read-more-container a {
@@ -46,12 +61,15 @@ div.wp-block-buttons.eilendorf_button a,
     text-decoration: none!important;
 		border-radius: 20px 0px;
 	  color: var(--dunkeltuerkis-color);
+		font-size: 1rem;
 }
 
 div.wp-block-buttons.eilendorf_button a:hover, .entry-content p.read-more-container a:hover {
-	  background-color: var(--dunkeltuerkis-color-opacity);
+    background-color: white;;
 	  color: var(--orange-color); 
 }
+
+
 
 /* ------------------------------ */
 /* Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln abgerundet" */
