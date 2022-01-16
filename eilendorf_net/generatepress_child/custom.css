@@ -111,8 +111,7 @@ div.wp-block-column.kacheln_abgerundet {
     margin: 0px 40px 0px 0px;
 		background-color: white;
     border-radius: 30px 0px;
-		box-shadow:  12px 12px 24px var(--grau_1-color),
-             -12px -12px 24px #ffffff;
+		box-shadow: 6px 6px 1px var(--grau_1-color), -6px -6px 1px #ffffff;
 		-webkit-filter: drop-shadow(3px 3px 1px var(--grau_2-color));
     filter: drop-shadow(2px 2px 5px var(--grau_2-color)); 
 		margin-bottom: 3rem;
@@ -200,8 +199,7 @@ div.wp-block-column.drei_kacheln_abgerundet .wp-block-image:not(.is-style-rounde
 /* Kacheln auf der Hauptseite */
 
 .wp-block-column.kacheln_eilendorf {
-   box-shadow:  12px 12px 24px #bebebe,
-               -12px -12px 24px #ffffff;
+		box-shadow: 6px 6px 1px var(--grau_1-color), -6px -6px px #ffffff;
    -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
    filter: drop-shadow(2px 2px 5px #CCCCCC);
 	border-radius: 30px 0px 30px 0px;
