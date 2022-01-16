@@ -36,18 +36,47 @@ Breakpoint bei 1200px (einspaltig)
   --tuerkis-color: rgba(0,255,255,1);
 }
 
+@media (max-width: 650px) {
+	.wp-block-column.kacheln_abgerundet h2 {
+			margin-left: 0.5rem;
+			margin-right: 0.5rem;
+			font-size: 1em;
+	}
 
-ul.wp-block-latest-posts__list.aligncenter.beitrag_in_kachel.wp-block-latest-posts {
-    margin-left: 2em;
-    margin-right: 2em;
+	/* in der Kachel Text des Beitrags mit Rändern */
+	ul.wp-block-latest-posts__list.aligncenter.beitrag_in_kachel.wp-block-latest-posts {
+			margin-left: 1em;
+			margin-right: 1em;
+			font-size: 0.8em;
+	}
 }
 
+@media (min-width: 651px){
+	.wp-block-column.kacheln_abgerundet h2 {
+			margin-left: 0.8rem;
+			margin-right: 0.8rem;
+			font-size: 1.2em;
+	}
+
+	/* in der Kachel Text des Beitrags mit Rändern */
+	ul.wp-block-latest-posts__list.aligncenter.beitrag_in_kachel.wp-block-latest-posts {
+			margin-left: 1.2em;
+			margin-right: 1.2em;
+	}
+}
+
+/* Übesrchrift des Beitrags nicht zeigen */
+ul.wp-block-latest-posts__list.aligncenter.beitrag_in_kachel.wp-block-latest-posts li a {
+    display: none;
+}
+
+/* Read-More-Button zeigen */
 ul.wp-block-latest-posts__list.aligncenter.beitrag_in_kachel.wp-block-latest-posts li p.read-more-container a {
     display: unset;
     text-align: left;
 }
 
-
+/* Read-More-Button mit Rand nach oben */
 ul.wp-block-latest-posts__list.aligncenter.beitrag_in_kachel.wp-block-latest-posts li p.read-more-container {
     margin-top: 2rem;
 }
