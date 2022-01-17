@@ -18,6 +18,12 @@
       --tec-color-background-events-bar-submit-button-hover: rgba(102, 98, 97, 1);
   }
   
+  /* Bild im Menü (Office 365) */
+  img.bild-menue {
+      -ms-transform: translateY(20%);
+      transform: translateY(20%);
+  }
+  
   
   /* Button z. B. Schullaufbahn */
   .wp-block-buttons .sgs_button a {
