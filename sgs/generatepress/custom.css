@@ -18,6 +18,40 @@
       --tec-color-background-events-bar-submit-button-hover: rgba(102, 98, 97, 1);
   }
   
+  
+  /* Button z. B. Schullaufbahn */
+  .wp-block-buttons .sgs_button a {
+      background-color: var(--rot-color);
+      text-decoration: none!important;
+      font-size: 1.2rem;
+  }
+  
+  .wp-block-buttons .sgs_button a:hover{
+      color: #fff;
+      text-decoration: none;
+      background-color: var(--rot-color)!important;
+    box-shadow: 5px 5px 5px --grau_dunkel-color;
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    transform: scale(1.02);
+    opacity: 1.0;
+    /* VERZÖGERUNG */
+   -webkit-transition: all 0.5s linear;
+   -moz-transition: all 0.5s linear;
+   -ms-transition: all 0.5s linear;
+   -o-transition: all 0.5s linear;
+   transition: all 0.5s linear;
+  }
+  
+  
+  
+  /* Mail bei Schulleitung */
+  p.has-text-align-center.schulleitung_mail {
+      font-size: 1rem;
+  }
+  
   /* oberer Rand bei Schulleitung */
   .wp-block-image.schulleitung {
       margin-top: 2rem;
@@ -240,8 +274,19 @@
   }
   
   div.wp-block-column.vier_kacheln h3 {
-      font-size: 1.1em;
       margin-bottom: 0px;
+  }
+  
+  @media (min-width: 382px) {
+  div.wp-block-column.vier_kacheln h3 {
+      font-size: 1.1em;
+      }
+  }
+  
+  @media (max-width: 381px) {
+  div.wp-block-column.vier_kacheln h3 {
+      font-size: 0.9em;
+      }
   }
   
   
