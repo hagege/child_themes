@@ -18,6 +18,29 @@
       --tec-color-background-events-bar-submit-button-hover: rgba(102, 98, 97, 1);
   }
   
+  
+  /* Farbverlauf im Header */
+  @media (max-width: 550px){
+  .site-header, nav#sticky-navigation {
+  background-image: linear-gradient( 
+  40deg
+  , white 0%, #bd0014 70%);
+  }
+  }
+  
+  @media (min-width: 551px){
+  .site-header, nav#sticky-navigation {
+      background-image: linear-gradient(
+  40deg, white 0%, #bd0014 40%);
+  }
+  }
+  
+  /* Höhe der Menüleiste geändert */
+  .inside-header {
+      padding: 5px 40px;
+  }
+  
+  
   /* Bild im Menü (Office 365) */
   img.bild-menue {
       -ms-transform: translateY(20%);
