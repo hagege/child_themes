@@ -7,11 +7,12 @@ read -r -p "Are you sure you want to install WordPress? [y/N] " response
 # username, database-name, sitename - der folgende User wird nur lokal verwendet:
 wpuser="lokal"
 wpuser_pwd="Test_2019"
-### ---------------------- WICHTIG: Korrekt ersetzen ---------------------- ###
+### ---------------------- WICHTIG: ANFANG - Korrekt ersetzen ---------------------- ###
 # hier die Sicherungsdatei aus UpdraftPlus eintragen:
 wp_restore="backup_2022-01-17-2000_Das_BubenheimerSpieleland_6d354e071931"
 search_string="https://bubenheimer-spieleland.de" 
 dbname="bubenheim"
+### ---------------------- WICHTIG: ENDE - Korrekt ersetzen ---------------------- ###
 
 # wird ersetzt - keine Änderung notwendig:
 sitename=$dbname
