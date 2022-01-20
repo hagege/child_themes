@@ -1,0 +1,145 @@
+#!/bin/bash
+
+function emptysite() {
+	printf "\n---- Website-Inhalte zurücksetzen ----\n"
+	wp site empty --yes
+}
+
+function options() {
+	printf "\n----  Websitetitel und Beschreibung ersetzen ----\n"
+	wp option update blogname "WP – $(wp core version)"
+	wp option update blogdescription "WordPress Testumgebung"
+	wp option update timezone_string "Europe/Berlin"
+	wp option update date_format "j. F Y"
+	wp option update time_format "G:i"
+	wp option update permalink_structure "/%postname%/"
+	wp site switch-language de_DE
+}
+
+function theme() {
+	printf "\n---- Theme GeneratePress aktivieren ----\n"
+	wp theme activate generatepress
+}
+
+function menus() {
+	printf "\n----  Hauptmenü und Footermenü erstellen und zuweisen ----\n"
+	wp menu create "Main"
+	wp menu location assign main primary
+	wp menu create "Legal"
+	wp menu location assign legal footer
+}
+
+function frontpage() {
+	printf "\n----  Startseite erstellen und festlegen ----\n"
+	frontpage=$(wp post create \
+		--post_author=admin \
+		--post_title="Startseite" \
+		--post_status=publish \
+		--post_type=page \
+		--comment_status=closed \
+		--porcelain)
+	wp option update page_on_front $frontpage
+	wp menu item add-post main $frontpage
+	}
+
+function blog() {
+	printf "\n---- Beitragsseite erstellen und festlegen ----\n"
+	blog=$(wp post create \
+		--post_author=admin \
+		--post_title="Blog" \
+		--post_status=publish \
+		--post_type=page \
+		--comment_status=closed \
+		--porcelain)
+	wp option update page_for_posts $blog
+	wp menu item add-post main $blog
+	wp option update show_on_front page
+}
+
+function pages() {
+	printf "\n---- Seiten \"Über mich\", Kontakt und Impressum ----\n"
+	seiten=(
+	"Über mich"
+	Kontakt
+	)
+
+	for i in "${seiten[@]}"
+	do
+
+		menuitem=$(wp post create \
+			--post_author=admin \
+			--post_title="$i" \
+			--post_status=publish \
+			--post_type=page \
+			--comment_status=closed \
+			--porcelain)
+		wp menu item add-post main $menuitem
+
+	done
+
+	menuitem=$(wp post create \
+		--post_author=admin \
+		--post_title="Impressum" \
+		--post_status=publish \
+		--post_type=page \
+		--comment_status=closed \
+		--porcelain)
+	wp menu item add-post legal $menuitem
+
+	menuitem=$(wp post create \
+		--post_author=admin \
+		--post_title="Datenschutzerklärung" \
+		--post_status=publish \
+		--post_type=page \
+		--comment_status=closed \
+		--porcelain)
+	wp menu item add-post legal $menuitem
+	wp option update wp_page_for_privacy_policy $menuitem
+
+}
+
+
+function posts() {
+	printf "\n----  Zehn Beiträge mit Blindtext erstellen ----\n"
+	curl -N http://loripsum.net/api/5 | wp post generate --post_content --count=10 --post_date=2021-04-01
+}
+
+function taxonomy() {
+	wp term create category Mars --description="Planet Mars"
+	wp term create category Venus --description="Planet Venus"
+	wp term create category Jupiter --description="Planet Jupiter"
+	parent=$(wp term create category Erde --description="Planet Erde" --porcelain)
+	wp term create category Mond --description="Mond" --parent=$parent
+	wp term create post_tag Einstein
+	wp term create post_tag "Lise Meitner"
+}
+
+function plugins() {
+	printf "\n----  Plugins ----\n"
+	#Installiere und aktiviere Plugins
+	plugins="admin-bar-wrap-fix advanced-custom-fields autoupdate code-snippets contact-form-7 customizer-search	display-environment-type flying-pages gutenberg query-monitor user-switching wordpress-beta-tester"
+	wp plugin activate $plugins
+	wp plugin delete akismet
+}
+
+
+function media() {
+	printf "\n---- Alte Uploads löschen und 4 Stockphotos hochladen ----\n"
+	rm -rf ./wp-content/uploads/*
+	wp media import /var/www/wp-cli/stockphoto_{1..4}.jpg
+}
+
+# Nicht benötigte Funktionen auskommentieren
+emptysite
+options
+theme
+menus
+frontpage
+blog
+pages
+posts
+taxonomy
+plugins
+media
+
+printf "\n All done. Have a nice day. 🌻\n\n"
