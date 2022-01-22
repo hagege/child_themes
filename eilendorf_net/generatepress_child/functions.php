@@ -56,7 +56,7 @@ function haurand_register_block_categories() {
 			<!-- /wp:heading -->
 
 			<!-- wp:list -->
-			<ul><li><a href="http://eilendorf.net/stadtteilkonferenz/">Stadtteilkonferenz</a></li><li><a href="https://www.eilendorf.net/eilendorf-netz/">Eilendorf.net</a></li><li><a href="https://www.eilendorf.net/projekte/">Projekte</a></li></ul>
+			<ul><li><a href="https://www.eilendorf.net/stadtteilkonferenz/">Stadtteilkonferenz</a></li><li><a href="https://www.eilendorf.net/eilendorf-netz/">Eilendorf.net</a></li><li><a href="https://www.eilendorf.net/projekte/">Projekte</a></li></ul>
 			<!-- /wp:list --></div>
 			<!-- /wp:column -->
 
@@ -97,7 +97,7 @@ register_block_pattern(
 		<h2 class="has-text-align-center">Neues aus der Stadtteilkonferenz</h2>
 		<!-- /wp:heading -->
 
-		<!-- wp:latest-posts {"categories":[{"id":16,"count":1,"description":"","link":"http://eilendorf.net/category/stadtteilkonferenz/","name":"Stadtteilkonferenz","slug":"stadtteilkonferenz","taxonomy":"category","parent":0,"meta":[],"_links":{"self":[{"href":"http://eilendorf.net/wp-json/wp/v2/categories/16"}],"collection":[{"href":"http://eilendorf.net/wp-json/wp/v2/categories"}],"about":[{"href":"http://eilendorf.net/wp-json/wp/v2/taxonomies/category"}],"wp:post_type":[{"href":"http://eilendorf.net/wp-json/wp/v2/posts?categories=16"}],"curies":[{"name":"wp","href":"https://api.w.org/{rel}","templated":true}]}}],"postsToShow":1,"displayPostContent":true,"align":"center","className":"beitrag_in_kachel"} /--></div>
+		<!-- wp:latest-posts {"categories":[{"id":16,"count":1,"description":"","link":"https://www.eilendorf.net/category/stadtteilkonferenz/","name":"Stadtteilkonferenz","slug":"stadtteilkonferenz","taxonomy":"category","parent":0,"meta":[],"_links":{"self":[{"href":"https://www.eilendorf.net/wp-json/wp/v2/categories/16"}],"collection":[{"href":"https://www.eilendorf.net/wp-json/wp/v2/categories"}],"about":[{"href":"https://www.eilendorf.net/wp-json/wp/v2/taxonomies/category"}],"wp:post_type":[{"href":"https://www.eilendorf.net/wp-json/wp/v2/posts?categories=16"}],"curies":[{"name":"wp","href":"https://api.w.org/{rel}","templated":true}]}}],"postsToShow":1,"displayPostContent":true,"align":"center","className":"beitrag_in_kachel"} /--></div>
 		<!-- /wp:column -->
 
 		<!-- wp:column {"className":"kacheln_abgerundet"} -->
@@ -109,7 +109,7 @@ register_block_pattern(
 		<h2 class="has-text-align-center">Neues aus der Verwaltung</h2>
 		<!-- /wp:heading -->
 
-		<!-- wp:latest-posts {"categories":[{"id":17,"count":1,"description":"","link":"http://eilendorf.net/category/verwaltung/","name":"Verwaltung","slug":"verwaltung","taxonomy":"category","parent":0,"meta":[],"_links":{"self":[{"href":"http://eilendorf.net/wp-json/wp/v2/categories/17"}],"collection":[{"href":"http://eilendorf.net/wp-json/wp/v2/categories"}],"about":[{"href":"http://eilendorf.net/wp-json/wp/v2/taxonomies/category"}],"wp:post_type":[{"href":"http://eilendorf.net/wp-json/wp/v2/posts?categories=17"}],"curies":[{"name":"wp","href":"https://api.w.org/{rel}","templated":true}]}}],"postsToShow":1,"displayPostContent":true,"align":"center","className":"beitrag_in_kachel"} /--></div>
+		<!-- wp:latest-posts {"categories":[{"id":17,"count":1,"description":"","link":"https://www.eilendorf.net/category/verwaltung/","name":"Verwaltung","slug":"verwaltung","taxonomy":"category","parent":0,"meta":[],"_links":{"self":[{"href":"https://www.eilendorf.net/wp-json/wp/v2/categories/17"}],"collection":[{"href":"https://www.eilendorf.net/wp-json/wp/v2/categories"}],"about":[{"href":"https://www.eilendorf.net/wp-json/wp/v2/taxonomies/category"}],"wp:post_type":[{"href":"https://www.eilendorf.net/wp-json/wp/v2/posts?categories=17"}],"curies":[{"name":"wp","href":"https://api.w.org/{rel}","templated":true}]}}],"postsToShow":1,"displayPostContent":true,"align":"center","className":"beitrag_in_kachel"} /--></div>
 		<!-- /wp:column --></div>
 		<!-- /wp:columns -->',
  )
