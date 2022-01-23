@@ -46,14 +46,14 @@ Breakpoint bei 1200px (einspaltig)
 			margin-right: 0.5rem;
 			font-size: 1em;
 	}
-	
+
 		.wp-block-column.kacheln_abgerundet p 	{
-			margin-left: 1.5rem;
-			margin-right: 1.5rem;
+			margin-left: 0.5rem;
+			margin-right: 0.5rem;
 			font-size: 0.7em;
 	}
 
-	/* in der Kachel Text des Beitrags mit Rändern */
+	/* in der Kachel Text des Beitrags mit Rändern (neueste Beiträge)*/
 	ul.wp-block-latest-posts__list.aligncenter.beitrag_in_kachel.wp-block-latest-posts {
 			margin-left: 1em;
 			margin-right: 1em;
@@ -62,16 +62,15 @@ Breakpoint bei 1200px (einspaltig)
 }
 
 @media (min-width: 651px){
-	.wp-block-column.kacheln_abgerundet h2,
-	.wp-block-column.kacheln_abgerundet p {
+	.wp-block-column.kacheln_abgerundet h2 {
 			margin-left: 0.8rem;
 			margin-right: 0.8rem;
 			font-size: 1.2em;
 	}
 
 	.wp-block-column.kacheln_abgerundet p {
-			margin-left: 1rem;
-			margin-right: 1rem;
+			margin-left: 0.8rem;
+			margin-right: 0.8rem;
 			font-size: 0.9em;
 	}
 	
@@ -87,6 +86,7 @@ Breakpoint bei 1200px (einspaltig)
 ul.wp-block-latest-posts__list.aligncenter.beitrag_in_kachel.wp-block-latest-posts li a {
     display: none;
 }
+
 
 /* Read-More-Button zeigen */
 ul.wp-block-latest-posts__list.aligncenter.beitrag_in_kachel.wp-block-latest-posts li p.read-more-container a {
@@ -112,16 +112,24 @@ div.wp-block-buttons.eilendorf_button a,
 	  margin-top: 2rem;
 }
 
+div.wp-block-buttons.eilendorf_button a {
+	margin-right: 1rem;
+}
+
+
 div.wp-block-buttons.eilendorf_button a:hover, .entry-content p.read-more-container a:hover {
     background-color: white;;
 	  color: var(--orange-color); 
 }
 
 
+
+
 /* Verlinkung nicht zeigen bei neueste Beiträgen */
 ul.wp-block-latest-posts__list.neues.wp-block-latest-posts a {
     display: none;
 }
+
 
 
 /* Überschrift über Beitrag */

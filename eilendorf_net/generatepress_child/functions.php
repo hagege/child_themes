@@ -124,8 +124,8 @@ register_block_pattern(
      'description' => _x( 'Button', 'Button', 'button-pattern' ),
      'categories'  => array('haurand'),
      'content'     =>
-        '<!-- wp:buttons {"contentJustification":"left","className":"eilendorf_button"} -->
-		<div class="wp-block-buttons is-content-justification-left eilendorf_button"><!-- wp:button {"backgroundColor":"base-2","className":"is-style-outline"} -->
+        '<!-- wp:buttons {"contentJustification":"center","className":"eilendorf_button"} -->
+		<div class="wp-block-buttons is-content-justification-center eilendorf_button"><!-- wp:button {"backgroundColor":"base-2","className":"is-style-outline"} -->
 		<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-base-2-background-color has-background">Ein Button</a></div>
 		<!-- /wp:button --></div>
 		<!-- /wp:buttons -->',
