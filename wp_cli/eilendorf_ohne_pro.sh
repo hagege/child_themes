@@ -10,14 +10,15 @@ wpuser_pwd="Test_2019"
 
 ### ---------------------- WICHTIG: ANFANG - Korrekt ersetzen ---------------------- ###
 # hier die Sicherungsdatei aus UpdraftPlus eintragen:
-wp_restore="backup_2022-01-13-0000_aachenerkinderde_dc5ea2e80282"
+wp_restore="backup_2022-01-22-1905_Eilendorfnet_3627dbc92409"
 
 # ggfs. Datenbank mit anderer ID, sonst auskommentieren
 wp_restore_db=$wp_restore
-wp_restore_db="backup_2022-01-13-0500_aachenerkinderde_132a552b97c6"
+# wp_restore_db="backup_2022-01-13-0500_aachenerkinderde_132a552b97c6"
 
-search_string="https://aachenerkinder.de" 
-dbname="aachenerkinder"
+# ohne Slash am Ende! - Sonst wird in wp_options URL und HOME nicht ersetzt!
+search_string="https://www.eilendorf.net" 
+dbname="eilendorf"
 ### ---------------------- WICHTIG: ENDE - Korrekt ersetzen ---------------------- ###
 
 # wird ersetzt - keine Änderung notwendig:
@@ -25,7 +26,7 @@ sitename=$dbname
 dir=$dbname
 replace_string="http://localhost/${dbname}"
 
-### ---------------------- WICHTIG: Prüfen ---------------------- ###
+### ---------------------- WICHTIG: Laufwerk prüfen ---------------------- ###
 # braucht in der Regel nicht geändert zu werden, evtl. Laufwerk ändern
 target_dir="d:/laragon/www/${dir}/wp-content"
 backup_dir="d:/laragon/sicherungen/"
@@ -84,7 +85,7 @@ backup_dir="d:/laragon/sicherungen/"
 	
 	sicherung="${backup_dir}${wp_restore_db}-db"
 	php ../wp-cli.phar db import $sicherung
-	# php ../wp-cli.phar site switch-language de_DE
+	php ../wp-cli.phar site switch-language de_DE
 	# ------------------- WordPress installed ------------------- #
 
 	### ---------------------- Plugins, Themes, Uploads, Others entpacken ---------------------- ###	
@@ -124,10 +125,11 @@ backup_dir="d:/laragon/sicherungen/"
 	# lokal nicht genutzte Plugins deaktivieren:
 	php ../wp-cli.phar plugin deactivate koko-analytics
 	php ../wp-cli.phar plugin deactivate adrotate-pro
-	php ../wp-cli.phar plugin deactivate wp-rocket
-	php ../wp-cli.phar plugin deactivate wordpress-seo
-	php ../wp-cli.phar plugin deactivate wordpress-seo-premium
 	php ../wp-cli.phar plugin deactivate real-cookie-banner-pro
+	php ../wp-cli.phar plugin deactivate real-cookie-banner
+	php ../wp-cli.phar plugin deactivate seo-by-rank-math
+	php ../wp-cli.phar plugin deactivate asgaros-forum
+	php ../wp-cli.phar plugin deactivate wp-fastest-cache
 	
 	php ../wp-cli.phar theme update --all;
 	php ../wp-cli.phar plugin update --all;
