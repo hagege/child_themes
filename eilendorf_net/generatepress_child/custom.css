@@ -288,6 +288,13 @@ p.has-text-align-center.animated.fadeInLeft.slower {
 	/* transform: translateZ(5px)		scale(0.8); */
 }
 
+/* bis 1499px einspaltig */
+@media (max-width: 1499px) {
+.wp-block-columns {
+    display: inherit;
+    flex-wrap: wrap;
+}
+}
 
 /* ----------------------------- */
 /* universelle Lösung für Spalten und Breakpoints */
@@ -313,7 +320,7 @@ p.has-text-align-center.animated.fadeInLeft.slower {
 /* 3 --> 2 --> 1                 */
 /* ----------------------------- */
 
-@media (min-width: 600px) and (max-width: 1064px) {
+@media (min-width: 600px) and (max-width: 1264px) {
   .wp-block-columns.drei_spalten_2 {
     flex-flow: row wrap;
   }
