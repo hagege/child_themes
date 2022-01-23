@@ -38,11 +38,20 @@ Breakpoint bei 1200px (einspaltig)
 
 }
 
+
+/* Schriften und Ränder bei Kacheln, etc. */
 @media (max-width: 650px) {
-	.wp-block-column.kacheln_abgerundet h2 {
+	.wp-block-column.kacheln_abgerundet h2
+	{
 			margin-left: 0.5rem;
 			margin-right: 0.5rem;
 			font-size: 1em;
+	}
+	
+		.wp-block-column.kacheln_abgerundet p 	{
+			margin-left: 1.5rem;
+			margin-right: 1.5rem;
+			font-size: 0.7em;
 	}
 
 	/* in der Kachel Text des Beitrags mit Rändern */
@@ -54,12 +63,20 @@ Breakpoint bei 1200px (einspaltig)
 }
 
 @media (min-width: 651px){
-	.wp-block-column.kacheln_abgerundet h2 {
+	.wp-block-column.kacheln_abgerundet h2,
+	.wp-block-column.kacheln_abgerundet p {
 			margin-left: 0.8rem;
 			margin-right: 0.8rem;
 			font-size: 1.2em;
 	}
 
+	.wp-block-column.kacheln_abgerundet p {
+			margin-left: 1rem;
+			margin-right: 1rem;
+			font-size: 0.9em;
+	}
+	
+	
 	/* in der Kachel Text des Beitrags mit Rändern */
 	ul.wp-block-latest-posts__list.aligncenter.beitrag_in_kachel.wp-block-latest-posts {
 			margin-left: 1.2em;
@@ -67,7 +84,7 @@ Breakpoint bei 1200px (einspaltig)
 	}
 }
 
-/* Übesrchrift des Beitrags nicht zeigen */
+/* Überschrift des Beitrags nicht zeigen */
 ul.wp-block-latest-posts__list.aligncenter.beitrag_in_kachel.wp-block-latest-posts li a {
     display: none;
 }
@@ -110,7 +127,8 @@ div.wp-block-column.kacheln_abgerundet {
     color: var(--blau-color);
     font-size: 1.5rem;
 		padding: 0px 0px 24px 0px;
-    margin: 0px 40px 0px 0px;
+	  margin: 20px 120px 20px 20px;
+    /* margin: 0px 40px 0px 0px; */
 		background-color: white;
     border-radius: 30px 0px;
 		box-shadow: var(--shadow-kacheln);

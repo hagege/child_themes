@@ -1,0 +1,25 @@
+:root {
+    --tec-color-link-primary: rgba(173, 70, 9, 1);
+    --tec-color-link-accent: rgba(173, 70, 9, 1);
+    --tec-color-link-accent-hover: rgba(173, 70, 9, 0.8);
+    --tec-color-accent-primary: rgba(173, 70, 9, 1);
+    --tec-color-accent-primary-hover: rgba(173, 70, 9,0.8);
+    --tec-color-accent-primary-multiday: rgba(250, 102, 15,0.24);
+    --tec-color-accent-primary-multiday-hover: rgba(250, 102, 15,0.34);
+    --tec-color-accent-primary-active: rgba(255, 147, 84,0.9);
+    --tec-color-accent-primary-background: rgba(255, 147, 84,0.07);
+    --tec-color-background-secondary-datepicker: rgba(8, 173, 173,0.5);
+    --tec-color-accent-primary-background-datepicker: rgba(8, 173, 173, 1);
+    --tec-color-button-primary: rgba(255, 147, 84, 1);
+    --tec-color-button-primary-hover: rgba(255, 147, 84,0.8);
+    --tec-color-button-primary-active: rgba(255, 147, 84,0.9);
+    --tec-color-button-primary-background: rgba(51,74,255,0.07);
+    --tec-color-day-marker-current-month: rgba(8, 173, 173, 1);
+    --tec-color-day-marker-current-month-hover: rgba(8, 173, 173,0.8);
+    --tec-color-day-marker-current-month-active: rgba(8, 173, 173,0.9);
+    --tec-color-background-primary-multiday: rgba(8, 173, 173, 0.24);
+    --tec-color-background-primary-multiday-hover: rgba(8, 173, 173, 0.34);
+    --tec-color-background-primary-multiday-active: rgba(8, 173, 173, 0.34);
+    --tec-color-background-secondary-multiday: rgba(8, 173, 173, 0.24);
+    --tec-color-background-secondary-multiday-hover: rgba(8, 173, 173, 0.34);
+}
