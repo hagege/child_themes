@@ -18,27 +18,29 @@
       --tec-color-background-events-bar-submit-button-hover: rgba(102, 98, 97, 1);
   }
   
-  
-  /* Farbverlauf im Header */
-  @media (max-width: 550px){
-  .site-header, nav#sticky-navigation {
-  background-image: linear-gradient( 
-  40deg
-  , white 0%, #bd0014 70%);
-  }
-  }
-  
-  @media (min-width: 551px){
-  .site-header, nav#sticky-navigation {
-      background-image: linear-gradient(
-  40deg, white 0%, #bd0014 40%);
-  }
+  /* ------------------------------ */
+  /* neue Gestaltung der Menüleiste */
+  /* ------------------------------ */
+  .site-header,
+  nav#sticky-navigation {
+      background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30%, 
+  var(--rot-color) 100%);
   }
   
-  /* Höhe der Menüleiste geändert */
   .inside-header {
-      padding: 5px 40px;
+  padding: 5px 40px;
   }
+  
+  .nav-float-right .navigation-stick {
+    background-color: var(--rot-color);
+  }
+  
+  div#primary-menu,
+  nav#mobile-menu-control-wrapper {
+      background-color: var(--rot-color);
+  }
+  
+  
   
   
   /* Bild im Menü (Office 365) */
