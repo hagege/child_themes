@@ -38,6 +38,16 @@ Breakpoint bei 1200px (einspaltig)
 
 }
 
+/* Mini-Kalender */
+.tribe-events-widget-events-list__events {
+    padding-right: 1em!important;
+}
+
+header.tribe-events-widget-events-list__header h2 {
+    padding-left: 1.5em;
+}
+
+
 /* --------------------------- */
 /* Video im oberen Bereich     */
 /* --------------------------- */
@@ -72,7 +82,7 @@ video[poster] {
 /* ----------------------------- */
 @media (max-width: 650px) {
 p.has-text-align-center.animated.fadeInLeft.slow {
-padding-top: 30rem;
+    padding-top: 10rem;
     margin-bottom: 1rem;
     margin-left: 3rem;
     text-align: left;
@@ -184,7 +194,7 @@ div.wp-block-column.kacheln_abgerundet {
     color: var(--blau-color);
     font-size: 1.5rem;
 		padding: 0px 0px 24px 0px;
-    margin: 0px 40px 0px 0px;
+    margin: 0px 80px 0px 0px;
 		background-color: white;
     border-radius: 30px 0px;
 		box-shadow: var(--shadow-kacheln);
@@ -201,6 +211,19 @@ div.wp-block-column.kacheln_abgerundet a {
 	text-decoration-style: dotted;
 	text-decoration-thickness: 0.075em;
   text-underline-offset: 4.5px;
+	font-size: 1.2rem;
+}
+
+/* Texte in der Kachel mit Rand */
+div.wp-block-column.kacheln_abgerundet p {
+	margin-left: 1em;
+	margin-right: 1em;
+	font-size: 0.9em;
+}
+
+/* Darstellung der Listen */
+div.wp-block-column.kacheln_abgerundet ol, ul {
+    margin: 0 0 1em 2em;
 }
 
 /* bei einspaltiger Ansicht kein rechter Rand */
@@ -217,6 +240,15 @@ div.wp-block-column.kacheln_abgerundet {
 	  height: 15rem;
 		width: 100rem
 }
+
+
+/* Überschrift über Beitrag */
+h2.h2_beitrag {
+    margin-top: 0;
+    margin-bottom: 4rem;
+}
+
+
 
 /* Darstellung bei einspaltiger Kachel */
 @media (max-width: 1199px) {
