@@ -116,7 +116,7 @@ p.has-text-align-center.animated.fadeInLeft.slower {
 	}
 
 	/* in der Kachel Text des Beitrags mit Rändern */
-	ul.wp-block-latest-posts__list.aligncenter.beitrag_in_kachel.wp-block-latest-posts {
+	ul.wp-block-latest-posts__list.aligncenter.beitrag_in_kachel.wp-block-latest-posts, ul.wp-block-latest-posts__list.neues.wp-block-latest-posts {
 			margin-left: 1em;
 			margin-right: 1em;
 			font-size: 0.8em;
@@ -131,14 +131,18 @@ p.has-text-align-center.animated.fadeInLeft.slower {
 	}
 
 	/* in der Kachel Text des Beitrags mit Rändern */
-	ul.wp-block-latest-posts__list.aligncenter.beitrag_in_kachel.wp-block-latest-posts {
+	ul.wp-block-latest-posts__list.aligncenter.beitrag_in_kachel.wp-block-latest-posts, ul.wp-block-latest-posts__list.neues.wp-block-latest-posts {
 			margin-left: 1.2em;
 			margin-right: 1.2em;
 	}
 }
 
-/* Übesrchrift des Beitrags nicht zeigen */
+/* Überschrift des Beitrags nicht zeigen */
 ul.wp-block-latest-posts__list.aligncenter.beitrag_in_kachel.wp-block-latest-posts li a {
+    display: none;
+}
+
+ul.wp-block-latest-posts__list.neues.wp-block-latest-posts a {
     display: none;
 }
 
