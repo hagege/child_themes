@@ -23,8 +23,7 @@
   /* ------------------------------ */
   .site-header,
   nav#sticky-navigation {
-      background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30%, 
-  var(--rot-color) 100%);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8) 20%, rgba(189,0,20,1) 100%);
   }
   
   .inside-header {
@@ -35,10 +34,21 @@
     background-color: var(--rot-color);
   }
   
+  @media (max-width: 1150px){
   div#primary-menu,
   nav#mobile-menu-control-wrapper {
-      background-color: var(--rot-color);
+      background-color: rgba(189,0,20,0.01);
   }
+  }
+  
+  @media (min-width: 1151px){
+  div#primary-menu,
+  nav#mobile-menu-control-wrapper {
+      background-color: rgba(189,0,20,1);
+  }
+  }
+  
+  
   
   
   
