@@ -1,0 +1,87 @@
+/* ------------------------------ */
+/* neue Gestaltung der Menüleiste */
+/* ------------------------------ */
+@media (max-width: 700px){
+.site-header,
+nav#sticky-navigation {
+		background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.6) 55vw, rgba(189,0,20,1) 55vw);
+}
+	.site-logo {
+    max-width: 100px;
+}
+}
+
+@media (min-width: 701px){
+.site-header, nav#sticky-navigation {
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.6) 25vw, rgba(189,0,20,1) 35vw);
+}
+}
+
+.inside-header {
+padding: 5px 40px;
+}
+
+.nav-float-right .navigation-stick {
+  background-color: var(--rot-color);
+}
+
+@media (max-width: 1150px){
+div#primary-menu,
+nav#mobile-menu-control-wrapper {
+    background-color: rgba(189,0,20,0.01);
+}
+}
+
+@media (min-width: 1151px){
+div#primary-menu,
+nav#mobile-menu-control-wrapper {
+    background-color: rgba(189,0,20,1);
+}
+}
+
+
+
+/* evtl. Alternative: erst weiß, dann rot mit scharfen Schnitt zwischen den Farben, allerdings noch nicht fertig */
+
+
+/* ------------------------------ */
+/* neue Gestaltung der Menüleiste */
+/* ------------------------------ */
+@media (max-width: 390px){ 
+	.site-header, nav#sticky-navigation {
+    background: linear-gradient(90deg, rgba(255,255,255,1) 10em, rgba(189,0,20,1) 10em, rgba(189,0,0,1) 100vw);
+}
+	.site-header .header-image {
+    width: 100px;
+}
+}
+
+@media (min-width: 391px){ 
+.site-header, nav#sticky-navigation {
+    background: linear-gradient(90deg, rgba(255,255,255,1) 15em, rgba(189,0,20,1) 15em, rgba(189,0,0,1) 100vw);
+}
+}
+
+.inside-header {
+    padding: 5px 40px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.nav-float-right .navigation-stick {
+  background-color: var(--rot-color);
+}
+
+@media (max-width: 1150px){
+div#primary-menu,
+nav#mobile-menu-control-wrapper {
+    background-color: rgba(189,0,20,0.01);
+}
+}
+
+@media (min-width: 1151px){
+div#primary-menu,
+nav#mobile-menu-control-wrapper {
+    background-color: rgba(189,0,20,1);
+}
+}

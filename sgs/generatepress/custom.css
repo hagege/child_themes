@@ -18,12 +18,25 @@
       --tec-color-background-events-bar-submit-button-hover: rgba(102, 98, 97, 1);
   }
   
+  
+  
   /* ------------------------------ */
   /* neue Gestaltung der Menüleiste */
   /* ------------------------------ */
+  @media (max-width: 700px){
   .site-header,
   nav#sticky-navigation {
-  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8) 20%, rgba(189,0,20,1) 100%);
+          background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.6) 55vw, rgba(189,0,20,1) 55vw);
+  }
+      .site-logo {
+      max-width: 100px;
+  }
+  }
+  
+  @media (min-width: 701px){
+  .site-header, nav#sticky-navigation {
+      background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.6) 25vw, rgba(189,0,20,1) 35vw);
+  }
   }
   
   .inside-header {
