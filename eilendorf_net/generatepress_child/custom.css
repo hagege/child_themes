@@ -39,6 +39,13 @@ Breakpoint bei 1200px (einspaltig)
 }
 
 
+/* Rand bei der Terminliste eingestellt */
+@media (max-width: 1768px) {
+	.tribe-compatibility-container {
+    margin: 0em 2em 0em 2em;
+}
+}
+
 
 /* --------------------------- */
 /* Video im oberen Bereich     */
