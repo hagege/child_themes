@@ -1,0 +1,145 @@
+#!/bin/bash
+
+function emptysite() {
+	printf "\n---- Website-Inhalte zurücksetzen ----\n"
+	php ../wp-cli.phar site empty --yes
+}
+
+function options() {
+	printf "\n----  Websitetitel und Beschreibung ersetzen ----\n"
+	php ../wp-cli.phar option update blogname "WP – $(php ../wp-cli.phar core version)"
+	php ../wp-cli.phar option update blogdescription "WordPress Testumgebung"
+	php ../wp-cli.phar option update timezone_string "Europe/Berlin"
+	php ../wp-cli.phar option update date_format "j. F Y"
+	php ../wp-cli.phar option update time_format "G:i"
+	php ../wp-cli.phar option update permalink_structure "/%postname%/"
+	php ../wp-cli.phar site switch-language de_DE
+}
+
+function theme() {
+	printf "\n---- Theme GeneratePress aktivieren ----\n"
+	php ../wp-cli.phar theme activate generatepress
+}
+
+function menus() {
+	printf "\n----  Hauptmenü und Footermenü erstellen und zuweisen ----\n"
+	php ../wp-cli.phar menu create "Main"
+	php ../wp-cli.phar menu location assign main primary
+	php ../wp-cli.phar menu create "Legal"
+	php ../wp-cli.phar menu location assign legal footer
+}
+
+function frontpage() {
+	printf "\n----  Startseite erstellen und festlegen ----\n"
+	frontpage=$(php ../wp-cli.phar post create \
+		--post_author=admin \
+		--post_title="Startseite" \
+		--post_status=publish \
+		--post_type=page \
+		--comment_status=closed \
+		--porcelain)
+	php ../wp-cli.phar option update page_on_front $frontpage
+	php ../wp-cli.phar menu item add-post main $frontpage
+	}
+
+function blog() {
+	printf "\n---- Beitragsseite erstellen und festlegen ----\n"
+	blog=$(php ../wp-cli.phar post create \
+		--post_author=admin \
+		--post_title="Blog" \
+		--post_status=publish \
+		--post_type=page \
+		--comment_status=closed \
+		--porcelain)
+	php ../wp-cli.phar option update page_for_posts $blog
+	php ../wp-cli.phar menu item add-post main $blog
+	php ../wp-cli.phar option update show_on_front page
+}
+
+function pages() {
+	printf "\n---- Seiten \"Über mich\", Kontakt und Impressum ----\n"
+	seiten=(
+	"Über mich"
+	Kontakt
+	)
+
+	for i in "${seiten[@]}"
+	do
+
+		menuitem=$(php ../wp-cli.phar post create \
+			--post_author=admin \
+			--post_title="$i" \
+			--post_status=publish \
+			--post_type=page \
+			--comment_status=closed \
+			--porcelain)
+		php ../wp-cli.phar menu item add-post main $menuitem
+
+	done
+
+	menuitem=$(php ../wp-cli.phar post create \
+		--post_author=admin \
+		--post_title="Impressum" \
+		--post_status=publish \
+		--post_type=page \
+		--comment_status=closed \
+		--porcelain)
+	php ../wp-cli.phar menu item add-post legal $menuitem
+
+	menuitem=$(php ../wp-cli.phar post create \
+		--post_author=admin \
+		--post_title="Datenschutzerklärung" \
+		--post_status=publish \
+		--post_type=page \
+		--comment_status=closed \
+		--porcelain)
+	php ../wp-cli.phar menu item add-post legal $menuitem
+	php ../wp-cli.phar option update php ../wp-cli.phar_page_for_privacy_policy $menuitem
+
+}
+
+
+function posts() {
+	printf "\n----  Zehn Beiträge mit Blindtext erstellen ----\n"
+	curl -N http://loripsum.net/api/5 | php ../wp-cli.phar post generate --post_content --count=10 --post_date=2021-04-01
+}
+
+function taxonomy() {
+	php ../wp-cli.phar term create category Mars --description="Planet Mars"
+	php ../wp-cli.phar term create category Venus --description="Planet Venus"
+	php ../wp-cli.phar term create category Jupiter --description="Planet Jupiter"
+	parent=$(php ../wp-cli.phar term create category Erde --description="Planet Erde" --porcelain)
+	php ../wp-cli.phar term create category Mond --description="Mond" --parent=$parent
+	php ../wp-cli.phar term create post_tag Einstein
+	php ../wp-cli.phar term create post_tag "Lise Meitner"
+}
+
+function plugins() {
+	printf "\n----  Plugins ----\n"
+	#Installiere und aktiviere Plugins
+	plugins="admin-bar-wrap-fix advanced-custom-fields autoupdate code-snippets contact-form-7 customizer-search	display-environment-type flying-pages gutenberg query-monitor user-switching wordpress-beta-tester"
+	php ../wp-cli.phar plugin activate $plugins
+	php ../wp-cli.phar plugin delete akismet
+}
+
+
+function media() {
+	printf "\n---- Alte Uploads löschen und 4 Stockphotos hochladen ----\n"
+	rm -rf ./php ../wp-cli.phar-content/uploads/*
+	php ../wp-cli.phar media import D:/laragon/sicherungen/bilder/bild_{1..15}.jpg
+}
+
+# Nicht benötigte Funktionen auskommentieren
+emptysite
+options
+theme
+menus
+frontpage
+blog
+pages
+posts
+taxonomy
+plugins
+media
+
+printf "\n All done. Have a nice day. 🌻\n\n"
