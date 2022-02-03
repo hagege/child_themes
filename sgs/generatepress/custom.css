@@ -205,10 +205,10 @@
   }
   */
   
-  /* damit bei Ansprechpartnern die Bilder gleich hoch sind */
+  /* damit bei Ansprechpartnern und Kollegium die Bilder gleich hoch sind */
   .wp-block-column.vier_kacheln img{
       object-fit: cover;
-    height: 180px;
+    height: 150px; 
   }
   
   
@@ -641,10 +641,10 @@
         filter: drop-shadow(2px 2px 5px #CCCCCC);
     }
     
-  /* Rand unten */
+  /* Nur Rand unten, kein Rand links */
   @media (max-width: 1150px) {
     div.wp-block-column.zwei_kacheln {
-         margin: 0px 0rem 3rem 0px;
+         margin: 0px 0rem 3rem 0px!important;
         }
     }
   
