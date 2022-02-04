@@ -5,27 +5,37 @@
 
 
 		#Set the array of folders
-		# DIRECTORIES=( 'aachen50plus' 'ackids_50' 'ackids' 'bubenheim' 'eilendorf.net' 'eks_eschweiler' 'leer' 'Onepager' 'rs_mausbach' 'sgs' 'sprecherforscher' 'sprecherforscher-neu' test' 'testseite-2-haurand.com' 'testseite-haurand.com' 'Testseite-Kunde' 'twenty-twenty' 'wp53Leer');
-        DIRECTORIES=( 'aachen50plus' 'ackids_50' 'ackids' 'bubenheim' 'eilendorf.net' 'eks_eschweiler' 'Onepager' 'rs_mausbach' 'leer' 'sgs' 'sprecherforscher' 'test' 'testseite-2-haurand.com' 'testseite-haurand.com' 'Testseite-Kunde' 'wp53Leer' 'twenty-twenty');
-        # DIRECTORIES=( 'aachen50plus' 'ackids_50' 'ackids' );
-		#For each item in array, run the commands
+		# DIRECTORIES=( 'aachen50plus' 'ackids_test' 'ackids' 'bubenheim' 'eilendorf.net' 'eks_eschweiler' 'leer' 'Onepager' 'sgs' 'test' 'testseite-2-haurand.com' 'testseite-haurand.com' 'Testseite-Kunde' 'twenty-twenty' 'wp53Leer');
+		# Achtung: Die Instanzen müssen vorhanden sein
+        # DIRECTORIES=( 'aachen50plus' 'ackids_test' 'ackids' 'bubenheim' 'eilendorf.net' 'eks_eschweiler' 'Onepager' 'leer' 'sgs' 'test' 'testseite-2-haurand.com' 'testseite-haurand.com' 'Testseite-Kunde' 'wp53Leer' 'twenty-twenty');
+		#
+		# um alle Subdirectories einzulesen:
+		# DIRECTORIES=( */ );
+		#
+		# nur bestimmte Subdirectories:
+        DIRECTORIES=( 'aachen50plus' 'ackids_test' 'ackids' );
+		#
+		# For each item in array, run the commands
         # read -p "Press [Enter] key to continue..."
-  	    echo "theme-Listen:" > ../theme_liste.txt; 
-		echo "*****************************************************" >> ../theme_liste.txt;        
+		laragon_dir='d:/laragon/www/'
+		rm -rv theme_liste.txt;
+  	    echo "theme-Listen:" > theme_liste.txt; 
+		echo "*****************************************************" >> theme_liste.txt;        
 		for dir in ${DIRECTORIES[@]} ; do
-
-		  cd ${dir};
+		  act_dir=$laragon_dir;
+		  echo ${act_dir};
+		  act_dir="$laragon_dir$dir";
+		  echo ${act_dir};
+		  cd ${act_dir};
 
 		  echo "";
 		  echo "";
 		  echo "*****************************************************" ;
 		  echo "theme-Listen:";         
 		  echo "*****************************************************" >> ../theme_liste.txt; 
-		  echo "theme-Liste für ${dir}" >> ../theme_liste.txt;
-		  echo "theme-Liste für ${dir}" ;
+		  echo "theme-Liste für ${act_dir}" >> ../theme_liste.txt;
+		  echo "theme-Liste für ${act_dir}";
 		  echo "*****************************************************" >> ../theme_liste.txt;
-		  echo "";
-		  echo "";
           # read -p "Press [Enter] key to continue..."
 
 		  php ../wp-cli.phar theme list >> ../theme_liste.txt;
@@ -36,6 +46,8 @@
           # php ../wp-cli.phar language theme --all update
           
 
+  		  echo "" >> ../theme_liste.txt;
+		  echo "" >> ../theme_liste.txt;
 		  echo '';
 		  echo '';
 		  echo "*****************************************************" ;
@@ -44,7 +56,7 @@
 		  echo '';
 		  echo '';
 
-		  cd .. ;
+		  # cd .. ;
 		done
 
     read -p "FINISHED - Press [Enter] key to continue..."

@@ -17,6 +17,13 @@ folgendes einfügen */
 
 /* speichern 
 entpacken.php öffnen im browser 
-fertig */
+fertig 
+
+Für technische Fittere bzw. auch um Testing zu scripten:
+WP mit db file:
+https://github.com/Lightweb-Media/run-local-wordpress
+
+*/
+
 
 ?>
