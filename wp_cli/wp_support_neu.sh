@@ -2,14 +2,14 @@
 
 function options() {
 	printf "\n----  Websitetitel und Beschreibung ersetzen ----\n"
-	php ../wp-cli.phar option update blogname "WP – $(php ../wp-cli.phar core version)"
-	php ../wp-cli.phar option update blogdescription "WordPress Neue Testumgebung"
+	php ../wp-cli.phar option update blogname "WP – Support"
+	php ../wp-cli.phar option update blogdescription "WordPress Support - Neue Testumgebung"
 	php ../wp-cli.phar option update timezone_string "Europe/Berlin"
 	php ../wp-cli.phar option update date_format "j. F Y"
 	php ../wp-cli.phar option update time_format "G:i"
 	php ../wp-cli.phar option update permalink_structure "/%postname%/"
 	php ../wp-cli.phar site switch-language de_DE
-	
+}	
 
 function users() {
     declare -A user
@@ -19,8 +19,17 @@ function users() {
     user["subscriber"]=Abonennt
 
     for key in "${!user[@]}"; do
-        wp user create ${user[${key}]} ${user[${key}],}@wp.test --role=${key} --user_pass=password
+        php ../wp-cli.phar user create ${user[${key}]} ${user[${key}],}@wp.test --role=${key} --user_pass=password
     done
+}
+
+function delete_plugins() {
+	php ../wp-cli.phar plugin delete hello
+	php ../wp-cli.phar plugin delete akismet
+}
+
+function activate_themes() {
+	php ../wp-cli.phar theme install generatepress --activate
 }
 
 
@@ -30,8 +39,9 @@ read -r -p "Are you sure you want to install WordPress? [y/N] " response
 
 # username, database-name, sitename
 wpuser='hagege'
-dbname='Support-Seite'
+dbname='support'
 sitename='Support-Seite'
+dir='support'
 
 	if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
 
@@ -86,12 +96,14 @@ sitename='Support-Seite'
 			php ../wp-cli.phar user create lokal lokal@haurand.com --role=administrator --user_pass=Test_2019
 			# german language:
 			php ../wp-cli.phar language core install de_DE
-			php ../wp-cli.phar language core activate de_DE
+			# php ../wp-cli.phar language core activate de_DE
 			
 			
 			options
 			users
-			echo 'Alle Benutzer angelegt'.	
+			echo 'Alle Benutzer angelegt'.
+			delete_plugins
+			activate_themes
 
 			
 			printf "\n----  Zehn Beiträge mit Blindtext erstellen ----\n"
