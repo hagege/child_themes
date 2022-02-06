@@ -109,9 +109,19 @@ dir='support'
 			printf "\n----  Zehn Beiträge mit Blindtext erstellen ----\n"
 			curl -N http://loripsum.net/api/5 | php ../wp-cli.phar post generate --post_content --count=10 --post_date=2022-02-01
 			php ../wp-cli.phar media import D:/laragon/sicherungen/bilder/bild_{1..15}.jpg
+			# hier sollten den Beiträgen featured images zugeordnet werden. Klappt leider so nicht:
+			# https://danielbachhuber.com/tip/assign-featured-image-generated-post/
+			# php ../wp-cli.phar post generate --format=ids | xargs -0 -d ' ' -I % wp post meta update % _thumbnail_id 19
 			# install the _s theme
 			# php ../wp-cli.phar theme install https://github.com/Automattic/_s/archive/master.zip --activate
-
+			# Bilder bei den Beiträgen als featured image zuordnen. Nicht ganz so schön, aber klappt:
+			bild=14
+			for i in {4..16}
+			do
+			   bild=$(($bild+1));	
+			   php ../wp-cli.phar post meta update $i _thumbnail_id $bild
+			   echo "Beitrag $i mit Bild $bild"
+			done
 			# clear
 
 			echo "================================================================="
