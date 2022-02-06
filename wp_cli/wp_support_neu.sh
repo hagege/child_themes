@@ -115,6 +115,7 @@ dir='support'
 			# install the _s theme
 			# php ../wp-cli.phar theme install https://github.com/Automattic/_s/archive/master.zip --activate
 			# Bilder bei den Beiträgen als featured image zuordnen. Nicht ganz so schön, aber klappt:
+			# siehe https://dev-notes.eu/2016/07/bulk-import-images-using-wp-cli/
 			bild=14
 			for i in {4..16}
 			do
