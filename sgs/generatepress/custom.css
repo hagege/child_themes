@@ -74,14 +74,17 @@
   
   
   /* Button z. B. Schullaufbahn */
-  .wp-block-buttons .sgs_button a {
+  .wp-block-buttons .sgs_button a,
+  .wp-block-buttons.sgs_button a.wp-block-button__link {
       background-color: var(--rot-color);
       text-decoration: none!important;
       font-size: 1.2rem;
   }
   
-  .wp-block-buttons .sgs_button a:hover{
+  .wp-block-buttons .sgs_button a:hover
+  , .wp-block-buttons.sgs_button a.wp-block-button__link:hover {	
       color: #fff;
+      opacity: 0.6;
       text-decoration: none;
       background-color: var(--rot-color)!important;
     box-shadow: 5px 5px 5px --grau_dunkel-color;
@@ -90,7 +93,6 @@
     -ms-transform: scale(1.02);
     -o-transform: scale(1.02);
     transform: scale(1.02);
-    opacity: 1.0;
     /* VERZÖGERUNG */
    -webkit-transition: all 0.5s linear;
    -moz-transition: all 0.5s linear;
