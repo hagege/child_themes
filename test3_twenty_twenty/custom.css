@@ -5,6 +5,7 @@
 */
 
 
+
 /* ------------------------------ */
 /* Variable Spalten von 4 bis 1   */
 /* ------------------------------ */
@@ -339,65 +340,46 @@ div.flexible_spalten {
 		  font-weight: 400;
   }
   
-  /* ------------------------------ */
-  /* Text in Spalten überlappend */
-  /* ------------------------------ */
-  @media (max-width: 881px) {
+/* ------------------------------ */
+/* Text in Spalten überlappend */
+/* ------------------------------ */
+@media (max-width: 881px) {
   .wp-block-column.spalte_links_ueberlappend,
-  .wp-block-column.spalte_rechts_ueberlappend
-	  {
+  .wp-block-column.spalte_rechts_ueberlappend  {
 		background: rgb(255,228,196,70%);
-		  justify-content:center;
-	  padding: 1em;
-		  margin: 0px;
+		justify-content:center;
+	  	padding: 1em;
+		margin: 0px;
    }
-	  .wp-block-column.spalte_bild_ueberlappend {
+  .wp-block-column.spalte_bild_ueberlappend {
 	  margin: 0px;
-	  }
-	  .wp-block-columns.spalten_ueberlappend {
-			  display: flex;
-			  flex-direction: column-reverse;
-	  }
-  /*	
-		  .wp-block-column.spalte_links_ueberlappend {
-			margin-bottom: -10rem!important;
-	  }
-	  .wp-block-column.spalte_rechts_ueberlappend {
-			margin-top: -10rem!important;
-			  z-index:0;
-	  }
-  */	
+	}
+  .wp-block-columns.spalten_ueberlappend {
+	  display: flex;
+	  flex-direction: column-reverse;
   }
+}
   
   @media (min-width: 882px) {
-	  /*
-  .wp-block-columns.alignwide.spalten_ueberlappend  {
-			  margin-top: 0px!important;
-			  margin-bottom: 0px!important;
-	  }	
-	  */
-	  .wp-block-column.spalte_links_ueberlappend {
-			margin-left: -15rem!important;
-	  }
-	  .wp-block-column.spalte_rechts_ueberlappend {
-			margin-right: -15rem!important;
-			  z-index:0;
-	  }
+  .wp-block-column.spalte_links_ueberlappend {
+		transform: translateX(-10%) translateY(0%);
+  }
+  .wp-block-column.spalte_rechts_ueberlappend {
+		transform: translateX(10%) translateY(0%);
+		z-index:0;
+  }
   .wp-block-column.spalte_links_ueberlappend,
   .wp-block-column.spalte_rechts_ueberlappend
-	  {
-  /*		margin-top: 25vh;
-		  margin-bottom: 25vh;
-  */		
+  {
 		background: rgb(255,228,196,70%);
-	  padding: 10vh;
-		  justify-content:center;
+		padding: 10vh;
+		justify-content:center;
   }
-  }
+}
   
-  p.text_ueberlappend {
-	  padding: 0rem;
-  }
+p.text_ueberlappend {
+	padding: 0rem;
+}
   
   /* ------------------------------ */
   
