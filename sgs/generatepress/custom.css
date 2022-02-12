@@ -73,7 +73,9 @@
   }
   
   
-  /* Button z. B. Schullaufbahn */
+  /* ------------------------------ */
+  /* Button z. B. Schullaufbahn und Kollegium */
+  /* ------------------------------ */
   .wp-block-buttons .sgs_button a,
   .wp-block-buttons.sgs_button a.wp-block-button__link {
       background-color: var(--rot-color);
@@ -101,7 +103,10 @@
    transition: all 0.5s linear;
   }
   
-  
+  [id^="lehrer_"] { 
+      padding-top: 15rem; 
+      margin-top: -15rem!important;
+  }
   
   /* Mail bei Schulleitung */
   p.has-text-align-center.schulleitung_mail {
@@ -128,6 +133,7 @@
   p.unsichtbar,
   h2.unsichtbar {
       display: none;
+      color: #E1E107;
   }
   
   
