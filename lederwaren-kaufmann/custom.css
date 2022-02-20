@@ -1,128 +1,152 @@
 /* Umschalten von 3 auf 1 Spalte */
+
+/* Kasten für Umbauarbeiten */
+div.umbau {
+    background-color: rgb(185 161 135 / 100%);
+}
+
 @media (max-width:781px){
-	.wp-block-columns {
-		display: block; 
-		}
+.wp-block-columns {
+    display: block; 
+	}
+}
+
+@media (min-width: 600px) and (max-width: 781px) {
+.wp-block-column:nth-child(2n) {
+    margin-left: 0;
+}	
+}
+
+
+/* Anker auf Beitrag ohne Plugin  */
+#erste, #zweite, #dritte {
+	padding-top: 3.5rem; 
+	margin-top: -3.5rem;
+}
+
+/* Keine Punkte unter den Logos */
+ul.slick-dots {
+    display: none !important;
+}
+
+/* gepunktete Unterlinie bei Links */
+.site-footer a {
+	text-decoration: underline;
+	text-decoration-style: dotted;
+	text-underline-offset: 5px;
+}
+
+.footer-widgets {
+		font-weight: bold;
+}
+
+
+/* Container für Text in Elements */
+.front_hero {
+  margin-bottom: 10px;
+  margin-top: 10rem;
+		/* wegen padding wurde aus Image auf einmal Cover */
+/*	padding-right: 25rem; 
+	padding-top: 5rem;
+	padding-bottom: 5rem; */
+	text-shadow: 0px 0px 0.2rem #f9b81e;
+	/* background-color: #a49889; */
+}
+
+
+/* Animationen für Text in Elements */
+@media only screen and (max-width: 767px) {
+
+	/* Animation (Fade) */
+	.animated_1 {
+			font-weight: 700;
+			font-size: 2rem;
+			-webkit-animation-duration: 1s;
+			-webkit-animation-fill-mode: both;
+			animation-duration: 2s;
+			animation-fill-mode: both;
+	}
+
+	.animated_2 {
+			font-weight: 400;
+			font-size: 1.5rem;
+			-webkit-animation-duration: 1s;
+			-webkit-animation-fill-mode: both;
+			animation-duration: 1s;
+			animation-fill-mode: both;
 	}
 	
-	@media (min-width: 600px) and (max-width: 781px) {
-	.wp-block-column:nth-child(2n) {
-		margin-left: 0;
-	}	
+	.animated_3 {
+			font-weight: 400;
+			font-size: 1rem;
+			-webkit-animation-duration: 1s;
+			-webkit-animation-fill-mode: both;
+			animation-duration: 1s;
+			animation-fill-mode: both;
 	}
 	
-	
-	/* Anker auf Beitrag ohne Plugin  */
-	#erste, #zweite, #dritte {
-		padding-top: 3.5rem; 
-		margin-top: -3.5rem;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+	/* Animation (Fade) */
+	.animated_1 {
+			font-weight: 700;
+			font-size: 4rem;
+			-webkit-animation-duration: 1s;
+			-webkit-animation-fill-mode: both;
+			animation-duration: 2s;
+			animation-fill-mode: both;
 	}
-	
-	/* Keine Punkte unter den Logos */
-	ul.slick-dots {
-		display: none !important;
+
+	.animated_2 {
+			font-weight: 400;
+			font-size: 3rem;
+			-webkit-animation-duration: 1s;
+			-webkit-animation-fill-mode: both;
+			animation-duration: 1s;
+			animation-fill-mode: both;
 	}
-	
-	/* gepunktete Unterlinie bei Links */
-	.site-footer a {
-		text-decoration: underline;
-		text-decoration-style: dotted;
-		text-underline-offset: 5px;
+	.animated_3 {
+			font-weight: 200;
+			font-size: 1.3rem;
+			-webkit-animation-duration: 1s;
+			-webkit-animation-fill-mode: both;
+			animation-duration: 1s;
+			animation-fill-mode: both;
 	}
-	
-	.footer-widgets {
-			font-weight: bold;
-	}
-	
-	
-	/* Container für Text in Elements */
-	.front_hero {
-	  margin-bottom: 10px;
-	  margin-top: 10rem;
-			/* wegen padding wurde aus Image auf einmal Cover */
-	/*	padding-right: 25rem; 
-		padding-top: 5rem;
-		padding-bottom: 5rem; */
-		text-shadow: 0px 0px 0.2rem #f9b81e;
-		/* background-color: #a49889; */
-	}
-	
-	
-	/* Animationen für Text in Elements */
-	@media only screen and (max-width: 767px) {
-	
-		/* Animation (Fade) */
-		.animated_1 {
-				font-weight: 700;
-				font-size: 2rem;
-				-webkit-animation-duration: 1s;
-				-webkit-animation-fill-mode: both;
-				animation-duration: 2s;
-				animation-fill-mode: both;
-		}
-	
-		.animated_2 {
-				font-weight: 400;
-				font-size: 1.5rem;
-				-webkit-animation-duration: 1s;
-				-webkit-animation-fill-mode: both;
-				animation-duration: 1s;
-				animation-fill-mode: both;
-		}
-	}
-	
-	
-	@media only screen and (min-width: 768px) {
-	
-		/* Animation (Fade) */
-		.animated_1 {
-				font-weight: 700;
-				font-size: 4rem;
-				-webkit-animation-duration: 1s;
-				-webkit-animation-fill-mode: both;
-				animation-duration: 2s;
-				animation-fill-mode: both;
-		}
-	
-		.animated_2 {
-				font-weight: 400;
-				font-size: 3rem;
-				-webkit-animation-duration: 1s;
-				-webkit-animation-fill-mode: both;
-				animation-duration: 1s;
-				animation-fill-mode: both;
-		}
-	}
-	
-	.fadeInLeftBig {
-		-webkit-animation-name: fadeInLeftBig;
-		animation-name: fadeInLeftBig
-	}
-	
-	@-webkit-keyframes fadeInLeftBig {
-		0% {
-			-webkit-transform: translate3d(-2000px,0,0);
-			opacity: 0;
-			transform: translate3d(-2000px,0,0)
-		}
-	
-		to {
-			-webkit-transform: translateZ(0);
-			opacity: 1;
-			transform: translateZ(0)
-		}
-	}
-	
-	@keyframes fadeInLeftBig {
-		0% {
-			-webkit-transform: translate3d(-2000px,0,0);
-			opacity: 0;
-			transform: translate3d(-2000px,0,0)
-		}
-	
-		to {
-			-webkit-transform: translateZ(0);
-			opacity: 1;
-			transform: translateZ(0)
-		}
-	}
+}
+
+.fadeInLeftBig {
+    -webkit-animation-name: fadeInLeftBig;
+    animation-name: fadeInLeftBig
+}
+
+@-webkit-keyframes fadeInLeftBig {
+    0% {
+        -webkit-transform: translate3d(-2000px,0,0);
+        opacity: 0;
+        transform: translate3d(-2000px,0,0)
+    }
+
+    to {
+        -webkit-transform: translateZ(0);
+        opacity: 1;
+        transform: translateZ(0)
+    }
+}
+
+@keyframes fadeInLeftBig {
+    0% {
+        -webkit-transform: translate3d(-2000px,0,0);
+        opacity: 0;
+        transform: translate3d(-2000px,0,0)
+    }
+
+    to {
+        -webkit-transform: translateZ(0);
+        opacity: 1;
+        transform: translateZ(0)
+    }
+}
