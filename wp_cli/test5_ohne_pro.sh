@@ -12,13 +12,18 @@ wpuser_pwd="Test_2019"
 ### -------------------- WICHTIG: ANFANG - Korrekt ersetzen ---------------------- ###
 ### ------------------------------------------------------------------------------ ###
 # hier die Sicherungsdatei aus UpdraftPlus eintragen:
-wp_restore="backup_2022-02-09-0430_Full_Site_Editing_Testseite_Neu_4fc8b1944ee5"
+# Die Datei hat folgende Bezeichnung: backup_2022-02-22-1358_Full_Site_Editing_Testseite_Neu_28b687df82d8-db.gz
+# der erste Teil ist bei allen Sicherungsdateien gemeinsam. Der Teil wird hier eingetragen:
+wp_restore="backup_2022-02-22-1358_Full_Site_Editing_Testseite_Neu_28b687df82d8"
 
 # ggfs. Datenbank mit anderer ID, sonst auskommentieren
 wp_restore_db=$wp_restore
 # wp_restore_db="backup_2022-01-13-0500_aachenerkinderde_132a552b97c6"
 
+# das ist die Domain:
 search_string="https://test5.haurand.com/" 
+
+# das ist der Datenbankname:
 dbname="test5"
 ### ------------------------------------------------------------------------------ ###
 ### ---------------------- WICHTIG: ENDE - Korrekt ersetzen ---------------------- ###
@@ -27,7 +32,7 @@ dbname="test5"
 # wird ersetzt - keine Änderung notwendig:
 sitename=$dbname
 dir=$dbname
-replace_string="http://localhost/${dbname}"
+replace_string="http://localhost/${dbname}/"
 
 ### ------------------------------------------------------------------------------ ###
 ### ----------------------------- WICHTIG: Prüfen -------------------------------- ###
@@ -82,7 +87,8 @@ backup_dir="d:/laragon/sicherungen/"
 	php ../wp-cli.phar core install --url="http://localhost/$currentdirectory" --title="$sitename" --admin_user="$wpuser" --admin_password="$password" --admin_email="postmaster@aachenerkinder.de"
 	# german language:
 	php ../wp-cli.phar language core install de_DE
-	php ../wp-cli.phar language core activate de_DE
+	# php ../wp-cli.phar language core activate de_DE
+	php ../wp-cli.phar site switch-language de_DE
 	# php ../wp-cli.phar site switch-language de_DE
 	### ---------------------- Datenbank ---------------------- ###
 	# -> Datenbank ggfs. entpacken
@@ -92,7 +98,7 @@ backup_dir="d:/laragon/sicherungen/"
 	
 	sicherung="${backup_dir}${wp_restore_db}-db"
 	php ../wp-cli.phar db import $sicherung
-	# php ../wp-cli.phar site switch-language de_DE
+
 	# ------------------- WordPress installed ------------------- #
 
 	### ---------------------- Plugins, Themes, Uploads, Others entpacken ---------------------- ###	
