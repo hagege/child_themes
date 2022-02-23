@@ -33,7 +33,22 @@
 					"slug": "light-cyan",
 					"color": "#4fb3bf",
 					"name": "Light cyan"
-				}
+				},
+				{
+					"slug": "purple",
+					"color": "#6E27F2",
+					"name": "Purple"
+				},
+				{
+					"slug": "orange-yellow",
+					"color": "#FCB728",
+					"name": "Orange-Yellow"
+				},
+				{
+					"slug": "very-light-green",
+					"color": "#7CE630",
+					"name": "Very-Light-Green"
+				}				
 			],
 			"gradients": [
 				{
