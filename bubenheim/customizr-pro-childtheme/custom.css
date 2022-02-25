@@ -34,7 +34,10 @@ select.wpcf7-form-control.wpcf7-select {
   margin-left: 0px
 }
 
-.wpcf7-form input[type=radio]:checked::before {
+
+/* damit der Innenbereich angezeigt wird */
+.wpcf7-form input[type=radio]:checked::before,
+.wpcf7-form input[type=checkbox]:checked::before{
 content: initial;
 }
 
