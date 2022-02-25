@@ -4,27 +4,41 @@
 /* ------------------------ */
 
 label {
-    font-family: inherit;
-    margin-bottom: 0px;
-    font-size: 1em;
+  font-family: inherit;
+  margin-bottom: 0px;
+  font-size: 1em;
 }
 
 form.wpcf7-form.init h2 {
-    margin: 0px;
+  margin: 0px;
 }
 
+
+
+/* Einstellungen für Radio-Button */
 .wpcf7-form input[type=checkbox], .wpcf7-form input[type=radio] {
-    -webkit-appearance: inner-spin-button!important;
+-webkit-appearance: inner-spin-button!important;
+  width: 2rem;
+  height: 2rem;
+  accent-color: green;
+  margin-right: 0.5rem;
 }
+
 
 .wpcf7-form input, textarea,
 select.wpcf7-form-control.wpcf7-select.wpcf7-validates-as-required,
 select.wpcf7-form-control.wpcf7-select {
-    background-color: aliceblue;
-    border-color: #008000;
-    color: black;	
-		margin-left: 0px
+  background-color: aliceblue;
+  border-color: #008000;
+  color: black;	
+  margin-left: 0px
 }
+
+.wpcf7-form input[type=radio]:checked::before {
+content: initial;
+}
+
+
 
 /* ------------------------ */
 /* Markierungsfarbe ändern  */
@@ -41,60 +55,60 @@ color: #fff;
 
 /* Auf der Hauptseite kein Ken Burns - Effekt*/ 
 .page-id-17 img.v-centered{
-	-moz-animation: none;
-	-webkit-animation: none;
-	animation: none;
+-moz-animation: none;
+-webkit-animation: none;
+animation: none;
 }
 
 /* ------------------------ */
 /* Ken Burns - Effekt bei Sliderbildern und Beitragsbildern, pro Bild 7 sek.*/
 /* ------------------------ */
 img.v-centered {
-      width: 100%;
-      animation: move 35s ease;
-      /* Add infinite to loop. */
-      
-      -ms-animation: move 35s ease;
-      -webkit-animation: move 35s ease;
-      -animation: move 35s ease;
-      -moz-animation: move 35s ease;
-      position: absolute;
-    }
+    width: 100%;
+    animation: move 35s ease;
+    /* Add infinite to loop. */
+    
+    -ms-animation: move 35s ease;
+    -webkit-animation: move 35s ease;
+    -animation: move 35s ease;
+    -moz-animation: move 35s ease;
+    position: absolute;
+  }
 
-    @-webkit-keyframes move {
-      0% {
-        -webkit-transform-origin: bottom left;
-        -moz-transform-origin: bottom left;
-        -ms-transform-origin: bottom left;
-        -o-transform-origin: bottom left;
-        transform-origin: bottom left;
-        transform: scale(1.0);
-        -ms-transform: scale(1.0);
-        /* IE 9 */
-        
-        -webkit-transform: scale(1.0);
-        /* Safari and Chrome */
-        
-        -o-transform: scale(1.0);
-        /* Opera */
-        
-        -moz-transform: scale(1.0);
-        /* Firefox */
-      }
-      100% {
-        transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        /* IE 9 */
-        
-        -webkit-transform: scale(1.2);
-        /* Safari and Chrome */
-        
-        -o-transform: scale(1.2);
-        /* Opera */
-        
-        -moz-transform: scale(1.2);
-        /* Firefox */
-      }
+  @-webkit-keyframes move {
+    0% {
+      -webkit-transform-origin: bottom left;
+      -moz-transform-origin: bottom left;
+      -ms-transform-origin: bottom left;
+      -o-transform-origin: bottom left;
+      transform-origin: bottom left;
+      transform: scale(1.0);
+      -ms-transform: scale(1.0);
+      /* IE 9 */
+      
+      -webkit-transform: scale(1.0);
+      /* Safari and Chrome */
+      
+      -o-transform: scale(1.0);
+      /* Opera */
+      
+      -moz-transform: scale(1.0);
+      /* Firefox */
+    }
+    100% {
+      transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      /* IE 9 */
+      
+      -webkit-transform: scale(1.2);
+      /* Safari and Chrome */
+      
+      -o-transform: scale(1.2);
+      /* Opera */
+      
+      -moz-transform: scale(1.2);
+      /* Firefox */
+    }
 }
 
 
@@ -102,71 +116,71 @@ img.v-centered {
 /* Problem mit Darstellung Video vor Bestätigung beheben */
 /* ------------------------ 
 .BorlabsCookie ._brlbs-content-blocker ._brlbs-embed { 
-	overflow: hidden; 
+overflow: hidden; 
 }
 */
 
 /* Bilder in Galerie ohne Beschriftung */
 .wp-block-gallery .blocks-gallery-image figcaption, .wp-block-gallery .blocks-gallery-item figcaption {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 /* Block mit oberem Rand */
 .block_mit_oberen_rand {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 /* Bild Rand oben verkleinern */
 .wp-block-image {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 /* Damit die Checkboxen im Formular angezeigt werden */
 .wpcf7-form input[type=checkbox]{
-    -webkit-appearance: checkbox!important;
-    position: relative!important;
+  -webkit-appearance: checkbox!important;
+  position: relative!important;
 }
 
 
 /* Anzeige der Registereinträge FAQ */
 .details-wrapper {
-   width: 75vw;
-   margin: 0 auto;
-   background-color: #999999;
-   /* box-shadow:0 0 1px 2px #E5E5E5;*/ 	
+ width: 75vw;
+ margin: 0 auto;
+ background-color: #999999;
+ /* box-shadow:0 0 1px 2px #E5E5E5;*/ 	
 }
 
 summary:hover {
-  background-color: #008000; 
+background-color: #008000; 
 }
 
 summary:focus {
-	 background-color: #008000;
+ background-color: #008000;
 }
 
 
 details {
-   padding: 1rem;
-   font: 1rem/1.2 sans-serif;
+ padding: 1rem;
+ font: 1rem/1.2 sans-serif;
 }
 
 summary {
-   padding: .25rem 1rem;
-   font: bold 1.25rem/2 sans-serif;
-   background-color: #999999;
-   /*   border: none;
-   border-radius: 3px;
-   box-shadow: 0 -1px 1px 1px rgba(0,0,0,0.5); */
-   color:floralwhite; 
-   cursor: pointer;	
+ padding: .25rem 1rem;
+ font: bold 1.25rem/2 sans-serif;
+ background-color: #999999;
+ /*   border: none;
+ border-radius: 3px;
+ box-shadow: 0 -1px 1px 1px rgba(0,0,0,0.5); */
+ color:floralwhite; 
+ cursor: pointer;	
 }
 
 summary::before {
-   padding-right: .25rem;
+ padding-right: .25rem;
 }
 div.accordion {
-	padding-top: 20px;
-	line-height: 1.5rem;
-	/* line-height:1.5px; 
-	transition: all 0.35s; */
+padding-top: 20px;
+line-height: 1.5rem;
+/* line-height:1.5px; 
+transition: all 0.35s; */
 }
