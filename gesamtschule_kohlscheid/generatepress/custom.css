@@ -9,80 +9,95 @@ Hellgrau= #D6D6D6
 
 /* Variablen */
 :root {
-    --rot-color: rgba(226, 36, 27, 1);
-    --grau_hell-color: rgba(214, 214, 214, 1);
-      --blau-color: rgba(0, 32, 104, 1);
-  }
+  --rot-color: rgba(226, 36, 27, 1);
+  --grau_hell-color: rgba(214, 214, 214, 1);
+	--blau-color: rgba(0, 32, 104, 1);
+}
+
+
+
+
+
+
+/* ----------------------------- */
+/* Navigation                    */
+/* ----------------------------- */
   
-  
-  /* ----------------------------- */
-  /* Navigation                    */
-  /* ----------------------------- */
-    
-  /* Einstellungen für das Desktop-Menü */
-    @media (min-width: 769px) {
-      /* nav links effect */
-      .main-navigation .menu > .menu-item > a::after {
-          content: "";
-          position: absolute;
-          right: 0;
-          left: 50%;
-          bottom: 0px;
-          -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-          color: var(--rot-color);
-          display: block;
-          width: 0;
-          height: 5px;   
-          background-color: currentColor;
-          transition: 0.3s width ease;
-      }
-      .main-navigation .menu > .menu-item.current-menu-item > a::after,
-      .main-navigation .menu > .menu-item > a:hover::after {
-          width: 100%;
-          color: var(--blau-color);
-      }
-    
-    .main-navigation .menu > .menu-item.current-menu-item > a::after,
-      .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
-      .main-navigation .menu > .menu-item > a:active::after {
-      width: 100%;
-      color: var(--grau_hell-color);
-      }
-    /* Submenü */
-    ul.sub-menu {
-      opacity: 0.9!important;
+/* Einstellungen für das Desktop-Menü */
+  @media (min-width: 769px) {
+    /* nav links effect */
+    .main-navigation .menu > .menu-item > a::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        left: 50%;
+        bottom: 0px;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        color: var(--rot-color);
+        display: block;
+        width: 0;
+        height: 5px;   
+        background-color: currentColor;
+        transition: 0.3s width ease;
     }
+    .main-navigation .menu > .menu-item.current-menu-item > a::after,
+    .main-navigation .menu > .menu-item > a:hover::after {
+        width: 100%;
+        color: var(--blau-color);
+    }
+  
+  .main-navigation .menu > .menu-item.current-menu-item > a::after,
+    .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
+    .main-navigation .menu > .menu-item > a:active::after {
+    width: 100%;
+    color: var(--grau_hell-color);
+    }
+  /* Submenü */
+  ul.sub-menu {
+    opacity: 0.9!important;
   }
-  
-  
-  
-  /* ----------------------------- */
-  /* Navigation                    */
-  /* ----------------------------- */
-  
-  /* Farben für Off-Canvas-Menü */
-  @media only screen and (max-width: 900px) {
-      .slideout-navigation.main-navigation .main-nav ul ul li[class*="current-menu-"] > a{
-          color: #9a9a9a;
-          background-color: #e1e7f0;
-      }
-          .slideout-navigation.main-navigation .main-nav ul ul li[class*="current-menu-"] > a:hover{
-          color: #e1e7f0;
-          background-color: #622523;
-      }
-      
-          .slideout-navigation.main-navigation .main-nav ul ul li[class*="current-menu-"] > a:focus{
-          color: #e1e7f0;
-          background-color: #263f5f;
-      }
-      
-      .slideout-navigation.main-navigation .main-nav ul ul li[class*="current-menu-"] > a:active{
-          color: #e1e7f0;
-          background-color: #263f5f;
-      }
-  }
-  
-  
-  
-  
+}
+
+
+
+/* ----------------------------- */
+/* Navigation                    */
+/* ----------------------------- */
+
+/* Farben für Off-Canvas-Menü */
+@media only screen and (max-width: 900px) {
+	.slideout-navigation.main-navigation .main-nav ul ul li[class*="current-menu-"] > a{
+		color: #9a9a9a;
+		background-color: #e1e7f0;
+	}
+		.slideout-navigation.main-navigation .main-nav ul ul li[class*="current-menu-"] > a:hover{
+		color: #e1e7f0;
+		background-color: #622523;
+	}
+	
+		.slideout-navigation.main-navigation .main-nav ul ul li[class*="current-menu-"] > a:focus{
+		color: #e1e7f0;
+		background-color: #263f5f;
+	}
+	
+	.slideout-navigation.main-navigation .main-nav ul ul li[class*="current-menu-"] > a:active{
+		color: #e1e7f0;
+		background-color: #263f5f;
+	}
+}
+
+
+
+/* ----------------------------- */
+/* roter Rahmen um Beiträge      */
+/* ----------------------------- */
+.generate-columns .inside-article,
+.inside-right-sidebar
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--rot-color);
+}
+
+
