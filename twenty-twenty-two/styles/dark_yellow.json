@@ -1,0 +1,66 @@
+{
+	"version": 2,
+	"settings": {
+		"color": {
+			"duotone": [
+				{
+					"colors": [ "#F6F6F6", "#000000" ],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
+				},
+				{
+					"colors": [ "#F6F6F6", "#1A4548" ],
+					"slug": "foreground-and-secondary",
+					"name": "Foreground and secondary"
+				},
+				{
+					"colors": [ "#F6F6F6", "#262626" ],
+					"slug": "foreground-and-tertiary",
+					"name": "Foreground and tertiary"
+				},
+				{
+					"colors": [ "#FFE2C7", "#000000" ],
+					"slug": "primary-and-background",
+					"name": "Primary and background"
+				},
+				{
+					"colors": [ "#FFE2C7", "#1A4548" ],
+					"slug": "primary-and-secondary",
+					"name": "Primary and secondary"
+				},
+				{
+					"colors": [ "#FFE2C7", "#262626" ],
+					"slug": "primary-and-tertiary",
+					"name": "Primary and tertiary"
+				}
+			],
+			"palette": [
+				{
+					"slug": "foreground",
+					"color": "#fcb900",
+					"name": "Foreground"
+				},
+				{
+					"slug": "background",
+					"color": "#32373C",
+					"name": "Background"
+				},
+				{
+					"slug": "primary",
+					"color": "#ff6900",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#cecece",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#262626",
+					"name": "Tertiary"
+				}
+			]
+		}
+	}
+}

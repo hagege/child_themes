@@ -1,0 +1,9 @@
+// styles/dark_black.json
+{
+    styles: {
+        colors: {
+            text: 'white',
+            background: 'black'
+        }
+    }
+}
