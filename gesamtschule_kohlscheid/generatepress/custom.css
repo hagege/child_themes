@@ -98,6 +98,7 @@ Hellgrau= #D6D6D6
     border-style: solid;
     border-width: 1px;
     border-color: var(--rot-color);
+		/* border-radius: 5px; */
 }
 
 
