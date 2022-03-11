@@ -20,8 +20,13 @@ form.wpcf7-form.init h2 {
 -webkit-appearance: inner-spin-button!important;
   width: 2rem;
   height: 2rem;
-  accent-color: green;
+  accent-color: #008000;
   margin-right: 0.5rem;
+}
+
+.themeform input[type="radio"]:checked::before, .widget_archive input[type="radio"]:checked::before, .widget_categories input[type="radio"]:checked::before, .wpcf7-form input[type="radio"]:checked::before {
+content: ""!important;
+background-color: #008000;
 }
 
 
