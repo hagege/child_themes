@@ -1,0 +1,240 @@
+/*
+ Theme Name:   GeneratePress Child
+ Theme URI:    https://haurand.com/
+ Description:  Default GeneratePress child theme
+ Author:       Hans-Gerd Gerhards 
+ Author URI:   https://haurand.com/ 
+ Template:     generatepress
+ Version:      1.0 (2021-04-14)
+*/
+
+/*
+
+1. Allgemein
+1.1. Menue
+1.2. Buttons
+1.3. Blog
+1.4. Fuss
+1.5. Diverses
+2. Nicht mehr benötigt?
+
+WATCH: Muss weiter beobachtet werden.
+DELETED: Gelöscht
+
+Farben haurand.de:
+hellgrau: #D4DaDB - RGB: (212, 218, 219)
+weiß: #FFFFFF - RGB: (255, 255, 255)
+dunkelgrau: #3C4346 - RGB: (60, 67, 70)
+rot: #B70000 - RGB: (183, 0, 0)
+mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
+FARBWERTE
+Web und Bildschirm Druck
+
+Devices:
+768px (Smartphone)
+968px (Tablet)
+
+
+*/
+
+
+
+
+/* ---------------------------------------------------- */
+/* 0. Neu dazu                                          */
+/* ---------------------------------------------------- */
+
+
+
+/* img.attachment-medium.size-medium.wp-post-image  
+img.beitragsbild_hauptseite {
+  width: 100vw;
+  height: 50vh;
+}
+*/
+
+
+/* .wp-block-group__inner-container {
+    color: white;
+    background-color: #B70000;
+}  
+*/ 
+
+/* ------------------------------------------------- */
+
+
+/* ----------------------------------------------------------------------------- */
+/* 1. Allgemeines */
+/* ----------------------------------------------------------------------------- */
+
+/* ----------------------------------- */
+/* Schriftgröße bei schmaleren Geräten */
+/* ----------------------------------- */
+
+
+/* ------------------------------ */
+/* Schriftgröße und -art bei Code*/
+/* ------------------------------ */
+.sourcecode { 
+	font-size: 0.8em;
+	font-family: "Courier New", Times, serif;
+}
+
+
+/* Text kleiner bei schmaleren Devices */
+@media only screen and (max-width: 768px) {
+  .has-text-align-center,
+  .entry-summary {
+    font-size: 0.8em;
+  }
+}
+
+
+/* bei schmaleren Displays nicht so großes padding */
+@media only screen and (max-width: 768px) {
+	.wp-block-columns.alignfull.has-background {
+			padding-left: 1rem;
+			padding-right: 1rem;
+	}
+}
+
+/* ------------------------------ */
+/* Problem bei ungeraden Spalten weitestgehend behoben, aber nicht optimal */
+/* ------------------------------ */
+@media (min-width: 600px) and (max-width: 781px) {
+  .wp-block-columns.has-3-columns {
+  flex-flow: row wrap!important;
+  }
+  
+  .has-3-columns .wp-block-column:first-child {
+  flex-basis: 100%!important;
+  }
+  .wp-block-column.is-vertically-aligned-bottom {
+    margin-left: 0em;
+  }
+  .wp-block-column:not(:first-child) {
+  margin-left: 0em;
+  }
+}
+  
+
+/* Button bei Kommentaren */
+input#submit {
+  border-radius: 50px;
+}
+
+ 
+/* ----------------------------------------- */
+/* Einen Block verstecken - unter erweitert: */
+/* ----------------------------------------- */
+.inhalt_verstecken {
+  display: none; 
+}
+
+
+
+
+/* für wichtige Infos */
+p.links_wichtig, p.links_orange{
+    border-left: 5px solid #B70000;
+    padding: 10px;
+   }
+   
+
+   
+/* ------------------------------ */
+/* Schriftdicke bei Überschriften */
+/* ------------------------------ */
+
+h1, h2  {
+  text-align: center;
+}
+
+/* h1 nicht zeigen */
+h1.entry-title {
+  display: none;
+  font-weight: 700;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+/* h3 immer linksbündig */
+h3, h4, h5 {
+    font-weight: 600;
+    text-align: left;
+}
+
+
+
+
+
+/* für Zitate */
+   blockquote.wp-block-quote.links_schwarz {
+     border-left: 5px solid #000000;
+     padding: 10px;
+     padding-left: 1.5em;
+}
+ 
+/* Links in Seiten und Beiträgen */
+body.single .entry-content a,
+body.single .entry-content a:visited,
+body.page .entry-content a,
+body.page .entry-content a:visited
+{
+	text-decoration: underline;
+}
+
+
+body.single .entry-content a:hover,
+body.page .entry-content a:hover {
+	background-color: #A9B2B5;
+	color: white;
+  text-decoration: none;
+}
+
+
+
+/* Beitragsübersicht nicht mehr zweispaltig, sondern einspaltig: */
+@media (min-width: 768px) and (max-width: 1024px) {
+	.generate-columns.tablet-grid-50, .grid-sizer.tablet-grid-50 {
+			width: 100%;
+	}
+}   
+
+
+
+/* ---------------------------------------------------- */
+/* 1.1. Menue                                           */
+/* ---------------------------------------------------- */
+
+
+
+/* ---------------------------------------------------- */
+/* 1.2. Buttons                                         */
+/* ---------------------------------------------------- */
+
+
+
+/* ---------------------------------------------------- */
+/* 1.3. Blog                                            */
+/* ---------------------------------------------------- */
+
+
+
+
+/* ---------------------------------------------------- */
+/* 1.4. Fuss                                        */
+/* ---------------------------------------------------- */  
+
+
+/* ---------------------------------------------------- */
+/* 1.5. Diverses                                        */
+/* ---------------------------------------------------- */
+
+
+
+/*----------------------------------------------------------------*/
+/* 4. Nicht mehr benötigt ??
+/*----------------------------------------------------------------*/
