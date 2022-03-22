@@ -44,11 +44,21 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
   }
   
   
-  add_action('init', function() {
-	  remove_theme_support('core-block-patterns');
-  });
-  
-  
+
+/* Erst mal alle Kategorien zulassen */
+/*
+add_action('after_setup_theme', 'removeCorePatterns');
+
+function removeCorePatterns() {
+    remove_theme_support('core-block-patterns');
+	unregister_block_pattern_category('buttons');
+	unregister_block_pattern_category('columns');
+	unregister_block_pattern_category('gallery');
+	unregister_block_pattern_category('header');
+	unregister_block_pattern_category('text');
+	unregister_block_pattern_category('uncategorized');
+}
+*/  
   
   function haurand_register_block_categories() {
 	if ( class_exists( 'WP_Block_Patterns_Registry' ) ) {
@@ -69,7 +79,7 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
 	   array(
 	   'title' => __( 'Two columns with pictures', 'zwei-kacheln-block-pattern' ),
 	   'description' => _x( 'Two columns with pictures (tiles)', 'Block pattern description', 'zwei-kacheln-block-pattern' ),
-	   'categories'  => array('sgs'),
+	   'categories'  => array('msmg'),
 	   'content'     =>
 		  '<!-- wp:columns {"style":{"color":{"background":"#2c6997"}}} -->
 		  <div class="wp-block-columns has-background" style="background-color:#2c6997"><!-- wp:column -->
@@ -99,7 +109,7 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
      array(
      'title' => __( 'Icons with office Application', 'icon-block-office' ),
      'description' => _x( 'Icons with office Application (ppt)', 'Block pattern description', 'icon-block-office' ),
-     'categories'  => array('sgs'),
+     'categories'  => array('msmg'),
      'content'     =>
         '<!-- wp:group {"align":"full"} -->
 		<div class="wp-block-group alignfull"><!-- wp:paragraph {"align":"center"} -->
