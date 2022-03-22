@@ -15,6 +15,21 @@ Hellgrau= #D6D6D6
 }
 
 
+/* --------------------------- */
+/* keine abgerundeten Ecken    */
+/* bei Buttons                 */
+/* --------------------------- */
+button, 
+html input[type="button"], 
+input[type="reset"], 
+input[type="submit"], 
+a.button, 
+a.button:visited, 
+a.wp-block-button__link:not(.has-background) {
+    border-radius: 0px;
+}
+
+
 
 /* --------------------------- */
 /* Video im oberen Bereich     */
