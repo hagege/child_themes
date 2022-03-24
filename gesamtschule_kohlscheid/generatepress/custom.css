@@ -2,18 +2,26 @@
 /* Farben */
 /* ----------------------------- */
 /* 
-Rot = #E2241B
-Blau = #002068
+Rot = #C22921
+Blau = #12266B
 Hellgrau= #D6D6D6
 */
 
 /* Variablen */
 :root {
-  --rot-color: rgba(226, 36, 27, 1);
+  --rot-color: rgba(194, 41, 33, 1);
   --grau_hell-color: rgba(214, 214, 214, 1);
-	--blau-color: rgba(0, 32, 104, 1);
+	--blau-color: rgba(18, 38, 107, 1);
 }
 
+
+
+/* ----------------------------- */
+/* Hintergrund Sidebar           */
+/* ----------------------------- */
+.separate-containers .inside-right-sidebar, .separate-containers .inside-left-sidebar {
+    background-color: white;
+}
 
 /* --------------------------- */
 /* keine abgerundeten Ecken    */
