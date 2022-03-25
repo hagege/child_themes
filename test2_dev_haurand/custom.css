@@ -1,0 +1,419 @@
+:root {
+	--column--margin-bottom: 1rem;	
+	--column--margin-top: 3rem;		
+  --column--font-size-h2: 2rem;
+	--columns--background: #f0f0f0;
+	--columns--margin: 10vw;
+	--columns--padding: 0.5rem;
+	--columns--width: 90vw;
+	--column--width--1: 95%;
+	--column--width--2: 38%;
+	--column--width--3: 29%;
+	--column--width--4: 22%;	
+	
+	--color--white--1: rgba(255, 255, 255, 0.3);
+	--color--orange--1: rgba(255, 139, 0, 0.3);
+	--color--black--1: rgba(0, 0, 0, 0.3);	
+}
+
+
+/* ------------------------------ */
+/* Text in Spalten überlappend */
+/* ------------------------------ */
+@media (max-width: 881px) {
+  .wp-block-column.spalte_links_ueberlappend,
+  .wp-block-column.spalte_rechts_ueberlappend  {
+		background: var(--color--black--1);
+		justify-content:center;
+	  padding: 1em;
+		margin: 0px;
+		color: white;
+   }
+  .wp-block-column.spalte_bild_ueberlappend {
+	  margin: 0px;
+	}
+  .wp-block-columns.spalten_ueberlappend {
+	  display: flex;
+	  flex-direction: column-reverse;
+  }
+}
+  
+  @media (min-width: 882px) {
+/*	[class*="__inner-container"] > .alignwide {
+		/* nicht optimal 
+    width: 120%;
+}
+*/		
+  .wp-block-column.spalte_links_ueberlappend {
+		transform: translateX(-10%) translateY(-10%);
+  }
+  .wp-block-column.spalte_rechts_ueberlappend {
+		transform: translateX(10%) translateY(-10%);
+		z-index:0;
+  }
+  .wp-block-column.spalte_links_ueberlappend,
+  .wp-block-column.spalte_rechts_ueberlappend
+  {
+		background: var(--color--black--1);
+		padding: 10vh;
+		justify-content:center;
+		color: white;
+  }
+}
+  
+p.text_ueberlappend {
+	padding: 0rem;
+}
+  
+  /* ------------------------------ */
+
+
+div.wp-block-cover__inner-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+}
+
+.page-id-105 div.wp-block-cover__inner-container {
+    background-color: var(--color--orange--1);
+    padding: 2rem;
+}
+
+/* Text auf Sorrent-Bild - Startseite 
+.page-id-36 div.wp-block-cover__inner-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+}
+*/
+
+
+/* Überschrift nicht zeigen */
+h2.alignwide.wp-block-post-title {
+    display: none;
+}
+
+/* hours / location */
+.wp-block-columns.are-vertically-aligned-top.has-primary-background-color.has-background {
+    opacity: 0.6;
+}
+
+/* wave */
+.wp-block-wavy-wavy-divider.alignfull.has-primary-background-color.has-background {
+    background-image: url("https://test5.haurand.com/wp-content/uploads/2022/01/platzhalter_herbst_2_1920.jpg");
+}
+
+
+.wp-block-wavy-wavy-divider.alignfull.has-primary-background-color.has-background svg {
+    opacity: 0.6;
+    transition: all .5s ease;
+}
+
+/* sticky header */ 
+
+main#wp--skip-link--target {
+    /* entspricht der Höhe des Menüs */
+    margin-top: 150px;
+}
+
+header.wp-block-template-part {
+    position: fixed;
+    inset: 0;
+    padding: 0px 30px;
+    /* nicht schön, aber sonst funktionieren die Links nicht */
+    height: 10px!important;
+    z-index: 111;
+}
+
+
+.wp-duotone-61fab3ac5518f.wp-block-cover.alignfull.has-parallax {
+    max-height: 80px;
+}
+
+
+/* Abstandhalter formatieren */
+.abstand {
+	border: 2px dashed #cbd5e1;
+	background-color: #f1f5f9;
+}
+
+
+/* ------------------------------ */
+/* Variable Spalten von 4 bis 1   */
+/* ------------------------------ */
+div.wp-block-group.alignwide.flexible_spalten {
+    max-width: calc(var(--columns--width) - var(--columns--margin));
+    width: calc(var(--columns--width) - var(--columns--margin));
+	margin-left:var(--columns--margin);
+	flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+	width: var(--columns--width);
+	/* Standardwert:
+	justify-content: flex-start; */
+	/* eingestellt: space-around*/
+	justify-content: left; 
+  /* Flexelemente werden gleichmäßig innerhalb der Zeile verteilt, sodass die Leerräume zwischen zwei angrenzenden Elementen gleich sind. Sonst:
+  justify-content: center;*/
+}
+
+/* Absatz innerhalb der Spalte */
+div.flexible_spalten .wp-block-group__inner-container p{
+		padding: 1rem;
+}
+
+/* ggfs. zusätzlicher Rand oben und unten */
+
+/*.wp-block-group .wp-block-group__inner-container > * {
+    margin-top: var(--column--vertical);
+    margin-bottom: var(--column--vertical);
+}
+*/
+
+
+
+/* unnötig bei twenty twenty, aber notwendig z. B. bei twenty twenty one */
+/*.wp-block-group .wp-block-group__inner-container > *:first-child {
+    margin-top: var(--column--vertical);
+    margin-bottom: var(--column--vertical);
+}
+
+.wp-block-group .wp-block-group__inner-container > *:last-child {
+    margin-top: var(--column--vertical);
+    margin-bottom: var(--column--vertical);
+}
+*/
+
+
+/* Schriftgröße für h2 bei Spalten */
+div.wp-block-columns.kacheln h2{
+	font-size: var(--column--font-size-h2);
+}
+
+
+/* Hintergrundfarbe und evtl. zusätzliches Padding und Margin Kacheln */
+div.wp-block-columns.kacheln {
+	  margin-top: var(--column--margin-top);
+    margin-bottom: var(--column--margin-bottom);
+	  padding-top: var(--column--vertical);
+    padding-bottom: var(--column--vertical);
+		padding-left: var(--columns--padding);
+		padding-right: var(--columns--padding);
+		background-color: var(--columns--background);
+}
+
+/* 4 Spalten (Spaltenbreite jeweils 24%)*/
+@media (min-width: 1500px)  {
+div.wp-block-columns.kacheln {
+    width: var(--column--width--4);
+		/*linksbündig mit Rand */
+		margin-left: 1.6vw;
+    margin-right: 0.4vw;
+  }
+}
+
+
+/* 3 Spalten (Spaltenbreite jeweils 30%) */
+@media (min-width: 1121px) and (max-width: 1499px) {
+div.wp-block-columns.kacheln {
+    width: var(--column--width--3);
+		/* damit bei 3 Spalten die Spalten nicht zentriert, sondern links ausgerichtet sind: */
+		/*linksbündig mit Rand */
+    margin-left: 1.9vw;
+    margin-right: 1vw;
+  }
+}
+
+/* 2 Spalten (Spaltenbreite jeweils 40%)*/
+@media (min-width: 600px) and (max-width: 1120px) {
+div.wp-block-columns.kacheln {
+    width: var(--column--width--2);
+		margin-left: 5.5vw;
+    margin-right: 4vw;
+}
+}
+
+
+/* 1 Spalte - Spaltenbreite: 90% */
+@media (max-width: 599px) {
+div.wp-block-columns.kacheln{
+    width: var(--column--width--1);
+}
+}
+
+	
+/* dezenter Hover-Effekt bei Kacheln */
+.wp-block-columns.kacheln:hover {
+ 		opacity:0.7;
+  	transform: scale(1.01, 1.01);	
+}
+
+/* -------- weitere Tests -------- */
+
+.wp-block-group.container {
+    background-color: #cacaca;
+		padding: 10px;
+		margin: 50px;
+	  margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-block-columns.item {
+    background-color: #ff0037;
+		color: #fff;
+		font-size: 35px;
+		padding: 20px;
+		margin: 10px;
+}
+
+/*
+header.entry-header.has-text-align-center.header-footer-group {
+    display: none;
+}
+
+main#site-content {
+    margin-top: -18rem;
+}
+*/
+
+
+
+
+
+
+/* ------------------------------ */
+/* Variable Spalten von 4 bis 1   */
+/* ------------------------------ */
+div.wp-block-group.alignwide.flexible_spalten {
+    max-width: calc(var(--columns--width) - var(--columns--margin));
+    width: calc(var(--columns--width) - var(--columns--margin));
+	margin-left:var(--columns--margin);
+	flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+	width: var(--columns--width);
+	/* Standardwert:
+	justify-content: flex-start; */
+	/* eingestellt: space-around*/
+	justify-content: left; 
+  /* Flexelemente werden gleichmäßig innerhalb der Zeile verteilt, sodass die Leerräume zwischen zwei angrenzenden Elementen gleich sind. Sonst:
+  justify-content: center;*/
+}
+
+/* Absatz innerhalb der Spalte */
+div.flexible_spalten .wp-block-group__inner-container p{
+		padding: 1rem;
+}
+
+/* ggfs. zusätzlicher Rand oben und unten */
+
+/*.wp-block-group .wp-block-group__inner-container > * {
+    margin-top: var(--column--vertical);
+    margin-bottom: var(--column--vertical);
+}
+*/
+
+
+
+/* unnötig bei twenty twenty, aber notwendig z. B. bei twenty twenty one */
+/*.wp-block-group .wp-block-group__inner-container > *:first-child {
+    margin-top: var(--column--vertical);
+    margin-bottom: var(--column--vertical);
+}
+
+.wp-block-group .wp-block-group__inner-container > *:last-child {
+    margin-top: var(--column--vertical);
+    margin-bottom: var(--column--vertical);
+}
+*/
+
+
+/* Schriftgröße für h2 bei Spalten */
+div.wp-block-columns.kacheln h2{
+	font-size: var(--column--font-size-h2);
+}
+
+
+/* Hintergrundfarbe und evtl. zusätzliches Padding und Margin Kacheln */
+div.wp-block-columns.kacheln {
+	  margin-top: var(--column--margin-top);
+    margin-bottom: var(--column--margin-bottom);
+	  padding-top: var(--column--vertical);
+    padding-bottom: var(--column--vertical);
+		padding-left: var(--columns--padding);
+		padding-right: var(--columns--padding);
+		background-color: var(--columns--background);
+}
+
+/* 4 Spalten (Spaltenbreite jeweils 24%)*/
+@media (min-width: 1500px)  {
+div.wp-block-columns.kacheln {
+    width: var(--column--width--4);
+		/*linksbündig mit Rand */
+		margin-left: 1.6vw;
+    margin-right: 0.4vw;
+  }
+}
+
+
+/* 3 Spalten (Spaltenbreite jeweils 30%) */
+@media (min-width: 1121px) and (max-width: 1499px) {
+div.wp-block-columns.kacheln {
+    width: var(--column--width--3);
+		/* damit bei 3 Spalten die Spalten nicht zentriert, sondern links ausgerichtet sind: */
+		/*linksbündig mit Rand */
+    margin-left: 1.9vw;
+    margin-right: 1vw;
+  }
+}
+
+/* 2 Spalten (Spaltenbreite jeweils 40%)*/
+@media (min-width: 600px) and (max-width: 1120px) {
+div.wp-block-columns.kacheln {
+    width: var(--column--width--2);
+		margin-left: 5.5vw;
+    margin-right: 4vw;
+}
+}
+
+
+/* 1 Spalte - Spaltenbreite: 90% */
+@media (max-width: 599px) {
+div.wp-block-columns.kacheln{
+    width: var(--column--width--1);
+}
+}
+
+	
+/* dezenter Hover-Effekt bei Kacheln */
+.wp-block-columns.kacheln:hover {
+ 		opacity:0.7;
+  	transform: scale(1.01, 1.01);	
+}
+
+/* -------- weitere Tests -------- */
+
+.wp-block-group.container {
+    background-color: #cacaca;
+		padding: 10px;
+		margin: 50px;
+	  margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-block-columns.item {
+    background-color: #ff0037;
+		color: #fff;
+		font-size: 35px;
+		padding: 20px;
+		margin: 10px;
+}
+
+/*
+header.entry-header.has-text-align-center.header-footer-group {
+    display: none;
+}
+
+main#site-content {
+    margin-top: -18rem;
+}
+*/
+
