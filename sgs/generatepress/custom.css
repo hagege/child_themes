@@ -89,7 +89,7 @@
       opacity: 0.6;
       text-decoration: none;
       background-color: var(--rot-color)!important;
-    box-shadow: 5px 5px 5px --grau_dunkel-color;
+    box-shadow: 5px 5px 5px var(--grau_dunkel-color);
     -webkit-transform: scale(1.02);
     -moz-transform: scale(1.02);
     -ms-transform: scale(1.02);
