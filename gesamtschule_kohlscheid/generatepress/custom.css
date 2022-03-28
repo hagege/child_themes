@@ -14,6 +14,162 @@ Hellgrau= #D6D6D6
 	--blau-color: rgba(18, 38, 107, 1);
 }
 
+/* ------------------------------ */
+/* Variable Spalten bei Kollegium */
+/* ------------------------------ */
+div.flexible_spalten {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.flexible_spalten .wp-block-group__inner-container{
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* 4 Spalten */
+@media (min-width: 1500px)  {
+div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    width: 25%;
+}
+}
+
+
+/* 3 Spalten */
+@media (min-width: 1321px) and (max-width: 1499px) {
+div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    width: 33%;
+}
+}
+
+/* 2 Spalten */
+@media (min-width: 1000px) and (max-width: 1320px) {
+div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    width: 50%;
+}
+}
+
+/* 1 Spalte */
+@media (min-width: 769px) and (max-width: 999px) {
+div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    width: 100%;
+}
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    width: 50%;
+    padding: 10px;
+}
+}
+
+/* 1 Spalte */
+@media (max-width: 599px) {
+div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    width: 100%;
+}
+}
+	
+/* dezenter Hover-Effekt */
+.wp-block-columns.vier_kacheln:hover {
+ 		opacity:0.7;
+  	transform: scale(1.01, 1.01);	
+}
+
+/* Schriftgröße auf Kollegiumsseite bei Anker */
+p.has-text-align-center.kollegium_anker a {
+    font-size: 1.8rem;
+    padding: 0.2rem;
+}
+
+
+/* ------------------------------ */
+/* Vier Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln" */
+/* ------------------------------ */
+/* Titel unter Bildern größer */
+div.wp-block-column.vier_kacheln {
+		padding: 20px 5px 24px 5px;
+    margin: 0px 15px 0px 15px;
+		background-color: white;
+		/* box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff; */
+		-webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+    filter: drop-shadow(2px 2px 5px #CCCCCC); 
+		margin-bottom: 3rem;
+		justify-content: center; 
+	  /* abgerundete Ecken 
+	  border-radius: 20px 20px 0px 0px; */
+}
+
+div.wp-block-column.vier_kacheln p {
+	font-size: 0.8em;
+}
+
+div.wp-block-column.vier_kacheln h3 {
+	margin-bottom: 0px;
+}
+
+@media (min-width: 382px) {
+div.wp-block-column.vier_kacheln h3 {
+	font-size: 1.1em;
+	}
+}
+
+@media (max-width: 381px) {
+div.wp-block-column.vier_kacheln h3 {
+	font-size: 0.9em;
+	}
+}
+
+
+@media (max-width: 999px) {
+	div.wp-block-column.vier_kacheln {
+			/* nur Rand unten */
+			padding: 20px 0px 24px 0px;
+      margin: 0px 0px 40px 0px;
+			justify-content: center;
+	}
+}
+
+
+
+/* ------------------------------ */
+/* Button z. B. Schullaufbahn und Kollegium */
+/* ------------------------------ */
+  .wp-block-buttons .msmgs_button a,
+  .wp-block-buttons.msmgs_button a.wp-block-button__link {
+      background-color: var(--rot-color);
+      text-decoration: none!important;
+      font-size: 1.2rem;
+  }
+  
+  .wp-block-buttons .msmgs_button a:hover
+  , .wp-block-buttons.msmgs_button a.wp-block-button__link:hover {	
+      color: #fff;
+      opacity: 0.6;
+      text-decoration: none;
+      background-color: var(--rot-color)!important;
+    box-shadow: 5px 5px 5px var(--grau_dunkel-color);
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    transform: scale(1.02);
+    /* VERZÖGERUNG */
+   -webkit-transition: all 0.5s linear;
+   -moz-transition: all 0.5s linear;
+   -ms-transition: all 0.5s linear;
+   -o-transition: all 0.5s linear;
+   transition: all 0.5s linear;
+  }
+  
+  [id^="lehrer_"] { 
+      padding-top: 15rem; 
+      margin-top: -15rem!important;
+  }
+
 
 
 /* ----------------------------- */
