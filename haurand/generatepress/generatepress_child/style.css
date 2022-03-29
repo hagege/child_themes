@@ -965,11 +965,11 @@ box-shadow: 10px 10px 10px #a9b2b5;
 .wp-block-latest-posts.is-grid li:hover,
 .generate-columns .inside-article:hover{
 box-shadow: 15px 15px 15px #a9b2b5;
--webkit-transform: scale(1.02);
--moz-transform: scale(1.02);
--ms-transform: scale(1.02);
--o-transform: scale(1.02);
-transform: scale(1.02);
+-webkit-transform: scale(1.005);
+-moz-transform: scale(1.005);
+-ms-transform: scale(1.005);
+-o-transform: scale(1.005);
+transform: scale(1.005);
 opacity: 1.0;
 /* VERZÖGERUNG */
 -webkit-transition: all 0.5s linear;
