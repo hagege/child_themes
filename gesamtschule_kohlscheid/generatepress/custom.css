@@ -20,11 +20,11 @@ Hellgrau= #D6D6D6
 /* ------------------------------ */
 /* Blauer Info-Kasten             */
 /* ------------------------------ */
-.wp-block-columns.alignwide.has-background {
+.wp-block-columns.alignwide.blauer_container_linke_spalte.has-background {
     padding: 23px;
 }
 
-figure.wp-block-image.size-large {
+.wp-block-columns.alignwide.blauer_container_linke_spalte.has-background figure.wp-block-image.size-large {
     margin-bottom: 0px;
 }
 
