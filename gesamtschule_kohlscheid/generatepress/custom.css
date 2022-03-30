@@ -14,6 +14,43 @@ Hellgrau= #D6D6D6
 	--blau-color: rgba(18, 38, 107, 1);
 }
 
+
+
+
+/* ------------------------------ */
+/* Blauer Info-Kasten             */
+/* ------------------------------ */
+.wp-block-columns.alignwide.has-background {
+    padding: 23px;
+}
+
+figure.wp-block-image.size-large {
+    margin-bottom: 0px;
+}
+
+
+
+/* ------------------------------ */
+/* Buttons bei PDF-Dateien        */
+/* ------------------------------ */
+.wp-block-file .wp-block-file__button {
+		background: var(--rot-color);
+    border-radius: 0; 
+    color: #fff;
+    font-size: .8em;
+    padding: .5em 1em;
+}
+
+
+.wp-block-file a.wp-block-file__button:active, .wp-block-file a.wp-block-file__button:focus, .wp-block-file a.wp-block-file__button:hover, .wp-block-file a.wp-block-file__button:visited {
+    background: var(--blau-color);
+    box-shadow: none;
+    color: #fff;
+    opacity: .85;
+    text-decoration: none;
+}
+
+
 /* ------------------------------ */
 /* Variable Spalten bei Kollegium */
 /* ------------------------------ */
