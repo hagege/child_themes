@@ -70,21 +70,24 @@ function removeCorePatterns() {
    }
    add_action( 'init', 'haurand_register_block_categories' );
   
-  
+/*----------------------------------------------------------------*/
+/* Ende: Block Patterns von msmg 
+/* Datum: 30.03.2022
+/* Autor: hgg
+/*----------------------------------------------------------------*/  
   
    register_block_pattern(
-	  /* https://developer.wordpress.org/block-editor/reference-guides/block-api/block-patterns/ */
-	  /* maskieren ist nicht mehr nötig, wenn man einfache Hochkommatas nimmt */
-	 'two-tile-card-pattern',
+	  /* Pattern für blauen Container mit zwei Spalten in blau und Bild links */
+	 'two-columns-pattern-picture',
 	   array(
-	   'title' => __( 'Two columns with pictures', 'zwei-kacheln-block-pattern' ),
-	   'description' => _x( 'Two columns with pictures (tiles)', 'Block pattern description', 'zwei-kacheln-block-pattern' ),
+	   'title' => __( 'Two columns with picture', 'zwei-kacheln-block-pattern-bild' ),
+	   'description' => _x( 'Two columns with picture', 'Block pattern description', 'zwei-kacheln-block-pattern-bild' ),
 	   'categories'  => array('msmg'),
 	   'content'     =>
-		  '<!-- wp:columns {"style":{"color":{"background":"#2c6997"}}} -->
-		  <div class="wp-block-columns has-background" style="background-color:#2c6997"><!-- wp:column -->
-		  <div class="wp-block-column"><!-- wp:image {"id":44,"sizeSlug":"large","linkDestination":"none"} -->
-		  <figure class="wp-block-image size-large"><img src="https://www.web102.s116.goserver.host/wp-content/uploads/2022/03/Beispiel_2-1024x1024.jpg" alt="" class="wp-image-44"/></figure>
+		  '<!-- wp:columns {"align":"wide","backgroundColor":"global-color-9","className":"blauer_container_linke_spalte"} -->
+		  <div class="wp-block-columns alignwide blauer_container_linke_spalte has-global-color-9-background-color has-background"><!-- wp:column -->
+		  <div class="wp-block-column"><!-- wp:image {"id":38,"sizeSlug":"large","linkDestination":"none"} -->
+		  <figure class="wp-block-image size-large"><img src="https://www.web102.s116.goserver.host/wp-content/uploads/2022/03/Beispiel_1-1024x1024.jpg" alt="" class="wp-image-38"/></figure>
 		  <!-- /wp:image --></div>
 		  <!-- /wp:column -->
 		  
@@ -101,10 +104,38 @@ function removeCorePatterns() {
 	 )
    );
 
+   register_block_pattern(
+	/* Pattern für blauen Container mit zwei Spalten in blau und Texten */
+   'two-columns-pattern-text',
+	 array(
+	 'title' => __( 'Two columns with text', 'zwei-kacheln-block-pattern-text' ),
+	 'description' => _x( 'Two columns with text', 'Block pattern description', 'zwei-kacheln-block-pattern-text' ),
+	 'categories'  => array('msmg'),
+	 'content'     =>
+		'<!-- wp:columns {"align":"wide","backgroundColor":"global-color-9"} -->
+		<div class="wp-block-columns alignwide has-global-color-9-background-color has-background"><!-- wp:column -->
+		<div class="wp-block-column"><!-- wp:heading {"level":3,"textColor":"base-3"} -->
+		<h3 class="has-base-3-color has-text-color">Anmeldung</h3>
+		<!-- /wp:heading -->
+		
+		<!-- wp:paragraph {"textColor":"base-3"} -->
+		<p class="has-base-3-color has-text-color">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+		<!-- /wp:paragraph --></div>
+		<!-- /wp:column -->
+		
+		<!-- wp:column {"textColor":"base-3"} -->
+		<div class="wp-block-column has-base-3-color has-text-color"><!-- wp:paragraph -->
+		<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</p>
+		<!-- /wp:paragraph --></div>
+		<!-- /wp:column --></div>
+		<!-- /wp:columns -->',
+   )
+ );
 
  
 
  register_block_pattern(
+	/* Patterns für Office-Icons */
    'icon-block-office',
      array(
      'title' => __( 'Icons with office Application', 'icon-block-office' ),
