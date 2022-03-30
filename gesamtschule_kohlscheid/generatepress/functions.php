@@ -188,6 +188,25 @@ function tu_excerpt_metabox_more( $excerpt ) {
 	
 	return $output;
 }
+
+
+
+/*----------------------------------------------------------------*/
+/* Start: hervorgehobener Beitrag nur auf der Startseite
+/* Datum: 30.03.2022
+/* Autor: https://generatepress.com/forums/topic/only-show-post-as-featured-post-on-homepage/
+/*----------------------------------------------------------------*/
+
+add_filter( 'option_generate_blog_settings', 'lh_disable_featured_column' );
+function lh_disable_featured_column( $options ) {
+    if ( ! is_home() ) {
+	    $options['featured_column'] = false;
+    }
+  
+    return $options;
+}
+
+
 /*----------------------------------------------------------------*/
 /* Start: Weiterlesen-Link, auch wenn der Textauszug eingetragen ist
 /* Datum: 27.05.2021
