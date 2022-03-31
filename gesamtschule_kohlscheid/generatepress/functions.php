@@ -45,8 +45,8 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
   
   
 
-/* Erst mal alle Kategorien zulassen */
-/*
+/* Kategorien deaktivieren */
+
 add_action('after_setup_theme', 'removeCorePatterns');
 
 function removeCorePatterns() {
@@ -58,7 +58,7 @@ function removeCorePatterns() {
 	unregister_block_pattern_category('text');
 	unregister_block_pattern_category('uncategorized');
 }
-*/  
+ 
   
   function haurand_register_block_categories() {
 	if ( class_exists( 'WP_Block_Patterns_Registry' ) ) {
