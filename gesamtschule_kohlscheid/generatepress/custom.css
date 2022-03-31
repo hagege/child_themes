@@ -14,7 +14,69 @@ Hellgrau= #D6D6D6
 	--blau-color: rgba(18, 38, 107, 1);
 }
 
+/* ----------------------------- */
+/* Content mit jeweils 0.3rem       */
+/* links und rechts              */
+/* ----------------------------- */
+div#content {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
 
+/* ----------------------------- */
+/* Breakpoint für Anzeige        */
+/* linker Rand bei Tablet        */
+/* ----------------------------- 
+@media (min-width: 760px) and (max-width: 960px) {
+.generate-columns-container {
+    margin-left: 1px;
+		margin-right: 1px;
+}
+}
+*/
+
+
+/* ----------------------------- */
+/* Breakpoint für Anzeige        */
+/* Sidebar                       */
+/* ----------------------------- */
+
+@media (max-width: 960px) {
+    .site-content {
+        flex-direction: column;
+    }
+    .container .site-content .content-area {
+        width: auto;
+    }
+    .is-left-sidebar.sidebar, .is-right-sidebar.sidebar {
+        width: auto;
+        order: initial;
+    }
+    #main {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    body:not(.no-sidebar) #main {
+        margin-bottom: 0;
+    }
+}
+
+
+/* ----------------------------- */
+/* Breakpoint für Anzeige Posts */
+/* ein- oder zweispaltig         */
+/* ----------------------------- */
+@media (max-width: 967px) {
+  .generate-columns.mobile-grid-100, .grid-sizer.mobile-grid-100 {
+      width: 100%;
+  }
+  }
+  
+  @media (min-width: 968px){
+  .generate-columns.tablet-grid-50, .grid-sizer.tablet-grid-50 {
+      width: 50%;
+  }
+}
 
 
 /* ------------------------------ */
@@ -49,6 +111,91 @@ Hellgrau= #D6D6D6
     opacity: .85;
     text-decoration: none;
 }
+
+
+/* ------------------------------ */
+/* Spalten umbrechen
+/* ------------------------------ */
+  .wp-block-columns.drei_kacheln,
+  .wp-block-columns.zwei_kacheln{
+    display: flex;
+    margin-bottom: 1.75em;
+    flex-wrap: wrap;
+  }
+  
+  @media (min-width: 1151px) {
+    .wp-block-columns.drei_kacheln,
+      .wp-block-columns.zwei_kacheln {
+      flex-wrap: nowrap;
+    }
+  }
+  .wp-block-column.drei_kacheln,
+  .wp-block-column.zwei_kacheln {
+    flex-grow: 1;
+    min-width: 0;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  /* Bis hierher alles einspaltig*/
+  @media (max-width: 1150px) {
+      .wp-block-columns.drei_kacheln,
+      .wp-block-columns.zwei_kacheln {
+              display: block;		
+      }
+  }
+  
+  /* Ab hier 2 Spalten */
+  @media (min-width: 1151px) {
+    .wp-block-column.drei_kacheln,
+      .wp-block-column.zwei_kacheln {
+      flex-basis: 0;
+      flex-grow: 1;
+    }
+    .wp-block-column[style*="flex-basis"] {
+      flex-grow: 0;
+    }
+    .wp-block-column.drei_kacheln:not(:first-child),
+      .wp-block-column.zwei_kacheln:not(:first-child)
+      {
+      margin-left: 2em;
+    }
+  }
+  
+  /* Überschrift mit Padding nach links und rechts */
+  div.wp-block-column h2 {
+      padding: 0px 10px 0px 10px;
+  }
+  
+  
+  
+  
+/* ------------------------------ */
+/* Zwei Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln" */
+/* ------------------------------ */
+/* Titel unter Bildern größer */
+    div.wp-block-column.zwei_kacheln {
+        font-size: 1.5rem;
+        padding: 0px 0px 2rem 0px;
+        background-color: white;
+				border-style: solid;
+    		border-width: 1px;
+    		border-color: var(--grau_hell-color);
+    }
+    
+  /* Nur Rand unten, kein Rand links */
+  @media (max-width: 1150px) {
+    div.wp-block-column.zwei_kacheln {
+         margin: 0px 0rem 3rem 0px!important;
+        }
+    }
+  
+  /* beim ersten Bild kein Rand */
+  @media (min-width: 1151px) {
+    div.wp-block-column.zwei_kacheln:first-child {
+         margin: 0px 0rem 0rem 0px;
+        }
+    }
+
 
 
 /* ------------------------------ */
