@@ -15,6 +15,12 @@ Hellgrau= #D6D6D6
 }
 
 
+/* Darstellung der Untermenüpunkte */
+.main-navigation .main-nav ul ul li a {
+    font-size: 1rem;
+		font-weight: 400;	
+}
+
 
 /* ----------------------------- */
 /* Content mit Rand              */
@@ -464,45 +470,7 @@ p.has-text-align-center.animated.fadeInLeft.slower {
 
 
 
-/* ----------------------------- */
-/* Navigation                    */
-/* ----------------------------- */
-  
-/* Einstellungen für das Desktop-Menü */
-  @media (min-width: 769px) {
-    /* nav links effect */
-    .main-navigation .menu > .menu-item > a::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        left: 50%;
-        bottom: 0px;
-        -webkit-transform: translateX(-50%);
-        transform: translateX(-50%);
-        color: var(--rot-color);
-        display: block;
-        width: 0;
-        height: 5px;   
-        background-color: currentColor;
-        transition: 0.3s width ease;
-    }
-    .main-navigation .menu > .menu-item.current-menu-item > a::after,
-    .main-navigation .menu > .menu-item > a:hover::after {
-        width: 100%;
-        color: var(--blau-color);
-    }
-  
-  .main-navigation .menu > .menu-item.current-menu-item > a::after,
-    .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
-    .main-navigation .menu > .menu-item > a:active::after {
-    width: 100%;
-    color: var(--grau_hell-color);
-    }
-  /* Submenü */
-  ul.sub-menu {
-    opacity: 0.9!important;
-  }
-}
+
 
 
 
