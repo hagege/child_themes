@@ -200,9 +200,16 @@ div#content {
 
 /* Content: Abstand links und rechts */
 p.has-text-align-left.zwei_kacheln_abstand,
-h2#anmeldung-oberstufe {
+h2#anmeldung-oberstufe,
+p.zwei_kacheln_abstand{
     padding: 0px 1rem;
 }
+
+/* Mailadresssen Schulleitung */
+p.zwei_kacheln_abstand a{
+    font-size: 1.2rem;
+}
+
 
 
 

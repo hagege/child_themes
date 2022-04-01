@@ -132,7 +132,45 @@ function removeCorePatterns() {
    )
  );
 
- 
+ register_block_pattern(
+	/* Pattern mit 2 Spalten für Anmeldung, Schulleitung, etc */
+   'two-columns-pattern-text-iamge',
+	 array(
+	 'title' => __( 'Two columns with text and inage', 'zwei-kacheln-block-pattern-text-bild' ),
+	 'description' => _x( 'Two columns with text and inage', 'Block pattern description', 'zwei-kacheln-block-pattern-text-bild' ),
+	 'categories'  => array('msmg'),
+	 'content'     =>
+		'<!-- wp:columns {"className":"zwei_kacheln"} -->
+		<div class="wp-block-columns zwei_kacheln"><!-- wp:column {"className":"zwei_kacheln"} -->
+		<div class="wp-block-column zwei_kacheln"><!-- wp:image {"align":"center","id":24,"sizeSlug":"large","linkDestination":"custom","style":{"color":{}}} -->
+		<div class="wp-block-image"><figure class="aligncenter size-large"><img src="https://www.web102.s116.goserver.host/wp-content/uploads/2022/03/Poster_1-1024x576.jpg" alt="" class="wp-image-24"/></figure></div>
+		<!-- /wp:image -->
+
+		<!-- wp:heading {"textAlign":"left"} -->
+		<h2 class="has-text-align-left" id="anmeldung-jahrgang-5">Anmeldung Jahrgang 5</h2>
+		<!-- /wp:heading -->
+
+		<!-- wp:paragraph {"align":"left","className":"zwei_kacheln_abstand"} -->
+		<p class="has-text-align-left zwei_kacheln_abstand">Informationen für Schülerinnen und Schüler der 4. Klasse!<br>Tag der offenen Tür, Schnuppertage und Infoveranstaltung</p>
+		<!-- /wp:paragraph --></div>
+		<!-- /wp:column -->
+
+		<!-- wp:column {"className":"zwei_kacheln"} -->
+		<div class="wp-block-column zwei_kacheln"><!-- wp:image {"align":"center","id":24,"sizeSlug":"large","linkDestination":"custom","style":{"color":{}}} -->
+		<div class="wp-block-image"><figure class="aligncenter size-large"><img src="https://www.web102.s116.goserver.host/wp-content/uploads/2022/03/Poster_1-1024x576.jpg" alt="" class="wp-image-24"/></figure></div>
+		<!-- /wp:image -->
+
+		<!-- wp:heading {"textAlign":"left"} -->
+		<h2 class="has-text-align-left" id="anmeldung-oberstufe">Anmeldung Oberstufe</h2>
+		<!-- /wp:heading -->
+
+		<!-- wp:paragraph {"align":"left","className":"zwei_kacheln_abstand"} -->
+		<p class="has-text-align-left zwei_kacheln_abstand">Informationen für angehende AbiturientInnen<br>Tag der offenen Tür und Infoveranstaltung</p>
+		<!-- /wp:paragraph --></div>
+		<!-- /wp:column --></div>
+		<!-- /wp:columns -->',
+		)
+	  );
 
  register_block_pattern(
 	/* Patterns für Office-Icons */
