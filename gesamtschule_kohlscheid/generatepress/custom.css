@@ -14,13 +14,15 @@ Hellgrau= #D6D6D6
 	--blau-color: rgba(18, 38, 107, 1);
 }
 
+
+
 /* ----------------------------- */
-/* Content mit jeweils 0.3rem       */
+/* Content mit Rand              */
 /* links und rechts              */
 /* ----------------------------- */
 div#content {
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 /* ----------------------------- */
@@ -180,21 +182,27 @@ div#content {
 				border-style: solid;
     		border-width: 1px;
     		border-color: var(--grau_hell-color);
-    }
+}
     
-  /* Nur Rand unten, kein Rand links */
-  @media (max-width: 1150px) {
+/* Nur Rand unten, kein Rand links */
+@media (max-width: 1150px) {
     div.wp-block-column.zwei_kacheln {
          margin: 0px 0rem 3rem 0px!important;
         }
-    }
+}
   
-  /* beim ersten Bild kein Rand */
+/* beim ersten Bild kein Rand */
   @media (min-width: 1151px) {
     div.wp-block-column.zwei_kacheln:first-child {
          margin: 0px 0rem 0rem 0px;
         }
-    }
+}
+
+/* Content: Abstand links und rechts */
+p.has-text-align-left.zwei_kacheln_abstand,
+h2#anmeldung-oberstufe {
+    padding: 0px 1rem;
+}
 
 
 
