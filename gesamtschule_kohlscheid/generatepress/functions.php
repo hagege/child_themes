@@ -245,6 +245,7 @@ function lh_disable_featured_column( $options ) {
 }
 
 
+
 /*----------------------------------------------------------------*/
 /* Start: Weiterlesen-Link, auch wenn der Textauszug eingetragen ist
 /* Datum: 27.05.2021
