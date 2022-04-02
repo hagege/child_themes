@@ -71,12 +71,14 @@ div#content {
 
 
 /* ----------------------------- */
-/* Breakpoint für Anzeige Posts */
-/* ein- oder zweispaltig         */
+/* Featured Post möglichst       */
+/* einspaltig                    */
 /* ----------------------------- */
 
-
-/* alte Einstellungen funktionierten nicht korrekt */
+.generate-columns-container .featured-column {
+    float: none;
+    width: 100%;
+}
 
 
 /* ------------------------------ */
