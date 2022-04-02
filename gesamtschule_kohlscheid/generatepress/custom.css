@@ -15,6 +15,26 @@ Hellgrau= #D6D6D6
 }
 
 
+/* Links im Footer und Block Pattern  unterstrichen */
+p.blauer_link a,
+p.footer_links_absaetze a {
+    color: var(--grau_hell-color);
+    text-decoration: underline;
+}
+
+p.blauer_link a:hover,
+p.footer_links_absaetze a:hover{
+    color: var(--rot-color);
+    text-decoration: dotted;
+}
+
+
+/* Links im Footer mit weniger Rand unten */
+aside#block-38 {
+    margin-bottom: 2px;
+}
+
+
 /* Darstellung der Untermenüpunkte */
 .main-navigation .main-nav ul ul li a {
     font-size: 1rem;
