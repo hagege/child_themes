@@ -74,17 +74,9 @@ div#content {
 /* Breakpoint für Anzeige Posts */
 /* ein- oder zweispaltig         */
 /* ----------------------------- */
-@media (max-width: 967px) {
-  .generate-columns.mobile-grid-100, .grid-sizer.mobile-grid-100 {
-      width: 100%;
-  }
-  }
-  
-  @media (min-width: 968px){
-  .generate-columns.tablet-grid-50, .grid-sizer.tablet-grid-50 {
-      width: 50%;
-  }
-}
+
+
+/* alte Einstellungen funktionierten nicht korrekt */
 
 
 /* ------------------------------ */
