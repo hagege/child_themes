@@ -1,0 +1,30 @@
+{
+	"version": 2,
+	
+	"settings": {		
+
+		"typography": {
+			"fontFamilies": [
+			  {
+				"fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell,\"Helvetica Neue\",sans-serif",
+				"name": "Display Font",
+				"slug": "system-font"
+			  },
+		      {  				
+				"fontFamily": "\"Lobster Two\", serif",
+				"name": "Lobster Two",
+				"slug": "Lobster Two",
+				"fontFace": [
+   				  {
+						"fontFamily": "Lobster Two",
+						"fontWeight": "400",
+						"fontStyle": "normal",
+						"fontStretch": "normal",
+						"src": [ "file:./assets/fonts/lobster-two-v17-latin-regular.woff2" ]
+			 	  }
+				]
+			  }
+			]
+		}
+	}
+}	
