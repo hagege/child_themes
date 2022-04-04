@@ -1,3 +1,4 @@
+
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 2,
@@ -19,53 +20,6 @@
 		}
 	],
 	"settings": {
-		"appearanceTools": true,
-		"color": {
-			"palette": [
-				{
-					"slug": "foreground",
-					"color": "#242321",
-					"name": "Foreground"
-				},
-				{
-					"slug": "background",
-					"color": "#FCFBF8",
-					"name": "Background"
-				},
-				{
-					"slug": "primary",
-					"color": "#71706E",
-					"name": "Primary"
-				},
-				{
-					"slug": "tertiary",
-					"color": "#CFCFCF",
-					"name": "Tertiary"
-				}
-			]
-		},
-		"custom": {
-			"spacing": {
-				"small": "clamp(20px, 4vw, 40px)",
-				"medium": "clamp(48px, 8vw, 100px)",
-				"large": "clamp(100px, 12vw, 460px)",
-				"outer": "min(4vw, 90px)"
-			}
-		},
-		"layout": {
-			"contentSize": "620px",
-			"wideSize": "1260px"
-		},
-		"spacing": {
-			"units": [
-				"%",
-				"px",
-				"em",
-				"rem",
-				"vh",
-				"vw"
-			]
-		},
 		"typography": {
 			"fontFamilies": [
 			  {
@@ -155,33 +109,6 @@
 							"src": [ "file:./assets/fonts/Chivo-BoldItalic.woff2" ]
 						}
 					]
-				}
-			],
-			"fontSizes": [
-				{
-					"name": "Small",
-					"size": "16px",
-					"slug": "small"
-				},
-				{
-					"name": "Normal",
-					"size": "18px",
-					"slug": "normal"
-				},
-				{
-					"name": "Medium",
-					"size": "clamp(24px, 5vw, 32px)",
-					"slug": "medium"
-				},
-				{
-					"name": "Large",
-					"size": "clamp(36px, 6vw, 48px)",
-					"slug": "large"
-				},
-				{
-					"name": "Huge",
-					"size": "clamp(42px, 7vw, 64px)",
-					"slug": "huge"
 				}
 			]
 		}
@@ -291,19 +218,19 @@
 		"elements": {
 			"h1": {
 				"typography": {
-                    "fontFamily": "var(--wp--preset--font-family--vibur)",
+					"fontFamily": "var(--wp--preset--font-family--vibur)",
 					"fontSize": "clamp(48px, 8vw, 72px)"
 				}
 			},
 			"h2": {
 				"typography": {
-                    "fontFamily": "var(--wp--preset--font-family--vibur)",
+					"fontFamily": "var(--wp--preset--font-family--vibur)",
 					"fontSize": "var(--wp--preset--font-size--huge)"
 				}
 			},
 			"h3": {
 				"typography": {
-                    "fontFamily": "var(--wp--preset--font-family--vibur)",
+					"fontFamily": "var(--wp--preset--font-family--vibur)",
 					"fontSize": "var(--wp--preset--font-size--large)"
 				}
 			},
@@ -332,17 +259,5 @@
 			"fontWeight": "400",
  			"lineHeight": "1.6"
 		}
-	},
-	"templateParts": [
-		{
-			"name": "header",
-			"title": "Header",
-			"area": "header"
-		},
-		{
-			"name": "footer",
-			"title": "Footer",
-			"area": "footer"
-		}
-	]
+	}
 }
