@@ -133,6 +133,31 @@ register_block_pattern(
 );
 
 register_block_pattern(
+	/* Pattern mit 2 Spalten mit Bildern */
+   'two-columns-pattern-with-two-iamges',
+	 array(
+	 'title' => __( 'Two columns with two images', 'zwei-kacheln-block-pattern-zwei-bilder' ),
+	 'description' => _x( 'Two columns with two images', 'Block pattern description', 'zwei-kacheln-block-pattern-zwei-bilder' ),
+	 'categories'  => array('Vorlagen Haurand'),
+	 'content'     =>
+		'<!-- wp:columns {"align":"wide","backgroundColor":"global-color-9","className":"blauer_container_linke_spalte"} -->
+		<div class="wp-block-columns alignwide blauer_container_linke_spalte has-global-color-9-background-color has-background"><!-- wp:column {"textColor":"base-3"} -->
+		<div class="wp-block-column has-base-3-color has-text-color"><!-- wp:image {"id":38,"width":490,"height":490,"sizeSlug":"large","linkDestination":"none"} -->
+		<figure class="wp-block-image size-large is-resized"><img src="https://www.web102.s116.goserver.host/wp-content/uploads/2022/03/Beispiel_1-1024x1024.jpg" alt="" class="wp-image-38" width="490" height="490"/><figcaption>Bildunterschrift</figcaption></figure>
+		<!-- /wp:image --></div>
+		<!-- /wp:column -->
+		
+		<!-- wp:column {"textColor":"base-3"} -->
+		<div class="wp-block-column has-base-3-color has-text-color"><!-- wp:image {"id":38,"width":490,"height":490,"sizeSlug":"large","linkDestination":"none"} -->
+		<figure class="wp-block-image size-large is-resized"><img src="https://www.web102.s116.goserver.host/wp-content/uploads/2022/03/Beispiel_1-1024x1024.jpg" alt="" class="wp-image-38" width="490" height="490"/><figcaption>Bildunterschrift</figcaption></figure>
+		<!-- /wp:image --></div>
+		<!-- /wp:column --></div>
+		<!-- /wp:columns -->',
+		)
+);
+
+
+register_block_pattern(
 	/* Pattern mit 2 Spalten für Anmeldung, Schulleitung, etc */
    'two-columns-pattern-text-iamge',
 	 array(
@@ -172,30 +197,6 @@ register_block_pattern(
 		)
 );
 
-
-register_block_pattern(
-		/* Pattern mit 2 Spalten für Anmeldung, Schulleitung, etc */
-	   'two-columns-pattern-with-two-iamges',
-		 array(
-		 'title' => __( 'Two columns with two images', 'zwei-kacheln-block-pattern-zwei-bilder' ),
-		 'description' => _x( 'Two columns with two images', 'Block pattern description', 'zwei-kacheln-block-pattern-zwei-bilder' ),
-		 'categories'  => array('Vorlagen Haurand'),
-		 'content'     =>
-			'<!-- wp:columns {"align":"wide","backgroundColor":"global-color-9","className":"blauer_container_linke_spalte"} -->
-			<div class="wp-block-columns alignwide blauer_container_linke_spalte has-global-color-9-background-color has-background"><!-- wp:column {"textColor":"base-3"} -->
-			<div class="wp-block-column has-base-3-color has-text-color"><!-- wp:image {"id":38,"width":490,"height":490,"sizeSlug":"large","linkDestination":"none"} -->
-			<figure class="wp-block-image size-large is-resized"><img src="https://www.web102.s116.goserver.host/wp-content/uploads/2022/03/Beispiel_1-1024x1024.jpg" alt="" class="wp-image-38" width="490" height="490"/><figcaption>Bildunterschrift</figcaption></figure>
-			<!-- /wp:image --></div>
-			<!-- /wp:column -->
-			
-			<!-- wp:column {"textColor":"base-3"} -->
-			<div class="wp-block-column has-base-3-color has-text-color"><!-- wp:image {"id":38,"sizeSlug":"large","linkDestination":"none"} -->
-			<figure class="wp-block-image size-large"><img src="https://www.web102.s116.goserver.host/wp-content/uploads/2022/03/Beispiel_1-1024x1024.jpg" alt="" class="wp-image-38"/><figcaption>Bildunterschrift</figcaption></figure>
-			<!-- /wp:image --></div>
-			<!-- /wp:column --></div>
-			<!-- /wp:columns -->',
-			)
-);
 
 register_block_pattern(
 	/* Patterns für Office-Icons */
