@@ -14,17 +14,37 @@ Hellgrau= #D6D6D6
 	--blau-color: rgba(18, 38, 107, 1);
 }
 
+/* TEST */
+/*
+a {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.25ch;
+}
 
-/* Links im Footer und Block Pattern  unterstrichen */
+a:hover, a:focus {
+    text-decoration-style: dashed;
+}
+*/
+
+/* TEST */
+
+/* für z. B. vergangene Events */
+.tribe-events-notices {
+    background: var(--grau_hell-color);
+    border: var(--grau_hell-color);
+    color: var(--rot-color);
+		text-shadow: none;
+}
+
+
+/* Links im Footer und Block Pattern unterstrichen */
 p.blauer_link a,
 p.footer_links_absaetze a {
-    color: var(--grau_hell-color);
     text-decoration: underline;
 }
 
 p.blauer_link a:hover,
 p.footer_links_absaetze a:hover{
-    color: var(--rot-color);
     text-decoration: dotted;
 }
 
