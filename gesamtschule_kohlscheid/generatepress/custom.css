@@ -28,6 +28,20 @@ a:hover, a:focus {
 
 /* TEST */
 
+/* Farbe für Link im blauen Kasten */
+.wp-block-columns.alignwide.blauer_container_linke_spalte.has-global-color-9-background-color.has-background a,
+.wp-block-columns.alignwide.has-global-color-9-background-color.has-background a
+{
+    color: lightblue;
+		border-bottom: 1px white dotted;
+}
+
+.wp-block-columns.alignwide.blauer_container_linke_spalte.has-global-color-9-background-color.has-background a:hover, 
+.wp-block-columns.alignwide.has-global-color-9-background-color.has-background a:hover{
+    color: white;
+		border-bottom: 1px white dotted;
+}
+
 /* für z. B. vergangene Events */
 .tribe-events-notices {
     background: var(--grau_hell-color);
