@@ -1,0 +1,48 @@
+/* ----------------------------- */
+/* Farben */
+/* ----------------------------- */
+/* 
+Rot = #C22921
+Grün = #529f25
+Hellgrau= #D6D6D6
+*/
+
+/* Variablen */
+:root {
+    --gruen-color-opacity: rgba(82, 159, 37, 0.5);
+      --black-color-opacity-1: rgba(0, 0, 0, 0.2);
+      --black-color-opacity-2: rgba(0, 0, 0, 0.5);	
+      --white-color-opacity: rgba(255, 255, 255, 0.5);	
+    --grau_hell-color: rgba(214, 214, 214, 1);
+      --blau-color: rgba(18, 38, 107, 1);
+  }
+  
+  /* Move Sidebar below the content */
+  @media (max-width: 1024px) {
+      .site-content {
+          flex-direction: column;
+      }
+      .site-content .content-area, .site-content .is-right-sidebar {
+          width: 100%;
+      }
+  }
+  
+  
+  /* Hintergrundfarbe für Menü */
+  .header-wrap {
+      background-color: var(--black-color-opacity-1);
+  }
+  
+  nav#sticky-navigation {
+      background-color: var(--black-color-opacity-2);
+  }
+  
+  /* Schriftgröße und -art auf der Hauptseite */
+  h1.front {
+      color: white;
+        font-weight: 700;
+        font-size: 4rem;
+      background-color: var(--black-color-opacity-2);
+      padding: 3rem;
+          margin: 5rem;
+  }
