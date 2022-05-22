@@ -37,11 +37,15 @@ Hellgrau= #D6D6D6
       background-color: var(--black-color-opacity-2);
   }
   
+  .main-navigation ul ul {
+      background-color:var(--black-color-opacity-2);
+  }
+  
   /* Schriftgröße und -art auf der Hauptseite */
   h1.front {
       color: white;
         font-weight: 700;
-        font-size: 4rem;
+        font-size: clamp(1.5rem, 3.5vw, 5rem);
       background-color: var(--black-color-opacity-2);
       padding: 3rem;
           margin: 5rem;
