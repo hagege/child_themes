@@ -45,8 +45,9 @@ Hellgrau= #D6D6D6
   h1.front {
       color: white;
         font-weight: 700;
-        font-size: clamp(1rem, 3.5vw, 6rem);
+        font-size: clamp(0.7rem, 2.5vw, 6rem);
       background-color: var(--black-color-opacity-2);
-      padding: 2rem;
-          margin: 5rem;
+      padding: 1em 3em; 
+          margin: 4em 8em;
   }
+  
