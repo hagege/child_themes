@@ -271,6 +271,20 @@ function lh_disable_featured_column( $options ) {
 }
 
 
+/*----------------------------------------------------------------*/
+//Allow Contributors to Add Media
+/* Datum: 24.05.2022
+// Autor: https://wpbuffs.com/how-to-allow-contributors-to-upload-images-in-wordpress/
+/*----------------------------------------------------------------*/
+if ( current_user_can('contributor') && !current_user_can('upload_files') )
+add_action('admin_init', 'allow_contributor_uploads');
+
+function allow_contributor_uploads() {
+	$contributor = get_role('contributor');
+	$contributor->add_cap('upload_files');
+}
+
+
 
 /*----------------------------------------------------------------*/
 /* Start: Weiterlesen-Link, auch wenn der Textauszug eingetragen ist
