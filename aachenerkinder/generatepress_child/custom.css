@@ -266,13 +266,13 @@ span#tribe-mini-calendar-month-0 {
 
 @media (max-width: 350px) {
 .ackids_front h2 {
-  font-size: 1.3rem;
+  font-size: 0.8rem;
 }
 }	
 
 @media (min-width: 351px) {
 .ackids_front h2 {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 }	
 
