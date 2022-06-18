@@ -12,6 +12,7 @@ Hellgrau= #D6D6D6
     --gruen-color-opacity: rgba(82, 159, 37, 0.5);
       --black-color-opacity-1: rgba(0, 0, 0, 0.2);
       --black-color-opacity-2: rgba(0, 0, 0, 0.5);	
+      --black-color-opacity-3: rgb(0 0 0 / 0%);		
       --white-color-opacity: rgba(255, 255, 255, 0.5);	
     --grau_hell-color: rgba(214, 214, 214, 1);
       --blau-color: rgba(18, 38, 107, 1);
@@ -33,21 +34,29 @@ Hellgrau= #D6D6D6
       background-color: var(--black-color-opacity-1);
   }
   
-  nav#sticky-navigation {
-      background-color: var(--black-color-opacity-2);
+  
+  /* Hintergrund Menü transparent */
+  .main-navigation {
+      background-color: var(--black-color-opacity-3);
   }
   
   .main-navigation ul ul {
       background-color:var(--black-color-opacity-2);
   }
   
+  nav#sticky-navigation {
+      background-color:var(--black-color-opacity-2);
+  }
+  
   /* Schriftgröße und -art auf der Hauptseite */
-  h1.front {
-      color: white;
-        font-weight: 700;
-        font-size: clamp(0.7rem, 2.5vw, 6rem);
-      background-color: var(--black-color-opacity-2);
-      padding: 1em 3em; 
-          margin: 4em 8em;
+  h1.front,
+  h1.gb-headline.gb-headline-9126ac98.gb-headline-text {
+        color: white;
+      font-weight: 700;
+      font-size: clamp(0.7rem, 3.2vw, 6rem);
+      padding: 1em 3em;
+      margin: 2em 4em;
+      text-shadow: 0px 0px 0.3rem #000000;
+      /* background-color: var(--black-color-opacity-2); */
   }
   
