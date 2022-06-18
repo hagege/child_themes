@@ -11,12 +11,15 @@ Hellgrau= #D6D6D6
 :root {
     --gruen-color-opacity: rgba(82, 159, 37, 0.5);
       --black-color-opacity-1: rgba(0, 0, 0, 0.2);
-      --black-color-opacity-2: rgba(0, 0, 0, 0.5);	
+      --black-color-opacity-2: rgba(0, 0, 0, 0.8);	
       --black-color-opacity-3: rgb(0 0 0 / 0%);		
       --white-color-opacity: rgba(255, 255, 255, 0.5);	
     --grau_hell-color: rgba(214, 214, 214, 1);
       --blau-color: rgba(18, 38, 107, 1);
+  
+      --blau-color-opacity-1: rgba(23, 47, 102, 0.9);	
   }
+  
   
   /* Move Sidebar below the content */
   @media (max-width: 1024px) {
@@ -29,6 +32,35 @@ Hellgrau= #D6D6D6
   }
   
   
+  /* sticky menue */
+  @media (min-width: 1180px) {
+  .main-navigation.navigation-stick .sticky-navigation-logo {
+       height: 100px;
+      }
+     .navigation-branding img, 
+     .site-logo.mobile-header-logo img {
+       height: 100px;
+       width: auto;
+     }
+  
+     .navigation-branding .main-title {
+       line-height: 100px;
+     }
+  }
+  
+  /* Ränder im Hauptmenü */
+  @media (min-width: 500px) {
+      .inside-header {
+              padding: 0px 6rem;
+      }
+  }
+  
+  @media (max-width: 499px) {
+      .inside-header {
+              padding: 0px 2rem;
+      }	
+  }
+      
   /* Hintergrundfarbe für Menü */
   .header-wrap {
       background-color: var(--black-color-opacity-1);
@@ -41,11 +73,11 @@ Hellgrau= #D6D6D6
   }
   
   .main-navigation ul ul {
-      background-color:var(--black-color-opacity-2);
+      background-color: var(--blau-color-opacity-1);
   }
   
   nav#sticky-navigation {
-      background-color:var(--black-color-opacity-2);
+      background-color:var(--blau-color-opacity-1);
   }
   
   /* Schriftgröße und -art auf der Hauptseite */
@@ -53,7 +85,7 @@ Hellgrau= #D6D6D6
   h1.gb-headline.gb-headline-9126ac98.gb-headline-text {
         color: white;
       font-weight: 700;
-      font-size: clamp(0.7rem, 3.2vw, 6rem);
+          font-size: clamp(2rem, 3.2vw, 8rem);
       padding: 1em 3em;
       margin: 2em 4em;
       text-shadow: 0px 0px 0.3rem #000000;
