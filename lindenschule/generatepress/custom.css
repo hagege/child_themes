@@ -24,10 +24,11 @@ Hellgrau= #D6D6D6
   
   }
   
-  
+  /* unklar
   .gb-container-e4345478 {
      color: var(--background-content-color);
   }
+  */
   
   /* Move Sidebar below the content */
   @media (max-width: 1024px) {
