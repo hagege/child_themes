@@ -72,6 +72,19 @@ Hellgrau= #D6D6D6
               padding: 0px 2rem;
       }	
   }
+  
+  /* Ränder im Sticky-Menü */
+  @media (min-width: 500px) {
+      nav#sticky-navigation {
+              padding: 0px;
+      }
+  }
+  
+  @media (max-width: 499px) {
+      nav#sticky-navigation{
+              padding: 0px;
+      }	
+  }
       
   /* Hintergrundfarbe für Menü */
   .header-wrap {
