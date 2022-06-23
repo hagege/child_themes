@@ -18,8 +18,16 @@ Hellgrau= #D6D6D6
       --blau-color: rgba(18, 38, 107, 1);
   
       --blau-color-opacity-1: rgba(23, 47, 102, 0.9);	
+      --background-content-color: rgba(247, 248, 249, 1);	
+      --green-color-opacity-1: rgba(82,159,37,1);
+          --green-color-opacity-2: rgba(82,159,37,0.9);
+  
   }
   
+  
+  .gb-container-e4345478 {
+     color: var(--background-content-color);
+  }
   
   /* Move Sidebar below the content */
   @media (max-width: 1024px) {
@@ -32,7 +40,7 @@ Hellgrau= #D6D6D6
   }
   
   
-  /* sticky menue */
+  /* sticky menue - nicht verwenden?
   @media (min-width: 1180px) {
   .main-navigation.navigation-stick .sticky-navigation-logo {
        height: 100px;
@@ -47,16 +55,19 @@ Hellgrau= #D6D6D6
        line-height: 100px;
      }
   }
+   */
   
   /* Ränder im Hauptmenü */
   @media (min-width: 500px) {
-      .inside-header {
+      .inside-header,
+      nav#sticky-navigation {
               padding: 0px 6rem;
       }
   }
   
   @media (max-width: 499px) {
-      .inside-header {
+      .inside-header,
+      nav#sticky-navigation{
               padding: 0px 2rem;
       }	
   }
@@ -73,11 +84,11 @@ Hellgrau= #D6D6D6
   }
   
   .main-navigation ul ul {
-      background-color: var(--blau-color-opacity-1);
+      background-color: var(--green-color-opacity-1);
   }
   
   nav#sticky-navigation {
-      background-color:var(--blau-color-opacity-1);
+      background-color:var(--green-color-opacity-2);
   }
   
   /* Schriftgröße und -art auf der Hauptseite */
@@ -87,7 +98,7 @@ Hellgrau= #D6D6D6
       font-weight: 700;
           font-size: clamp(2rem, 3.2vw, 8rem);
       padding: 1em 3em;
-      margin: 2em 4em;
+      margin: 2em 4em; 
       text-shadow: 0px 0px 0.3rem #000000;
       /* background-color: var(--black-color-opacity-2); */
   }
