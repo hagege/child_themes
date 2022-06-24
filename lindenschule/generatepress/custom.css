@@ -85,6 +85,12 @@ Hellgrau= #D6D6D6
               padding: 0px;
       }	
   }
+  
+  /* Logo ohne Rand oben und unten */
+  .site-logo.mobile-header-logo img,
+  .navigation-branding img{
+      padding: 0px;
+  }
       
   /* Hintergrundfarbe für Menü */
   .header-wrap {
