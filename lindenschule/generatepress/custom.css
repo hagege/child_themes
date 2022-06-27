@@ -30,6 +30,69 @@ Hellgrau= #D6D6D6
   }
   */
   
+  /* ----------------------------- */
+  /* START: Einstellungen für iPad */
+  /* ----------------------------- */
+  @media only screen 
+  and (min-device-width : 768px) 
+  and (max-device-width : 1024px)
+  and (-webkit-min-device-pixel-ratio: 2) { 
+      .gb-container-6508c824:before,
+      .gb-container-e4345478:before {
+                      background-attachment: scroll;
+      }
+  }
+  
+  @media only screen 
+  and (min-device-width : 768px) 
+  and (max-device-width : 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 	
+        .gb-container-6508c824:before,
+        .gb-container-e4345478:before {
+                      background-attachment: scroll;
+      }
+  }
+  
+  
+  @media only screen 
+  and (min-device-width : 375px) 
+  and (max-device-width : 812px)
+  and (-webkit-device-pixel-ratio : 3) 
+  { 	
+          .gb-container-6508c824:before,
+          .gb-container-e4345478:before {
+                      background-attachment: scroll;
+      }
+  }
+  
+  
+  @media only screen 
+  and (min-device-width : 375px) 
+  and (max-device-width : 667px) 
+  { 
+      .gb-container-6508c824:before,
+      .gb-container-e4345478:before {
+                      background-attachment: scroll;
+      }
+  }
+  
+  
+  @media only screen 
+  and (min-device-width : 414px) 
+  and (max-device-width : 736px) 
+  {
+      .gb-container-6508c824:before,
+      .gb-container-e4345478:before {
+                      background-attachment: scroll;
+      }
+  }
+  
+  /* ---------------------------- */
+  /* ENDE: Einstellungen für iPad */
+  /* ---------------------------- */
+  
+  
+  
   /* Move Sidebar below the content */
   @media (max-width: 1024px) {
       .site-content {
