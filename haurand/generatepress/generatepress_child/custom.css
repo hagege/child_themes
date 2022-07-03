@@ -8,6 +8,21 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 
 /* TEST */
 
+p.unsichtbar {
+	display: none;
+}
+
+/* Ränder und Zeilenhöhe beim angepassten Abfrage-Loop */
+div.abfrage_tags {
+    margin: 0 0 1.5em 3em;
+}
+
+
+div.abfrage_tags li {
+ line-height: 1;
+}
+
+
 /* damit der Anker korrekt angesteuert werden kann */
 [id^="htoc-"] { 
 	padding-top: 150px; 
@@ -58,6 +73,12 @@ code {
 
 
 /* TEST */
+
+/* Bei Update-Textabschnitten */
+p.update {
+    background-color: #d4dadb;
+    padding: 25px;
+}
 
 /* Farbe für Cookie-Banner */
 .cn-button.bootstrap {
@@ -201,6 +222,7 @@ img.wp-image-2110{
 /* ------------------------------ */
 figcaption {
 	padding: 10px;
+	color: black;
 }
 
 
