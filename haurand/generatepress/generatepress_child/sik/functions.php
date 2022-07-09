@@ -109,6 +109,30 @@ register_block_pattern(
 );
 
 
+/* ---------------------------------- */
+/* Weitere Beiträge als Abfrage-Loop  */
+/* ---------------------------------- */
+register_block_pattern(
+  'abfrage_loop_tags',
+    array(
+    'title' => __( 'Abfrage-Loop mit Schlagwörtern', 'abfrage_loop_tags' ),
+    'description' => _x( 'Abfrage-Loop mit Schlagwörtern', 'Ein Absatz mit zentriertem Text', 'abfrage_loop_tags' ),
+    'categories'  => array('Haurand'),
+    'content'     =>
+       "<!-- wp:heading {\"level\":3} -->
+       <h3 id=\"htoc-weitere-beitr-ge-zum-thema\">Weitere Beiträge zum Thema</h3>
+       <!-- /wp:heading -->
+       
+       <!-- wp:query {\"queryId\":0,\"query\":{\"perPage\":\"5\",\"pages\":0,\"offset\":0,\"postType\":\"post\",\"order\":\"desc\",\"orderBy\":\"date\",\"author\":\"\",\"search\":\"\",\"exclude\":[],\"sticky\":\"\",\"inherit\":false,\"taxQuery\":{\"post_tag\":[1494]}}} -->
+       <div class=\"wp-block-query\"><!-- wp:post-template -->
+       <!-- wp:post-title {\"level\":5,\"isLink\":true} /-->
+       <!-- /wp:post-template --></div>
+       <!-- /wp:query -->
+       ",
+    )
+);
+
+
 /* ----------------------------------------------------------- */
 /* Überschrift (h2), Überschrift (h3) und linksbündiger Absatz */
 /* ----------------------------------------------------------- */
@@ -149,7 +173,7 @@ register_block_pattern(
     'content'     =>
        "<!-- wp:buttons {\"contentJustification\":\"center\",\"className\":\"eigener_block-button\"} -->
       <div class=\"wp-block-buttons is-content-justification-center eigener_block-button\"><!-- wp:button {\"className\":\"eigener_block-button\"} -->
-      <div class=\"wp-block-button eigener_block-button\"><a class=\"wp-block-button__link\" href=\"https://wp.haurand.com/blog/\">Zum Blog</a></div>
+      <div class=\"wp-block-button eigener_block-button\"><a class=\"wp-block-button__link\" href=\"https://haurand.com/blog/\">Zum Blog</a></div>
       <!-- /wp:button --></div>
       <!-- /wp:buttons -->",
   )
@@ -169,7 +193,7 @@ register_block_pattern(
       "<!-- wp:columns -->
         <div class=\"wp-block-columns\"><!-- wp:column {\"className\":\"container-zentriert\"} -->
         <div class=\"wp-block-column container-zentriert\"><!-- wp:html -->
-        <a class=\"eigener_block-button\" href=\"https://wp.haurand.com/blog/\">Zum Blog</a>
+        <a class=\"eigener_block-button\" href=\"https://haurand.com/blog/\">Zum Blog</a>
         <!-- /wp:html --></div>
         <!-- /wp:column --></div>
         <!-- /wp:columns -->",
@@ -193,13 +217,13 @@ register_block_pattern(
       <div class=\"wp-block-column container_aussen\"><!-- wp:columns {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#d4dadb\"}},\"className\":\"container_mit_bildern\"} -->
       <div class=\"wp-block-columns alignfull container_mit_bildern has-background\" style=\"background-color:#d4dadb\"><!-- wp:column {\"verticalAlignment\":\"center\",\"width\":\"50%\"} -->
       <div class=\"wp-block-column is-vertically-aligned-center\" style=\"flex-basis:50%\"><!-- wp:image {\"align\":\"center\",\"id\":5153,\"sizeSlug\":\"large\",\"linkDestination\":\"media\",\"className\":\"bild_zentriert\"} -->
-      <div class=\"wp-block-image bild_zentriert\"><figure class=\"aligncenter size-large\"><a href=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_erfassen_6.jpg\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_erfassen_6.jpg\" alt=\"Button mit dem Block-Editor\" class=\"wp-image-5153\"/></a></figure></div>
+      <div class=\"wp-block-image bild_zentriert\"><figure class=\"aligncenter size-large\"><a href=\"https://haurand.com/wp-content/uploads/2021/04/button_erfassen_6.jpg\"><img src=\"https://haurand.com/wp-content/uploads/2021/04/button_erfassen_6.jpg\" alt=\"Button mit dem Block-Editor\" class=\"wp-image-5153\"/></a></figure></div>
       <!-- /wp:image --></div>
       <!-- /wp:column -->
       
       <!-- wp:column {\"verticalAlignment\":\"center\",\"width\":\"50%\"} -->
       <div class=\"wp-block-column is-vertically-aligned-center\" style=\"flex-basis:50%\"><!-- wp:image {\"align\":\"center\",\"id\":5155,\"sizeSlug\":\"large\",\"linkDestination\":\"media\",\"className\":\"bild_zentriert\"} -->
-      <div class=\"wp-block-image bild_zentriert\"><figure class=\"aligncenter size-large\"><a href=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_erfassen_7.jpg\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_erfassen_7.jpg\" alt=\"Button mit dem Block-Editor\" class=\"wp-image-5155\"/></a></figure></div>
+      <div class=\"wp-block-image bild_zentriert\"><figure class=\"aligncenter size-large\"><a href=\"https://haurand.com/wp-content/uploads/2021/04/button_erfassen_7.jpg\"><img src=\"https://haurand.com/wp-content/uploads/2021/04/button_erfassen_7.jpg\" alt=\"Button mit dem Block-Editor\" class=\"wp-image-5155\"/></a></figure></div>
       <!-- /wp:image --></div>
       <!-- /wp:column --></div>
       <!-- /wp:columns --></div>
@@ -224,7 +248,7 @@ register_block_pattern(
       <div class=\"wp-block-column container_aussen\"><!-- wp:columns {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#d4dadb\"}},\"className\":\"container_mit_bildern\"} -->
       <div class=\"wp-block-columns alignfull container_mit_bildern has-background\" style=\"background-color:#d4dadb\"><!-- wp:column {\"verticalAlignment\":\"center\",\"width\":\"100%\"} -->
       <div class=\"wp-block-column is-vertically-aligned-center\" style=\"flex-basis:100%\"><!-- wp:image {\"align\":\"center\",\"id\":5149,\"sizeSlug\":\"large\",\"linkDestination\":\"media\",\"className\":\"bild_zentriert\"} -->
-      <div class=\"wp-block-image bild_zentriert\"><figure class=\"aligncenter size-large\"><a href=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_erfassen_4.jpg\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/button_erfassen_4.jpg\" alt=\"Button mit dem Block-Editor\" class=\"wp-image-5149\"/></a><figcaption>Grafik: haurand.com</figcaption></figure></div>
+      <div class=\"wp-block-image bild_zentriert\"><figure class=\"aligncenter size-large\"><a href=\"https://haurand.com/wp-content/uploads/2021/04/button_erfassen_4.jpg\"><img src=\"https://haurand.com/wp-content/uploads/2021/04/button_erfassen_4.jpg\" alt=\"Button mit dem Block-Editor\" class=\"wp-image-5149\"/></a><figcaption>Grafik: haurand.com</figcaption></figure></div>
       <!-- /wp:image --></div>
       <!-- /wp:column --></div>
       <!-- /wp:columns --></div>
@@ -262,7 +286,7 @@ register_block_pattern(
       
       <!-- wp:column -->
       <div class=\"wp-block-column\"><!-- wp:image {\"align\":\"left\",\"id\":3711,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->
-      <div class=\"wp-block-image\"><figure class=\"alignleft size-large\"><a href=\"https://wp.haurand.com/wp-content/uploads/2021/03/2021-03-30-09_23_59-Window.png\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/03/2021-03-30-09_23_59-Window.png\" alt=\"Auswahl im Block-Editor\" class=\"wp-image-3711\"/></a><figcaption>Grafik: haurand.com</figcaption></figure></div>
+      <div class=\"wp-block-image\"><figure class=\"alignleft size-large\"><a href=\"https://haurand.com/wp-content/uploads/2021/03/2021-03-30-09_23_59-Window.png\"><img src=\"https://haurand.com/wp-content/uploads/2021/03/2021-03-30-09_23_59-Window.png\" alt=\"Auswahl im Block-Editor\" class=\"wp-image-3711\"/></a><figcaption>Grafik: haurand.com</figcaption></figure></div>
       <!-- /wp:image --></div>
       <!-- /wp:column --></div>
       <!-- /wp:columns --></div>
@@ -324,7 +348,7 @@ register_block_pattern(
       
       <!-- wp:column {\"width\":\"20%\",\"className\":\"fuenf_spalten\"} -->
       <div class=\"wp-block-column fuenf_spalten\" style=\"flex-basis:20%\"><!-- wp:image {\"align\":\"center\",\"id\":3767,\"sizeSlug\":\"large\",\"linkDestination\":\"custom\"} -->
-      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><a href=\"https://wp.haurand.com/kontakt-2/\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/Icons_Kontakt_FFFFFF.png\" alt=\"\" class=\"wp-image-3767\"/></a></figure></div>
+      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><a href=\"https://haurand.com/kontakt-2/\"><img src=\"https://haurand.com/wp-content/uploads/2021/04/Icons_Kontakt_FFFFFF.png\" alt=\"\" class=\"wp-image-3767\"/></a></figure></div>
       <!-- /wp:image -->
       
       <!-- wp:heading {\"textAlign\":\"center\",\"level\":4,\"textColor\":\"white\"} -->
@@ -338,7 +362,7 @@ register_block_pattern(
       
       <!-- wp:column {\"width\":\"20%\",\"className\":\"fuenf_spalten\"} -->
       <div class=\"wp-block-column fuenf_spalten\" style=\"flex-basis:20%\"><!-- wp:image {\"align\":\"center\",\"id\":3765,\"sizeSlug\":\"large\",\"linkDestination\":\"custom\"} -->
-      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><a href=\"https://wp.haurand.com/ihre-neue-webseite-einfach-passend/\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/Icons_IhreWebsite_FFFFFF.png\" alt=\"\" class=\"wp-image-3765\"/></a></figure></div>
+      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><a href=\"https://haurand.com/ihre-neue-webseite-einfach-passend/\"><img src=\"https://haurand.com/wp-content/uploads/2021/04/Icons_IhreWebsite_FFFFFF.png\" alt=\"\" class=\"wp-image-3765\"/></a></figure></div>
       <!-- /wp:image -->
       
       <!-- wp:heading {\"textAlign\":\"center\",\"level\":4,\"textColor\":\"white\"} -->
@@ -352,7 +376,7 @@ register_block_pattern(
       
       <!-- wp:column {\"width\":\"20%\",\"className\":\"fuenf_spalten\"} -->
       <div class=\"wp-block-column fuenf_spalten\" style=\"flex-basis:20%\"><!-- wp:image {\"align\":\"center\",\"id\":3779,\"sizeSlug\":\"large\",\"linkDestination\":\"custom\"} -->
-      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><a href=\"https://wp.haurand.com/blog/\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/Icons_ZumBlog_FFFFFF.png\" alt=\"\" class=\"wp-image-3779\"/></a></figure></div>
+      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><a href=\"https://haurand.com/blog/\"><img src=\"https://haurand.com/wp-content/uploads/2021/04/Icons_ZumBlog_FFFFFF.png\" alt=\"\" class=\"wp-image-3779\"/></a></figure></div>
       <!-- /wp:image -->
       
       <!-- wp:heading {\"textAlign\":\"center\",\"level\":4,\"textColor\":\"white\"} -->
@@ -376,7 +400,7 @@ register_block_pattern(
       
       <!-- wp:column {\"width\":\"20%\",\"className\":\"fuenf_spalten\"} -->
       <div class=\"wp-block-column fuenf_spalten\" style=\"flex-basis:20%\"><!-- wp:image {\"align\":\"center\",\"id\":3771,\"sizeSlug\":\"large\",\"linkDestination\":\"custom\"} -->
-      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><a href=\"https://wp.haurand.com/wordpress-webseiten-referenzen/\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/Icons_Referenzen_FFFFFF.png\" alt=\"\" class=\"wp-image-3771\"/></a></figure></div>
+      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><a href=\"https://haurand.com/wordpress-webseiten-referenzen/\"><img src=\"https://haurand.com/wp-content/uploads/2021/04/Icons_Referenzen_FFFFFF.png\" alt=\"\" class=\"wp-image-3771\"/></a></figure></div>
       <!-- /wp:image -->
       
       <!-- wp:heading {\"textAlign\":\"center\",\"level\":4,\"textColor\":\"white\"} -->
@@ -390,7 +414,7 @@ register_block_pattern(
       
       <!-- wp:column {\"width\":\"20%\",\"className\":\"fuenf_spalten\"} -->
       <div class=\"wp-block-column fuenf_spalten\" style=\"flex-basis:20%\"><!-- wp:image {\"align\":\"center\",\"id\":3777,\"sizeSlug\":\"large\",\"linkDestination\":\"custom\"} -->
-      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><a href=\"https://wp.haurand.com/wordpress-wartung-ab-30-e-monat/\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/Icons_Wartung_FFFFFF.png\" alt=\"\" class=\"wp-image-3777\"/></a></figure></div>
+      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><a href=\"https://haurand.com/wordpress-wartung-ab-30-e-monat/\"><img src=\"https://haurand.com/wp-content/uploads/2021/04/Icons_Wartung_FFFFFF.png\" alt=\"\" class=\"wp-image-3777\"/></a></figure></div>
       <!-- /wp:image -->
       
       <!-- wp:heading {\"textAlign\":\"center\",\"level\":4,\"textColor\":\"white\"} -->
@@ -404,7 +428,7 @@ register_block_pattern(
       
       <!-- wp:column {\"width\":\"20%\",\"className\":\"fuenf_spalten\"} -->
       <div class=\"wp-block-column fuenf_spalten\" style=\"flex-basis:20%\"><!-- wp:image {\"align\":\"center\",\"id\":3773,\"sizeSlug\":\"large\",\"linkDestination\":\"custom\"} -->
-      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><a href=\"https://wp.haurand.com/webseiten-analyse/\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/Icons_Support_FFFFFF.png\" alt=\"\" class=\"wp-image-3773\"/></a></figure></div>
+      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><a href=\"https://haurand.com/webseiten-analyse/\"><img src=\"https://haurand.com/wp-content/uploads/2021/04/Icons_Support_FFFFFF.png\" alt=\"\" class=\"wp-image-3773\"/></a></figure></div>
       <!-- /wp:image -->
       
       <!-- wp:heading {\"textAlign\":\"center\",\"level\":4,\"textColor\":\"white\"} -->
@@ -438,7 +462,7 @@ register_block_pattern(
       "<!-- wp:columns {\"style\":{\"color\":{\"background\":\"#b70000\"}},\"className\":\"rechte_untere_ecke\"} -->
       <div class=\"wp-block-columns rechte_untere_ecke has-background\" style=\"background-color:#b70000\"><!-- wp:column {\"verticalAlignment\":\"center\",\"width\":\"15%\"} -->
       <div class=\"wp-block-column is-vertically-aligned-center\" style=\"flex-basis:15%\"><!-- wp:image {\"align\":\"center\",\"id\":3797,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->
-      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><img src=\"https://wp.haurand.com/wp-content/uploads/2021/04/WordPress_Chart_Zeichenflaeche.png\" alt=\"\" class=\"wp-image-3797\"/><figcaption>Stand: 2021</figcaption></figure></div>
+      <div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><img src=\"https://haurand.com/wp-content/uploads/2021/04/WordPress_Chart_Zeichenflaeche.png\" alt=\"\" class=\"wp-image-3797\"/><figcaption>Stand: 2021</figcaption></figure></div>
       <!-- /wp:image --></div>
       <!-- /wp:column -->
       
@@ -505,6 +529,7 @@ function tu_excerpt_metabox_more( $excerpt ) {
 	
 	return $output;
 }
+
 /*----------------------------------------------------------------*/
 /* Start: Weiterlesen-Link, auch wenn der Textauszug eingetragen ist
 /* Datum: 27.05.2021
