@@ -12,6 +12,31 @@ p.unsichtbar {
 	display: none;
 }
 
+
+/* für Block Pattern Update und Achtung */
+@media (max-width: 781px)  {
+div.html_svg {
+    margin-left: 43%;
+    margin-right: 43%;
+}
+}
+
+.html_svg .wp-block-group__inner-container,
+.svg_container .wp-block-group__inner-container{
+    padding: 0px;
+		margin: 0px;
+}
+
+	
+p.has-text-align-center.achtung_update {
+    margin-top: 2px;
+}
+
+svg#Layer_1, svg#Capa_1
+{
+    fill: #B70000;
+}
+
 /* Ränder und Zeilenhöhe beim angepassten Abfrage-Loop */
 div.abfrage_tags {
     margin: 0 0 1.5em 3em;
