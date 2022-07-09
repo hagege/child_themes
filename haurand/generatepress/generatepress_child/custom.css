@@ -32,6 +32,11 @@ p.has-text-align-center.achtung_update {
     margin-top: 2px;
 }
 
+p.svg_meldung {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 svg#Layer_1, svg#Capa_1
 {
     fill: #B70000;
