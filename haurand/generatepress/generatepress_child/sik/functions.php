@@ -268,37 +268,37 @@ register_block_pattern(
     'categories'  => array('Haurand'),
     'content'     =>
       '<!-- wp:group {"style":{"color":{"background":"#d4dadb"}},"className":"svg_container"} -->
-        <div class="wp-block-group svg_container has-background" style="background-color:#d4dadb"><!-- wp:spacer {"height":"30px"} -->
-        <div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
-        <!-- /wp:spacer -->
-
-        <!-- wp:columns -->
-        <div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"center","width":"20%","className":"spalte_svg"} -->
-        <div class="wp-block-column is-vertically-aligned-center spalte_svg" style="flex-basis:20%"><!-- wp:group {"className":"html_svg","layout":{"inherit":false,"contentSize":"100px"}} -->
-        <div class="wp-block-group html_svg"><!-- wp:html -->
-        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 246.027 246.027" style="enable-background:new 0 0 246.027 246.027;" xml:space="preserve">
-        <path d="M242.751,196.508L143.937,25.358c-4.367-7.564-12.189-12.081-20.924-12.081c-8.735,0-16.557,4.516-20.924,12.081
-          L3.276,196.508c-4.368,7.564-4.368,16.596,0,24.161s12.189,12.081,20.924,12.081h197.629c8.734,0,16.556-4.516,20.923-12.08
-          C247.119,213.105,247.118,204.073,242.751,196.508z M123.014,204.906c-8.672,0-15.727-7.055-15.727-15.727
-          c0-8.671,7.055-15.726,15.727-15.726s15.727,7.055,15.727,15.726C138.74,197.852,131.685,204.906,123.014,204.906z M138.847,137.68
-          c0,8.73-7.103,15.833-15.833,15.833s-15.833-7.103-15.833-15.833V65.013c0-4.142,3.358-7.5,7.5-7.5h16.667
-          c4.143,0,7.5,3.358,7.5,7.5V137.68z"></path>
-        </svg>
-        <!-- /wp:html --></div>
-        <!-- /wp:group -->
-
-        <!-- wp:paragraph {"align":"center","className":"achtung_update"} -->
-        <p class="has-text-align-center achtung_update"><strong>Achtung</strong></p>
-        <!-- /wp:paragraph --></div>
-        <!-- /wp:column -->
-
-        <!-- wp:column {"width":"80%"} -->
-        <div class="wp-block-column" style="flex-basis:80%"><!-- wp:paragraph -->
-        <p>Weil das umständlich ist, habe ich bereits einen Hinweis (Issue) an die Entwickler dazu eröffnet.</p>
-        <!-- /wp:paragraph --></div>
-        <!-- /wp:column --></div>
-        <!-- /wp:columns --></div>
-        <!-- /wp:group -->',
+      <div class="wp-block-group svg_container has-background" style="background-color:#d4dadb"><!-- wp:spacer {"height":"30px"} -->
+      <div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+      <!-- /wp:spacer -->
+      
+      <!-- wp:columns -->
+      <div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"center","width":"20%","className":"spalte_svg"} -->
+      <div class="wp-block-column is-vertically-aligned-center spalte_svg" style="flex-basis:20%"><!-- wp:group {"className":"html_svg","layout":{"inherit":false,"contentSize":"100px"}} -->
+      <div class="wp-block-group html_svg"><!-- wp:html -->
+      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 246.027 246.027" style="enable-background:new 0 0 246.027 246.027;" xml:space="preserve">
+      <path d="M242.751,196.508L143.937,25.358c-4.367-7.564-12.189-12.081-20.924-12.081c-8.735,0-16.557,4.516-20.924,12.081
+        L3.276,196.508c-4.368,7.564-4.368,16.596,0,24.161s12.189,12.081,20.924,12.081h197.629c8.734,0,16.556-4.516,20.923-12.08
+        C247.119,213.105,247.118,204.073,242.751,196.508z M123.014,204.906c-8.672,0-15.727-7.055-15.727-15.727
+        c0-8.671,7.055-15.726,15.727-15.726s15.727,7.055,15.727,15.726C138.74,197.852,131.685,204.906,123.014,204.906z M138.847,137.68
+        c0,8.73-7.103,15.833-15.833,15.833s-15.833-7.103-15.833-15.833V65.013c0-4.142,3.358-7.5,7.5-7.5h16.667
+        c4.143,0,7.5,3.358,7.5,7.5V137.68z"></path>
+      </svg>
+      <!-- /wp:html --></div>
+      <!-- /wp:group -->
+      
+      <!-- wp:paragraph {"align":"center","className":"achtung_update"} -->
+      <p class="has-text-align-center achtung_update"><strong>Achtung</strong></p>
+      <!-- /wp:paragraph --></div>
+      <!-- /wp:column -->
+      
+      <!-- wp:column {"width":"80%"} -->
+      <div class="wp-block-column" style="flex-basis:80%"><!-- wp:paragraph {"className":"svg_meldung"} -->
+      <p class="svg_meldung">Weil das umständlich ist, habe ich bereits einen Hinweis (Issue) an die Entwickler dazu eröffnet.</p>
+      <!-- /wp:paragraph --></div>
+      <!-- /wp:column --></div>
+      <!-- /wp:columns --></div>
+      <!-- /wp:group -->',
         )
    );
     
@@ -359,8 +359,8 @@ register_block_pattern(
       <!-- /wp:column -->
       
       <!-- wp:column {"width":"80%"} -->
-      <div class="wp-block-column" style="flex-basis:80%"><!-- wp:paragraph -->
-      <p>Das ist ein Update</p>
+      <div class="wp-block-column" style="flex-basis:80%"><!-- wp:paragraph {"className":"svg_meldung"} -->
+      <p class="svg_meldung">Das ist ein Update</p>
       <!-- /wp:paragraph --></div>
       <!-- /wp:column --></div>
       <!-- /wp:columns --></div>
