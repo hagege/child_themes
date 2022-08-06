@@ -1,25 +1,36 @@
 /* Farben Anfang
- Dunkelblau (Hintergrund Header, Footer): #024B7E
+ Dunkelblau (Hintergrund Header, Footer): rgb(2 75 126);
  Hellblau (Hintergrund Container): #E3EBF1
- Schriftfarbe überall:
+ Schriftfarbe (mittelgrau) überall:
  #555555
- Schriftfarbe (Header und Footer): #D5D5D5
- Linkfarbe evtl.: #B12E20
+ Schriftfarbe (hellgrau) (Header und Footer): #D5D5D5
+ Linkfarbe (rot) evtl.: #B12E20
 
  Farben Ende */
 
-/* h1 nicht zeigen */
-.entry-header h1, .page-header h1 {
-    display: none;
-}
-
-/* h2 auf Cover mit leichtem blauem Schatten */
-p.has-text-align-center.animated.fadeInUp.delay-200ms.slower.has-base-2-color.has-text-color {
-text-shadow: 0px 0px 0.1rem #024B7E;
-}
-
-
-/* Ränder bei Block Pattern */
-.site-main .wp-block-group__inner-container {
-    padding: 70px 40px 30px 40px;
-}
+/* Variablen */
+:root {
+    --dunkelblau-color: rgba(2, 75, 126, 1);
+    --hellblau-color: rgba(227, 235, 241, 1);
+      --mittelgrau-color: rgba(85, 85, 85, 1);
+      --hellgrau-color: rgba(213, 213, 213, 1);
+      --rot-color: rgba(177, 46, 32, 1);	
+  }
+  
+  
+  /* h1 nicht zeigen */
+  .entry-header h1, .page-header h1 {
+      display: none;
+  }
+  
+  /* h2 auf Cover mit leichtem blauem Schatten */
+  p.has-text-align-center.animated.fadeInUp.delay-200ms.slower.has-base-2-color.has-text-color {
+      text-shadow: 0px 0px 0.1rem var(--dunkelblau-color);
+          font-size: clamp(1.75rem, 6vw, 6rem)!important;
+  }
+  
+  
+  /* Ränder bei Block Pattern */
+  .site-main .wp-block-group__inner-container {
+      padding: 70px 40px 30px 40px;
+  }
