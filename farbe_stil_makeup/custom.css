@@ -30,7 +30,33 @@
   }
   
   
-  /* Ränder bei Block Pattern */
+  /* Ränder bei Block Pattern 
   .site-main .wp-block-group__inner-container {
       padding: 70px 40px 30px 40px;
+  }
+  
+  */
+  
+  div.block_pattern_raender {
+      padding: 70px 40px 20px 40px;
+  }
+  
+  .site-main .wp-block-group__inner-container {
+      padding: 0px 40px 20px 40px;
+  }
+  
+  /* .site-main > article > *,
+      .site-main > .not-found > *,
+      .entry-content > *,
+      [class*=inner-container] > *,
+      .wp-block-template-part > * {
+          /* margin-top: var(--global--spacing-vertical); 
+          margin-bottom: 0px;
+      }
+  }
+  */
+  
+  
+  h2 {
+      font-size: clamp(1.5rem, 2vw, 6rem);
   }
