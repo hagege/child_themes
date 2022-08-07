@@ -87,7 +87,7 @@ register_block_pattern(
 		  '<!-- wp:columns {"align":"wide","backgroundColor":"global-color-9","className":"blauer_container_linke_spalte"} -->
 		  <div class="wp-block-columns alignwide blauer_container_linke_spalte has-global-color-9-background-color has-background"><!-- wp:column -->
 		  <div class="wp-block-column"><!-- wp:image {"id":38,"sizeSlug":"large","linkDestination":"none"} -->
-		  <figure class="wp-block-image size-large"><img src="https://www.web102.s116.goserver.host/wp-content/uploads/2022/03/Beispiel_1-1024x1024.jpg" alt="" class="wp-image-38"/></figure>
+		  <figure class="wp-block-image size-large"><img src="https://maria-sibylla-merian-gesamtschule.de/wp-content/uploads/2022/03/Beispiel_1-1024x1024.jpg" alt="" class="wp-image-38"/></figure>
 		  <!-- /wp:image --></div>
 		  <!-- /wp:column -->
 		  
@@ -143,13 +143,13 @@ register_block_pattern(
 		'<!-- wp:columns {"align":"wide","backgroundColor":"global-color-9","className":"blauer_container_linke_spalte"} -->
 		<div class="wp-block-columns alignwide blauer_container_linke_spalte has-global-color-9-background-color has-background"><!-- wp:column {"textColor":"base-3"} -->
 		<div class="wp-block-column has-base-3-color has-text-color"><!-- wp:image {"id":38,"width":490,"height":490,"sizeSlug":"large","linkDestination":"none"} -->
-		<figure class="wp-block-image size-large is-resized"><img src="https://www.web102.s116.goserver.host/wp-content/uploads/2022/03/Beispiel_1-1024x1024.jpg" alt="" class="wp-image-38" width="490" height="490"/><figcaption>Bildunterschrift</figcaption></figure>
+		<figure class="wp-block-image size-large is-resized"><img src="https://maria-sibylla-merian-gesamtschule.de//wp-content/uploads/2022/03/Beispiel_1-1024x1024.jpg" alt="" class="wp-image-38" width="490" height="490"/><figcaption>Bildunterschrift</figcaption></figure>
 		<!-- /wp:image --></div>
 		<!-- /wp:column -->
 		
 		<!-- wp:column {"textColor":"base-3"} -->
 		<div class="wp-block-column has-base-3-color has-text-color"><!-- wp:image {"id":38,"width":490,"height":490,"sizeSlug":"large","linkDestination":"none"} -->
-		<figure class="wp-block-image size-large is-resized"><img src="https://www.web102.s116.goserver.host/wp-content/uploads/2022/03/Beispiel_1-1024x1024.jpg" alt="" class="wp-image-38" width="490" height="490"/><figcaption>Bildunterschrift</figcaption></figure>
+		<figure class="wp-block-image size-large is-resized"><img src="https://maria-sibylla-merian-gesamtschule.de/wp-content/uploads/2022/03/Beispiel_1-1024x1024.jpg" alt="" class="wp-image-38" width="490" height="490"/><figcaption>Bildunterschrift</figcaption></figure>
 		<!-- /wp:image --></div>
 		<!-- /wp:column --></div>
 		<!-- /wp:columns -->',
@@ -168,7 +168,7 @@ register_block_pattern(
 		'<!-- wp:columns {"className":"zwei_kacheln"} -->
 		<div class="wp-block-columns zwei_kacheln"><!-- wp:column {"className":"zwei_kacheln"} -->
 		<div class="wp-block-column zwei_kacheln"><!-- wp:image {"align":"center","id":24,"sizeSlug":"large","linkDestination":"custom","style":{"color":{}}} -->
-		<div class="wp-block-image"><figure class="aligncenter size-large"><img src="https://www.web102.s116.goserver.host/wp-content/uploads/2022/03/Poster_1-1024x576.jpg" alt="" class="wp-image-24"/></figure></div>
+		<div class="wp-block-image"><figure class="aligncenter size-large"><img src="https://maria-sibylla-merian-gesamtschule.de/wp-content/uploads/2022/03/Poster_1-1024x576.jpg" alt="" class="wp-image-24"/></figure></div>
 		<!-- /wp:image -->
 
 		<!-- wp:heading {"textAlign":"left"} -->
@@ -182,7 +182,7 @@ register_block_pattern(
 
 		<!-- wp:column {"className":"zwei_kacheln"} -->
 		<div class="wp-block-column zwei_kacheln"><!-- wp:image {"align":"center","id":24,"sizeSlug":"large","linkDestination":"custom","style":{"color":{}}} -->
-		<div class="wp-block-image"><figure class="aligncenter size-large"><img src="https://www.web102.s116.goserver.host/wp-content/uploads/2022/03/Poster_1-1024x576.jpg" alt="" class="wp-image-24"/></figure></div>
+		<div class="wp-block-image"><figure class="aligncenter size-large"><img src="https://maria-sibylla-merian-gesamtschule.de/wp-content/uploads/2022/03/Poster_1-1024x576.jpg" alt="" class="wp-image-24"/></figure></div>
 		<!-- /wp:image -->
 
 		<!-- wp:heading {"textAlign":"left"} -->
@@ -198,29 +198,7 @@ register_block_pattern(
 );
 
 
-register_block_pattern(
-	/* Patterns für Office-Icons */
-   'icon-block-office',
-     array(
-     'title' => __( 'Icons with office Application', 'icon-block-office' ),
-     'description' => _x( 'Icons with office Application (ppt)', 'Block pattern description', 'icon-block-office' ),
-     'categories'  => array('Vorlagen Haurand'),
-     'content'     =>
-        '<!-- wp:group {"align":"full"} -->
-		<div class="wp-block-group alignfull"><!-- wp:paragraph {"align":"center"} -->
-		<p class="has-text-align-center"><strong>Powerpoint Präsentation </strong><br><strong>(bitte klicken):</strong></p>
-		<!-- /wp:paragraph -->
-		
-		<!-- wp:paragraph {"align":"center"} -->
-		<p class="has-text-align-center"><a rel="noreferrer noopener" href="https://test.gesamtschule-stolberg.de/wp-content/uploads/2018/11/Differenzierung2_neu.pptx" target="_blank">Fachleistungsdifferenzierung</a></p>
-		<!-- /wp:paragraph -->
-		
-		<!-- wp:image {"align":"center","id":1354,"width":64,"height":64,"sizeSlug":"full","linkDestination":"custom","className":"office-icon"} -->
-		<div class="wp-block-image office-icon"><figure class="aligncenter size-full is-resized"><a href="https://test.gesamtschule-stolberg.de/wp-content/uploads/2018/11/Differenzierung2_neu.pptx"><img src="https://test.gesamtschule-stolberg.de/wp-content/uploads/2018/10/ppt-3.png" alt="" class="wp-image-1354" width="64" height="64"/></a></figure></div>
-		<!-- /wp:image --></div>
-		<!-- /wp:group -->',
-		)
-);
+
 
 /*----------------------------------------------------------------*/
 /* Ende: Block Patterns von sgs 
