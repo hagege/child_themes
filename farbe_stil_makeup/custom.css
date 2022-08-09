@@ -72,7 +72,7 @@ p.has-background {
 
 /* ----------------------------- */
 /* Menü mit geändertem Unterstrich */
-/* ----------------------------- */
+/* ----------------------------- 
 .main-navigation .main-nav ul li a {
   text-decoration: none!important;
   
@@ -88,7 +88,7 @@ p.has-background {
   background-position: 0% 100%;
 }
 
-/* weitere Optionen */
+
 .main-navigation .main-nav ul li a {
   background: linear-gradient(90deg, var(--hellblau-color) 0%, var(--hellblau-color) 100%); 	
   background-repeat: no-repeat;
@@ -97,11 +97,11 @@ p.has-background {
   transition: all 0.3s ease-in-out;
 }
 
+*/
 .main-navigation ul ul {
   box-shadow: none;
-  background-color: white;
+  background-color: var(--hellblau-color);
 }
-
 
 /* Schmankerl bei Bildern auf der Hauptseite unten */
 img.wp-image-61:hover{
