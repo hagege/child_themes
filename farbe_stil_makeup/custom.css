@@ -10,39 +10,40 @@
 
 /* Variablen */
 :root {
-    --dunkelblau-color: rgba(2, 75, 126, 1);
-    --hellblau-color: rgba(227, 235, 241, 1);
-      --mittelgrau-color: rgba(85, 85, 85, 1);
-      --hellgrau-color: rgba(213, 213, 213, 1);
-      --rot-color: rgba(177, 46, 32, 1);	
-  }
-  
-  
-  /* h1 nicht zeigen - würde auch über Elemente deaktivieren einzeln funktionieren - ist so besser: */
-  .entry-header h1, .page-header h1 {
-      display: none;
-  }
-  
-  /* h2 auf Cover mit leichtem blauem Schatten */
-  p.has-text-align-center.animated.fadeInUp.delay-200ms.slower.has-base-2-color.has-text-color {
-      text-shadow: 0px 0px 0.1rem var(--dunkelblau-color);
-      font-size: clamp(1.75rem, 6vw, 6rem)!important;
-  }
-  
-  
-  /* Ränder bei Block Pattern */
-  div.block_pattern_raender {
-      padding: 70px 40px 10px 40px;
-  }
-  
-  
-  /* Ränder innerhalb Gruppe */
-  div.block_pattern_raender > .wp-block-group__inner-container{
-          padding: 0px 40px 20px 40px;
-  }
-  
-  
-  
-  h2 {
-      font-size: clamp(1.5rem, 2vw, 6rem);
-  }
+  --dunkelblau-color: rgba(2, 75, 126, 1);
+  --hellblau-color: rgba(227, 235, 241, 1);
+    --mittelgrau-color: rgba(85, 85, 85, 1);
+    --hellgrau-color: rgba(213, 213, 213, 1);
+    --rot-color: rgba(177, 46, 32, 1);	
+}
+
+
+/* h1 nicht zeigen - würde auch über Elemente deaktivieren einzeln funktionieren - ist so besser: */
+.entry-header h1, .page-header h1 {
+display: none;
+}
+
+/* p auf Cover mit leichtem blauem Schatten */
+div.wp-block-cover__inner-container > p.has-text-align-center.animated.fadeInUp.delay-200ms.slower.has-base-2-color.has-text-color 
+{
+text-shadow: 0px 0px 0.1rem var(--dunkelblau-color);
+font-size: clamp(1.75rem, 6vw, 6rem)!important;
+font-weight: 400!important;
+}
+
+
+/* Ränder bei Block Pattern */
+div.block_pattern_raender {
+padding: 70px 40px 10px 40px;
+}
+
+
+/* Ränder innerhalb Gruppe */
+div.block_pattern_raender > .wp-block-group__inner-container{
+padding: 0px 40px 20px 40px;
+}
+
+/* Schriftgröße bei h2 */
+h2 {
+font-size: clamp(1.5rem, 2vw, 6rem);
+}
