@@ -98,5 +98,19 @@ p.has-background {
 }
 
 .main-navigation ul ul {
-  box-shadow: 0px 0px 0 rgb(0 0 0 / 10%);
+  box-shadow: none;
+  background-color: white;
+}
+
+
+/* Schmankerl bei Bildern auf der Hauptseite unten */
+img.wp-image-61:hover{
+  transform: rotate(35deg);
+  transition: all 0.5s ease-in-out;
+}
+
+img.wp-image-60:hover,
+img.wp-image-62:hover{
+transform:scale(1.2);
+transition: all 1s ease-in-out;
 }
