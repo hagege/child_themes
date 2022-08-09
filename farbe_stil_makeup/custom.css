@@ -14,8 +14,12 @@
   --hellblau-color: rgba(227, 235, 241, 1);
     --mittelgrau-color: rgba(85, 85, 85, 1);
     --hellgrau-color: rgba(213, 213, 213, 1);
-    --rot-color: rgba(177, 46, 32, 1);	
+    --rot-color: rgba(177, 46, 32, 1);			--wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
+    --wp--preset--font-size--cover-paragraph: clamp(2rem, 10vw, 6rem);
+  --wp--preset--font-size--h2: clamp(1.5rem, 2vw, 6rem);
+
 }
+
 
 
 /* h1 nicht zeigen - würde auch über Elemente deaktivieren einzeln funktionieren - ist so besser: */
@@ -27,7 +31,7 @@ display: none;
 div.wp-block-cover__inner-container > p.has-text-align-center.animated.fadeInUp.delay-200ms.slower.has-base-2-color.has-text-color 
 {
 text-shadow: 0px 0px 0.1rem var(--dunkelblau-color);
-font-size: clamp(1.75rem, 6vw, 6rem)!important;
+font-size: var(--wp--preset--font-size--cover-paragraph)!important;
 font-weight: 400!important;
 }
 
@@ -43,7 +47,24 @@ div.block_pattern_raender > .wp-block-group__inner-container{
 padding: 0px 40px 20px 40px;
 }
 
-/* Schriftgröße bei h2 */
-h2 {
-font-size: clamp(1.5rem, 2vw, 6rem);
+@media (max-width: 768px) {
+div.block_pattern_raender > .wp-block-group__inner-container{
+padding: 0px 0px 20px 0px;
+}
+}
+
+/* Kein Rand beim off-canvas-Menue */
+.nav-below-header .main-navigation .inside-navigation.grid-container, .nav-above-header .main-navigation .inside-navigation.grid-container {
+     padding: 0px;
+}
+
+/* Links (rot) und unterstrichen */
+.inside-article a, .paging-navigation a, .comments-area a, .page-header a {
+  text-decoration: underline;
+  text-decoration-style: solid;
+}
+
+
+p.has-background {
+  padding: 1rem 0 1rem 0;
 }
