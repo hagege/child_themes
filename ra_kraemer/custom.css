@@ -1,0 +1,53 @@
+/* Schriftgröße Menü */
+div#primary-menu a {
+    font-size: 1rem;
+}
+
+/* MENU ITEMS */
+.main-navigation, 
+.main-navigation ul ul {
+	background-color: #c0aa7d;
+}
+
+.navigation-search input[type="search"], 
+.navigation-search input[type="search"]:active {
+	color: #FFFFFF;
+	background-color: #9d8c66;
+}
+
+.navigation-search input[type="search"]:focus {
+	color: #FFFFFF;
+	background-color: #9d8c66;
+}
+
+.main-navigation .main-nav ul li a, 
+.menu-toggle {
+	color: #FFFFFF;
+}
+
+.main-navigation .main-nav ul ul li a {
+	color: #FFFFFF;
+}
+
+/* MENU ITEM HOVER */
+
+.main-navigation .main-nav ul li > a:hover, 
+.main-navigation .main-nav ul li.sfHover > a {
+	color: #FFFFFF;
+	background-color: #9d8c66;
+}
+
+.main-navigation .main-nav ul ul li > a:hover, 
+.main-navigation .main-nav ul ul li.sfHover > a {
+	color: #FFFFFF;
+	background-color: #4f4f4f;
+}
+
+.page-header-image-single img {
+    width: 100px;
+    height: 100px;
+}
+
+.post-image {
+    max-width: 100px;
+}
