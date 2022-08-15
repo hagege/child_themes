@@ -309,7 +309,7 @@ register_block_pattern(
 register_block_pattern(
   'container_mittelgrau_update',
     array(
-    'title' => __( 'Mittelgrauer Container mit Update-SVG', 'container_mittelgrauupdate' ),
+    'title' => __( 'Mittelgrauer Container mit Update-SVG', 'container_mittelgrau_update' ),
     'description' => _x( 'Mittelgrauer Container mit Update-SVG', 'Ein Container für Update-SVG mit mittelgrauem Hintergrund', 'container_mittelgrau_update' ),
     'categories'  => array('Haurand'),
     'content'     =>
@@ -366,7 +366,55 @@ register_block_pattern(
       <!-- /wp:columns --></div>
       <!-- /wp:group -->',
       )
- );   
+ );  
+ 
+ 
+
+/* ---------------------------------- */
+/* Container Info                   */
+/* ---------------------------------- */
+register_block_pattern(
+  'container_mittelgrau_info',
+    array(
+    'title' => __( 'Mittelgrauer Container mit Info-SVG', 'container_mittelgrau_info' ),
+    'description' => _x( 'Mittelgrauer Container mit Info-SVG', 'Ein Container für Info-SVG mit mittelgrauem Hintergrund', 'container_mittelgrau_info' ),
+    'categories'  => array('Haurand'),
+    'content'     =>
+      '<!-- wp:group {"style":{"color":{"background":"#d4dadb"}},"className":"svg_container"} -->
+      <div class="wp-block-group svg_container has-background" style="background-color:#d4dadb"><!-- wp:spacer {"height":"30px"} -->
+      <div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+      <!-- /wp:spacer -->
+
+      <!-- wp:columns -->
+      <div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"center","width":"20%","className":"spalte_svg"} -->
+      <div class="wp-block-column is-vertically-aligned-center spalte_svg" style="flex-basis:20%"><!-- wp:group {"className":"html_svg","layout":{"inherit":false,"contentSize":"100px"}} -->
+      <div class="wp-block-group html_svg"><!-- wp:html -->
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 460 460" style="enable-background:new 0 0 460 460;" xml:space="preserve">
+      <g id="XMLID_1055_">
+        <g>
+          <path d="M230,0C102.975,0,0,102.975,0,230s102.975,230,230,230s230-102.974,230-230S357.025,0,230,0z M268.333,377.36
+            c0,8.676-7.034,15.71-15.71,15.71h-43.101c-8.676,0-15.71-7.034-15.71-15.71V202.477c0-8.676,7.033-15.71,15.71-15.71h43.101
+            c8.676,0,15.71,7.033,15.71,15.71V377.36z M230,157c-21.539,0-39-17.461-39-39s17.461-39,39-39s39,17.461,39,39
+            S251.539,157,230,157z"></path>
+      </g>
+      </g></svg>
+      <!-- /wp:html --></div>
+      <!-- /wp:group -->
+
+      <!-- wp:paragraph {"align":"center","className":"achtung_update"} -->
+      <p class="has-text-align-center achtung_update"><strong>Info</strong></p>
+      <!-- /wp:paragraph --></div>
+      <!-- /wp:column -->
+
+      <!-- wp:column {"width":"80%"} -->
+      <div class="wp-block-column" style="flex-basis:80%"><!-- wp:paragraph {"className":"svg_meldung"} -->
+      <p class="svg_meldung">Das ist eine Info</p>
+      <!-- /wp:paragraph --></div>
+      <!-- /wp:column --></div>
+      <!-- /wp:columns --></div>
+      <!-- /wp:group -->',
+  )
+);  
 
 
 /* --------------------------------------------------- */

@@ -119,16 +119,16 @@ register_block_pattern(
     'description' => _x( 'Abfrage-Loop mit Schlagwörtern', 'Ein Absatz mit zentriertem Text', 'abfrage_loop_tags' ),
     'categories'  => array('Haurand'),
     'content'     =>
-       "<!-- wp:heading {\"level\":3} -->
-       <h3 id=\"htoc-weitere-beitr-ge-zum-thema\">Weitere Beiträge zum Thema</h3>
+       '<!-- wp:heading {"level":3} -->
+       <h3 id="htoc-weitere-beitr-ge-zum-thema">Weitere Beiträge zum Thema</h3>
        <!-- /wp:heading -->
        
-       <!-- wp:query {\"queryId\":0,\"query\":{\"perPage\":\"5\",\"pages\":0,\"offset\":0,\"postType\":\"post\",\"order\":\"desc\",\"orderBy\":\"date\",\"author\":\"\",\"search\":\"\",\"exclude\":[],\"sticky\":\"\",\"inherit\":false,\"taxQuery\":{\"post_tag\":[1494]}}} -->
-       <div class=\"wp-block-query\"><!-- wp:post-template -->
-       <!-- wp:post-title {\"level\":5,\"isLink\":true} /-->
+       <!-- wp:query {"queryId":0,"query":{"perPage":"5","pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"taxQuery":{"post_tag":[1487]}},"className":"abfrage_tags"} -->
+       <div class="wp-block-query abfrage_tags"><!-- wp:post-template -->
+       <!-- wp:post-title {"level":5,"isLink":true} /-->
        <!-- /wp:post-template --></div>
        <!-- /wp:query -->
-       ",
+       ',
     )
 );
 
