@@ -36,7 +36,7 @@
   
   /* sticky header mit petrol Hintergrund */
   nav#sticky-navigation {
-      background-color: #278484;
+      background-color: rgba(40,133,133,0.9);
   }
   
   /* newest post roundet corner */
@@ -61,7 +61,7 @@
   /* mobile header spacing */
   
   .mobile-header-navigation {
-  padding: 10px;
+  /* padding: 10px; */
   box-sizing: border-box;
   }
   
