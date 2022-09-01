@@ -27,6 +27,10 @@
   }
   
   
+  /* Schriftgröße h1 */
+  h1.gb-headline.gb-headline-d3968179.gb-headline-text {
+      font-size: clamp(1rem, 10vw, 5rem);
+  }
   
   /* mobile menü */
   @media (max-width: 992px) {
