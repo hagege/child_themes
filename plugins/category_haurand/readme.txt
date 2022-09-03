@@ -1,6 +1,6 @@
 === Category Haurand ===
 Contributors: Hans-Gerd Gerhards, haurand.com
-Stable tag: 0.2
+Stable tag: 0.3
 Tested up to: 6.0.1
 Requires at least: 4.6
 

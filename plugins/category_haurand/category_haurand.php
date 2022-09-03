@@ -8,7 +8,7 @@ Plugin Name: Category Vorlagen Haurand
 Plugin URI: http://haurand.com
 Description: Create a new Category "Haurand" as "Vorlagen Haurand" for Block Patterns
 Author: Hans-Gerd Gerhards
-Version: 0.2
+Version: 0.3
 Author URI: http://haurand.com
 */
 
