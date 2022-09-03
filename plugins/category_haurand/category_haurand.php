@@ -1,12 +1,12 @@
 <?php
 /**
  * @package Category Vorlagen Haurand
- * @version 0.2
+ * @version 0.3
  */
 /*
 Plugin Name: Category Vorlagen Haurand
 Plugin URI: http://haurand.com
-Description: Create a new Category "Haurand" for Block Patterns
+Description: Create a new Category "Haurand" as "Vorlagen Haurand" for Block Patterns
 Author: Hans-Gerd Gerhards
 Version: 0.2
 Author URI: http://haurand.com
