@@ -20,7 +20,7 @@
 <!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"id":95,"sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full"><img src="http://web215.s83.goserver.host/wp-content/uploads/2022/08/DSCF0371.jpg" alt="" class="wp-image-95"/></figure>
+<figure class="wp-block-image size-full"><img src="https://farbe-stil-makeup.com/wp-content/uploads/2022/08/DSCF0371.jpg" alt="" class="wp-image-95"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
