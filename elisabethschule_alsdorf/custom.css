@@ -108,6 +108,13 @@ dunkelgrau: #818181, (129,129,129)
       transform: translate3d(0, -3px, 0);
   }
   
+  
+  .main-navigation ul ul {
+          box-shadow: none;
+      background-color: rgba(39, 132, 132, 0.4);
+          border-radius: 12px;
+  }
+  
   /* mobile header spacing */
   
   .mobile-header-navigation {
