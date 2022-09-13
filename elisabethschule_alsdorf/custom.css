@@ -14,36 +14,14 @@ dunkelgrau: #818181, (129,129,129)
       --gelb-color: rgba(240, 213, 72, 1);
       --hellgrau-color: rgba(237, 237, 237, 1);
       --dunkelgrau-color: rgba(129, 129, 129, 1);
-      
   }
   
-  /* lokale Schriftarten */
-  /* roboto-regular - latin */
-  @font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    src: url('https://elisabethschule-alsdorf.de/wp-content/themes/fonts/roboto-v30-latin-regular.eot'); /* IE9 Compat Modes */
-    src: local(''),
-         url('https://elisabethschule-alsdorf.de/wp-content/themes/fonts/roboto-v30-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('https://elisabethschule-alsdorf.de/wp-content/themes/fonts/roboto-v30-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-         url('https://elisabethschule-alsdorf.de/wp-content/themes/fonts/roboto-v30-latin-regular.woff') format('woff'), /* Modern Browsers */
-         url('https://elisabethschule-alsdorf.de/wp-content/themes/fonts/roboto-v30-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('https://elisabethschule-alsdorf.de/wp-content/themes/fonts/roboto-v30-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+  
+  ul.liste_gruener_punkt li::marker {
+      color: var(--petrol-color);	
+      font-size: 1.5rem;
   }
-  /* roboto-700 - latin */
-  @font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    src: url('https://elisabethschule-alsdorf.de/wp-content/themes/fonts/roboto-v30-latin-700.eot'); /* IE9 Compat Modes */
-    src: local(''),
-         url('https://elisabethschule-alsdorf.de/wp-content/themes/fonts/roboto-v30-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('https://elisabethschule-alsdorf.de/wp-content/themes/fonts/roboto-v30-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-         url('https://elisabethschule-alsdorf.de/wp-content/themes/fonts/roboto-v30-latin-700.woff') format('woff'), /* Modern Browsers */
-         url('https://elisabethschule-alsdorf.de/wp-content/themes/fonts/roboto-v30-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('https://elisabethschule-alsdorf.de/wp-content/themes/fonts/roboto-v30-latin-700.svg#Roboto') format('svg'); /* Legacy iOS */
-  }
+  
   
   /* Für Copyright */
   a.copyright {
@@ -85,6 +63,36 @@ dunkelgrau: #818181, (129,129,129)
       border-radius: 12px;
   }
   
+  
+  
+  /* lokale Schriftarten */
+  /* roboto-regular - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://elisabethschule-alsdorf.de/wp-content/themes/fonts/roboto-v30-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('https://elisabethschule-alsdorf.de/wp-content/themes/fonts/roboto-v30-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://elisabethschule-alsdorf.de/wp-content/themes/fonts/roboto-v30-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('https://elisabethschule-alsdorf.de/wp-content/themes/fonts/roboto-v30-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('https://elisabethschule-alsdorf.de/wp-content/themes/fonts/roboto-v30-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://elisabethschule-alsdorf.de/wp-content/themes/fonts/roboto-v30-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+  /* roboto-700 - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://elisabethschule-alsdorf.de/wp-content/themes/fonts/roboto-v30-latin-700.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('https://elisabethschule-alsdorf.de/wp-content/themes/fonts/roboto-v30-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://elisabethschule-alsdorf.de/wp-content/themes/fonts/roboto-v30-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('https://elisabethschule-alsdorf.de/wp-content/themes/fonts/roboto-v30-latin-700.woff') format('woff'), /* Modern Browsers */
+         url('https://elisabethschule-alsdorf.de/wp-content/themes/fonts/roboto-v30-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://elisabethschule-alsdorf.de/wp-content/themes/fonts/roboto-v30-latin-700.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+  
   /* GeneratePress Site CSS */ 
   /* navigation hover lift */
   
@@ -96,8 +104,8 @@ dunkelgrau: #818181, (129,129,129)
   }
   
   .main-navigation .main-nav ul li:hover > a {
-      -webkit-transform: translate3d(0, -4px, 0);
-      transform: translate3d(0, -6px, 0);
+      -webkit-transform: translate3d(0, -2px, 0);
+      transform: translate3d(0, -3px, 0);
   }
   
   /* mobile header spacing */
