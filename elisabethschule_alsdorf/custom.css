@@ -17,6 +17,15 @@ dunkelgrau: #818181, (129,129,129)
   }
   
   
+  /* Darstellung der Bilder bei Beiträgen */
+  .gb-inside-container img {
+          width: 800px;
+      -o-object-fit: cover;
+      object-fit: cover;
+  }
+  
+  
+  /* unsortierte Liste mit grünem Punkt */
   ul.liste_gruener_punkt li::marker {
       color: var(--petrol-color);	
       font-size: 1.5rem;
