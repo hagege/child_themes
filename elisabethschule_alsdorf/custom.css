@@ -17,6 +17,30 @@ dunkelgrau: #818181, (129,129,129)
   }
   
   
+  /* Überschrift über Kalender */
+  .tribe-events-before-html {
+      text-align: center;
+      padding-bottom: 3rem!important;
+  }
+  
+  img.image_center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 46px;
+      margin-bottom: 1rem;
+  }
+  
+  /* Eingabe Suche */
+  input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="tel"], input[type="number"], textarea, select {
+      border-color: #33858b;
+  }
+  
+  /* Weiterlesen-Button mit runden Ecken */
+  a.read-more.button {
+      border-radius: 12px;
+  }
+  
   /* Darstellung der Bilder bei Beiträgen */
   .gb-inside-container img {
           width: 800px;
@@ -120,8 +144,8 @@ dunkelgrau: #818181, (129,129,129)
   
   .main-navigation ul ul {
           box-shadow: none;
-      background-color: rgba(39, 132, 132, 0.4);
-          border-radius: 12px;
+  background-color: rgba(39, 132, 132, 0.8);
+      border-radius: 0px 0px 12px 12px;
   }
   
   /* mobile header spacing */
