@@ -17,6 +17,12 @@ dunkelgrau: #818181, (129,129,129)
   }
   
   
+  /* kein Padding beim Kalender */
+  .tribe-common-l-container.tribe-events-l-container {
+      padding-top: 0rem!important;
+  }
+  
+  
   /* Überschrift über Kalender */
   .tribe-events-before-html {
       text-align: center;
