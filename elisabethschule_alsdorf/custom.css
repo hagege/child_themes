@@ -17,6 +17,19 @@ dunkelgrau: #818181, (129,129,129)
   }
   
   
+  /* Überschriften bei Beiträgen */
+  @media (min-width: 1024px) {
+  .gb-inside-container h2 {
+      font-size: clamp(1rem, 0.6rem + 1vw, 3.25rem);
+      }
+  }
+  
+  @media (max-width: 1023px) {
+  .gb-inside-container h2 {
+      font-size: clamp(1rem, 0.431rem + 2.84vw, 2.25rem);
+      }
+  }
+  
   /* Menüleiste mit Hintergrund */
   div#primary-menu {
       background-color: rgba(39, 132, 132, 0.7);
