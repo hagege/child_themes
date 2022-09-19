@@ -17,9 +17,11 @@ dunkelgrau: #818181, (129,129,129)
   }
   
   
-  /* kein Padding beim Kalender */
-  .tribe-common-l-container.tribe-events-l-container {
-      padding-top: 0rem!important;
+  /* Menüleiste mit Hintergrund */
+  div#primary-menu {
+      background-color: rgba(39, 132, 132, 0.7);
+      padding: 5px;
+        border-radius: 12px;
   }
   
   
