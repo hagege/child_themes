@@ -17,6 +17,23 @@ dunkelgrau: #818181, (129,129,129)
   }
   
   
+  
+  /* Schriftgröße h1 auf Startseite */
+  h1.gb-headline.gb-headline-d3968179.gb-headline-text {
+      font-size: clamp(1rem, 10vw, 5rem);
+  }
+  
+  /* Schriftgröße h1 auf allen anderen Seiten */
+  .gb-inside-container h1 {
+      color: var(--base-3);
+      background-color: rgba(40, 133, 133, 0.9);
+      font-size: clamp(1rem, 0.75rem + 2.25vw, 4.25rem);
+      padding: 10px 30px;
+      margin-bottom: 20px;
+      display: inline-block;
+  }
+  
+  
   /* Überschriften bei Beiträgen */
   @media (min-width: 1024px) {
   .gb-inside-container h2 {
@@ -34,7 +51,6 @@ dunkelgrau: #818181, (129,129,129)
   div#primary-menu {
       background-color: rgba(39, 132, 132, 0.7);
       padding: 5px;
-        border-radius: 12px;
   }
   
   
@@ -57,10 +73,6 @@ dunkelgrau: #818181, (129,129,129)
       border-color: #33858b;
   }
   
-  /* Weiterlesen-Button mit runden Ecken */
-  a.read-more.button {
-      border-radius: 12px;
-  }
   
   /* Darstellung der Bilder bei Beiträgen */
   .gb-inside-container img {
@@ -87,11 +99,6 @@ dunkelgrau: #818181, (129,129,129)
   }
   
   
-  /* Schriftgröße h1 */
-  h1.gb-headline.gb-headline-d3968179.gb-headline-text {
-      font-size: clamp(1rem, 10vw, 5rem);
-  }
-  
   /* Bilder im Query-Block */
   img.gb-image-12188bef {
       height: 300px;
@@ -110,11 +117,6 @@ dunkelgrau: #818181, (129,129,129)
   /* sticky header mit petrol Hintergrund */
   nav#sticky-navigation {
       background-color: rgba(40,133,133,0.9);
-  }
-  
-  /* newest post rounded corner */
-  img.gb-image-12188bef {
-      border-radius: 12px;
   }
   
   
@@ -166,7 +168,6 @@ dunkelgrau: #818181, (129,129,129)
   .main-navigation ul ul {
           box-shadow: none;
   background-color: rgba(39, 132, 132, 0.8);
-      border-radius: 0px 0px 12px 12px;
   }
   
   /* mobile header spacing */
@@ -179,15 +180,9 @@ dunkelgrau: #818181, (129,129,129)
   /* image rounded corners */
   
   .image-style img {
-      border-radius: 12px;
       margin: 10px 0px;
   } 
   
-  /* post images rounded corners */
-  
-  .featured-image img, .post-image img {
-      border-radius: 12px;
-  }
   
   /* wpsp read more underline */
   
@@ -195,8 +190,4 @@ dunkelgrau: #818181, (129,129,129)
       text-decoration: underline;
   }
   
-  /* wpsp image rounded corners */
-  
-  .wp-show-posts-image img {
-      border-radius: 12px;
-  } /* End GeneratePress Site CSS */
+  /* End GeneratePress Site CSS */
