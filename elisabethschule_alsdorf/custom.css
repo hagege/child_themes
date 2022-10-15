@@ -16,7 +16,24 @@ dunkelgrau: #818181, (129,129,129)
       --dunkelgrau-color: rgba(129, 129, 129, 1);
   }
   
-  /* Grafik etwas nach oben schieben */
+  .gp-icon svg {
+      color: white;
+  }
+  
+  
+  /* Menüleiste mit Logo */
+  nav#site-navigation {
+      margin-top: -5.5rem;
+  }
+  
+  .site-header a img {
+      margin-top: 2rem;
+      margin-left: 4rem;
+  }
+  
+  
+  
+  /* Grafik etwas nach oben schieben *7
   .gb-container-1f9b7f17:before {
       top: -6em;
   }
@@ -53,7 +70,7 @@ dunkelgrau: #818181, (129,129,129)
   
   /* Menüleiste mit Hintergrund */
   div#primary-menu {
-      background-color: rgba(39, 132, 132, 0.7);
+      /* background-color: rgba(39, 132, 132, 0.7); */
       padding: 5px;
   }
   
@@ -156,6 +173,11 @@ dunkelgrau: #818181, (129,129,129)
   /* GeneratePress Site CSS */ 
   /* navigation hover lift */
   
+  /*Untermenüs */
+  .main-navigation .main-nav ul ul li a {
+      font-size: 18px;
+  }
+  
   .main-navigation .main-nav ul li > a {
       -webkit-transition: all 500ms ease-in-out;
       transition: all 500ms ease-in-out;
@@ -171,7 +193,7 @@ dunkelgrau: #818181, (129,129,129)
   
   .main-navigation ul ul {
           box-shadow: none;
-  background-color: rgba(39, 132, 132, 0.8);
+          font-size: 20px;
   }
   
   /* mobile header spacing */
