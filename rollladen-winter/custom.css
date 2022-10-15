@@ -1,13 +1,46 @@
-
-/* Rahmenfarbe für Checkbox */
-input[type="checkbox"] {
-    border: 3px solid #0062b0;
-}
-
 /* Credits linksbündig */
 footer#footer .colophon p, footer#footer .colophon a {
     text-align: left;
 }
+
+
+/* Design-Anpassungen beim Formular */
+
+.wpcf7-list-item {
+    margin: 0;
+}
+
+/* Einstellungen für Radio-Button */
+.wpcf7-form input[type=checkbox], .wpcf7-form input[type=radio] {
+-webkit-appearance: inner-spin-button!important;
+    width: 2rem;
+    height: 2rem;
+    accent-color: #0062af;
+    margin-right: 0.5rem;
+}
+
+.themeform input[type="radio"]:checked::before, .widget_archive input[type="radio"]:checked::before, .widget_categories input[type="radio"]:checked::before, .wpcf7-form input[type="radio"]:checked::before {
+	content: ""!important;
+	background-color: #0062af;
+}
+
+
+.wpcf7-form input, textarea,
+select.wpcf7-form-control.wpcf7-select.wpcf7-validates-as-required,
+select.wpcf7-form-control.wpcf7-select {
+    background-color: aliceblue;
+    border-color: #0062af;
+    color: black;	
+		margin-left: 0px
+}
+
+
+/* damit der Innenbereich angezeigt wird */
+.wpcf7-form input[type=radio]:checked::before,
+.wpcf7-form input[type=checkbox]:checked::before{
+	content: initial;
+}
+
 
 /* h2: kleinere Schrift */
 h2 {
