@@ -20,18 +20,21 @@ dunkelgrau: #818181, (129,129,129)
       color: white;
   }
   
-  
   /* Menüleiste mit Logo */
   nav#site-navigation {
       margin-top: -5.5rem;
   }
   
+  /* Logo beim Header mit Rand */
   .site-header a img {
       margin-top: 2rem;
       margin-left: 4rem;
   }
   
-  
+  /* beim Sticky Header kein Rand nach oben */
+  .sticky-navigation-logo a img {
+      margin-top: 0rem;
+  }
   
   /* Grafik etwas nach oben schieben *7
   .gb-container-1f9b7f17:before {
@@ -135,11 +138,11 @@ dunkelgrau: #818181, (129,129,129)
       }
   }
   
-  /* sticky header mit petrol Hintergrund */
+  /* sticky header mit petrol Hintergrund 
   nav#sticky-navigation {
       background-color: rgba(40,133,133,0.9);
   }
-  
+  */
   
   
   /* lokale Schriftarten */
