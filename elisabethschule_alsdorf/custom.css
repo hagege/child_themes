@@ -16,9 +16,6 @@ dunkelgrau: #818181, (129,129,129)
       --dunkelgrau-color: rgba(129, 129, 129, 1);
   }
   
-  .gp-icon svg {
-      color: white;
-  }
   
   /* Menüleiste mit Logo */
   nav#site-navigation {
