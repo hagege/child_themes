@@ -16,6 +16,18 @@ dunkelgrau: #818181, (129,129,129)
       --dunkelgrau-color: rgba(129, 129, 129, 1);
   }
   
+  /* damit die Seitenleiste nicht zu hoch ist bei Einzelbeiträgen */
+  div#page div#right-sidebar {
+      margin-top: 120px;
+  }
+  
+  
+  /* Farbe für Hamburger */
+  @media (max-width: 1200px) {
+  .gp-icon {
+      color: white;
+  }
+  }
   
   /* Menüleiste mit Logo */
   nav#site-navigation {
@@ -129,7 +141,7 @@ dunkelgrau: #818181, (129,129,129)
   
   
   /* mobile menü */
-  @media (max-width: 1100px) {
+  @media (max-width: 1200px) {
       .inside-navigation.grid-container.grid-parent {
               background-color: rgba(40,133,133,0.9);
       }
