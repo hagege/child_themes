@@ -8,8 +8,14 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 
 /* TEST */
 
+/* unsichtbarer Text */
 p.unsichtbar {
 	display: none;
+}
+
+/* Unterschrift unter Bildern in weiß */
+.aligncenter figcaption {
+    color: white;
 }
 
 
