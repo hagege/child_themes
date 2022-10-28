@@ -16,9 +16,6 @@ Helltürkis:   #00F5F6
 
 
 
-Breakpoint bei 1200px (einspaltig)
-*/
-
 /* Variablen */
 :root {
 	--orange-color: rgba(250, 102, 15, 1);
@@ -38,6 +35,46 @@ Breakpoint bei 1200px (einspaltig)
 
 }
 
+
+/* Breakpoint bei 1024px (einspaltig)
+*/
+@media (max-width: 1024px) {
+    .site-content {
+        flex-direction: column;
+    }
+
+    .site-content .content-area,
+    .site-content .is-right-sidebar {
+        width: 100%;
+    }
+
+    .one-container.right-sidebar .site-main {
+        margin-right: 0
+    }
+}
+
+
+/* Links im Footer und Block Pattern unterstrichen */
+p.blauer_link a,
+p.footer_links_absaetze a {
+    text-decoration: underline;
+}
+
+p.blauer_link a:hover,
+p.footer_links_absaetze a:hover{
+    text-decoration: dotted;
+}
+
+
+/* Links im Footer mit weniger Rand unten */
+aside#block-101,
+aside#block-102{
+    margin-bottom: 2px;
+}
+
+.widget:last-child, .separate-containers .widget:last-child {
+    padding: 0px;
+}
 
 /* Rand bei der Terminliste eingestellt */
 @media (max-width: 1768px) {
