@@ -10,14 +10,14 @@ wpuser_pwd="Test_2019"
 
 ### ---------------------- WICHTIG: ANFANG - Korrekt ersetzen ---------------------- ###
 # hier die Sicherungsdatei aus UpdraftPlus eintragen:
-wp_restore="backup_2022-09-25-0100_aachenerkinderde_32ef214fc6df"
+wp_restore="backup_2022-05-12-2336_Lindenschule_6815d7abf7a5"
 
 # ggfs. Datenbank mit anderer ID, sonst auskommentieren
 wp_restore_db=$wp_restore
-# wp_restore_db="backup_2022-01-13-0500_aachenerkinderde_132a552b97c6"
+wp_restore_db="backup_2022-05-12-2336_Lindenschule_6815d7abf7a5"
 
-search_string="https://aachenerkinder.de" 
-dbname="ackids_test"
+search_string="https://lindenschule-aachen.de" 
+dbname="lindenschule"
 ### ---------------------- WICHTIG: ENDE - Korrekt ersetzen ---------------------- ###
 
 # wird ersetzt - keine Änderung notwendig:
@@ -28,8 +28,7 @@ replace_string="http://localhost/${dbname}"
 ### ---------------------- WICHTIG: Prüfen ---------------------- ###
 # braucht in der Regel nicht geändert zu werden, evtl. Laufwerk ändern
 target_dir="d:/laragon/www/${dir}/wp-content"
-# backup_dir="d:/laragon/sicherungen/"
-backup_dir="Y:/webseiten_sicherung/extern_sicherung/aachenerkinder/"
+backup_dir="d:/laragon/sicherungen/"
 ### -> done
 
 	# vielleicht besser über Laragon löschen, daher auskommentiert
@@ -60,7 +59,8 @@ backup_dir="Y:/webseiten_sicherung/extern_sicherung/aachenerkinder/"
 	php ../wp-cli.phar core download
 
 	# create the wp-config file
-	php ../wp-cli.phar core config --dbname=$dbname --dbuser=root --dbpass=
+	# Bei Lindenschule mit prefix
+	php ../wp-cli.phar core config --dbname=$dbname --dbprefix=gowp_ --dbuser=root --dbpass=
 	# php ../wp-cli.phar core config --dbname=$dbname --dbuser=root --dbpass=
 
 	# parse the current directory name
@@ -118,17 +118,17 @@ backup_dir="Y:/webseiten_sicherung/extern_sicherung/aachenerkinder/"
 	php ../wp-cli.phar plugin delete hello
 	php ../wp-cli.phar plugin delete akismet
 	
+	# Theme GeneratePress installieren:
+	php ../wp-cli.phar theme install generatepress
+	
 	# health-check zusätzlich installieren:
 	php ../wp-cli.phar plugin install health-check --activate
 	php ../wp-cli.phar plugin activate --all;
 	
 	# lokal nicht genutzte Plugins deaktivieren:
 	php ../wp-cli.phar plugin deactivate koko-analytics
-	php ../wp-cli.phar plugin deactivate adrotate-pro
-	php ../wp-cli.phar plugin deactivate wp-rocket
 	php ../wp-cli.phar plugin deactivate wordpress-seo
 	php ../wp-cli.phar plugin deactivate wordpress-seo-premium
-	php ../wp-cli.phar plugin deactivate real-cookie-banner-pro
 	
 	php ../wp-cli.phar theme update --all;
 	php ../wp-cli.phar plugin update --all;
@@ -144,6 +144,7 @@ backup_dir="Y:/webseiten_sicherung/extern_sicherung/aachenerkinder/"
 	
 	# Farbschema auf hellgrau bei User lokal:
 	php ../wp-cli.phar user update lokal --admin_color=light	
+	
 	
 
 	# Ersetzen der Domain in der Datenbank (bei UpdraftPlus Premium nicht notwendig):

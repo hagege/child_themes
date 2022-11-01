@@ -78,11 +78,18 @@ backup_dir="D:/laragon/sicherungen/"
 	# Create new User:
 	php ../wp-cli.phar user create $wpuser lokal@haurand.com --role=administrator --user_pass=$wpuser_pwd
 	
+	# Farbschema auf hellgrau bei User lokal:
+	php ../wp-cli.phar user update lokal --admin_color=light	
 	
 
 	# Ersetzen der Domain in der Datenbank (bei UpdraftPlus Premium nicht notwendig):
 	### ---------------------- WICHTIG: Korrekt ersetzen ---------------------- ###
-	php ../wp-cli.phar search-replace $search_string $replace_string
+	php ../wp-cli.phar rewrite structure '/%postname%'
+	php ../wp-cli.phar rewrite flush
+	php ../wp-cli.phar option update permalink_structure '/%postname%'
+	
+	
+	php ../wp-cli.phar option update blogname "TESTINSTANZ $(dbname)"
 	
 	# rewrite permalink structure (hat nicht geklappt -> daher nach der Wiederherstellung auf Einstellungen > Permalinks
 	php ../wp-cli.phar rewrite flush
