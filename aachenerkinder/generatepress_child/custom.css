@@ -20,12 +20,12 @@ CMYK 67-19-35-35
 
 /* TEST */
 
-/* damit der Anker korrekt angesteuert werden kann */
+/* damit der Anker korrekt angesteuert werden kann - deaktiviert: 3.11.2022 
 [id^="htoc-"] { 
 	padding-top: 150px; 
 	margin-top: -150px!important;
 }
-
+*/
 
 /* für Spende auf der Hauptseite */
 div.spende {
