@@ -9,7 +9,7 @@ FARBWERTE
 Web und Bildschirm Druck
 */
 
-/* Absatzstyle für Copyrigth oben */
+/* Absatzstyle für Copyright oben */
 p.em_bild {
 	font-style: italic;
 	margin-bottom: 4rem;
@@ -22,11 +22,12 @@ p.em_bild {
 	}
 }
 
-/* damit der Anker korrekt angesteuert werden kann */
+/* damit der Anker korrekt angesteuert werden kann - deaktiviert, 3.11.2022 
 [id^="htoc-"] { 
 	padding-top: 130px; 
 	margin-top: -130px!important;
 }
+*/
 
 /* Anzeige mit 100% bei Veranstaltungen */
 .tribe-events-calendar-list__event-wrapper.tribe-common-g-col >
