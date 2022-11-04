@@ -1,9 +1,11 @@
 /* Umschalten von 3 auf 1 Spalte */
 
+
+/* deaktiviert
 html {
 	scroll-behavior: smooth;
   }
-  
+*/  
   /* rote Schriftfarbe für Aufgabe */
   h2.animated_1.fadeInLeftBig {
 	  color: #d73030;
