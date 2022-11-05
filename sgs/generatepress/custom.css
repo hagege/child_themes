@@ -19,6 +19,46 @@
   }
   
   
+  /* CSS - Klasse für Absatz in Sidebar > Wichtige Infos */
+  .entry-content p.bg_gelb a,
+  .inside-right-sidebar p.bg_gelb a{
+      text-decoration: none;
+    border-bottom: 0.1em dotted grey;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .entry-content p.bg_gelb a:hover,
+  .inside-right-sidebar p.bg_gelb a:hover{
+      text-decoration: none;
+    background-color: #BD0014;
+    color: #fff;
+  }
+  
+  
+  aside#block-2 h2 {
+      background-color: var(--rot-color);
+      color: white;
+  }
+  
+  .page-hero-buttons{
+      margin-left: 20%;
+      margin-right: 20%;
+  }
+  
+  /* Link in rotem Kasten (sidebar) */
+  aside#block-22 p {
+      font-size: 1.5rem;
+  }
+  
+  
+  
+  
+  aside#block-22 a {
+      color: white;
+      text-decoration: underline;
+  }
+  
   
   /* ------------------------------ */
   /* neue Gestaltung der Menüleiste */
@@ -76,6 +116,18 @@
   /* ------------------------------ */
   /* Button z. B. Schullaufbahn und Kollegium */
   /* ------------------------------ */
+  
+  .is-content-justification-center.is-layout-flex.wp-container-1.wp-block-buttons.sgs_button,
+  .is-content-justification-center.is-layout-flex.wp-container-2.wp-block-buttons.sgs_button,
+  .is-content-justification-center.is-layout-flex.wp-container-3.wp-block-buttons.sgs_button{
+      text-align: center;
+  }
+  
+  .wp-block-button.kollegium_button {
+      margin-top: 1em;
+  }
+  
+  
   .wp-block-buttons .sgs_button a,
   .wp-block-buttons.sgs_button a.wp-block-button__link {
       background-color: var(--rot-color);
@@ -103,10 +155,13 @@
    transition: all 0.5s linear;
   }
   
+  
+  /* deaktiviert, weil das zu Problemen führte: 20.10.2022 
   [id^="lehrer_"] { 
       padding-top: 15rem; 
       margin-top: -15rem!important;
   }
+  */
   
   /* Mail bei Schulleitung */
   p.has-text-align-center.schulleitung_mail {
@@ -140,7 +195,7 @@
   /* Animation auf der Hauptseite */
   
   div.sgs_hintergrund {
-      background-color: black;
+      background-color: white;
       width: 50vw;
       margin-left: auto;
       margin-right: auto;
@@ -161,7 +216,7 @@
   }
   
   h2.sgs_animation {
-          color: white;
+          color: black;
       opacity: 1;
       -webkit-animation: fadeInlinks 2s; /* Safari, Chrome and Opera > 12.1 */
          -moz-animation: fadeInlinks 2s; /* Firefox < 16 */
