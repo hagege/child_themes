@@ -18,6 +18,11 @@ p.unsichtbar {
     color: white;
 }
 
+/* Unterschrift unter Bildern in schswarz bei Vorlagen */
+.wp-block-image.bild_zentriert figcaption {
+    color: black;
+}
+
 
 /* für Block Pattern Update und Achtung */
 @media (max-width: 781px)  {
