@@ -1,11 +1,10 @@
-/* CSS Document */
-/* Button mit weiﬂer Schriftfarbe */
+/* Button mit wei√üer Schriftfarbe */
 a.wp-block-button__link.has-background {
     color: #ffffff !important;
 }
 
 
-/* ‹berschrift nicht zeigen */
+/* √úberschrift nicht zeigen */
 .entry-header.has-text-align-center.header-footer-group {
     display: none;
 }
@@ -24,15 +23,16 @@ span.arrow {
 
 
 /*oberer Rand vor dem Bild */
-@media (min-width: 700px)
+@media (min-width: 700px){
 .post-inner {
     padding-top: 0rem; 
 }
 .post-inner {
     padding-top: 0rem;
 }
+}
 
-/* Abstand nach oben vergrˆﬂern 
+/* Abstand nach oben vergr√∂√üern 
 h2 {
 	padding-top:150px
 }
