@@ -19,6 +19,14 @@
   }
   
   
+  /* Ansteuerung bei Klick auf Buchstaben korrigieren */
+  [id^="lehrer_"] { 
+      padding-top: 8rem; 
+      margin-top: -8rem!important;
+  }
+  
+  
+  
   /* CSS - Klasse für Absatz in Sidebar > Wichtige Infos */
   .entry-content p.bg_gelb a,
   .inside-right-sidebar p.bg_gelb a{
