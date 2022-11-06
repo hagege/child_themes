@@ -25,6 +25,10 @@
       margin-top: -8rem!important;
   }
   
+  /* angesteuerten Namen in rot darstellen */
+  [id^="lehrer_"]:target  { 
+      color: var(--rot-color);
+  }
   
   
   /* CSS - Klasse für Absatz in Sidebar > Wichtige Infos */
