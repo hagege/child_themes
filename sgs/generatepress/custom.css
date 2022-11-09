@@ -1194,3 +1194,9 @@
   /* ----------------------------- */
   
   
+  /* Fehler bei Galery-Block bereinigt */
+  figure.wp-block-gallery.has-nested-images {
+      display: flex;
+      flex-wrap: wrap;
+  }
+  
