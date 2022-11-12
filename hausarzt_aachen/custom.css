@@ -1,0 +1,143 @@
+/* Farben 
+ * 
+blau: #0263a4, (2, 99, 164, 1)
+petrol: #278484, (39,132,132)
+hellgrün: #BDE7CF, (189,231,207)
+gelb: #F0D548, (240,213,72)
+hellgrau: #EDEDED, (237,237,237)
+dunkelgrau: #818181, (129,129,129)
+*/
+
+
+/* Variablen */
+:root {
+    --blau: rgb(2, 99, 164, 1);
+    --petrol-color: rgba(39, 132, 132, 1);
+    --hellgruen-color: rgba(189, 231, 207, 1);
+	--gelb-color: rgba(240, 213, 72, 1);
+	--hellgrau-color: rgba(237, 237, 237, 1);
+	--dunkelgrau-color: rgba(129, 129, 129, 1);
+}
+
+
+
+/* mobile menü */
+@media (max-width: 992px) {
+	.inside-navigation.grid-container.grid-parent {
+			background-color: rgba(2, 99, 164,0.7);
+	}
+}
+
+
+/* newest post roundet corner */
+img.gb-image-12188bef {
+    border-radius: 15px;
+}
+
+
+
+/* GeneratePress Site CSS */ /* navigation hover lift 
+
+.main-navigation .main-nav ul li > a {
+	-webkit-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+		-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.main-navigation .main-nav ul li:hover > a {
+	-webkit-transform: translate3d(0, -4px, 0);
+	transform: translate3d(0, -4px, 0);
+}
+*/
+
+/* ----------------------------- */
+/* Navigation                    */
+/* ----------------------------- */
+
+/* Einstellungen für das Desktop-Menü */
+@media (min-width: 900px) {
+    /* nav links effect */
+    .main-navigation .menu > .menu-item > a::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        left: 50%;
+        bottom: -5px;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        color: #ffffff;
+        display: block;
+        width: 0;
+        height: 5px;
+    
+        background-color: currentColor;
+        transition: 0.3s width ease;
+    }
+    .main-navigation .menu > .menu-item.current-menu-item > a::after,
+    .main-navigation .menu > .menu-item > a:hover::after {
+        width: 100%;
+    }
+	
+	.main-navigation .menu > .menu-item.current-menu-item > a::after,
+    .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
+    .main-navigation .menu > .menu-item > a:active::after {
+        width: 100%;
+		color: #ffffff;
+    }
+
+
+    /* graue Linie zwischen Menü und Content */ 
+    .separate-containers .site-main {
+            margin: 0px;
+            border-top: 5px solid #9a9a9a;
+    }
+
+    /* Hover bei Untermenüpunkten */
+    .main-navigation .main-nav ul ul li[class*="current-menu-"] > a:hover, .main-navigation .main-nav ul ul li[class*="current-menu-"].sfHover > a {
+        color: #E1E7F0;
+        background-color: #ffffff;
+    }
+    /* Active bei Untermenüpunkten */
+    .main-navigation .main-nav ul ul li[class*="current-menu-"] > a:active {
+        color: #E1E7F0;
+        background-color: #ffffff;
+    }
+    .main-navigation .main-nav ul ul li[class*="current-menu-"] > a:focus {
+        color: #E1E7F0;
+        background-color: #ffffff;
+    }
+}
+
+
+/* mobile header spacing */
+
+.mobile-header-navigation {
+/* padding: 10px; */
+box-sizing: border-box;
+}
+
+/* image rounded corners */
+
+.image-style img {
+	border-radius: 12px;
+	margin: 10px 0px;
+} 
+
+/* post images rounded corners */
+
+.featured-image img, .post-image img {
+	border-radius: 12px;
+}
+
+/* wpsp read more underline */
+
+.wpsp-read-more {
+	text-decoration: underline;
+}
+
+/* wpsp image rounded corners */
+
+.wp-show-posts-image img {
+	border-radius: 12px;
+} /* End GeneratePress Site CSS */
