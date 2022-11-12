@@ -1,0 +1,398 @@
+/* ----------------------------- */
+
+/* für Spalten mit Bild bei Beiträgen */
+.wp-container-3.wp-block-columns.spalte_ohne_rand_unten {
+    margin-bottom: 0px;
+}
+
+/* ----------------------------- */
+/* Video Block auf Hautpseite    */
+/* Ränder auf der Hauptseite     */
+/* ----------------------------- */
+.wp-block-columns.alignfull.has-white-background-color.has-background  {
+    padding-left: 20px;
+    padding-right: 20px; 
+	  padding-top: 0px; 
+	  margin-bottom: 0px;
+}
+
+
+/* ----------------------------- */
+/* Pfeil nach oben zeigen        */
+/* ----------------------------- */
+img.wp-image-519 {
+    display: inherit!important;
+}
+
+
+/* ----------------------------- */
+/* Rahmen auf der Privacy-Seite  */
+/* ----------------------------- */
+.privacy_rahmen{
+    color: #7b7b7b;
+    border: 2px;
+    border: 5px solid silver;
+		padding: 5px;
+}
+
+
+/* ----------------------------- */
+/* Content-Breite auf Privacy    */
+/* und Imprint                   */
+/* ----------------------------- */
+article#post-44,
+article#post-42 {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* ----------------------------- */
+/* Überschriften im Fuß fett */
+/* ----------------------------- */
+h2.widget-title {
+    font-weight: bold;
+}
+
+
+/* ----------------------------- */
+/* kein hellblauer Rand beim Video */
+/* ----------------------------- */
+body.page-id-990 .inside-article {
+    background-color: white;
+}
+
+.team_spalte {
+    padding: 0px;
+}
+
+/* ----------------------------- */
+/* Rand unten beim Video         */
+/* ----------------------------- */
+figure#oben {
+    margin-bottom: 0px;
+}
+
+/* -----------------------------*/
+/* Alternative für Teamfotos    */
+/* -----------------------------*/
+img.wp-image-69,
+img.wp-image-70,
+img.wp-image-71	{
+	clear: both;
+    display: flex;
+    margin: 0 auto;
+		align-self: flex-start;
+	  /* min-height: auto; */
+    /* max-height: 100%; */
+}
+
+
+.wp-block-image img {
+    clear: both;
+    display: flex;
+    margin: 0 auto;
+		align-self: flex-start;
+	  /* min-height: auto; */
+    /* max-height: 100%; */
+    /* max-width: 100%; */
+}
+
+/* Einstellung für iPhone XR */
+@media only screen 
+and (device-width : 375px) 
+and (device-height : 812px) 
+and (-webkit-device-pixel-ratio : 2) {
+
+	img.wp-image-69,
+	img.wp-image-70,
+	img.wp-image-71
+	{
+		align-self: flex-start;
+	  /* min-height: auto; */
+    /* max-height: 100%; */
+			/* max-height:300px; */
+	}
+}
+
+/* ----------------------------- */
+/* Kleines und großes Video      */
+/* ----------------------------- */
+
+/* auf kleineren Displays kleiner Film*/
+@media only screen 
+and (max-width: 800px) {
+    div.kleines_video {
+			display: block; 
+    }
+	  div.grosses_video {
+			display: none; 
+		}
+}
+
+/* auf größeren Displays großer Film*/
+@media only screen 
+and (min-width: 801px) {
+    div.kleines_video {
+			display: none; 
+    }
+	  div.grosses_video {
+			display: block; 
+	}
+	p.text_in_box {
+			text-align: center;
+			margin-right: 15%;
+			margin-left: 15%;
+	}
+	 p.has-text-align-center {
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
+	}
+	
+}
+
+
+/* auf kleineren Displays kleiner Film*/
+@media only screen 
+and (max-width: 800px) {
+    figure.kleines_start_video {
+			display: block; 
+    }
+	  figure.grosses_start_video {
+			display: none; 
+		}
+		p.text_in_box {
+			text-align: center;
+		}
+}
+
+/* auf größeren Displays großer Film*/
+@media only screen 
+and (min-width: 801px) {
+    figure.kleines_start_video {
+			display: none; 
+    }
+	  figure.grosses_start_video {
+			display: block; 
+	}
+}
+
+
+/* ----------------------------- */
+/* Navigation                    */
+/* ----------------------------- */
+
+/* Farben für Off-Canvas-Menü */
+@media only screen and (max-width: 900px) {
+	.slideout-navigation.main-navigation .main-nav ul ul li[class*="current-menu-"] > a{
+		color: #9a9a9a;
+		background-color: #e1e7f0;
+	}
+		.slideout-navigation.main-navigation .main-nav ul ul li[class*="current-menu-"] > a:hover{
+		color: #e1e7f0;
+		background-color: #622523;
+	}
+	
+		.slideout-navigation.main-navigation .main-nav ul ul li[class*="current-menu-"] > a:focus{
+		color: #e1e7f0;
+		background-color: #263f5f;
+	}
+	
+	.slideout-navigation.main-navigation .main-nav ul ul li[class*="current-menu-"] > a:active{
+		color: #e1e7f0;
+		background-color: #263f5f;
+	}
+}
+
+
+
+/* erstes Protembo-Video ohne Rand zum unteren Container */
+.arve, #html .arve {
+	margin-bottom: 0em;
+}
+
+.arve-embed, #html .arve-embed {
+    margin-bottom: -10px;
+}
+
+/* ----------------------------- */
+/* Pfeil bei Accordion-Block     */
+/* ----------------------------- */
+
+
+.wp-block-hotblocks-accordion .accordion-heading::after {
+  content: ' ';
+  background-image: url(https://protembis.com/wp-content/uploads/2020/12/Button_blau_runter.png);
+  background-size:contain;
+  background-repeat: no-repeat;
+  height: 25px;
+  width: 25px;
+}
+
+.wp-block-hotblocks-accordion .accordion-heading:hover::after {
+  content: ' ';
+  background-image: url(https://protembis.com/wp-content/uploads/2020/12/Button_rot_runter.png);
+  background-size:contain;
+  background-repeat: no-repeat;
+  height: 25px;
+  width: 25px;
+}
+
+
+.wp-block-hotblocks-accordion .accordion-heading.active_tab::after {
+  content: ' ';
+  background-image: url(https://protembis.com/wp-content/uploads/2020/12/Button_blau_hoch.png);
+  background-size:contain;
+  background-repeat: no-repeat;
+  height: 25px;
+  width: 25px;
+}
+
+.wp-block-hotblocks-accordion .accordion-heading.active_tab:hover::after {
+  content: ' ';
+  background-image: url(https://protembis.com/wp-content/uploads/2020/12/Button_rot_rauf.png);
+  background-size:contain;
+  background-repeat: no-repeat;
+  height: 25px;
+  width: 25px;
+}
+
+/* Einstellungen für iPad mini */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 1)  { 
+     /*
+        .team_foto {
+		Höhe der Fotos festlegen 
+		height: 408px; 
+  }
+*/
+}
+
+
+/* ----------------------------- */
+/* Schriftgröße bei Buttons      */
+/* ----------------------------- */
+
+@media only screen 
+	and (max-device-width : 470px) {
+.wp-block-buttons .wp-block-button {
+    font-size: 0.6em;
+	  justify-content: center;
+}
+}
+
+
+@media only screen 
+and (min-device-width : 471px) 
+	and (max-device-width : 560px) {
+.wp-block-buttons .wp-block-button {
+    font-size: 0.8em;
+	  justify-content: center;
+}
+}
+
+/* ----------------------------- */
+/* Trennlinie auf Kontaktseite   */
+/* ----------------------------- */
+@media only screen 
+	and (min-device-width : 600px) {
+hr.wp-block-separator {
+    display: none;
+}
+}
+
+
+/* ----------------------------- */
+/* Schriftgröße und Abstand      */
+/* verkleinern                    */
+/* ----------------------------- */
+@media only screen 
+	and (max-device-width : 700px) {
+	.has-text-align-center {
+    line-height: 1.2;
+    font-size: 0.8em;
+}
+		img.header-image.is-logo-image {
+    width: 200px;
+}
+}
+
+/* ----------------------------- */
+/* Icons auf Kontaktseite        */
+/* mehr nach links               */
+/* ----------------------------- */
+img.wp-image-1417,
+img.wp-image-1418,
+img.wp-image-1419,
+img.wp-image-1420
+{
+    margin: -5px;
+}
+
+
+
+
+/* ----------------------------- */
+/* Abstand Überschrift nach oben
+ *  auf der Teamseite */
+/* ----------------------------- */
+h4.team {
+	margin-top: 30px;
+}
+
+
+/* Bildbreite 2600px */
+@media only screen 
+		and (min-device-width : 2000px) {.grid-container {
+			max-width: 2600px!important;
+	}
+}
+
+/* TESTS */
+
+/* ----------------------------- */
+/* Abstandhalter soll nicht      */ 
+/* gezeigt werden und dient      */
+/* lediglich als Anker           */
+/* ----------------------------- 
+.versteckt_oben {
+	display: none;
+}
+
+/* bringt nichts 
+.team_foto {
+	max-height: 480px;
+}
+*/
+
+/*
+div#wpfp_cd1f4865aa942a9dc14ab73392d11569 {
+    width: 180%;
+    margin-left: -40%;
+}
+*/
+
+
+/* ----------------------------- */
+/* Videos auf der Hauptseite     */
+/* mehr rauszoomen               */
+/* ----------------------------- 
+@media only screen 
+	and (max-device-width : 600px) {
+.arve-embed, #html .arve-embed {
+    margin-bottom: -10px;
+    width: 950px;
+    margin-left: -150px;
+}
+}
+*/
+
+/* Teamfotos - Höhe auto (Probleme mit iPhone) 
+.wp-image-1769,
+.wp-image-1770,
+.wp-image-1771
+	{
+    height: auto;
+	}
