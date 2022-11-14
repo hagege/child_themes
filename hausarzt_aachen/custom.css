@@ -1,6 +1,7 @@
 /* Farben 
  * 
 blau: #0263a4, (2, 99, 164, 1)
+orange: #D57F04;
 petrol: #278484, (39,132,132)
 hellgrün: #BDE7CF, (189,231,207)
 gelb: #F0D548, (240,213,72)
@@ -19,6 +20,11 @@ dunkelgrau: #818181, (129,129,129)
 	--dunkelgrau-color: rgba(129, 129, 129, 1);
 }
 
+
+/* oranger Rand unter blauem Header */
+.gb-container.gb-container-79bb67ca.alignwide {
+    border-bottom: 6px solid #D57F04;
+}
 
 
 /* mobile menü */
@@ -63,7 +69,8 @@ img.gb-image-12188bef {
         position: absolute;
         right: 0;
         left: 50%;
-        bottom: -5px;
+        /* bottom: -5px; */
+        bottom: 0px;		
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
         color: #ffffff;
