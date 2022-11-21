@@ -288,7 +288,7 @@ function filter_the_content_in_the_main_loop( $content ) {
 
           // $abgesagte_events ='<div class="ackids_container"><div class="mitglied"><a class="button-mitglied" href="http://aachener-senioren.de/_test_/corona-virus-staedteregion-aachen/">Infos zu Corona</a></div><p class="ackids-info-box">' . $info_text . ' </p></div>';
           // return $ackids_button . $content . $ackids_button;
-          return $ackids_button . $content;
+          return $content . $ackids_button;
         }
     }
 

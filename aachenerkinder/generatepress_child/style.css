@@ -152,6 +152,8 @@ div.ackids_container {
   text-align: left;
   border-bottom: 0.4rem solid #F9B81E;
   margin-bottom: 1.5rem;
+  border-top: 0.4rem solid #F9B81E;
+  margin-top: 1.5rem;
 }
  
   /* Container für Mitgliedsbutton und Infotext - hgg, 6.10.2019 */
