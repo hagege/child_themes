@@ -20,8 +20,6 @@ if ( empty( $map ) ) {
 <div class="tribe-events-venue-map"> 
 	<?php
 	// Zeigt Openstreetmap:
-  // zur Vermeidung von Fehlern auf der Website einfach die ID auf einen beliebigen Wert setzen
-  $venue_id = 2;
   $address = tribe_get_address( $venue_id ).", ".tribe_get_zip( $venue_id )." ".tribe_get_city( $venue_id ).", ".tribe_get_country( $venue_id );
   $shortcode = '[leaflet-map zoomcontrol address="'.$address.'" zoom="14"]';
   /* $shortcode = '[leaflet-map zoomcontrol address="'.$address.'" zoom="16? fit_markers="1?]'; */
