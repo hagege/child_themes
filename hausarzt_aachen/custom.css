@@ -1,36 +1,45 @@
 /* Farben 
  * 
-blau: #0263a4, (2, 99, 164, 1)
+blau: #006FC8, (0,111,200, 1)
+Hellblau: #4DA4EB, (77, 164, 235, 1)
+weiß:  #FFFFFF, (255,255,255,1)
 orange: #D57F04;
 petrol: #278484, (39,132,132)
 hellgrün: #BDE7CF, (189,231,207)
 gelb: #F0D548, (240,213,72)
 hellgrau: #EDEDED, (237,237,237)
+grau: #424242, (66,66,66)
 dunkelgrau: #818181, (129,129,129)
 */
 
 
 /* Variablen */
 :root {
-    --blau: rgb(2, 99, 164, 1);
-    --petrol-color: rgba(39, 132, 132, 1);
-    --hellgruen-color: rgba(189, 231, 207, 1);
-	--gelb-color: rgba(240, 213, 72, 1);
-	--hellgrau-color: rgba(237, 237, 237, 1);
-	--dunkelgrau-color: rgba(129, 129, 129, 1);
+	--blau: rgb(0, 111, 200);
+	--blau-transpa: rgba(0, 111, 200, 0.7);
+	--hellblau: rgb(77, 164, 235);
+	--weiss: rgb(255, 255, 255);
+	--grau: rgb(66, 66, 66);
+	--petrol-color: rgb(39, 132, 132);
+	--hellgruen-color: rgb(189, 231, 207);
+	--gelb-color: rgb(240, 213, 72);
+	--hellgrau-color: rgb(237, 237, 237);
+	--dunkelgrau-color: rgb(129, 129, 129);
+	--orange: rgb(213, 127, 4);
 }
 
 
 /* oranger Rand unter blauem Header */
 .gb-container.gb-container-79bb67ca.alignwide {
-    border-bottom: 6px solid #D57F04;
+    border-bottom: 6px solid var(--orange);
+		background-color: var(--blau);
 }
 
 
 /* mobile menü */
 @media (max-width: 992px) {
 	.inside-navigation.grid-container.grid-parent {
-			background-color: rgba(2, 99, 164,0.7);
+			background-color: var(--blau-transpa);
 	}
 }
 
@@ -73,7 +82,7 @@ img.gb-image-12188bef {
         bottom: 0px;		
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
-        color: #ffffff;
+        color: var(--weiss);
         display: block;
         width: 0;
         height: 5px;
@@ -89,8 +98,8 @@ img.gb-image-12188bef {
 	.main-navigation .menu > .menu-item.current-menu-item > a::after,
     .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
     .main-navigation .menu > .menu-item > a:active::after {
-        width: 100%;
-		color: #ffffff;
+      width: 100%;
+			color: var(--weiss);
     }
 
 
@@ -103,16 +112,16 @@ img.gb-image-12188bef {
     /* Hover bei Untermenüpunkten */
     .main-navigation .main-nav ul ul li[class*="current-menu-"] > a:hover, .main-navigation .main-nav ul ul li[class*="current-menu-"].sfHover > a {
         color: #E1E7F0;
-        background-color: #ffffff;
+        background-color: var(--weiss);
     }
     /* Active bei Untermenüpunkten */
     .main-navigation .main-nav ul ul li[class*="current-menu-"] > a:active {
         color: #E1E7F0;
-        background-color: #ffffff;
+        background-color: var(--weiss);
     }
     .main-navigation .main-nav ul ul li[class*="current-menu-"] > a:focus {
         color: #E1E7F0;
-        background-color: #ffffff;
+        background-color: var(--weiss);
     }
 }
 
