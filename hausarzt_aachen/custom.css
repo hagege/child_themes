@@ -29,11 +29,21 @@ dunkelgrau: #818181, (129,129,129)
 }
 
 
-/* oranger Rand unter blauem Header */
+/* hellblauer Rand unter blauem Header */
 .gb-container.gb-container-79bb67ca.alignwide {
-    border-bottom: 6px solid var(--orange);
+    border-bottom: 6px solid var(--hellblau);
 		background-color: var(--blau);
 }
+
+/* Header-Höhe auf allen Seiten und Beiträgen außer der Startseite */
+.page-id-4816 .gb-container.gb-container-79bb67ca.alignwide {
+    min-height: 200px;
+}
+
+.gb-container.gb-container-79bb67ca.alignwide {
+    min-height: 140px;
+}
+
 
 
 /* mobile menü */
