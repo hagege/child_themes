@@ -28,6 +28,10 @@ dunkelgrau: #818181, (129,129,129)
 	--orange: rgb(213, 127, 4);
 }
 
+/* h2 */
+h2 {
+    font-size: clamp(1rem, 0.795rem + 1.02vw, 1.563rem);
+}
 
 /* hellblauer Rand unter blauem Header */
 .gb-container.gb-container-79bb67ca.alignwide {
@@ -133,6 +137,22 @@ img.gb-image-12188bef {
         color: #E1E7F0;
         background-color: var(--weiss);
     }
+}
+
+
+/* Links im Footer */
+.gb-container-79bb67ca a,
+.site-info a{
+		text-decoration: underline;
+    text-decoration-color: white;
+    text-decoration-style: dotted;
+}
+
+.gb-container-79bb67ca a:hover,
+.site-info a:hover{
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-decoration-style: solid;
 }
 
 
