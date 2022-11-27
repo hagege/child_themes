@@ -16,7 +16,7 @@ dunkelgrau: #818181, (129,129,129)
 /* Variablen */
 :root {
 	--blau: rgb(0, 111, 200);
-	--blau-transpa: rgba(0, 111, 200, 0.7);
+	--blau-transpa: rgba(0, 111, 200, 0.9);
 	--hellblau: rgb(77, 164, 235);
 	--weiss: rgb(255, 255, 255);
 	--grau: rgb(66, 66, 66);
@@ -48,13 +48,26 @@ h2 {
     min-height: 140px;
 }
 
-
+/* Höhe mobiles Menü */
+@media (max-width: 767px) {
+.gb-container-79bb67ca > .gb-inside-container {
+    padding: 20px 20px 50px;
+	}
+.gb-container.gb-container-79bb67ca.alignwide {
+    min-height: 40px;
+	}
+}
 
 /* mobile menü */
 @media (max-width: 992px) {
 	.inside-navigation.grid-container.grid-parent {
 			background-color: var(--blau-transpa);
 	}
+}
+
+/* sticky Menue mit Opacity */
+.sticky-enabled .main-navigation.is_stuck {
+    background-color: var(--blau-transpa);
 }
 
 
@@ -99,7 +112,7 @@ img.gb-image-12188bef {
         color: var(--weiss);
         display: block;
         width: 0;
-        height: 5px;
+        height: 3px;
     
         background-color: currentColor;
         transition: 0.3s width ease;
@@ -142,14 +155,16 @@ img.gb-image-12188bef {
 
 /* Links im Footer */
 .gb-container-79bb67ca a,
-.site-info a{
+.site-info a,
+.inside-right-sidebar a{
 		text-decoration: underline;
     text-decoration-style: dotted;
 		text-underline-offset: 0.3em;
 }
 
 .gb-container-79bb67ca a:hover,
-.site-info a:hover{
+.site-info a:hover,
+.inside-right-sidebar a:hover{
     text-decoration: underline;
     text-decoration-style: solid;
 }
