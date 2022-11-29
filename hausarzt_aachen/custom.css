@@ -3,10 +3,6 @@
 blau: #006FC8, (0,111,200, 1)
 Hellblau: #4DA4EB, (77, 164, 235, 1)
 weiß:  #FFFFFF, (255,255,255,1)
-orange: #D57F04;
-petrol: #278484, (39,132,132)
-hellgrün: #BDE7CF, (189,231,207)
-gelb: #F0D548, (240,213,72)
 hellgrau: #EDEDED, (237,237,237)
 grau: #424242, (66,66,66)
 dunkelgrau: #818181, (129,129,129)
@@ -156,7 +152,8 @@ img.gb-image-12188bef {
 /* Links im Footer */
 .gb-container-79bb67ca a,
 .site-info a,
-.inside-right-sidebar a{
+.inside-right-sidebar a,
+.inside-article a{
 		text-decoration: underline;
     text-decoration-style: dotted;
 		text-underline-offset: 0.3em;
@@ -164,7 +161,8 @@ img.gb-image-12188bef {
 
 .gb-container-79bb67ca a:hover,
 .site-info a:hover,
-.inside-right-sidebar a:hover{
+.inside-right-sidebar a:hover,
+.inside-article a:hover{
     text-decoration: underline;
     text-decoration-style: solid;
 }
