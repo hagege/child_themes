@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Category Vorlagen Haurand
- * @version 0.1
+ * @version 0.2
  */
 /*
 Plugin Name: Category Vorlagen Haurand
 Plugin URI: http://haurand.com
 Description: Create a new Category "Haurand" as "Vorlagen Haurand" for Block Patterns with my own custom Block patterns
 Author: Hans-Gerd Gerhards
-Version: 0.1
+Version: 0.2
 Author URI: http://haurand.com
 */
 
@@ -31,8 +31,6 @@ Author URI: http://haurand.com
     unregister_block_pattern_category( 'text');
     unregister_block_pattern_category( 'columns');
     unregister_block_pattern_category( 'gallery');
-    unregister_block_pattern_category( 'query');
-	unregister_block_pattern_category( 'general');
   }
   add_action( 'init', 'prefix_unregister_category' );
  
@@ -43,7 +41,7 @@ function haurand_register_block_categories() {
 if ( class_exists( 'WP_Block_Patterns_Registry' ) ) {
 	register_block_pattern_category(
 	 'Haurand',
-	 array( 'label' => _x( 'Vorlagen Haurand', 'Block pattern category', 'Haurand' ) )
+	 array( 'label' => _x( 'Vorlagen Haurand', 'Block pattern category' ) )
     );
   }
 }

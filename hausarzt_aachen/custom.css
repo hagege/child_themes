@@ -24,6 +24,11 @@ dunkelgrau: #818181, (129,129,129)
 	--orange: rgb(213, 127, 4);
 }
 
+/* Breite Spalte rechts bei Tabelle */
+td.has-text-align-right {
+    width: 20%;
+}
+
 /* h2 */
 h2 {
     font-size: clamp(1rem, 0.795rem + 1.02vw, 1.563rem);
