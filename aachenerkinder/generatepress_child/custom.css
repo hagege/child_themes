@@ -27,6 +27,26 @@ CMYK 67-19-35-35
 }
 */
 
+/* Block Pattern Neuigkeiten */
+h2.neuigkeiten.has-background,
+h3.neuigkeiten.has-background,
+p.neuigkeiten.has-background{
+		background-color: #fbf9eb;
+		padding-left: 1rem;
+    margin-bottom: 0px;
+	  padding-bottom: 0px;
+}
+
+h2.neuigkeiten.has-background {
+	border-bottom: 1rem solid;
+	border-color: #EF7F1A;
+}
+
+
+div.is-layout-constrained.wp-block-group.neuigkeiten div.wp-block-group__inner-container {
+    padding: 20px 0px 40px 0px;
+}
+
 /* für Spende auf der Hauptseite */
 div.spende {
 	padding: 0px 40px 0px 40px;

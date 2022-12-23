@@ -74,7 +74,7 @@ register_block_pattern(
 
 		<!-- wp:generateblocks/button-container {"uniqueId":"d6486110","isDynamic":true,"blockVersion":2} -->
 		<!-- wp:generateblocks/button {"uniqueId":"f21bdbed","hasUrl":true,"backgroundColor":"var(\u002d\u002dglobal-color-17)","backgroundColorHover":"var(\u002d\u002dglobal-color-17)","textColor":"#ffffff","textColorHover":"#ffffff","borderColor":"","borderColorHover":"","paddingTop":"15","paddingRight":"20","paddingBottom":"15","paddingLeft":"20","blockVersion":2} -->
-		<a class="gb-button gb-button-f21bdbed gb-button-text" href="http://www2.hausaerztin-aachen.de/hausarztmedizin-in-aachen/">Weiterlesen</a>
+		<a class="gb-button gb-button-f21bdbed gb-button-text" href="https://www.hausaerztin-aachen.de/hausarztmedizin-in-aachen/">Weiterlesen</a>
 		<!-- /wp:generateblocks/button -->
 		<!-- /wp:generateblocks/button-container -->
 		<!-- /wp:generateblocks/container -->
@@ -106,7 +106,7 @@ register_block_pattern(
 		<!-- /wp:generateblocks/headline -->
 
 		<!-- wp:image {"id":4781,"sizeSlug":"full","linkDestination":"media"} -->
-		<figure class="wp-block-image size-full"><a href="http://www2.hausaerztin-aachen.de/wp-content/uploads/2022/11/Foto_1000_780.jpg"><img src="http://www2.hausaerztin-aachen.de/wp-content/uploads/2022/11/Foto_1000_780.jpg" alt="" class="wp-image-4781"/></a></figure>
+		<figure class="wp-block-image size-full"><a href="https://www.hausaerztin-aachen.de/wp-content/uploads/2022/11/Foto_1000_780.jpg"><img src="https://www.hausaerztin-aachen.de/wp-content/uploads/2022/11/Foto_1000_780.jpg" alt="" class="wp-image-4781"/></a></figure>
 		<!-- /wp:image -->
 		<!-- /wp:generateblocks/container -->
 
@@ -119,7 +119,7 @@ register_block_pattern(
 
 		<!-- wp:generateblocks/button-container {"uniqueId":"4c0ec9ef","isDynamic":true,"blockVersion":2} -->
 		<!-- wp:generateblocks/button {"uniqueId":"0ef0dcb2","hasUrl":true,"backgroundColor":"var(\u002d\u002dglobal-color-17)","backgroundColorHover":"var(\u002d\u002dglobal-color-17)","textColor":"#ffffff","textColorHover":"#ffffff","borderColor":"","borderColorHover":"","paddingTop":"15","paddingRight":"20","paddingBottom":"15","paddingLeft":"20","blockVersion":2} -->
-		<a class="gb-button gb-button-0ef0dcb2 gb-button-text" href="http://www2.hausaerztin-aachen.de/traditionelle-chinesische-medizin/">Weiterlesen</a>
+		<a class="gb-button gb-button-0ef0dcb2 gb-button-text" href="https://www.hausaerztin-aachen.de/traditionelle-chinesische-medizin/">Weiterlesen</a>
 		<!-- /wp:generateblocks/button -->
 		<!-- /wp:generateblocks/button-container -->
 		<!-- /wp:generateblocks/container -->
@@ -181,10 +181,10 @@ register_block_pattern(
     'categories'  => array('Haurand'),
     'content'     =>
        '<!-- wp:generateblocks/button-container {"uniqueId":"4c0ec9ef","isDynamic":true,"blockVersion":2} -->
-		<!-- wp:generateblocks/button {"uniqueId":"0ef0dcb2","hasUrl":true,"backgroundColor":"var(\u002d\u002dglobal-color-15)","backgroundColorHover":"var(\u002d\u002dglobal-color-17)","textColor":"#ffffff","textColorHover":"#ffffff","borderColor":"","borderColorHover":"","paddingTop":"15","paddingRight":"20","paddingBottom":"15","paddingLeft":"20","blockVersion":2} -->
-		<a class="gb-button gb-button-0ef0dcb2 gb-button-text" href="http://www2.hausaerztin-aachen.de/traditionelle-chinesische-medizin/">Weiterlesen</a>
-		<!-- /wp:generateblocks/button -->
-		<!-- /wp:generateblocks/button-container -->',
+	   <!-- wp:generateblocks/button {"uniqueId":"0ef0dcb2","hasUrl":true,"backgroundColor":"var(\u002d\u002dglobal-color-15)","backgroundColorHover":"var(\u002d\u002dglobal-color-17)","textColor":"#ffffff","textColorHover":"#ffffff","borderColor":"","borderColorHover":"","paddingTop":"15","paddingRight":"20","paddingBottom":"15","paddingLeft":"20","blockVersion":2} -->
+	   <a class="gb-button gb-button-0ef0dcb2 gb-button-text" href="http://www.hausaerztin-aachen.de/wp-content/uploads/2022/11/Aufklaerungsbogen_de.pdf">Hier klicken</a>
+	   <!-- /wp:generateblocks/button -->
+	   <!-- /wp:generateblocks/button-container -->',
         )
 );
 
