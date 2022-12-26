@@ -1,19 +1,19 @@
 <?php 
-/* style.css des Parent Themes einfügen */
+/* style.css des Parent Themes einfï¿½gen */
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 function my_theme_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 }
 
 
-/* Fügt nach dem Auszug (Excerpt) einen Read more-Link " … weiterlesen" ein  */
+/* FÃ¼gt nach dem Auszug (Excerpt) einen Read more-Link "  weiterlesen" ein  */
 function new_excerpt_more($more) {
    global $post;
       return '<div class="read-more-button-wrap"><a class="moretag" href="'. get_permalink($post->ID) . '"> ... weiterlesen</a></div>'; 
  }
  add_filter('excerpt_more', 'new_excerpt_more');
  
-/* Fügt nach dem manuellen Auszug (Excerpt) einen Read more-Link " … weiterlesen" ein  */
+/* FÃ¼gt nach dem manuellen Auszug (Excerpt) einen Read more-Link "  weiterlesen" ein  */
 function manual_excerpt_more( $excerpt ) {
  $excerpt_more = '';
  if( has_excerpt() ) {
@@ -81,4 +81,5 @@ function kb_wartungsmodus() {
 }} 
 
 add_action('get_header', 'kb_wartungsmodus');
+*/
 ?>
