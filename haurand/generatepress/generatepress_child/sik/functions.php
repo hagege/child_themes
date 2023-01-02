@@ -640,6 +640,22 @@ register_block_pattern(
   );
 
 
+/* ------------------------------ */
+/* unsichtbarer Absatz         */
+/* ------------------------------ */
+register_block_pattern(
+  'absatz_unsichtbar',
+    array(
+    'title' => __( 'Unsichtbarer Absatz', 'absatz_unsichtbar' ),
+    'description' => _x( 'Unsichtbarer Absatz', 'Unsichtbarer Absatz', 'absatz_unsichtbar' ),
+    'categories'  => array('Haurand'),
+    'content'     =>
+      '<!-- wp:paragraph {"style":{"color":{"text":"#a2fa078c"}},"className":"unsichtbar"} -->
+		<p class="unsichtbar has-text-color" style="color:#a2fa078c">Beispiel: http://localhost/fse_testing/spaltenblock-mit-bildern/ auf laptop bzw. https://test5.haurand.com/spalten-in-gruppen-mit-bildern-und-text/</p>
+		<!-- /wp:paragraph -->',
+        )
+  );
+
 /*----------------------------------------------------------------*/
 /* Ende: Block Patterns von haurand.com 
 /* Datum: 14.01.2021
