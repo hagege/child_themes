@@ -736,4 +736,35 @@ add_action( 'admin_menu', 'be_reusable_blocks_admin_menu' );
 /* Ende: Menüpunkt zu wiederverwendbaren Blöcken
 /*----------------------------------------------------------------*/
 
+/*----------------------------------------------------------------*/
+/* Start: Anzeige image in der Beitragsliste
+/* Datum: 25.12.2018
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+
+add_filter('manage_posts_columns', 'add_img_column');
+add_filter('manage_posts_custom_column', 'manage_img_column', 10, 2);
+
+function add_img_column($columns) {
+  // Spalte mit featured image am Ende:
+  $columns['img'] = 'Featured Image';
+  // Spalte mit featured image ale 1. Spalte:
+  // $columns = array_slice($columns, 0, 1, true) + array("img" => "Beitragsbild") + array_slice($columns, 1, count($columns) - 1, true);
+  return $columns;
+}
+
+function manage_img_column($column_name, $post_id) {
+ if( $column_name == 'img' ) {
+  echo get_the_post_thumbnail($post_id, 'thumbnail');
+ }
+ return $column_name;
+}
+
+/*----------------------------------------------------------------*/
+/* Ende: Anzeige image in der Beitragsliste
+/* Datum: 25.12.2018
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+
+
 ?>
