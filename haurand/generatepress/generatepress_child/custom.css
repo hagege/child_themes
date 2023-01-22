@@ -4,6 +4,7 @@ weiß: #FFFFFF - RGB: (255, 255, 255)
 dunkelgrau: #3C4346 - RGB: (60, 67, 70)
 rot: #B70000 - RGB: (183, 0, 0)
 mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
+hellblau: #f7f8f9
 */
 
 /* TEST */
@@ -35,7 +36,8 @@ div.html_svg {
 .html_svg .wp-block-group__inner-container,
 .svg_container .wp-block-group__inner-container{
     padding: 0px;
-		margin: 0px;
+	margin: 0px;
+	background-color: #f7f8f9;
 }
 
 	

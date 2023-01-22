@@ -824,7 +824,7 @@ h2.entry-title {
 /* Bilder in Beiträgen */
 /* ------------------------------ */
 div.bild_in_mitte {
-  background-color: #D4DaDB;
+  background-color: #f7f8f9;
   padding: 2rem;
 }
   
@@ -833,7 +833,23 @@ div.bild_in_mitte {
   margin-top: 1em;
   margin-bottom: 0px;
   padding-bottom: 0px!important;
+  background-color: #f7f8f9!important;	
 }
+
+.generate-columns-container:not(.masonry-container) {
+  background-color: #f7f8f9;
+  padding: calc(2px + 0.5rem);
+}
+
+
+.generate-columns-container .page-header, .generate-columns-container .paging-navigation {
+  background-color: #f7f8f9;
+}
+
+.generate-columns-container h1.page-title{
+margin-top: 3rem;
+}
+
 
 /* damit nur 1000px maximal genutzt werden - entsprechend der maximalen Breite für den Text */
 @media only screen and (min-width: 1000px) {
@@ -845,7 +861,7 @@ div.bild_in_mitte {
 
 .container_aussen {
   width: 100%;	
-  background-color: #d4dadb;
+  background-color: #f7f8f9;
 }
 
 
@@ -959,12 +975,12 @@ a.read-more.button:hover {
 /* Schatten bei Beitragsübersicht unter Blog und auf der Hauptseite */
 .wp-block-latest-posts.is-grid li,
 .generate-columns .inside-article{
-box-shadow: 10px 10px 10px #a9b2b5;
+box-shadow: 5px 5px 15px #D4DaDB;
 }
 
 .wp-block-latest-posts.is-grid li:hover,
 .generate-columns .inside-article:hover{
-box-shadow: 15px 15px 15px #a9b2b5;
+box-shadow: 10px 10px 15px #D4DaDB;
 -webkit-transform: scale(1.005);
 -moz-transform: scale(1.005);
 -ms-transform: scale(1.005);
