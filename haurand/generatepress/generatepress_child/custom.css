@@ -36,8 +36,8 @@ div.html_svg {
 .html_svg .wp-block-group__inner-container,
 .svg_container .wp-block-group__inner-container{
     padding: 0px;
-	margin: 0px;
-	background-color: #f7f8f9;
+		margin: 0px;
+		background-color: #f7f8f9;
 }
 
 	
@@ -74,8 +74,7 @@ div.abfrage_tags li {
 
 /* Bei Suche Container mit max. 1400 px */
 /* damit die Breite der Archive besser dargestellt wird, z. B. bei Schlagwörtern */
-body.search > .grid-container,
-body.archive > .grid-container
+body.search > .grid-container
 {
     max-width: 1500px;
 }

@@ -675,10 +675,12 @@ a.corona-button-beitrag {
 
 
 /* ------------------------------ */
-/* Breite für Blog Archive */
+/* Breite für Blog Archive        */
 /* ------------------------------ */
-body.blog .site.grid-container {
-  max-width: 1800px;
+body.blog .site.grid-container,
+body.archive > .grid-container {
+  padding-top: 2rem;
+  max-width: 1920px;
 }
 
 .wp-block-latest-posts__post-excerpt {
