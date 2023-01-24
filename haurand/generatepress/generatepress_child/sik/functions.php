@@ -767,4 +767,25 @@ function manage_img_column($column_name, $post_id) {
 /*----------------------------------------------------------------*/
 
 
+/*----------------------------------------------------------------*/
+/* Start: Shortcode für Kategorienliste - Aufruf mit [haurand_catelist]
+/* Datum: 21.1.2023
+/* Autor: hgg
+/*----------------------------------------------------------------*/
+function createGridCategories() {
+  $list = wp_list_categories( array(
+      'taxonomy'   => 'category',
+      'hide_empty' => 1,
+      'echo'       => 0,
+      'title_li'   => '',
+      'show_count' => 1,
+      'exclude'    => array( 1486 ),
+      // 1486: Kategorie: Keine Anzeige
+      // other args here
+) );
+
+  return "<h3>Beitrags-Kategorien</h3><ul>$list</ul>";
+}
+add_shortcode('haurand_catelist', 'createGridCategories');
+
 ?>
