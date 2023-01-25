@@ -280,26 +280,47 @@ main#site-content {
 */
 
 
-/* ------------------------------ */
+/* oben und unten kein Rand */
+.wp-site-blocks {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+/* ----------------------- */
 /* Text in Spalten überlappend */
-/* ------------------------------ */
+/* ----------------------- */
+
+.wp-block-image img{
+    filter: none;
+}
+
 @media (min-width: 782px) {
-	.wp-block-column.spalte_links_ueberlappend {
-		  margin-left: -15rem!important;
-	}
-	.wp-block-column.spalte_rechts_ueberlappend {
-		  margin-right: -15rem!important;
-			z-index:0;
-	}
+.wp-block-column.spalte_links_ueberlappend {
+  margin-left: -15rem!important;
+}
+.wp-block-column.spalte_rechts_ueberlappend {
+margin-right: -15rem!important;
+z-index:0;
+}
 .wp-block-column.spalte_links_ueberlappend,
 .wp-block-column.spalte_rechts_ueberlappend
-	{
-		margin-top: 15vh;
-		/* margin-bottom: 15vh; */
-		
-    padding: 10vh;
+{
+margin-top: 15vh;
+/* margin-bottom: 15vh; */
+padding: 10vh;
 }
 }
+
+@media (max-width: 781px) {
+.wp-block-column.spalte_links_ueberlappend.has-background.is-layout-flow,
+.wp-block-column.spalte_rechts_ueberlappend.has-background.is-layout-flow {
+    margin-top: -25vh;
+}
+.gerade {
+    flex-direction: column-reverse;
+}
+}
+
 
 
 
