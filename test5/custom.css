@@ -12,13 +12,83 @@
 	--column--width--4: 22%;	
 }
 
+/*
+@media screen and (min-width: 600px) {
+.wp-block-group.alignfull.has-foreground-color.has-background-background-color.has-text-color.has-background.is-layout-flow {
+    display: none;
+}
+}
+*/
+
+/* von rechts reinfliegen - buggy 
+.wp-block-columns.is-layout-flex.wp-container-9>div {
+    opacity: 1;
+    -webkit-animation: element-from-right .55s 1 ease;
+    animation: element-from-right .55s 1 ease;
+}
+*/
+
+.wp-block-columns.alignfull.is-not-stacked-on-mobile.fly_right.is-layout-flex.wp-container-10>div {
+    opacity: 1;
+    -webkit-animation: element-from-right .55s 1 ease;
+    animation: element-from-right .55s 1 ease;
+}
+
+figure.wp-block-image.size-large.has-custom-border.bild_ueberlappend {
+    transform: translateX(-30%);
+}
+
+/* Größe Hamburger */
+.wp-block-navigation__responsive-container-open svg {
+    height: 48px;
+    width: 48px;
+}
+
+/* The Events Calendar */
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
+    min-height: 700px;
+    padding-bottom: var(--tec-spacer-14);
+    padding-top: var(--tec-spacer-13);
+    background-color: white;
+    margin-top: 200px;
+    /* z-index: -1; */
+}
+
+
+.tribe-common-l-container.tribe-events-l-container {
+    background-color: white;
+}
+
+
+/* für Update und Achtung */
+@media (max-width: 781px)  {
+div.html_svg {
+    margin-left: 43%;
+    margin-right: 43%;
+}
+}
+	
+p.has-text-align-center.achtung_update {
+    margin-top: 2px;
+}
+
+svg#Layer_1, svg#Capa_1
+{
+    fill: #B70000;
+}
+
+
 /* Text auf Sorrent-Bild - Startseite */
 .page-id-36 div.wp-block-cover__inner-container {
     background-color: rgba(0, 0, 0, 0.3);
     padding: 2rem;
 }
 
-
+/*leicht gedrehtes Bild mit Rahmen */
+figure.wp-block-image.size-large.bild_rotate {
+    transform: rotate(5deg);
+		box-shadow:0 20px 40px rgba(0,0,0,.2);
+}
 
 /* Überschrift nicht zeigen */
 h2.alignwide.wp-block-post-title {
@@ -42,20 +112,22 @@ h2.alignwide.wp-block-post-title {
 }
 
 /* sticky header */ 
-
-main#wp--skip-link--target {
-		/* entspricht der Höhe des Menüs */
+/* entspricht der Höhe des Menüs */
+/* heigth - nicht schön, aber sonst funktionieren die Links nicht */
+/*main#wp--skip-link--target {
     margin-top: 150px;
 }
+
 
 header.wp-block-template-part {
     position: fixed;
     inset: 0;
     padding: 0px 30px;
-	/* nicht schön, aber sonst funktionieren die Links nicht */
 	  height: 10px!important;
 		z-index: 11;
 }
+*/
+
 
 .wp-duotone-61fab3ac5518f.wp-block-cover.alignfull.has-parallax {
     max-height: 80px;
