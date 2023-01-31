@@ -19,29 +19,27 @@
   
   
   /* Kachel rot */
-  p.has-text-align-center.kachel_header_rot.has-base-3-color.has-text-color.has-background.has-x-large-font-size,
-  p.has-text-align-center.kachel_header_rot.has-base-3-color.has-text-color.has-background.has-small-font-size{
+  .kachel_header_rot{
       padding: 10px;
       margin-bottom: 0px;
       border-radius: 20px 20px 0px 0px;
   }
   
-  figure.wp-block-image.size-full.kachel_foto_rot img,
-  figure.wp-block-image.size-large.kachel_foto_rot img{
+  .kachel_foto_rot img{
       border-radius: 0px 0px 20px 20px;
   }
   
   /* bei großer Kachel */
-  .is-content-justification-center.is-layout-flex.wp-container-1.wp-block-buttons.kachel_button .wp-block-button{
+  .kachel_button .wp-block-button{
       margin-top: -8rem;
   }
   
   /* bei kleiner Kachel */
-  .is-layout-constrained.wp-block-group.kachel_klein .wp-block-button.has-custom-font-size.has-small-font-size {
+  .kachel_klein .wp-block-button.has-custom-font-size.has-small-font-size {
       margin-top: -6rem;
   }
   
-  .is-layout-constrained.wp-block-group.kachel_klein .wp-block-group__inner-container {
+  .kachel_klein .wp-block-group__inner-container {
       padding: 10px;
   }
   
