@@ -47,10 +47,10 @@
   
   
   /* Kachel mit Bild und Container mit opacity unten */
-  .gb-container.gb-container-62fb28b3.kachel_blog .gb-inside-container {
+  .kachel_blog .gb-inside-container {
       background-color: rgb(255 255 255 / 50%);
   }
   
-  .gb-container.gb-container-62fb28b3.kachel_blog .gb-inside-container p {
+  .kachel_blog .gb-inside-container p {
      margin-bottom:0.5rem;
   }
