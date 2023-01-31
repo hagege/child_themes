@@ -1,27 +1,56 @@
+/* Vorschlag: Umstellung auf Mobil bei 870px */
 
-/* Runde Ecken links beim Slider */
-.wp-block-eedee-block-gutenslider .swiper {
-    border-radius: 20px 0px 0px 20px;
-}
-
-
-/* Kachel rot */
-p.has-text-align-center.kachel_header_rot.has-base-3-color.has-text-color.has-background.has-x-large-font-size,
-p.has-text-align-center.kachel_header_rot.has-base-3-color.has-text-color.has-background.has-small-font-size{
-    padding: 10px;
-    margin-bottom: 0px;
-    border-radius: 20px 20px 0px 0px;
-}
-
-figure.wp-block-image.size-full.kachel_foto_rot img,
-figure.wp-block-image.size-large.kachel_foto_rot img{
-	border-radius: 0px 0px 20px 20px;
-}
-
-.is-content-justification-center.is-layout-flex.wp-container-1.wp-block-buttons.kachel_button .wp-block-button {
-    margin-top: -8rem;
-}
-
-.is-layout-constrained.wp-block-group.kachel_klein .wp-block-group__inner-container {
-    padding: 10px;
-}
+/* Variablen */
+:root {
+    --mittelgrau-color: rgba(150, 150, 150, 1);
+    --hellblau-color: rgba(227, 235, 241, 1);
+      --mittelgrau-color: rgba(85, 85, 85, 1);
+      --hellgrau-color: rgba(213, 213, 213, 1);
+      --rot-color: rgba(177, 46, 32, 1);			--wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
+      --wp--preset--font-size--cover-paragraph: clamp(2rem, 10vw, 6rem);
+    --wp--preset--font-size--h2: clamp(1.5rem, 2vw, 6rem);
+  
+  }
+  
+  /* Runde Ecken links beim Slider */
+  .wp-block-eedee-block-gutenslider .swiper {
+      border-radius: 20px 0px 0px 20px;
+  }
+  
+  
+  /* Kachel rot */
+  p.has-text-align-center.kachel_header_rot.has-base-3-color.has-text-color.has-background.has-x-large-font-size,
+  p.has-text-align-center.kachel_header_rot.has-base-3-color.has-text-color.has-background.has-small-font-size{
+      padding: 10px;
+      margin-bottom: 0px;
+      border-radius: 20px 20px 0px 0px;
+  }
+  
+  figure.wp-block-image.size-full.kachel_foto_rot img,
+  figure.wp-block-image.size-large.kachel_foto_rot img{
+      border-radius: 0px 0px 20px 20px;
+  }
+  
+  /* bei großer Kachel */
+  .is-content-justification-center.is-layout-flex.wp-container-1.wp-block-buttons.kachel_button .wp-block-button{
+      margin-top: -8rem;
+  }
+  
+  /* bei kleiner Kachel */
+  .is-layout-constrained.wp-block-group.kachel_klein .wp-block-button.has-custom-font-size.has-small-font-size {
+      margin-top: -6rem;
+  }
+  
+  .is-layout-constrained.wp-block-group.kachel_klein .wp-block-group__inner-container {
+      padding: 10px;
+  }
+  
+  
+  /* Kachel mit Bild und Container mit opacity unten */
+  .gb-container.gb-container-62fb28b3.kachel_blog .gb-inside-container {
+      background-color: rgb(255 255 255 / 50%);
+  }
+  
+  .gb-container.gb-container-62fb28b3.kachel_blog .gb-inside-container p {
+     margin-bottom:0.5rem;
+  }
