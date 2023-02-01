@@ -12,7 +12,15 @@
   
   }
   
+  /* TEST */
+  .gb-grid-wrapper > .gb-grid-column-62fb28b3 > .gb-container {
+      justify-content: flex-end;
+      width: clamp(250px, 30vw, 380px);
+      height: clamp(250px, 30vw, 380px)!important;
+      margin-left: clamp(0.8em, 10vw, 1em);
+  }
   
+  /* Ende TEST */
   
   
   /* Runde Ecken links beim Slider */
@@ -49,7 +57,8 @@
   
   /* Kachel mit Bild und Container mit opacity unten */
   /* Kachel immer quadratisch */
-  .kachel_blog_klein {
+  .kachel_blog_klein
+  {
       object-fit: cover;
     width: 265px;
     height: 265px!important;
