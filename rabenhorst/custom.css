@@ -12,6 +12,9 @@
   
   }
   
+  
+  
+  
   /* Runde Ecken links beim Slider */
   .wp-block-eedee-block-gutenslider .swiper {
       border-radius: 20px 0px 0px 20px;
@@ -45,10 +48,33 @@
   
   
   /* Kachel mit Bild und Container mit opacity unten */
-  .kachel_blog .gb-inside-container {
+  /* Kachel immer quadratisch */
+  .kachel_blog_klein {
+      object-fit: cover;
+    width: 265px;
+    height: 265px!important;
+  }
+  
+  
+  .kachel_blog .gb-inside-container
+  {
       background-color: rgb(255 255 255 / 50%);
   }
   
-  .kachel_blog .gb-inside-container p {
+  
+  .kachel_blog .gb-inside-container p,
+  .kachel_blog_featured_image .gb-inside-container p{
      margin-bottom:0.5rem;
   }
+  
+  .gb-container.gb-container-818a9a4b.kachel_blog_featured_image a {
+      text-decoration: none;
+  }
+  
+  /*
+  .kachel_blog_featured_image .gb-inside-container {
+      width: 280px;
+      height: 280px;
+  }
+  */
+  
