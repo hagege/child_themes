@@ -4,24 +4,39 @@
 :root {
     --mittelgrau-color: rgba(150, 150, 150, 1);
     --hellblau-color: rgba(227, 235, 241, 1);
-      --mittelgrau-color: rgba(85, 85, 85, 1);
       --hellgrau-color: rgba(213, 213, 213, 1);
-      --rot-color: rgba(177, 46, 32, 1);			--wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
+      --rot-color: rgba(191, 25, 25, 1);			--wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
       --wp--preset--font-size--cover-paragraph: clamp(2rem, 10vw, 6rem);
     --wp--preset--font-size--h2: clamp(1.5rem, 2vw, 6rem);
   
   }
   
-  /* TEST 
-  .gb-grid-wrapper > .gb-grid-column-62fb28b3 > .gb-container {
-      justify-content: flex-end;
-      width: clamp(250px, 30vw, 380px);
-      height: clamp(250px, 30vw, 380px)!important;
-      margin-left: clamp(0.8em, 10vw, 1em);
+  /* TEST */
+  /* Kategorien bei Einzelbeitrag */
+  .gb-button-wrapper.gb-button-wrapper-6d7bfb40 a{
+      background-color: var(--hellgrau-color);
+      border-radius: 20px;
+          padding: 20px;
+      margin: 0px 10px 0px 0px;
   }
-  */
+  
+  a.my_category_list {
+      background-color: var(--hellgrau-color);
+      border-radius: 20px;
+      padding: 10px;
+      margin: 0px 10px 0px 0px;
+      text-decoration: none;
+      line-height: 3.5;
+      color: black;
+  }
+  
   /* Ende TEST */
   
+  
+  /* Keine Unterstriche in Archive */
+  .gb-inside-container .gb-inside-container a {
+      text-decoration: none;
+  }
   
   /* Runde Ecken links beim Slider */
   .wp-block-eedee-block-gutenslider .swiper {
