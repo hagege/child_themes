@@ -1,36 +1,29 @@
 === Plugin Name ===
 Contributors: @hage
 Donate link: https://haurand.com/
-Tags: tag1, tag2
+Tags: category list
 Requires at least: 4.7
-Tested up to: 5.4
-Stable tag: 4.3
+Tested up to: 6.2
+Stable tag: 1.0
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
+Displays a list of all used category names in your WordPress site
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+A simple plugin that displays a list of all used category names in your WordPress site.
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+Displays a list of all used category names in your WordPress site using the get_categories function.
+Option to customize the display using the get_categories parameters.
+Shortcode [my_category_list] to display the list of all used category names anywhere in your WordPress site.
 
-A few notes about the sections above:
-
-* "Contributors" is a comma separated list of wordpress.org usernames
-* "Tags" is a comma separated list of tags that apply to the plugin
-* "Requires at least" is the lowest version that the plugin will work on
-* "Tested up to" is the highest version that you've *successfully used to test the plugin*
-* Stable tag must indicate the Subversion "tag" of the latest stable version
-
-Note that the `readme.txt` value of stable tag is the one that is the defining one for the plugin.  If the `/trunk/readme.txt` file says that the stable tag is `4.3`, then it is `/tags/4.3/readme.txt` that'll be used for displaying information about the plugin.
-
-If you develop in trunk, you can update the trunk `readme.txt` to reflect changes in your in-development version, without having that information incorrectly disclosed about the current stable version that lacks those changes -- as long as the trunk's `readme.txt` points to the correct stable tag.
-
-If no stable tag is provided, your users may not get the correct version of your code.
+Download the plugin files.
+Extract the plugin files to your computer.
+Upload the extracted plugin files to your wp-content/plugins directory.
+Activate the plugin in your WordPress dashboard.
+Use the shortcode [my_category_list] to display the list of all used category names anywhere in your WordPress site.
 
 == Frequently Asked Questions ==
 

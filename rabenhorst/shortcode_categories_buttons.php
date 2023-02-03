@@ -11,13 +11,13 @@ function my_category_list_shortcode() {
         'orderby' => 'name',
         'hide_empty' => 0
     );
-    $categories = get_categories($args);
-    $output = '<div>';
-    foreach($categories as $category) {
-        // $output .= '<a href="' . get_category_link($category->term_id) . '">' . $category->name . ' (' . $category->count . ')</a>' . '   ';
-		$output .= '<a class="my_category_list" href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>' . '   ';
+    $my_categories = get_categories($args);
+    $my_output = '<div>';
+    foreach($my_categories as $my_category) {
+        // $output .= '<a href="' . get_category_link($my_category->term_id) . '">' . $my_category->name . ' (' . $my_category->count . ')</a>' . '   ';
+		$my_output .= '<a class="my_category_list" href="' . get_category_link($my_category->term_id) . '">' . $my_category->name . '</a>' . '   ';
     }
-    $output .= '</div>';
-    return $output;
+    $my_output .= '</div>';
+    return $my_output;
 }
 add_shortcode('my_category_list', 'my_category_list_shortcode');
