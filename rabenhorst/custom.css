@@ -20,14 +20,22 @@
       margin: 0px 10px 0px 0px;
   }
   
-  a.my_category_list {
+  /* für Kategorien auf der Seite "Beitrags-Kategorien */
+  p.beitrags_kategorien a.my_category_list {
       background-color: var(--hellgrau-color);
       border-radius: 20px;
       padding: 10px;
-      margin: 0px 10px 0px 0px;
+      margin: 20px 10px 0px 0px;
       text-decoration: none;
-      line-height: 3.5;
       color: black;
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: flex-end;
+  }
+  
+  p.beitrags_kategorien a.my_category_list:hover {
+        background-color: var(--rot-color);
+          color: white;
   }
   
   /* Ende TEST */
