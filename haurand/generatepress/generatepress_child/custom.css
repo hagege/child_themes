@@ -7,7 +7,26 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 hellblau: #f7f8f9
 */
 
-/* TEST */
+/* TEST Anfang */
+
+/* TEST Ende */
+/* für Kategorien auf der Seite "Beitrags-Kategorien */
+p.beitrags_kategorien a.my_category_list {
+    background-color: #D4DaDB;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 20px 10px 0px 0px;
+    text-decoration: none;
+    color: black;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+p.beitrags_kategorien a.my_category_list:hover {
+	  background-color: #B70000;
+		color: white;
+}
 
 /* unsichtbarer Text */
 p.unsichtbar {

@@ -214,8 +214,8 @@ register_block_pattern(
     'content'     =>
       "<!-- wp:columns {\"align\":\"full\"} -->
       <div class=\"wp-block-columns alignfull\"><!-- wp:column {\"width\":\"\",\"className\":\"container_aussen\"} -->
-      <div class=\"wp-block-column container_aussen\"><!-- wp:columns {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#d4dadb\"}},\"className\":\"container_mit_bildern\"} -->
-      <div class=\"wp-block-columns alignfull container_mit_bildern has-background\" style=\"background-color:#d4dadb\"><!-- wp:column {\"verticalAlignment\":\"center\",\"width\":\"50%\"} -->
+      <div class=\"wp-block-column container_aussen\"><!-- wp:columns {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#f7f8f9\"}},\"className\":\"container_mit_bildern\"} -->
+      <div class=\"wp-block-columns alignfull container_mit_bildern has-background\" style=\"background-color:#f7f8f9\"><!-- wp:column {\"verticalAlignment\":\"center\",\"width\":\"50%\"} -->
       <div class=\"wp-block-column is-vertically-aligned-center\" style=\"flex-basis:50%\"><!-- wp:image {\"align\":\"center\",\"id\":5153,\"sizeSlug\":\"large\",\"linkDestination\":\"media\",\"className\":\"bild_zentriert\"} -->
       <div class=\"wp-block-image bild_zentriert\"><figure class=\"aligncenter size-large\"><a href=\"https://haurand.com/wp-content/uploads/2021/04/button_erfassen_6.jpg\"><img src=\"https://haurand.com/wp-content/uploads/2021/04/button_erfassen_6.jpg\" alt=\"Button mit dem Block-Editor\" class=\"wp-image-5153\"/></a></figure></div>
       <!-- /wp:image --></div>
@@ -245,8 +245,8 @@ register_block_pattern(
     'content'     =>
       "<!-- wp:columns {\"align\":\"full\"} -->
       <div class=\"wp-block-columns alignfull\"><!-- wp:column {\"width\":\"\",\"className\":\"container_aussen\"} -->
-      <div class=\"wp-block-column container_aussen\"><!-- wp:columns {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#d4dadb\"}},\"className\":\"container_mit_bildern\"} -->
-      <div class=\"wp-block-columns alignfull container_mit_bildern has-background\" style=\"background-color:#d4dadb\"><!-- wp:column {\"verticalAlignment\":\"center\",\"width\":\"100%\"} -->
+      <div class=\"wp-block-column container_aussen\"><!-- wp:columns {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#f7f8f9\"}},\"className\":\"container_mit_bildern\"} -->
+      <div class=\"wp-block-columns alignfull container_mit_bildern has-background\" style=\"background-color:#f7f8f9\"><!-- wp:column {\"verticalAlignment\":\"center\",\"width\":\"100%\"} -->
       <div class=\"wp-block-column is-vertically-aligned-center\" style=\"flex-basis:100%\"><!-- wp:image {\"align\":\"center\",\"id\":5149,\"sizeSlug\":\"large\",\"linkDestination\":\"media\",\"className\":\"bild_zentriert\"} -->
       <div class=\"wp-block-image bild_zentriert\"><figure class=\"aligncenter size-large\"><a href=\"https://haurand.com/wp-content/uploads/2021/04/button_erfassen_4.jpg\"><img src=\"https://haurand.com/wp-content/uploads/2021/04/button_erfassen_4.jpg\" alt=\"Button mit dem Block-Editor\" class=\"wp-image-5149\"/></a><figcaption>Grafik: haurand.com</figcaption></figure></div>
       <!-- /wp:image --></div>
@@ -267,8 +267,8 @@ register_block_pattern(
     'description' => _x( 'Mittelgrauer Container mit Achtung-SVG', 'Ein Container für Achtung-SVG mit mittelgrauem Hintergrund', 'container_mittelgrau_achtung' ),
     'categories'  => array('Haurand'),
     'content'     =>
-      '<!-- wp:group {"style":{"color":{"background":"#d4dadb"}},"className":"svg_container"} -->
-      <div class="wp-block-group svg_container has-background" style="background-color:#d4dadb"><!-- wp:spacer {"height":"30px"} -->
+      '<!-- wp:group {"style":{"color":{"background":"#f7f8f9"}},"className":"svg_container"} -->
+      <div class="wp-block-group svg_container has-background" style="background-color:#f7f8f9"><!-- wp:spacer {"height":"30px"} -->
       <div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
       <!-- /wp:spacer -->
       
@@ -313,8 +313,8 @@ register_block_pattern(
     'description' => _x( 'Mittelgrauer Container mit Update-SVG', 'Ein Container für Update-SVG mit mittelgrauem Hintergrund', 'container_mittelgrau_update' ),
     'categories'  => array('Haurand'),
     'content'     =>
-      '<!-- wp:group {"style":{"color":{"background":"#d4dadb"}},"className":"svg_container"} -->
-      <div class="wp-block-group svg_container has-background" style="background-color:#d4dadb"><!-- wp:spacer {"height":"30px"} -->
+      '<!-- wp:group {"style":{"color":{"background":"#f7f8f9"}},"className":"svg_container"} -->
+      <div class="wp-block-group svg_container has-background" style="background-color:#f7f8f9"><!-- wp:spacer {"height":"30px"} -->
       <div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
       <!-- /wp:spacer -->
       
@@ -380,8 +380,8 @@ register_block_pattern(
     'description' => _x( 'Mittelgrauer Container mit Info-SVG', 'Ein Container für Info-SVG mit mittelgrauem Hintergrund', 'container_mittelgrau_info' ),
     'categories'  => array('Haurand'),
     'content'     =>
-      '<!-- wp:group {"style":{"color":{"background":"#d4dadb"}},"className":"svg_container"} -->
-      <div class="wp-block-group svg_container has-background" style="background-color:#d4dadb"><!-- wp:spacer {"height":"30px"} -->
+      '<!-- wp:group {"style":{"color":{"background":"#f7f8f9"}},"className":"svg_container"} -->
+      <div class="wp-block-group svg_container has-background" style="background-color:#f7f8f9"><!-- wp:spacer {"height":"30px"} -->
       <div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
       <!-- /wp:spacer -->
 
@@ -427,8 +427,8 @@ register_block_pattern(
     'description' => _x( 'Mittelgrauer Container mit Text links und Bild rechts', 'Mittelgrauer Container mit Text links und Bild rechts', 'container_mittelgrau_bild_text' ),
     'categories'  => array('Haurand'),
     'content'     =>
-      "<!-- wp:columns {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#d4dadb\"}}} -->
-      <div class=\"wp-block-columns alignfull has-background\" style=\"background-color:#d4dadb\"><!-- wp:column -->
+      "<!-- wp:columns {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#f7f8f9\"}}} -->
+      <div class=\"wp-block-columns alignfull has-background\" style=\"background-color:#f7f8f9\"><!-- wp:column -->
       <div class=\"wp-block-column\"><!-- wp:columns {\"verticalAlignment\":null} -->
       <div class=\"wp-block-columns\"><!-- wp:column {\"verticalAlignment\":\"center\"} -->
       <div class=\"wp-block-column is-vertically-aligned-center\"><!-- wp:paragraph {\"textColor\":\"black\"} -->
