@@ -36,6 +36,19 @@ Helltürkis:   #00F5F6
 }
 
 
+input.wpcf7-form-control.has-spinner.wpcf7-submit
+{
+font-weight: 600;
+    border: 2px solid black;
+    background-color: white;
+    text-decoration: none!important;
+    border-radius: 20px 0px;
+    color: black;
+    font-size: 1rem;
+}
+
+
+
 /* Breakpoint bei 1024px (einspaltig)
 */
 @media (max-width: 1024px) {
