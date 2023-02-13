@@ -19,11 +19,11 @@
 
 /* Überschrift rot - Seite 1 Alternative */
 .kachel_blog_klein.kachel_blog .gb-headline {
-    min-height: 7em;
+    min-height: 6em;
 }
 
 /* zweispaltig */
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
 .raster_ansicht .gb-grid-column {
     /* width: clamp(200px, 30vw, 300px);
     height: clamp(200px, 30vw, 300px); */
@@ -31,14 +31,14 @@
 		margin-bottom: 20px;
 }
 
-	
+/* einspaltig */	
 @media (max-width: 767px) {
 .raster_ansicht .gb-grid-column {
     /* width: clamp(200px, 30vw, 300px);
     height: clamp(200px, 30vw, 300px); */
 		width: 100%;
 		margin-bottom: 20px;
-}	
+}
 	
 
 @media (max-width: 767px) {
