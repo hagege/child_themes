@@ -52,7 +52,7 @@
   }
   */	
   
-  /* TEST */
+  /* Kategorienanzeige */
   
   @media (max-width: 767px) {
   .gb-grid-wrapper.gb-grid-wrapper-641e0a28.einzelseite .gb-inside-container {
@@ -149,7 +149,7 @@
   }
   */
       
-  
+  /*
   .kachel_blog .gb-inside-container p,
   .kachel_blog_featured_image .gb-inside-container p{
      margin-bottom:0.5rem;
@@ -164,5 +164,5 @@
       width: 280px;
       height: 280px;
   }
-  
+  */
   
