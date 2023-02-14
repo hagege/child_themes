@@ -2,152 +2,167 @@
 
 /* Variablen */
 :root {
-  --mittelgrau-color: rgba(150, 150, 150, 1);
-  --hellblau-color: rgba(227, 235, 241, 1);
-    --hellgrau-color: rgba(213, 213, 213, 1);
-    --rot-color: rgba(191, 25, 25, 1);			--wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
-    --wp--preset--font-size--cover-paragraph: clamp(2rem, 10vw, 6rem);
-  --wp--preset--font-size--h2: clamp(1.5rem, 2vw, 6rem);
-	/* funktioniert nicht, daher nur definiert */
-	--mobile-breakpoint: 767px;
-	--tablet-breakpoint: 900px;
-
-}
-
-/* TEST */
-
-
-/* Überschrift rot - Seite 1 Alternative */
-.kachel_blog_klein.kachel_blog .gb-headline {
-    min-height: 6em;
-}
-
-/* zweispaltig */
-@media (max-width: 1000px) {
-.raster_ansicht .gb-grid-column {
-    /* width: clamp(200px, 30vw, 300px);
-    height: clamp(200px, 30vw, 300px); */
-		width: 50%;
-		margin-bottom: 20px;
-}
-
-/* einspaltig */	
-@media (max-width: 767px) {
-.raster_ansicht .gb-grid-column {
-    /* width: clamp(200px, 30vw, 300px);
-    height: clamp(200px, 30vw, 300px); */
-		width: 100%;
-		margin-bottom: 20px;
-}
-	
-
-@media (max-width: 767px) {
-.gb-grid-wrapper.gb-grid-wrapper-641e0a28.einzelseite .gb-inside-container {
-    padding: 0.5rem;
-}
-
-
-
-/* Kategorien bei Einzelbeitrag */
-.gb-button-wrapper.gb-button-wrapper-6d7bfb40 a{
-    background-color: var(--hellgrau-color);
-    border-radius: 20px;
-		padding: 20px;
-    margin: 0px 10px 0px 0px;
-}
-
-/* für Kategorien auf der Seite "Beitrags-Kategorien */
-p.beitrags_kategorien a.my_category_list {
-    background-color: var(--hellgrau-color);
-    border-radius: 20px;
-    padding: 10px;
-    margin: 20px 10px 0px 0px;
-    text-decoration: none;
-    color: black;
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-p.beitrags_kategorien a.my_category_list:hover {
-	  background-color: var(--rot-color);
-		color: white;
-}
-
-
-/* Ende TEST */
-
-
-/* Keine Unterstriche in Archive */
-.gb-inside-container .gb-inside-container a {
-    text-decoration: none;
-}
-
-/* Runde Ecken links beim Slider */
-.wp-block-eedee-block-gutenslider .swiper {
-    border-radius: 20px 0px 0px 20px;
-}
-
-
-/* Kachel rot */
-.kachel_header_rot{
-    padding: 10px;
-    margin-bottom: 0px;
-    border-radius: 20px 20px 0px 0px;
-}
-
-.kachel_foto_rot img{
-	border-radius: 0px 0px 20px 20px;
-}
-
-/* bei großer Kachel */
-.kachel_button .wp-block-button{
-    margin-top: -8rem;
-}
-
-/* bei kleiner Kachel */
-.kachel_klein .wp-block-button.has-custom-font-size.has-small-font-size {
-    margin-top: -6rem;
-}
-
-.kachel_klein .wp-block-group__inner-container {
-    padding: 10px;
-}
-
-
-/* Kachel mit Bild und Container mit opacity unten */
-/* Kachel immer quadratisch */
-
-
-/*	
-.kachel_blog_klein
-{
-	object-fit: cover;
-	  width: clamp(200px, 30vw, 380px);
-    height: clamp(200px, 30vw, 380px)!important;
-		margin-left: 10px;
-		margin-right: 10px;
-}
-*/
-/*
-.kachel_blog .gb-inside-container
-{
-    background-color: rgb(255 255 255 / 50%);
-}
-*/
-
-.kachel_blog .gb-inside-container p,
-.kachel_blog_featured_image .gb-inside-container p{
-   margin-bottom:0.5rem;
-}
-
-.gb-container .kachel_blog_featured_image a {
-    text-decoration: none;
-}
-
-/*
-.kachel_blog_featured_image .gb-inside-container {
-    width: 280px;
-    height: 280px;
-}
-*/
+    --mittelgrau-color: rgba(150, 150, 150, 1);
+    --hellblau-color: rgba(227, 235, 241, 1);
+      --hellgrau-color: rgba(213, 213, 213, 1);
+      --rot-color: rgba(191, 25, 25, 1);			--wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
+      --wp--preset--font-size--cover-paragraph: clamp(2rem, 10vw, 6rem);
+    --wp--preset--font-size--h2: clamp(1.5rem, 2vw, 6rem);
+      /* funktioniert nicht, daher nur definiert */
+      --mobile-breakpoint: 767px;
+      --tablet-breakpoint: 900px;
+  
+  }
+  
+  /* Antwort von GP */
+  .gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog{
+      aspect-ratio: 1 / 1;
+      height: auto;
+      width: 100%;
+  }
+  
+  .gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog > .gb-inside-container{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog > .gb-inside-container > :last-child{
+      margin-top: auto;
+  }
+  /* Antwort von GP */
+  
+  /* zweispaltig */	
+  @media (max-width: 1000px) {
+  .raster_ansicht .gb-grid-column {
+          width: 50%;
+      }
+  }
+  
+  /* einspaltig */	
+  @media (max-width: 767px) {
+  .raster_ansicht .gb-grid-column {
+          width: 100%;
+      }
+  }	
+      
+  /*
+  .gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog p{
+     min-height: 6em;
+  }
+  */	
+  
+  /* TEST */
+  
+  @media (max-width: 767px) {
+  .gb-grid-wrapper.gb-grid-wrapper-641e0a28.einzelseite .gb-inside-container {
+      padding: 0.5rem;
+      }
+  }
+  
+  
+  /* Kategorien bei Einzelbeitrag */
+  .gb-button-wrapper.gb-button-wrapper-6d7bfb40 a{
+      background-color: var(--hellgrau-color);
+      border-radius: 20px;
+          padding: 20px;
+      margin: 0px 10px 0px 0px;
+  }
+  
+  /* für Kategorien auf der Seite "Beitrags-Kategorien */
+  p.beitrags_kategorien a.my_category_list {
+      background-color: var(--hellgrau-color);
+      border-radius: 20px;
+      padding: 10px;
+      margin: 20px 10px 0px 0px;
+      text-decoration: none;
+      color: black;
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: flex-end;
+  }
+  
+  p.beitrags_kategorien a.my_category_list:hover {
+        background-color: var(--rot-color);
+          color: white;
+  }
+  
+  
+  /* Ende TEST */
+  
+  
+  /* Keine Unterstriche in Archive */
+  .gb-inside-container .gb-inside-container a {
+      text-decoration: none;
+  }
+  
+  /* Runde Ecken links beim Slider */
+  .wp-block-eedee-block-gutenslider .swiper {
+      border-radius: 20px 0px 0px 20px;
+  }
+  
+  
+  /* Kachel rot */
+  .kachel_header_rot{
+      padding: 10px;
+      margin-bottom: 0px;
+      border-radius: 20px 20px 0px 0px;
+  }
+  
+  .kachel_foto_rot img{
+      border-radius: 0px 0px 20px 20px;
+  }
+  
+  /* bei großer Kachel 
+  .kachel_button .wp-block-button{
+      margin-top: -8rem;
+  }
+  */
+      
+  /* bei kleiner Kachel 
+  .kachel_klein .wp-block-button.has-custom-font-size.has-small-font-size {
+      margin-top: -6rem;
+  }
+  
+  .kachel_klein .wp-block-group__inner-container {
+      padding: 10px;
+  }
+  */
+  
+  /* Kachel mit Bild und Container mit opacity unten */
+  /* Kachel immer quadratisch */
+  
+  
+  /*.kachel_blog_klein
+  {
+      object-fit: cover;
+        width: clamp(200px, 30vw, 380px);
+      height: clamp(200px, 30vw, 380px)!important;
+          margin-left: 10px;
+          margin-right: 10px;
+  }
+  */
+  /*
+  .kachel_blog .gb-inside-container
+  {
+      background-color: rgb(255 255 255 / 50%);
+  }
+  */
+      
+  
+  .kachel_blog .gb-inside-container p,
+  .kachel_blog_featured_image .gb-inside-container p{
+     margin-bottom:0.5rem;
+  }
+  
+  .gb-container .kachel_blog_featured_image a {
+      text-decoration: none;
+  }
+  
+  
+  .kachel_blog_featured_image .gb-inside-container {
+      width: 280px;
+      height: 280px;
+  }
+  
+  
