@@ -46,11 +46,6 @@
       }
   }	
       
-  /*
-  .gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog p{
-     min-height: 6em;
-  }
-  */	
   
   /* Kategorienanzeige */
   
@@ -88,7 +83,7 @@
   }
   
   
-  /* Ende TEST */
+  /* TEST */
   
   
   /* Keine Unterstriche in Archive */
@@ -113,56 +108,4 @@
       border-radius: 0px 0px 20px 20px;
   }
   
-  /* bei großer Kachel 
-  .kachel_button .wp-block-button{
-      margin-top: -8rem;
-  }
-  */
-      
-  /* bei kleiner Kachel 
-  .kachel_klein .wp-block-button.has-custom-font-size.has-small-font-size {
-      margin-top: -6rem;
-  }
-  
-  .kachel_klein .wp-block-group__inner-container {
-      padding: 10px;
-  }
-  */
-  
-  /* Kachel mit Bild und Container mit opacity unten */
-  /* Kachel immer quadratisch */
-  
-  
-  /*.kachel_blog_klein
-  {
-      object-fit: cover;
-        width: clamp(200px, 30vw, 380px);
-      height: clamp(200px, 30vw, 380px)!important;
-          margin-left: 10px;
-          margin-right: 10px;
-  }
-  */
-  /*
-  .kachel_blog .gb-inside-container
-  {
-      background-color: rgb(255 255 255 / 50%);
-  }
-  */
-      
-  /*
-  .kachel_blog .gb-inside-container p,
-  .kachel_blog_featured_image .gb-inside-container p{
-     margin-bottom:0.5rem;
-  }
-  
-  .gb-container .kachel_blog_featured_image a {
-      text-decoration: none;
-  }
-  
-  
-  .kachel_blog_featured_image .gb-inside-container {
-      width: 280px;
-      height: 280px;
-  }
-  */
   
