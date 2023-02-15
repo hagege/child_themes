@@ -14,7 +14,37 @@
   
   }
   
-  /* Antwort von GP */
+  
+  /* TEST */
+  p.kachel_absatz {
+      font-size: clamp(1rem, 0.9rem + 0.3vw, 2.5rem)!important;
+  }
+  
+  /* TEST-Ende */
+  
+  /* GP-Lösung zu zweispaltigem Grid */
+  
+  @media (min-width: 769px) {
+      .gb-grid-wrapper.raster_ansicht_2 > .gb-grid-column {
+          width: unset;
+      }
+  
+      .gb-grid-wrapper.raster_ansicht_2 {
+          flex-wrap: nowrap;
+      }
+  
+      .gb-grid-wrapper.raster_ansicht_2 > .gb-grid-column:last-child {
+          flex: 1 0 33%;
+      }
+  }
+  
+  .gb-grid-wrapper.raster_ansicht_2 > .gb-grid-column:last-child > .gb-container {
+      aspect-ratio: 1/1;
+      height: auto;
+  }
+  
+  
+  /* GP-Lösung zu vierspaltigem Grid */
   .gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog{
       aspect-ratio: 1 / 1;
       height: auto;
