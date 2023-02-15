@@ -20,6 +20,12 @@
       font-size: clamp(1rem, 0.9rem + 0.3vw, 2.5rem)!important;
   }
   
+  
+  .gb-grid-wrapper.raster_ansicht_2 .gb-container > .kachel_blog_gross {
+      aspect-ratio: 1/1;
+      height: auto;
+  }
+  
   /* TEST-Ende */
   
   /* GP-Lösung zu zweispaltigem Grid */
