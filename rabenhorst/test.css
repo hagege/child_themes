@@ -1,0 +1,25 @@
+/* TEST */
+/* Schriftbreite auf Kacheln */
+p.kachel_absatz {
+    font-size: clamp(1rem, 0.9rem + 0.3vw, 2.5rem)!important;
+}
+
+/* Kachelbreite rechts Query */
+.gb-container-6421865d > .gb-inside-container {
+  aspect-ratio: 1/1;
+  height: auto;
+}
+
+/* Überschrift H2 bei Kacheln */
+h2.gb-headline.h2_query.gb-headline-text {
+  font-size: clamp(1rem, 0.9rem + 0.3vw, 2.5rem);
+  padding: clamp(0.5rem, 0.2rem + 0.2vw, 1.5rem);
+}
+
+/* Container rechts bei Query */
+.gb-grid-wrapper.raster_ansicht_2 .gb-container > .kachel_blog_gross {
+    aspect-ratio: 1/1;
+    height: auto;
+}
+
+/* TEST-Ende */
