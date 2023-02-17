@@ -1,7 +1,5 @@
 /* Vorschlag: Umstellung auf Mobil bei 870px */
 
-/* Breakpoint einspaltig bei 768px */
-
 /* Variablen */
 :root {
     --mittelgrau-color: rgba(150, 150, 150, 1);
@@ -16,28 +14,6 @@
   
   }
   
-
-
-/* TEST */
-
-
-/* Überschrift H2 bei Kacheln */
-@media (min-width: 768px) {
-h2.gb-headline.h2_query.gb-headline-text {
-  font-size: clamp(1rem, 0.75rem + 1.25vw, 2.25rem);
-  padding: clamp(0.5rem, 0.2rem + 0.2vw, 1.5rem);
-}
-}
-
-@media (max-width: 767px) {
-h2.gb-headline.h2_query.gb-headline-text {
-  font-size: clamp(1rem, 0.132rem + 4.34vw, 2.25rem);
-  padding: clamp(0.5rem, 0.2rem + 0.2vw, 1.5rem);
-}
-}
-
-/* TEST-Ende */
-
 
 /* GP-Lösung zu zweispaltigem Grid */
   
@@ -96,12 +72,13 @@ h2.gb-headline.h2_query.gb-headline-text {
   
   /* Kategorienanzeige */
   
-  @media (max-width: 767px) {
+/*
+@media (max-width: 767px) {
   .gb-grid-wrapper.gb-grid-wrapper-641e0a28.einzelseite .gb-inside-container {
       padding: 0.5rem;
       }
   }
-  
+*/  
   
   /* Kategorien bei Einzelbeitrag */
   .gb-button-wrapper.gb-button-wrapper-6d7bfb40 a{
