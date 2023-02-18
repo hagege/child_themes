@@ -13,35 +13,36 @@
       --tablet-breakpoint: 900px;
   
   }
-  
+
 
 /* TEST */
-/* Schriftbreite auf Kacheln */
-p.kachel_absatz {
-    font-size: clamp(1rem, 0.9rem + 0.3vw, 2.5rem)!important;
-}
-
-/* Kachelbreite rechts Query */
-.gb-container-6421865d > .gb-inside-container {
-  aspect-ratio: 1/1;
-  height: auto;
-}
-
-/* Container rechts bei Query */
-.gb-grid-wrapper.raster_ansicht_2 .gb-container > .kachel_blog_gross {
+/* quadratische Container für Bilder */
+.wp-block-cover.cover_square {
     aspect-ratio: 1/1;
     height: auto;
+		padding: 0px;
+		border-radius: 20px;
+	  overflow: hidden;
 }
 
-/* TEST-Ende */
-
-
-/* Überschrift H2 bei Kacheln */
-.raster_ansicht_2 h2,
-.raster_ansicht h2{
-    font-size: clamp(1rem, 0.9rem + 0.3vw, 2.5rem);
-    padding: clamp(0.5rem, 0.2rem + 0.2vw, 1.5rem);
+.cover_square > .wp-block-cover__inner-container > .wp-block-group > .wp-block-group__inner-container{
+    padding: 0px; 
 }
+
+.wp-block-cover.cover_square > .wp-block-cover__inner-container > .is-layout-constrained > .gb-inside-container {
+    padding: 0px;
+}
+
+.gb-container.cover_white_container > .gb-inside-container {
+    padding: 0px!important;
+}
+
+.gb-container.cover_white_container {
+   padding-bottom: 3rem;
+}
+
+/* TEST ENDE */
+
 
 /* GP-Lösung zu zweispaltigem Grid */
   
