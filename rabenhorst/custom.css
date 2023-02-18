@@ -15,6 +15,34 @@
   }
   
 
+/* TEST */
+/* Schriftbreite auf Kacheln */
+p.kachel_absatz {
+    font-size: clamp(1rem, 0.9rem + 0.3vw, 2.5rem)!important;
+}
+
+/* Kachelbreite rechts Query */
+.gb-container-6421865d > .gb-inside-container {
+  aspect-ratio: 1/1;
+  height: auto;
+}
+
+/* Container rechts bei Query */
+.gb-grid-wrapper.raster_ansicht_2 .gb-container > .kachel_blog_gross {
+    aspect-ratio: 1/1;
+    height: auto;
+}
+
+/* TEST-Ende */
+
+
+/* Überschrift H2 bei Kacheln */
+.raster_ansicht_2 h2,
+.raster_ansicht h2{
+    font-size: clamp(1rem, 0.9rem + 0.3vw, 2.5rem);
+    padding: clamp(0.5rem, 0.2rem + 0.2vw, 1.5rem);
+}
+
 /* GP-Lösung zu zweispaltigem Grid */
   
 @media (min-width: 769px) {
@@ -72,13 +100,12 @@
   
   /* Kategorienanzeige */
   
-/*
-@media (max-width: 767px) {
+  @media (max-width: 767px) {
   .gb-grid-wrapper.gb-grid-wrapper-641e0a28.einzelseite .gb-inside-container {
       padding: 0.5rem;
       }
   }
-*/  
+  
   
   /* Kategorien bei Einzelbeitrag */
   .gb-button-wrapper.gb-button-wrapper-6d7bfb40 a{
