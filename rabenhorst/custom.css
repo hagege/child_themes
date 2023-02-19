@@ -20,23 +20,30 @@
 .wp-block-cover.cover_square {
     aspect-ratio: 1/1;
     height: auto;
+		min-height: unset;
 		padding: 0px;
 		border-radius: 20px;
 	  overflow: hidden;
 }
 
+
+/* kein Padding */
 .cover_square > .wp-block-cover__inner-container > .wp-block-group > .wp-block-group__inner-container{
     padding: 0px; 
 }
 
+
+/* kein Padding */
 .wp-block-cover.cover_square > .wp-block-cover__inner-container > .is-layout-constrained > .gb-inside-container {
     padding: 0px;
 }
 
+/* kein Padding beim weißen Container */
 .gb-container.cover_white_container > .gb-inside-container {
     padding: 0px!important;
 }
 
+/* Padding nach unten */
 .gb-container.cover_white_container {
    padding-bottom: 3rem;
 }
