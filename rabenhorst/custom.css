@@ -41,6 +41,8 @@
 /* Überschrift h2 im weißen Container */
 .wp-block-cover h2:not(.has-text-color) {
 	color: var(--contrast);
+	padding-top: 1rem;
+	font-size: clamp(1rem, 0.75rem + 1.25vw, 2.25rem);
 }
 
 /* Padding nach unten */
