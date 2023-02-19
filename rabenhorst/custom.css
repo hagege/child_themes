@@ -38,11 +38,22 @@
     padding: 0px;
 }
 
+/* Übesrchrift h2 im weißen Container */
+.wp-block-cover h2:not(.has-text-color) {
+	color: var(--contrast);
+}
+
 /* kein Padding beim weißen Container */
-.gb-container.cover_white_container > .gb-inside-container {
+/* deaktiviert: 19.2.2023
+/* .gb-container.cover_white_container > .gb-inside-container {
     padding: 0px!important;
 }
 
+
+.wp-block-cover.cover_square > .wp-block-cover__inner-container > .is-layout-constrained.wp-block-group > .wp-block-group__inner-container > .gb-inside-container {
+    padding: 0px;
+}
+*/
 /* Padding nach unten */
 .gb-container.cover_white_container {
    padding-bottom: 3rem;
@@ -107,13 +118,13 @@
       
   
   /* Kategorienanzeige */
-  
+/* deaktiviert: 19.2.2023  
   @media (max-width: 767px) {
   .gb-grid-wrapper.gb-grid-wrapper-641e0a28.einzelseite .gb-inside-container {
       padding: 0.5rem;
       }
   }
-  
+*/  
   
   /* Kategorien bei Einzelbeitrag */
   .gb-button-wrapper.gb-button-wrapper-6d7bfb40 a{
