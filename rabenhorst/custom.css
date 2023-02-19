@@ -38,9 +38,14 @@
     padding: 0px;
 }
 
-/* Übesrchrift h2 im weißen Container */
+/* Überschrift h2 im weißen Container */
 .wp-block-cover h2:not(.has-text-color) {
 	color: var(--contrast);
+}
+
+/* Padding nach unten */
+.gb-container.cover_white_container {
+   padding-bottom: 3rem;
 }
 
 /* kein Padding beim weißen Container */
@@ -54,10 +59,7 @@
     padding: 0px;
 }
 */
-/* Padding nach unten */
-.gb-container.cover_white_container {
-   padding-bottom: 3rem;
-}
+
 
 /* TEST ENDE */
 
