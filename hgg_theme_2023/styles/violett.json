@@ -1,0 +1,41 @@
+{
+    "title": "Violettes Theme",
+    "styles": {
+       "typography": {
+          "fontFamily": "var:preset|font-family|open-sans"
+       },
+       "blocks": {
+          "core/site-title": {
+             "typography": {
+                "fontFamily": "var:preset|font-family|open-sans",
+                "fontStyle": "normal",
+                "fontWeight": "900",
+                "letterSpacing": "-0.05rem"
+             }
+          }
+       },
+       "color": {
+          "background": "var:preset|color|contrast",
+          "text": "var:preset|color|base"
+       },
+       "elements": {
+          "link": {
+             "color": {
+                "text": "var:preset|color|pale-cyan-blue"
+             }
+          },
+          "heading": {
+             "color": {
+                "text": "#8ed1fc"
+             }
+          },
+          "button": {
+             "color": {
+                "text": "var:preset|color|cyan-bluish-gray"
+             }
+          }
+       }
+    },
+    "settings": [],
+    "version": 2
+ }
