@@ -9,6 +9,11 @@ FARBWERTE
 Web und Bildschirm Druck
 */
 
+/* Ausschalter für Anzeige Freizeitmöglichkeit */
+i.fa.fa-times.ol-info-window-close {
+    font-size: 20px;
+}
+
 /* Absatzstyle für Copyright oben */
 p.em_bild {
 	font-style: italic;
