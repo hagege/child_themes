@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Haurand Patterns
- * @version 0.1
+ * @version 0.2
  */
 /*
 Plugin Name: Category Vorlagen Haurand
 Plugin URI: http://haurand.com
-Description: Create a new Category "Haurand" as "Patterns Haurand" for Block Patterns with our custom Block patterns
+Description: Create new Categories "Patterns Haurand" and "Custom Websites Haurand" for Block Patterns with our custom Block patterns
 Author: Hans-Gerd Gerhards
-Version: 0.1
+Version: 0.2
 Author URI: http://haurand.com
 */
 
@@ -37,17 +37,27 @@ Author URI: http://haurand.com
  
 
 /* eigene Kategorie Haurand              */
-function haurand_register_block_categories() {
+function patterns_haurand_register_block_categories() {
 if ( class_exists( 'WP_Block_Patterns_Registry' ) ) {
 	register_block_pattern_category(
-	 'Patterns Haurand',
-	 array( 'label' => _x( 'Patterns Haurand', 'Block pattern category' ) )
+	 'Patterns Haurand', array( 'label' => _x( 'Patterns Haurand', 'Block pattern category' ) )
     );
   }
 }
-add_action( 'init', 'haurand_register_block_categories' );
+add_action( 'init', 'patterns_haurand_register_block_categories' );
    
-   
+
+/* eigene Kategorie Haurand */            
+function custom_websites_haurand_register_block_categories() {
+  if ( class_exists( 'WP_Block_Patterns_Registry' ) ) {
+    register_block_pattern_category(
+     'Custom Websites Haurand', array( 'label' => _x( 'Custom Websites Patterns Haurand', 'Block pattern category for custom websites' ) )
+      );
+    }
+  }
+  add_action( 'init', 'custom_websites_haurand_register_block_categories' );
+ 
+
 
 /* Beispiel Spaltenblock mit Bild  */
 register_block_pattern(
@@ -86,7 +96,7 @@ register_block_pattern(
 
 /* Query Block mit Cover und enthaltenen Post excerpt, sowie categories und read more link */
 register_block_pattern(
-    'spaltenblock_mit_bild',
+    'query_cover_text',
       array(
       'title' => __( 'Query mit Cover und Text', 'query_cover_text' ),
       'description' => _x( 'Query mit Cover und Text', 'Query mit Cover und Text', 'query_cover_text' ),
@@ -94,7 +104,7 @@ register_block_pattern(
       'content'     =>
          '<!-- wp:query {"queryId":0,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"tagName":"main","displayLayout":{"type":"flex","columns":2},"align":"full","layout":{"inherit":false,"wideSize":"1800px","contentSize":"1800px","type":"constrained"}} -->
             <main class="wp-block-query alignfull"><!-- wp:post-template {"align":"wide"} -->
-            <!-- wp:cover {"url":"http://localhost/fse_test_meetup/wp-content/uploads/2022/04/diepenbenden_800.jpg","useFeaturedImage":true,"id":105,"dimRatio":20,"minHeight":100,"minHeightUnit":"vh","isDark":false} -->
+            <!-- wp:cover {"url":"https://test2.haurand.com/wp-content/uploads/2023/01/katzenkinder-1024x768.jpg","useFeaturedImage":true,"id":105,"dimRatio":20,"minHeight":100,"minHeightUnit":"vh","isDark":false} -->
             <div class="wp-block-cover is-light" style="min-height:100vh"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-20 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:post-date {"textColor":"white"} /-->
 
             <!-- wp:columns {"style":{"border":{"radius":"50px"}}} -->
@@ -125,4 +135,251 @@ register_block_pattern(
             <!-- /wp:query -->',
             )
   );
+
+
+/* Image with duotone background */
+register_block_pattern(
+  'image_with_duotone_background',
+    array(
+    'title' => __( 'Image with duotone background', 'image_with_duotone_background' ),
+    'description' => _x( 'Image with duotone background', 'Image with duotone background', 'image_with_duotone_background' ),
+    'categories'  => array('Patterns Haurand'),
+    'content'     =>
+       '<!-- wp:group {"align":"wide","style":{"color":{"gradient":"linear-gradient(180deg,rgb(0,0,0) 50%,rgb(255,255,255) 50%)"}},"layout":{"type":"constrained"}} -->
+        <div class="wp-block-group alignwide has-background" style="background:linear-gradient(180deg,rgb(0,0,0) 50%,rgb(255,255,255) 50%)"><!-- wp:group {"layout":{"type":"constrained"}} -->
+        <div class="wp-block-group"><!-- wp:spacer {"height":"50px"} -->
+        <div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+
+        <!-- wp:image {"id":837,"sizeSlug":"full","linkDestination":"none"} -->
+        <figure class="wp-block-image size-full"><img src="https://test2.haurand.com/wp-content/uploads/2023/01/katzenkinder-1024x768.jpg" alt="" class="wp-image-837"/></figure>
+        <!-- /wp:image -->
+
+        <!-- wp:spacer {"height":"50px"} -->
+        <div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer --></div>
+        <!-- /wp:group --></div>
+        <!-- /wp:group -->',
+        )
+);
+
+/* ---------------------------------- */
+/* custom websites haurand */
+/* ---------------------------------- */
+
+/* EKS */
+
+/* ---------------------------------- */
+/* Eigener Button  */
+/* ---------------------------------- */
+register_block_pattern(
+  'eigener_button',
+    array(
+    'title' => __( 'Eigener Button', 'eigener_button' ),
+    'description' => _x( 'Eigener Button', 'Eigener Button', 'eigener_button' ),
+    'categories'  => array('Custom Websites Haurand'),
+    'content'     =>
+       '<!-- wp:group -->
+       <div class="wp-block-group"><!-- wp:generateblocks/button-container {"uniqueId":"b6923a0f","alignment":"center","isDynamic":true,"blockVersion":2} -->
+       <!-- wp:generateblocks/button {"uniqueId":"33d8e965","hasUrl":true,"backgroundColor":"var(\u002d\u002dglobal-color-10)","backgroundColorHover":"var(\u002d\u002dglobal-color-11)","textColor":"#ffffff","textColorHover":"var(\u002d\u002daccent-semi-transparent)","borderColor":"","borderColorHover":"","paddingTop":"15","paddingRight":"20","paddingBottom":"15","paddingLeft":"20","blockVersion":2} -->
+       <a class="gb-button gb-button-33d8e965 gb-button-text" href="https://elisabethschule-alsdorf.de/wp-content/uploads/2022/09/Elternbroschuere_Leichte_Sprache_2019.pdf"><strong>Hier klicken</strong></a>
+       <!-- /wp:generateblocks/button -->
+       <!-- /wp:generateblocks/button-container -->
+       
+       <!-- wp:spacer {"height":"50px"} -->
+       <div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+       <!-- /wp:spacer --></div>
+       <!-- /wp:group -->',
+        )
+);
+
+
+/* ---------------------------------- */
+/* H2 Petrol mit Icon  */
+/* ---------------------------------- */
+register_block_pattern(
+  'H2_Petrol_mit_Icon',
+    array(
+    'title' => __( 'H2 Petrol mit Icon', 'H2_Petrol_mit_Icon' ),
+    'description' => _x( 'H2 Petrol mit Icon', 'H2 Petrol mit Icon', 'H2_Petrol_mit_Icon' ),
+    'categories'  => array('Custom Websites Haurand'),
+    'content'     =>
+       '<!-- wp:generateblocks/headline {"uniqueId":"f55e21fc","alignment":"center","marginBottom":"60","hasIcon":true,"iconColor":"var(\u002d\u002dglobal-color-10)","iconLocation":"above","iconPaddingRight":"","iconPaddingBottom":"0.4","iconSize":40,"iconSizeUnit":"px"} -->
+		<h2 class="gb-headline gb-headline-f55e21fc"><span class="gb-icon"><svg viewBox="0 0 17 21.001" xmlns=""><path d="M15.5 21c-.307 0-.612-.094-.872-.279L8.5 16.344l-6.128 4.377A1.499 1.499 0 010 19.5v-16C0 1.57 1.57 0 3.5 0h10C15.43 0 17 1.57 17 3.5v16a1.502 1.502 0 01-1.5 1.5zm-7-8a1.5 1.5 0 01.872.279L14 16.585V3.5a.5.5 0 00-.5-.5h-10a.5.5 0 00-.5.5v13.085l4.628-3.306A1.5 1.5 0 018.5 13z"></path></svg></span><span class="gb-headline-text"><strong>Soziale Arbeit an Schulen und Schulsozialarbeit</strong></span></h2>
+		<!-- /wp:generateblocks/headline -->',
+        )
+);
+
+
+/* ---------------------------------- */
+/* H2 Petrol */
+/* ---------------------------------- */
+register_block_pattern(
+  'H2_Petrol',
+    array(
+    'title' => __( 'H2 Petrol', 'H2_Petrol' ),
+    'description' => _x( 'H2 Petrol', 'H2 Petrol', 'H2_Petrol' ),
+    'categories'  => array('Custom Websites Haurand'),
+    'content'     =>
+       '<!-- wp:generateblocks/headline {"uniqueId":"da450a80","alignment":"left","textColor":"","borderColor":"var(\u002d\u002dglobal-color-10)","highlightTextColor":"","paddingLeft":"20","borderSizeLeft":"6","iconColor":"var(\u002d\u002dglobal-color-10)","iconSize":34,"iconSizeUnit":"px"} -->
+		<h2 class="gb-headline gb-headline-da450a80 gb-headline-text">The History of Donate</h2>
+		<!-- /wp:generateblocks/headline -->',
+        )
+);
+
+
+/* ---------------------------------- */
+/* Liste Petrol */
+/* ---------------------------------- */
+register_block_pattern(
+  'Liste_Petrol',
+    array(
+    'title' => __( 'Liste Petrol', 'Liste_Petrol' ),
+    'description' => _x( 'Liste_Petrol', 'Liste Petrol', 'H2_Petrol' ),
+    'categories'  => array('Custom Websites Haurand'),
+    'content'     =>
+       '<!-- wp:list {"className":"liste_gruener_punkt"} -->
+		<ul class="liste_gruener_punkt">
+		<li>Ist ein Kind erkrankt muss es von den Eltern/Erziehungsberechtigten zwischen 7 Uhr und 7:50 Uhr in der Schule telefonisch entschuldigt werden. In dieser Zeit ist die Schule immer telefonisch erreichbar. Die Erziehungsberechtigten teilen in der telefonischen Nachricht mit, wie lange der Schüler voraussichtlich fehlen wird. Eine mündliche Entschuldigung über Geschwisterkinder, Freunde und Bekannte ist nicht zulässig, die Abgabe einer von Ihnen erstellten schriftlichen Entschuldigung über diese Personen schon.</li>
+		</ul>
+		<!-- /wp:list -->',
+        )
+);
+
+
+
+/* ---------------------------------- */
+/* Text mit Überschrift H2 und 2 Bildern */
+/* ---------------------------------- */
+register_block_pattern(
+  'text_mit_ueberschrift_h2_und_2_bildern',
+    array(
+    'title' => __( 'Text mit Überschrift H2 und 2 Bildern', 'text_mit_ueberschrift_h2_und_2_bildern' ),
+    'description' => _x( 'Text mit Überschrift H2 und 2 Bildern', 'Text mit Überschrift H2 und 2 Bildern', 'text_mit_ueberschrift_h2_und_2_bildern' ),
+    'categories'  => array('Custom Websites Haurand'),
+    'content'     =>
+       '<!-- wp:group -->
+		<div class="wp-block-group"><!-- wp:generateblocks/headline {"uniqueId":"357cc05f","alignment":"left","textColor":"","borderColor":"var(\u002d\u002dglobal-color-10)","highlightTextColor":"","paddingLeft":"20","borderSizeLeft":"6","iconColor":"var(\u002d\u002dglobal-color-10)","iconSize":34,"iconSizeUnit":"px"} -->
+		<h2 class="gb-headline gb-headline-357cc05f gb-headline-text">Schulsozialarbeit</h2>
+		<!-- /wp:generateblocks/headline -->
+
+		<!-- wp:columns -->
+		<div class="wp-block-columns"><!-- wp:column -->
+		<div class="wp-block-column"><!-- wp:image {"align":"center","id":4718,"sizeSlug":"full","linkDestination":"none"} -->
+		<figure class="wp-block-image aligncenter size-full"><img src="https://elisabethschule-alsdorf.de/wp-content/uploads/2022/09/Krankmeldung.jpg" alt="" class="wp-image-4718"/></figure>
+		<!-- /wp:image --></div>
+		<!-- /wp:column -->
+
+		<!-- wp:column -->
+		<div class="wp-block-column"><!-- wp:image {"align":"center","id":4718,"sizeSlug":"full","linkDestination":"none"} -->
+		<figure class="wp-block-image aligncenter size-full"><img src="https://elisabethschule-alsdorf.de/wp-content/uploads/2022/09/Krankmeldung.jpg" alt="" class="wp-image-4718"/></figure>
+		<!-- /wp:image --></div>
+		<!-- /wp:column --></div>
+		<!-- /wp:columns --></div>
+		<!-- /wp:group -->',
+        )
+);
+
+
+/* ---------------------------------- */
+/* Text mit Überschrift H2 und Bild 2-spaltig */
+/* ---------------------------------- */
+register_block_pattern(
+  'text_mit_ueberschrift_h2_und_bild_2_spaltig',
+    array(
+    'title' => __( 'Text mit Überschrift H2 und Bild 2-spaltig', 'text_mit_ueberschrift_h2_und_bild_2_spaltig' ),
+    'description' => _x( 'Text mit Überschrift H2 und Bild 2-spaltig', 'Text mit Überschrift H2 und Bild 2-spaltig', 'text_mit_ueberschrift_h2_und_bild_2_spaltig' ),
+    'categories'  => array('Custom Websites Haurand'),
+    'content'     =>
+       '<!-- wp:group -->
+		<div class="wp-block-group"><!-- wp:generateblocks/headline {"uniqueId":"2e0f032a","alignment":"left","textColor":"","borderColor":"var(\u002d\u002dglobal-color-10)","highlightTextColor":"","paddingLeft":"20","borderSizeLeft":"6","iconColor":"var(\u002d\u002dglobal-color-10)","iconSize":34,"iconSizeUnit":"px"} -->
+		<h2 class="gb-headline gb-headline-2e0f032a gb-headline-text">Schulsozialarbeit</h2>
+		<!-- /wp:generateblocks/headline -->
+
+		<!-- wp:columns -->
+		<div class="wp-block-columns"><!-- wp:column -->
+		<div class="wp-block-column"><!-- wp:paragraph -->
+		<p>Suscipit taciti primis tempor sagittis euismod libero facilisi aptent elementum felis blandit cursus gravida sociis eleifend lectus nullam dapibus netus feugiat curae curabitur. Curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst penatibus.</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:paragraph -->
+		<p>Mauris eros etiam praesent volutpat posuere. Metus fringilla ullamcorper odio aliquam lacinia conubia mauris tempor etiam ultricies proin quisque lectus sociis tristique integer phasellus inceptos taciti pretium adipiscing praesent lobortis morbi cras magna vivamus per risus fermentum tortor sagittis ligula.</p>
+		<!-- /wp:paragraph --></div>
+		<!-- /wp:column -->
+
+		<!-- wp:column -->
+		<div class="wp-block-column"><!-- wp:image {"align":"center","id":4718,"sizeSlug":"full","linkDestination":"none"} -->
+		<figure class="wp-block-image aligncenter size-full"><img src="https://elisabethschule-alsdorf.de/wp-content/uploads/2022/09/Krankmeldung.jpg" alt="" class="wp-image-4718"/></figure>
+		<!-- /wp:image --></div>
+		<!-- /wp:column --></div>
+		<!-- /wp:columns --></div>
+		<!-- /wp:group -->',
+        )
+);
+
+
+/* ---------------------------------- */
+/* Überschrift H2 mit Text */
+/* ---------------------------------- */
+register_block_pattern(
+  'ueberschrift_h2_mit_text',
+    array(
+    'title' => __( 'Überschrift H2 mit Text', 'ueberschrift_h2_mit_text' ),
+    'description' => _x( 'Überschrift H2 mit Text', 'Überschrift H2 mit Text', 'ueberschrift_h2_mit_text' ),
+    'categories'  => array('Custom Websites Haurand'),
+    'content'     =>
+       '<!-- wp:group -->
+		<div class="wp-block-group"><!-- wp:generateblocks/headline {"uniqueId":"dcce5854","alignment":"left","textColor":"","borderColor":"var(\u002d\u002dglobal-color-10)","highlightTextColor":"","paddingLeft":"20","borderSizeLeft":"6","iconColor":"var(\u002d\u002dglobal-color-10)","iconSize":34,"iconSizeUnit":"px"} -->
+		<h2 class="gb-headline gb-headline-dcce5854 gb-headline-text">Was ist zu tun, wenn mein Kind krank ist</h2>
+		<!-- /wp:generateblocks/headline -->
+
+		<!-- wp:list {"className":"liste_gruener_punkt"} -->
+		<ul class="liste_gruener_punkt"><li>Ist ein Kind erkrankt muss es von den Eltern/Erziehungsberechtigten zwischen 7 Uhr und 7:50 Uhr in der Schule telefonisch entschuldigt werden. In dieser Zeit ist die Schule immer telefonisch erreichbar. Die Erziehungsberechtigten teilen in der telefonischen Nachricht mit, wie lange der Schüler voraussichtlich fehlen wird. Eine mündliche Entschuldigung über Geschwisterkinder, Freunde und Bekannte ist nicht zulässig, die Abgabe einer von Ihnen erstellten schriftlichen Entschuldigung über diese Personen schon.</li><li>Der Schüler wird bei bis zu 2 Fehltagen durch einen Erziehungsberechtigten zusätzlich zur telefonischen Mitteilung (nachträglich) durch eine schriftliche Notiz entschuldigt.</li><li>Ab dem 3. Krankheitstag muss das Fehlen des Schülers in der Schule ärztlich attestiert werden.</li><li>Die schriftliche Entschuldigung der Erziehungsberechtigten oder die ärztliche Bescheinigung ist umgehend, d.h. am Tag der Rückkehr des Schülers beim Klassenlehrer abzugeben.</li></ul>
+		<!-- /wp:list --></div>
+		<!-- /wp:group -->',
+        )
+);
+
+
+
+/* ---------------------------------- */
+/* Zwei Spalten mit Texten und H2 */
+/* ---------------------------------- */
+register_block_pattern(
+  'zwei_spalten_mit_texten_und_h2',
+    array(
+    'title' => __( 'Zwei Spalten mit Texten und H2', 'zwei_spalten_mit_texten_und_h2' ),
+    'description' => _x( 'Zwei Spalten mit Texten und H2', 'Zwei Spalten mit Texten und H2', 'zwei_spalten_mit_texten_und_h2' ),
+    'categories'  => array('Custom Websites Haurand'),
+    'content'     =>
+       '<!-- wp:group -->
+		<div class="wp-block-group"><!-- wp:generateblocks/headline {"uniqueId":"54b86bd7","alignment":"left","textColor":"","borderColor":"var(\u002d\u002dglobal-color-10)","highlightTextColor":"","paddingLeft":"20","borderSizeLeft":"6","iconColor":"var(\u002d\u002dglobal-color-10)","iconSize":34,"iconSizeUnit":"px"} -->
+		<h2 class="gb-headline gb-headline-54b86bd7 gb-headline-text">Schulsozialarbeit</h2>
+		<!-- /wp:generateblocks/headline -->
+
+		<!-- wp:columns -->
+		<div class="wp-block-columns"><!-- wp:column -->
+		<div class="wp-block-column"><!-- wp:paragraph -->
+		<p>Suscipit taciti primis tempor sagittis euismod libero facilisi aptent elementum felis blandit cursus gravida sociis eleifend lectus nullam dapibus netus feugiat curae curabitur. Curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst penatibus.</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:paragraph -->
+		<p>Mauris eros etiam praesent volutpat posuere. Metus fringilla ullamcorper odio aliquam lacinia conubia mauris tempor etiam ultricies proin quisque lectus sociis tristique integer phasellus inceptos taciti pretium adipiscing praesent lobortis morbi cras magna vivamus per risus fermentum tortor sagittis ligula.</p>
+		<!-- /wp:paragraph --></div>
+		<!-- /wp:column -->
+
+		<!-- wp:column -->
+		<div class="wp-block-column"><!-- wp:paragraph -->
+		<p>Suscipit taciti primis tempor sagittis euismod libero facilisi aptent elementum felis blandit cursus gravida sociis eleifend lectus nullam dapibus netus feugiat curae curabitur. Curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst penatibus.</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:paragraph -->
+		<p>Mauris eros etiam praesent volutpat posuere. Metus fringilla ullamcorper odio aliquam lacinia conubia mauris tempor etiam ultricies proin quisque lectus sociis tristique integer phasellus inceptos taciti pretium adipiscing praesent lobortis morbi cras magna vivamus per risus fermentum tortor sagittis ligula.</p>
+		<!-- /wp:paragraph --></div>
+		<!-- /wp:column --></div>
+		<!-- /wp:columns --></div>
+		<!-- /wp:group -->',
+        )
+);
+  
 
