@@ -1,7 +1,7 @@
 <?php
 /**
  * @package Haurand Patterns
- * @version 0.3
+ * @version 0.3.1
  */
 /*
 Plugin Name: Category Vorlagen Haurand
@@ -145,6 +145,45 @@ register_block_pattern(
             <!-- /wp:query -->',
             )
   );
+
+
+/* Cover mit Text links */
+register_block_pattern(
+  'cover_text_left',
+    array(
+    'title' => __( 'Cover und Text links', 'cover_text_left' ),
+    'description' => _x( 'Cover mit Text links', 'Cover mit Text links', 'cover_text_left' ),
+    'categories'  => array('Patterns Haurand'),
+    'content'     =>       
+      ' <!-- wp:cover {"url":"https://test2.haurand.com/wp-content/uploads/2023/01/katzenkinder-1024x768.jpg","id":251,"dimRatio":10,"overlayColor":"primary","minHeight":200,"contentPosition":"center center","isDark":false,"align":"full","style":{"color":{},"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}}} -->
+        <div class="wp-block-cover alignfull is-light" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;min-height:200px"><span aria-hidden="true" class="wp-block-cover__background has-primary-background-color has-background-dim-10 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-251" alt="" src="https://test2.haurand.com/wp-content/uploads/2023/01/katzenkinder-1024x768.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"inherit":true,"type":"constrained"}} -->
+        <div class="wp-block-group"><!-- wp:columns {"align":"wide"} -->
+        <div class="wp-block-columns alignwide"><!-- wp:column {"width":"50%","style":{"spacing":{"padding":{"top":"15%","right":"3rem","bottom":"15%","left":"3rem"}},"color":{"background":"#ffffff3d"}}} -->
+        <div class="wp-block-column has-background" style="background-color:#ffffff3d;padding-top:15%;padding-right:3rem;padding-bottom:15%;padding-left:3rem;flex-basis:50%"><!-- wp:group {"align":"wide"} -->
+        <div class="wp-block-group alignwide"><!-- wp:heading {"textAlign":"left","style":{"typography":{"fontStyle":"normal","fontWeight":"500","fontSize":"3rem"}},"className":"wp-block-heading","fontFamily":"system-font"} -->
+        <h2 class="has-text-align-left wp-block-heading has-system-font-font-family" style="font-size:3rem;font-style:normal;font-weight:500">Welcome to <br>Builder Basics</h2>
+        <!-- /wp:heading -->
+        
+        <!-- wp:paragraph {"fontSize":"medium"} -->
+        <p class="has-medium-font-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at dictum mauris, cursus dapibus sapien. Nunc id felis sit amet lorem congue.</p>
+        <!-- /wp:paragraph -->
+        
+        <!-- wp:buttons -->
+        <div class="wp-block-buttons"><!-- wp:button {"textColor":"secondary","className":"is-style-outline"} -->
+        <div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-secondary-color has-text-color wp-element-button">Start Exploring →</a></div>
+        <!-- /wp:button --></div>
+        <!-- /wp:buttons --></div>
+        <!-- /wp:group --></div>
+        <!-- /wp:column -->
+        
+        <!-- wp:column {"width":"50%"} -->
+        <div class="wp-block-column" style="flex-basis:50%"></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns --></div>
+        <!-- /wp:group --></div></div>
+        <!-- /wp:cover -->',
+        )
+);
 
 
 /* Image with duotone background */
