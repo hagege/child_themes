@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Haurand Patterns
- * @version 0.3.1
+ * @version 0.3.3
  */
 /*
 Plugin Name: Category Vorlagen Haurand
 Plugin URI: http://haurand.com
 Description: Create new Categories "Patterns Haurand" and "Custom Websites Haurand" for Block Patterns with our custom Block patterns
 Author: Hans-Gerd Gerhards
-Version: 0.2
+Version: 0.3.3
 Author URI: http://haurand.com
 */
 
@@ -211,6 +211,150 @@ register_block_pattern(
         <!-- /wp:group -->',
         )
 );
+
+
+
+/* Beispiel für gruppierte Spalten mit Bildern und Text (abwechselnd vollflächig Bild und Text als Cover) */
+register_block_pattern(
+  'group_with_colunns_and_images',
+    array(
+    'title' => __( 'Group with colunns and images', 'group_with_colunns_and_images' ),
+    'description' => _x( 'Group with colunns and images', 'Group with colunns and images', 'group_with_colunns_and_images' ),
+    'categories'  => array('Patterns Haurand'),
+    'content'     =>
+       '<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":"0"}},"layout":{"type":"constrained"}} -->
+        <div class="wp-block-group alignfull" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:columns {"align":"full","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":{"top":"0","left":"0"},"margin":{"top":"0","bottom":"0"}},"border":{"width":"0px","style":"none"}}} -->
+        <div class="wp-block-columns alignfull" style="border-style:none;border-width:0px;margin-top:0;margin-bottom:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:column {"style":{"border":{"width":"0px","style":"none"},"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}}} -->
+        <div class="wp-block-column" style="border-style:none;border-width:0px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:cover {"url":"https://test5.haurand.com/wp-content/uploads/2022/10/katzenkinder.jpg","id":6602,"dimRatio":0,"overlayColor":"pale-cyan-blue","isDark":false,"align":"full"} -->
+        <div class="wp-block-cover alignfull is-light"><span aria-hidden="true" class="wp-block-cover__background has-pale-cyan-blue-background-color has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-6602" alt="" src="https://test5.haurand.com/wp-content/uploads/2022/10/katzenkinder.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Schreibe einen Titel…","fontSize":"large"} -->
+        <p class="has-text-align-center has-large-font-size"></p>
+        <!-- /wp:paragraph --></div></div>
+        <!-- /wp:cover --></div>
+        <!-- /wp:column -->
+
+        <!-- wp:column {"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"backgroundColor":"tertiary"} -->
+        <div class="wp-block-column has-tertiary-background-color has-background" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:cover {"overlayColor":"tertiary"} -->
+        <div class="wp-block-cover"><span aria-hidden="true" class="wp-block-cover__background has-tertiary-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Schreibe einen Titel…","textColor":"foreground","fontSize":"large"} -->
+        <p class="has-text-align-center has-foreground-color has-text-color has-large-font-size">Das sind wirklich niedliche Katzen</p>
+        <!-- /wp:paragraph --></div></div>
+        <!-- /wp:cover --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns -->
+
+        <!-- wp:columns {"isStackedOnMobile":false,"align":"full","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":{"top":"0","left":"0"},"margin":{"top":"0","bottom":"0"}},"border":{"width":"0px","style":"none"}},"className":"fly_right"} -->
+        <div class="wp-block-columns alignfull is-not-stacked-on-mobile fly_right" style="border-style:none;border-width:0px;margin-top:0;margin-bottom:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:column {"style":{"border":{"width":"0px","style":"none"}},"backgroundColor":"foreground"} -->
+        <div class="wp-block-column has-foreground-background-color has-background" style="border-style:none;border-width:0px"><!-- wp:cover {"dimRatio":20,"overlayColor":"pale-pink","isDark":false,"align":"full"} -->
+        <div class="wp-block-cover alignfull is-light"><span aria-hidden="true" class="wp-block-cover__background has-pale-pink-background-color has-background-dim-20 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Schreibe einen Titel…","fontSize":"large"} -->
+        <p class="has-text-align-center has-large-font-size">Das ist ein wunderbares Foto</p>
+        <!-- /wp:paragraph --></div></div>
+        <!-- /wp:cover --></div>
+        <!-- /wp:column -->
+
+        <!-- wp:column {"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}}} -->
+        <div class="wp-block-column" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:cover {"url":"https://test5.haurand.com/wp-content/uploads/2022/07/attendorn_3.jpg","id":6516,"dimRatio":0,"overlayColor":"pale-pink"} -->
+        <div class="wp-block-cover"><span aria-hidden="true" class="wp-block-cover__background has-pale-pink-background-color has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-6516" alt="Attendorn" src="https://test5.haurand.com/wp-content/uploads/2022/07/attendorn_3.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Schreibe einen Titel…","fontSize":"large"} -->
+        <p class="has-text-align-center has-large-font-size"></p>
+        <!-- /wp:paragraph --></div></div>
+        <!-- /wp:cover --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns -->
+
+        <!-- wp:columns {"align":"full","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":{"top":"0","left":"0"},"margin":{"top":"0","bottom":"0"}},"border":{"width":"0px","style":"none"}}} -->
+        <div class="wp-block-columns alignfull" style="border-style:none;border-width:0px;margin-top:0;margin-bottom:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:column {"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}}} -->
+        <div class="wp-block-column" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:cover {"url":"https://test5.haurand.com/wp-content/uploads/2022/07/attendorn_3.jpg","id":6516,"dimRatio":0,"overlayColor":"pale-pink"} -->
+        <div class="wp-block-cover"><span aria-hidden="true" class="wp-block-cover__background has-pale-pink-background-color has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-6516" alt="Attendorn" src="https://test5.haurand.com/wp-content/uploads/2022/07/attendorn_3.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Schreibe einen Titel…","fontSize":"large"} -->
+        <p class="has-text-align-center has-large-font-size"></p>
+        <!-- /wp:paragraph --></div></div>
+        <!-- /wp:cover --></div>
+        <!-- /wp:column -->
+
+        <!-- wp:column {"style":{"border":{"width":"0px","style":"none"}},"backgroundColor":"pale-pink"} -->
+        <div class="wp-block-column has-pale-pink-background-color has-background" style="border-style:none;border-width:0px"><!-- wp:cover {"url":"https://test5.haurand.com/wp-content/uploads/2022/10/katzenkinder.jpg","id":6602,"dimRatio":20,"overlayColor":"pale-pink","isDark":false,"align":"full"} -->
+        <div class="wp-block-cover alignfull is-light"><span aria-hidden="true" class="wp-block-cover__background has-pale-pink-background-color has-background-dim-20 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-6602" alt="" src="https://test5.haurand.com/wp-content/uploads/2022/10/katzenkinder.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Schreibe einen Titel…","fontSize":"large"} -->
+        <p class="has-text-align-center has-large-font-size"></p>
+        <!-- /wp:paragraph --></div></div>
+        <!-- /wp:cover --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns -->
+
+        <!-- wp:columns {"align":"full","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":{"top":"0","left":"0"},"margin":{"top":"0","bottom":"0"}},"border":{"width":"0px","style":"none"}}} -->
+        <div class="wp-block-columns alignfull" style="border-style:none;border-width:0px;margin-top:0;margin-bottom:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:column {"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}}} -->
+        <div class="wp-block-column" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:group {"backgroundColor":"pale-pink","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group has-pale-pink-background-color has-background"><!-- wp:cover {"overlayColor":"pale-pink","isDark":false} -->
+        <div class="wp-block-cover is-light"><span aria-hidden="true" class="wp-block-cover__background has-pale-pink-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Schreibe einen Titel…","fontSize":"large"} -->
+        <p class="has-text-align-center has-large-font-size">Das ist rot</p>
+        <!-- /wp:paragraph --></div></div>
+        <!-- /wp:cover --></div>
+        <!-- /wp:group --></div>
+        <!-- /wp:column -->
+
+        <!-- wp:column -->
+        <div class="wp-block-column"><!-- wp:group {"backgroundColor":"pale-cyan-blue","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group has-pale-cyan-blue-background-color has-background"><!-- wp:cover {"overlayColor":"pale-cyan-blue","isDark":false} -->
+        <div class="wp-block-cover is-light"><span aria-hidden="true" class="wp-block-cover__background has-pale-cyan-blue-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Schreibe einen Titel…","fontSize":"large"} -->
+        <p class="has-text-align-center has-large-font-size">Das ist blau</p>
+        <!-- /wp:paragraph --></div></div>
+        <!-- /wp:cover --></div>
+        <!-- /wp:group --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns --></div>
+        <!-- /wp:group -->',
+    )
+);
+
+
+/* Bild mit einem überlappenden Text */
+register_block_pattern(
+  'image_with_overlapping_text',
+    array(
+    'title' => __( 'Image with overlapping Text', 'image_with_overlapping_text' ),
+    'description' => _x( 'Image with overlapping Text', 'Image with overlapping Text', 'image_with_overlapping_text' ),
+    'categories'  => array('Patterns Haurand'),
+    'content'     =>
+       '<!-- wp:group {"align":"wide","layout":{"inherit":false}} -->
+        <div class="wp-block-group alignwide"><!-- wp:columns {"align":"wide","className":"ungerade"} -->
+        <div class="wp-block-columns alignwide ungerade"><!-- wp:column -->
+        <div class="wp-block-column"><!-- wp:image {"id":5705,"sizeSlug":"full","linkDestination":"none"} -->
+        <figure class="wp-block-image size-full"><img src="https://test5.haurand.com/wp-content/uploads/2022/01/landschaft_mit_gras_800.jpg" alt="" class="wp-image-5705"/></figure>
+        <!-- /wp:image --></div>
+        <!-- /wp:column -->
+
+        <!-- wp:column {"style":{"spacing":{"padding":{"top":"20px","right":"20px","bottom":"20px","left":"20px"}},"color":{"background":"#1a444780"}},"className":"spalte_links_ueberlappend"} -->
+        <div class="wp-block-column spalte_links_ueberlappend has-background" style="background-color:#1a444780;padding-top:20px;padding-right:20px;padding-bottom:20px;padding-left:20px"><!-- wp:heading {"className":"text_ueberlappend"} -->
+        <h2 class="wp-block-heading text_ueberlappend" id="uberlappender-text">Überlappender Text</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph {"className":"text_ueberlappend"} -->
+        <p class="text_ueberlappend">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. <br>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <!-- /wp:paragraph --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns -->
+
+        <!-- wp:spacer {"height":"26px"} -->
+        <div style="height:26px" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+
+        <!-- wp:columns {"align":"wide","className":"gerade"} -->
+        <div class="wp-block-columns alignwide gerade"><!-- wp:column {"style":{"color":{"background":"#1a454880"},"spacing":{"padding":{"top":"20px","right":"20px","bottom":"20px","left":"20px"}}},"className":"spalte_rechts_ueberlappend"} -->
+        <div class="wp-block-column spalte_rechts_ueberlappend has-background" style="background-color:#1a454880;padding-top:20px;padding-right:20px;padding-bottom:20px;padding-left:20px"><!-- wp:heading {"className":"text_ueberlappend"} -->
+        <h2 class="wp-block-heading text_ueberlappend" id="das-ist-eine-uberschrift">Das ist eine Überschrift</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph {"className":"text_ueberlappend"} -->
+        <p class="text_ueberlappend">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <!-- /wp:paragraph --></div>
+        <!-- /wp:column -->
+
+        <!-- wp:column -->
+        <div class="wp-block-column"><!-- wp:image {"id":5704,"sizeSlug":"full","linkDestination":"none"} -->
+        <figure class="wp-block-image size-full"><img src="https://test5.haurand.com/wp-content/uploads/2022/01/diepenbenden_800.jpg" alt="" class="wp-image-5704"/></figure>
+        <!-- /wp:image --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns --></div>
+        <!-- /wp:group -->',
+        )
+  );
+
 
 /* ---------------------------------- */
 /* custom websites haurand */
