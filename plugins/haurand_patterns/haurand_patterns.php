@@ -1,7 +1,7 @@
 <?php
 /**
  * @package Haurand Patterns
- * @version 0.2
+ * @version 0.3
  */
 /*
 Plugin Name: Category Vorlagen Haurand
@@ -47,7 +47,7 @@ if ( class_exists( 'WP_Block_Patterns_Registry' ) ) {
 add_action( 'init', 'patterns_haurand_register_block_categories' );
    
 
-/* eigene Kategorie Haurand */            
+/* eigene Kategorie Custom EKS Haurand */            
 function custom_eks_haurand_register_block_categories() {
   if ( class_exists( 'WP_Block_Patterns_Registry' ) ) {
     register_block_pattern_category(
@@ -57,6 +57,16 @@ function custom_eks_haurand_register_block_categories() {
   }
   add_action( 'init', 'custom_eks_haurand_register_block_categories' );
  
+
+/* eigene Kategorie Custom HA Haurand */            
+function custom_ha_haurand_register_block_categories() {
+  if ( class_exists( 'WP_Block_Patterns_Registry' ) ) {
+    register_block_pattern_category(
+     'HA Haurand', array( 'label' => _x( 'HA Patterns Haurand', 'Block pattern category HA' ) )
+      );
+    }
+  }
+  add_action( 'init', 'custom_ha_haurand_register_block_categories' );
 
 
 /* Beispiel Spaltenblock mit Bild  */
@@ -68,28 +78,28 @@ register_block_pattern(
     'categories'  => array('Patterns Haurand'),
     'content'     =>
        '<!-- wp:group {"align":"full","style":{"color":{"gradient":"linear-gradient(0deg,rgb(255,255,255) 48%,rgb(0,0,0) 48%)"}},"layout":{"type":"constrained"}} -->
-		<div class="wp-block-group alignfull has-background" style="background:linear-gradient(0deg,rgb(255,255,255) 48%,rgb(0,0,0) 48%)"><!-- wp:columns {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"}}}} -->
-		<div class="wp-block-columns alignwide" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)"><!-- wp:column -->
-		<div class="wp-block-column"><!-- wp:heading {"textColor":"luminous-vivid-amber"} -->
-		<h2 class="has-luminous-vivid-amber-color has-text-color">Ein Text</h2>
-		<!-- /wp:heading -->
+        <div class="wp-block-group alignfull has-background" style="background:linear-gradient(0deg,rgb(255,255,255) 48%,rgb(0,0,0) 48%)"><!-- wp:columns {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"}}}} -->
+        <div class="wp-block-columns alignwide" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)"><!-- wp:column -->
+        <div class="wp-block-column"><!-- wp:heading {"textColor":"luminous-vivid-amber"} -->
+        <h2 class="has-luminous-vivid-amber-color has-text-color">Ein Text</h2>
+        <!-- /wp:heading -->
 
-		<!-- wp:paragraph {"style":{"color":{"text":"#e09f12"}}} -->
-		<p class="has-text-color" style="color:#e09f12">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-		<!-- /wp:paragraph --></div>
-		<!-- /wp:column -->
+        <!-- wp:paragraph {"style":{"color":{"text":"#e09f12"}}} -->
+        <p class="has-text-color" style="color:#e09f12">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <!-- /wp:paragraph --></div>
+        <!-- /wp:column -->
 
-		<!-- wp:column -->
-		<div class="wp-block-column"><!-- wp:spacer {"height":"200px"} -->
-		<div style="height:200px" aria-hidden="true" class="wp-block-spacer"></div>
-		<!-- /wp:spacer -->
+        <!-- wp:column -->
+        <div class="wp-block-column"><!-- wp:spacer {"height":"200px"} -->
+        <div style="height:200px" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
 
-		<!-- wp:image {"id":5723,"sizeSlug":"large","linkDestination":"none","style":{"border":{"radius":"30px"}},"className":"is-style-rounded"} -->
-		<figure class="wp-block-image size-large has-custom-border is-style-rounded"><img src="https://test5.haurand.com/wp-content/uploads/2022/01/sorrent_2021-1024x768.jpg" alt="" class="wp-image-5723" style="border-radius:30px"/></figure>
-		<!-- /wp:image --></div>
-		<!-- /wp:column --></div>
-		<!-- /wp:columns --></div>
-		<!-- /wp:group -->',
+        <!-- wp:image {"id":5723,"sizeSlug":"large","linkDestination":"none","style":{"border":{"radius":"30px"}},"className":"is-style-rounded"} -->
+        <figure class="wp-block-image size-large has-custom-border is-style-rounded"><img src="https://test5.haurand.com/wp-content/uploads/2022/01/sorrent_2021-1024x768.jpg" alt="" class="wp-image-5723" style="border-radius:30px"/></figure>
+        <!-- /wp:image --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns --></div>
+        <!-- /wp:group -->',
         )
 );
 
@@ -205,8 +215,8 @@ register_block_pattern(
     'categories'  => array('EKS Haurand'),
     'content'     =>
        '<!-- wp:generateblocks/headline {"uniqueId":"f55e21fc","alignment":"center","marginBottom":"60","hasIcon":true,"iconColor":"var(\u002d\u002dglobal-color-10)","iconLocation":"above","iconPaddingRight":"","iconPaddingBottom":"0.4","iconSize":40,"iconSizeUnit":"px"} -->
-		<h2 class="gb-headline gb-headline-f55e21fc"><span class="gb-icon"><svg viewBox="0 0 17 21.001" xmlns=""><path d="M15.5 21c-.307 0-.612-.094-.872-.279L8.5 16.344l-6.128 4.377A1.499 1.499 0 010 19.5v-16C0 1.57 1.57 0 3.5 0h10C15.43 0 17 1.57 17 3.5v16a1.502 1.502 0 01-1.5 1.5zm-7-8a1.5 1.5 0 01.872.279L14 16.585V3.5a.5.5 0 00-.5-.5h-10a.5.5 0 00-.5.5v13.085l4.628-3.306A1.5 1.5 0 018.5 13z"></path></svg></span><span class="gb-headline-text"><strong>Soziale Arbeit an Schulen und Schulsozialarbeit</strong></span></h2>
-		<!-- /wp:generateblocks/headline -->',
+        <h2 class="gb-headline gb-headline-f55e21fc"><span class="gb-icon"><svg viewBox="0 0 17 21.001" xmlns=""><path d="M15.5 21c-.307 0-.612-.094-.872-.279L8.5 16.344l-6.128 4.377A1.499 1.499 0 010 19.5v-16C0 1.57 1.57 0 3.5 0h10C15.43 0 17 1.57 17 3.5v16a1.502 1.502 0 01-1.5 1.5zm-7-8a1.5 1.5 0 01.872.279L14 16.585V3.5a.5.5 0 00-.5-.5h-10a.5.5 0 00-.5.5v13.085l4.628-3.306A1.5 1.5 0 018.5 13z"></path></svg></span><span class="gb-headline-text"><strong>Soziale Arbeit an Schulen und Schulsozialarbeit</strong></span></h2>
+        <!-- /wp:generateblocks/headline -->',
         )
 );
 
@@ -222,8 +232,8 @@ register_block_pattern(
     'categories'  => array('EKS Haurand'),
     'content'     =>
        '<!-- wp:generateblocks/headline {"uniqueId":"da450a80","alignment":"left","textColor":"","borderColor":"var(\u002d\u002dglobal-color-10)","highlightTextColor":"","paddingLeft":"20","borderSizeLeft":"6","iconColor":"var(\u002d\u002dglobal-color-10)","iconSize":34,"iconSizeUnit":"px"} -->
-		<h2 class="gb-headline gb-headline-da450a80 gb-headline-text">The History of Donate</h2>
-		<!-- /wp:generateblocks/headline -->',
+        <h2 class="gb-headline gb-headline-da450a80 gb-headline-text">The History of Donate</h2>
+        <!-- /wp:generateblocks/headline -->',
         )
 );
 
@@ -239,10 +249,10 @@ register_block_pattern(
     'categories'  => array('EKS Haurand'),
     'content'     =>
        '<!-- wp:list {"className":"liste_gruener_punkt"} -->
-		<ul class="liste_gruener_punkt">
-		<li>Ist ein Kind erkrankt muss es von den Eltern/Erziehungsberechtigten zwischen 7 Uhr und 7:50 Uhr in der Schule telefonisch entschuldigt werden. In dieser Zeit ist die Schule immer telefonisch erreichbar. Die Erziehungsberechtigten teilen in der telefonischen Nachricht mit, wie lange der Schüler voraussichtlich fehlen wird. Eine mündliche Entschuldigung über Geschwisterkinder, Freunde und Bekannte ist nicht zulässig, die Abgabe einer von Ihnen erstellten schriftlichen Entschuldigung über diese Personen schon.</li>
-		</ul>
-		<!-- /wp:list -->',
+        <ul class="liste_gruener_punkt">
+        <li>Ist ein Kind erkrankt muss es von den Eltern/Erziehungsberechtigten zwischen 7 Uhr und 7:50 Uhr in der Schule telefonisch entschuldigt werden. In dieser Zeit ist die Schule immer telefonisch erreichbar. Die Erziehungsberechtigten teilen in der telefonischen Nachricht mit, wie lange der Schüler voraussichtlich fehlen wird. Eine mündliche Entschuldigung über Geschwisterkinder, Freunde und Bekannte ist nicht zulässig, die Abgabe einer von Ihnen erstellten schriftlichen Entschuldigung über diese Personen schon.</li>
+        </ul>
+        <!-- /wp:list -->',
         )
 );
 
@@ -259,24 +269,24 @@ register_block_pattern(
     'categories'  => array('EKS Haurand'),
     'content'     =>
        '<!-- wp:group -->
-		<div class="wp-block-group"><!-- wp:generateblocks/headline {"uniqueId":"357cc05f","alignment":"left","textColor":"","borderColor":"var(\u002d\u002dglobal-color-10)","highlightTextColor":"","paddingLeft":"20","borderSizeLeft":"6","iconColor":"var(\u002d\u002dglobal-color-10)","iconSize":34,"iconSizeUnit":"px"} -->
-		<h2 class="gb-headline gb-headline-357cc05f gb-headline-text">Schulsozialarbeit</h2>
-		<!-- /wp:generateblocks/headline -->
+        <div class="wp-block-group"><!-- wp:generateblocks/headline {"uniqueId":"357cc05f","alignment":"left","textColor":"","borderColor":"var(\u002d\u002dglobal-color-10)","highlightTextColor":"","paddingLeft":"20","borderSizeLeft":"6","iconColor":"var(\u002d\u002dglobal-color-10)","iconSize":34,"iconSizeUnit":"px"} -->
+        <h2 class="gb-headline gb-headline-357cc05f gb-headline-text">Schulsozialarbeit</h2>
+        <!-- /wp:generateblocks/headline -->
 
-		<!-- wp:columns -->
-		<div class="wp-block-columns"><!-- wp:column -->
-		<div class="wp-block-column"><!-- wp:image {"align":"center","id":4718,"sizeSlug":"full","linkDestination":"none"} -->
-		<figure class="wp-block-image aligncenter size-full"><img src="https://elisabethschule-alsdorf.de/wp-content/uploads/2022/09/Krankmeldung.jpg" alt="" class="wp-image-4718"/></figure>
-		<!-- /wp:image --></div>
-		<!-- /wp:column -->
+        <!-- wp:columns -->
+        <div class="wp-block-columns"><!-- wp:column -->
+        <div class="wp-block-column"><!-- wp:image {"align":"center","id":4718,"sizeSlug":"full","linkDestination":"none"} -->
+        <figure class="wp-block-image aligncenter size-full"><img src="https://elisabethschule-alsdorf.de/wp-content/uploads/2022/09/Krankmeldung.jpg" alt="" class="wp-image-4718"/></figure>
+        <!-- /wp:image --></div>
+        <!-- /wp:column -->
 
-		<!-- wp:column -->
-		<div class="wp-block-column"><!-- wp:image {"align":"center","id":4718,"sizeSlug":"full","linkDestination":"none"} -->
-		<figure class="wp-block-image aligncenter size-full"><img src="https://elisabethschule-alsdorf.de/wp-content/uploads/2022/09/Krankmeldung.jpg" alt="" class="wp-image-4718"/></figure>
-		<!-- /wp:image --></div>
-		<!-- /wp:column --></div>
-		<!-- /wp:columns --></div>
-		<!-- /wp:group -->',
+        <!-- wp:column -->
+        <div class="wp-block-column"><!-- wp:image {"align":"center","id":4718,"sizeSlug":"full","linkDestination":"none"} -->
+        <figure class="wp-block-image aligncenter size-full"><img src="https://elisabethschule-alsdorf.de/wp-content/uploads/2022/09/Krankmeldung.jpg" alt="" class="wp-image-4718"/></figure>
+        <!-- /wp:image --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns --></div>
+        <!-- /wp:group -->',
         )
 );
 
@@ -292,28 +302,28 @@ register_block_pattern(
     'categories'  => array('EKS Haurand'),
     'content'     =>
        '<!-- wp:group -->
-		<div class="wp-block-group"><!-- wp:generateblocks/headline {"uniqueId":"2e0f032a","alignment":"left","textColor":"","borderColor":"var(\u002d\u002dglobal-color-10)","highlightTextColor":"","paddingLeft":"20","borderSizeLeft":"6","iconColor":"var(\u002d\u002dglobal-color-10)","iconSize":34,"iconSizeUnit":"px"} -->
-		<h2 class="gb-headline gb-headline-2e0f032a gb-headline-text">Schulsozialarbeit</h2>
-		<!-- /wp:generateblocks/headline -->
+        <div class="wp-block-group"><!-- wp:generateblocks/headline {"uniqueId":"2e0f032a","alignment":"left","textColor":"","borderColor":"var(\u002d\u002dglobal-color-10)","highlightTextColor":"","paddingLeft":"20","borderSizeLeft":"6","iconColor":"var(\u002d\u002dglobal-color-10)","iconSize":34,"iconSizeUnit":"px"} -->
+        <h2 class="gb-headline gb-headline-2e0f032a gb-headline-text">Schulsozialarbeit</h2>
+        <!-- /wp:generateblocks/headline -->
 
-		<!-- wp:columns -->
-		<div class="wp-block-columns"><!-- wp:column -->
-		<div class="wp-block-column"><!-- wp:paragraph -->
-		<p>Suscipit taciti primis tempor sagittis euismod libero facilisi aptent elementum felis blandit cursus gravida sociis eleifend lectus nullam dapibus netus feugiat curae curabitur. Curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst penatibus.</p>
-		<!-- /wp:paragraph -->
+        <!-- wp:columns -->
+        <div class="wp-block-columns"><!-- wp:column -->
+        <div class="wp-block-column"><!-- wp:paragraph -->
+        <p>Suscipit taciti primis tempor sagittis euismod libero facilisi aptent elementum felis blandit cursus gravida sociis eleifend lectus nullam dapibus netus feugiat curae curabitur. Curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst penatibus.</p>
+        <!-- /wp:paragraph -->
 
-		<!-- wp:paragraph -->
-		<p>Mauris eros etiam praesent volutpat posuere. Metus fringilla ullamcorper odio aliquam lacinia conubia mauris tempor etiam ultricies proin quisque lectus sociis tristique integer phasellus inceptos taciti pretium adipiscing praesent lobortis morbi cras magna vivamus per risus fermentum tortor sagittis ligula.</p>
-		<!-- /wp:paragraph --></div>
-		<!-- /wp:column -->
+        <!-- wp:paragraph -->
+        <p>Mauris eros etiam praesent volutpat posuere. Metus fringilla ullamcorper odio aliquam lacinia conubia mauris tempor etiam ultricies proin quisque lectus sociis tristique integer phasellus inceptos taciti pretium adipiscing praesent lobortis morbi cras magna vivamus per risus fermentum tortor sagittis ligula.</p>
+        <!-- /wp:paragraph --></div>
+        <!-- /wp:column -->
 
-		<!-- wp:column -->
-		<div class="wp-block-column"><!-- wp:image {"align":"center","id":4718,"sizeSlug":"full","linkDestination":"none"} -->
-		<figure class="wp-block-image aligncenter size-full"><img src="https://elisabethschule-alsdorf.de/wp-content/uploads/2022/09/Krankmeldung.jpg" alt="" class="wp-image-4718"/></figure>
-		<!-- /wp:image --></div>
-		<!-- /wp:column --></div>
-		<!-- /wp:columns --></div>
-		<!-- /wp:group -->',
+        <!-- wp:column -->
+        <div class="wp-block-column"><!-- wp:image {"align":"center","id":4718,"sizeSlug":"full","linkDestination":"none"} -->
+        <figure class="wp-block-image aligncenter size-full"><img src="https://elisabethschule-alsdorf.de/wp-content/uploads/2022/09/Krankmeldung.jpg" alt="" class="wp-image-4718"/></figure>
+        <!-- /wp:image --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns --></div>
+        <!-- /wp:group -->',
         )
 );
 
@@ -329,14 +339,14 @@ register_block_pattern(
     'categories'  => array('EKS Haurand'),
     'content'     =>
        '<!-- wp:group -->
-		<div class="wp-block-group"><!-- wp:generateblocks/headline {"uniqueId":"dcce5854","alignment":"left","textColor":"","borderColor":"var(\u002d\u002dglobal-color-10)","highlightTextColor":"","paddingLeft":"20","borderSizeLeft":"6","iconColor":"var(\u002d\u002dglobal-color-10)","iconSize":34,"iconSizeUnit":"px"} -->
-		<h2 class="gb-headline gb-headline-dcce5854 gb-headline-text">Was ist zu tun, wenn mein Kind krank ist</h2>
-		<!-- /wp:generateblocks/headline -->
+        <div class="wp-block-group"><!-- wp:generateblocks/headline {"uniqueId":"dcce5854","alignment":"left","textColor":"","borderColor":"var(\u002d\u002dglobal-color-10)","highlightTextColor":"","paddingLeft":"20","borderSizeLeft":"6","iconColor":"var(\u002d\u002dglobal-color-10)","iconSize":34,"iconSizeUnit":"px"} -->
+        <h2 class="gb-headline gb-headline-dcce5854 gb-headline-text">Was ist zu tun, wenn mein Kind krank ist</h2>
+        <!-- /wp:generateblocks/headline -->
 
-		<!-- wp:list {"className":"liste_gruener_punkt"} -->
-		<ul class="liste_gruener_punkt"><li>Ist ein Kind erkrankt muss es von den Eltern/Erziehungsberechtigten zwischen 7 Uhr und 7:50 Uhr in der Schule telefonisch entschuldigt werden. In dieser Zeit ist die Schule immer telefonisch erreichbar. Die Erziehungsberechtigten teilen in der telefonischen Nachricht mit, wie lange der Schüler voraussichtlich fehlen wird. Eine mündliche Entschuldigung über Geschwisterkinder, Freunde und Bekannte ist nicht zulässig, die Abgabe einer von Ihnen erstellten schriftlichen Entschuldigung über diese Personen schon.</li><li>Der Schüler wird bei bis zu 2 Fehltagen durch einen Erziehungsberechtigten zusätzlich zur telefonischen Mitteilung (nachträglich) durch eine schriftliche Notiz entschuldigt.</li><li>Ab dem 3. Krankheitstag muss das Fehlen des Schülers in der Schule ärztlich attestiert werden.</li><li>Die schriftliche Entschuldigung der Erziehungsberechtigten oder die ärztliche Bescheinigung ist umgehend, d.h. am Tag der Rückkehr des Schülers beim Klassenlehrer abzugeben.</li></ul>
-		<!-- /wp:list --></div>
-		<!-- /wp:group -->',
+        <!-- wp:list {"className":"liste_gruener_punkt"} -->
+        <ul class="liste_gruener_punkt"><li>Ist ein Kind erkrankt muss es von den Eltern/Erziehungsberechtigten zwischen 7 Uhr und 7:50 Uhr in der Schule telefonisch entschuldigt werden. In dieser Zeit ist die Schule immer telefonisch erreichbar. Die Erziehungsberechtigten teilen in der telefonischen Nachricht mit, wie lange der Schüler voraussichtlich fehlen wird. Eine mündliche Entschuldigung über Geschwisterkinder, Freunde und Bekannte ist nicht zulässig, die Abgabe einer von Ihnen erstellten schriftlichen Entschuldigung über diese Personen schon.</li><li>Der Schüler wird bei bis zu 2 Fehltagen durch einen Erziehungsberechtigten zusätzlich zur telefonischen Mitteilung (nachträglich) durch eine schriftliche Notiz entschuldigt.</li><li>Ab dem 3. Krankheitstag muss das Fehlen des Schülers in der Schule ärztlich attestiert werden.</li><li>Die schriftliche Entschuldigung der Erziehungsberechtigten oder die ärztliche Bescheinigung ist umgehend, d.h. am Tag der Rückkehr des Schülers beim Klassenlehrer abzugeben.</li></ul>
+        <!-- /wp:list --></div>
+        <!-- /wp:group -->',
         )
 );
 
@@ -353,33 +363,175 @@ register_block_pattern(
     'categories'  => array('EKS Haurand'),
     'content'     =>
        '<!-- wp:group -->
-		<div class="wp-block-group"><!-- wp:generateblocks/headline {"uniqueId":"54b86bd7","alignment":"left","textColor":"","borderColor":"var(\u002d\u002dglobal-color-10)","highlightTextColor":"","paddingLeft":"20","borderSizeLeft":"6","iconColor":"var(\u002d\u002dglobal-color-10)","iconSize":34,"iconSizeUnit":"px"} -->
-		<h2 class="gb-headline gb-headline-54b86bd7 gb-headline-text">Schulsozialarbeit</h2>
-		<!-- /wp:generateblocks/headline -->
+        <div class="wp-block-group"><!-- wp:generateblocks/headline {"uniqueId":"54b86bd7","alignment":"left","textColor":"","borderColor":"var(\u002d\u002dglobal-color-10)","highlightTextColor":"","paddingLeft":"20","borderSizeLeft":"6","iconColor":"var(\u002d\u002dglobal-color-10)","iconSize":34,"iconSizeUnit":"px"} -->
+        <h2 class="gb-headline gb-headline-54b86bd7 gb-headline-text">Schulsozialarbeit</h2>
+        <!-- /wp:generateblocks/headline -->
 
-		<!-- wp:columns -->
-		<div class="wp-block-columns"><!-- wp:column -->
-		<div class="wp-block-column"><!-- wp:paragraph -->
-		<p>Suscipit taciti primis tempor sagittis euismod libero facilisi aptent elementum felis blandit cursus gravida sociis eleifend lectus nullam dapibus netus feugiat curae curabitur. Curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst penatibus.</p>
-		<!-- /wp:paragraph -->
+        <!-- wp:columns -->
+        <div class="wp-block-columns"><!-- wp:column -->
+        <div class="wp-block-column"><!-- wp:paragraph -->
+        <p>Suscipit taciti primis tempor sagittis euismod libero facilisi aptent elementum felis blandit cursus gravida sociis eleifend lectus nullam dapibus netus feugiat curae curabitur. Curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst penatibus.</p>
+        <!-- /wp:paragraph -->
 
-		<!-- wp:paragraph -->
-		<p>Mauris eros etiam praesent volutpat posuere. Metus fringilla ullamcorper odio aliquam lacinia conubia mauris tempor etiam ultricies proin quisque lectus sociis tristique integer phasellus inceptos taciti pretium adipiscing praesent lobortis morbi cras magna vivamus per risus fermentum tortor sagittis ligula.</p>
-		<!-- /wp:paragraph --></div>
-		<!-- /wp:column -->
+        <!-- wp:paragraph -->
+        <p>Mauris eros etiam praesent volutpat posuere. Metus fringilla ullamcorper odio aliquam lacinia conubia mauris tempor etiam ultricies proin quisque lectus sociis tristique integer phasellus inceptos taciti pretium adipiscing praesent lobortis morbi cras magna vivamus per risus fermentum tortor sagittis ligula.</p>
+        <!-- /wp:paragraph --></div>
+        <!-- /wp:column -->
 
-		<!-- wp:column -->
-		<div class="wp-block-column"><!-- wp:paragraph -->
-		<p>Suscipit taciti primis tempor sagittis euismod libero facilisi aptent elementum felis blandit cursus gravida sociis eleifend lectus nullam dapibus netus feugiat curae curabitur. Curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst penatibus.</p>
-		<!-- /wp:paragraph -->
+        <!-- wp:column -->
+        <div class="wp-block-column"><!-- wp:paragraph -->
+        <p>Suscipit taciti primis tempor sagittis euismod libero facilisi aptent elementum felis blandit cursus gravida sociis eleifend lectus nullam dapibus netus feugiat curae curabitur. Curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst penatibus.</p>
+        <!-- /wp:paragraph -->
 
-		<!-- wp:paragraph -->
-		<p>Mauris eros etiam praesent volutpat posuere. Metus fringilla ullamcorper odio aliquam lacinia conubia mauris tempor etiam ultricies proin quisque lectus sociis tristique integer phasellus inceptos taciti pretium adipiscing praesent lobortis morbi cras magna vivamus per risus fermentum tortor sagittis ligula.</p>
-		<!-- /wp:paragraph --></div>
-		<!-- /wp:column --></div>
-		<!-- /wp:columns --></div>
-		<!-- /wp:group -->',
+        <!-- wp:paragraph -->
+        <p>Mauris eros etiam praesent volutpat posuere. Metus fringilla ullamcorper odio aliquam lacinia conubia mauris tempor etiam ultricies proin quisque lectus sociis tristique integer phasellus inceptos taciti pretium adipiscing praesent lobortis morbi cras magna vivamus per risus fermentum tortor sagittis ligula.</p>
+        <!-- /wp:paragraph --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns --></div>
+        <!-- /wp:group -->',
         )
 );
+
+
+/* HA Aachen */
+
+/* Überschrift Text und Button  */
+register_block_pattern(
+  'ueberschrift_text_button',
+    array(
+    'title' => __( 'Überschrift Text und Button', 'ueberschrift_text_button' ),
+    'description' => _x( 'Überschrift Text und Button', 'Überschrift Text und Button', 'ueberschrift_text_button' ),
+    'categories'  => array('HA Haurand'),
+    'content'     =>
+       '<!-- wp:generateblocks/container {"uniqueId":"2de3d7d8","isDynamic":true,"blockVersion":2} -->
+        <!-- wp:generateblocks/grid {"uniqueId":"23d7f96a","columns":4,"isDynamic":true,"blockVersion":2} -->
+        <!-- wp:generateblocks/container {"uniqueId":"3d49d608","isGrid":true,"gridId":"23d7f96a","width":25,"widthMobile":100,"isDynamic":true,"blockVersion":2} -->
+        <!-- wp:generateblocks/headline {"uniqueId":"5788d876","backgroundColor":"","textColor":"","linkColor":"","linkColorHover":"","borderColor":"var(\u002d\u002dglobal-color-15)","highlightTextColor":"","borderSizeBottom":"4","iconColor":""} -->
+        <h2 class="gb-headline gb-headline-5788d876 gb-headline-text">Hausarztmedizin</h2>
+        <!-- /wp:generateblocks/headline -->
+        <!-- /wp:generateblocks/container -->
+
+        <!-- wp:generateblocks/container {"uniqueId":"46e2e58f","isGrid":true,"gridId":"23d7f96a","width":5,"widthMobile":100,"isDynamic":true,"blockVersion":2} /-->
+
+        <!-- wp:generateblocks/container {"uniqueId":"a810053a","isGrid":true,"gridId":"23d7f96a","width":60,"widthMobile":100,"isDynamic":true,"blockVersion":2} -->
+        <!-- wp:paragraph -->
+        <p>Als klassische Hausarztpraxis und Praxis für Allgemeinmedizin in Aachen – mit moderner Technik – sind wir für unsere Patienten mit Ihren Sorgen, Nöten und Krankheiten da. Ob Rückenschmerzen, Erkältung, Magen-Darm-Grippe, Hautausschlag, Kopfschmerzen, Husten, Herzbeschwerden oder seelische Beschwerden…. – als erster Ansprechpartner ist Ihre Hausärztin für nahezu alle Erkrankungen geeignet.</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:generateblocks/button-container {"uniqueId":"d6486110","isDynamic":true,"blockVersion":2} -->
+        <!-- wp:generateblocks/button {"uniqueId":"f21bdbed","hasUrl":true,"backgroundColor":"var(\u002d\u002dglobal-color-17)","backgroundColorHover":"var(\u002d\u002dglobal-color-17)","textColor":"#ffffff","textColorHover":"#ffffff","borderColor":"","borderColorHover":"","paddingTop":"15","paddingRight":"20","paddingBottom":"15","paddingLeft":"20","blockVersion":2} -->
+        <a class="gb-button gb-button-f21bdbed gb-button-text" href="https://www.hausaerztin-aachen.de/hausarztmedizin-in-aachen/">Weiterlesen</a>
+        <!-- /wp:generateblocks/button -->
+        <!-- /wp:generateblocks/button-container -->
+        <!-- /wp:generateblocks/container -->
+
+        <!-- wp:generateblocks/container {"uniqueId":"01b407aa","isGrid":true,"gridId":"23d7f96a","width":10,"widthMobile":100,"isDynamic":true,"blockVersion":2} /-->
+        <!-- /wp:generateblocks/grid -->
+
+        <!-- wp:spacer {"height":"70px"} -->
+        <div style="height:70px" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+        <!-- /wp:generateblocks/container -->',
+        )
+);
+
+		
+/* Überschrift Text Bild und Button  */
+register_block_pattern(
+  'ueberschrift_text_bild_button',
+    array(
+    'title' => __( 'Überschrift Text Bild und Button', 'ueberschrift_text_bild_button' ),
+    'description' => _x( 'Überschrift Text Bild und Button', 'Überschrift Text Bild und Button', 'ueberschrift_text_bild_button' ),
+    'categories'  => array('HA Haurand'),
+    'content'     =>
+       '<!-- wp:generateblocks/container {"uniqueId":"af27828c","isDynamic":true,"blockVersion":2} -->
+		<!-- wp:generateblocks/grid {"uniqueId":"cc2e4534","columns":4,"isDynamic":true,"blockVersion":2} -->
+		<!-- wp:generateblocks/container {"uniqueId":"c995eac6","isGrid":true,"gridId":"cc2e4534","width":25,"widthMobile":100,"isDynamic":true,"blockVersion":2} -->
+		<!-- wp:generateblocks/headline {"uniqueId":"62fe1605","backgroundColor":"","textColor":"","linkColor":"","linkColorHover":"","borderColor":"var(\u002d\u002dglobal-color-15)","highlightTextColor":"","borderSizeBottom":"4","iconColor":""} -->
+		<h2 class="gb-headline gb-headline-62fe1605 gb-headline-text">Traditionelle Chinesische Medizin beim Hausarzt</h2>
+		<!-- /wp:generateblocks/headline -->
+
+		<!-- wp:image {"id":4781,"sizeSlug":"full","linkDestination":"media"} -->
+		<figure class="wp-block-image size-full"><a href="https://test2.haurand.com/wp-content/uploads/2023/01/katzenkinder-1024x768.jpg"><img src="https://test2.haurand.com/wp-content/uploads/2023/01/katzenkinder-1024x768.jpg" alt="" class="wp-image-4781"/></a></figure>
+		<!-- /wp:image -->
+		<!-- /wp:generateblocks/container -->
+
+		<!-- wp:generateblocks/container {"uniqueId":"15d66954","isGrid":true,"gridId":"cc2e4534","width":5,"widthMobile":100,"isDynamic":true,"blockVersion":2} /-->
+
+		<!-- wp:generateblocks/container {"uniqueId":"390d7bb1","isGrid":true,"gridId":"cc2e4534","width":60,"widthMobile":100,"isDynamic":true,"blockVersion":2} -->
+		<!-- wp:paragraph -->
+		<p>Zu den Heilmethoden der Traditionellen Chinesischen Medizin (TCM) gehört neben der&nbsp; Akupunktur die Pflanzenheilkunde, die Moxibustion, die chinesische Massage und Körperübungen (Qi gong, Tai Chi).</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:generateblocks/button-container {"uniqueId":"4c0ec9ef","isDynamic":true,"blockVersion":2} -->
+		<!-- wp:generateblocks/button {"uniqueId":"0ef0dcb2","hasUrl":true,"backgroundColor":"var(\u002d\u002dglobal-color-17)","backgroundColorHover":"var(\u002d\u002dglobal-color-17)","textColor":"#ffffff","textColorHover":"#ffffff","borderColor":"","borderColorHover":"","paddingTop":"15","paddingRight":"20","paddingBottom":"15","paddingLeft":"20","blockVersion":2} -->
+		<a class="gb-button gb-button-0ef0dcb2 gb-button-text" href="https://www.hausaerztin-aachen.de/traditionelle-chinesische-medizin/">Weiterlesen</a>
+		<!-- /wp:generateblocks/button -->
+		<!-- /wp:generateblocks/button-container -->
+		<!-- /wp:generateblocks/container -->
+
+		<!-- wp:generateblocks/container {"uniqueId":"a05e77cf","isGrid":true,"gridId":"cc2e4534","width":10,"widthMobile":100,"isDynamic":true,"blockVersion":2} /-->
+		<!-- /wp:generateblocks/grid -->
+
+		<!-- wp:spacer {"height":"70px"} -->
+		<div style="height:70px" aria-hidden="true" class="wp-block-spacer"></div>
+		<!-- /wp:spacer -->
+		<!-- /wp:generateblocks/container -->',
+        )
+);
+
+
+/* Urlaub  */
+register_block_pattern(
+	'urlaub',
+	  array(
+	  'title' => __( 'Urlaub', 'urlaub' ),
+	  'description' => _x( 'Urlaub', 'Urlaub', 'urlaub' ),
+	  'categories'  => array('HA Haurand'),
+	  'content'     =>
+        '<!-- wp:generateblocks/container {"uniqueId":"fc596d7b","isDynamic":true,"blockVersion":2} -->
+        <!-- wp:generateblocks/grid {"uniqueId":"1a4dc702","columns":4,"isDynamic":true,"blockVersion":2} -->
+        <!-- wp:generateblocks/container {"uniqueId":"3e83541c","isGrid":true,"gridId":"1a4dc702","width":25,"widthMobile":100,"isDynamic":true,"blockVersion":2} -->
+        <!-- wp:generateblocks/headline {"uniqueId":"625d21d9","backgroundColor":"","textColor":"","linkColor":"","linkColorHover":"","borderColor":"var(\u002d\u002dglobal-color-15)","highlightTextColor":"","borderSizeBottom":"4","iconColor":""} -->
+        <h2 class="gb-headline gb-headline-625d21d9 gb-headline-text">Urlaub</h2>
+        <!-- /wp:generateblocks/headline -->
+        <!-- /wp:generateblocks/container -->
+        
+        <!-- wp:generateblocks/container {"uniqueId":"a25c676b","isGrid":true,"gridId":"1a4dc702","width":5,"widthMobile":100,"isDynamic":true,"blockVersion":2} /-->
+        
+        <!-- wp:generateblocks/container {"uniqueId":"c91414b4","isGrid":true,"gridId":"1a4dc702","width":60,"widthMobile":100,"isDynamic":true,"blockVersion":2} -->
+        <!-- wp:paragraph -->
+        <p>Als klassische Hausarztpraxis und Praxis für Allgemeinmedizin in Aachen – mit moderner Technik – sind wir für unsere Patienten mit Ihren Sorgen, Nöten und Krankheiten da. Ob Rückenschmerzen, Erkältung, Magen-Darm-Grippe, Hautausschlag, Kopfschmerzen, Husten, Herzbeschwerden oder seelische Beschwerden…. – als erster Ansprechpartner ist Ihre Hausärztin für nahezu alle Erkrankungen geeignet.</p>
+        <!-- /wp:paragraph -->
+        <!-- /wp:generateblocks/container -->
+        
+        <!-- wp:generateblocks/container {"uniqueId":"71d927b0","isGrid":true,"gridId":"1a4dc702","width":10,"widthMobile":100,"isDynamic":true,"blockVersion":2} /-->
+        <!-- /wp:generateblocks/grid -->
+        
+        <!-- wp:spacer {"height":"70px"} -->
+        <div style="height:70px" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+        <!-- /wp:generateblocks/container -->',
+		  )
+);
+
+
+
+/* Eigener Button  */
+register_block_pattern(
+  'eigener_button',
+    array(
+    'title' => __( 'Eigener Button', 'eigener_button' ),
+    'description' => _x( 'Eigener Button', 'Eigener Button', 'eigener_button' ),
+    'categories'  => array('HA Haurand'),
+    'content'     =>
+       '<!-- wp:generateblocks/button-container {"uniqueId":"4c0ec9ef","isDynamic":true,"blockVersion":2} -->
+        <!-- wp:generateblocks/button {"uniqueId":"0ef0dcb2","hasUrl":true,"backgroundColor":"var(\u002d\u002dglobal-color-15)","backgroundColorHover":"var(\u002d\u002dglobal-color-17)","textColor":"#ffffff","textColorHover":"#ffffff","borderColor":"","borderColorHover":"","paddingTop":"15","paddingRight":"20","paddingBottom":"15","paddingLeft":"20","blockVersion":2} -->
+        <a class="gb-button gb-button-0ef0dcb2 gb-button-text" href="http://www.hausaerztin-aachen.de/wp-content/uploads/2022/11/Aufklaerungsbogen_de.pdf">Hier klicken</a>
+        <!-- /wp:generateblocks/button -->
+        <!-- /wp:generateblocks/button-container -->',
+        )
+);
+
   
 
