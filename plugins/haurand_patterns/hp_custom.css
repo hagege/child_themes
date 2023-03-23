@@ -1,0 +1,46 @@
+/* sticky header */ 
+
+.sticky_header {
+    position: fixed;
+    inset: 0;
+    padding: 30px;
+    height: 100px;
+    z-index: 11;
+    background-color: white;
+}
+
+/* --------------------------- */
+/* Text in Spalten überlappend */
+/* --------------------------- */
+
+.wp-block-image img{
+    filter: none;
+}
+
+@media (min-width: 782px) {
+.wp-block-column.spalte_links_ueberlappend {
+  margin-left: -15rem;
+}
+.wp-block-column.spalte_rechts_ueberlappend {
+margin-right: -15rem;
+z-index:0;
+}
+.wp-block-column.spalte_links_ueberlappend,
+.wp-block-column.spalte_rechts_ueberlappend
+{
+margin-top: 15vh;
+margin-bottom: 15vh; 
+padding: 10vh;
+}
+}
+
+@media (max-width: 781px) {
+.wp-block-column.spalte_links_ueberlappend.has-background.is-layout-flow,
+.wp-block-column.spalte_rechts_ueberlappend.has-background.is-layout-flow {
+    margin-top: -25vh;
+}
+.gerade {
+    flex-direction: column-reverse;
+}
+}
+/* ---------------

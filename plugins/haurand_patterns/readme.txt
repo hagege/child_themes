@@ -1,6 +1,6 @@
 === Haurand Patterns ===
 Contributors: Hans-Gerd Gerhards, haurand.com
-Stable tag: 0.3.3
+Stable tag: 0.5
 Tested up to: 6.1.1
 Requires at least: 4.6
 

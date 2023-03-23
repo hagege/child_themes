@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Haurand Patterns
- * @version 0.3.3
+ * @version 0.5
  */
 /*
 Plugin Name: Category Vorlagen Haurand
 Plugin URI: http://haurand.com
 Description: Create new Categories "Patterns Haurand" and "Custom Websites Haurand" for Block Patterns with our custom Block patterns
 Author: Hans-Gerd Gerhards
-Version: 0.3.3
+Version: 0.5
 Author URI: http://haurand.com
 */
 
@@ -17,6 +17,11 @@ Author URI: http://haurand.com
 /* Datum: 31.10.2022
 /* Autor: hgg
 /*----------------------------------------------------------------*/
+
+add_action( 'wp_enqueue_scripts', 'hp_custom_styles' );
+function hp_custom_styles() {
+    wp_enqueue_style( 'custom-style', plugins_url( '/hp_custom.css' , __FILE__ ) );
+}
 
 /* Allows a theme to de-register its support of a certain feature */  
   add_action('init', function() {
