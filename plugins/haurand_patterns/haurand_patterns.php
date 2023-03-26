@@ -1,7 +1,7 @@
 <?php
 /**
  * @package Haurand Patterns
- * @version 0.5.1
+ * @version 0.5.2
  */
 /*
 Plugin Name: Category Vorlagen Haurand
@@ -214,6 +214,59 @@ register_block_pattern(
         <!-- /wp:spacer --></div>
         <!-- /wp:group --></div>
         <!-- /wp:group -->',
+        )
+);
+
+
+/* split screen */
+register_block_pattern(
+  'split_screen',
+    array(
+    'title' => __( 'split screen', 'split_screen' ),
+    'description' => _x( 'split screen', 'split screen', 'split_screen' ),
+    'categories'  => array('Patterns Haurand'),
+    'content'     =>
+       '<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"blockGap":"0px"},"border":{"width":"0px","style":"none"}},"layout":{"type":"constrained"}} -->
+       <div class="wp-block-group alignfull" style="border-style:none;border-width:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:columns {"align":"full","style":{"border":{"width":"0px","style":"none"},"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"margin":{"top":"0px","bottom":"0px"},"blockGap":{"top":"0px","left":"0px"}}}} -->
+       <div class="wp-block-columns alignfull" style="border-style:none;border-width:0px;margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:column {"style":{"spacing":{"blockGap":"0","padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}},"className":"links"} -->
+       <div class="wp-block-column links" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:cover {"overlayColor":"contrast","minHeight":820,"minHeightUnit":"px"} -->
+       <div class="wp-block-cover" style="min-height:820px"><span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0","right":"var:preset|spacing|60","bottom":"var:preset|spacing|60","left":"var:preset|spacing|60"},"blockGap":"var:preset|spacing|40"}},"layout":{"type":"constrained"}} -->
+       <div class="wp-block-group" style="padding-top:0;padding-right:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--60)"><!-- wp:site-logo /-->
+       
+       <!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"medium"} -->
+       <p class="has-medium-font-size" style="text-transform:uppercase">●&nbsp;<strong>Haurand.com</strong></p>
+       <!-- /wp:paragraph -->
+       
+       <!-- wp:paragraph {"align":"left","placeholder":"Schreibe einen Titel…","fontSize":"large"} -->
+       <p class="has-text-align-left has-large-font-size"><strong>Kreatives Design.</strong> <br><strong>Ein etwas anderes Design mit FSE</strong></p>
+       <!-- /wp:paragraph -->
+       
+       <!-- wp:buttons -->
+       <div class="wp-block-buttons"><!-- wp:button -->
+       <div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Projekt starten</a></div>
+       <!-- /wp:button --></div>
+       <!-- /wp:buttons --></div>
+       <!-- /wp:group --></div></div>
+       <!-- /wp:cover --></div>
+       <!-- /wp:column -->
+       
+       <!-- wp:column {"verticalAlignment":"top","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":"0px"},"border":{"width":"0px","style":"none"}},"className":"rechts"} -->
+       <div class="wp-block-column is-vertically-aligned-top rechts" style="border-style:none;border-width:0px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:cover {"url":"http://localhost/space4/wp-content/uploads/2023/01/Waterfall-37088.mp4","id":135,"dimRatio":60,"backgroundType":"video","minHeight":820,"minHeightUnit":"px","contentPosition":"center center","style":{"spacing":{"margin":{"top":"0px"}}}} -->
+       <div class="wp-block-cover" style="margin-top:0px;min-height:820px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-60 has-background-dim"></span><video class="wp-block-cover__video-background intrinsic-ignore" autoplay muted loop playsinline src="http://localhost/space4/wp-content/uploads/2023/01/Waterfall-37088.mp4" data-object-fit="cover"></video><div class="wp-block-cover__inner-container"><!-- wp:columns {"style":{"spacing":{"padding":{"top":"0"}}}} -->
+       <div class="wp-block-columns" style="padding-top:0"><!-- wp:column {"style":{"spacing":{"padding":{"top":"0","right":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|50"}}}} -->
+       <div class="wp-block-column" style="padding-top:0;padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)"><!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"2em","bottom":"4em"}}},"layout":{"type":"flex","justifyContent":"center"}} -->
+       <div class="wp-block-group alignfull" style="padding-top:2em;padding-bottom:4em"><!-- wp:navigation {"ref":137,"overlayMenu":"always","layout":{"type":"flex","setCascadingProperties":true,"justifyContent":"center"}} /--></div>
+       <!-- /wp:group --></div>
+       <!-- /wp:column --></div>
+       <!-- /wp:columns -->
+       
+       <!-- wp:spacer {"height":"345px"} -->
+       <div style="height:345px" aria-hidden="true" class="wp-block-spacer"></div>
+       <!-- /wp:spacer --></div></div>
+       <!-- /wp:cover --></div>
+       <!-- /wp:column --></div>
+       <!-- /wp:columns --></div>
+       <!-- /wp:group -->',
         )
 );
 

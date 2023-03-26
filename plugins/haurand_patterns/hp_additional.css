@@ -1,0 +1,27 @@
+/* ggfs. Vewrendung von zusätzlichen CSS-Regeln bei Verwednung von einzelnen Block Patterns */ 
+
+/* bei Block Pattern split_screen */
+.wp-block-column.links.is-layout-flow,
+.wp-block-column.rechts.is-layout-flow{
+transition: all 2s ease-in-out;
+-webkit-filter: grayscale(0%);
+filter: grayscale(0%);
+}
+
+
+.wp-block-column.links.is-layout-flow:hover
+{
+background-color:#f7f8f9;
+transform: translateX(50vw);
+-webkit-transition: all 3.5s ease-in-out 0s;
+transition: all 2.5s ease-in-out 0s;
+}
+
+
+.wp-block-column.rechts.is-layout-flow:hover
+{
+background-color:#f7f8f9;
+transform: translateX(-50vw);
+-webkit-transition: all 3.5s ease-in-out 0s;
+transition: all 2.5s ease-in-out 0s;
+}
