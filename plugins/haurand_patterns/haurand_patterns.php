@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Haurand Patterns
- * @version 0.5
+ * @version 0.5.1
  */
 /*
 Plugin Name: Category Vorlagen Haurand
 Plugin URI: http://haurand.com
 Description: Create new Categories "Patterns Haurand" and "Custom Websites Haurand" for Block Patterns with our custom Block patterns
 Author: Hans-Gerd Gerhards
-Version: 0.5
+Version: 0.5.1
 Author URI: http://haurand.com
 */
 
@@ -78,8 +78,8 @@ function custom_ha_haurand_register_block_categories() {
 register_block_pattern(
   'spaltenblock_mit_bild',
     array(
-    'title' => __( 'Spaltenblock mit Bild', 'spaltenblock_mit_bild' ),
-    'description' => _x( 'Spaltenblock mit Bild', 'Spaltenblock mit Bild', 'spaltenblock_mit_bild' ),
+    'title' => __( 'Spaltenblock mit einem schönen Bild', 'spaltenblock_mit_bild' ),
+    'description' => _x( 'Spaltenblock mit Bild', 'columns-block with image', 'spaltenblock_mit_bild' ),
     'categories'  => array('Patterns Haurand'),
     'content'     =>
        '<!-- wp:group {"align":"full","style":{"color":{"gradient":"linear-gradient(0deg,rgb(255,255,255) 48%,rgb(0,0,0) 48%)"}},"layout":{"type":"constrained"}} -->
@@ -195,8 +195,8 @@ register_block_pattern(
 register_block_pattern(
   'image_with_duotone_background',
     array(
-    'title' => __( 'Image with duotone background', 'image_with_duotone_background' ),
-    'description' => _x( 'Image with duotone background', 'Image with duotone background', 'image_with_duotone_background' ),
+    'title' => __( 'Bild mit duotone HIntergrund', 'image_with_duotone_background' ),
+    'description' => _x( 'Bild mit duotone HIntergrund', 'Image with duotone background', 'image_with_duotone_background' ),
     'categories'  => array('Patterns Haurand'),
     'content'     =>
        '<!-- wp:group {"align":"wide","style":{"color":{"gradient":"linear-gradient(180deg,rgb(0,0,0) 50%,rgb(255,255,255) 50%)"}},"layout":{"type":"constrained"}} -->
@@ -358,6 +358,233 @@ register_block_pattern(
         <!-- /wp:columns --></div>
         <!-- /wp:group -->',
         )
+  );
+
+  /* Bilder-Galerie-Leiste  */
+register_block_pattern(
+  'bilder_Galerie-leiste',
+    array(
+    'title' => __( 'Bilder-Galerie-Leiste', 'bilder_Galerie-leiste' ),
+    'description' => _x( 'Bilder-Galerie-Leiste', 'Bilder-Galerie-Leiste', 'bilder_Galerie-leiste' ),
+    'categories'  => array('Patterns Haurand'),
+    'content'     =>
+       '<!-- wp:gallery {"columns":6,"linkTo":"none","align":"full","style":{"spacing":{"blockGap":{"top":"0","left":"0"}}}} -->
+       <figure class="wp-block-gallery alignfull has-nested-images columns-6 is-cropped"><!-- wp:image {"id":5727,"sizeSlug":"large","linkDestination":"none"} -->
+       <figure class="wp-block-image size-large"><img src="https://test5.haurand.com/wp-content/uploads/2022/01/weg_mit_sonne_und_schatten.jpg" alt="" class="wp-image-5727"/></figure>
+       <!-- /wp:image -->
+       
+       <!-- wp:image {"id":5726,"sizeSlug":"large","linkDestination":"none"} -->
+       <figure class="wp-block-image size-large"><img src="https://test5.haurand.com/wp-content/uploads/2022/01/weg_mit_sonne_800.jpg" alt="" class="wp-image-5726"/></figure>
+       <!-- /wp:image -->
+       
+       <!-- wp:image {"id":5725,"sizeSlug":"large","linkDestination":"none"} -->
+       <figure class="wp-block-image size-large"><img src="https://test5.haurand.com/wp-content/uploads/2022/01/wald_im_herbst_800.jpg" alt="Alt Text: Wald im Herbst" class="wp-image-5725"/><figcaption class="wp-element-caption">Caption: Wald im Herbst</figcaption></figure>
+       <!-- /wp:image -->
+       
+       <!-- wp:image {"id":5724,"sizeSlug":"large","linkDestination":"none"} -->
+       <figure class="wp-block-image size-large"><img src="https://test5.haurand.com/wp-content/uploads/2022/01/stausee_800.jpg" alt="" class="wp-image-5724"/></figure>
+       <!-- /wp:image -->
+       
+       <!-- wp:image {"id":5723,"sizeSlug":"large","linkDestination":"none"} -->
+       <figure class="wp-block-image size-large"><img src="https://test5.haurand.com/wp-content/uploads/2022/01/sorrent_2021-1024x768.jpg" alt="" class="wp-image-5723"/></figure>
+       <!-- /wp:image -->
+       
+       <!-- wp:image {"id":5714,"sizeSlug":"large","linkDestination":"none"} -->
+       <figure class="wp-block-image size-large"><img src="https://test5.haurand.com/wp-content/uploads/2022/01/Platzhalter_Kuehe-1024x768.jpg" alt="" class="wp-image-5714"/></figure>
+       <!-- /wp:image --></figure>
+       <!-- /wp:gallery -->',
+        )
+);
+
+  /* Block-Pattern-Section  */
+register_block_pattern(
+  'block-pattern-section',
+    array(
+    'title' => __( 'Block-Pattern-Section', 'block-pattern-section' ),
+    'description' => _x( 'Block-Pattern-Section', 'Block-Pattern-Section', 'block-pattern-section' ),
+    'categories'  => array('Patterns Haurand'),
+    'content'     =>
+       '<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"30px","left":"0px"},"margin":{"top":"0px","bottom":"0px"},"blockGap":"0px"}},"layout":{"type":"constrained","contentSize":"1280px"}} -->
+       <div class="wp-block-group alignwide" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:30px;padding-left:0px"><!-- wp:columns {"align":"full","style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"margin":{"top":"0px","bottom":"0px"},"blockGap":{"top":"0px","left":"0px"}}}} -->
+       <div class="wp-block-columns alignfull" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:column -->
+       <div class="wp-block-column"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"blockGap":"0px","margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"constrained"}} -->
+       <div class="wp-block-group" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:cover {"url":"https://test5.haurand.com/wp-content/uploads/2022/07/attendorn_3.jpg","id":6516,"dimRatio":50,"minHeight":300,"customGradient":"linear-gradient(180deg,rgba(255,255,255,0) 50%,rgb(255,198,47) 50%)","contentPosition":"bottom center","style":{"color":[]}} -->
+       <div class="wp-block-cover has-custom-content-position is-position-bottom-center" style="min-height:300px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient" style="background:linear-gradient(180deg,rgba(255,255,255,0) 50%,rgb(255,198,47) 50%)"></span><img class="wp-block-cover__image-background wp-image-6516" alt="Attendorn" src="https://test5.haurand.com/wp-content/uploads/2022/07/attendorn_3.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","textColor":"base","fontSize":"large"} -->
+       <p class="has-text-align-center has-base-color has-text-color has-large-font-size">Ansicht Wald</p>
+       <!-- /wp:paragraph -->
+       
+       <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+       <div class="wp-block-buttons"><!-- wp:button {"textAlign":"center"} -->
+       <div class="wp-block-button"><a class="wp-block-button__link has-text-align-center wp-element-button">Hier klicken</a></div>
+       <!-- /wp:button --></div>
+       <!-- /wp:buttons --></div></div>
+       <!-- /wp:cover -->
+       
+       <!-- wp:heading {"style":{"typography":{"fontSize":"26px","fontStyle":"normal","fontWeight":"500"},"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"margin":{"top":"20px","right":"0px","bottom":"20px","left":"0px"}}}} -->
+       <h2 class="wp-block-heading" style="margin-top:20px;margin-right:0px;margin-bottom:20px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;font-size:26px;font-style:normal;font-weight:500">Lorem ipsum dolor</h2>
+       <!-- /wp:heading -->
+       
+       <!-- wp:paragraph {"style":{"typography":{"fontSize":"16px"},"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"margin":{"top":"0px","right":"0px","bottom":"30px","left":"0px"}}}} -->
+       <p style="margin-top:0px;margin-right:0px;margin-bottom:30px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;font-size:16px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text.</p>
+       <!-- /wp:paragraph -->
+       
+       <!-- wp:buttons -->
+       <div class="wp-block-buttons"><!-- wp:button {"textColor":"black","style":{"typography":{"fontSize":"16px"},"spacing":{"padding":{"top":"10px","right":"25px","bottom":"10px","left":"25px"}},"border":{"radius":"0px"},"color":{"background":"#ffc62f"}}} -->
+       <div class="wp-block-button has-custom-font-size" style="font-size:16px"><a class="wp-block-button__link has-black-color has-text-color has-background wp-element-button" style="border-radius:0px;background-color:#ffc62f;padding-top:10px;padding-right:25px;padding-bottom:10px;padding-left:25px">Read More</a></div>
+       <!-- /wp:button --></div>
+       <!-- /wp:buttons --></div>
+       <!-- /wp:group --></div>
+       <!-- /wp:column -->
+       
+       <!-- wp:column -->
+       <div class="wp-block-column"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"blockGap":"0px","margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"constrained"}} -->
+       <div class="wp-block-group" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:cover {"url":"https://test5.haurand.com/wp-content/uploads/2022/01/sorrent_2021.jpg","id":5723,"dimRatio":50,"minHeight":300,"customGradient":"linear-gradient(180deg,rgba(255,255,255,0) 50%,rgb(255,198,47) 50%)","contentPosition":"bottom center","style":{"color":[]}} -->
+       <div class="wp-block-cover has-custom-content-position is-position-bottom-center" style="min-height:300px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient" style="background:linear-gradient(180deg,rgba(255,255,255,0) 50%,rgb(255,198,47) 50%)"></span><img class="wp-block-cover__image-background wp-image-5723" alt="" src="https://test5.haurand.com/wp-content/uploads/2022/01/sorrent_2021.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","textColor":"base","fontSize":"large"} -->
+       <p class="has-text-align-center has-base-color has-text-color has-large-font-size">Ansicht Sorrent</p>
+       <!-- /wp:paragraph -->
+       
+       <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+       <div class="wp-block-buttons"><!-- wp:button {"textAlign":"center"} -->
+       <div class="wp-block-button"><a class="wp-block-button__link has-text-align-center wp-element-button">Hier klicken</a></div>
+       <!-- /wp:button --></div>
+       <!-- /wp:buttons --></div></div>
+       <!-- /wp:cover -->
+       
+       <!-- wp:heading {"style":{"typography":{"fontSize":"26px","fontStyle":"normal","fontWeight":"500"},"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"margin":{"top":"20px","right":"0px","bottom":"20px","left":"0px"}}}} -->
+       <h2 class="wp-block-heading" style="margin-top:20px;margin-right:0px;margin-bottom:20px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;font-size:26px;font-style:normal;font-weight:500">Lorem ipsum dolor</h2>
+       <!-- /wp:heading -->
+       
+       <!-- wp:paragraph {"style":{"typography":{"fontSize":"16px"},"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"margin":{"top":"0px","right":"0px","bottom":"30px","left":"0px"}}}} -->
+       <p style="margin-top:0px;margin-right:0px;margin-bottom:30px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;font-size:16px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text.</p>
+       <!-- /wp:paragraph -->
+       
+       <!-- wp:buttons -->
+       <div class="wp-block-buttons"><!-- wp:button {"textColor":"black","style":{"typography":{"fontSize":"16px"},"spacing":{"padding":{"top":"10px","right":"25px","bottom":"10px","left":"25px"}},"border":{"radius":"0px"},"color":{"background":"#ffc62f"}}} -->
+       <div class="wp-block-button has-custom-font-size" style="font-size:16px"><a class="wp-block-button__link has-black-color has-text-color has-background wp-element-button" style="border-radius:0px;background-color:#ffc62f;padding-top:10px;padding-right:25px;padding-bottom:10px;padding-left:25px">Read More</a></div>
+       <!-- /wp:button --></div>
+       <!-- /wp:buttons --></div>
+       <!-- /wp:group --></div>
+       <!-- /wp:column -->
+       
+       <!-- wp:column -->
+       <div class="wp-block-column"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"blockGap":"0px","margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"constrained"}} -->
+       <div class="wp-block-group" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:cover {"url":"https://test5.haurand.com/wp-content/uploads/2022/01/Platzhalter_Spielplatz_2-scaled.jpg","id":5720,"dimRatio":50,"minHeight":300,"customGradient":"linear-gradient(180deg,rgba(255,255,255,0) 50%,rgb(255,198,47) 50%)","contentPosition":"bottom center","style":{"color":[]}} -->
+       <div class="wp-block-cover has-custom-content-position is-position-bottom-center" style="min-height:300px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient" style="background:linear-gradient(180deg,rgba(255,255,255,0) 50%,rgb(255,198,47) 50%)"></span><img class="wp-block-cover__image-background wp-image-5720" alt="Alternative Text: Spielgerät" src="https://test5.haurand.com/wp-content/uploads/2022/01/Platzhalter_Spielplatz_2-scaled.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","textColor":"base","fontSize":"large"} -->
+       <p class="has-text-align-center has-base-color has-text-color has-large-font-size">Ansicht Spielplatz</p>
+       <!-- /wp:paragraph -->
+       
+       <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+       <div class="wp-block-buttons"><!-- wp:button {"textAlign":"center"} -->
+       <div class="wp-block-button"><a class="wp-block-button__link has-text-align-center wp-element-button">Hier klicken</a></div>
+       <!-- /wp:button --></div>
+       <!-- /wp:buttons --></div></div>
+       <!-- /wp:cover -->
+       
+       <!-- wp:heading {"style":{"typography":{"fontSize":"26px","fontStyle":"normal","fontWeight":"500"},"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"margin":{"top":"20px","right":"0px","bottom":"20px","left":"0px"}}}} -->
+       <h2 class="wp-block-heading" style="margin-top:20px;margin-right:0px;margin-bottom:20px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;font-size:26px;font-style:normal;font-weight:500">Lorem ipsum dolor</h2>
+       <!-- /wp:heading -->
+       
+       <!-- wp:paragraph {"style":{"typography":{"fontSize":"16px"},"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"margin":{"top":"0px","right":"0px","bottom":"30px","left":"0px"}}}} -->
+       <p style="margin-top:0px;margin-right:0px;margin-bottom:30px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;font-size:16px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text.</p>
+       <!-- /wp:paragraph -->
+       
+       <!-- wp:buttons -->
+       <div class="wp-block-buttons"><!-- wp:button {"textColor":"black","style":{"typography":{"fontSize":"16px"},"spacing":{"padding":{"top":"10px","right":"25px","bottom":"10px","left":"25px"}},"border":{"radius":"0px"},"color":{"background":"#ffc62f"}}} -->
+       <div class="wp-block-button has-custom-font-size" style="font-size:16px"><a class="wp-block-button__link has-black-color has-text-color has-background wp-element-button" style="border-radius:0px;background-color:#ffc62f;padding-top:10px;padding-right:25px;padding-bottom:10px;padding-left:25px">Read More</a></div>
+       <!-- /wp:button --></div>
+       <!-- /wp:buttons --></div>
+       <!-- /wp:group --></div>
+       <!-- /wp:column --></div>
+       <!-- /wp:columns --></div>
+       <!-- /wp:group -->',
+        )
+);
+
+
+  /* Block-Pattern-Section 2  */
+  register_block_pattern(
+    'block-pattern-section-2',
+      array(
+      'title' => __( 'Block-Pattern-Section 2', 'block-pattern-section-2' ),
+      'description' => _x( 'Block-Pattern-Section 2', 'Block-Pattern-Section-2', 'block-pattern-section-2' ),
+      'categories'  => array('Patterns Haurand'),
+      'content'     =>
+         '<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"30px","left":"0px"},"margin":{"top":"0px","bottom":"0px"},"blockGap":"0px"}},"layout":{"type":"constrained","contentSize":"1280px"}} -->
+         <div class="wp-block-group alignwide" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:30px;padding-left:0px"><!-- wp:columns {"align":"full","style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"margin":{"top":"0px","bottom":"0px"},"blockGap":{"top":"0px","left":"0px"}}}} -->
+         <div class="wp-block-columns alignfull" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:column -->
+         <div class="wp-block-column"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"blockGap":"0px","margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"constrained"}} -->
+         <div class="wp-block-group" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:cover {"url":"https://test5.haurand.com/wp-content/uploads/2022/07/attendorn_3.jpg","id":6516,"dimRatio":50,"minHeight":300,"customGradient":"linear-gradient(180deg,rgba(255,255,255,0) 50%,rgb(0,0,0) 50%)","contentPosition":"bottom center","isDark":false,"style":{"color":[]}} -->
+         <div class="wp-block-cover is-light has-custom-content-position is-position-bottom-center" style="min-height:300px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient" style="background:linear-gradient(180deg,rgba(255,255,255,0) 50%,rgb(0,0,0) 50%)"></span><img class="wp-block-cover__image-background wp-image-6516" alt="Attendorn" src="https://test5.haurand.com/wp-content/uploads/2022/07/attendorn_3.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"1rem","right":"1rem","bottom":"1rem","left":"1rem"}}},"textColor":"base","fontSize":"large"} -->
+         <p class="has-text-align-center has-base-color has-text-color has-large-font-size" style="margin-top:1rem;margin-right:1rem;margin-bottom:1rem;margin-left:1rem;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">Ansicht Wald</p>
+         <!-- /wp:paragraph -->
+         
+         <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+         <div class="wp-block-buttons"><!-- wp:button {"textAlign":"center","backgroundColor":"luminous-vivid-amber"} -->
+         <div class="wp-block-button"><a class="wp-block-button__link has-luminous-vivid-amber-background-color has-background has-text-align-center wp-element-button">Hier klicken</a></div>
+         <!-- /wp:button --></div>
+         <!-- /wp:buttons --></div></div>
+         <!-- /wp:cover -->
+         
+         <!-- wp:heading {"style":{"typography":{"fontSize":"26px","fontStyle":"normal","fontWeight":"500"},"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"margin":{"top":"20px","right":"0px","bottom":"20px","left":"0px"}}}} -->
+         <h2 class="wp-block-heading" style="margin-top:20px;margin-right:0px;margin-bottom:20px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;font-size:26px;font-style:normal;font-weight:500">Lorem ipsum dolor</h2>
+         <!-- /wp:heading -->
+         
+         <!-- wp:paragraph {"style":{"typography":{"fontSize":"16px"},"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"margin":{"top":"0px","right":"0px","bottom":"30px","left":"0px"}}}} -->
+         <p style="margin-top:0px;margin-right:0px;margin-bottom:30px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;font-size:16px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text.</p>
+         <!-- /wp:paragraph --></div>
+         <!-- /wp:group --></div>
+         <!-- /wp:column -->
+         
+         <!-- wp:column -->
+         <div class="wp-block-column"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"blockGap":"0px","margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"constrained"}} -->
+         <div class="wp-block-group" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:cover {"url":"https://test5.haurand.com/wp-content/uploads/2022/01/sorrent_2021.jpg","id":5723,"dimRatio":50,"minHeight":300,"customGradient":"linear-gradient(180deg,rgba(255,255,255,0) 50%,rgb(0,0,0) 50%)","contentPosition":"bottom center","isDark":false,"style":{"color":[]}} -->
+         <div class="wp-block-cover is-light has-custom-content-position is-position-bottom-center" style="min-height:300px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient" style="background:linear-gradient(180deg,rgba(255,255,255,0) 50%,rgb(0,0,0) 50%)"></span><img class="wp-block-cover__image-background wp-image-5723" alt="" src="https://test5.haurand.com/wp-content/uploads/2022/01/sorrent_2021.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"1rem","right":"1rem","bottom":"1rem","left":"1rem"}}},"textColor":"base","fontSize":"large"} -->
+         <p class="has-text-align-center has-base-color has-text-color has-large-font-size" style="margin-top:1rem;margin-right:1rem;margin-bottom:1rem;margin-left:1rem">Ansicht Sorrent</p>
+         <!-- /wp:paragraph -->
+         
+         <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+         <div class="wp-block-buttons"><!-- wp:button {"textAlign":"center","backgroundColor":"luminous-vivid-amber"} -->
+         <div class="wp-block-button"><a class="wp-block-button__link has-luminous-vivid-amber-background-color has-background has-text-align-center wp-element-button">Hier klicken</a></div>
+         <!-- /wp:button --></div>
+         <!-- /wp:buttons --></div></div>
+         <!-- /wp:cover -->
+         
+         <!-- wp:heading {"style":{"typography":{"fontSize":"26px","fontStyle":"normal","fontWeight":"500"},"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"margin":{"top":"20px","right":"0px","bottom":"20px","left":"0px"}}}} -->
+         <h2 class="wp-block-heading" style="margin-top:20px;margin-right:0px;margin-bottom:20px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;font-size:26px;font-style:normal;font-weight:500">Lorem ipsum dolor</h2>
+         <!-- /wp:heading -->
+         
+         <!-- wp:paragraph {"style":{"typography":{"fontSize":"16px"},"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"margin":{"top":"0px","right":"0px","bottom":"30px","left":"0px"}}}} -->
+         <p style="margin-top:0px;margin-right:0px;margin-bottom:30px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;font-size:16px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text.</p>
+         <!-- /wp:paragraph --></div>
+         <!-- /wp:group --></div>
+         <!-- /wp:column -->
+         
+         <!-- wp:column -->
+         <div class="wp-block-column"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"blockGap":"0px","margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"constrained"}} -->
+         <div class="wp-block-group" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:cover {"url":"https://test5.haurand.com/wp-content/uploads/2022/01/Platzhalter_Spielplatz_2-scaled.jpg","id":5720,"dimRatio":50,"minHeight":300,"customGradient":"linear-gradient(180deg,rgba(255,255,255,0) 50%,rgb(0,0,0) 50%)","contentPosition":"bottom center","isDark":false,"style":{"color":[]}} -->
+         <div class="wp-block-cover is-light has-custom-content-position is-position-bottom-center" style="min-height:300px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient" style="background:linear-gradient(180deg,rgba(255,255,255,0) 50%,rgb(0,0,0) 50%)"></span><img class="wp-block-cover__image-background wp-image-5720" alt="Alternative Text: Spielgerät" src="https://test5.haurand.com/wp-content/uploads/2022/01/Platzhalter_Spielplatz_2-scaled.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"1rem","right":"1rem","bottom":"1rem","left":"1rem"}}},"textColor":"base","fontSize":"large"} -->
+         <p class="has-text-align-center has-base-color has-text-color has-large-font-size" style="margin-top:1rem;margin-right:1rem;margin-bottom:1rem;margin-left:1rem">Ansicht Spielplatz</p>
+         <!-- /wp:paragraph -->
+         
+         <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+         <div class="wp-block-buttons"><!-- wp:button {"textAlign":"center","backgroundColor":"luminous-vivid-amber"} -->
+         <div class="wp-block-button"><a class="wp-block-button__link has-luminous-vivid-amber-background-color has-background has-text-align-center wp-element-button">Hier klicken</a></div>
+         <!-- /wp:button --></div>
+         <!-- /wp:buttons --></div></div>
+         <!-- /wp:cover -->
+         
+         <!-- wp:heading {"style":{"typography":{"fontSize":"26px","fontStyle":"normal","fontWeight":"500"},"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"margin":{"top":"20px","right":"0px","bottom":"20px","left":"0px"}}}} -->
+         <h2 class="wp-block-heading" style="margin-top:20px;margin-right:0px;margin-bottom:20px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;font-size:26px;font-style:normal;font-weight:500">Lorem ipsum dolor</h2>
+         <!-- /wp:heading -->
+         
+         <!-- wp:paragraph {"style":{"typography":{"fontSize":"16px"},"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"margin":{"top":"0px","right":"0px","bottom":"30px","left":"0px"}}}} -->
+         <p style="margin-top:0px;margin-right:0px;margin-bottom:30px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;font-size:16px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text.</p>
+         <!-- /wp:paragraph --></div>
+         <!-- /wp:group --></div>
+         <!-- /wp:column --></div>
+         <!-- /wp:columns --></div>
+         <!-- /wp:group -->',
+          )
   );
 
 
