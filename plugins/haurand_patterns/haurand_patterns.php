@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Haurand Patterns
- * @version 0.5.3
+ * @version 0.6.1
  */
 /*
 Plugin Name: Category Vorlagen Haurand
 Plugin URI: http://haurand.com
 Description: Create new Categories "Patterns Haurand" and several "Custom Websites Haurand" for Block Patterns with our custom Block patterns
 Author: Hans-Gerd Gerhards
-Version: 0.5.3
+Version: 0.6
 Author URI: http://haurand.com
 */
 
@@ -47,6 +47,17 @@ if ( class_exists( 'WP_Block_Patterns_Registry' ) ) {
 add_action( 'init', 'patterns_haurand_register_block_categories' );
 
 
+/* eigene Kategorie Haurand: section patterns haurand */
+function section_patterns_haurand_register_block_categories() {
+  if ( class_exists( 'WP_Block_Patterns_Registry' ) ) {
+    register_block_pattern_category(
+     'Section Patterns Haurand', array( 'label' => _x( 'Section Patterns Haurand', 'Block pattern category' ) )
+      );
+    }
+  }
+  add_action( 'init', 'section_patterns_haurand_register_block_categories' );
+
+/* custom css with category Patterns Haurand */
 add_action( 'wp_enqueue_scripts', 'hp_custom_styles' );
 function hp_custom_styles() {
     wp_enqueue_style( 'custom-style', plugins_url( '/hp_custom.css' , __FILE__ ) );
@@ -198,7 +209,7 @@ register_block_pattern(
     array(
     'title' => __( 'Bild mit duotone HIntergrund', 'image_with_duotone_background' ),
     'description' => _x( 'Bild mit duotone HIntergrund', 'Image with duotone background', 'image_with_duotone_background' ),
-    'categories'  => array('Patterns Haurand'),
+    'categories'  => array('Section Patterns Haurand'),
     'content'     =>
        '<!-- wp:group {"align":"wide","style":{"color":{"gradient":"linear-gradient(180deg,rgb(0,0,0) 50%,rgb(255,255,255) 50%)"}},"layout":{"type":"constrained"}} -->
         <div class="wp-block-group alignwide has-background" style="background:linear-gradient(180deg,rgb(0,0,0) 50%,rgb(255,255,255) 50%)"><!-- wp:group {"layout":{"type":"constrained"}} -->
@@ -279,7 +290,7 @@ register_block_pattern(
     array(
     'title' => __( 'Group with colunns and images', 'group_with_colunns_and_images' ),
     'description' => _x( 'Group with colunns and images', 'Group with colunns and images', 'group_with_colunns_and_images' ),
-    'categories'  => array('Patterns Haurand'),
+    'categories'  => array('Section Patterns Haurand'),
     'content'     =>
        '<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":"0"}},"layout":{"type":"constrained"}} -->
         <div class="wp-block-group alignfull" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:columns {"align":"full","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":{"top":"0","left":"0"},"margin":{"top":"0","bottom":"0"}},"border":{"width":"0px","style":"none"}}} -->
@@ -368,7 +379,7 @@ register_block_pattern(
     array(
     'title' => __( 'Image with overlapping Text', 'image_with_overlapping_text' ),
     'description' => _x( 'Image with overlapping Text', 'Image with overlapping Text', 'image_with_overlapping_text' ),
-    'categories'  => array('Patterns Haurand'),
+    'categories'  => array('Section Patterns Haurand'),
     'content'     =>
        '<!-- wp:group {"align":"wide","layout":{"inherit":false}} -->
         <div class="wp-block-group alignwide"><!-- wp:columns {"align":"wide","className":"ungerade"} -->
@@ -456,7 +467,7 @@ register_block_pattern(
     array(
     'title' => __( 'Block-Pattern-Section', 'block-pattern-section' ),
     'description' => _x( 'Block-Pattern-Section', 'Block-Pattern-Section', 'block-pattern-section' ),
-    'categories'  => array('Patterns Haurand'),
+    'categories'  => array('Section Patterns Haurand'),
     'content'     =>
        '<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"30px","left":"0px"},"margin":{"top":"0px","bottom":"0px"},"blockGap":"0px"}},"layout":{"type":"constrained","contentSize":"1280px"}} -->
        <div class="wp-block-group alignwide" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:30px;padding-left:0px"><!-- wp:columns {"align":"full","style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"margin":{"top":"0px","bottom":"0px"},"blockGap":{"top":"0px","left":"0px"}}}} -->
@@ -561,7 +572,7 @@ register_block_pattern(
       array(
       'title' => __( 'Block-Pattern-Section 2', 'block-pattern-section-2' ),
       'description' => _x( 'Block-Pattern-Section 2', 'Block-Pattern-Section-2', 'block-pattern-section-2' ),
-      'categories'  => array('Patterns Haurand'),
+      'categories'  => array('Section Patterns Haurand'),
       'content'     =>
          '<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"30px","left":"0px"},"margin":{"top":"0px","bottom":"0px"},"blockGap":"0px"}},"layout":{"type":"constrained","contentSize":"1280px"}} -->
          <div class="wp-block-group alignwide" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:30px;padding-left:0px"><!-- wp:columns {"align":"full","style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"margin":{"top":"0px","bottom":"0px"},"blockGap":{"top":"0px","left":"0px"}}}} -->
@@ -647,14 +658,14 @@ register_block_pattern(
       array(
       'title' => __( 'Block-Pattern-Section 3', 'block-pattern-section-3' ),
       'description' => _x( 'Block-Pattern-Section 3', 'Block-Pattern-Section-3', 'block-pattern-section-3' ),
-      'categories'  => array('Patterns Haurand'),
+      'categories'  => array('Section Patterns Haurand'),
       'content'     =>
          '<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"30px","left":"0px"},"margin":{"top":"0px","bottom":"0px"},"blockGap":"0px"}},"layout":{"type":"constrained","contentSize":"1280px"}} -->
          <div class="wp-block-group alignwide" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:30px;padding-left:0px"><!-- wp:columns {"align":"full","style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"blockGap":{"top":"1rem","left":"1rem"}}}} -->
          <div class="wp-block-columns alignfull" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:column {"width":"25%"} -->
          <div class="wp-block-column" style="flex-basis:25%"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"blockGap":"0px","margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"constrained"}} -->
-         <div class="wp-block-group" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:cover {"url":"https://test5.haurand.com/wp-content/uploads/2022/07/attendorn_3.jpg","id":6516,"dimRatio":50,"minHeight":250,"customGradient":"linear-gradient(180deg,rgb(0,0,0) 20%,rgba(255,255,255,0) 20%)","contentPosition":"top center","style":{"color":[],"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}}} -->
-         <div class="wp-block-cover has-custom-content-position is-position-top-center" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:var(--wp--preset--spacing--30);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;min-height:250px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient" style="background:linear-gradient(180deg,rgb(0,0,0) 20%,rgba(255,255,255,0) 20%)"></span><img class="wp-block-cover__image-background wp-image-6516" alt="Attendorn" src="https://test5.haurand.com/wp-content/uploads/2022/07/attendorn_3.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"1rem","right":"1rem","bottom":"1rem","left":"1rem"}}},"className":"bps_fontsize","fontSize":"medium"} -->
+         <div class="wp-block-group" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:cover {"url":"https://test5.haurand.com/wp-content/uploads/2022/07/attendorn_3.jpg","id":6516,"dimRatio":50,"minHeight":250,"customGradient":"linear-gradient(180deg,rgb(0,0,0) 25%,rgba(255,255,255,0) 25%)","contentPosition":"top center","style":{"color":[],"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}}} -->
+         <div class="wp-block-cover has-custom-content-position is-position-top-center" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:var(--wp--preset--spacing--30);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;min-height:250px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient" style="background:linear-gradient(180deg,rgb(0,0,0) 25%,rgba(255,255,255,0) 25%)"></span><img class="wp-block-cover__image-background wp-image-6516" alt="Attendorn" src="https://test5.haurand.com/wp-content/uploads/2022/07/attendorn_3.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"1rem","right":"1rem","bottom":"1rem","left":"1rem"}}},"className":"bps_fontsize","fontSize":"medium"} -->
          <p class="has-text-align-center bps_fontsize has-medium-font-size" style="margin-top:1rem;margin-right:1rem;margin-bottom:1rem;margin-left:1rem;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">Ansicht Wald</p>
          <!-- /wp:paragraph -->
          
@@ -681,8 +692,8 @@ register_block_pattern(
          
          <!-- wp:column {"width":"25%"} -->
          <div class="wp-block-column" style="flex-basis:25%"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"blockGap":"0px","margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"constrained"}} -->
-         <div class="wp-block-group" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:cover {"url":"https://test5.haurand.com/wp-content/uploads/2022/01/sorrent_2021.jpg","id":5723,"dimRatio":50,"minHeight":250,"customGradient":"linear-gradient(180deg,rgb(0,0,0) 20%,rgba(255,255,255,0) 20%)","contentPosition":"top center","style":{"color":[],"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}}} -->
-         <div class="wp-block-cover has-custom-content-position is-position-top-center" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:var(--wp--preset--spacing--30);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;min-height:250px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient" style="background:linear-gradient(180deg,rgb(0,0,0) 20%,rgba(255,255,255,0) 20%)"></span><img class="wp-block-cover__image-background wp-image-5723" alt="" src="https://test5.haurand.com/wp-content/uploads/2022/01/sorrent_2021.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"1rem","right":"1rem","bottom":"1rem","left":"1rem"}}},"className":"bps_fontsize","fontSize":"medium"} -->
+         <div class="wp-block-group" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:cover {"url":"https://test5.haurand.com/wp-content/uploads/2022/01/sorrent_2021.jpg","id":5723,"dimRatio":50,"minHeight":250,"customGradient":"linear-gradient(180deg,rgb(0,0,0) 25%,rgba(255,255,255,0) 25%)","contentPosition":"top center","style":{"color":[],"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}}} -->
+         <div class="wp-block-cover has-custom-content-position is-position-top-center" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:var(--wp--preset--spacing--30);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;min-height:250px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient" style="background:linear-gradient(180deg,rgb(0,0,0) 25%,rgba(255,255,255,0) 25%)"></span><img class="wp-block-cover__image-background wp-image-5723" alt="" src="https://test5.haurand.com/wp-content/uploads/2022/01/sorrent_2021.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"1rem","right":"1rem","bottom":"1rem","left":"1rem"}}},"className":"bps_fontsize","fontSize":"medium"} -->
          <p class="has-text-align-center bps_fontsize has-medium-font-size" style="margin-top:1rem;margin-right:1rem;margin-bottom:1rem;margin-left:1rem;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">Ansicht Sorrent</p>
          <!-- /wp:paragraph -->
          
@@ -709,8 +720,8 @@ register_block_pattern(
          
          <!-- wp:column {"width":"25%"} -->
          <div class="wp-block-column" style="flex-basis:25%"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"blockGap":"0px","margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"constrained"}} -->
-         <div class="wp-block-group" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:cover {"url":"https://test5.haurand.com/wp-content/uploads/2022/01/Platzhalter_Spielplatz_2-scaled.jpg","id":5720,"dimRatio":50,"minHeight":250,"customGradient":"linear-gradient(180deg,rgb(0,0,0) 20%,rgba(255,255,255,0) 20%)","contentPosition":"top center","style":{"color":[],"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}}} -->
-         <div class="wp-block-cover has-custom-content-position is-position-top-center" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:var(--wp--preset--spacing--30);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;min-height:250px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient" style="background:linear-gradient(180deg,rgb(0,0,0) 20%,rgba(255,255,255,0) 20%)"></span><img class="wp-block-cover__image-background wp-image-5720" alt="Alternative Text: Spielgerät" src="https://test5.haurand.com/wp-content/uploads/2022/01/Platzhalter_Spielplatz_2-scaled.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"1rem","right":"1rem","bottom":"1rem","left":"1rem"}}},"className":"bps_fontsize","fontSize":"medium"} -->
+         <div class="wp-block-group" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:cover {"url":"https://test5.haurand.com/wp-content/uploads/2022/01/Platzhalter_Spielplatz_2-scaled.jpg","id":5720,"dimRatio":50,"minHeight":250,"customGradient":"linear-gradient(180deg,rgb(0,0,0) 25%,rgba(255,255,255,0) 25%)","contentPosition":"top center","style":{"color":[],"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}}} -->
+         <div class="wp-block-cover has-custom-content-position is-position-top-center" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:var(--wp--preset--spacing--30);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;min-height:250px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient" style="background:linear-gradient(180deg,rgb(0,0,0) 25%,rgba(255,255,255,0) 25%)"></span><img class="wp-block-cover__image-background wp-image-5720" alt="Alternative Text: Spielgerät" src="https://test5.haurand.com/wp-content/uploads/2022/01/Platzhalter_Spielplatz_2-scaled.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"1rem","right":"1rem","bottom":"1rem","left":"1rem"}}},"className":"bps_fontsize","fontSize":"medium"} -->
          <p class="has-text-align-center bps_fontsize has-medium-font-size" style="margin-top:1rem;margin-right:1rem;margin-bottom:1rem;margin-left:1rem;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">Ansicht Spielplatz</p>
          <!-- /wp:paragraph -->
          
@@ -737,8 +748,8 @@ register_block_pattern(
          
          <!-- wp:column {"width":"25%"} -->
          <div class="wp-block-column" style="flex-basis:25%"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"blockGap":"0px","margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"constrained"}} -->
-         <div class="wp-block-group" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:cover {"url":"https://test5.haurand.com/wp-content/uploads/2022/01/stausee_800.jpg","id":5724,"dimRatio":50,"minHeight":250,"customGradient":"linear-gradient(180deg,rgb(0,0,0) 20%,rgba(255,255,255,0) 20%)","contentPosition":"top center","style":{"color":[],"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}}} -->
-         <div class="wp-block-cover has-custom-content-position is-position-top-center" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:var(--wp--preset--spacing--30);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;min-height:250px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient" style="background:linear-gradient(180deg,rgb(0,0,0) 20%,rgba(255,255,255,0) 20%)"></span><img class="wp-block-cover__image-background wp-image-5724" alt="" src="https://test5.haurand.com/wp-content/uploads/2022/01/stausee_800.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"1rem","right":"1rem","bottom":"1rem","left":"1rem"}}},"className":"bps_fontsize","fontSize":"medium"} -->
+         <div class="wp-block-group" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:cover {"url":"https://test5.haurand.com/wp-content/uploads/2022/01/stausee_800.jpg","id":5724,"dimRatio":50,"minHeight":250,"customGradient":"linear-gradient(180deg,rgb(0,0,0) 25%,rgba(255,255,255,0) 25%)","contentPosition":"top center","style":{"color":[],"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}}} -->
+         <div class="wp-block-cover has-custom-content-position is-position-top-center" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:var(--wp--preset--spacing--30);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;min-height:250px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient" style="background:linear-gradient(180deg,rgb(0,0,0) 25%,rgba(255,255,255,0) 25%)"></span><img class="wp-block-cover__image-background wp-image-5724" alt="" src="https://test5.haurand.com/wp-content/uploads/2022/01/stausee_800.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"1rem","right":"1rem","bottom":"1rem","left":"1rem"}}},"className":"bps_fontsize","fontSize":"medium"} -->
          <p class="has-text-align-center bps_fontsize has-medium-font-size" style="margin-top:1rem;margin-right:1rem;margin-bottom:1rem;margin-left:1rem;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">Ansicht Landschaft</p>
          <!-- /wp:paragraph -->
          
@@ -766,6 +777,215 @@ register_block_pattern(
          <!-- /wp:group -->',
           )
   );
+
+
+    /* Block-Pattern-Section 4  */
+    register_block_pattern(
+      'block-pattern-section-4',
+        array(
+        'title' => __( 'Block-Pattern-Section 4', 'block-pattern-section-4' ),
+        'description' => _x( 'Block-Pattern-Section 4', 'Block-Pattern-Section-4', 'block-pattern-section-4' ),
+        'categories'  => array('Section Patterns Haurand'),
+        'content'     =>
+           '<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"30px","left":"0px"},"margin":{"top":"0px","bottom":"0px"},"blockGap":"0px"}},"layout":{"type":"constrained","contentSize":"1280px"}} -->
+           <div class="wp-block-group alignwide" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:30px;padding-left:0px"><!-- wp:columns {"align":"full","style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"blockGap":{"top":"1rem","left":"1rem"}}}} -->
+           <div class="wp-block-columns alignfull" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:column {"width":"25%"} -->
+           <div class="wp-block-column" style="flex-basis:25%"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"blockGap":"0px","margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"constrained"}} -->
+           <div class="wp-block-group" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:cover {"url":"https://test5.haurand.com/wp-content/uploads/2022/07/attendorn_3.jpg","id":6516,"minHeight":250,"customGradient":"linear-gradient(180deg,rgb(165,16,16) 25%,rgba(0,0,0,0) 25%)","contentPosition":"top center","style":{"color":[],"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}}} -->
+           <div class="wp-block-cover has-custom-content-position is-position-top-center" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:var(--wp--preset--spacing--30);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;min-height:250px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim wp-block-cover__gradient-background has-background-gradient" style="background:linear-gradient(180deg,rgb(165,16,16) 25%,rgba(0,0,0,0) 25%)"></span><img class="wp-block-cover__image-background wp-image-6516" alt="Attendorn" src="https://test5.haurand.com/wp-content/uploads/2022/07/attendorn_3.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"1rem","right":"1rem","bottom":"1rem","left":"1rem"}}},"className":"bps_fontsize","fontSize":"medium"} -->
+           <p class="has-text-align-center bps_fontsize has-medium-font-size" style="margin-top:1rem;margin-right:1rem;margin-bottom:1rem;margin-left:1rem;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">Ansicht Wald</p>
+           <!-- /wp:paragraph -->
+           
+           <!-- wp:spacer -->
+           <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+           <!-- /wp:spacer -->
+           
+           <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"0","margin":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}}} -->
+           <div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:var(--wp--preset--spacing--30)"><!-- wp:button {"textAlign":"center","backgroundColor":"primary","textColor":"black","style":{"border":{"radius":"40px"}}} -->
+           <div class="wp-block-button"><a class="wp-block-button__link has-black-color has-primary-background-color has-text-color has-background has-text-align-center wp-element-button" style="border-radius:40px">Hier klicken</a></div>
+           <!-- /wp:button --></div>
+           <!-- /wp:buttons --></div></div>
+           <!-- /wp:cover -->
+           
+           <!-- wp:heading {"style":{"typography":{"fontSize":"26px","fontStyle":"normal","fontWeight":"500"},"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"margin":{"top":"20px","right":"0px","bottom":"20px","left":"0px"}}}} -->
+           <h2 class="wp-block-heading" style="margin-top:20px;margin-right:0px;margin-bottom:20px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;font-size:26px;font-style:normal;font-weight:500">Lorem ipsum dolor</h2>
+           <!-- /wp:heading -->
+           
+           <!-- wp:paragraph {"style":{"typography":{"fontSize":"16px"},"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"margin":{"top":"0px","right":"0px","bottom":"30px","left":"0px"}}}} -->
+           <p style="margin-top:0px;margin-right:0px;margin-bottom:30px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;font-size:16px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text.</p>
+           <!-- /wp:paragraph --></div>
+           <!-- /wp:group --></div>
+           <!-- /wp:column -->
+           
+           <!-- wp:column {"width":"25%"} -->
+           <div class="wp-block-column" style="flex-basis:25%"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"blockGap":"0px","margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"constrained"}} -->
+           <div class="wp-block-group" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:cover {"url":"https://test5.haurand.com/wp-content/uploads/2022/01/sorrent_2021.jpg","id":5723,"minHeight":250,"customGradient":"linear-gradient(180deg,rgb(165,16,16) 25%,rgba(0,0,0,0) 25%)","contentPosition":"top center","style":{"color":[],"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}}} -->
+           <div class="wp-block-cover has-custom-content-position is-position-top-center" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:var(--wp--preset--spacing--30);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;min-height:250px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim wp-block-cover__gradient-background has-background-gradient" style="background:linear-gradient(180deg,rgb(165,16,16) 25%,rgba(0,0,0,0) 25%)"></span><img class="wp-block-cover__image-background wp-image-5723" alt="" src="https://test5.haurand.com/wp-content/uploads/2022/01/sorrent_2021.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"1rem","right":"1rem","bottom":"1rem","left":"1rem"}}},"className":"bps_fontsize","fontSize":"medium"} -->
+           <p class="has-text-align-center bps_fontsize has-medium-font-size" style="margin-top:1rem;margin-right:1rem;margin-bottom:1rem;margin-left:1rem;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">Ansicht Sorrent</p>
+           <!-- /wp:paragraph -->
+           
+           <!-- wp:spacer -->
+           <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+           <!-- /wp:spacer -->
+           
+           <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"0","margin":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}}} -->
+           <div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:var(--wp--preset--spacing--30)"><!-- wp:button {"textAlign":"center","backgroundColor":"primary","textColor":"black","style":{"border":{"radius":"40px"}}} -->
+           <div class="wp-block-button"><a class="wp-block-button__link has-black-color has-primary-background-color has-text-color has-background has-text-align-center wp-element-button" style="border-radius:40px">Hier klicken</a></div>
+           <!-- /wp:button --></div>
+           <!-- /wp:buttons --></div></div>
+           <!-- /wp:cover -->
+           
+           <!-- wp:heading {"style":{"typography":{"fontSize":"26px","fontStyle":"normal","fontWeight":"500"},"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"margin":{"top":"20px","right":"0px","bottom":"20px","left":"0px"}}}} -->
+           <h2 class="wp-block-heading" style="margin-top:20px;margin-right:0px;margin-bottom:20px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;font-size:26px;font-style:normal;font-weight:500">Lorem ipsum dolor</h2>
+           <!-- /wp:heading -->
+           
+           <!-- wp:paragraph {"style":{"typography":{"fontSize":"16px"},"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"margin":{"top":"0px","right":"0px","bottom":"30px","left":"0px"}}}} -->
+           <p style="margin-top:0px;margin-right:0px;margin-bottom:30px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;font-size:16px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text.</p>
+           <!-- /wp:paragraph --></div>
+           <!-- /wp:group --></div>
+           <!-- /wp:column -->
+           
+           <!-- wp:column {"width":"25%"} -->
+           <div class="wp-block-column" style="flex-basis:25%"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"blockGap":"0px","margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"constrained"}} -->
+           <div class="wp-block-group" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:cover {"url":"https://test5.haurand.com/wp-content/uploads/2022/01/Platzhalter_Spielplatz_2-scaled.jpg","id":5720,"minHeight":250,"customGradient":"linear-gradient(180deg,rgb(165,16,16) 25%,rgba(255,255,255,0) 25%)","contentPosition":"top center","style":{"color":[],"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}}} -->
+           <div class="wp-block-cover has-custom-content-position is-position-top-center" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:var(--wp--preset--spacing--30);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;min-height:250px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim wp-block-cover__gradient-background has-background-gradient" style="background:linear-gradient(180deg,rgb(165,16,16) 25%,rgba(255,255,255,0) 25%)"></span><img class="wp-block-cover__image-background wp-image-5720" alt="Alternative Text: Spielgerät" src="https://test5.haurand.com/wp-content/uploads/2022/01/Platzhalter_Spielplatz_2-scaled.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"1rem","right":"1rem","bottom":"1rem","left":"1rem"}}},"className":"bps_fontsize","fontSize":"medium"} -->
+           <p class="has-text-align-center bps_fontsize has-medium-font-size" style="margin-top:1rem;margin-right:1rem;margin-bottom:1rem;margin-left:1rem;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">Ansicht Spielplatz</p>
+           <!-- /wp:paragraph -->
+           
+           <!-- wp:spacer -->
+           <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+           <!-- /wp:spacer -->
+           
+           <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"0","margin":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}}} -->
+           <div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:var(--wp--preset--spacing--30)"><!-- wp:button {"textAlign":"center","backgroundColor":"primary","textColor":"black","style":{"border":{"radius":"40px"}}} -->
+           <div class="wp-block-button"><a class="wp-block-button__link has-black-color has-primary-background-color has-text-color has-background has-text-align-center wp-element-button" style="border-radius:40px">Hier klicken</a></div>
+           <!-- /wp:button --></div>
+           <!-- /wp:buttons --></div></div>
+           <!-- /wp:cover -->
+           
+           <!-- wp:heading {"style":{"typography":{"fontSize":"26px","fontStyle":"normal","fontWeight":"500"},"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"margin":{"top":"20px","right":"0px","bottom":"20px","left":"0px"}}}} -->
+           <h2 class="wp-block-heading" style="margin-top:20px;margin-right:0px;margin-bottom:20px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;font-size:26px;font-style:normal;font-weight:500">Lorem ipsum dolor</h2>
+           <!-- /wp:heading -->
+           
+           <!-- wp:paragraph {"style":{"typography":{"fontSize":"16px"},"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"margin":{"top":"0px","right":"0px","bottom":"30px","left":"0px"}}}} -->
+           <p style="margin-top:0px;margin-right:0px;margin-bottom:30px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;font-size:16px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text.</p>
+           <!-- /wp:paragraph --></div>
+           <!-- /wp:group --></div>
+           <!-- /wp:column -->
+           
+           <!-- wp:column {"width":"25%"} -->
+           <div class="wp-block-column" style="flex-basis:25%"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"blockGap":"0px","margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"constrained"}} -->
+           <div class="wp-block-group" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:cover {"url":"https://test5.haurand.com/wp-content/uploads/2022/01/stausee_800.jpg","id":5724,"minHeight":250,"customGradient":"linear-gradient(180deg,rgb(165,16,16) 25%,rgba(255,255,255,0) 25%)","contentPosition":"top center","style":{"color":[],"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}}} -->
+           <div class="wp-block-cover has-custom-content-position is-position-top-center" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:var(--wp--preset--spacing--30);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;min-height:250px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim wp-block-cover__gradient-background has-background-gradient" style="background:linear-gradient(180deg,rgb(165,16,16) 25%,rgba(255,255,255,0) 25%)"></span><img class="wp-block-cover__image-background wp-image-5724" alt="" src="https://test5.haurand.com/wp-content/uploads/2022/01/stausee_800.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"margin":{"top":"1rem","right":"1rem","bottom":"1rem","left":"1rem"}}},"className":"bps_fontsize","fontSize":"medium"} -->
+           <p class="has-text-align-center bps_fontsize has-medium-font-size" style="margin-top:1rem;margin-right:1rem;margin-bottom:1rem;margin-left:1rem;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">Ansicht Landschaft</p>
+           <!-- /wp:paragraph -->
+           
+           <!-- wp:spacer -->
+           <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+           <!-- /wp:spacer -->
+           
+           <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"0","margin":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}}} -->
+           <div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:var(--wp--preset--spacing--30)"><!-- wp:button {"textAlign":"center","backgroundColor":"primary","textColor":"black","style":{"border":{"radius":"40px"}}} -->
+           <div class="wp-block-button"><a class="wp-block-button__link has-black-color has-primary-background-color has-text-color has-background has-text-align-center wp-element-button" style="border-radius:40px">Hier klicken</a></div>
+           <!-- /wp:button --></div>
+           <!-- /wp:buttons --></div></div>
+           <!-- /wp:cover -->
+           
+           <!-- wp:heading {"style":{"typography":{"fontSize":"26px","fontStyle":"normal","fontWeight":"500"},"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"margin":{"top":"20px","right":"0px","bottom":"20px","left":"0px"}}}} -->
+           <h2 class="wp-block-heading" style="margin-top:20px;margin-right:0px;margin-bottom:20px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;font-size:26px;font-style:normal;font-weight:500">Lorem ipsum dolor</h2>
+           <!-- /wp:heading -->
+           
+           <!-- wp:paragraph {"style":{"typography":{"fontSize":"16px"},"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"margin":{"top":"0px","right":"0px","bottom":"30px","left":"0px"}}}} -->
+           <p style="margin-top:0px;margin-right:0px;margin-bottom:30px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;font-size:16px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text.</p>
+           <!-- /wp:paragraph --></div>
+           <!-- /wp:group --></div>
+           <!-- /wp:column --></div>
+           <!-- /wp:columns --></div>
+           <!-- /wp:group -->',
+            )
+    );
+
+
+
+    /* Block-Pattern-Section 5  */
+    register_block_pattern(
+      'block-pattern-section-5',
+        array(
+        'title' => __( 'Block-Pattern-Section 5', 'block-pattern-section-5' ),
+        'description' => _x( 'Block-Pattern-Section 5', 'Block-Pattern-Section-5', 'block-pattern-section-5' ),
+        'categories'  => array('Section Patterns Haurand'),
+        'content'     =>
+           '<!-- wp:group {"align":"wide","layout":{"type":"constrained"}} -->
+           <div class="wp-block-group alignwide"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"0","left":"0"}}}} -->
+           <div class="wp-block-columns alignwide"><!-- wp:column -->
+           <div class="wp-block-column"><!-- wp:cover {"url":"https://space2.yd-sgs.de/wp-content/uploads/2023/01/sorrent_2021.jpg","id":69,"dimRatio":0,"minHeight":300,"contentPosition":"bottom center"} -->
+           <div class="wp-block-cover has-custom-content-position is-position-bottom-center" style="min-height:300px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-69" alt="" src="https://space2.yd-sgs.de/wp-content/uploads/2023/01/sorrent_2021.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","style":{"color":{"background":"#00000073"},"typography":{"fontStyle":"normal","fontWeight":"600","fontSize":"1.3rem"}}} -->
+           <p class="has-text-align-center has-background" style="background-color:#00000073;font-size:1.3rem;font-style:normal;font-weight:600">Ansicht Sorrent</p>
+           <!-- /wp:paragraph -->
+           
+           <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+           <div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"luminous-vivid-amber","fontSize":"medium"} -->
+           <div class="wp-block-button has-custom-font-size has-medium-font-size"><a class="wp-block-button__link has-luminous-vivid-amber-background-color has-background wp-element-button">Read More</a></div>
+           <!-- /wp:button --></div>
+           <!-- /wp:buttons --></div></div>
+           <!-- /wp:cover -->
+           
+           <!-- wp:heading {"style":{"spacing":{"padding":{"left":"5px"}}},"fontSize":"large"} -->
+           <h2 class="wp-block-heading has-large-font-size" style="padding-left:5px">Sorrent</h2>
+           <!-- /wp:heading -->
+           
+           <!-- wp:paragraph {"style":{"spacing":{"padding":{"right":"5px","left":"5px","bottom":"7rem"}}}} -->
+           <p style="padding-right:5px;padding-bottom:7rem;padding-left:5px">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+           <!-- /wp:paragraph --></div>
+           <!-- /wp:column -->
+           
+           <!-- wp:column -->
+           <div class="wp-block-column"><!-- wp:cover {"url":"https://space2.yd-sgs.de/wp-content/uploads/2023/01/sonnenaufgang_im_winter.jpg","id":66,"dimRatio":0,"minHeight":300,"contentPosition":"bottom center"} -->
+           <div class="wp-block-cover has-custom-content-position is-position-bottom-center" style="min-height:300px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-66" alt="" src="https://space2.yd-sgs.de/wp-content/uploads/2023/01/sonnenaufgang_im_winter.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","style":{"color":{"background":"#00000073"},"typography":{"fontStyle":"normal","fontWeight":"600","fontSize":"1.3rem"}}} -->
+           <p class="has-text-align-center has-background" style="background-color:#00000073;font-size:1.3rem;font-style:normal;font-weight:600">Ansicht Morgenstimmung</p>
+           <!-- /wp:paragraph -->
+           
+           <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+           <div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"luminous-vivid-amber","fontSize":"medium"} -->
+           <div class="wp-block-button has-custom-font-size has-medium-font-size"><a class="wp-block-button__link has-luminous-vivid-amber-background-color has-background wp-element-button">Read More</a></div>
+           <!-- /wp:button --></div>
+           <!-- /wp:buttons --></div></div>
+           <!-- /wp:cover -->
+           
+           <!-- wp:heading {"style":{"spacing":{"padding":{"left":"5px"}}},"fontSize":"large"} -->
+           <h2 class="wp-block-heading has-large-font-size" style="padding-left:5px">Morgenstimmung</h2>
+           <!-- /wp:heading -->
+           
+           <!-- wp:paragraph {"style":{"spacing":{"padding":{"right":"5px","left":"5px","bottom":"7rem"}}}} -->
+           <p style="padding-right:5px;padding-bottom:7rem;padding-left:5px">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+           <!-- /wp:paragraph --></div>
+           <!-- /wp:column -->
+           
+           <!-- wp:column -->
+           <div class="wp-block-column"><!-- wp:cover {"url":"https://space2.yd-sgs.de/wp-content/uploads/2023/01/IMG_20200731_195912-scaled.jpg","id":31,"dimRatio":0,"minHeight":300,"contentPosition":"bottom center","isDark":false} -->
+           <div class="wp-block-cover is-light has-custom-content-position is-position-bottom-center" style="min-height:300px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-31" alt="" src="https://space2.yd-sgs.de/wp-content/uploads/2023/01/IMG_20200731_195912-scaled.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","style":{"color":{"background":"#00000073"},"typography":{"fontStyle":"normal","fontWeight":"600","fontSize":"1.3rem"}},"textColor":"base"} -->
+           <p class="has-text-align-center has-base-color has-text-color has-background" style="background-color:#00000073;font-size:1.3rem;font-style:normal;font-weight:600">Ansicht Landschaft</p>
+           <!-- /wp:paragraph -->
+           
+           <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+           <div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"luminous-vivid-amber","fontSize":"medium"} -->
+           <div class="wp-block-button has-custom-font-size has-medium-font-size"><a class="wp-block-button__link has-luminous-vivid-amber-background-color has-background wp-element-button">Read More</a></div>
+           <!-- /wp:button --></div>
+           <!-- /wp:buttons --></div></div>
+           <!-- /wp:cover -->
+           
+           <!-- wp:heading {"style":{"spacing":{"padding":{"left":"5px"}}},"fontSize":"large"} -->
+           <h2 class="wp-block-heading has-large-font-size" style="padding-left:5px">Landschaft</h2>
+           <!-- /wp:heading -->
+           
+           <!-- wp:paragraph {"style":{"spacing":{"padding":{"right":"5px","left":"5px","bottom":"7rem"}}}} -->
+           <p style="padding-right:5px;padding-bottom:7rem;padding-left:5px">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+           <!-- /wp:paragraph --></div>
+           <!-- /wp:column --></div>
+           <!-- /wp:columns --></div>
+           <!-- /wp:group -->',
+            )
+    );
 
 
 
