@@ -1,0 +1,45 @@
+/* sticky Navigation rechts bei Template Single Post Considerations*/
+.wp-block-column.sticky_column.is-layout-flow .wp-block-query {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 50px;
+}
+
+
+/* runde Ecken beim Gutenslider */
+.swiper.swiper-fade.swiper-initialized.swiper-horizontal.swiper-pointer-events.swiper-watch-progress.swiper-backface-hidden {
+    border-radius: 20px 0px 0px 20px;
+}
+
+
+/* GP-Lösung zu vierspaltigem Grid */
+  .gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog{
+      aspect-ratio: 1 / 1;
+      height: auto;
+      width: 100%;
+  }
+  
+  .gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog > .gb-inside-container{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog > .gb-inside-container > :last-child{
+      margin-top: auto;
+  }
+  /* Antwort von GP */
+  
+  /* zweispaltig */	
+  @media (max-width: 1000px) {
+  .gb-grid-wrapper.gb-grid-wrapper-bc0bd775.raster_ansicht .gb-grid-column  {
+          width: 50%;
+      }
+  }
+  
+  /* einspaltig */	
+  @media (max-width: 767px) {
+  .gb-grid-wrapper.gb-grid-wrapper-bc0bd775.raster_ansicht .gb-grid-column {
+          width: 100%;
+      }
+  }	
