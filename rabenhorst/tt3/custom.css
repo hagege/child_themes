@@ -4,6 +4,7 @@
     --hellblau-color: rgba(227, 235, 241, 1);
     --hellgrau-color: rgba(213, 213, 213, 1);
     --rot-color: rgba(191, 25, 25, 1);
+    --rot-color_transpa: rgba(191, 25, 25, 0.5);
     --contrast: #222222;
     --contrast-2: #575760;
     --contrast-3: #b2b2be;
@@ -31,6 +32,15 @@ div#sticky_menue_right {
     top: 50px;
 }
 
+/* sticky header (sobald eine Lösung für Template-Parts besteht, kann diese CSS-Regel entfallen */ 
+header.wp-block-template-part {
+    /* position: sticky; */
+    top: 0px;
+    position: sticky;
+    z-index: 10;
+    background-color: white;
+}
+
 
 /* runde Ecken beim Gutenslider */
 .swiper.swiper-fade.swiper-initialized.swiper-horizontal.swiper-pointer-events.swiper-watch-progress.swiper-backface-hidden {
@@ -44,6 +54,11 @@ div#sticky_menue_right {
       height: auto;
       width: 100%;
   }
+
+.gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog > .gb-inside-container:hover {
+    border-radius: 20px;
+    background-color: var(--rot-color_transpa);
+}
   
   .gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog > .gb-inside-container{
       height: 100%;
