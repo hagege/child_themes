@@ -29,7 +29,7 @@
 div#sticky_menue_right {
     position: sticky;
     position: -webkit-sticky;
-    top: 50px;
+    top: 150px;
 }
 
 /* sticky header (sobald eine Lösung für Template-Parts besteht, kann diese CSS-Regel entfallen */ 
