@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Haurand Patterns
- * @version 0.6.1
+ * @version 0.6.2
  */
 /*
 Plugin Name: Category Vorlagen Haurand
 Plugin URI: http://haurand.com
 Description: Create new Categories "Patterns Haurand" and several "Custom Websites Haurand" for Block Patterns with our custom Block patterns
 Author: Hans-Gerd Gerhards
-Version: 0.6.1
+Version: 0.6.2
 Author URI: http://haurand.com
 */
 
@@ -227,6 +227,41 @@ register_block_pattern(
         <!-- /wp:group --></div>
         <!-- /wp:group -->',
         )
+);
+
+
+/* Image with three Colors background */
+register_block_pattern(
+  'image_with_three_colors_background',
+    array(
+    'title' => __( 'Bild mit three Colors HIntergrund', 'image_with_three_colors_background' ),
+    'description' => _x( 'Bild mit dreifarbigen HIntergrund', 'Image three Colors background', 'image_with_three_colors_background' ),
+    'categories'  => array('Section Patterns Haurand'),
+    'content'     =>
+       '<!-- wp:group {"align":"full","style":{"color":{"gradient":"linear-gradient(180deg, rgb(0 111 200) 0%, rgb(0 111 200) 40%, rgb(6 147 227) 40%, rgb(6 147 227) 42%, rgb(255 255 255) 42%, rgb(255 255 255) 100%)"}},"layout":{"type":"constrained"}} -->
+       <div class="wp-block-group alignfull has-background" style="background:linear-gradient(180deg, rgb(0 111 200) 0%, rgb(0 111 200) 40%, rgb(6 147 227) 40%, rgb(6 147 227) 42%, rgb(255 255 255) 42%, rgb(255 255 255) 100%)"><!-- wp:group {"layout":{"type":"constrained"}} -->
+       <div class="wp-block-group"><!-- wp:spacer -->
+       <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+       <!-- /wp:spacer -->
+       
+       <!-- wp:cover {"url":"https://test5.haurand.com/wp-content/uploads/2023/04/kletterhalle_2-jpg.webp","id":7073,"dimRatio":60,"customGradient":"linear-gradient(180deg,rgba(255,255,255,0) 50%,rgb(0,0,0) 50%)","contentPosition":"bottom center","style":{"color":{}}} -->
+       <div class="wp-block-cover has-custom-content-position is-position-bottom-center"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-60 has-background-dim wp-block-cover__gradient-background has-background-gradient" style="background:linear-gradient(180deg,rgba(255,255,255,0) 50%,rgb(0,0,0) 50%)"></span><img class="wp-block-cover__image-background wp-image-7073" alt="" src="https://test5.haurand.com/wp-content/uploads/2023/04/kletterhalle_2-jpg.webp" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"left","textColor":"base","fontSize":"small"} -->
+       <p class="has-text-align-left has-base-color has-text-color has-small-font-size">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+       <!-- /wp:paragraph -->
+       
+       <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+       <div class="wp-block-buttons"><!-- wp:button -->
+       <div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Read More</a></div>
+       <!-- /wp:button --></div>
+       <!-- /wp:buttons --></div></div>
+       <!-- /wp:cover -->
+       
+       <!-- wp:spacer -->
+       <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+       <!-- /wp:spacer --></div>
+       <!-- /wp:group --></div>
+       <!-- /wp:group -->',
+       )
 );
 
 
