@@ -8,6 +8,19 @@ Hellgrau   #CCCCCC
 Hellblau   #D9DEF4
 */
 
+/* TEST */
+h2 > a{
+	display: none;
+}
+
+h2.content-title {
+    /* padding-top: 5px!important; */
+    min-height: 20px!important;
+    padding-top: 0px!important;
+}
+
+/* TEST */
+
 /* Zeilenhöhe beim Footermenue */
 ul#menu-footermenue {
     line-height: 1.1;
@@ -28,8 +41,23 @@ span.unterstreichen {
     text-align: center;
 }
 
+/* deaktiviert, weil der Abstand zwischen h2 und h4 nicht korrekt dargestellt wurde. 5.4.2023 
 .entry-content > [class*="wp-block-"]:not(:last-child) {
     margin-bottom: -0.4em;
+}
+*/
+
+/* Überschriften über blauen Kasten - Hauptseite */
+@media (min-width: 782px){
+h4.wp-block-heading.has-text-align-center.h4_hauptseite {
+    font-size: clamp(1.125rem, -0.278rem + 2.87vw, 1.875rem);
+}
+}
+
+@media (max-width: 781px){
+h4.wp-block-heading.has-text-align-center.h4_hauptseite {
+    font-size: clamp(1.125rem, 0.772rem + 2.26vw, 1.875rem);
+}
 }
 
 figure.kleineres_video {
@@ -167,7 +195,8 @@ span.ctl-story-time::after {
 
 /* Jahreszahl etwas dicker */
 span.ctl-story-time {
-    font-weight: 700;
+    font-weight: 700!important;
+	  font-size: 20px!important;
 }
 
 /* Rand bei Timeline */
