@@ -25,3 +25,11 @@ transform: translateX(-50vw);
 -webkit-transition: all 3.5s ease-in-out 0s;
 transition: all 2.5s ease-in-out 0s;
 }
+
+
+/* Spalten mit negativem Rand nach oben - "rutscht" ins Bild
+/* negativer Rand, siehe Beitrag https://test5.haurand.com/grafik-mit-3-spalten/ */
+.wp-block-columns.negativ_margin {
+    margin-top: -12rem;
+    position: relative;
+}

@@ -43,4 +43,11 @@ padding: 10vh;
     flex-direction: column-reverse;
 }
 }
-/* ---------------
+
+
+/* Spalten mit negativem Rand nach oben - "rutscht" ins Bild
+/* negativer Rand, siehe Beitrag https://test5.haurand.com/grafik-mit-3-spalten/ */
+.wp-block-columns.negativ_margin {
+    margin-top: -12rem;
+    position: relative;
+}

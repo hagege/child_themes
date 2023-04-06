@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Haurand Patterns
- * @version 0.6.3
+ * @version 0.6.4
  */
 /*
 Plugin Name: Category Vorlagen Haurand
 Plugin URI: http://haurand.com
 Description: Create new Categories "Patterns Haurand" and several "Custom Websites Haurand" for Block Patterns with our custom Block patterns
 Author: Hans-Gerd Gerhards
-Version: 0.6.3
+Version: 0.6.4
 Author URI: http://haurand.com
 */
 
@@ -207,8 +207,8 @@ register_block_pattern(
 register_block_pattern(
   'image_with_duotone_background',
     array(
-    'title' => __( 'Bild mit duotone HIntergrund', 'image_with_duotone_background' ),
-    'description' => _x( 'Bild mit duotone HIntergrund', 'Image with duotone background', 'image_with_duotone_background' ),
+    'title' => __( 'Bild mit duotone Hintergrund', 'image_with_duotone_background' ),
+    'description' => _x( 'Bild mit duotone Hintergrund', 'Image with duotone background', 'image_with_duotone_background' ),
     'categories'  => array('Section Patterns Haurand'),
     'content'     =>
        '<!-- wp:group {"align":"wide","style":{"color":{"gradient":"linear-gradient(180deg,rgb(0,0,0) 50%,rgb(255,255,255) 50%)"}},"layout":{"type":"constrained"}} -->
@@ -317,6 +317,67 @@ register_block_pattern(
         )
 );
 
+/* columns with negative margin */
+register_block_pattern(
+  'columns_with_negative_margin',
+    array(
+    'title' => __( 'columns with negative margin', 'columns_with_negative_margin' ),
+    'description' => _x( 'columns with negative margin', 'columns with negative margin', 'columns_with_negative_margin' ),
+    'categories'  => array('Patterns Haurand'),
+    'content'     =>
+       '<!-- wp:group {"align":"full","layout":{"type":"constrained"}} -->
+       <div class="wp-block-group alignfull"><!-- wp:cover {"url":"https://test5.haurand.com/wp-content/uploads/2018/10/kristopher-roller-110203-unsplash-scaled-1.jpg","id":165,"dimRatio":20,"minHeight":600,"align":"full"} -->
+       <div class="wp-block-cover alignfull" style="min-height:600px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-20 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-165" alt="" src="https://test5.haurand.com/wp-content/uploads/2018/10/kristopher-roller-110203-unsplash-scaled-1.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","fontSize":"large"} -->
+       <p class="has-text-align-center has-large-font-size"></p>
+       <!-- /wp:paragraph --></div></div>
+       <!-- /wp:cover -->
+       
+       <!-- wp:group {"align":"full","layout":{"type":"constrained"}} -->
+       <div class="wp-block-group alignfull"><!-- wp:columns {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","right":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|50"}},"border":{"width":"0px","style":"none"}},"className":"negativ_margin"} -->
+       <div class="wp-block-columns alignfull negativ_margin" style="border-style:none;border-width:0px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)"><!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","right":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30"}},"color":{"background":"#737495"}}} -->
+       <div class="wp-block-column has-background" style="background-color:#737495;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"white","fontSize":"large"} -->
+       <h3 class="wp-block-heading has-white-color has-text-color has-link-color has-large-font-size">One</h3>
+       <!-- /wp:heading -->
+       
+       <!-- wp:paragraph {"textColor":"white"} -->
+       <p class="has-white-color has-text-color">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+       <!-- /wp:paragraph --></div>
+       <!-- /wp:column -->
+       
+       <!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","right":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30"}},"color":{"background":"#68a8ad"}}} -->
+       <div class="wp-block-column has-background" style="background-color:#68a8ad;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"white","fontSize":"large"} -->
+       <h3 class="wp-block-heading has-white-color has-text-color has-link-color has-large-font-size">Two</h3>
+       <!-- /wp:heading -->
+       
+       <!-- wp:paragraph {"textColor":"white"} -->
+       <p class="has-white-color has-text-color">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+       <!-- /wp:paragraph --></div>
+       <!-- /wp:column -->
+       
+       <!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","right":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30"}},"color":{"background":"#6c8672"}}} -->
+       <div class="wp-block-column has-background" style="background-color:#6c8672;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"white","fontSize":"large"} -->
+       <h3 class="wp-block-heading has-white-color has-text-color has-link-color has-large-font-size">Three</h3>
+       <!-- /wp:heading -->
+       
+       <!-- wp:paragraph {"textColor":"white"} -->
+       <p class="has-white-color has-text-color">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+       <!-- /wp:paragraph --></div>
+       <!-- /wp:column -->
+       
+       <!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","right":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30"}},"color":{"background":"#f17d80"}}} -->
+       <div class="wp-block-column has-background" style="background-color:#f17d80;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"white","fontSize":"large"} -->
+       <h3 class="wp-block-heading has-white-color has-text-color has-link-color has-large-font-size">Four</h3>
+       <!-- /wp:heading -->
+       
+       <!-- wp:paragraph {"textColor":"white"} -->
+       <p class="has-white-color has-text-color">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+       <!-- /wp:paragraph --></div>
+       <!-- /wp:column --></div>
+       <!-- /wp:columns --></div>
+       <!-- /wp:group --></div>
+       <!-- /wp:group -->',
+       )
+);
 
 
 /* Beispiel für gruppierte Spalten mit Bildern und Text (abwechselnd vollflächig Bild und Text als Cover) */
