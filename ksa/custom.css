@@ -210,6 +210,7 @@ span.ctl-story-time {
 /* Linie zwischen Header und Content */
 h2.oben {
   padding-top: 4.5rem;  
+  margin-bottom: 0.5rem;
 	/* border-top: 8px solid #F7931D; */
 }
 

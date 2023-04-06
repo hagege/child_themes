@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Haurand Patterns
- * @version 0.6.2
+ * @version 0.6.3
  */
 /*
 Plugin Name: Category Vorlagen Haurand
 Plugin URI: http://haurand.com
 Description: Create new Categories "Patterns Haurand" and several "Custom Websites Haurand" for Block Patterns with our custom Block patterns
 Author: Hans-Gerd Gerhards
-Version: 0.6.2
+Version: 0.6.3
 Author URI: http://haurand.com
 */
 
@@ -36,7 +36,7 @@ Author URI: http://haurand.com
  
  
 
-/* eigene Kategorie Haurand              */
+/* custom category Haurand              */
 function patterns_haurand_register_block_categories() {
 if ( class_exists( 'WP_Block_Patterns_Registry' ) ) {
 	register_block_pattern_category(
@@ -47,7 +47,7 @@ if ( class_exists( 'WP_Block_Patterns_Registry' ) ) {
 add_action( 'init', 'patterns_haurand_register_block_categories' );
 
 
-/* eigene Kategorie Haurand: section patterns haurand */
+/* custom category Haurand: section patterns haurand */
 function section_patterns_haurand_register_block_categories() {
   if ( class_exists( 'WP_Block_Patterns_Registry' ) ) {
     register_block_pattern_category(
@@ -64,7 +64,7 @@ function hp_custom_styles() {
 }
    
 
-/* eigene Kategorie Custom EKS Haurand */            
+/* custom category EKS Haurand */            
 function custom_eks_haurand_register_block_categories() {
   if ( class_exists( 'WP_Block_Patterns_Registry' ) ) {
     register_block_pattern_category(
@@ -75,7 +75,7 @@ function custom_eks_haurand_register_block_categories() {
   add_action( 'init', 'custom_eks_haurand_register_block_categories' );
  
 
-/* eigene Kategorie Custom HA Haurand */            
+/* custom category HA Haurand */            
 function custom_ha_haurand_register_block_categories() {
   if ( class_exists( 'WP_Block_Patterns_Registry' ) ) {
     register_block_pattern_category(
@@ -1022,7 +1022,43 @@ register_block_pattern(
             )
     );
 
-
+    /* Block-Pattern-call-to-action  */
+    register_block_pattern(
+      'block-pattern-call-to-action',
+        array(
+        'title' => __( 'Block Pattern call to action', 'block-pattern-call-to-action' ),
+        'description' => _x( 'Block Pattern call to action', 'Block Pattern call to action', 'block-pattern-call-to-action' ),
+        'categories'  => array('Patterns Haurand'),
+        'content'     =>
+           '<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"layout":{"type":"constrained"}} -->
+           <div class="wp-block-group alignwide" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:cover {"url":"https://test5.haurand.com/wp-content/uploads/2023/04/kletterhalle_2-jpg.webp","id":7073,"dimRatio":80,"minHeight":100,"minHeightUnit":"vh","customGradient":"linear-gradient(135deg,rgba(255,255,255,0) 50%,rgb(21,41,139) 50%)","contentPosition":"bottom right","align":"wide","className":"square_image","style":{"color":{}}} -->
+           <div class="wp-block-cover alignwide has-custom-content-position is-position-bottom-right square_image" style="min-height:100vh"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-80 has-background-dim wp-block-cover__gradient-background has-background-gradient" style="background:linear-gradient(135deg,rgba(255,255,255,0) 50%,rgb(21,41,139) 50%)"></span><img class="wp-block-cover__image-background wp-image-7073" alt="" src="https://test5.haurand.com/wp-content/uploads/2023/04/kletterhalle_2-jpg.webp" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:columns -->
+           <div class="wp-block-columns"><!-- wp:column {"width":"66.66%"} -->
+           <div class="wp-block-column" style="flex-basis:66.66%"></div>
+           <!-- /wp:column -->
+           
+           <!-- wp:column {"width":"33.33%","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"}}}} -->
+           <div class="wp-block-column" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40);flex-basis:33.33%"><!-- wp:group {"style":{"spacing":{"padding":{"top":"1rem","right":"1rem","bottom":"1rem","left":"1rem"}},"color":{"background":"#ffffffd4"}},"textColor":"background","layout":{"type":"constrained"}} -->
+           <div class="wp-block-group has-background-color has-text-color has-background" style="background-color:#ffffffd4;padding-top:1rem;padding-right:1rem;padding-bottom:1rem;padding-left:1rem"><!-- wp:heading {"fontSize":"large"} -->
+           <h2 class="wp-block-heading has-large-font-size">Eine Überschrift</h2>
+           <!-- /wp:heading -->
+           
+           <!-- wp:paragraph {"align":"left","placeholder":"Schreibe einen Titel…","fontSize":"small"} -->
+           <p class="has-text-align-left has-small-font-size">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.  </p>
+           <!-- /wp:paragraph -->
+           
+           <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+           <div class="wp-block-buttons"><!-- wp:button {"textAlign":"center"} -->
+           <div class="wp-block-button"><a class="wp-block-button__link has-text-align-center wp-element-button">Read More</a></div>
+           <!-- /wp:button --></div>
+           <!-- /wp:buttons --></div>
+           <!-- /wp:group --></div>
+           <!-- /wp:column --></div>
+           <!-- /wp:columns --></div></div>
+           <!-- /wp:cover --></div>
+           <!-- /wp:group -->',
+           )
+   );
 
 /* ---------------------------------- */
 /* custom websites haurand */
