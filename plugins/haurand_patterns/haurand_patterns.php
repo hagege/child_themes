@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Haurand Patterns
- * @version 0.6.4
+ * @version 0.6.6
  */
 /*
 Plugin Name: Category Vorlagen Haurand
 Plugin URI: http://haurand.com
 Description: Create new Categories "Patterns Haurand" and several "Custom Websites Haurand" for Block Patterns with our custom Block patterns
 Author: Hans-Gerd Gerhards
-Version: 0.6.4
+Version: 0.6.6
 Author URI: http://haurand.com
 */
 
@@ -86,12 +86,12 @@ function custom_ha_haurand_register_block_categories() {
   add_action( 'init', 'custom_ha_haurand_register_block_categories' );
 
 
-/* Beispiel Spaltenblock mit Bild  */
+/* Beispiel Spaltenblock mit Bild (Query Loop - Abfrage Block) */
 register_block_pattern(
   'spaltenblock_mit_bild',
     array(
-    'title' => __( 'Spaltenblock mit einem schönen Bild', 'spaltenblock_mit_bild' ),
-    'description' => _x( 'Spaltenblock mit Bild', 'columns-block with image', 'spaltenblock_mit_bild' ),
+    'title' => __( 'Spaltenblock mit einem schönen Bild (Abfrage Block)', 'spaltenblock_mit_bild' ),
+    'description' => _x( 'Spaltenblock mit Bild (Query Loop - Abfrage Block)', 'columns-block with image (Query Loop)', 'spaltenblock_mit_bild' ),
     'categories'  => array('Patterns Haurand'),
     'content'     =>
        '<!-- wp:group {"align":"full","style":{"color":{"gradient":"linear-gradient(0deg,rgb(255,255,255) 48%,rgb(0,0,0) 48%)"}},"layout":{"type":"constrained"}} -->
@@ -265,6 +265,49 @@ register_block_pattern(
 );
 
 
+/* Image with two color background and text */
+register_block_pattern(
+  'Image_with_two_color_background_and_text',
+    array(
+    'title' => __( 'Bild mit zweifarbigen Hintergrund und Text', 'Image_with_two_color_background_and_text' ),
+    'description' => _x( 'Bild mit zweifarbigen Hintergrund und Text', 'Image with two color background and text', 'Image_with_two_color_background_and_text' ),
+    'categories'  => array('Patterns Haurand'),
+    'content'     =>
+       '<!-- wp:columns {"align":"full"} -->
+       <div class="wp-block-columns alignfull"><!-- wp:column {"style":{"color":{"gradient":"linear-gradient(90deg,rgb(31,28,69) 76%,rgb(155,81,224) 76%)"}}} -->
+       <div class="wp-block-column has-background" style="background:linear-gradient(90deg,rgb(31,28,69) 76%,rgb(155,81,224) 76%)"><!-- wp:columns -->
+       <div class="wp-block-columns"><!-- wp:column {"width":"66.66%","layout":{"type":"constrained"}} -->
+       <div class="wp-block-column" style="flex-basis:66.66%"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","right":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30"}}},"layout":{"type":"constrained"}} -->
+       <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:heading {"textAlign":"left","style":{"spacing":{"margin":{"left":"6.8rem","top":"2.2rem"}}},"textColor":"white"} -->
+       <h2 class="wp-block-heading has-text-align-left has-white-color has-text-color" style="margin-top:2.2rem;margin-left:6.8rem">Sorrent</h2>
+       <!-- /wp:heading -->
+       
+       <!-- wp:paragraph {"align":"left","style":{"spacing":{"margin":{"left":"6.8rem"}}},"textColor":"white"} -->
+       <p class="has-text-align-left has-white-color has-text-color" style="margin-left:6.8rem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+       <!-- /wp:paragraph -->
+       
+       <!-- wp:buttons -->
+       <div class="wp-block-buttons"><!-- wp:button {"textColor":"white","style":{"color":{"background":"#db341e"}}} -->
+       <div class="wp-block-button"><a class="wp-block-button__link has-white-color has-text-color has-background wp-element-button" style="background-color:#db341e"><strong>READ MORE</strong></a></div>
+       <!-- /wp:button --></div>
+       <!-- /wp:buttons --></div>
+       <!-- /wp:group --></div>
+       <!-- /wp:column -->
+       
+       <!-- wp:column {"width":"40%","layout":{"type":"default"}} -->
+       <div class="wp-block-column" style="flex-basis:40%"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0rem","bottom":"0rem","left":"1rem","right":"2rem"},"margin":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"}}},"layout":{"type":"constrained"}} -->
+       <div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--80);margin-bottom:var(--wp--preset--spacing--80);padding-top:0rem;padding-right:2rem;padding-bottom:0rem;padding-left:1rem"><!-- wp:image {"id":5723,"sizeSlug":"large","linkDestination":"none"} -->
+       <figure class="wp-block-image size-large"><img src="https://test5.haurand.com/wp-content/uploads/2022/01/sorrent_2021-1024x768.jpg" alt="" class="wp-image-5723"/></figure>
+       <!-- /wp:image --></div>
+       <!-- /wp:group --></div>
+       <!-- /wp:column --></div>
+       <!-- /wp:columns --></div>
+       <!-- /wp:column --></div>
+       <!-- /wp:columns -->',
+        )
+);
+
+
 /* split screen */
 register_block_pattern(
   'split_screen',
@@ -334,17 +377,7 @@ register_block_pattern(
        
        <!-- wp:group {"align":"full","layout":{"type":"constrained"}} -->
        <div class="wp-block-group alignfull"><!-- wp:columns {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","right":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|50"}},"border":{"width":"0px","style":"none"}},"className":"negativ_margin"} -->
-       <div class="wp-block-columns alignfull negativ_margin" style="border-style:none;border-width:0px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)"><!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","right":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30"}},"color":{"background":"#737495"}}} -->
-       <div class="wp-block-column has-background" style="background-color:#737495;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"white","fontSize":"large"} -->
-       <h3 class="wp-block-heading has-white-color has-text-color has-link-color has-large-font-size">One</h3>
-       <!-- /wp:heading -->
-       
-       <!-- wp:paragraph {"textColor":"white"} -->
-       <p class="has-white-color has-text-color">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
-       <!-- /wp:paragraph --></div>
-       <!-- /wp:column -->
-       
-       <!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","right":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30"}},"color":{"background":"#68a8ad"}}} -->
+       <div class="wp-block-columns alignfull negativ_margin" style="border-style:none;border-width:0px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)"><!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","right":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30"}},"color":{"background":"#68a8ad"}}} -->
        <div class="wp-block-column has-background" style="background-color:#68a8ad;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"white","fontSize":"large"} -->
        <h3 class="wp-block-heading has-white-color has-text-color has-link-color has-large-font-size">Two</h3>
        <!-- /wp:heading -->
