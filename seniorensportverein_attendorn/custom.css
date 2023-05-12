@@ -1,0 +1,26 @@
+/* oberen Rand deaktivieren */
+.wp-site-blocks {
+    padding-top: 0px;
+}
+
+
+/* Größe des Logos je nach Viewport anpassen */
+img.custom-logo {
+    width: clamp(15.625rem, 12.216rem + 17.05vw, 15rem);
+}
+
+
+/* kleine Animation bei sticky navigation */
+.wp-block-group.has-base-background-color.has-background.has-global-padding.is-layout-constrained.wp-container-6.is-position-sticky {
+  top: -10px;
+}
+
+/* wegen Problem mit ios */
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) 
+and (-webkit-min-device-pixel-ratio: 2) {
+  .sport_cover .wp-block-cover__image-background {
+    background-attachment: scroll;
+  }
+}
