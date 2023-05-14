@@ -55,20 +55,24 @@
 					"slug": "tertiary"
 				},
 				{
-					"color": "#009fe3",
+					"color": "#ACE3F8",
 					"name": "Blue",
 					"slug": "Blue"
+				},
+				{
+					"color": "#009FE3",
+					"name": "Kraeftiges Blau",
+					"slug": "Kraeftiges Blau"
 				},
 				{
 					"color": "#FCB900",
 					"name": "Kraeftiges Gelb",
 					"slug": "Kraeftiges Gelb"
-				}
-				
+				}			
 			]
 		},
 		"layout": {
-			"contentSize": "1200px",
+			"contentSize": "800px",
 			"wideSize": "1200px"
 		},
 		"spacing": {
@@ -615,19 +619,19 @@
 				},
 				":hover": {
 					"color": {
-						"background": "var(--wp--preset--color--kraeftiges-gelb)",
+						"background": "var(--wp--preset--color--kraeftiges-blau)",
 						"text": "var(--wp--preset--color--base)"
 					}
 				},
 				":focus": {
 					"color": {
-						"background": "var(--wp--preset--color--vivid-cyan-blue)",
+						"background": "var(--wp--preset--color--kraeftiges-blau)",
 						"text": "var(--wp--preset--color--base)"
 					}
 				},
 				":active": {
 					"color": {
-						"background": "var(--wp--preset--color--vivid-cyan-blue)",
+						"background": "var(--wp--preset--color--kraeftiges-blau)",
 						"text": "var(--wp--preset--color--base)"
 					}
 				},
