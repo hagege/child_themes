@@ -625,7 +625,7 @@
 					"radius": "0"
 				},
 				"color": {
-					"background": "var(--wp--preset--color--blue)",
+					"background": "var(--wp--preset--color--hellblau)",
 					"text": "var(--wp--preset--color--contrast)"
 				},
 				":hover": {
