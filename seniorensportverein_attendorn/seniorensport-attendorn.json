@@ -56,8 +56,8 @@
 				},
 				{
 					"color": "#ACE3F8",
-					"name": "Blue",
-					"slug": "Blue"
+					"name": "Hellblau",
+					"slug": "Hellblau"
 				},
 				{
 					"color": "#009FE3",
@@ -68,7 +68,18 @@
 					"color": "#FCB900",
 					"name": "Kraeftiges Gelb",
 					"slug": "Kraeftiges Gelb"
-				}			
+				},
+				{
+					"color": "#818181",
+					"name": "Dunkelgrau",
+					"slug": "Dunkelgrau"
+				},
+				{
+					"color": "#EAEAEA",
+					"name": "Hellgrau",
+					"slug": "Hellgrau"
+				}
+				
 			]
 		},
 		"layout": {
@@ -649,13 +660,13 @@
 			},
 			"h2": {
 				"typography": {
-					"fontSize": "clamp(1.625rem, calc(1.625rem + ((1vw - 0.48rem) * 7.4135)), 2.25rem);",
+					"fontSize": "var(--wp--preset--font-size--x-large)",
 					"lineHeight": "1.2"
 				}
 			},
 			"h3": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--x-large)"
+					"fontSize": "var(--wp--preset--font-size--large)"
 				}
 			},
 			"h4": {
