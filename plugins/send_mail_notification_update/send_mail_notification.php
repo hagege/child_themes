@@ -30,14 +30,17 @@ function custom_mail_settings() {
 }
 
 function sendMail() {
-    if($_POST['send']) {
-        $sendto = esc_attr( get_option('custom_mail_to') );
-        $sendfrom =  esc_attr( get_option('custom_mail_from') );
-        $sendsub = esc_attr( get_option('custom_mail_sub') );
-        $sendmess = esc_attr( get_option('custom_mail_message') );
-        $headers = "From: Wordpress <" . $sendfrom . ">";
-        wp_mail($sendto, $sendsub, $sendmess, $headers);
-    }
+        if($_POST["send"]){
+            $to =  esc_attr($_POST["name"]);
+            $subject =  esc_attr($_POST["subject"]);
+            $message = esc_attr($_POST["message"]);
+            $headers = esc_attr($_POST["email"]);
+            wp_mail($to, $subject, $message, $headers);
+            echo "<script> alert('email is sent!');</script>";
+        }
+        else{
+            echo "<script> alert('something wrong!');</script>";
+        }
 }
 
 function custom_mail_settings_page() {
@@ -90,4 +93,4 @@ function custom_mail_settings_page() {
 	  </form>
 	</div>
 	<?php
-} // end miInfoPlugIn_option_page
+} 

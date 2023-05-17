@@ -9,5 +9,16 @@ Requires at least: 4.6
 Send Mail Notification to owner of a wordpress website
 
 Weitere Optionen:
-1. Eingabe für eMail(s), Mail-Text, Button zum Senden
-2. Die Eingaben sollten gespeichert werden
+1. Eine Einstellungsseite sollte gezeigt werden
+    -> funktioniert in 0.2 
+2. Eingabe für eMail(s), Mail-Text, Button zum Senden
+    -> ist vorhanden, funktionert aber nicht
+3. Die Eingaben sollten gespeichert werden
+    -> werden z. Zt. noch nicht gespeichert
+
+
+Documentation:
+https://stackoverflow.com/questions/67761612/how-to-send-email-using-wp-mail-on-button-click-wordpress
+https://stackoverflow.com/questions/38143329/how-to-send-wp-mail-on-button-click
+https://developer.wordpress.org/reference/functions/register_setting/
+https://www.sitepoint.com/handling-post-requests-the-wordpress-way/
