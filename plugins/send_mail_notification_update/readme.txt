@@ -1,6 +1,6 @@
 === Send Mail Notification ===
 Contributors: Hans-Gerd Gerhards, haurand.com
-Stable tag: 0.1
+Stable tag: 0.2
 Tested up to: 6.2.1
 Requires at least: 4.6
 

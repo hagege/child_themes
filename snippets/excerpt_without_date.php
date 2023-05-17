@@ -21,4 +21,4 @@ if ($pos !== false) {
 return $excerpt;
 
 add_filter( 'get_the_excerpt', 'excerpt_text_without_date', 999 );
-?>
+};
