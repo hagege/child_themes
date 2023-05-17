@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Haurand Patterns
- * @version 0.6.6
+ * @version 0.6.7
  */
 /*
 Plugin Name: Category Vorlagen Haurand
 Plugin URI: http://haurand.com
 Description: Create new Categories "Patterns Haurand" and several "Custom Websites Haurand" for Block Patterns with our custom Block patterns
 Author: Hans-Gerd Gerhards
-Version: 0.6.6
+Version: 0.6.7
 Author URI: http://haurand.com
 */
 
@@ -200,6 +200,70 @@ register_block_pattern(
         <!-- /wp:group --></div></div>
         <!-- /wp:cover -->',
         )
+);
+
+
+
+/* Zwei Spalten mit Text links und Cover rechts */
+register_block_pattern(
+  'columns_text_left_cover_right',
+    array(
+    'title' => __( 'Zwei Spalten mit Text links und Cover rechts', 'columns_text_left_cover_right' ),
+    'description' => _x( 'Zwei Spalten mit Text links und Cover rechts', 'Zwei Spalten mit Text links und Cover rechts', 'columns_text_left_cover_right' ),
+    'categories'  => array('Patterns Haurand'),
+    'content'     =>       
+      '<!-- wp:columns {"align":"full"} -->
+      <div class="wp-block-columns alignfull"><!-- wp:column {"style":{"color":{"background":"#051629"}}} -->
+      <div class="wp-block-column has-background" style="background-color:#051629"><!-- wp:columns -->
+      <div class="wp-block-columns"><!-- wp:column {"width":"40%","layout":{"type":"constrained"}} -->
+      <div class="wp-block-column" style="flex-basis:40%"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","right":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30"}}},"layout":{"type":"constrained"}} -->
+      <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:heading {"textAlign":"left","style":{"spacing":{"margin":{"left":"6.8rem","top":"2.2rem"}}},"textColor":"white"} -->
+      <h2 class="wp-block-heading has-text-align-left has-white-color has-text-color" style="margin-top:2.2rem;margin-left:6.8rem">Sorrent</h2>
+      <!-- /wp:heading -->
+
+      <!-- wp:paragraph {"textColor":"white","fontSize":"large"} -->
+      <p class="has-white-color has-text-color has-large-font-size">Einfach <mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-foreground-color">wohlfühlen</mark></p>
+      <!-- /wp:paragraph -->
+
+      <!-- wp:paragraph {"align":"left","style":{"spacing":{"margin":{"left":"6.8rem"}}},"textColor":"white"} -->
+      <p class="has-text-align-left has-white-color has-text-color" style="margin-left:6.8rem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+      <!-- /wp:paragraph -->
+
+      <!-- wp:list -->
+      <ul><!-- wp:list-item -->
+      <li>First</li>
+      <!-- /wp:list-item -->
+
+      <!-- wp:list-item -->
+      <li>Second</li>
+      <!-- /wp:list-item -->
+
+      <!-- wp:list-item -->
+      <li>Third</li>
+      <!-- /wp:list-item --></ul>
+      <!-- /wp:list -->
+
+      <!-- wp:buttons -->
+      <div class="wp-block-buttons"><!-- wp:button {"textColor":"white","style":{"color":{"background":"#db341e"}}} -->
+      <div class="wp-block-button"><a class="wp-block-button__link has-white-color has-text-color has-background wp-element-button" style="background-color:#db341e"><strong>READ MORE</strong></a></div>
+      <!-- /wp:button --></div>
+      <!-- /wp:buttons --></div>
+      <!-- /wp:group --></div>
+      <!-- /wp:column -->
+
+      <!-- wp:column {"width":"60%","layout":{"type":"default"}} -->
+      <div class="wp-block-column" style="flex-basis:60%"><!-- wp:group {"layout":{"type":"constrained","contentSize":"1920px"}} -->
+      <div class="wp-block-group"><!-- wp:cover {"url":"https://test5.haurand.com/wp-content/uploads/2022/01/sorrent_2021.jpg","id":5723,"dimRatio":0,"minHeight":546,"minHeightUnit":"px","align":"full","style":{"color":{}}} -->
+      <div class="wp-block-cover alignfull" style="min-height:546px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-5723" alt="" src="https://test5.haurand.com/wp-content/uploads/2022/01/sorrent_2021.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","fontSize":"large"} -->
+      <p class="has-text-align-center has-large-font-size"></p>
+      <!-- /wp:paragraph --></div></div>
+      <!-- /wp:cover --></div>
+      <!-- /wp:group --></div>
+      <!-- /wp:column --></div>
+      <!-- /wp:columns --></div>
+      <!-- /wp:column --></div>
+      <!-- /wp:columns -->',
+)
 );
 
 

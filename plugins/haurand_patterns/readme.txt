@@ -1,6 +1,6 @@
 === Haurand Patterns ===
 Contributors: Hans-Gerd Gerhards, haurand.com
-Stable tag: 0.6.6
+Stable tag: 0.6.7
 Tested up to: 6.2
 Requires at least: 4.6
 
@@ -25,6 +25,9 @@ This plugin can be installed directly from your site.
 
 
 == Changelog ==
+
+= 0.6.7 =
+New Pattern: Zwei Spalten mit Text links und Cover rechts
 
 = 0.6.6 =
 New Pattern: Image with two color background and text
