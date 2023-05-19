@@ -13,13 +13,21 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 add_shortcode( 'wochenplan' , 'wochenplan_shortcode' );
 function wochenplan_shortcode(){
   $upload_dir = wp_upload_dir();
-  /* https://seniorensport-attendorn.de/wp-content/uploads/2023/05/KW_21_Wochenplan_SeniorenSport.pdf */
+  /* https://seniorensport-attendorn.de/wp-content/uploads/2023/05/KW_21_Wochenplan_SeniorenSport.pdf */ 
   $week_number = date("W");
   for ($i=$week_number-1; $i <= $week_number+1; $i++) { 
-	  $out .= '<li><a href="';
-	  $out .= esc_url( $upload_dir['url'] . '/KW_' . $i . '_Wochenplan_SeniorenSport.pdf') . '">';
-	  $out .= 'Aktuellen Wochenplan ansehen und herunterladen - KW - ' . $i;
-	  $out .= '</a></li>';
+	  $pdf_file = $upload_dir['url'] . '/KW_' . $i . '_Wochenplan_SeniorenSport.pdf';
+	  $pdf_file_name = 'KW_' . $i . '_Wochenplan_SeniorenSport.pdf';
+	  $pdf_file_exists = true;
+	  /* funktioniert leider nicht: $pdf_file_exists = file_exists($pdf_file); */
+	  if ($pdf_file_exists) {
+		  $out .= '<div class="pdf-button"><a href="';
+		  $out .= esc_url( $pdf_file) . '">';
+		  $out .= 'Aktuellen Wochenplan ansehen und herunterladen - KW - ' . $i;
+		  $out .= '</a></div>';
+	 } else {
+		  $out .= '<div class="wp-block-button">Die Datei <strong>$pdf_file_name</strong> ist nicht vorhanden.</div>';
+	 }
   }
   return $out; 
 }
