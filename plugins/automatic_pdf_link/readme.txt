@@ -1,6 +1,6 @@
 === Automatic PDF Link ===
 Contributors: Hans-Gerd Gerhards, haurand.com
-Stable tag: 0.2
+Stable tag: 0.3
 Tested up to: 6.2.1
 Requires at least: 4.6
 
@@ -14,6 +14,7 @@ Weitere Optionen:
 2. Das Plugin sollte einen Button für den Link erstellen, der per CSS-Regel entsprechend dargestellt wird. 
 	> erledigt
 3. Das Plugin sollte abfangen, wenn eine Datei nicht vorhanden ist.
+	> erledigt
 4. Das Plugin sollte abfangen, wenn eine Datei bereits im vorherigen Monat hochgeladen wurde. 
 5. Evtl. sollte insgesamt ein Ordner gewählt werden, der nur für die PDF-Dateien gewählt wird. Dann müsste
 	a) eine Einstellungseite erstellt werden (Ordner für PDF-Dateien)
