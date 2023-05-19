@@ -28,4 +28,3 @@ https://developer.wordpress.org/reference/functions/wp_mail/
 
 Scheint schwierig zu sein:
 https://mailtrap.io/blog/wordpress-send-email/
-Es gibt immer Probleme, wenn man nicht SMTP verwendet
