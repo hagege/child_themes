@@ -18,3 +18,8 @@ Weitere Optionen:
 5. Evtl. sollte insgesamt ein Ordner gewählt werden, der nur für die PDF-Dateien gewählt wird. Dann müsste
 	a) eine Einstellungseite erstellt werden (Ordner für PDF-Dateien)
 	b) für berechtigte Rollen eine Option zum Hochladen der Datei geschaffen werden.
+
+Evtl. hilfreiche Links und Plugins:
+https://wordpress.org/plugins/custom-upload-folder/
+https://stackoverflow.com/questions/70715768/wordpress-specify-a-custom-upload-folder-for-a-plugin
+https://stackoverflow.com/questions/35147099/wordpress-upload-media-in-a-specific-folder-for-a-special-post
