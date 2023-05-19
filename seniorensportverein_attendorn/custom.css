@@ -3,26 +3,29 @@
 Hellgrau: #EAEAEA                             Dunkelgrau: #818181
 */
 
-
 /* PDF-Wochenplan-Dateien */
 .pdf-button {
   display: flex;
   justify-content: center;
-  background-color: var(--wp--preset--color--kraeftiges-blau);
+  background-color: var(--wp--preset--color--hellblau);
   color: var(--wp--preset--color--base);
   padding: calc(0.667em + 2px) calc(1.333em + 2px);
 }
 
 .pdf-button a {
   text-decoration:none;
+color: var(--wp--preset--color--contrast);
+}
+
+.pdf-button a:hover {
+  text-decoration:none;
   color: var(--wp--preset--color--base);
 }
 
 .pdf-button:hover {
-  background-color: var(--wp--preset--color--hellblau);
+  background-color: var(--wp--preset--color--kraeftiges-blau);
   color: var(--wp--preset--color--base);
 }
-
 
 /* oberen Rand deaktivieren */
 .wp-site-blocks {
@@ -50,6 +53,4 @@ and (-webkit-min-device-pixel-ratio: 2) {
 background-attachment: scroll;
 }
 }
-
-
 

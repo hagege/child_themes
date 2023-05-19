@@ -13,4 +13,8 @@ Weitere Optionen:
 	> erledigt
 2. Das Plugin sollte einen Button für den Link erstellen, der per CSS-Regel entsprechend dargestellt wird. 
 	> erledigt
-3. Das Plugin sollte abfangen, wenn eine Datei nicht vorhanden ist
+3. Das Plugin sollte abfangen, wenn eine Datei nicht vorhanden ist.
+4. Das Plugin sollte abfangen, wenn eine Datei bereits im vorherigen Monat hochgeladen wurde. 
+5. Evtl. sollte insgesamt ein Ordner gewählt werden, der nur für die PDF-Dateien gewählt wird. Dann müsste
+	a) eine Einstellungseite erstellt werden (Ordner für PDF-Dateien)
+	b) für berechtigte Rollen eine Option zum Hochladen der Datei geschaffen werden.
