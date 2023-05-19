@@ -1,6 +1,6 @@
 === Automatic PDF Link ===
 Contributors: Hans-Gerd Gerhards, haurand.com
-Stable tag: 0.3
+Stable tag: 0.4
 Tested up to: 6.2.1
 Requires at least: 4.6
 
@@ -21,6 +21,7 @@ Weitere Optionen:
 	b) für berechtigte Rollen eine Option zum Hochladen der Datei geschaffen werden.
 
 Evtl. hilfreiche Links und Plugins:
+https://stackoverflow.com/questions/7684771/how-to-check-if-a-file-exists-from-a-url
 https://wordpress.org/plugins/custom-upload-folder/
 https://stackoverflow.com/questions/70715768/wordpress-specify-a-custom-upload-folder-for-a-plugin
 https://stackoverflow.com/questions/35147099/wordpress-upload-media-in-a-specific-folder-for-a-special-post
