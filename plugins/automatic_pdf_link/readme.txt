@@ -24,3 +24,4 @@ Evtl. hilfreiche Links und Plugins:
 https://wordpress.org/plugins/custom-upload-folder/
 https://stackoverflow.com/questions/70715768/wordpress-specify-a-custom-upload-folder-for-a-plugin
 https://stackoverflow.com/questions/35147099/wordpress-upload-media-in-a-specific-folder-for-a-special-post
+https://stackoverflow.com/questions/10444059/file-exists-returns-false-even-if-file-exist-remote-url
