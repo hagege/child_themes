@@ -12,4 +12,5 @@ Weitere Optionen:
 1. Das Plugin sollte so erweitert werden, dass jeweils ein Link für die vorherige, aktuelle und nächste Woche gezeigt wird, wenn die Datei vorhanden ist.
 	> erledigt
 2. Das Plugin sollte einen Button für den Link erstellen, der per CSS-Regel entsprechend dargestellt wird. 
+	> erledigt
 3. Das Plugin sollte abfangen, wenn eine Datei nicht vorhanden ist
