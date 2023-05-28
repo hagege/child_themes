@@ -3,7 +3,7 @@
 Plugin Name: Custom PDF File Upload to Folder
 Plugin URI: http://haurand.com
 Description: A plugin to post automatic per shortcode an actual PDF-File as link
-Version: 0.1.1
+Version: 0.2.1
 Author: Hans-Gerd Gerhards
 Author URI: http://haurand.com
 License: GPLv2 or later
@@ -19,8 +19,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 add_action('admin_menu', 'custom_file_upload_add_menu');
 function custom_file_upload_add_menu() {
     add_menu_page(
-        'PDF Wochenplan Upload',
-        'PDF Wochenplan Upload',
+        'PDF Upload',
+        'PDF Upload',
         'manage_options',
         'custom-file-upload',
         'custom_file_upload_page',
@@ -29,11 +29,21 @@ function custom_file_upload_add_menu() {
     );
 }
 
+// Register the custom folder name setting
+add_action('admin_init', 'custom_file_upload_settings');
+function custom_file_upload_settings() {
+    register_setting('custom_file_upload_options', 'custom_file_upload_folder_name');
+}
+
+
 // Render the custom file upload page
 function custom_file_upload_page() {
     if (isset($_POST['custom_file_upload_submit'])) {
+        $folder_name = sanitize_text_field($_POST['custom_file_upload_folder_name']);
+        update_option('custom_file_upload_folder_name', $folder_name);
+
         $upload_dir = wp_upload_dir(); // Get the default upload directory
-        $target_dir = $upload_dir['basedir'] . '/wochenplan/'; // Custom folder path
+        $target_dir = $upload_dir['basedir'] . '/' . $folder_name . '/'; // Custom folder path
 
         // Create the custom folder if it doesn't exist
         if (!file_exists($target_dir)) {
@@ -60,13 +70,20 @@ function custom_file_upload_page() {
         }
     }
 
-    // Render the file upload form
+    // Get the current custom folder name option
+    $current_folder_name = get_option('custom_file_upload_folder_name');
+
+    // Render the file upload form with the current folder name
     ?>
     <div class="wrap">
-        <h1>PDF-Datei hochladen</h1>
+        <h1>PDF File Upload</h1>
         <form enctype="multipart/form-data" method="post">
+            <label for="custom_folder_name">Custom Folder Name:</label>
+            <input type="text" name="custom_file_upload_folder_name" id="custom_folder_name" pattern="[a-z]{4,12}" title="Maximal 4-12 kleine Buchstaben" value="<?php echo esc_attr($current_folder_name); ?>" />
+            <p class="description">Enter the name of the custom folder where the files will be uploaded.</p>
+
             <input type="file" name="custom_file" />
-            <input type="submit" name="custom_file_upload_submit" value="Upload (Hochladen)" />
+            <input type="submit" name="custom_file_upload_submit" value="Upload" />
         </form>
     </div>
     <?php
@@ -81,7 +98,8 @@ function wochenplan_shortcode(){
   $week_number = date("W");
   for ($i=$week_number-1; $i <= $week_number+1; $i++) { 
 	  $upload_dir = wp_upload_dir(); // Get the default upload directory
-      $pdf_file = $upload_dir['baseurl'] . '/wochenplan/' . 'KW_' . $i . '_Wochenplan_SeniorenSport.pdf'; // Custom folder path
+	  $current_folder_name = get_option('custom_file_upload_folder_name');
+      $pdf_file = $upload_dir['baseurl'] . '/' . $current_folder_name . '/' . 'KW_' . $i . '_Wochenplan_SeniorenSport.pdf'; // Custom folder path
 	  $pdf_file_name = 'KW_' . $i . '_Wochenplan_SeniorenSport.pdf';
    	  if(UR_exists($pdf_file)){ 
 		  $out .= '<div class="pdf-button"><a href="';

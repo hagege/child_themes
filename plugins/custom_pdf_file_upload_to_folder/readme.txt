@@ -23,7 +23,7 @@ Weitere Optionen:
 == change log ==
 
 28.5.2023: Upload-Möglichkeit mit Menüpunkt im Backend
-           Kleinere Korrekturen und Verbesserungen am Design des Dashboards 
+           Kleinere Korrekturen und Verbesserungen am Design im Dashboards 
 
 24.5.2023: Button-Beschriftung geändert. CSS-Klassen für gefundene und nicht gefundene Dateien. Dadurch bessere Darstellung möglich.
 
