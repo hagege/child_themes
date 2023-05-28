@@ -2,7 +2,7 @@
 /*
 Plugin Name: Custom PDF File Upload to Folder
 Plugin URI: http://haurand.com
-Description: A plugin to post automatic per shortcode an actual PDF-File as link
+Description: A plugin to upload PDF-Files to a custom folder and post automatic per shortcode PDF-Files as link
 Version: 0.2.1
 Author: Hans-Gerd Gerhards
 Author URI: http://haurand.com
