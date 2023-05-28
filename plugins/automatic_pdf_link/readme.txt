@@ -1,8 +1,9 @@
 === Automatic PDF Link ===
 Contributors: Hans-Gerd Gerhards, haurand.com
-Stable tag: 0.4
+Stable tag: 0.4.3
 Tested up to: 6.2.1
 Requires at least: 4.6
+
 
 == Description ==
 
@@ -16,11 +17,17 @@ Weitere Optionen:
 3. Das Plugin sollte abfangen, wenn eine Datei nicht vorhanden ist.
 	> erledigt
 4. Das Plugin sollte abfangen, wenn eine Datei bereits im vorherigen Monat hochgeladen wurde. 
+	> Idee: Upload-Verzeichnis mit aktuellem und nachfolgenden Monat abfragen, sonst siehe 5.
 5. Evtl. sollte insgesamt ein Ordner gewählt werden, der nur für die PDF-Dateien gewählt wird. Dann müsste
 	a) eine Einstellungseite erstellt werden (Ordner für PDF-Dateien)
 	b) für berechtigte Rollen eine Option zum Hochladen der Datei geschaffen werden.
 
-Evtl. hilfreiche Links und Plugins:
+== change log ==
+24.5.2023: Button-Beschriftung geändert. CSS-Klassen für gefundene und nicht gefundene Dateien. Dadurch bessere Darstellung möglich.
+
+22.5.2023: Warnung "$out nicht definiert" korrigiert.
+
+== Evtl. hilfreiche Links und Plugins: ==
 https://stackoverflow.com/questions/7684771/how-to-check-if-a-file-exists-from-a-url
 https://wordpress.org/plugins/custom-upload-folder/
 https://stackoverflow.com/questions/70715768/wordpress-specify-a-custom-upload-folder-for-a-plugin
