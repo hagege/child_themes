@@ -22,6 +22,9 @@ Weitere Optionen:
 
 
 == change log ==
+29.5.2023: Version 0.2.2
+		   Für die Ordnerbezeichnung sind jetzt kleine Buchstaben, Ziffern, Unterstrich und Bindestrich zugelassen.
+
 28.5.2023: Version 0.2.1
 		   Über das "pattern"-Attribut werden nur 4-12 kleine Buchstaben als Ordnername zugelassen
 

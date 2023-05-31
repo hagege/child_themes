@@ -3,7 +3,7 @@
 Plugin Name: Custom PDF File Upload to Folder
 Plugin URI: http://haurand.com
 Description: A plugin to upload PDF-Files to a custom folder and post automatic per shortcode PDF-Files as link
-Version: 0.2.1
+Version: 0.2.3
 Author: Hans-Gerd Gerhards
 Author URI: http://haurand.com
 License: GPLv2 or later
@@ -78,9 +78,16 @@ function custom_file_upload_page() {
     <div class="wrap">
         <h1>PDF File Upload</h1>
         <form enctype="multipart/form-data" method="post">
-            <label for="custom_folder_name">Custom Folder Name:</label>
-            <input type="text" name="custom_file_upload_folder_name" id="custom_folder_name" pattern="[a-z]{4,12}" title="Maximal 4-12 kleine Buchstaben" value="<?php echo esc_attr($current_folder_name); ?>" />
-            <p class="description">Enter the name of the custom folder where the files will be uploaded.</p>
+            <label for="custom_folder_name">Name für Ordner (Maximal 4-12 Zeichen. Zugelassen sind kleine Buchstaben, Ziffern, Unterstrich und Bindestrich):</label>
+            <input 
+				type="text" 
+				name="custom_file_upload_folder_name" 
+				id="custom_folder_name" 
+				pattern="[a-z0-9_-]{4,12}" 
+				title="Maximal 4-12 Zeichen. Zugelassen sind kleine Buchstaben, Ziffern, Unterstrich und Bindestrich" 
+				value="<?php echo esc_attr($current_folder_name); ?>" 
+			/>
+            <p class="description">Gib den Namen für den Ordner ein, in den die PDF-Dateien hochgeladen werden sollen.</p>
 
             <input type="file" name="custom_file" />
             <input type="submit" name="custom_file_upload_submit" value="Upload" />

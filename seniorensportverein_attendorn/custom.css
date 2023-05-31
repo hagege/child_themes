@@ -1,41 +1,55 @@
-/* Blau: #009FE3                              Blau Hover: #59C6F2
-
-Hellgrau: #EAEAEA                             Dunkelgrau: #818181
+/* 
+Blau: #009FE3                              
+Blau Hover: #59C6F2
+Hellgrau: #EAEAEA                             
+Dunkelgrau: #818181
+https://www.mediaevent.de/css/display-table.html
 */
+
+/* wenn nicht href, dann Standard-Cursor */
+a:not([href]) {
+  cursor: default;
+}
 
 /* PDF-Wochenplan-Dateien */
 .pdf-button {
-  display: flex;
-  justify-content: center;
-  background-color: var(--wp--preset--color--hellblau);
-  color: var(--wp--preset--color--base);
-  padding: calc(0.667em + 2px) calc(1.333em + 2px);
+    display: table;
+    background-color: var(--wp--preset--color--hellblau);
+    color: var(--wp--preset--color--contrast);
+    padding: calc(0.667em + 2px) calc(1.333em + 2px);
+    text-align: center;
 }
 
 .pdf-button a {
-  text-decoration:none;
+    text-decoration:none;
 color: var(--wp--preset--color--contrast);
 }
 
 .pdf-button a:hover {
-  text-decoration:none;
-  color: var(--wp--preset--color--base);
+    text-decoration:none;
+    color: var(--wp--preset--color--base);
 }
 
 .pdf-button:hover {
-  background-color: var(--wp--preset--color--kraeftiges-blau);
-  color: var(--wp--preset--color--base);
+    background-color: var(--wp--preset--color--kraeftiges-blau);
+    color: var(--wp--preset--color--base);
+}
+
+
+.pdf-button-not-found {
+    width: inherit;
+    text-align: center;
 }
 
 /* oberen Rand deaktivieren */
 .wp-site-blocks {
-padding-top: 0px;
+  padding-top: 0px;
 }
 
 
 /* Größe des Logos je nach Viewport anpassen */
 img.custom-logo {
-width: clamp(15.625rem, 12.216rem + 17.05vw, 15rem);
+  width: clamp(15.625rem, 12.216rem + 17.05vw, 15rem);
 }
 
 
@@ -50,7 +64,7 @@ and (min-device-width: 768px)
 and (max-device-width: 1024px) 
 and (-webkit-min-device-pixel-ratio: 2) {
 .sport_cover .wp-block-cover__image-background {
-background-attachment: scroll;
+  background-attachment: scroll;
 }
 }
 
