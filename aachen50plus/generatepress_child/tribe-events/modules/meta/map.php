@@ -9,6 +9,11 @@
  * @version 4.4
  */
 
+
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
+
 $map = tribe_get_embedded_map();
 
 if ( empty( $map ) ) {
