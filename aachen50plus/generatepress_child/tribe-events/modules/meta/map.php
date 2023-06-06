@@ -20,10 +20,11 @@ if ( empty( $map ) ) {
 <div class="tribe-events-venue-map"> 
 	<?php
 	// Zeigt Openstreetmap:
+  $venue_id = get_the_ID();
   $address = tribe_get_address( $venue_id ).", ".tribe_get_zip( $venue_id )." ".tribe_get_city( $venue_id ).", ".tribe_get_country( $venue_id );
   $shortcode = '[leaflet-map zoomcontrol address="'.$address.'" zoom="14"]';
   /* $shortcode = '[leaflet-map zoomcontrol address="'.$address.'" zoom="16? fit_markers="1?]'; */
-  $shortcode .= '[leaflet-marker address="'.$address.', DE"]';
+  $shortcode .= '[leaflet-marker address="'.$address.'"]';
   echo do_shortcode($shortcode); 
 	do_action( 'tribe_events_single_meta_map_section_end' );
 	?>
