@@ -1,6 +1,6 @@
 === Custom PDF-File Upload to Folder ===
 Contributors: Hans-Gerd Gerhards, haurand.com
-Stable tag: 0.2.2
+Stable tag: 0.2.3
 Tested up to: 6.2.2
 Requires at least: 4.6
 

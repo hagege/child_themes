@@ -11,7 +11,7 @@ p.kachel_absatz {
 }
 
 /* Überschrift H2 bei Kacheln */
-h2.gb-headline.h2_query.gb-headline-text {
+.raster_ansicht_2 h2 {
   font-size: clamp(1rem, 0.9rem + 0.3vw, 2.5rem);
   padding: clamp(0.5rem, 0.2rem + 0.2vw, 1.5rem);
 }
