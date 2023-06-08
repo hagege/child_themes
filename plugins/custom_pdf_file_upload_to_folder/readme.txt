@@ -1,6 +1,6 @@
 === Custom PDF-File Upload to Folder ===
 Contributors: Hans-Gerd Gerhards, haurand.com
-Stable tag: 0.2.3
+Stable tag: 0.2.4
 Tested up to: 6.2.2
 Requires at least: 4.6
 
@@ -22,6 +22,10 @@ Weitere Optionen:
 
 
 == change log ==
+8.6.2023: Version 0.2.4
+			Änderungen beim Upload (Text)
+			Es wird nur noch der aktuelle und nächste Wochenplan angezeigt.
+			
 29.5.2023: Version 0.2.2
 		   Für die Ordnerbezeichnung sind jetzt kleine Buchstaben, Ziffern, Unterstrich und Bindestrich zugelassen.
 

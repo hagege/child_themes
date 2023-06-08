@@ -1,0 +1,113 @@
+/* Variablen */
+:root {
+    --mittelgrau-color: rgba(150, 150, 150, 1);
+    --hellblau-color: rgba(227, 235, 241, 1);
+    --hellgrau-color: rgba(213, 213, 213, 1);
+    --rot-color: rgba(191, 25, 25, 1);
+    --rot-color_transpa: rgba(191, 25, 25, 0.5);
+    --contrast: #222222;
+    --contrast-2: #575760;
+    --contrast-3: #b2b2be;
+    --base: #f0f0f0;
+    --base-2: #f7f8f9;
+    --base-3: #ffffff;
+    --accent: #1e73be;
+    --global-color-8: #969696;
+    --global-color-9: rgba(191,25,25,1);
+    --global-color-10: #960707;
+	--wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
+    --wp--preset--font-size--cover-paragraph: clamp(2rem, 10vw, 6rem);
+    --wp--preset--font-size--h2: clamp(1.5rem, 2vw, 6rem);
+    --global-color-9: rgba(191,25,25,1);
+    --global-color-10: #960707;
+    /* funktioniert nicht, daher nur definiert */
+    --mobile-breakpoint: 767px;
+    --tablet-breakpoint: 900px; 
+  }
+
+/* sticky Navigation rechts bei Seiten (template "kernthemen" */
+div#sticky_menue_right {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 150px;
+}
+
+/* sticky header (sobald eine Lösung für Template-Parts besteht, kann diese CSS-Regel entfallen */ 
+header.wp-block-template-part {
+    /* position: sticky; */
+    top: 0px;
+    position: sticky;
+    z-index: 10;
+    background-color: white;
+}
+
+
+/* runde Ecken beim Gutenslider */
+.swiper.swiper-fade.swiper-initialized.swiper-horizontal.swiper-pointer-events.swiper-watch-progress.swiper-backface-hidden {
+    border-radius: 20px 0px 0px 20px;
+}
+
+
+/* GP-Lösung zu vierspaltigem Grid */
+  .gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog{
+      aspect-ratio: 1 / 1;
+      height: auto;
+      width: 100%;
+  }
+
+.gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog > .gb-inside-container:hover {
+    border-radius: 20px;
+    background-color: var(--rot-color_transpa);
+}
+  
+  .gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog > .gb-inside-container{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog > .gb-inside-container > :last-child{
+      margin-top: auto;
+  }
+  /* Antwort von GP */
+  
+  /* zweispaltig */	
+  @media (max-width: 1000px) {
+  .gb-grid-wrapper.gb-grid-wrapper-bc0bd775.raster_ansicht .gb-grid-column  {
+          width: 50%;
+      }
+  }
+  
+  /* einspaltig */	
+  @media (max-width: 767px) {
+  .gb-grid-wrapper.gb-grid-wrapper-bc0bd775.raster_ansicht .gb-grid-column {
+          width: 100%;
+      }
+  }
+
+  /* Kategorien bei Einzelbeitrag */
+  .gb-button-wrapper.gb-button-wrapper-6d7bfb40 a{
+      background-color: var(--hellgrau-color);
+      border-radius: 20px;
+          padding: 20px;
+      margin: 0px 10px 0px 0px;
+  }
+  
+  /* für Kategorien auf der Seite "Beitrags-Kategorien */
+  p.beitrags_kategorien a.my_category_list {
+      background-color: var(--hellgrau-color);
+      border-radius: 20px;
+      padding: 10px;
+      margin: 20px 10px 0px 0px;
+      text-decoration: none;
+      color: black;
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: flex-end;
+  }
+  
+  p.beitrags_kategorien a.my_category_list:hover {
+        background-color: var(--rot-color);
+          color: white;
+  }
+	
