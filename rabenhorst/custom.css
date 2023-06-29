@@ -5,10 +5,12 @@
     --mittelgrau-color: rgba(150, 150, 150, 1);
     --hellblau-color: rgba(227, 235, 241, 1);
       --hellgrau-color: rgba(213, 213, 213, 1);
-      --rot-color: rgba(191, 25, 25, 1);			--wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
+      --rot-color: rgba(191, 25, 25, 1);			
+      --wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
       --wp--preset--font-size--cover-paragraph: clamp(2rem, 10vw, 6rem);
     --wp--preset--font-size--h2: clamp(1.5rem, 2vw, 6rem);
       /* funktioniert nicht, daher nur definiert */
+	  --rot-color_transpa: rgba(191, 25, 25, 0.5);
       --mobile-breakpoint: 767px;
       --tablet-breakpoint: 900px;
   
@@ -16,6 +18,14 @@
 
 
 /* TEST */
+
+/* Für Rabenhorst sticky */
+.gb-container.gb-container-4a0e8d60.sticky_container div.gb-inside-container {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 100px;
+}
+
 
 /*
 @media (max-width: 969px) {
@@ -123,6 +133,11 @@
       height: auto;
       width: 100%;
   }
+
+.gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog > .gb-inside-container:hover {
+    border-radius: 20px;
+    background-color: var(--rot-color_transpa);
+}
   
   .gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog > .gb-inside-container{
       height: 100%;
