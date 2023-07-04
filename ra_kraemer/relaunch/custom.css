@@ -1,0 +1,14 @@
+:root {
+    --blau-color: rgb(42, 79, 138) ;
+    --hellblau-color: rgb(54, 107, 224);
+    --hellgrau-color: rgb(234, 234, 234);
+    --gold-color:  rgb(177, 157, 111);	
+    /* z. Zt. noch keine Verwendung */		
+    --wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
+    --wp--preset--font-size--cover-paragraph: clamp(2rem, 10vw, 6rem);
+    --wp--preset--font-size--h2: clamp(1.5rem, 2vw, 6rem);
+      /* funktioniert nicht, daher nur definiert */
+	--rot-color_transpa: rgba(191, 25, 25, 0.5);
+    --mobile-breakpoint: 767px;
+    --tablet-breakpoint: 900px;  
+}
