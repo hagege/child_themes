@@ -1,5 +1,5 @@
 :root {
-    --blau-color: rgb(42, 79, 138) ;
+    --blau-color: rgb(42, 78, 137) ;
     --hellblau-color: rgb(54, 107, 224);
     --hellgrau-color: rgb(234, 234, 234);
     --gold-color:  rgb(177, 157, 111);	
@@ -11,4 +11,58 @@
 	--rot-color_transpa: rgba(191, 25, 25, 0.5);
     --mobile-breakpoint: 767px;
     --tablet-breakpoint: 900px;  
+}
+
+/* oberen Rand deaktivieren */
+.wp-site-blocks {
+  padding-top: 0px;
+}
+
+
+/* negativer Rand Info-Kasten */
+.wp-block-group.alignwide.cover_info.has-secondary-two-background-color.has-background.has-global-padding.is-layout-constrained.wp-container-24 {
+    /* top: -30px; */
+    margin-top: -200px;
+    /* z-index: 12; */
+}
+
+
+/* Größe des Logos je nach Viewport anpassen */
+img.custom-logo {
+width: clamp(2rem, 1.455rem + 2.73vw, 3.5rem);
+}
+
+
+
+/* sticky header */
+.wp-block-group.alignfull.sticky_header.has-global-padding.is-layout-constrained.wp-container-15.is-position-sticky {
+    position: fixed;
+    inset: 0;
+    /* padding: 30px; */
+    height: 210px;
+    z-index: 11;
+    background-color: white;
+}
+
+/* wegen Problem mit ios */
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) 
+and (-webkit-min-device-pixel-ratio: 2) {
+.sport_cover .wp-block-cover__image-background {
+  background-attachment: scroll;
+}
+}
+
+
+/* Three Columns with hover */
+
+.wp-block-column.is-vertically-aligned-center.three_columns.has-tertiary-background-color.has-background.is-layout-flow {
+    box-shadow: 1px 4px 20px -2px #0003;
+}
+
+.wp-block-column.is-vertically-aligned-center.three_columns.has-tertiary-background-color.has-background.is-layout-flow:hover {
+    box-shadow: 1px 4px 20px -2px #0003;
+    transform: translateY(-8px);
+transition: all 1s ease-in-out;
 }
