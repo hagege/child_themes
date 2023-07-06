@@ -62,7 +62,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 /* Three Columns with hover */
 
-div.three_columns {
+div.three_columns, div.spalte_werdegang {
     box-shadow: 1px 4px 20px -2px #0003;
 }
 
