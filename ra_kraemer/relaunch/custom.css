@@ -28,7 +28,7 @@ div.start_cover {
 
 /* Spaltenblock mit negativem Rand */
 div.cover_info {
-    margin-top: -200px;
+    margin-top: -200px;    box-shadow: 1px 4px 20px -2px #0003;
 }
 
 
