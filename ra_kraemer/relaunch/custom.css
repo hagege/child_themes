@@ -20,9 +20,10 @@
 
 
 /* Cover unter Header auf Startseite im Hintergrund */
-.wp-block-cover.is-light.has-custom-content-position.is-position-bottom-center {
+div.start_cover {
     z-index: -1;
 }
+
 
 
 /* Spaltenblock mit negativem Rand */
@@ -33,7 +34,7 @@
 
 /* Größe des Logos je nach Viewport anpassen */
 img.custom-logo {
-width: clamp(2rem, 1.455rem + 2.73vw, 3.5rem);
+width: clamp(10rem, 6.364rem + 18.18vw, 20rem);
 }
 
 
