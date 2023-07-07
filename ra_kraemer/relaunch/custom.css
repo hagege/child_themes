@@ -80,12 +80,18 @@ div.three_columns:hover {
 
 
 /* alternative Einstellungen für Contact Form 7 */
-input[type=email], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=url], select, textarea {
+input[type=email], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=url], select {
     padding: 5px 15px;
     width: 80%;
+    height: 1.5rem;
     border: 1px solid var(--blau-color);
 }
 
+.wpcf7-list-item textarea {
+    height: inherit;
+    padding: 5px 15px;
+    border: 1px solid var(--blau-color);
+}
 
 .wpcf7-list-item {
     width: 80%;
@@ -128,3 +134,21 @@ input[type="checkbox"]:checked + span::before {
     content: "\2713";
     color: var(--blau-color);
 }
+
+/* Contact Form 7 Submit Button 
+ -------------------------------*/
+ .wpcf7 input[type="submit"] {
+     color: var(--hellgrau-color);
+     font-weight: 700;
+     background: var(--blau-color);
+     padding: 15px 25px 15px 25px;
+     border: none;
+     width: auto;
+ }
+ .wpcf7 input:hover[type="submit"] {
+     background: var(--gold-color);
+     transition: all 0.4s ease 0s;
+ }
+ .wpcf7 input:active[type="submit"] {
+     background: var(--hellblau-color);
+ }
