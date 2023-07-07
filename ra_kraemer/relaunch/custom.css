@@ -80,6 +80,11 @@ input[type=email], input[type=number], input[type=password], input[type=search],
     width: 80%;
 }
 
+
+.wpcf7-list-item {
+    width: 80%;
+}
+
   
 .wpcf7-list-item input[type='checkbox'] {
     display: inline-block;
