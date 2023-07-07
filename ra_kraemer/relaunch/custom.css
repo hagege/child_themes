@@ -95,13 +95,18 @@ input[type=email], input[type=number], input[type=password], input[type=search],
 
 .wpcf7-list-item {
     width: 80%;
-/*    font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem); */
+    display: inline-block;
+    margin: 3em 0 0 1em;
+    text-indent: -3.5em;
+    padding: 1em 0 0 3em;
     border: var(--blau-color);
+    line-height: 0.8em;
 }
 
   
 .wpcf7-list-item input[type='checkbox'] {
     display: inline-block;
+    text-indent: 2em;
     opacity: 0;
     position: absolute;
     z-index: 9;
@@ -139,7 +144,6 @@ input[type="checkbox"]:checked + span::before {
  -------------------------------*/
  .wpcf7 input[type="submit"] {
      color: var(--hellgrau-color);
-     font-weight: 700;
      background: var(--blau-color);
      padding: 15px 25px 15px 25px;
      border: none;
