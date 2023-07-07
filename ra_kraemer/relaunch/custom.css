@@ -100,7 +100,6 @@ input[type=email], input[type=number], input[type=password], input[type=search],
     text-indent: -3.5em;
     padding: 1em 0 0 3em;
     border: var(--blau-color);
-    line-height: 0.8em;
 }
 
   
