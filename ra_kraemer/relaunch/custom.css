@@ -73,17 +73,24 @@ div.three_columns:hover {
     transition: all 1s ease-in-out;
 }
 
+/* Schlagschatten bei featured Image */
+.gb-container.gb-container-5390a3f3 {
+    box-shadow: 1px 4px 20px -2px #0003;
+}
+
 
 /* alternative Einstellungen für Contact Form 7 */
 input[type=email], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=url], select, textarea {
     padding: 5px 15px;
     width: 80%;
+    border: 1px solid var(--blau-color);
 }
 
 
 .wpcf7-list-item {
     width: 80%;
-    font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
+/*    font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem); */
+    border: var(--blau-color);
 }
 
   
@@ -110,7 +117,7 @@ input[type="checkbox"] + span::before {
     margin: 0px 12px;
     vertical-align: middle;
     cursor: pointer;
-    border: solid 2px #666;
+    border: solid 1px var(--blau-color);
     text-align: center;
     content: '';
     transform: scale(0.8);
@@ -119,9 +126,5 @@ input[type="checkbox"] + span::before {
 input[type="checkbox"]:checked + span::before {
     display: inline-block;
     content: "\2713";
-    color: #fff;
-    width: 38px;
-    height: 38px;
-    border: solid #666;
-    background-color: var(--blau-color);
+    color: var(--blau-color);
 }
