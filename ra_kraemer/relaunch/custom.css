@@ -83,6 +83,7 @@ input[type=email], input[type=number], input[type=password], input[type=search],
 
 .wpcf7-list-item {
     width: 80%;
+    font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
 }
 
   
