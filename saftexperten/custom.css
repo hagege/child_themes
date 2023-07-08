@@ -1,0 +1,9 @@
+/* für Rabenhorst aninmierter Preil im Menü */ 
+span.gp-icon.icon-arrow-right:hover {
+	content: "❯";
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	transition: all 0.5s;
+	transform: rotate(90deg);
+}
