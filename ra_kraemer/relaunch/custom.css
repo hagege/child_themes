@@ -155,3 +155,17 @@ input[type="checkbox"]:checked + span::before {
  .wpcf7 input:active[type="submit"] {
      background: var(--hellblau-color);
  }
+
+/* Accordion z. B. bei Mediation */
+body, body.elementor-default {
+ --pds-tabs-color-accent: var(--blau-color);
+ --pds-tabs-active-tab-text-color: var(--hellblau-color);
+}
+
+div#at-ein_erster_tab:hover, div#at-ein_zweiter_tab:hover, div#at-ein_dritter_tab:hover {
+    background: var(--gold-color);
+}
+
+div#at-ein_erster_tab:focus, div#at-ein_zweiter_tab:focus, div#at-ein_dritter_tab:focus{
+    background: var(--hellblau-color);
+}
