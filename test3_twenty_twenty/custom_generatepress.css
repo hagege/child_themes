@@ -1,0 +1,239 @@
+/* Vorschlag: Umstellung auf Mobil bei 870px */
+
+/* Variablen */
+:root {
+    --mittelgrau-color: rgba(150, 150, 150, 1);
+    --hellblau-color: rgba(227, 235, 241, 1);
+      --hellgrau-color: rgba(213, 213, 213, 1);
+      --rot-color: rgba(191, 25, 25, 1);			--wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
+      --wp--preset--font-size--cover-paragraph: clamp(2rem, 10vw, 6rem);
+    --wp--preset--font-size--h2: clamp(1.5rem, 2vw, 6rem);
+      /* funktioniert nicht, daher nur definiert */
+	    --rot-color_transpa: rgba(191, 25, 25, 0.5);
+      --mobile-breakpoint: 767px;
+      --tablet-breakpoint: 900px;
+  
+  }
+
+
+/* TEST */
+
+/* Für Rabenhorst sticky - klappt aber leider nicht */
+.gb-container.gb-container-4a0e8d60.sticky_container div.gb-inside-container {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 100px;
+}
+
+/* für Rabenhorst aninmierter Preil im Menü */ 
+	span.gp-icon.icon-arrow-right:hover {
+	content: "❯";
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	transition: all 0.5s;
+	transform: rotate(90deg);
+}
+
+
+
+/*
+@media (max-width: 969px) {
+	.gb-grid-wrapper.raster_ansicht_2 {
+		flex-wrap: wrap!important;
+	}
+	.gb-grid-wrapper > .gb-grid-column-f7298de9 {
+    width: 100%;
+	}
+}
+
+*/
+
+@media (max-width: 981px) {
+	.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column {
+		flex-basis: 100%!important;
+	}
+
+
+	.wp-block-columns.wp-container-3, .wp-block-columns.wp-container-6 {
+		flex-wrap: nowrap;
+		margin-bottom: 1.75em;
+		box-sizing: border-box;
+		flex-wrap: wrap!important;
+		align-items: normal!important;
+	}
+}
+
+
+/* kein Padding beim weißen Container */
+/* deaktiviert: 19.2.2023
+/* .gb-container.cover_white_container > .gb-inside-container {
+    padding: 0px!important;
+}
+
+
+.wp-block-cover.cover_square > .wp-block-cover__inner-container > .is-layout-constrained.wp-block-group > .wp-block-group__inner-container > .gb-inside-container {
+    padding: 0px;
+}
+*/
+
+
+/* TEST ENDE */
+
+/* quadratische Container für Bilder */
+.wp-block-cover.cover_square {
+    aspect-ratio: 1/1;
+    height: auto;
+		min-height: unset;
+		padding: 0px;
+		border-radius: 20px;
+	  overflow: hidden;
+}
+
+
+/* kein Padding */
+.cover_square > .wp-block-cover__inner-container > .wp-block-group > .wp-block-group__inner-container{
+    padding: 0px; 
+}
+
+
+/* kein Padding */
+.wp-block-cover.cover_square > .wp-block-cover__inner-container > .is-layout-constrained > .gb-inside-container {
+    padding: 0px;
+}
+
+/* Überschrift h2 im weißen Container */
+.wp-block-cover h2:not(.has-text-color) {
+	color: var(--contrast);
+	padding-top: 1rem;
+	font-size: clamp(1rem, 0.75rem + 1.25vw, 2.25rem);
+}
+
+/* Padding nach unten */
+.gb-container.cover_white_container {
+   padding-bottom: 3rem;
+}
+
+
+/* GP-Lösung zu zweispaltigem Grid */
+  
+@media (min-width: 969px) {
+      .gb-grid-wrapper.raster_ansicht_2 > .gb-grid-column {
+          width: unset;
+      }
+  
+      .gb-grid-wrapper.raster_ansicht_2 {
+          flex-wrap: nowrap;
+      }
+  
+      .gb-grid-wrapper.raster_ansicht_2 > .gb-grid-column:last-child {
+          flex: 1 0 33%;
+      }
+  }
+  
+  .gb-grid-wrapper.raster_ansicht_2 > .gb-grid-column:last-child > .gb-container {
+      aspect-ratio: 1/1;
+      height: auto;
+  }
+  
+  
+/* GP-Lösung zu vierspaltigem Grid */
+  .gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog{
+      aspect-ratio: 1 / 1;
+      height: auto;
+      width: 100%;
+  }
+
+.gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog > .gb-inside-container:hover {
+    border-radius: 20px;
+    background-color: var(--rot-color_transpa);
+}
+  
+  .gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog > .gb-inside-container{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog > .gb-inside-container > :last-child{
+      margin-top: auto;
+  }
+  /* Antwort von GP */
+  
+  /* zweispaltig */	
+  @media (max-width: 1000px) {
+  .raster_ansicht .gb-grid-column {
+          width: 50%;
+      }
+  }
+  
+  /* einspaltig */	
+  @media (max-width: 767px) {
+  .raster_ansicht .gb-grid-column {
+          width: 100%;
+      }
+  }	
+      
+  
+  /* Kategorienanzeige */
+/* deaktiviert: 19.2.2023  
+  @media (max-width: 767px) {
+  .gb-grid-wrapper.gb-grid-wrapper-641e0a28.einzelseite .gb-inside-container {
+      padding: 0.5rem;
+      }
+  }
+*/  
+  
+  /* Kategorien bei Einzelbeitrag */
+  .gb-button-wrapper.gb-button-wrapper-6d7bfb40 a{
+      background-color: var(--hellgrau-color);
+      border-radius: 20px;
+          padding: 20px;
+      margin: 0px 10px 0px 0px;
+  }
+  
+  /* für Kategorien auf der Seite "Beitrags-Kategorien */
+  p.beitrags_kategorien a.my_category_list {
+      background-color: var(--hellgrau-color);
+      border-radius: 20px;
+      padding: 10px;
+      margin: 20px 10px 0px 0px;
+      text-decoration: none;
+      color: black;
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: flex-end;
+  }
+  
+  p.beitrags_kategorien a.my_category_list:hover {
+        background-color: var(--rot-color);
+          color: white;
+  }
+  
+  
+  /* TEST */
+  
+  
+  /* Keine Unterstriche in Archive */
+  .gb-inside-container .gb-inside-container a {
+      text-decoration: none;
+  }
+  
+  /* Runde Ecken links beim Slider */
+  .wp-block-eedee-block-gutenslider .swiper {
+      border-radius: 20px 0px 0px 20px;
+  }
+  
+  
+  /* Kachel rot */
+  .kachel_header_rot{
+      padding: 10px;
+      margin-bottom: 0px;
+      border-radius: 20px 20px 0px 0px;
+  }
+  
+  .kachel_foto_rot img{
+      border-radius: 0px 0px 20px 20px;
+  }
+  
+  
