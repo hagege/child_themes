@@ -60,6 +60,12 @@ and (-webkit-min-device-pixel-ratio: 2) {
 }
 }
 
+/* Spaltenblock Foto rechts von Frau Krämer: mobil soll zuerst das Foto erscheinen */
+@media only screen and (max-width: 767px) {
+.wp-block-columns.alignwide.are-vertically-aligned-center.is-layout-flex.wp-container-16 {
+    flex-direction: column-reverse;
+}
+}
 
 /* Three Columns with hover */
 
@@ -177,9 +183,9 @@ div#at-ein_erster_tab:focus, div#at-ein_zweiter_tab:focus, div#at-ein_dritter_ta
   
 	  /* Animation (Fade) */
 	  .animated_1 {
-			  -webkit-animation-duration: 3s;
+			  -webkit-animation-duration: 1s;
 			  -webkit-animation-fill-mode: both;
-			  animation-duration: 3s;
+			  animation-duration: 1s;
 			  animation-fill-mode: both;
 	  } 
   }
