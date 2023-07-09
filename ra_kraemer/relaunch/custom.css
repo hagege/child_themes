@@ -60,8 +60,16 @@ and (-webkit-min-device-pixel-ratio: 2) {
 }
 }
 
+/* Abstandhalter nur mobil */
+.wp-block-spacer.verstecken {
+    display: none;
+}
+
 /* Spaltenblock Foto rechts von Frau Krämer: mobil soll zuerst das Foto erscheinen */
 @media only screen and (max-width: 767px) {
+.wp-block-spacer.verstecken {
+    display: inherit;
+}
 .wp-block-columns.alignwide.are-vertically-aligned-center.is-layout-flex.wp-container-16 {
     flex-direction: column-reverse;
 }
