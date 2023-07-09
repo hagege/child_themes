@@ -172,59 +172,26 @@ div#at-ein_erster_tab:focus, div#at-ein_zweiter_tab:focus, div#at-ein_dritter_ta
 
 
 /* Animationen für Überschrift in Tmeplates */
+/* für mobile Geräte */
   @media only screen and (max-width: 767px) {
   
 	  /* Animation (Fade) */
 	  .animated_1 {
-			  -webkit-animation-duration: 1s;
+			  -webkit-animation-duration: 3s;
 			  -webkit-animation-fill-mode: both;
-			  animation-duration: 2s;
+			  animation-duration: 3s;
 			  animation-fill-mode: both;
-	  }
-  
-	  .animated_2 {
-			  -webkit-animation-duration: 1s;
-			  -webkit-animation-fill-mode: both;
-			  animation-duration: 1s;
-			  animation-fill-mode: both;
-	  }
-	  
-	  .animated_3 {
-			  -webkit-animation-duration: 1s;
-			  -webkit-animation-fill-mode: both;
-			  animation-duration: 1s;
-			  animation-fill-mode: both;
-	  }
-	  
+	  } 
   }
   
-  
+/* für Desktops */
   @media only screen and (min-width: 768px) {
   
 	  /* Animation (Fade) */
 	  .animated_1 {
-			  font-weight: 700;
-			  font-size: 4rem;
-			  -webkit-animation-duration: 1s;
+			  -webkit-animation-duration: 3s;
 			  -webkit-animation-fill-mode: both;
-			  animation-duration: 2s;
-			  animation-fill-mode: both;
-	  }
-  
-	  .animated_2 {
-			  font-weight: 400;
-			  font-size: 3rem;
-			  -webkit-animation-duration: 1s;
-			  -webkit-animation-fill-mode: both;
-			  animation-duration: 1s;
-			  animation-fill-mode: both;
-	  }
-	  .animated_3 {
-			  font-weight: 200;
-			  font-size: 1.3rem;
-			  -webkit-animation-duration: 1s;
-			  -webkit-animation-fill-mode: both;
-			  animation-duration: 1s;
+			  animation-duration: 3s;
 			  animation-fill-mode: both;
 	  }
   }
@@ -250,9 +217,9 @@ div#at-ein_erster_tab:focus, div#at-ein_zweiter_tab:focus, div#at-ein_dritter_ta
   
   @keyframes fadeInLeftBig {
 	  0% {
-		  -webkit-transform: translate3d(-2000px,0,0);
+		  -webkit-transform: translate3d(-1000px,0,0);
 		  opacity: 0;
-		  transform: translate3d(-2000px,0,0)
+		  transform: translate3d(-1000px,0,0)
 	  }
   
 	  to {
