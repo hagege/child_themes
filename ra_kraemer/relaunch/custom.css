@@ -70,10 +70,11 @@ and (-webkit-min-device-pixel-ratio: 2) {
 .wp-block-spacer.verstecken {
     display: inherit;
 }
-.wp-block-columns.alignwide.are-vertically-aligned-center.is-layout-flex.wp-container-16 {
+div.mobil_umgekehrt {
     flex-direction: column-reverse;
 }
 }
+
 
 /* Three Columns with hover */
 
