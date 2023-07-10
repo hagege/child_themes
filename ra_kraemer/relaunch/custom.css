@@ -50,6 +50,12 @@ div.sticky_header {
     background-color: white;
 }
 
+/* Icons in der Kopfzeile höher */
+img.wp-image-333,
+img.wp-image-527 {
+    padding-bottom: 5px;
+}
+
 /* wegen Problem mit ios */
 @media only screen 
 and (min-device-width: 768px) 
@@ -65,6 +71,10 @@ and (-webkit-min-device-pixel-ratio: 2) {
     display: none;
 }
 
+div.erste_zeile_mobil{
+display: none;
+}
+
 /* Spaltenblock Foto rechts von Frau Krämer: mobil soll zuerst das Foto erscheinen */
 @media only screen and (max-width: 767px) {
 .wp-block-spacer.verstecken {
@@ -72,6 +82,12 @@ and (-webkit-min-device-pixel-ratio: 2) {
 }
 div.mobil_umgekehrt {
     flex-direction: column-reverse;
+}
+div.erste_zeile_mobil{
+    display: inherit;
+}
+div.erste_zeile_desktop{
+    display: none;
 }
 }
 
