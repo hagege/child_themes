@@ -13,9 +13,10 @@
     --tablet-breakpoint: 900px;  
 }
 
-/* oberen Rand deaktivieren */
+/* oberen und unteren Rand deaktivieren */
 .wp-site-blocks {
   padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 
@@ -48,6 +49,13 @@ div.sticky_header {
     height: 210px;
     z-index: 11;
     background-color: white;
+}
+
+/* sticky button bei mobilen Geräten */
+@media only screen and (max-width: 767px) {
+.wp-block-buttons.sticky_button.is-layout-flex.wp-container-18 {
+    justify-content: center;
+}
 }
 
 /* Icons in der Kopfzeile höher */
