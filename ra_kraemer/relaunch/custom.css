@@ -237,7 +237,8 @@ div#at-verfahren_der_mediation:focus, div#at-vorteile_der_mediation:focus, div#a
   
   .fadeInLeftBig {
 	  -webkit-animation-name: fadeInLeftBig;
-	  animation-name: fadeInLeftBig
+	  animation-name: fadeInLeftBig;
+font-size: clamp(2rem, 1.091rem + 4.55vw, 4.5rem);
   }
   
   @-webkit-keyframes fadeInLeftBig {
