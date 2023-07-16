@@ -5,12 +5,11 @@
     --mittelgrau-color: rgba(150, 150, 150, 1);
     --hellblau-color: rgba(227, 235, 241, 1);
       --hellgrau-color: rgba(213, 213, 213, 1);
-      --rot-color: rgba(191, 25, 25, 1);			
-      --wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
+      --rot-color: rgba(178, 10, 15, 1);			--wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
       --wp--preset--font-size--cover-paragraph: clamp(2rem, 10vw, 6rem);
     --wp--preset--font-size--h2: clamp(1.5rem, 2vw, 6rem);
       /* funktioniert nicht, daher nur definiert */
-	  --rot-color_transpa: rgba(191, 25, 25, 0.5);
+	    --rot-color_transpa: rgba(191, 25, 25, 0.5);
       --mobile-breakpoint: 767px;
       --tablet-breakpoint: 900px;
   
@@ -19,25 +18,61 @@
 
 /* TEST */
 
-/* Für Rabenhorst sticky */
-.gb-container.gb-container-4a0e8d60.sticky_container div.gb-inside-container {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 100px;
+/* für die Alternative statt gutenslider mit einem Image-Block */
+@media only screen and (max-width: 782px) {
+.gb-container-6a6a0c75,
+.gb-container-d69b8428{
+    border-radius: 0px;
+}
 }
 
+/* damit der Info-Kasten auf dem Bild links oben beim Gutenslider bzw. Image-Block angeordnet wird */
+.wp-block-eedee-block-gutenslider .wp-block-eedee-block-gutenslide.is-position-center-center .slide-content {
+    align-items: flex-start!important;
+}
 
-/*
-@media (max-width: 969px) {
-	.gb-grid-wrapper.raster_ansicht_2 {
-		flex-wrap: wrap!important;
-	}
-	.gb-grid-wrapper > .gb-grid-column-f7298de9 {
+/* für Rabenhorst aninmierter Pfeil im Menü */ 
+span.gp-icon.icon-arrow {
+	content: "❯";
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	transition: all 0.5s;
+	transform: rotate(0deg);
+}
+
+span.gp-icon.icon-arrow-right {
+	content: "❯";
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	transition: all 0.5s;
+	transform: rotate(90deg);
+}
+
+span.gp-icon.icon-arrow:hover{
+	content: "❯";
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	transition: all 0.5s;
+	transform: rotate(-180deg);
+}
+
+span.gp-icon.icon-arrow-right:hover{
+	content: "❯";
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	transition: all 0.5s;
+	transform: rotate(-90deg);
+}
+
+.main-navigation ul ul li {
     width: 100%;
-	}
+    border: 1px solid #ffffff;
 }
-
-*/
+/* --------------------------- */
 
 @media (max-width: 981px) {
 	.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column {
@@ -67,8 +102,6 @@
 }
 */
 
-
-/* TEST ENDE */
 
 /* quadratische Container für Bilder */
 .wp-block-cover.cover_square {
@@ -136,7 +169,7 @@
 
 .gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog > .gb-inside-container:hover {
     border-radius: 20px;
-    background-color: var(--rot-color_transpa);
+    /* background-color: var(--rot-color_transpa); */
 }
   
   .gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog > .gb-inside-container{
@@ -199,9 +232,6 @@
         background-color: var(--rot-color);
           color: white;
   }
-  
-  
-  /* TEST */
   
   
   /* Keine Unterstriche in Archive */
