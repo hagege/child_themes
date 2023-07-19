@@ -59,10 +59,7 @@
 					"slug": "large"
 				},
 				{
-					"fluid": {
-						"min": "1.8rem",
-						"max": "4rem"
-					},
+					"fluid": false,
 					"size": "2.25rem",
 					"slug": "x-large"
 				},
@@ -290,11 +287,6 @@
 					"lineHeight": "1.2"
 				}
 			},
-			"h3": {
-				"typography": {
-					"fontSize": "var(--wp--preset--font-size--large)"
-				}
-			},			
 			"heading": {
 				"typography": {
 					"fontWeight": "400",
