@@ -16,7 +16,7 @@
 
     return $mimes;
 } ); 
-*/
+
 
 add_action( 'wp_enqueue_scripts', function() {
     wp_dequeue_style( 'generate-child' );
@@ -30,15 +30,18 @@ add_filter( 'generate_editor_styles', function( $editor_styles ) {
     return $editor_styles;
 } );
 
+
 add_filter( ‘generate_typography_default_fonts’, function( $fonts ) {
     $fonts[] = ‘carnas_bold’;
     return $fonts;
     } );
 
+
 add_filter( 'generate_typography_default_fonts', function( $fonts ) {
-    $fonts[] = 'carnas_bold';
-    $fonts[] = 'carnas_light';
-    $fonts[] = 'carnas_med';
-    $fonts[] = 'carnas_xbol';
+    $fonts[] = 'Carnas Bold';
+    $fonts[] = 'Carnas Light';
+    $fonts[] = 'Carnas Med';
+    $fonts[] = 'Carnas xbol';
     return $fonts;
 } );
+*/

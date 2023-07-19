@@ -3,9 +3,9 @@
 /* Variablen */
 :root {
     --mittelgrau-color: rgba(150, 150, 150, 1);
+    --hellgrau-color: rgba(232, 232, 232, 1);
     --hellblau-color: rgba(227, 235, 241, 1);
-    --hellgrau-color: rgba(213, 213, 213, 1);
-	--hellgrau-2-color: rgba(232, 232, 232, 1);
+    --hellgrau-2-color: rgba(213, 213, 213, 1);
     --rot-color: rgba(178, 10, 15, 1);			
     --wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
     --wp--preset--font-size--cover-paragraph: clamp(2rem, 10vw, 6rem);
