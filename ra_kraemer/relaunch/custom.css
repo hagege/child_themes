@@ -4,14 +4,20 @@
     --hellgrau-color: rgb(234, 234, 234);
     --gold-color:  rgb(177, 157, 111);	
     --weiss-color: rgb(254, 254, 254);
-    /* z. Zt. noch keine Verwendung */		
+    /* z. Zt. noch keine Verwendung 		
     --wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
     --wp--preset--font-size--cover-paragraph: clamp(2rem, 10vw, 6rem);
-    --wp--preset--font-size--h2: clamp(1.5rem, 2vw, 6rem);
+    --wp--preset--font-size--h2: clamp(1.5rem, 2vw, 6rem); */
       /* funktioniert nicht, daher nur definiert */
 	--rot-color_transpa: rgba(191, 25, 25, 0.5);
     --mobile-breakpoint: 767px;
     --tablet-breakpoint: 900px;  
+}
+
+
+/* H1 nirgendwo zeigen */
+h1 {
+    display: none;
 }
 
 /* oberen und unteren Rand deaktivieren */
@@ -230,7 +236,7 @@ div#at-verfahren_der_mediation:focus, div#at-vorteile_der_mediation:focus, div#a
   .fadeInLeftBig {
 	  -webkit-animation-name: fadeInLeftBig;
 	  animation-name: fadeInLeftBig;
-font-size: clamp(2rem, 1.091rem + 4.55vw, 4.5rem);
+font-size: clamp(2rem, 1.091rem + 4.55vw, 4.5rem)!important;
   }
   
   @-webkit-keyframes fadeInLeftBig {
