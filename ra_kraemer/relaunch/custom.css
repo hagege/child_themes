@@ -3,6 +3,7 @@
     --hellblau-color: rgb(54, 107, 224);
     --hellgrau-color: rgb(234, 234, 234);
     --gold-color:  rgb(177, 157, 111);	
+    --weiss-color: rgb(254, 254, 254);
     /* z. Zt. noch keine Verwendung */		
     --wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
     --wp--preset--font-size--cover-paragraph: clamp(2rem, 10vw, 6rem);
@@ -79,9 +80,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
     display: none;
 }
 
-div.erste_zeile_mobil{
-display: none;
-}
 
 /* Spaltenblock Foto rechts von Frau Krämer: mobil soll zuerst das Foto erscheinen */
 @media only screen and (max-width: 767px) {
@@ -90,12 +88,6 @@ display: none;
 }
 div.mobil_umgekehrt {
     flex-direction: column-reverse;
-}
-div.erste_zeile_mobil{
-    display: inherit;
-}
-div.erste_zeile_desktop{
-    display: none;
 }
 }
 
@@ -181,7 +173,7 @@ input[type="checkbox"]:checked + span::before {
 /* Contact Form 7 Submit Button 
  -------------------------------*/
  .wpcf7 input[type="submit"] {
-     color: var(--hellgrau-color);
+     color: var(--weiss-color);
      background: var(--blau-color);
      padding: 15px 25px 15px 25px;
      border: none;
