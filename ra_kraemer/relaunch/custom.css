@@ -212,32 +212,32 @@ div#at-verfahren_der_mediation:focus, div#at-vorteile_der_mediation:focus, div#a
 /* für mobile Geräte */
   @media only screen and (max-width: 767px) {
   
-	  /* Animation (Fade) */
-	  .animated_1 {
-			  -webkit-animation-duration: 1s;
-			  -webkit-animation-fill-mode: both;
-			  animation-duration: 1s;
-			  animation-fill-mode: both;
-	  } 
-  }
+    /* Animation (Fade) */
+    .animated_1 {
+            -webkit-animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-duration: 1s;
+            animation-fill-mode: both;
+    } 
+}
   
 /* für Desktops */
   @media only screen and (min-width: 768px) {
   
 	  /* Animation (Fade) */
-	  .animated_1 {
-			  -webkit-animation-duration: 3s;
-			  -webkit-animation-fill-mode: both;
-			  animation-duration: 3s;
-			  animation-fill-mode: both;
-	  }
-  }
+    .animated_1 {
+        -webkit-animation-duration: 3s;
+        -webkit-animation-fill-mode: both;
+        animation-duration: 3s;
+        animation-fill-mode: both;
+    }
+}
   
-  .fadeInLeftBig {
-	  -webkit-animation-name: fadeInLeftBig;
-	  animation-name: fadeInLeftBig;
-font-size: clamp(2rem, 1.091rem + 4.55vw, 4.5rem)!important;
-  }
+.fadeInLeftBig {
+	-webkit-animation-name: fadeInLeftBig;
+	animation-name: fadeInLeftBig;
+    font-size: clamp(2rem, 1.091rem + 4.55vw, 4.5rem);
+}
   
   @-webkit-keyframes fadeInLeftBig {
 	  0% {
