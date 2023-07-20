@@ -15,9 +15,14 @@
 }
 
 
-/* H1 nirgendwo zeigen */
-h1 {
-    display: none;
+/* TEST */
+
+/* TEST ENDE */
+
+
+/* Seitentitel nirgendwo zeigen */
+.page .entry-title {
+display: none;
 }
 
 /* oberen und unteren Rand deaktivieren */
@@ -52,10 +57,11 @@ width: clamp(10rem, 6.364rem + 18.18vw, 20rem);
 div.sticky_header {
     position: fixed;
     inset: 0;
-    /* padding: 30px; */
-    height: 210px;
+    /* padding: 30px;  */
+    height: 180px;
     z-index: 11;
     background-color: white;
+    border-color: var(--wp--preset--color--gold);
 }
 
 /* sticky button bei mobilen Geräten */
@@ -208,13 +214,10 @@ body, body.elementor-default {
  --pds-tabs-active-tab-text-color: var(--hellblau-color);
 }
 
-div#at-verfahren_der_mediation:hover, div#at-vorteile_der_mediation:hover, div#at-eignung_und_grenzen_der_mediation:hover {
-    background: var(--gold-color);
-}
-
-div#at-verfahren_der_mediation:focus, div#at-vorteile_der_mediation:focus, div#at-eignung_und_grenzen_der_mediation:focus{
+div.plethoraplugins-accordion.plethoraplugins-theme__minimal.plethoraplugins-theme__basic div:focus{
     background: var(--hellblau-color);
 }
+
 
 
 /* Animationen für Überschrift in Tmeplates */
