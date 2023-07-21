@@ -27,6 +27,11 @@
     width: 100%;
 }
 }
+
+/* Links im Kasten "Kernthemen" */
+p.kernthemen_links {
+    margin-bottom: 0.4em;
+}
 /* --- TEST-ENDE----------------- */
 
 /* für die Alternative statt gutenslider mit einem Image-Block */
