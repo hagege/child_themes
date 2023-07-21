@@ -22,20 +22,43 @@
 /* für die Alternative statt gutenslider mit einem Image-Block */
 @media only screen and (max-width: 782px) {
 .gb-container-6a6a0c75,
-.gb-container-d69b8428{
+.gb-container-d69b8428 {
     border-radius: 0px;
-}
+    }
 }
 
 /* Design für Footer */
-div.footer_rand_links {
-    border-left: 2px solid white;
-    padding-left: 20px;
+
+@media only screen and (min-width: 783px) {
+	div.footer_mobil {
+		display:none;
+	}
+	div.footer_desktop {
+		display:inherit;
+	}
+	div.footer_rand_links {
+        border-left: 2px solid white;
+	}
+	div.innenabstand {
+        padding-top: 0px;
+        padding-bottom: 0px;
+		padding-left: 20px;
+	}
 }
 
-div.innenabstand {
-    padding-top: 0px;
-    padding-bottom: 0px;
+@media only screen and (max-width: 782px) {
+	div.footer_mobil {
+		display:inherit;
+		padding-left: 20px;
+	}
+	
+	p.footer_mobil_rand_unten {
+		border-bottom: 2px solid white;
+	}
+
+	div.footer_desktop {
+		display:none;
+	}
 }
 
 /* damit der Info-Kasten auf dem Bild links oben beim Gutenslider bzw. Image-Block angeordnet wird */
