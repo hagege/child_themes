@@ -20,12 +20,15 @@
 /* --- TEST-ANFANG ----------------- */
 /* Hier Der Breakpoint für den Slider auf der Startseite */
 @media only screen and (max-width: 1100px) {
-	.gb-grid-wrapper > .gb-grid-column-0e0f8b88 {
-    width: 100%;
+	.gb-grid-wrapper > .gb-grid-column-0e0f8b88, .gb-grid-wrapper.gb-grid-wrapper-641e0a28.einzelseite {
+        width: 100%;
 	}
-	.gb-grid-wrapper > .gb-grid-column-b4c4e46f {
-    width: 100%;
-}
+	.gb-grid-wrapper > .gb-grid-column-b4c4e46f, .gb-grid-column.gb-grid-column-28859ee2 {
+        width: 100%;
+	}
+	div.sticky_container > .gb-inside-container {
+        padding-left: 0px;
+	}
 }
 
 /* Links im Kasten "Kernthemen" */
