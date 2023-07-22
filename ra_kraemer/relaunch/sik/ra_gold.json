@@ -20,16 +20,7 @@
 					"name": "Gold",
 					"slug": "gold"
 				},
-				{
-					"color": "#FFFFFF",
-					"name": "Weiß",
-					"slug": "weiss"
-				},
-				{
-					"color": "#000000",
-					"name": "Schwarz",
-					"slug": "schwarz"
-				},
+				
 				{
 					"color": "#EAEAEA",
 					"name": "Hellgrau",
