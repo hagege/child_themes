@@ -57,6 +57,12 @@ hr.kernthemen_separator {
 }
 /* --- TEST-ENDE----------------- */
 
+/* Schrift auf Kachel rechts Startseite */
+p.bild_rechts_startseite {
+    font-size: clamp(0.8rem, 0.655rem + 0.73vw, 1.2rem);
+}
+
+
 /* für die Alternative statt gutenslider mit einem Image-Block */
 @media only screen and (max-width: 782px) {
 .gb-container-6a6a0c75,
