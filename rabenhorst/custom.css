@@ -29,12 +29,22 @@
 
 /* Hier Der Breakpoint für den Slider auf der Startseite */
 @media only screen and (max-width: 1100px) {
+	
+	.wp-block-columns.kernthemen_spalten {
+    flex-wrap: wrap!important;
+	}
+	
+	.wp-block-columns.kernthemen_spalten .wp-block-column.is-layout-flow.wp-block-column-is-layout-flow {
+		flex-basis: 100%!important;
+	}
 	.gb-grid-wrapper > .gb-grid-column-0e0f8b88, .gb-grid-wrapper.gb-grid-wrapper-641e0a28.einzelseite {
         width: 100%;
 	}
 	.gb-grid-wrapper > .gb-grid-column-b4c4e46f, .gb-grid-column.gb-grid-column-28859ee2 {
         width: 100%;
 	}
+	
+	
 	.wp-block-eedee-block-gutenslider .swiper {
         border-radius: 20px 20px 0px 0px;
 }
@@ -45,7 +55,7 @@
 	
 	div.sticky_container > .gb-inside-container {
         padding-left: 0px;
-		position: inherit;
+				position: inherit;
 	}
 }
 
@@ -54,22 +64,35 @@
 	.wp-block-eedee-block-gutenslider .swiper {
         border-radius: 20px 0px 0px 20px;
   }
-	div.sticky_container > .gb-inside-container {
+		div.sticky_container > .gb-inside-container {
         padding-left: 0px;
-		position: fixed;
+				position: fixed;
 	}
 }
 
 
 /* Kasten Kernthemen */
 /* Links im Kasten "Kernthemen" */
-p.kernthemen_links {
-    margin-bottom: 0.4em;
-}
 
-hr.kernthemen_separator {
+/* funktioniert nicht:
+hr.wp-block-separator.has-alpha-channel-opacity.kernthemen_separator.is-style-default  {
     margin-top: 0.1em;
     margin-bottom: 1em;
+		width: 100%;
+}
+
+*/
+
+div.menue_rechts_sticky div.wp-block-group{
+	border-radius: 20px;
+}
+
+div.menue_rechts_sticky  {
+    padding: 20px 40px 20px 20px;
+}
+
+div.menue_rechts_sticky p {
+    margin-bottom: 0.4em;
 }
 
 
