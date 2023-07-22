@@ -18,6 +18,15 @@
 
 
 /* --- TEST-ANFANG ----------------- */
+
+/* nur bei Verwendung des Sticky Blocks */
+.block-is-sticky {
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+/* --- TEST-ENDE----------------- */
+
 /* Hier Der Breakpoint für den Slider auf der Startseite */
 @media only screen and (max-width: 1100px) {
 	.gb-grid-wrapper > .gb-grid-column-0e0f8b88, .gb-grid-wrapper.gb-grid-wrapper-641e0a28.einzelseite {
@@ -30,11 +39,13 @@
         border-radius: 20px 20px 0px 0px;
 }
 
-    .gb-container-b4c4e46f {
+  .gb-container-b4c4e46f {
 		border-radius: 0px 0px 20px 20px;
   }
+	
 	div.sticky_container > .gb-inside-container {
         padding-left: 0px;
+		position: inherit;
 	}
 }
 
@@ -43,7 +54,12 @@
 	.wp-block-eedee-block-gutenslider .swiper {
         border-radius: 20px 0px 0px 20px;
   }
+	div.sticky_container > .gb-inside-container {
+        padding-left: 0px;
+		position: fixed;
+	}
 }
+
 
 /* Kasten Kernthemen */
 /* Links im Kasten "Kernthemen" */
@@ -55,7 +71,7 @@ hr.kernthemen_separator {
     margin-top: 0.1em;
     margin-bottom: 1em;
 }
-/* --- TEST-ENDE----------------- */
+
 
 /* Schrift auf Kachel rechts Startseite */
 p.bild_rechts_startseite {
