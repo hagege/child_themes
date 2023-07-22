@@ -26,14 +26,34 @@
 	.gb-grid-wrapper > .gb-grid-column-b4c4e46f, .gb-grid-column.gb-grid-column-28859ee2 {
         width: 100%;
 	}
+	.wp-block-eedee-block-gutenslider .swiper {
+        border-radius: 20px 20px 0px 0px;
+}
+
+    .gb-container-b4c4e46f {
+		border-radius: 0px 0px 20px 20px;
+  }
 	div.sticky_container > .gb-inside-container {
         padding-left: 0px;
 	}
 }
 
+/* Runde Ecken links beim Slider */
+@media only screen and (min-width: 1101px) {  
+	.wp-block-eedee-block-gutenslider .swiper {
+        border-radius: 20px 0px 0px 20px;
+  }
+}
+
+/* Kasten Kernthemen */
 /* Links im Kasten "Kernthemen" */
 p.kernthemen_links {
     margin-bottom: 0.4em;
+}
+
+hr.kernthemen_separator {
+    margin-top: 0.1em;
+    margin-bottom: 1em;
 }
 /* --- TEST-ENDE----------------- */
 
@@ -293,10 +313,6 @@ span.gp-icon.icon-arrow-right:hover{
       text-decoration: none;
   }
   
-  /* Runde Ecken links beim Slider */
-  .wp-block-eedee-block-gutenslider .swiper {
-      border-radius: 20px 0px 0px 20px;
-  }
   
   
   /* Kachel rot */
