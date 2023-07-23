@@ -92,9 +92,9 @@ div.menue_rechts_sticky  {
 }
 
 div.menue_rechts_sticky p {
-    margin-bottom: 0.4em;
+    margin-bottom: 0em;
+    line-height: 1em;
 }
-
 
 /* Schrift auf Kachel rechts Startseite */
 p.bild_rechts_startseite {
@@ -328,20 +328,20 @@ span.gp-icon.icon-arrow-right:hover{
   
   /* Kategorien bei Einzelbeitrag */
   .gb-button-wrapper.gb-button-wrapper-6d7bfb40 a{
-      background-color: var(--hellgrau-color);
+      /* background-color: var(--hellgrau-color); */
       border-radius: 20px;
-          padding: 20px;
+      padding: 10px;
       margin: 0px 10px 0px 0px;
   }
   
   /* für Kategorien auf der Seite "Beitrags-Kategorien */
   p.beitrags_kategorien a.my_category_list {
-      background-color: var(--hellgrau-color);
+      background-color: var(--mittelgrau-color);
       border-radius: 20px;
       padding: 10px;
       margin: 20px 10px 0px 0px;
       text-decoration: none;
-      color: black;
+      color: white;
       display: inline-flex;
       flex-direction: row;
       justify-content: flex-end;
