@@ -327,7 +327,8 @@ span.gp-icon.icon-arrow-right:hover{
 */  
   
   /* Kategorien bei Einzelbeitrag */
-  .gb-button-wrapper.gb-button-wrapper-6d7bfb40 a{
+  .gb-button-wrapper.gb-button-wrapper-6d7bfb40 a, 
+.gb-button-wrapper.gb-button-wrapper-c95c0080 a{
       /* background-color: var(--hellgrau-color); */
       border-radius: 20px;
       padding: 10px;
@@ -351,7 +352,16 @@ span.gp-icon.icon-arrow-right:hover{
         background-color: var(--rot-color);
           color: white;
   }
-  
+
+/* Kategorienliste bei Einzelbeitrag unten */
+div.my_categories.categories_single_post .wp-block-group__inner-container {
+    margin: 0px;
+    padding: 0px;
+}
+
+div.my_categories.categories_single_post h3 {
+	display:none;
+}
   
   /* Keine Unterstriche in Archive */
   .gb-inside-container .gb-inside-container a {
