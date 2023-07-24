@@ -25,6 +25,13 @@
     overflow-y: auto;
 }
 
+:target:before {
+    content:"";
+    display:block;
+    height:90px; /* fixed header height*/
+    margin:-90px 0 0; /* negative fixed header height */
+}
+
 /* --- TEST-ENDE----------------- */
 
 /* Hier Der Breakpoint für den Slider auf der Startseite */
@@ -94,6 +101,10 @@ div.menue_rechts_sticky  {
 div.menue_rechts_sticky p {
     margin-bottom: 0em;
     line-height: 1em;
+}
+
+div.menue_rechts_sticky a {
+    text-decoration: none;
 }
 
 /* Schrift auf Kachel rechts Startseite */
