@@ -32,6 +32,15 @@
     margin:-90px 0 0; /* negative fixed header height */
 }
 
+/* Schriften im Slider auf der Startseite */
+p.has-text-align-left.gutenslider-content-initial {
+    font-family: 'Carnas Med';
+}
+
+div.kasten_rechts_slider p {
+    font-family: 'Carnas Med';
+}
+
 /* --- TEST-ENDE----------------- */
 
 /* Hier Der Breakpoint für den Slider auf der Startseite */
