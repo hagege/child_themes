@@ -25,6 +25,9 @@
     overflow-y: auto;
 }
 
+/* --- TEST-ENDE----------------- */
+
+/* Ansteuerung für Anker korrigiert */
 :target:before {
     content:"";
     display:block;
@@ -41,10 +44,8 @@ div.kasten_rechts_slider p {
     font-family: 'Carnas Med';
 }
 
-/* --- TEST-ENDE----------------- */
-
 /* Hier Der Breakpoint für den Slider auf der Startseite */
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1200px) {
 	
 	.wp-block-columns.kernthemen_spalten {
     flex-wrap: wrap!important;
@@ -116,6 +117,11 @@ div.menue_rechts_sticky a {
     text-decoration: none;
 }
 
+div.menue_rechts_sticky a:active,
+div.menue_rechts_sticky a:focus{
+    color: var(--rot-color);
+}
+
 /* Schrift auf Kachel rechts Startseite */
 p.bild_rechts_startseite {
     font-size: clamp(0.8rem, 0.655rem + 0.73vw, 1.2rem);
@@ -170,7 +176,7 @@ p.bild_rechts_startseite {
     align-items: flex-start!important;
 }
 
-/* für Rabenhorst aninmierter Pfeil im Menü */ 
+/* für Rabenhorst aninmierter Pfeil im Menü  - rausgenommen: 24.7.2023
 span.gp-icon.icon-arrow {
 	content: "❯";
 	width: 1.5em;
@@ -206,6 +212,7 @@ span.gp-icon.icon-arrow-right:hover{
 	transition: all 0.5s;
 	transform: rotate(-90deg);
 }
+*/
 
 .main-navigation ul ul li {
     width: 100%;
@@ -307,7 +314,7 @@ span.gp-icon.icon-arrow-right:hover{
   }
 
 .gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog > .gb-inside-container:hover {
-    border-radius: 20px;
+    border-radius: 30px;
     /* background-color: var(--rot-color_transpa); */
 }
   
@@ -350,7 +357,7 @@ span.gp-icon.icon-arrow-right:hover{
   .gb-button-wrapper.gb-button-wrapper-6d7bfb40 a, 
 .gb-button-wrapper.gb-button-wrapper-c95c0080 a{
       /* background-color: var(--hellgrau-color); */
-      border-radius: 20px;
+      border-radius: 30px;
       padding: 10px;
       margin: 0px 10px 0px 0px;
   }
@@ -358,7 +365,7 @@ span.gp-icon.icon-arrow-right:hover{
   /* für Kategorien auf der Seite "Beitrags-Kategorien */
   p.beitrags_kategorien a.my_category_list {
       background-color: var(--mittelgrau-color);
-      border-radius: 20px;
+      border-radius: 30px;
       padding: 10px;
       margin: 20px 10px 0px 0px;
       text-decoration: none;
