@@ -1,0 +1,81 @@
+/* für Rabenhorst aninmierter Pfeil im Menü */ 
+span.gp-icon.icon-arrow {
+	content: "❯";
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	transition: all 0.5s;
+	transform: rotate(0deg);
+}
+
+span.gp-icon.icon-arrow-right {
+	content: "❯";
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	transition: all 0.5s;
+	transform: rotate(90deg);
+}
+
+span.gp-icon.icon-arrow:hover{
+	content: "❯";
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	transition: all 0.5s;
+	transform: rotate(-180deg);
+}
+
+span.gp-icon.icon-arrow-right:hover{
+	content: "❯";
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	transition: all 0.5s;
+	transform: rotate(-90deg);
+}
+
+/* nur bei Verwendung des Sticky Blocks */
+.block-is-sticky {
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+
+/* für Rabenhorst aninmierter Pfeil im Menü  - rausgenommen: 24.7.2023
+span.gp-icon.icon-arrow {
+	content: "❯";
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	transition: all 0.5s;
+	transform: rotate(0deg);
+}
+
+span.gp-icon.icon-arrow-right {
+	content: "❯";
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	transition: all 0.5s;
+	transform: rotate(90deg);
+}
+
+span.gp-icon.icon-arrow:hover{
+	content: "❯";
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	transition: all 0.5s;
+	transform: rotate(-180deg);
+}
+
+span.gp-icon.icon-arrow-right:hover{
+	content: "❯";
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	transition: all 0.5s;
+	transform: rotate(-90deg);
+}
+*/

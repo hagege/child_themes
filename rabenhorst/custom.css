@@ -19,10 +19,12 @@
 
 /* --- TEST-ANFANG ----------------- */
 
-/* nur bei Verwendung des Sticky Blocks */
-.block-is-sticky {
-    max-height: 100vh;
-    overflow-y: auto;
+.menu-item-has-children .dropdown-menu-toggle {
+    padding-left: 5px;
+}
+
+span.gb-button, a.gb-button {
+    font-family: 'Carnas Med';
 }
 
 /* --- TEST-ENDE----------------- */
