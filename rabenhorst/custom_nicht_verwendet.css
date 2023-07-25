@@ -35,6 +35,21 @@ span.gp-icon.icon-arrow-right:hover{
 	transform: rotate(-90deg);
 }
 
+
+@media screen and (max-width: 1650px) {	
+
+	table {width:100%;}
+	thead {display: none;}
+	tr:nth-of-type(2n) {background-color: inherit;}
+	tr td:first-child {background: #f0f0f0; font-weight:bold;font-size:1em;}
+	tbody td {display: block;  text-align:left;}
+	tbody td:before {
+		content: attr(data-th);
+		display: block;
+		text-align:left; 
+	}
+  }
+
 /* nur bei Verwendung des Sticky Blocks */
 .block-is-sticky {
     max-height: 100vh;
