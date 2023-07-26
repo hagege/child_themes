@@ -1,0 +1,6 @@
+Änderungen an ra_gold.json werden nicht direkt ausgeführt. 
+Erst wenn ich einen anderen glocbal style gewählt habe und dann wieder den geänderten ra_gold.rtm wähle, klappt das.
+
+Änderungen an theme.json werden direkt ausgeführt, wenn man auf Aktualisieren gewählt
+
+Bei den anderen mitgeliferten Global Styles scheint das auch zu funktionieren
