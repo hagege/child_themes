@@ -18,6 +18,16 @@
 
 
 /* --- TEST-ANFANG ----------------- */
+/* Einstellungen für Contact Form 7 */
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="tel"], input[type="number"], textarea, select {
+    color: var(--contrast);
+    background-color: var(--base-2);
+    border-color: var(--base);
+    width: 40rem;
+}
+
+/* --- TEST-ENDE----------------- */
+
 
 .menu-item-has-children .dropdown-menu-toggle {
     padding-left: 5px;
@@ -26,8 +36,6 @@
 span.gb-button, a.gb-button {
     font-family: 'Carnas Med';
 }
-
-/* --- TEST-ENDE----------------- */
 
 /* Ansteuerung für Anker korrigiert */
 :target:before {
@@ -123,6 +131,7 @@ div.menue_rechts_sticky a {
 div.menue_rechts_sticky a:active,
 div.menue_rechts_sticky a:focus{
     color: var(--rot-color);
+	  text-decoration: underline;
 }
 
 /* Schrift auf Kachel rechts Startseite */
@@ -329,7 +338,7 @@ p.bild_rechts_startseite {
   }
   
   /* für Kategorien auf der Seite "Beitrags-Kategorien */
-  p.beitrags_kategorien a.my_category_list {
+a.my_category_list {
       background-color: var(--mittelgrau-color);
       border-radius: 30px;
       padding: 10px;
@@ -339,9 +348,10 @@ p.bild_rechts_startseite {
       display: inline-flex;
       flex-direction: row;
       justify-content: flex-end;
+			font-family:'Carnas Med';
   }
   
-  p.beitrags_kategorien a.my_category_list:hover {
+a.my_category_list:hover {
         background-color: var(--rot-color);
           color: white;
   }
