@@ -20,9 +20,6 @@
 /* --- TEST-ANFANG ----------------- */
 /* Einstellungen für Contact Form 7 */
 input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="tel"], input[type="number"], textarea, select {
-    color: var(--contrast);
-    background-color: var(--base-2);
-    border-color: var(--base);
     width: 40rem;
 }
 
