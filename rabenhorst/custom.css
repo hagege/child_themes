@@ -19,8 +19,40 @@
 
 /* --- TEST-ANFANG ----------------- */
 /* Einstellungen für Contact Form 7 */
-input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="tel"], input[type="number"], textarea, select {
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="tel"], textarea, select {
     width: 40rem;
+}
+
+/* Coantainer für Bestellungen */
+div.bestellformular_column {
+  float: left;
+  width: 25%;
+  padding: 20px;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 767px wide, make the four columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 767px) {
+  div.bestellformular_column {
+    width: 100%;
+	margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+/* Responsive layout - when the screen is between 768px and 1100px, make two columns next to each other */
+@media screen and (min-width: 768px) and (max-width: 1100px){
+  div.bestellformular_column {
+    width: 50%;
+  }
 }
 
 /* --- TEST-ENDE----------------- */
