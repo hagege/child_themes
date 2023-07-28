@@ -18,6 +18,20 @@
 
 
 /* --- TEST-ANFANG ----------------- */
+
+
+/* --- TEST-ENDE----------------- */
+
+/* Accordion z. B. bei Mediation */
+body, body.elementor-default {
+ --pds-tabs-color-accent: var(--rot-color);
+ --pds-tabs-active-tab-text-color: var(--rot-color);
+}
+
+div.plethoraplugins-accordion.plethoraplugins-theme__minimal.plethoraplugins-theme__basic div:focus{
+    background: var(--mittelgrau-color);
+}
+
 /* Einstellungen für Contact Form 7 */
 input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="tel"], textarea, select {
     width: 40rem;
@@ -62,9 +76,6 @@ h2.bestellformular_h2 {
   }
 }
 
-
-
-/* --- TEST-ENDE----------------- */
 
 
 .menu-item-has-children .dropdown-menu-toggle {
