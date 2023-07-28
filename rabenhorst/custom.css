@@ -38,6 +38,13 @@ div.bestellformular_column {
   clear: both;
 }
 
+/* Damit die Bilder horizontal korrekt ausgerichtet sind */
+@media screen and (min-width: 1251px) {
+h2.bestellformular_h2 {
+    height: 4.5rem;
+	}
+}
+
 /* Responsive layout - when the screen is less than 767px wide, make the four columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 900px) {
   div.bestellformular_column {
@@ -54,6 +61,8 @@ div.bestellformular_column {
     width: 50%;
   }
 }
+
+
 
 /* --- TEST-ENDE----------------- */
 
