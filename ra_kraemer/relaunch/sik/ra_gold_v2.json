@@ -7,12 +7,12 @@
 			"palette": [
 				{
 					"color": "#ffffff",
-					"name": "Base",
+					"name": "Weiß",
 					"slug": "base"
 				},
 				{
 					"color": "#000000",
-					"name": "Weiß",
+					"name": "Schwarz",
 					"slug": "contrast"
 				},					
 				{
@@ -154,7 +154,7 @@
 				"elements": {
 					"link": {
 						"color": {
-							"text": "var(--wp--preset--color--secondary)"
+							"text": "var(--wp--preset--color--contrast)"
 						}
 					}
 				}
@@ -193,7 +193,7 @@
 						},
 						":active": {
 							"color": {
-								"text": "var(--wp--preset--color--secondary)"
+								"text": "var(--wp--preset--color--contrast)"
 							},
 							"typography": {
 								"textDecoration": "none"
@@ -360,7 +360,7 @@
 				},
 				":active": {
 					"color": {
-						"text": "var(--wp--preset--color--secondary)"
+						"text": "var(--wp--preset--color--contrast)"
 					},
 					"typography": {
 						"textDecoration": "none"
