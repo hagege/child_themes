@@ -282,7 +282,7 @@
 			},
 			"h1": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--x-large)",
+					"fontSize": "3.625rem",
 					"lineHeight": "1.2"
 				}
 			},
