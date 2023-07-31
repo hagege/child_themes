@@ -23,6 +23,13 @@ CMYK 67-19-35-35
 /* Logo für Mitglieder bei Veranstaltungsliste */
 article.cat_premium a.tribe-events-calendar-list__event-featured-image-link::after {
   content: url('https://aachenerkinder.de/wp-content/uploads/2020/08/siegel_mitglied_klein.png');
+  margin-top: 1rem;
+  display: block;
+}
+
+/* Logo für Mitglieder bei Einzelansicht */
+.tribe-events-single>.tribe_events.cat_premium::after {
+  content: url('https://aachenerkinder.de/wp-content/uploads/2020/08/siegel_mitglied.png');
 }
 
 /* TEST Ende */
