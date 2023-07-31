@@ -69,6 +69,7 @@ div.sticky_header {
     z-index: 11;
     background-color: white;
     border-color: var(--wp--preset--color--gold);
+    box-shadow: 1px 4px 20px -2px #0003;
 }
 
 /* sticky button bei mobilen Geräten */
