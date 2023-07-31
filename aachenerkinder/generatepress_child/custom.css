@@ -18,12 +18,19 @@ CMYK 55-0-18-13
 CMYK 67-19-35-35
 */
 
-/* TEST */
+/* TEST Anfang */
+
+/* Logo für Mitglieder bei Veranstaltungsliste */
+article.cat_premium a.tribe-events-calendar-list__event-featured-image-link::after {
+  content: url('https://aachenerkinder.de/wp-content/uploads/2020/08/siegel_mitglied_klein.png');
+}
+
+/* TEST Ende */
 
 /* damit der Anker korrekt angesteuert werden kann - deaktiviert: 3.11.2022 
 [id^="htoc-"] { 
-	padding-top: 150px; 
-	margin-top: -150px!important;
+padding-top: 150px; 
+margin-top: -150px!important;
 }
 */
 
@@ -165,10 +172,6 @@ time.tribe-events-calendar-month__day-date-daynum {
   border-bottom: 0px;
   text-decoration: none;
 }
-
-
-
-/* TEST */
 
 
 
