@@ -6,6 +6,31 @@
 		"color": {
 			"palette": [
 				{
+					"color": "#ffffff",
+					"name": "Weiß",
+					"slug": "base"
+				},
+				{
+					"color": "#000000",
+					"name": "Schwarz",
+					"slug": "contrast"
+				},					
+				{
+					"color": "#ACE3F8",
+					"name": "Hellblau",
+					"slug": "primary"
+				},	
+				{
+					"color": "#009FE3",
+					"name": "Kraeftiges Blau",
+					"slug": "secondary"
+				},
+				{
+					"color": "#818181",
+					"name": "Dunkelgrau",
+					"slug": "tertiary"
+				},
+				{
 					"color": "#ACE3F8",
 					"name": "Hellblau",
 					"slug": "Hellblau"
@@ -64,8 +89,11 @@
 					"slug": "large"
 				},
 				{
-					"fluid": false,
-					"size": "2.25rem",
+					"fluid": {
+						"min": "1.75rem",
+						"max": "2.25rem"
+					},
+					"size": "2rem",
 					"slug": "x-large"
 				},
 				{

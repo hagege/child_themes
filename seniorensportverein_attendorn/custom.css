@@ -11,6 +11,11 @@ a:not([href]) {
   cursor: default;
 }
 
+/* color für Schrift auf Kachel */
+p.has-text-align-center.p_kachel.has-large-font-size {
+    color: white;
+}
+
 /* PDF-Wochenplan-Dateien */
 .pdf-button {
     display: table;
@@ -56,6 +61,7 @@ img.custom-logo {
 /* kleine Animation bei sticky navigation */
 .wp-block-group.has-base-background-color.has-background.has-global-padding.is-layout-constrained.wp-container-6.is-position-sticky {
 top: -10px;
+background-color: white;
 }
 
 /* wegen Problem mit ios */
@@ -67,4 +73,3 @@ and (-webkit-min-device-pixel-ratio: 2) {
   background-attachment: scroll;
 }
 }
-
