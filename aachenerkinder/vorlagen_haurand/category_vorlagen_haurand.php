@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Category Vorlagen Haurand
- * @version 0.2
+ * @version 0.3
  */
 /*
 Plugin Name: Category Vorlagen Haurand
 Plugin URI: http://haurand.com
 Description: Create a new Category "Haurand" as "Vorlagen Haurand" for Block Patterns with my own custom Block patterns
 Author: Hans-Gerd Gerhards
-Version: 0.2
+Version: 0.3
 Author URI: http://haurand.com
 */
 
@@ -29,8 +29,9 @@ Author URI: http://haurand.com
  function prefix_unregister_category() {
     unregister_block_pattern_category( 'buttons');
     unregister_block_pattern_category( 'header');
-	unregister_block_pattern_category( 'hero');
     unregister_block_pattern_category( 'text');
+    /* erzeugte eine PHP Notice: */
+/*  	unregister_block_pattern_category( 'Footer'); */    
     unregister_block_pattern_category( 'columns');
     unregister_block_pattern_category( 'gallery');
   }
