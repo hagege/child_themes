@@ -24,12 +24,12 @@
 
 /* Accordion z. B. bei Mediation */
 body, body.elementor-default {
- --pds-tabs-color-accent: var(--rot-color);
- --pds-tabs-active-tab-text-color: var(--rot-color);
+ --pds-tabs-color-accent: var(--mittelgrau-color);
+ --pds-tabs-active-tab-text-color: var(--mittelgrau-color);
 }
 
 div.plethoraplugins-accordion.plethoraplugins-theme__minimal.plethoraplugins-theme__basic div:focus{
-    background: var(--mittelgrau-color);
+    background: var(--rot-color);
 }
 
 /* Einstellungen für Contact Form 7 */
@@ -150,14 +150,13 @@ div.kasten_rechts_slider p {
 /* Kasten Kernthemen */
 /* Links im Kasten "Kernthemen" */
 
-/* funktioniert nicht:
-hr.wp-block-separator.has-alpha-channel-opacity.kernthemen_separator.is-style-default  {
-    margin-top: 0.1em;
-    margin-bottom: 1em;
+/* funktioniert nicht: */
+hr.kernthemen_separator  {
+    margin-bottom: 0em!important;
 		width: 100%;
 }
 
-*/
+
 
 div.menue_rechts_sticky div.wp-block-group{
 	border-radius: 20px;
@@ -354,7 +353,7 @@ p.bild_rechts_startseite {
   /* Antwort von GP */
   
   /* zweispaltig */	
-  @media (max-width: 1000px) {
+  @media (max-width: 1300px) {
   .raster_ansicht .gb-grid-column {
           width: 50%;
       }
