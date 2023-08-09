@@ -4,7 +4,7 @@ Donate link: https://haurand.com/
 Tags: category list
 Requires at least: 4.7
 Tested up to: 6.2
-Stable tag: 1.1
+Stable tag: 1.2
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -41,6 +41,9 @@ Answer to foo bar dilemma.
 2. This is the second screen shot
 
 == Changelog ==
+
+= 1.2 =
+* Header H3 deletet
 
 = 1.0 =
 * A change since the previous version.

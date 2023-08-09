@@ -2,13 +2,13 @@
 /*
 Plugin Name: All Used Category Names
 Description: Displays a list of all used category names in your WordPress site
-Version: 1.1
+Version: 1.2
 Author: Hans-Gerd Gerhards
 */
 
 /*----------------------------------------------------------------*/
 /* Start: Shortcode für Kategorienliste - Aufruf mit [my_category_list]
-/* Datum: 04.2.2023
+/* Datum: 09.8.2023
 /* Autor: hgg
 /*----------------------------------------------------------------*/
 
@@ -24,6 +24,6 @@ function my_category_list_shortcode() {
         $my_output .= '<a class="my_category_list" href="' . get_category_link($my_category->term_id) . '">' . $my_category->name . '</a>' . '   ';
     }
     $my_output .= '</p>';
-    return "<h3>Beitrags-Kategorien</h3>$my_output";
+    return "$my_output";
   }
   add_shortcode('my_category_list', 'my_category_list_shortcode');
