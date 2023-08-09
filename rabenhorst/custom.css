@@ -24,6 +24,16 @@ span.gb-button.gb-button-ae38bced.gb-button-text.page-numbers.gb-block-is-curren
 }
 
 
+/* Breite bei Einzelbeiträgen ab 1300px */
+@media screen and (max-width: 1300px) {
+	div.einzelseite >div.gb-grid-column {
+			width: 100%;
+	}
+	.gb-container.gb-container-8f02caa0 {
+			aspect-ratio: 1/1;
+	}
+}
+
 /* --- TEST-ENDE----------------- */
 
 /* Accordion z. B. bei Mediation */
@@ -384,23 +394,24 @@ p.bild_rechts_startseite {
   .gb-button-wrapper.gb-button-wrapper-6d7bfb40 a, 
 .gb-button-wrapper.gb-button-wrapper-c95c0080 a{
       /* background-color: var(--hellgrau-color); */
-      border-radius: 30px;
-      padding: 10px;
-      margin: 0px 10px 0px 0px;
+    border-radius: 30px;
+    padding: 10px;
+    margin: 0px 10px 0px 0px;
   }
   
   /* für Kategorien auf der Seite "Beitrags-Kategorien */
 a.my_category_list {
-      background-color: var(--mittelgrau-color);
-      border-radius: 30px;
-      padding: 10px;
-      margin: 20px 10px 0px 0px;
-      text-decoration: none;
-      color: white;
-      display: inline-flex;
-      flex-direction: row;
-      justify-content: flex-end;
-			font-family:'Carnas Med';
+    background-color: var(--hellgrau-color);
+    border-radius: 30px;
+    padding: 2px 10px 2px 10px;
+    /* margin: 20px 10px 0px 0px; */
+    text-decoration: none;
+    color: var(--mittelgrau-color);
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-end;
+	font-family:'Carnas Med';
+	font-size: 1rem;
   }
   
 a.my_category_list:hover {
