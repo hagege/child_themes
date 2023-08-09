@@ -34,6 +34,18 @@ span.gb-button.gb-button-ae38bced.gb-button-text.page-numbers.gb-block-is-curren
 	}
 }
 
+/* roter Abstandhalter */
+hr.roter_abstandhalter {
+    margin-bottom: 15px;
+}
+
+/* Überschrift H2 Einzelbeiträge */
+h2.h2_beitraege {
+    font-family: 'Carnas light';
+    color: black;
+    margin-bottom: 0.5rem;
+}
+
 /* --- TEST-ENDE----------------- */
 
 /* Accordion z. B. bei Mediation */
