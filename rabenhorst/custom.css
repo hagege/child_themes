@@ -18,6 +18,10 @@
 
 
 /* --- TEST-ANFANG ----------------- */
+/* damit aktuelle Seite (active) in Übersicht rot angezeigt wird */
+span.gb-button.gb-button-ae38bced.gb-button-text.page-numbers.gb-block-is-current {
+    background-color: var(--rot-color);
+}
 
 
 /* --- TEST-ENDE----------------- */
@@ -104,7 +108,7 @@ div.kasten_rechts_slider p {
 }
 
 /* Hier Der Breakpoint für den Slider auf der Startseite */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1300px) {
 	
 	.wp-block-columns.kernthemen_spalten {
     flex-wrap: wrap!important;
@@ -136,7 +140,7 @@ div.kasten_rechts_slider p {
 }
 
 /* Runde Ecken links beim Slider */
-@media only screen and (min-width: 1101px) {  
+@media only screen and (min-width: 1301px) {  
 	.wp-block-eedee-block-gutenslider .swiper {
         border-radius: 20px 0px 0px 20px;
   }
@@ -360,7 +364,7 @@ p.bild_rechts_startseite {
   }
   
   /* einspaltig */	
-  @media (max-width: 767px) {
+  @media (max-width: 1100px) {
   .raster_ansicht .gb-grid-column {
           width: 100%;
       }
