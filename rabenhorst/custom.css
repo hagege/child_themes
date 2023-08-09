@@ -46,6 +46,26 @@ h2.h2_beitraege {
     margin-bottom: 0.5rem;
 }
 
+/* Beitrags-Kategorien Rand unten */
+p.beitrags_kategorien {
+	margin-bottom:0px;
+}
+
+/* gleicher Rand nach unten */
+div.my_categories .wp-block-group__inner-container {
+    padding-bottom: 0px;
+}
+
+/* Bild in Übersciht weiter links */
+.gb-grid-wrapper.gb-grid-wrapper-a9208927.gb-query-loop-wrapper > .gb-grid-column > .gb-container {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+/* muss noch korrigieret werden (Übersciht) */
+div.gb-query-loop-wrapper > .gb-grid-column > .gb-container > .gb-inside-container > .gb-grid-wrapper > .gb-grid-column {
+    width: 100%;
+}
 /* --- TEST-ENDE----------------- */
 
 /* Accordion z. B. bei Mediation */
