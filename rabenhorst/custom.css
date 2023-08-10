@@ -24,9 +24,10 @@ span.gb-button.gb-button-ae38bced.gb-button-text.page-numbers.gb-block-is-curren
 }
 
 
-/* Breite bei Einzelbeiträgen ab 1300px */
-@media screen and (max-width: 1300px) {
-	div.einzelseite >div.gb-grid-column {
+/* Breite bei Einzelbeiträgen ab 1350px */
+@media screen and (max-width: 1350px) {
+	div.einzelseite >div.gb-grid-column,
+	div.experten_raster >div.gb-grid-column {
 			width: 100%;
 	}
 	.gb-container.gb-container-8f02caa0 {
@@ -62,10 +63,11 @@ div.my_categories .wp-block-group__inner-container {
     padding-left: 0px;
 }
 
-/* muss noch korrigieret werden (Übersciht) */
+/* muss noch korrigieret werden (Übersciht) 
 div.gb-query-loop-wrapper > .gb-grid-column > .gb-container > .gb-inside-container > .gb-grid-wrapper > .gb-grid-column {
     width: 100%;
 }
+*/
 /* --- TEST-ENDE----------------- */
 
 /* Accordion z. B. bei Mediation */
