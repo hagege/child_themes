@@ -27,11 +27,19 @@ span.gb-button.gb-button-ae38bced.gb-button-text.page-numbers.gb-block-is-curren
 /* Breite bei Einzelbeiträgen ab 1350px */
 @media screen and (max-width: 1350px) {
 	div.einzelseite >div.gb-grid-column,
-	div.experten_raster >div.gb-grid-column {
+	div.experten_raster >div.gb-grid-column
+	{
 			width: 100%;
 	}
-	.gb-container.gb-container-8f02caa0 {
+	.gb-container.gb-container-8f02caa0 
+	{
 			aspect-ratio: 1/1;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	div.raster_einzeln >div.gb-grid-column   {
+			width: 100%;
 	}
 }
 
