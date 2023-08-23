@@ -9,6 +9,11 @@ FARBWERTE
 Web und Bildschirm Druck
 */
 
+/* Embed Privacy in Datenschutzerklärung */
+label.embed-privacy-opt-out-label {
+    padding-left: 10px;
+}
+
 /* Ausschalter für Anzeige Freizeitmöglichkeit */
 i.fa.fa-times.ol-info-window-close {
     font-size: 20px;

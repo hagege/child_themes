@@ -20,6 +20,11 @@ CMYK 67-19-35-35
 
 /* TEST Anfang */
 
+/* Embed Privacy in Datenschutzerklärung */
+label.embed-privacy-opt-out-label {
+  padding-left: 10px;
+}
+
 /* Logo für Mitglieder bei Veranstaltungsliste */
 article.cat_premium a.tribe-events-calendar-list__event-featured-image-link::after {
   content: url('https://aachenerkinder.de/wp-content/uploads/2020/08/siegel_mitglied_klein.png');
