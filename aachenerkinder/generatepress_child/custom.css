@@ -20,6 +20,18 @@ CMYK 67-19-35-35
 
 /* TEST Anfang */
 
+
+/* Button weiterlesen mit mehr Innenabstand */
+.tribe-events-calendar-list__event-details.tribe-common-g-col a {
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+
+
+/* TEST Ende */
+
+
 /* Embed Privacy in Datenschutzerklärung */
 label.embed-privacy-opt-out-label {
   padding-left: 10px;
@@ -36,8 +48,6 @@ article.cat_premium a.tribe-events-calendar-list__event-featured-image-link::aft
 .tribe-events-single>.tribe_events.cat_premium::after {
   content: url('https://aachenerkinder.de/wp-content/uploads/2020/08/siegel_mitglied.png');
 }
-
-/* TEST Ende */
 
 /* damit der Anker korrekt angesteuert werden kann - deaktiviert: 3.11.2022 
 [id^="htoc-"] { 
