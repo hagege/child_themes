@@ -16,6 +16,15 @@
 
 
 /* TEST */
+
+/* TEST ENDE */
+
+/* Werdegang: Bild mit Schatten */
+figure.wp-block-image.size-full.bild_mit_schatten {
+    box-shadow: 1px 4px 20px -2px #0003;
+}
+
+
 @media screen and (max-width: 900px) {
   /* hamburger button */
   .wp-block-navigation__responsive-container-open  {
@@ -26,17 +35,14 @@
   .wp-block-navigation__responsive-container:not(.is-menu-open.has-modal-open) {
     display: none !important;
   }
-  /* Menü mit weißem Hintergrund */
-  .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open {
-        background-color: rgb(255 255 255 / 60%);
+.wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open {
+    background-color: rgb(255 255 255 / 60%);
   }
-  ul.wp-block-navigation__container.is-responsive.items-justified-right.wp-block-navigation {
-        background-color: white;
-        padding: 3rem;
-  }
+ul.wp-block-navigation__container.is-responsive.items-justified-right.wp-block-navigation {
+    background-color: white;
+    padding: 3rem;
 }
-
-/* TEST ENDE */
+}
 
 :target:before {
     content:"";
