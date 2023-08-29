@@ -6,10 +6,30 @@ Dunkelgrau: #818181
 https://www.mediaevent.de/css/display-table.html
 */
 
+@media screen and (max-width: 900px) {
+  /* hamburger button */
+  .wp-block-navigation__responsive-container-open  {
+    display: block !important;
+  }
+
+  /* full menu */
+  .wp-block-navigation__responsive-container:not(.is-menu-open.has-modal-open) {
+    display: none !important;
+  }
+.wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open {
+    background-color: rgb(255 255 255 / 60%);
+  }
+ul.wp-block-navigation__container.is-responsive.items-justified-right.wp-block-navigation {
+    background-color: white;
+    padding: 3rem;
+}
+}
+
 /* wenn nicht href, dann Standard-Cursor */
 a:not([href]) {
   cursor: default;
 }
+
 
 /* color für Schrift auf Kachel */
 p.has-text-align-center.p_kachel.has-large-font-size {
