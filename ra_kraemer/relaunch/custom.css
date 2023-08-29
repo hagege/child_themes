@@ -17,6 +17,15 @@
 
 /* TEST */
 
+.wp-block-navigation a:where(:not(.wp-element-button)):hover {
+    text-decoration: underline;
+    text-decoration-color: var(--blau-color);
+    -webkit-text-decoration-color: var(--blau-color);
+
+/*            padding-bottom: 15px; */
+    width: fit-content;
+}
+
 /* TEST ENDE */
 
 /* Werdegang: Bild mit Schatten */
