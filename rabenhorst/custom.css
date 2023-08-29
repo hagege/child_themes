@@ -18,6 +18,19 @@
 
 
 /* --- TEST-ANFANG ----------------- */
+/* Close-Button für Popup verbergen */
+button.pum-close.popmake-close {
+    display: none;
+}
+
+
+
+/* muss noch korrigieret werden (Übersciht) 
+div.gb-query-loop-wrapper > .gb-grid-column > .gb-container > .gb-inside-container > .gb-grid-wrapper > .gb-grid-column {
+    width: 100%;
+}
+*/
+/* --- TEST-ENDE----------------- */
 /* damit aktuelle Seite (active) in Übersicht rot angezeigt wird */
 span.gb-button.gb-button-ae38bced.gb-button-text.page-numbers.gb-block-is-current {
     background-color: var(--rot-color);
@@ -71,12 +84,6 @@ div.my_categories .wp-block-group__inner-container {
     padding-left: 0px;
 }
 
-/* muss noch korrigieret werden (Übersciht) 
-div.gb-query-loop-wrapper > .gb-grid-column > .gb-container > .gb-inside-container > .gb-grid-wrapper > .gb-grid-column {
-    width: 100%;
-}
-*/
-/* --- TEST-ENDE----------------- */
 
 /* Accordion z. B. bei Mediation */
 body, body.elementor-default {
