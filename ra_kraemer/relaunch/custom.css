@@ -17,6 +17,12 @@
 
 /* TEST */
 
+/* Checkbox für Datenschutz - Häkchen im Kästchen */
+.wpcf7-list-item input[type="checkbox"] + span::before {
+    text-indent: 0px;
+    font-size: 1.2rem;
+}
+
 .wp-block-navigation a:where(:not(.wp-element-button)):hover {
     text-decoration: underline;
     text-decoration-color: var(--blau-color);
@@ -24,6 +30,11 @@
 
 /*            padding-bottom: 15px; */
     width: fit-content;
+}
+
+
+a:where(:not(.wp-element-button)) {
+    color: var(--blau-color);
 }
 
 /* TEST ENDE */
