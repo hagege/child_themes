@@ -18,6 +18,9 @@
 
 
 /* --- TEST-ANFANG ----------------- */
+
+
+
 /* Close-Button für Popup verbergen */
 button.pum-close.popmake-close {
     display: none;
@@ -496,4 +499,8 @@ div.my_categories.categories_single_post h3 {
       border-radius: 0px 0px 20px 20px;
   }
   
+/* Kacheln für Expertenseite */
+.gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog_experten {
+	aspect-ratio: 3/5;
+}
   
