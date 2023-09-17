@@ -20,10 +20,31 @@
 /* --- TEST-ANFANG ----------------- */
 
 /* Sticky Menü */
-.navigation-branding img {
-		padding-top: 0px;
+.navigation-branding img, 
+.site-logo.mobile-header-logo img {
+	padding-top: 0px;
     padding-bottom: 1em;
 }
+
+/* Logo Höhe mobil */
+.site-logo.mobile-header-logo a img {
+    height: 100px;
+}
+
+/* Logo desktop */
+.main-navigation.sticky-navigation-transition .site-logo img  {
+    height: 80px;
+	padding-top: 0px;
+    padding-bottom: 1em;
+}
+
+/* nicht optimal 
+@media screen and (max-width: 1000px){ 
+    .site-logo.mobile-header-logo {
+        margin-top: -18px;
+    }
+}
+*/
 
 /* Abstand Trennlinie */
 hr.hr_abstand {
