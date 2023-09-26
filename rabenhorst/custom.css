@@ -19,6 +19,13 @@
 
 /* --- TEST-ANFANG ----------------- */
 
+
+@media (max-width: 1200px) {
+    .separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .one-container .site-content, .inside-page-header {
+    padding: 30px 15px 30px 15px;
+}
+}
+
 /* Sticky Menü */
 .navigation-branding img, 
 .site-logo.mobile-header-logo img {
