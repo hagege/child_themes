@@ -46,6 +46,14 @@
 }
 */
 
+
+/* muss noch korrigieret werden (Übersicht) 
+div.gb-query-loop-wrapper > .gb-grid-column > .gb-container > .gb-inside-container > .gb-grid-wrapper > .gb-grid-column {
+    width: 100%;
+}
+*/
+/* --- TEST-ENDE----------------- */
+
 /* Abstand Trennlinie */
 hr.hr_abstand {
     margin-top: 1.6em;
@@ -58,13 +66,6 @@ button.pum-close.popmake-close {
 }
 
 
-
-/* muss noch korrigieret werden (Übersciht) 
-div.gb-query-loop-wrapper > .gb-grid-column > .gb-container > .gb-inside-container > .gb-grid-wrapper > .gb-grid-column {
-    width: 100%;
-}
-*/
-/* --- TEST-ENDE----------------- */
 /* damit aktuelle Seite (active) in Übersicht rot angezeigt wird */
 span.gb-button.gb-button-ae38bced.gb-button-text.page-numbers.gb-block-is-current {
     background-color: var(--rot-color);
@@ -156,7 +157,7 @@ h2.bestellformular_h2 {
 	}
 }
 
-/* Responsive layout - when the screen is less than 767px wide, make the four columns stack on top of each other instead of next to each other */
+/* Responsive layout - when the screen is less than 900px wide, make the four columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 900px) {
   div.bestellformular_column {
     width: 100%;
@@ -187,8 +188,8 @@ span.gb-button, a.gb-button {
 :target:before {
     content:"";
     display:block;
-    height:90px; /* fixed header height*/
-    margin:-90px 0 0; /* negative fixed header height */
+    height:120px; /* fixed header height*/
+    margin:-120px 0 0; /* negative fixed header height */
 }
 
 /* Schriften im Slider auf der Startseite */
@@ -460,6 +461,7 @@ p.bild_rechts_startseite {
   @media (max-width: 1100px) {
   .raster_ansicht .gb-grid-column {
           width: 100%;
+          text-align: center;
       }
   }	
       
