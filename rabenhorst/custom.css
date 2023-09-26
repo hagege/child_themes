@@ -18,11 +18,20 @@
 
 
 /* --- TEST-ANFANG ----------------- */
-
-
+/* kleinere Änderungen an der Navigation */ 
 @media (max-width: 1200px) {
-    .separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .one-container .site-content, .inside-page-header {
+.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .one-container .site-content, .inside-page-header {
     padding: 30px 15px 30px 15px;
+}
+
+.main-navigation.navigation-stick.has-sticky-branding .inside-navigation.grid-container {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+	
+#mobile-header {
+    padding-left: 20px;
+    padding-right: 20px;
 }
 }
 
