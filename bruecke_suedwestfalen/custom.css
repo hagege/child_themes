@@ -1,0 +1,48 @@
+/* Farben */
+/* Variablen */
+:root {
+    --dunkelblau-color: rgba(30, 51, 127, 1);
+    --orange-color: rgba(255, 125, 31, 1);
+    --hellblau-color:  rgba(0, 123, 190, 1);
+    --lila-color: rgba(162, 50, 150, 1);
+    --rot-color: rgba(238, 56, 63, 1);	     --gebl-color: rgba(255, 216, 0, 1);	  --gruen-color: rgba(135, 193, 44, 1);			
+    --wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
+    --wp--preset--font-size--cover-paragraph: clamp(2rem, 10vw, 6rem);
+    --wp--preset--font-size--h2: clamp(1.5rem, 2vw, 6rem);
+      /* funktioniert nicht, daher nur definiert */
+	--rot-color_transpa: rgba(191, 25, 25, 0.5);
+    --mobile-breakpoint: 767px;
+    --tablet-breakpoint: 900px;
+  }
+/*
+Dunkelblau	#1E337F
+Orange		#FF7D1F
+Hellblau	#007BBE
+Lila		# A23296
+Rot	#EE383F
+Gelb	#FFD800
+Grün 	#87C12C
+
+*/
+
+/* Kachel für Brücke */
+div.bruecke_links_oben div.wp-block-group__inner-container {
+    margin: 0px;
+    padding: 10px;
+}
+
+p.kachel_absatz_oben {
+    border-radius: 0px 0px 150px 0px;
+		margin: 0px;
+}
+
+div.kachel_oben_links p {
+    padding: 20px 50px 20px 50px;
+}
+
+div.kachel_unten_links p,
+div.kachel_unten_links h2
+{
+    margin-bottom: 0px;
+}
+
