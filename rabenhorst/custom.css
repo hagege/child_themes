@@ -19,7 +19,7 @@
 
 
 /* --- TEST-ANFANG ----------------- */
-/* für hellblaue Listen und Absätze */ 
+/* für Listen mit hellblauem Hintergrund und Absätze */ 
 p.hellblau.has-background,
 ul.hellblau.has-background {
     border-radius: 20px;
@@ -30,11 +30,13 @@ ul.hellblau.has-background {
 	  background-color:var(--hellblau-color-20);
 }
 
-ul.hellblau.has-background li {
+/* Mehr Rand bei Listenelementen */
+ul li {
    margin-bottom: 5px;
 }
 
-ul.hellblau.has-background li::marker{
+/* Bullets rot bei Listenelementen */
+ul li::marker{
     color:var(--rot-color);
 }
 
