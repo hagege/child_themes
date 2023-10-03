@@ -40,6 +40,11 @@ ul li::marker{
     color:var(--rot-color);
 }
 
+/* kein Rand unten bei Menüpunkten */
+.main-navigation ul ul li {
+    margin-bottom: 0px;
+}
+
 /* Akkordeon */
 .plethoraplugins-accordion.plethoraplugins-theme__minimal.plethoraplugins-theme__basic .pds-accordion__title {
     background: var(--rot-color);
@@ -536,7 +541,7 @@ p.bild_rechts_startseite {
   
   /* für Kategorien auf der Seite "Beitrags-Kategorien */
 a.my_category_list {
-	background-color: var(--rot-color);
+	  background-color: var(--rot-color);
     border-radius: 30px;
     padding: 2px 10px 2px 10px;
     /* margin: 20px 10px 0px 0px; */
@@ -586,3 +591,4 @@ div.my_categories.categories_single_post h3 {
 .gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog_experten {
 	aspect-ratio: 3/5;
 }
+  
