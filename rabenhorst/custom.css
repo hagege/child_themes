@@ -5,6 +5,7 @@
     --mittelgrau-color: rgba(150, 150, 150, 1);
     --hellgrau-color: rgba(232, 232, 232, 1);
     --hellblau-color: rgba(227, 235, 241, 1);
+	--hellblau-color-20: rgba(226, 233, 245, 1);
     --hellgrau-2-color: rgba(213, 213, 213, 1);
     --rot-color: rgba(178, 10, 15, 1);			
     --wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
@@ -18,6 +19,37 @@
 
 
 /* --- TEST-ANFANG ----------------- */
+/* für hellblaue Listen und Absätze */ 
+p.hellblau.has-background,
+ul.hellblau.has-background {
+    border-radius: 20px;
+}
+
+ul.hellblau.has-background {
+    margin-left:0px;
+	  background-color:var(--hellblau-color-20);
+}
+
+ul.hellblau.has-background li {
+   margin-bottom: 5px;
+}
+
+ul.hellblau.has-background li::marker{
+    color:var(--rot-color);
+}
+
+/* Akkordeon */
+.plethoraplugins-accordion.plethoraplugins-theme__minimal.plethoraplugins-theme__basic .pds-accordion__title {
+    background: var(--rot-color);
+    color: white;
+}
+
+.plethoraplugins-accordion.plethoraplugins-theme__minimal.plethoraplugins-theme__basic .pds-accordion__title:hover {
+    background: var(--pds-tabs-accordion-header-background-basic);
+    color: white;
+}
+
+
 /* kleinere Änderungen an der Navigation */ 
 @media (max-width: 1200px) {
 .separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .one-container .site-content, .inside-page-header {
