@@ -536,12 +536,12 @@ p.bild_rechts_startseite {
   
   /* für Kategorien auf der Seite "Beitrags-Kategorien */
 a.my_category_list {
-    background-color: var(--hellgrau-color);
+	background-color: var(--rot-color);
     border-radius: 30px;
     padding: 2px 10px 2px 10px;
     /* margin: 20px 10px 0px 0px; */
     text-decoration: none;
-    color: var(--mittelgrau-color);
+    color: white;
     display: inline-flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -550,9 +550,9 @@ a.my_category_list {
   }
   
 a.my_category_list:hover {
-        background-color: var(--rot-color);
-          color: white;
-  }
+    background-color: var(--hellgrau-color);
+    color: black;
+}
 
 /* Kategorienliste bei Einzelbeitrag unten */
 div.my_categories.categories_single_post .wp-block-group__inner-container {
@@ -586,4 +586,3 @@ div.my_categories.categories_single_post h3 {
 .gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog_experten {
 	aspect-ratio: 3/5;
 }
-  
