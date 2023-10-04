@@ -19,6 +19,15 @@
 
 
 /* --- TEST-ANFANG ----------------- */
+
+/* damit der blaue Kasten nicht aus dem Design */
+@media (min-width: 1301px) and (max-width: 1460px) {
+p.text_blauer_kasten {
+    font-size: 1.2rem!important;
+}
+}
+
+
 /* für Listen mit hellblauem Hintergrund und Absätze */ 
 p.hellblau.has-background,
 ul.hellblau.has-background {
