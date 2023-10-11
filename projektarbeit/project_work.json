@@ -16,13 +16,13 @@
 					"slug": "contrast"
 				},					
 				{
-					"color": "#2A4F8A",
-					"name": "Blau",
+					"color": "#366BE0",
+					"name": "Hellblau",
 					"slug": "primary"
 				},	
 				{
-					"color": "#366BE0",
-					"name": "Hellblau",
+					"color": "#2A4F8A",
+					"name": "Blau",
 					"slug": "secondary"
 				},
 				{
@@ -285,8 +285,8 @@
 			}
 		},
 		"color": {
-			"background": "var(--wp--preset--color--white)",
-			"text": "var(--wp--preset--color--blau)"
+			"background": "var(--wp--preset--color--hellblau)",
+			"text": "var(--wp--preset--color--white)"
 		},
 		"elements": {
 			"button": {
@@ -294,12 +294,12 @@
 					"radius": "0"
 				},
 				"color": {
-					"background": "var(--wp--preset--color--blau)",
+					"background": "var(--wp--preset--color--hellblau)",
 					"text": "var(--wp--preset--color--white)"
 				},
 				":hover": {
 					"color": {
-						"background": "var(--wp--preset--color--gold)",
+						"background": "var(--wp--preset--color--blau)",
 						"text": "var(--wp--preset--color--white)"
 					}
 				},

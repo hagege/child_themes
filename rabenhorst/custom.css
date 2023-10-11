@@ -23,6 +23,8 @@
 div.archive_erste_spalte figure.gb-block-image {
     aspect-ratio: 1/1;
 }
+
+
 /* --- TEST-ENDE ----------------- */
 
 /* Slider für News */
@@ -94,10 +96,13 @@ ul li::marker{
     padding: 30px 15px 30px 15px;
 }
 
+
+/* überflüssig 	
 .main-navigation.navigation-stick.has-sticky-branding .inside-navigation.grid-container {
     padding-left: 30px;
     padding-right: 30px;
 }
+*/
 	
 #mobile-header {
     padding-left: 20px;
@@ -114,7 +119,7 @@ ul li::marker{
 
 /* Logo Höhe mobil */
 .site-logo.mobile-header-logo a img {
-    height: 100px;
+    height: 80px;
 }
 
 /* Logo desktop */
@@ -349,10 +354,12 @@ hr.kernthemen_separator  {
 
 div.menue_rechts_sticky div.wp-block-group{
 	border-radius: 20px;
+	padding-top: 20px;
+	margin-top: 5px!important;
 }
 
 div.menue_rechts_sticky  {
-    padding: 20px 40px 20px 20px;
+    padding: 0px 40px 20px 20px;
 }
 
 div.menue_rechts_sticky p {
