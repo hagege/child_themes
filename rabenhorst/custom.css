@@ -97,12 +97,12 @@ ul li::marker{
 }
 
 
-/* überflüssig 	
+	
 .main-navigation.navigation-stick.has-sticky-branding .inside-navigation.grid-container {
     padding-left: 30px;
     padding-right: 30px;
 }
-*/
+
 	
 #mobile-header {
     padding-left: 20px;
@@ -208,6 +208,7 @@ div.my_categories .wp-block-group__inner-container {
 /* Bild in Übersicht weiter links */
 .gb-grid-wrapper.gb-grid-wrapper-a9208927.gb-query-loop-wrapper > .gb-grid-column > .gb-container {
     margin-left: 0px;
+	margin-right: 0px;
     padding-left: 0px;
 }
 
@@ -309,6 +310,7 @@ div.kasten_rechts_slider p {
 	}
 	.gb-grid-wrapper > .gb-grid-column-0e0f8b88, .gb-grid-wrapper.gb-grid-wrapper-641e0a28.einzelseite {
         width: 100%;
+		padding-right: 18px;
 	}
 	.gb-grid-wrapper > .gb-grid-column-b4c4e46f, .gb-grid-column.gb-grid-column-28859ee2 {
         width: 100%;
