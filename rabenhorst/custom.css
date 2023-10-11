@@ -19,6 +19,28 @@
 
 
 /* --- TEST-ANFANG ----------------- */
+/* damit featured image bei News quadratisch sind */
+div.archive_erste_spalte figure.gb-block-image {
+    aspect-ratio: 1/1;
+}
+/* --- TEST-ENDE ----------------- */
+
+/* Slider für News */
+.slider-loop-blog .wp-block-eedee-block-gutenslider .swiper {
+    border-radius: 20px;
+}
+
+/* Bessere Hervorhebung, wenn Daten beim Bestellformular fehlen */
+span.wpcf7-not-valid-tip {
+    color: white;
+    background-color: var(--rot-color);
+    padding: 5px;
+}
+
+/* Bestellformular: unter Grafik zur Broschüre mehr Platz */
+.bestellformular_column img {
+    margin-bottom: 15px;
+}
 
 /* damit der blaue Kasten nicht aus dem Design */
 @media (min-width: 1301px) and (max-width: 1460px) {
@@ -151,7 +173,8 @@ span.gb-button.gb-button-ae38bced.gb-button-text.page-numbers.gb-block-is-curren
 
 @media screen and (max-width: 1000px) {
 	div.raster_einzeln >div.gb-grid-column   {
-			width: 100%;
+		width: 100%;
+		padding-bottom: 20px;
 	}
 }
 
@@ -177,7 +200,7 @@ div.my_categories .wp-block-group__inner-container {
     padding-bottom: 0px;
 }
 
-/* Bild in Übersciht weiter links */
+/* Bild in Übersicht weiter links */
 .gb-grid-wrapper.gb-grid-wrapper-a9208927.gb-query-loop-wrapper > .gb-grid-column > .gb-container {
     margin-left: 0px;
     padding-left: 0px;
@@ -197,6 +220,10 @@ div.plethoraplugins-accordion.plethoraplugins-theme__minimal.plethoraplugins-the
 /* Einstellungen für Contact Form 7 */
 input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="tel"], textarea, select {
     width: 40rem;
+}
+
+input[type="submit"]{
+    border-radius: 35px;
 }
 
 /* Coantainer für Bestellungen */
