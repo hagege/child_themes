@@ -95,10 +95,7 @@ ul li::marker{
 /* kleinere Änderungen an der Navigation */ 
 /* Header Padding: 150px links und rechts (Desktop), 30px links und rechts (mobil) */
 
-.sticky-navigation-logo img {
-    padding-top: 0px;
-}
-
+/* sticky */
 @media (max-width: 768px){
 	/* Innenabstand links und rechts */	
 	.main-navigation.navigation-stick.has-sticky-branding .inside-navigation.grid-container {
@@ -129,20 +126,8 @@ ul li::marker{
 }
 
 
-@media (min-width: 1201px){
-	/* Innenabstand links und rechts */	
-	.main-navigation.navigation-stick.has-sticky-branding .inside-navigation.grid-container {
-		padding-left: 150px;
-		padding-right: 150px;
-	}
 
-	/* Logo desktop */
-	.main-navigation.sticky-navigation-transition .site-logo img  {
-		height: 80px;
-		padding-top: 0px;
-		padding-bottom: 1em;
-	}
-}
+
 
 
 /* muss noch korrigieret werden (Übersicht) 
