@@ -19,6 +19,7 @@
 
 
 /* --- TEST-ANFANG ----------------- */
+
 /* damit featured image bei News quadratisch sind */
 div.archive_erste_spalte figure.gb-block-image {
     aspect-ratio: 1/1;
@@ -195,6 +196,9 @@ div.beitrag .gb-container.gb-container-30c9d30e {
 	div.raster_einzeln >div.gb-grid-column   {
 		width: 100%;
 		padding-bottom: 20px;
+	}
+	div.raster_einzeln div.gb-grid-column div.gb-container   {
+        margin-left:0px
 	}
 }
 
