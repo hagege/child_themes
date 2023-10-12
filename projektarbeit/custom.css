@@ -2,3 +2,9 @@
 select#wp-block-categories-1 {
     font-size: 1.2rem;
 }
+
+/* damit die Image-Blöcke von GB korrekt dargestellt werden */
+figure.gb-block-image img {
+    width: 100%;
+    height: 100%;
+}
