@@ -91,11 +91,22 @@ ul li::marker{
 
 
 /* kleinere Änderungen an der Navigation */ 
-@media (max-width: 1200px) {
-.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .one-container .site-content, .inside-page-header {
-    padding: 30px 15px 30px 15px;
+@media (max-width: 768px){
+.main-navigation.navigation-stick.has-sticky-branding .inside-navigation.grid-container {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#mobile-header {
+    padding-left: 0px;
+    padding-right: 0px;
+}
 }
 
+@media (min-width: 769px) AND (max-width: 1200px) {
+/*.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .one-container .site-content, .inside-page-header {
+    padding: 30px 15px 30px 15px;
+}
+*/
 
 	
 .main-navigation.navigation-stick.has-sticky-branding .inside-navigation.grid-container {
@@ -143,7 +154,7 @@ div.gb-query-loop-wrapper > .gb-grid-column > .gb-container > .gb-inside-contain
     width: 100%;
 }
 */
-/* --- TEST-ENDE----------------- */
+
 
 /* Abstand Trennlinie */
 hr.hr_abstand {
@@ -162,6 +173,10 @@ span.gb-button.gb-button-ae38bced.gb-button-text.page-numbers.gb-block-is-curren
     background-color: var(--rot-color);
 }
 
+/* kein rechter Rand bei Einzelbeiträgen */
+div.beitrag .gb-container.gb-container-30c9d30e {
+    margin-right: 0px;
+}
 
 /* Breite bei Einzelbeiträgen ab 1350px */
 @media screen and (max-width: 1350px) {
@@ -310,7 +325,7 @@ div.kasten_rechts_slider p {
 	}
 	.gb-grid-wrapper > .gb-grid-column-0e0f8b88, .gb-grid-wrapper.gb-grid-wrapper-641e0a28.einzelseite {
         width: 100%;
-		padding-right: 18px;
+		/* padding-right: 18px; */
 	}
 	.gb-grid-wrapper > .gb-grid-column-b4c4e46f, .gb-grid-column.gb-grid-column-28859ee2 {
         width: 100%;
@@ -329,6 +344,11 @@ div.kasten_rechts_slider p {
         padding-left: 0px;
 				position: inherit;
 	}
+}
+
+/* damit bei Einzelseiten kein linker Rand gesetzt wird */
+.gb-grid-wrapper.gb-grid-wrapper-641e0a28.einzelseite .gb-grid-column .gb-container {
+    margin-left: 0px;
 }
 
 /* Runde Ecken links beim Slider */
