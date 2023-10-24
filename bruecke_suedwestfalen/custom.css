@@ -33,18 +33,26 @@ div.bruecke_links_oben div.wp-block-group__inner-container {
     padding: 10px;
 }
 
-p.kachel_absatz_oben {
-    border-radius: 0px 0px 150px 0px;
-		margin: 0px;
+p.kachel_absatz_oben,
+h2.kachel_absatz_oben {
+  border-radius: 0px 0px 40px 0px;
+	margin: 0px;
+	font-size: clamp(1rem, 0.88rem + 0.6vw, 1.6rem);
 }
 
-div.kachel_oben_links p {
-    padding: 20px 50px 20px 50px;
+div.kachel_oben_links p,
+div.kachel_oben_links h2 {
+    padding: 20px 50px 20px 20px;
 }
 
 div.kachel_unten_links p,
 div.kachel_unten_links h2
 {
     margin-bottom: 0px;
+}
+
+/* h2 auf Einzelseiten */
+h2.kachel_absatz_oben.gb-headline-text {
+    color: white;
 }
 
