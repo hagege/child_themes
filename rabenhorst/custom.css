@@ -19,6 +19,11 @@
 
 
 /* --- TEST-ANFANG ----------------- */
+/* Font-Family für Titel */
+h2.gb-headline {
+   font-family: 'Carnas Med';
+}
+
 
 /* damit featured image bei News quadratisch sind */
 div.archive_erste_spalte figure.gb-block-image {
@@ -109,7 +114,7 @@ ul li::marker{
 	/* Logo Höhe Tablet */
 	.site-logo.mobile-header-logo a img {
 		padding-top: 0px;
-		height: 90px;
+		height: 120px;
 	}
 }
 
