@@ -6,7 +6,7 @@
   --hellblau-color:  rgba(0, 123, 190, 1);
   --lila-color: rgba(162, 50, 150, 1);
   --rot-color: rgba(238, 56, 63, 1);	     
-  --gebl-color: rgba(255, 216, 0, 1);	  
+  --gelb-color: rgba(255, 216, 0, 1);	  
   --gruen-color: rgba(135, 193, 44, 1);			
   --wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
   --wp--preset--font-size--cover-paragraph: clamp(2rem, 10vw, 6rem);
@@ -61,5 +61,47 @@ h2.kachel_absatz_oben.gb-headline-text {
 .bruecke_gruppe_kacheln .gb-grid-wrapper .gb-grid-column {
   width: 100%;
 }
+}
+
+
+/* ----------------------------- */
+/* Navigation                    */
+/* ----------------------------- */
+
+/* Einstellungen für das Desktop-Menü */
+@media (min-width: 769px) {
+  /* nav links effect */
+  .main-navigation .menu > .menu-item > a::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      left: 50%;
+      bottom: 0px;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      color: var(--gruen-color);
+      display: block;
+      width: 0;
+      height: 3px;   
+      background-color: var(--gruen-color); 
+      transition: 0.3s width ease;
+  }
+  .main-navigation .menu > .menu-item.current-menu-item > a::after,
+  .main-navigation .menu > .menu-item > a:hover::after {
+      width: 100%;
+      color: #000000;
+  }
+
+.main-navigation .menu > .menu-item.current-menu-item > a::after,
+  .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
+  .main-navigation .menu > .menu-item > a:active::after {
+  width: 100%;
+  color: var(--rot-color);
+  }
+/* Submenü 
+ul.sub-menu {
+  opacity: 0.9;
+}
+*/
 }
 
