@@ -19,6 +19,7 @@
 
 
 /* --- TEST-ANFANG ----------------- */
+
 /* Font-Family für Titel */
 h2.gb-headline {
    font-family: 'Carnas Med';
@@ -421,6 +422,9 @@ p.bild_rechts_startseite {
 /* Design für Footer */
 
 @media only screen and (min-width: 783px) {
+	.footer-widget-1 .wp-block-columns {
+        justify-content: center;
+	}
 	div.footer_mobil {
 		display:none;
 	}
