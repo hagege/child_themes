@@ -1,5 +1,5 @@
 [
-    {
+  {
       "post_date": "8.5.2023",
       "tagesarbeit": "Testumgebung mit TEC und TEC Pro, um Problem mit Schlagwortwolke zu analysieren",
       "website": "https://space4.yd-sgs.de/",
@@ -10,8 +10,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Testumgebung mit TEC und TEC Pro"
-    },
-    {
+  },
+  {
       "post_date": "8.5.2023",
       "tagesarbeit": "Theme Stacks, Frost und Ollie installiert und kurz getestet",
       "website": "http://localhost/fse_neu/",
@@ -22,8 +22,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Block Themes installiert und getestet"
-    },
-    {
+  },
+  {
       "post_date": "8.5.2023",
       "tagesarbeit": "Template Home mit überlappender Grafik und blauer Navigation (Stichwort Katzenbild, Klettern)",
       "website": "http://localhost/fse_neu/",
@@ -34,8 +34,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Überlappende Grafik"
-    },
-    {
+  },
+  {
       "post_date": "9.5.2023",
       "tagesarbeit": "Button in Template Startseite beim Query-Block",
       "website": "https://space2.yd-sgs.de/",
@@ -46,8 +46,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Button in Template Startseite"
-    },
-    {
+  },
+  {
       "post_date": "10.5.2023",
       "tagesarbeit": "Test vertikales Menü mit seltsamer Darstellung, wenn die Hintergrundfarbe eingestellt wird. Film erstellt.",
       "website": "http://leer.test/",
@@ -58,8 +58,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Test vertikales Menü"
-    },
-    {
+  },
+  {
       "post_date": "10.5.2023",
       "tagesarbeit": "Fehler bei aachenerkinder.de: REST-API-Antwort: (404) Not Found",
       "website": "aachenerkinder.de",
@@ -70,20 +70,20 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Fehler bei aachenerkinder.de: REST-API-Antwort"
-    },
-    {
+  },
+  {
       "post_date": "10.5.2023",
       "tagesarbeit": "NextCloud: cronjob eingetragen unter Paketverwaltung Cronjobs - muss noch geprüft werden",
       "website": "Nextcloud",
       "stichworte": "Nextcloud",
-      "erlauterungen": "Einträge in php.ini: opcache.memory_consumption=256\nopcache.interned_strings_buffer=16; Sicherung DB in Y:\\austausch\\nextcloud_sik",
+      "erlauterungen": "Einträge in php.ini: opcache.memory_consumption=256\nopcache.interned_strings_buffer=16; Sicherung DB in Y:\\austausch\nextcloud_sik",
       "post_name": "",
       "post_author": "Space1_admin",
       "post_type": "post",
       "post_status": "publish",
       "post_title": "NextCloud: cronjob eingetragen"
-    },
-    {
+  },
+  {
       "post_date": "11.5.2023",
       "tagesarbeit": "MG-Podcast lokal eingerichtet",
       "website": "http://localhost/mg-podcast/",
@@ -94,8 +94,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "MG-Podcast lokal eingerichtet"
-    },
-    {
+  },
+  {
       "post_date": "11.5.2023",
       "tagesarbeit": "Shrinking Header mit CSS",
       "website": "https://seniorensport-attendorn.de/",
@@ -106,8 +106,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Shrinking Header mit CSS"
-    },
-    {
+  },
+  {
       "post_date": "11.5.2023",
       "tagesarbeit": "Shrinking Header mit Javascript",
       "website": "https://space2.yd-sgs.de/",
@@ -118,8 +118,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Shrinking Header mit Javascript"
-    },
-    {
+  },
+  {
       "post_date": "12.5.2023",
       "tagesarbeit": "Verwendung von Tabs und Accordion",
       "website": "https://test5.haurand.com/beitragscontainer/",
@@ -130,8 +130,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Verwendung von Tabs und Accordion"
-    },
-    {
+  },
+  {
       "post_date": "12.5.2023",
       "tagesarbeit": "Link auf Cover ohne irgendwelche Blöcke auf dem Cover (als auf dem kompletten Bild",
       "website": "https://seniorensport-attendorn.de/",
@@ -142,8 +142,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Link auf Cover ohne irgendwelche Blöcke"
-    },
-    {
+  },
+  {
       "post_date": "12.5.2023",
       "tagesarbeit": "Media Query für IOS-Systeme bei Cover-Bildern auf der Hauptseite",
       "website": "https://seniorensport-attendorn.de/",
@@ -154,8 +154,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Media Query für IOS-Systeme bei Cover-Bildern"
-    },
-    {
+  },
+  {
       "post_date": "13.5.2023",
       "tagesarbeit": "Buttons: Farben, etc. angepasst. Beitrag auf haurand.com vorbereitet",
       "website": "https://seniorensport-attendorn.de/",
@@ -166,8 +166,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Buttons: Farben, etc. angepasst."
-    },
-    {
+  },
+  {
       "post_date": "14.5.2023",
       "tagesarbeit": "Website lokal migriert und theme.json lokal angepasst",
       "website": "https://seniorensport-attendorn.de/",
@@ -178,8 +178,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Website lokal migriert und theme.json"
-    },
-    {
+  },
+  {
       "post_date": "14.5.2023",
       "tagesarbeit": "Weitere Designs erstellt und in Plugin Category Vorlagen Haurand gespeichert",
       "website": "https://test5.haurand.com/weitere-designs/",
@@ -190,20 +190,20 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Weitere Designs erstellt"
-    },
-    {
+  },
+  {
       "post_date": "14.5.2023",
       "tagesarbeit": "theme.json als zusätzlichen Stil eingerichtet (seniorensport-attendorn.json)",
       "website": "https://seniorensport-attendorn.de/",
       "stichworte": "seniorensport-attendorn.json",
-      "erlauterungen": "D:\\laragon\\www\\seniorensport-attendorn\\wp-content\\themes\\twentytwentythree\\styles",
+      "erlauterungen": "D:\\laragon\\www\\seniorensport-attendorn\\wp-content\themes\twentytwentythree\\styles",
       "post_name": "",
       "post_author": "Space1_admin",
       "post_type": "post",
       "post_status": "publish",
       "post_title": "theme.json als zusätzlichen Stil"
-    },
-    {
+  },
+  {
       "post_date": "14.5.2023",
       "tagesarbeit": "seniorensport-attendorn.json und custom.css auf github hochgeladen",
       "website": "https://seniorensport-attendorn.de/",
@@ -214,8 +214,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "seniorensport-attendorn.json"
-    },
-    {
+  },
+  {
       "post_date": "15.5.2023",
       "tagesarbeit": "seniorensport-attendorn.json entrümpelt",
       "website": "http://localhost/seniorensport-attendorn/",
@@ -226,8 +226,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "seniorensport-attendorn.json"
-    },
-    {
+  },
+  {
       "post_date": "15.5.2023",
       "tagesarbeit": "Restarbeiten seniorensport-attendorn.de",
       "website": "https://seniorensport-attendorn.de/",
@@ -238,8 +238,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Restarbeiten seniorensport-attendor"
-    },
-    {
+  },
+  {
       "post_date": "15.5.2023",
       "tagesarbeit": "Einrichtung und Weiterleitung info@seniorensport-attendorn.de",
       "website": "siehe H:\\sicherung_webseiten\\seniorensportverein_attendorn",
@@ -250,8 +250,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Einrichtung und Weiterleitung Mail"
-    },
-    {
+  },
+  {
       "post_date": "16.5.2023",
       "tagesarbeit": "Bubenheimer Spieleland: Beitrag aktualisiert und Werbung geprüft",
       "website": "https://aachenerkinder.de",
@@ -262,8 +262,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Bubenheimer Spieleland: Beitrag aktualisiert"
-    },
-    {
+  },
+  {
       "post_date": "16.5.2023",
       "tagesarbeit": "Restarbeiten seniorensport-attendorn.de: Foto Rudolf und Regeln Boule",
       "website": "https://seniorensport-attendorn.de/",
@@ -274,8 +274,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Restarbeiten seniorensport-attendorn.de"
-    },
-    {
+  },
+  {
       "post_date": "16.5.2023",
       "tagesarbeit": "Arbeit an einer Animation für Cover, wie z. B. auf https://test3.haurand.com/drei-kacheln-ohne-rand-und-hover-effekt/ (da ist das allerdings bei Images realisiert",
       "website": "https://test3.haurand.com/drei-kacheln-ohne-rand-und-hover-effekt/",
@@ -286,8 +286,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Arbeit an einer Animation für Cover"
-    },
-    {
+  },
+  {
       "post_date": "16.5.2023",
       "tagesarbeit": "The Events Calendar und Event Tickets für Support-Forum",
       "website": "https://test2.haurand.com/",
@@ -298,8 +298,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "The Events Calendar und Event Tickets"
-    },
-    {
+  },
+  {
       "post_date": "17.5.2023",
       "tagesarbeit": "Erstellung eines Plugins, um Kunden über durchgeführte Wartung zu infromieren. Snippet auf https://test3.haurand.com/wp-admin/admin.php?page=snippets; Das Snippet wird immer nur einmal ausgeführt.",
       "website": "H:\\aachener-senioren\\child_themes\\plugins\\send_mail_notification_update",
@@ -310,8 +310,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Erstellung eines Plugins (Wartung)"
-    },
-    {
+  },
+  {
       "post_date": "18.5.2023",
       "tagesarbeit": "Nachdem nur im Fall von dem Code Snippet auf test3 eine Mail ankommt, habe ich weitere Tests mit dem Code von ChatGPT auf http://frischeswp.test/ durchgeführt. Aber auch da kommt die Mail nicht an.",
       "website": "http://frischeswp.test/",
@@ -322,8 +322,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Erstellung eines Plugins (Wartung)"
-    },
-    {
+  },
+  {
       "post_date": "19.5.2023",
       "tagesarbeit": "Plugin für die automtisierte Veröffentlichung von PDF-Wochenplan nach Hochladen erstellt und sowohl auf der lokalen Website wie auch auf der Beispielseite der produktiven Website eingebaut",
       "website": "https://seniorensport-attendorn.de/",
@@ -334,8 +334,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Plugin für PDF-Wochenplan"
-    },
-    {
+  },
+  {
       "post_date": "28.5.2023",
       "tagesarbeit": "Plugin für die automtisierte Veröffentlichung von PDF-Wochenplan erweitert: Jetzt kann die Datei auch direkt über das Backend ausgewählt und hochgeladen werden.",
       "website": "https://seniorensport-attendorn.de/",
@@ -346,8 +346,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Plugin für die automtisierte Veröffentlichung"
-    },
-    {
+  },
+  {
       "post_date": "28.5.2023",
       "tagesarbeit": "Beitrag Wartung auf haurand.com veröffentlicht.",
       "website": "https://haurand.com",
@@ -358,8 +358,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Beitrag Wartung auf haurand.com"
-    },
-    {
+  },
+  {
       "post_date": "31.5.2023",
       "tagesarbeit": "Fehler bei Datumsänderung aachenerkinder.de und aachen50plus.de überprüft. Hängt mit dem Plugin Yoast Duplicate Post zusammen",
       "website": "aachenerkinder.de",
@@ -370,8 +370,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Fehler bei Datumsänderung aachenerkinder.de"
-    },
-    {
+  },
+  {
       "post_date": "1.6.2023",
       "tagesarbeit": "Erstellung eines Blocks zu dem Plugin custom_pdf_file_upload_to_folder",
       "website": "zunächst auf Laragon, scheint aber sehr kompliziert zu sein. Zunächst mal unterbrochen",
@@ -382,8 +382,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Erstellung eines Blocks zu dem PDF-Plugin"
-    },
-    {
+  },
+  {
       "post_date": "1.6.2023",
       "tagesarbeit": "Neue lokale Instanz für Testing Call",
       "website": "http://localhost/fse_tc_new",
@@ -394,8 +394,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Neue lokale Instanz für Testing Call"
-    },
-    {
+  },
+  {
       "post_date": "2.6.2023",
       "tagesarbeit": "Anderes Featured image für haurand.com",
       "website": " Verbesserungen bei der Accessibilty",
@@ -406,8 +406,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Anderes Featured image für haurand."
-    },
-    {
+  },
+  {
       "post_date": "2.6.2023",
       "tagesarbeit": "Test Block Editor bei Veranstaltungen",
       "website": "http://aachen50plus.test/",
@@ -418,8 +418,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Test Block Editor bei Veranstaltung"
-    },
-    {
+  },
+  {
       "post_date": "3.6.2023",
       "tagesarbeit": "Hook bei Elements auf aachenerkinder.de zur Anzeige des Urhebers beim Header-Foto erstellt",
       "website": "https://aachenerkinder.de/",
@@ -430,8 +430,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Hook bei Elements auf aachenerkinder.de"
-    },
-    {
+  },
+  {
       "post_date": "3.6.2023",
       "tagesarbeit": "Ich habe die Synchronisierung des Ordners deaktiviert, weil das den Rechner extrem ausbremst. Zukünftig sollte dieser Ordner einmal im Monat auf die NAS kopiert werden.",
       "website": "D:\\laragon\\www",
@@ -442,8 +442,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Synchronisierung des Ordners deaktiviert"
-    },
-    {
+  },
+  {
       "post_date": "5.6.2023",
       "tagesarbeit": "Erstellung einer lokalen Instanz zu kinderverkehrsbuehne-nrw ohne Divi. Da gab es doch enorme Probleme mit Divi",
       "website": "http://localhost/kinderverkehrsbuehne-nrw/",
@@ -454,8 +454,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Erstellung einer lokalen Instanz kinderverkehrsbuehne-nrw"
-    },
-    {
+  },
+  {
       "post_date": "5.6.2023",
       "tagesarbeit": "Die Instanzen bei Laragon werden jetzt über FreeFileSync auf Y:\\laragon_sicherung gesichert, weil ansonsten durch die dauernde Synchronisation der Rechner in die Knie geht. Die Datenbank muss dann über phpMyAdmin gesichert werden.",
       "website": "Y:\\laragon_sicherung",
@@ -466,8 +466,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Sync Instanzen bei Laragon"
-    },
-    {
+  },
+  {
       "post_date": "5.6.2023",
       "tagesarbeit": "erneuter Test TEC mit Block-Editor bei http://ackids_test.test/ - da muss allerdings erst die Migration durchgeführt werden. Abgebrochen",
       "website": "http://ackids_test.test/",
@@ -478,22 +478,22 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "erneuter Test TEC mit Block-Editor "
-    },
-    {
+  },
+  {
       "post_date": "5.6.2023",
       "tagesarbeit": "Test Block Editor bei Veranstaltungen fortgeführt",
       "website": "http://aachen50plus.test/",
       "stichworte": "",
-      "erlauterungen": "D:\\laragon\\www\\aachen50plus\\wp-content\\themes\\generatepress_child\\tribe-events\\modules\\map.php erzeugt eine Warnung. Scheint jetzt behoben. Siehe auch: https://andrasguseo.com/gist/german-formatting-for-venue-data-on-single-event-view/",
+      "erlauterungen": "D:\\laragon\\www\\aachen50plus\\wp-content\themes\\generatepress_child\tribe-events\\modules\\map.php erzeugt eine Warnung. Scheint jetzt behoben. Siehe auch: https://andrasguseo.com/gist/german-formatting-for-venue-data-on-single-event-view/",
       "post_name": "",
       "post_author": "Space1_admin",
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Test Block Editor bei Veranstaltung"
-    },
-    {
+  },
+  {
       "post_date": "6.6.2023",
-      "tagesarbeit": "D:\\laragon\\www\\aachen50plus\\wp-content\\themes\\generatepress_child\\tribe-events\\modules\\map.php erzeugt eine Warnung. Scheint jetzt behoben. Außerdem Shortcode-Aufruf in Zeile 27 ( $shortcode .= '[leaflet-marker address='.$address.']';) korrigiert, so dass die Pins jetzt wieder angezeigt werden.",
+      "tagesarbeit": "D:\\laragon\\www\\aachen50plus\\wp-content\themes\\generatepress_child\tribe-events\\modules\\map.php erzeugt eine Warnung. Scheint jetzt behoben. Außerdem Shortcode-Aufruf in Zeile 27 ( $shortcode .= '[leaflet-marker address='.$address.']';) korrigiert, so dass die Pins jetzt wieder angezeigt werden.",
       "website": "http://aachen50plus.test/",
       "stichworte": "Leaflet",
       "erlauterungen": "Nach Test auf aachen50plus.de auf aachenerkinder.de übertragen",
@@ -502,8 +502,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Warnung"
-    },
-    {
+  },
+  {
       "post_date": "6.6.2023",
       "tagesarbeit": "Problem gefixt und korrigierten PHP-Scripte hochgeladen",
       "website": "aachenerkinder.de und aachen50plus.de",
@@ -514,8 +514,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Problem gefixt und korrigierten PHP"
-    },
-    {
+  },
+  {
       "post_date": "7.6.2023",
       "tagesarbeit": "Beginn mit PHP-Kurs von Udemy: https://www.udemy.com/course/php-komplettkurs/learn/lecture/31955246#overview",
       "website": "",
@@ -526,8 +526,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Beginn mit PHP-Kurs von Udemy"
-    },
-    {
+  },
+  {
       "post_date": "7.6.2023",
       "tagesarbeit": "Bei Visula Code einen entsprechenden Arbeitsordner eingerichtet: D:\\laragon\\www\\php_kurs",
       "website": "",
@@ -538,20 +538,20 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Bei Visule Code Arbeitsordner eingerichtet"
-    },
-    {
+  },
+  {
       "post_date": "8.6.2023",
       "tagesarbeit": "Der aktuelle technische Entwurf für die Expertenseite von Rabenhorst erstellt mit TT3. GenerateBlocks erst mal deaktiviert, weil ich vermute, dass diese zusätzlichen Blocks nicht notwendig sind.",
       "website": "https://space1.yd-sgs.de/",
       "stichworte": "Rabenhorst",
-      "erlauterungen": "unklar ist, ob auf der Basis von TT3 oder GeneratePress weiter entwickelt werden soll, siehe auch Trello: https://trello.com/c/uTzKLHkG/141-blog unter https://trello.com/b/CKdWYjE6/kundenhaurand - Alle Infos zum Projekt: H:\\sicherung_webseiten\\walbert\\rabenhorst",
+      "erlauterungen": "unklar ist, ob auf der Basis von TT3 oder GeneratePress weiter entwickelt werden soll, siehe auch Trello: https://trello.com/c/uTzKLHkG/141-blog unter https://trello.com/b/CKdWYjE6/kundenhaurand - Alle Infos zum Projekt: H:\\sicherung_webseiten\\walbert\rabenhorst",
       "post_name": "",
       "post_author": "Space1_admin ",
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Der aktuelle technische Entwurf für Expertenseite von Rabenhorst"
-    },
-    {
+  },
+  {
       "post_date": "8.6.2023",
       "tagesarbeit": "Dateien zu Rabenhorst auf Nextcloud kopiert. Sicherung von Nextcloud eingerichtet.",
       "website": "",
@@ -562,8 +562,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Dateien zu Rabenhorst auf Nextcloud"
-    },
-    {
+  },
+  {
       "post_date": "9.6.2023",
       "tagesarbeit": "PHP-Kurs fortgesetzt. 8.6.: hänge an einem Fehler, am 9.6. korrigiert.",
       "website": "Fehler war: <img scr statt <img src - interessanterweise wurde aber angezeigt, dass das Bild nicht verfügbar ist statt - wie erwartet - dass gar nichts angezeigt wird.",
@@ -574,8 +574,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "PHP-Kurs fortgesetzt."
-    },
-    {
+  },
+  {
       "post_date": "13.6.2023",
       "tagesarbeit": "Protembis-Seite lokal auf Laptop eingerichtet. Achtung: Bash-Script läuft nur mit PHP 7.4.",
       "website": "",
@@ -586,8 +586,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Protembis-Seite lokal auf Laptop"
-    },
-    {
+  },
+  {
       "post_date": "14.6.2023",
       "tagesarbeit": "Protembis-Seite Team: Seite dupliziert und das Plugin Easy Accordion Block als Altenative getestet. Anpassung sehr aufwendig, hat so schnell nicht funktioniert.",
       "website": "http://localhost/protembis/our-team-2023-easy/",
@@ -598,8 +598,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Protembis-Seite Team: Seite dupliziert"
-    },
-    {
+  },
+  {
       "post_date": "14.6.2023",
       "tagesarbeit": "<br> kann nur im Code-Editor bei der Überschrift H4 bei dem Plugin Hot Accordion eingefügt werden. Dann erscheint im Backend ein Fehler bezogen auf den Block, der aber keine Auswirkungen im Frontend hat.",
       "website": "http://localhost/protembis/our-team-2023-easy/",
@@ -610,8 +610,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Plugin Hot Accordion"
-    },
-    {
+  },
+  {
       "post_date": "14.6.2023",
       "tagesarbeit": "KSA: Zertifikat als PDF-Datei in eine JPG-Datei umgewandelt und auf der Seite das alte Zertifikat ersetzt.",
       "website": "https://ksa.de.com/certificates/",
@@ -622,8 +622,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "KSA: Zertifikat als PDF-Datei"
-    },
-    {
+  },
+  {
       "post_date": "15.6.2023",
       "tagesarbeit": "Der aktuelle Beitrag zum Bubenheimer Spieleland enthält bereits den neuen Text und muss nur am 20.6. auf die Hauptseite als oberster Beitrag gesetzt werden. Der alte Beitrag ist gesichert.",
       "website": "",
@@ -634,8 +634,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Der aktuelle Beitrag Bubenheime"
-    },
-    {
+  },
+  {
       "post_date": "23.6.2023",
       "tagesarbeit": "Test einiger Plugins auf Laptop zum Sticky Menu bei TT3",
       "website": "http://localhost/fse_testing/",
@@ -646,8 +646,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Test einiger Plugins auf Laptop"
-    },
-    {
+  },
+  {
       "post_date": "25.6.2023",
       "tagesarbeit": "Auf https://space1.yd-sgs.de/getting-started/ ist zu sehen, wie ein sticky Container mit ein wenig custom css erstellt werden kann",
       "website": "https://space1.yd-sgs.de/",
@@ -658,8 +658,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "sticky Container"
-    },
-    {
+  },
+  {
       "post_date": "28.6.2023",
       "tagesarbeit": "Vertrag mit webgo (RA Krämer)",
       "website": " WordPress und grundsätzliche Plugins installiert",
@@ -670,8 +670,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Vertrag mit webgo (RA Krämer)"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "SeniorenSportseite: Aktualisierung Button auf der Hauptseite",
       "website": "https://seniorensport-attendorn.de/",
@@ -682,8 +682,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "SeniorenSportseite: Aktualisierung "
-    },
-    {
+  },
+  {
       "post_date": "29.6.2023",
       "tagesarbeit": "Vorbereitung für Erstellung Rabenhorst mit GeneratePress",
       "website": "https://test3.haurand.com/beitrag-slider-sicherung/",
@@ -694,8 +694,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Vorbereitung für Erstellung Rabenhorst"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Container Saftwissen, etc. mit hover",
       "website": "",
@@ -706,8 +706,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Container Saftwissen"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Test eines Plugins Floating Action Button (https://de.wordpress.org/plugins/floating-action-button/)",
       "website": "http://localhost/fse_tc_new/",
@@ -718,8 +718,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Test eines Plugins Floating Action "
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "aachenerkinder.de: Fehler beim Aufruf der Schlagwortwolke auch weiterhin nach Aktualisierung von TEC",
       "website": "http://ackids_test.test/",
@@ -730,8 +730,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "aachenerkinder.de: Fehler Schlagwortwolke"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Test von Sticky Block for Gutenberg Editor, das besser geeignet ist. Das Plugin bietet alle Möglichkeiten, die wir benötigen.",
       "website": "http://localhost/fse_tc_new/",
@@ -742,8 +742,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Test von Sticky Block for Gutenberg"
-    },
-    {
+  },
+  {
       "post_date": "1.7.2023",
       "tagesarbeit": "Ein Block von Ryan Welcher, der mehr Möglichkeiten bietet.",
       "website": "noch nicht getestet",
@@ -754,8 +754,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Ein Block von Ryan Welcher"
-    },
-    {
+  },
+  {
       "post_date": "3.7.2023",
       "tagesarbeit": "Recherche Sticky Menue ",
       "website": "siehe auch Trello: https://trello.com/c/BwpiDMn5/156-sticky-menue",
@@ -766,8 +766,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Recherche Sticky Menue "
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Test eines Multipurpose Theme als Alternative zu TT3 und GeneratePress. Das Theme bietet einige schöne Möglichkeiten und wäre ggfs. ene Alternative für die Website von RA Krämer",
       "website": "https://space1.yd-sgs.de/",
@@ -778,8 +778,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Test eines Multipurpose Theme lemmony"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Angleichung PHP-Variablen upload_max_filesize = 32 Mund post_max_size = 32M wegen Hinweis in Website-Zustand",
       "website": "https://haurand.com",
@@ -790,8 +790,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Angleichung PHP-Variablen"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Problem mit dem Plugin ActivityPub. Scheint nicht zu funktionieren. Das Plugin habe ich wieder deaktiviert. Evtl. Kontakt zu Matthias Pfefferle. Fehleranalyse auf Trello",
       "website": "https://haurand.com",
@@ -802,8 +802,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Problem mit dem Plugin ActivityPub."
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Voraussichtlich für Rabenhorst das Theme GeneratePress verwenden mit den Anpassungen in der Testinstanz",
       "website": "https://test3.haurand.com/block-pattern-mit-schraegem-duotone-effekt/",
@@ -814,8 +814,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "GeneratePress für Rabenhorst"
-    },
-    {
+  },
+  {
       "post_date": "4.7.2023",
       "tagesarbeit": "Theme Gutenify getestet, aber schließlich doch wieder bei TT3 angsetzt. ra_tt3.json und custom.css erstellt; Variablen definiert",
       "website": "http://web355.s119.goserver.host",
@@ -826,8 +826,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Theme Gutenify getestet"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Alte Website bei webgo als Sicherung eingerichtet",
       "website": "http://alt.web355.s119.goserver.host/",
@@ -838,8 +838,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Website bei webgo als Sicherung"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Animation auf 3 Spalten eingerichtet",
       "website": "http://alt.web355.s119.goserver.host/",
@@ -850,8 +850,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Animation auf 3 Spalten eingerichte"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Plugins und Theme GernatePress auf https://saftexperten.de/ eingerichtet",
       "website": "",
@@ -862,8 +862,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Plugins und Theme GernatePress auf saftexperten.de"
-    },
-    {
+  },
+  {
       "post_date": "5.7.2023",
       "tagesarbeit": "Weitere Anpassungen: Sticky Header",
       "website": " Cover",
@@ -874,8 +874,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Weitere Anpassungen: Sticky Header"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Vorbereitung Seiten mit Sticky Menü rechts ",
       "website": "https://test3.haurand.com/beispiel-fuer-seite-mit-menue-rechts-sticky/",
@@ -886,8 +886,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Vorbereitung Seiten mit Sticky Menü"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Vorbereitung des Call for Volunteers",
       "website": "https://space1.yd-sgs.de/call-for-volunteers/",
@@ -898,8 +898,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Vorbereitung des Call for Volunteer"
-    },
-    {
+  },
+  {
       "post_date": "6.7.2023",
       "tagesarbeit": "Grundsätzlich die wesentlichen Templates für RA Krämer fertig gestellt. Zusätzlich war das Plugin GenerateBlocks notwendig",
       "website": "http://web355.s119.goserver.host",
@@ -910,8 +910,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Wesentlichen Templates für RA Krämer"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Optimierungen Custom CSS",
       "website": " Änderung theme.json (bei Hover gold)",
@@ -922,8 +922,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Optimierungen Custom CSS"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Beitrag Quadratische Bilder angefangen (Bilder sind da, Texte müssen noch ergänzt werden)",
       "website": "haurand.com",
@@ -934,8 +934,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Beitrag Quadratische Bilder"
-    },
-    {
+  },
+  {
       "post_date": "7.7.2023",
       "tagesarbeit": "Gestaltung des Kontaktfomulars (Contact Form 7)",
       "website": "http://web355.s119.goserver.host",
@@ -946,8 +946,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Gestaltung des Kontaktfomulars"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Schulung Master-Stick: Laragon auf Stick - Update WordPress 6.2.2",
       "website": " Theme Twenty Twenty-One gelöscht",
@@ -958,8 +958,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Schulung Master-Stick"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Alle Unterlagen (AB, etc.) aktualisiert, Owncloud durch Nextcloud-Link ersetzt; kleinere Korrekturen im Ablauf",
       "website": "",
@@ -970,8 +970,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Alle Unterlagen (AB, etc.) aktualisiert"
-    },
-    {
+  },
+  {
       "post_date": "8.7.2023",
       "tagesarbeit": "Laragon-Stick (Master) für Schulung WordPress neu erstellt",
       "website": "",
@@ -982,8 +982,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Laragon-Stick (Master) für Schulung"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "ZIP-Datei zur Masterversion erstellt und auf Nextcloud kopiert",
       "website": "",
@@ -994,8 +994,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "ZIP-Datei zur Masterversion erstellt"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Mail an Firma Kuchem gesendet",
       "website": "",
@@ -1006,8 +1006,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Mail an Firma Kuchem gesendet"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Analyse der Websites (Teilnehmer) und in dem Sheet entsprechend eingetragen",
       "website": "",
@@ -1018,8 +1018,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Analyse der Websites (Teilnehmer)"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Accordion auf einer Testseite eingebaut",
       "website": "http://web355.s119.goserver.host",
@@ -1030,8 +1030,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Accordion auf einer Testseite"
-    },
-    {
+  },
+  {
       "post_date": "9.7.2023",
       "tagesarbeit": "Design-Anpassungen im Menü; Übertragung komplett auf saftexperten.de (CSS, Beispiel-Startseite, Blog)",
       "website": "https://saftexperten.de",
@@ -1042,8 +1042,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Design-Anpassungen im Menü"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Einrichtung Sicherung bei Hetzner",
       "website": "",
@@ -1054,8 +1054,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Einrichtung Sicherung bei Hetzner"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Kleinere Anpssungen (Bildhöhe und Schriftgröße Header) auf Templates für Seiten und Einzelbeiträgen",
       "website": "http://web355.s119.goserver.host",
@@ -1066,8 +1066,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Kleinere Anpssungen Bildhöhe"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Info: Elementor auf Testinstanz http://komplettneu.test/",
       "website": "http://komplettneu.test/",
@@ -1078,8 +1078,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Info: Elementor auf Testinstanz"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Spaltenblock Foto rechts von Frau Krämer: mobil soll zuerst das Foto erscheinen",
       "website": " CSS-Regel mit Medai Query in Custom CSS",
@@ -1090,8 +1090,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Spaltenblock Foto rechts von Frau Krämer"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Abstandhalter nur mobil eingebaut (Wird mit CSS angezeigt, sonst nicht): Custom.css, damit noch etwas Platz zum Foto ist.",
       "website": "",
@@ -1102,8 +1102,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Abstandhalter nur mobil eingebaut"
-    },
-    {
+  },
+  {
       "post_date": "10.7.2023",
       "tagesarbeit": "Vorbereitungen für die Migration. Kontakt zu Webgo",
       "website": "",
@@ -1114,8 +1114,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Vorbereitungen für die Migration"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "CSS für Accordion (active, focus, hover). Nicht optimal, weil die Tabs als ID angesprochen werden müssen",
       "website": "http://web355.s119.goserver.host",
@@ -1126,8 +1126,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "CSS für Accordion active, focus, ..."
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Mobil: CSS-Regel für Button Erstberatung - hat nicht funktioniert.",
       "website": "http://web355.s119.goserver.host",
@@ -1138,8 +1138,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Mobil: CSS-Regel für Button"
-    },
-    {
+  },
+  {
       "post_date": "11.7.2023",
       "tagesarbeit": "Mobil: CSS-Regel für Button Erstberatung -  korrigiert.",
       "website": "http://web355.s119.goserver.host",
@@ -1150,8 +1150,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Mobil: CSS-Regel für Button"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Vorbereitungen für die Migration. Kontakt zu Webgo",
       "website": "",
@@ -1162,20 +1162,20 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Vorbereitungen für die Migration."
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Update Plugins und Sicherung alte Seite nach Hetzner und lokal",
       "website": "http://alt.web355.s119.goserver.host/",
       "stichworte": "Krämer",
-      "erlauterungen": "H:\\sicherung_webseiten\\ra_kraemer\\alte_website",
+      "erlauterungen": "H:\\sicherung_webseiten\ra_kraemer\\alte_website",
       "post_name": "",
       "post_author": "Space1_admin",
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Update Plugins und Sicherung alte Website"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Wichtige Knoten bei RA Krämer verlinkt (CherryTree)",
       "website": "",
@@ -1186,20 +1186,20 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Wichtige Knoten bei RA Krämer verlinkt"
-    },
-    {
+  },
+  {
       "post_date": "12.7.2023",
       "tagesarbeit": "Sicherung der Website fachanwaelte-koeln.eu ",
       "website": "",
       "stichworte": "Krämer",
-      "erlauterungen": "Y:\\webseiten_sicherung\\extern_sicherung\\ra_kraemer\\alte_statische_website",
+      "erlauterungen": "Y:\\webseiten_sicherung\\extern_sicherung\ra_kraemer\\alte_statische_website",
       "post_name": "",
       "post_author": "Space1_admin",
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Sicherung der Website fachanwaelte-koeln.eu"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Überprüfung handout_schulung_wordpress_bonn.docx",
       "website": "H:\\schulung_wordpress\\ab_schulung",
@@ -1210,8 +1210,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Überprüfung handout_schulung_wordpr"
-    },
-    {
+  },
+  {
       "post_date": "13.7.2023",
       "tagesarbeit": "Weitere Anpassungen nach Präsentation der Website (siehe Trello)",
       "website": "http://web355.s119.goserver.host",
@@ -1222,8 +1222,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Weitere Anpassungen nach Präsentati"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Karte (Google Maps) in voller Breite unter Kontakt",
       "website": "http://leer.test/kontakt/",
@@ -1234,8 +1234,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Karte (Google Maps) in voller Breite"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "SSL-Zertififkate angelegt",
       "website": " Migration der Website vervollständigt",
@@ -1246,8 +1246,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "SSL-Zertififkate angelegt"
-    },
-    {
+  },
+  {
       "post_date": "14.7.2023",
       "tagesarbeit": "Property für Website bei Google Search Console angelegt",
       "website": "https://fachanwaelte-koeln.eu/",
@@ -1258,20 +1258,20 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Property für Website bei Google Search"
-    },
-    {
+  },
+  {
       "post_date": "16.7.2023",
       "tagesarbeit": "Allgemeines Childtheme für GeneratePress vorbereitet und auf die Website hochgeladen. Customizer-Einstellungen incl. Custom CSS importiert. Child Theme ist notwendig wegen Schriften.",
       "website": "https://saftexperten.de",
       "stichworte": "Rabenhorst",
-      "erlauterungen": "Child Theme: F:\\kunden\\rabenhorst",
+      "erlauterungen": "Child Theme: F:\\kunden\rabenhorst",
       "post_name": "",
       "post_author": "Space1_admin",
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Allgemeines Childtheme für GeneratePress"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Menü-Animation und Farben auf Testseite eingestellt.",
       "website": "https://test3.haurand.com/",
@@ -1282,8 +1282,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Menü-Animation und Farben auf Tests"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Farbe (#b20a0f) eingestellt und unter Deine Anpassungen für\nFarben eingetragen. Einstellungen exportiert (Child)",
       "website": "https://saftexperten.de",
@@ -1294,8 +1294,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Farbe eingestellt"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Startseite grundsätzlich fertig gestellt. Allerdings muss das noch entsprechend auf schmaleren Displays getestet und ggfs. angepasst werden.",
       "website": "",
@@ -1306,8 +1306,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Startseite grundsätzlich fertig gestellt"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Kommentare allgemein deaktiviert und beim Beispielbeitrag ebenfalls deaktiviert",
       "website": "",
@@ -1318,8 +1318,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Kommentare allgemein deaktiviert"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Footer-Design als Widget mit Standard-Blöcken erstellt",
       "website": "",
@@ -1330,8 +1330,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Footer-Design als Widget"
-    },
-    {
+  },
+  {
       "post_date": "17.7.2023",
       "tagesarbeit": "Weitere Entwicklung an der Website (Header nicht über gesamte Breite, siehe Customizer)",
       "website": "https://saftexperten.de",
@@ -1342,8 +1342,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Weitere Entwicklung an der Website "
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Schriften vorbereitet (hochgeladen, Child Theme angepasst, getestet) - funktioniert leider noch nicht, siehe Trello",
       "website": "",
@@ -1354,8 +1354,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Schriften vorbereitet"
-    },
-    {
+  },
+  {
       "post_date": "18.7.2023",
       "tagesarbeit": "Einbindung der Schriften über Plugin. Nicht die idealte Lösung, aber erst mal ok (siehe auch Trello)",
       "website": "https://saftexperten.de",
@@ -1366,8 +1366,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Einbindung der Schriften über Plugin"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Korrektur https in Einstellungen > Allgemein",
       "website": "",
@@ -1378,8 +1378,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Korrektur https in Einstellungen"
-    },
-    {
+  },
+  {
       "post_date": "19.7.2023",
       "tagesarbeit": "Weitere Anpassungen nach Präsentation der Website (siehe Trello)",
       "website": "http://web355.s119.goserver.host",
@@ -1390,8 +1390,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Weitere Anpassungen nach Präsentation"
-    },
-    {
+  },
+  {
       "post_date": "20.7.2023",
       "tagesarbeit": "Weitere Anpassungen nach Präsentation der Website (siehe Trello)",
       "website": "http://web355.s119.goserver.host",
@@ -1402,8 +1402,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Weitere Anpassungen nach Präsentation"
-    },
-    {
+  },
+  {
       "post_date": "21.7.2023",
       "tagesarbeit": "Design des Footers",
       "website": " Typography (siehe Trello)",
@@ -1414,8 +1414,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Design des Footers"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Avira auf Desktop",
       "website": "",
@@ -1426,8 +1426,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Avira auf Desktop"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Footer Mobil noch nicht optimal",
       "website": "",
@@ -1438,8 +1438,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Footer Mobil noch nicht optimal"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Anpassungen auf der Startseite",
       "website": " Media Query für Slider auf der Startseite",
@@ -1450,8 +1450,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Anpassungen auf der Startseite"
-    },
-    {
+  },
+  {
       "post_date": "22.7.2023",
       "tagesarbeit": "Slider Responsive",
       "website": " Schrift auf Bild Kachel rechts (Startseite) responsive",
@@ -1462,8 +1462,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Slider Responsive"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Avira auf Laptop",
       "website": "",
@@ -1474,8 +1474,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Avira auf Laptop"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Sticky Menü bei Kernthemen: Template umgebaut: Statt GEnerateBlocks die Standard-Blöcke verwendet, weil das Sticky Menü rechts trotz korrekter Einstellung immer beim Scrollen über den Footer rutschte.",
       "website": "",
@@ -1486,8 +1486,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Sticky Menü bei Kernthemen: Template"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Viele Verbesserungen und Korrekturen auch bei CSS, siehe Github",
       "website": "",
@@ -1498,8 +1498,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Viele Verbesserungen und Korrekturen"
-    },
-    {
+  },
+  {
       "post_date": "23.7.2023",
       "tagesarbeit": "Kleinere Verbesserungen am Template für Blog (Breite wie Container) bei Elements. Verlinkungen ergänzt",
       "website": "https://saftexperten.de",
@@ -1510,8 +1510,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Kleinere Verbesserungen am Template"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Duchführung der Schulung und Überprüfung der AB",
       "website": "",
@@ -1522,8 +1522,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Duchführung der Schulung und Überprüfung"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Erste Dateien für Schulung hochgeladen",
       "website": "",
@@ -1534,8 +1534,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Erste Dateien für Schulung hochgeladen"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Weitere Anpassungen analog zum Entwurf (Custom CSS und Customizer)",
       "website": "https://saftexperten.de",
@@ -1546,8 +1546,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Weitere Anpassungen analog zum Entwurf"
-    },
-    {
+  },
+  {
       "post_date": "24.7.2023",
       "tagesarbeit": "Auch bei der Einstellung Tablet auf 100% geändert (Verwednung von GenerateBlocks bei Einzelbeiträgen). Nach Änderung der Einstellungen klappt das jetzt auch im Portrait-Modus. Im Landscape-Modus gab es vorher auch schon kein Problem.",
       "website": "https://saftexperten.de",
@@ -1558,8 +1558,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Auch bei der Einstellung Tablet auf 100%"
-    },
-    {
+  },
+  {
       "post_date": "25.7.2023",
       "tagesarbeit": "Weitere Korrekturen am Design (CSS, Einstellungen); Lösung für Tabellen (&shy;)",
       "website": "https://saftexperten.de",
@@ -1570,8 +1570,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Weitere Korrekturen am Design"
-    },
-    {
+  },
+  {
       "post_date": "26.7.2023",
       "tagesarbeit": "Hier gibt es schon ein Ticket bei TEC, das bereits seit mehreren Monaten nicht gelöst wurde. Ein Test mit Embed Privacy war ok. Zu überlegen ist, ob wir nicht statt RCB lieber Embed Privacy aktivieren. Auf den ersten Blick scheinen mir die meisten Probleme mit DSGVO dadurch gelöst zu werden. Die Sparkassenwerbung wird auch aktuell nicht durch RCB “abgefangen”, weil das vermutlich zusätzlich eingebaut werden müsste.",
       "website": "https://aachenerkinder.de",
@@ -1582,8 +1582,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Hier gibt es schon ein Ticket bei TEC"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Weitere Tests mit Global Styles (ra_gold) auf einer lokalen Testumgebung. Die Farben müssen korrekt in der JSON-Datei definiert sein (primary, etc.). Dann brauchen auch keine Farben mehr in den Eigenschaften z. B. bei Color defiiniert werden. Noch mal getestet: Änderungen in der theme.json werden erst nach Wechsel des Styles korrekt ausgeführt.",
       "website": "http://localhost/fse_tc_new/",
@@ -1594,8 +1594,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Weitere Tests mit Global Styles"
-    },
-    {
+  },
+  {
       "post_date": "27.7.2023",
       "tagesarbeit": "Korrektur eines strukturellen Fehlers in der ra_gold.json. In ra_gold_v2 korrigiert, hochgeladen und aktiviert. ra_gold.json ist allerdings noch weiterhin verfügbar und soll erst nach einem Test geslöscht werden.",
       "website": "http://web355.s119.goserver.host",
@@ -1606,8 +1606,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Korrektur eines strukturellen Fehler"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "In Trello eine neue Liste zu Barrierefreiheit mit Links, Infos und Plugins angelegt",
       "website": "",
@@ -1618,8 +1618,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "In Trello eine neue Liste zu Barrierefreiheit"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Seitentitel (H1) im Template gelöscht",
       "website": "https://seniorensport-attendorn.de/",
@@ -1630,8 +1630,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Seitentitel (H1) im Template gelöscht"
-    },
-    {
+  },
+  {
       "post_date": "28.7.2023",
       "tagesarbeit": "Bestellungen: Kantaktformular erstellt und entsprechende CSS-Anpassungen für das Formular vorgenommen",
       "website": "https://saftexperten.de",
@@ -1642,8 +1642,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Bestellungen: Kantaktformular erstellt"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Korrekturen an ra_gold_v2.json und an der Website (Farbe der Links, etc.)",
       "website": "http://web355.s119.goserver.host",
@@ -1654,8 +1654,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Korrekturen an ra_gold_v2.json"
-    },
-    {
+  },
+  {
       "post_date": "29.7.2023",
       "tagesarbeit": "RCB deaktiviert, Embed Privacy aktiviert. War nötig, weil TEC eine Sicherheitslücke hat.",
       "website": "",
@@ -1666,8 +1666,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "RCB deaktiviert, Embed Privacy aktiviert"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "RA Krämer und Seniorensport Attendorn: H2 durch H1 ersetzt und die Templates angepasst (wichtig wegen SEO)",
       "website": "http://web355.s119.goserver.host und https://seniorensport-attendorn.de/",
@@ -1678,8 +1678,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "RA Krämer und Seniorensport Attendorn"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Beitrag quadratische Bilder fast fertig",
       "website": "https://haurand.com",
@@ -1690,8 +1690,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Beitrag quadratische Bilder fast fertig"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Beitrag zu font-size, clamp und theme.json vorbereitet.",
       "website": "https://haurand.com",
@@ -1702,8 +1702,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Beitrag zu font-size, clamp und theme.json"
-    },
-    {
+  },
+  {
       "post_date": "30.7.2023",
       "tagesarbeit": "Anderes Headerbild bei aachenerkinder.de. Achtung: Urheber unter Header muss in dem Fall immer zusätzlich manuell geändert werden",
       "website": "https://aachenerkinder.de",
@@ -1714,8 +1714,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Anderes Headerbild bei aachenerkinder.de"
-    },
-    {
+  },
+  {
       "post_date": "31.7.2023",
       "tagesarbeit": "Anzeige des Logos Mitglieder bei Kategorie XXL per CSS gelöst (sowohl Liste als auch Einzelansicht)",
       "website": "https://aachenerkinder.de",
@@ -1726,8 +1726,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Anzeige des Logos Mitglieder bei Kategorie"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Migration aachenerkinder.de auf lokale Entwicklungsumgebung https://localhost/ackids_test/",
       "website": "https://localhost/ackids_test/",
@@ -1738,8 +1738,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Migration aachenerkinder.de lokal"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Tabellen zu Scheduled Actions geleert.",
       "website": "",
@@ -1750,8 +1750,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Tabellen zu Scheduled Actions geleert"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "PHP-Kurs: Einrichtung und Nochmaliger Beginn. Als Editor: Visual Code mit Arbeitsbereich",
       "website": "D:\\laragon\\www\\php_kurs",
@@ -1762,8 +1762,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "PHP-Kurs: Einrichtung und Nochmaliger Beginn"
-    },
-    {
+  },
+  {
       "post_date": "1.8.2023",
       "tagesarbeit": "Popup für saftexperten.de: Popup Maker Plugin eingerichtet und getestet, siehe Trello",
       "website": "https://saftexperten.de",
@@ -1774,8 +1774,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Popup für saftexperten.de: Popup Maker"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Mit .OR. Verknüpfung sowohl Seiten und Beiträge mit PopUp ausgestattet.",
       "website": "",
@@ -1786,8 +1786,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Mit .OR. Verknüpfung Seiten, Beiträge "
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Korrekturen an Color und Font-Size in seniorensport-attendorn_v2.json",
       "website": "https://seniorensport-attendorn.de/",
@@ -1798,8 +1798,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Korrekturen an Color und Font-Size"
-    },
-    {
+  },
+  {
       "post_date": "2.8.2023",
       "tagesarbeit": "Tabellen zu Scheduled Actions geleert. Getestet - zunächst keine Probleme gefunden. Dann aber Verbindungsfehler zur Datenbank. Wiederherstellung der Tabellen in der DB.",
       "website": "https://aachenerkinder.de",
@@ -1810,8 +1810,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Tabellen zu Scheduled Actions geleert"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "[02-Aug-2023 03:25:47 UTC] PHP Notice:  Die Funktion WP_Block_Pattern_Categories_Registry::unregister wurde <strong>fehlerhaft</strong> aufgerufen. Block-Vorlagen-Kategorie „Footer“ wurde nicht gefunden.",
       "website": "",
@@ -1822,8 +1822,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "[02-Aug-2023 03:25:47 UTC] PHP Notice"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Fehler im Zusammenhang mit aachenerkinder.de (Fehler mit der Datenbankverbindung) analysiert. Kontakt zu Webgo, TEC und WP Rocket aufgenommen.",
       "website": "https://aachenerkinder.de",
@@ -1834,8 +1834,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Fehler im Zusammenhang mit aachenerkinder.de"
-    },
-    {
+  },
+  {
       "post_date": "3.8.2023",
       "tagesarbeit": "• Die Wiederherstellung über UpdraftPlus über die Migration funktionierte nicht\n• Import der Datenbank über phpMyAdmin wurde abgebrochen\n• Migration nur möglich, indem ich die Sicherungsdateien per FTP hochgeladen und anschließend zunächst die Datenbank wiederhergestellt habe. \n   Danach wie gewohnt mit Better Search and Replace die URL korrigiert.\n• Neue Testseite unter https://hgg-cloud.de/ (frisch eingerichtet)",
       "website": "https://aachenerkinder.de",
@@ -1846,8 +1846,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "• Die Wiederherstellung über UpdraftPlus"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Versuch, über SSH und einem Script die Migration durchzuführen - hat leider (noch) nicht geklappt. ",
       "website": "siehe F:\\aachener-senioren_test",
@@ -1858,8 +1858,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Versuch, über SSH und einem Script "
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Weiter Fehler in der debug.log - Kontakt mit TEC",
       "website": "",
@@ -1870,8 +1870,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Weiter Fehler in der debug.log"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Weitere Korrekturen und Verbesserungen",
       "website": " Anpassungen CSS",
@@ -1882,8 +1882,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Weitere Korrekturen und Verbesserungen"
-    },
-    {
+  },
+  {
       "post_date": "4.8.2023",
       "tagesarbeit": "Migration abgeschlossen und Restarbeiten ausgeführt",
       "website": "https://hgg-cloud.de/",
@@ -1894,8 +1894,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Migration abgeschlossen und Restarbeiten"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Scheduled Actrions aus aachenerkinder.de wiederhergestellt auf https://hgg-cloud.de/",
       "website": "",
@@ -1906,8 +1906,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Scheduled Actrions aus aachenerkinder.de"
-    },
-    {
+  },
+  {
       "post_date": "5.8.2023",
       "tagesarbeit": "Zur Vorbereitung auf die Analyse durch TEC WP Staging auf https://test5.haurand.com/ installiert",
       "website": "https://test5.haurand.com/",
@@ -1918,8 +1918,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Zur Vorbereitung auf die Analyse durch TEC"
-    },
-    {
+  },
+  {
       "post_date": "6.8.2023",
       "tagesarbeit": "Alternativen zu The Events Calendar gesucht. Muss noch getestet werden. Siehe Trello",
       "website": "",
@@ -1930,8 +1930,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Alternativen zu The Events Calendar"
-    },
-    {
+  },
+  {
       "post_date": "7.8.2023",
       "tagesarbeit": "Bei WP Staging werden in der Datenbank der Quell-Website wie vermutet Tabellen für die Staging-Seite angelegt, die nach Löschen der Staging-Website auch wieder geslöscht werden. Siehe test5.haurand.com",
       "website": "https://test5.haurand.com/",
@@ -1942,8 +1942,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Bei WP Staging werden in der Datenbank"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Für Staging-Seite werden ca. 20 GB benötigt. Der Platz ist vorhanden. Backup über WP Staging angelegt und lokal auf H:\\aachenerkinder_fotos_werbung_buchtipp_usw\\sicherung übertragen. Anschließend im Webspace wieder gelöscht, weil die Sicherung zu groß ist (ca. 7GB)",
       "website": "https://aachenerkinder.de",
@@ -1954,8 +1954,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Für Staging-Seite werden ca. 20 GB "
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Fehler: Aktualisierung nicht möglich - Bei Website-Zustand: wp-json wp-site-health Failed to load resource: the server responded with a status of 404 (). Durch Bestätigung unter Einstellungen > Permalinks konnte der Fehler behoben werden",
       "website": "https://aachenerkinder.de",
@@ -1966,8 +1966,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Fehler: Aktualisierung nicht möglich"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Details-Block mit CSS-Regeln",
       "website": "https://test3.haurand.com/der-details-block/",
@@ -1978,8 +1978,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Details-Block mit CSS-Regeln"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Animationen klappen nicht beim Details-Block, aber Fade findet man im Plugin Blocks Animation: CSS Animations for Gutenberg Blocks",
       "website": "https://test3.haurand.com/spalten-ohne-bilder/",
@@ -1990,8 +1990,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Animationen klappen nicht beim Details-Block"
-    },
-    {
+  },
+  {
       "post_date": "8.8.2023",
       "tagesarbeit": "Staging-Seite für aaachenerkinder.de eingerichtet und entsprechende Nachricht an TEC geschrieben",
       "website": " Tests",
@@ -2002,8 +2002,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Staging-Seite für aaachenerkinder.de"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Beitrag zu block patterns und sync patterns geschrieben. Bilder und Videos dazu erstellt",
       "website": " Beitrag dazu angesehen",
@@ -2014,8 +2014,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Beitrag zu block patterns und sync Patterns "
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Weiteren Beitrag zum Thema Pattens Import und Export als JSON vorbereitet.",
       "website": "",
@@ -2026,8 +2026,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Weiteren Beitrag zum Thema Pattens "
-    },
-    {
+  },
+  {
       "post_date": "9.8.2023",
       "tagesarbeit": "Beitrag zum Thema: WordPress: Automatisches Major-Update verhindern",
       "website": "https://haurand.com",
@@ -2038,8 +2038,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Beitrag zum Thema: WordPress: Automatisches Major-Update verhindern"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Nach Call mit Wolfgang Arbeiten an saftexperten.de",
       "website": "https://saftexperten.de",
@@ -2050,8 +2050,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Nach Call mit Wolfgang Arbeiten an saftexperten.de"
-    },
-    {
+  },
+  {
       "post_date": "10.8.2023",
       "tagesarbeit": "Anpassungen bezogen auf responsives Design an saftexperten.de",
       "website": "https://saftexperten.de",
@@ -2062,8 +2062,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Anpassungen bezogen auf responsives Design"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Weitere Untersuchungen zur Fehleranalyse bei aachenerkinder.de (Fehler bei Zugriff auf Datenbank, Fehler in der debug.log)",
       "website": "https://aachenerkinder.de",
@@ -2074,8 +2074,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Weitere Untersuchungen zur Fehleranalyse"
-    },
-    {
+  },
+  {
       "post_date": "11.8.2023",
       "tagesarbeit": "ich hatte bereits vorher auf der weiteren Staging-Seite das Plugin query monitor installiert. Vielleicht ist für die Fehleranalyse noch interessant, dass es bei dieser Staging-Umgebung keine Einträge in der debug.log gibt. Allerdings erfolgt auch da der Aufruf einer Veranstaltung sehr langsam, siehe Screenshot",
       "website": "https://hgg-cloud.de",
@@ -2086,8 +2086,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "ich hatte bereits vorher auf der weiteren Staging-Seite"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Erstellung einer Sicherung der Scheduled Actions auf Staging-Website: Aug 11, 2023 7:44",
       "website": "https://hgg-cloud.de",
@@ -2098,8 +2098,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Erstellung einer Sicherung der Scheduled Actions"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Scheduled Actions gelöscht: #1969 - Query execution was interrupted (max_statement_time exceeded)",
       "website": "https://hgg-cloud.de",
@@ -2110,8 +2110,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Scheduled Actions gelöscht"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Nach Aufteilung hat das funktioniert",
       "website": "",
@@ -2122,8 +2122,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Nach Aufteilung hat das funktionier"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Weitere umfangreiche Testreihe - siehe Trello",
       "website": "",
@@ -2134,8 +2134,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Weitere umfangreiche Testreihe"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Weitere Tests auf test4.haurand.com (Testseite zu aachen50plus.de)",
       "website": "",
@@ -2146,8 +2146,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Weitere Tests auf test4.haurand.com"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Plugin EventPrime – Modern Events Calendar, Bookings and Tickets installiert, um das Plugin zu testen",
       "website": "https://localhost/fse_neu/",
@@ -2158,8 +2158,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Plugin EventPrime – Modern Events Calendar"
-    },
-    {
+  },
+  {
       "post_date": "12.8.2023",
       "tagesarbeit": "Problem bei aachen50plus.de in der developer console. ",
       "website": " das scheint nach dem Update auf WordPress 6.3 passiert zu sein. Schlechte Werte bei Lighthouse (Performance). Mehr bei trello. Eintrag bei https://www.wpgmaps.com/forums/forum/pro-add-on/",
@@ -2170,8 +2170,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Problem bei aachen50plus.de in developer console "
-    },
-    {
+  },
+  {
       "post_date": "14.8.2023",
       "tagesarbeit": "Einstellungen WP Rocket für aachen50plus.de geprüft und geändert: Nicht benutztes CSS entfernen; Javascript verzögert laden (waren Empfehlungen beim Test mit Lighthouse. Weiter prüfen. Performance besser, aber immer noch mager",
       "website": "aachen50plus.de",
@@ -2182,8 +2182,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Einstellungen WP Rocket für aachen50plus.de"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Export-Option für Veranstaltungen mit dem Plugin Export any WordPress data to XML/CSV auf https://hgg-cloud.de/ getestet (Für EventPrime)",
       "website": "hgg-cloud.de",
@@ -2194,8 +2194,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Export-Option für Veranstaltungen"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Exportiert und in Nextcloud übertragen",
       "website": "https://dev-haurand.com/s/FQNBNHMiF4XECBC",
@@ -2206,8 +2206,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Exportiert und in Nextcloud übertra"
-    },
-    {
+  },
+  {
       "post_date": "15.8.2023",
       "tagesarbeit": "Fertige Website nach Durchführung aller Aufgaben in den AB",
       "website": "H:\\schulung_wordpress\\laragon-6.0.0_23072023_fertig",
@@ -2218,8 +2218,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Fertige Website nach Durchführung aller Aufgaben"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Update WP Go Maps und Deaktivierung von Real Cookie Banner wegen diverser Fehler in der developer console",
       "website": "aachen50plus.de",
@@ -2230,8 +2230,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Update WP Go Maps und Deaktivierung"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Plugin Add-infos-for-the-events-calendar: Tested with WordPress 6.3",
       "website": "https://wordpress.org/plugins/add-infos-to-the-events-calendar/advanced/",
@@ -2242,8 +2242,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Plugin Add-infos-for-the-events-calendar"
-    },
-    {
+  },
+  {
       "post_date": "16.8.2023",
       "tagesarbeit": "Bash-Script zum Anlegen mehrerer WordPress-Instanzen. Könnte mal auf dem vServer wegen Schulung getestet werden. Muss aber noch für den vServer angepasst werden.",
       "website": "D:\\laragon\\www\\install_many_new_wp_instances.bash",
@@ -2254,8 +2254,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Bash-Script zum Anlegen mehrerer WordPress-Instanzen"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Test verschiedener Block Themes, z. B. Lemmony. Bei der Navigation bietet Lemmony auch die Möglichkeit, dass mobil die Untermenüs nicth aufgeklappt sind. Außerdem bietet das Theme einige optische Highlights (Multipurpose Theme)",
       "website": "https://localhost/fse_tc_new/wp-admin/themes.php",
@@ -2266,8 +2266,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Test verschiedener Block Themes"
-    },
-    {
+  },
+  {
       "post_date": "18.8.2023",
       "tagesarbeit": "Nach weiteren Fehlern beim Datenbankzugriff: Scheduled Actions bei aachenerkinder.de gelöscht. Mehr Infos siehe unter Trello.",
       "website": "https://aachenerkinder.de",
@@ -2278,8 +2278,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Nach weiteren Fehlern beim Datenbankzugriff"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Update auf WordPress 6.3 bei protembis und Bubenheimer Spieleland",
       "website": "",
@@ -2290,8 +2290,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Update auf WordPress 6.3 bei protembis"
-    },
-    {
+  },
+  {
       "post_date": "19.8.2023",
       "tagesarbeit": "Bei aachenerkinder.de debug eingeschaltet. Weiterhin Fehler in Bezug auf Venue. Danach wieder debug ausgeschaltet.",
       "website": "aachenerkinder.de",
@@ -2302,8 +2302,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Bei aachenerkinder.de debug eingeschaltet"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Bei hgg-cloud.de debug eingeschaltet. Keine Fehler in Bezug auf Venue. Einträge in der debug.log sind allerdings trotzdem enthalten.",
       "website": "hgg-cloud.de",
@@ -2314,8 +2314,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Bei hgg-cloud.de debug eingeschaltet"
-    },
-    {
+  },
+  {
       "post_date": "20.8.2023",
       "tagesarbeit": "Update Plugins auf https://localhost/ackids_test/",
       "website": "https://localhost/ackids_test/",
@@ -2326,8 +2326,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Update Plugins lokal"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Neue lokale WordPress-Instanz https://localhost/aachenerkinder/ (Migration mit aktuellen Date)",
       "website": "https://localhost/aachenerkinder/",
@@ -2338,8 +2338,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Neue lokale WordPress-Instanz"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Keine Anmeldung über putty möglich: Network error: Connection refused. Evtl. mit Webgo klären.",
       "website": "",
@@ -2350,8 +2350,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Keine Anmeldung über putty möglich"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Beitrag noch etwas ergänzt: WordPress 6.3: Patterns bzw. Vorlagen und wiederverwendbare Blöcke",
       "website": "haurand.com",
@@ -2362,8 +2362,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Beitrag noch etwas ergänzt: WordPress 6.3: Patterns bzw. Vorlagen und wiederverwendbare Blöcke"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Auf dem vServer eine erste Schulungs-Instanz erstellt: https://space1.wp-start.de/ - Doku dazu unter node: froxlor auf Cheerytree",
       "website": "https://space1.wp-start.de/",
@@ -2374,8 +2374,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Auf dem vServer eine erste Schulung"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Nach Problemen beim Zugriff mit Putty jetzt kein Problem über WinSCP, siehe CherryTree unter node: putty",
       "website": "WinSCP",
@@ -2386,8 +2386,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Nach Problemen beim Zugriff mit Putty"
-    },
-    {
+  },
+  {
       "post_date": "21.8.2023",
       "tagesarbeit": "Beim Testen eines Scripts zur Erstellung einer Schulungs-Instanz habe ich SPACE1 gelöscht. Konnte ich aber unproblematisch wieder herstellen.",
       "website": "https://space1.yd-sgs.de",
@@ -2398,8 +2398,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Beim Testen eines Scripts zur Erstellung einer Schulungs-Instanz"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Anhand eines Beispiels für einen echten Server Bash-Script erstellt: D:\\laragon\\www\\install_new_wp_on_server_example.sh. Das Beispiel müsste aber noch umfangreich angepasst werden.",
       "website": "",
@@ -2410,8 +2410,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Anhand eines Beispiels für einen Server Bash-Script"
-    },
-    {
+  },
+  {
       "post_date": "22.8.2023",
       "tagesarbeit": "Weitere Analyse der Probleme mit Fehler beim Aufbau einer Datenbankverbindung mit aachenerkinder.de",
       "website": "https://aachenerkinder.de",
@@ -2422,8 +2422,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Weitere Analyse der Probleme mit Fehler beim Aufbau einer Datenbankverbindung"
-    },
-    {
+  },
+  {
       "post_date": "23.8.2023",
       "tagesarbeit": "Weitere Analyse der Probleme mit Fehler beim Aufbau einer Datenbankverbindung mit aachenerkinder.de",
       "website": "https://aachenerkinder.de",
@@ -2434,8 +2434,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Weitere Analyse der Probleme mit Fehler beim Aufbau einer Datenbankverbindung"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Menü bereinigt: Shortcode-Einträge aus RCB entfernt.",
       "website": "",
@@ -2446,8 +2446,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Menü bereinigt: Shortcode-Einträge "
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Datenschutzerklärung mit Shortcode aus Embed Privacy ergänzt.",
       "website": "",
@@ -2458,8 +2458,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Datenschutzerklärung mit Shortcode "
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Koko Analytics und Statify zunächst deaktvieirt. Gefühlt jetzt im Backend schneller",
       "website": "",
@@ -2470,8 +2470,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Koko Analytics und Statify zunächst deaktvieirt"
-    },
-    {
+  },
+  {
       "post_date": "24.8.2023",
       "tagesarbeit": "Koko Analytics wieder aktiviert auf aachenerkinder.de",
       "website": "",
@@ -2482,8 +2482,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Koko Analytics wieder aktiviert auf aachenerkinder.de"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Weitere Tests zu TEC auch im Zusammenhang mit der sehr schlechten Performance trotz Cache Plugins wie z. B. WP Rocket und WP Fastest Cache",
       "website": "https://hgg-cloud.de/",
@@ -2494,8 +2494,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Weitere Tests zu TEC auch im Zusammenhang mit der sehr schlechten Performance"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Neue Staging-Website https://kids.dev-haurand.de/ erstellt und auf CherryTree dokumentiert. Für Entwickler von EventPrime.",
       "website": "https://kids.dev-haurand.de/wp-login.ph",
@@ -2506,8 +2506,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Neue Staging-Website"
-    },
-    {
+  },
+  {
       "post_date": "25.8.2023",
       "tagesarbeit": "Theme Ollie installiert und kurz getestet",
       "website": "https://localhost/fse_neu/",
@@ -2518,8 +2518,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Theme Ollie installiert und kurz getestet"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Twenty Twenty-Four installiert und getestet",
       "website": "",
@@ -2530,8 +2530,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Twenty Twenty-Four installiert und getestet"
-    },
-    {
+  },
+  {
       "post_date": "27.8.2023",
       "tagesarbeit": "Wieder Probleme mit der Datenbankverbindung. Erst mal WP Rocket deaktiviert",
       "website": "https://aachenerkinder.de",
@@ -2542,8 +2542,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Wieder Probleme mit der Datenbankverbindung"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Datenbank noch mal in aktueller Version über UpdraftPlus importiert. Jetzt auch bei hgg-cloud.de ein Error “establishing a database connection” (WP Rocket war aktiviert). Debug.log mit den gleichen Fehlern wie aachenerkinder.de:",
       "website": "https://hgg-cloud.de/",
@@ -2554,8 +2554,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Datenbank noch mal in aktueller Version importiert"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Sehr interessant: Der Icon Block von Nick Diego",
       "website": "https://localhost/fse_tc_new/ getestet auf https://localhost/fse_tc_new/?page_id=2",
@@ -2566,8 +2566,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Sehr interessant: Der Icon Block"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "NAS: Sicherungen korrigiert (war falsche IP - statt 192.168.2.147 jetzt 192.168.2.11) . IP hatte sich wohl nach dem Umzug geändert",
       "website": "",
@@ -2578,8 +2578,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "NAS: Sicherungen korrigiert"
-    },
-    {
+  },
+  {
       "post_date": "28.8.2023",
       "tagesarbeit": "Datenbank vom 27.8.2023 per Bash-Script neu importiert, um Fehler in debug.log zu beobachten",
       "website": "https://localhost/aachenerkinder/",
@@ -2590,8 +2590,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Datenbank vom 27.8.2023 per Bash-Script"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Letzte Arbeiten an https://fachanwaelte-koeln.eu/ und Onlineschaltung. Problem beim Server  konnte nach Rücksprache mit webgo behoben werden (Apache arbeitete nicht korrekt)",
       "website": "https://fachanwaelte-koeln.eu/",
@@ -2602,8 +2602,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Letzte Arbeiten FRau Krämer "
-    },
-    {
+  },
+  {
       "post_date": "29.8.2023",
       "tagesarbeit": "Probleme beim Formular behoben",
       "website": "https://fachanwaelte-koeln.eu/",
@@ -2614,8 +2614,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Probleme beim Formular behoben"
-    },
-    {
+  },
+  {
       "post_date": "30.8.2023",
       "tagesarbeit": "Logo, Popup und Flackern im Header/Slider geändert",
       "website": "https://saftexperten.de",
@@ -2626,8 +2626,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Logo, Popup und Flackern im Header"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Datenbank neu importiert, weil einige Inhalte (Freizeitmöglichkeiten, Serie) fehlten. ",
       "website": "https://kids.dev-haurand.de/",
@@ -2638,8 +2638,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Datenbank neu importiert"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Bei Comet Cache die Kalender ausgeschlossen",
       "website": "https://maria-sibylla-merian-gesamtschule.de/events/",
@@ -2650,8 +2650,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Bei Comet Cache die Kalender ausgeschlossen"
-    },
-    {
+  },
+  {
       "post_date": "31.8.2023",
       "tagesarbeit": "Anschreiben wegen Umstieg auf andere Plugins (Spiffy Calendar, WP Event Manager) von The Events Calendar",
       "website": "",
@@ -2662,8 +2662,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Anschreiben wegen Umstieg auf andere Plugins"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Plugin EventPrime – Modern Events Calendar, Bookings and Tickets installiert, um das Plugin zu testen",
       "website": "https://localhost/fse_neu/",
@@ -2674,8 +2674,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Plugin EventPrime – Modern Events Calendar"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Weitere lokale Website mit EventPrime getestet. Das Plugin Import Export enthält jetzt auch eine Import-Funktion für The Events Calendar",
       "website": "https://localhost/eilendorf",
@@ -2686,8 +2686,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Weitere lokale Website mit EventPrime"
-    },
-    {
+  },
+  {
       "post_date": "4.9.2023",
       "tagesarbeit": "Installation von Share on Mastodon auf https://haurand.com",
       "website": "",
@@ -2698,8 +2698,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Installation von Share on Mastodon"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Weitere Plugins als Ersatz von The Events Calendar getestet, siehe Trello",
       "website": "",
@@ -2710,8 +2710,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Weitere Plugins als Ersatz von The Events Calendar "
-    },
-    {
+  },
+  {
       "post_date": "5.9.2023",
       "tagesarbeit": "Termine und Beiträge auf aachenerkinder.de und aachen50plus.de erfasst",
       "website": "",
@@ -2722,8 +2722,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Termine und Beiträge auf aachenerkinder.de"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Volunteers WordCamp Deutschland",
       "website": "",
@@ -2734,8 +2734,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Volunteers WordCamp Deutschland"
-    },
-    {
+  },
+  {
       "post_date": "6.9.2023",
       "tagesarbeit": "Ich kann versuchen, eine völlig neue WordPress-Instanz lokal zu erstellen, dann nur die TEC-Plugins zu installieren und dann einen Dump der TEC-Tabellen wiederherzustellen.",
       "website": "https://space1.wp-start.de/",
@@ -2746,8 +2746,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Ich kann versuchen, eine völlig neue WordPress-Instanz lokal"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Weiterer Versuch lokal. Hier ist die Performance ok",
       "website": "http://tectest.test/",
@@ -2758,8 +2758,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Weiterer Versuch lokal."
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Beim Testen von kids.dev-haurand.de und hgg-cloud.de ist mir aufgefallen, dass bei kids.dev-haurand.de die Performance ok ist, obwohl die Struktur grundsätzlich gleich ist (Datenbank, Plugins, Themes). Ich habe eine entsprechende Info an TEC mit Screenshots aus Query Monitor gesendet.",
       "website": "",
@@ -2770,8 +2770,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Beim Testen von kids.dev-haurand.de"
-    },
-    {
+  },
+  {
       "post_date": "7.9.2023 - 8.9.2023",
       "tagesarbeit": "WordCamp Nederlande in Arnheim",
       "website": "",
@@ -2782,8 +2782,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "WordCamp Nederlande in Arnheim"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Seiten auf seniorensport-attendorn.de geändert.",
       "website": "",
@@ -2794,8 +2794,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Seiten auf seniorensport-attendorn.de"
-    },
-    {
+  },
+  {
       "post_date": "9.9.2023",
       "tagesarbeit": "Vergleich der Instanzen: Unterschiede Server (hoxeit und aachen50plus): bei https://kids.dev-haurand.de/ auf hoxeit kann APCu aktiviert werden, bei hgg-cloud.de nicht. debug.log überprüft. Unterschiedliche Einträge. Mehr bei Trello.\nAuch ohne Performanceprobleme: https://localhost/aachenerkinder/, http://tectest.test/ und https://localhost/ackids_test/",
       "website": "",
@@ -2806,8 +2806,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Vergleich der Instanzen: Unterschiede Server"
-    },
-    {
+  },
+  {
       "post_date": "11.9.2023",
       "tagesarbeit": "Weitere Tests bezüglich des Problems mit aachenerkinder.de",
       "website": "",
@@ -2818,8 +2818,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Weitere Tests bezüglich des Problems mit aachenerkinder.de"
-    },
-    {
+  },
+  {
       "post_date": "12.9.2023",
       "tagesarbeit": "WP Optimize auf hgg-cloud.de installiert. Optimierung ohne Erfolg",
       "website": "",
@@ -2830,8 +2830,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "WP Optimize auf hgg-cloud.de installiert"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Bestell-Seite von saftexperten.de entsprechend dem Entwurf angepasst",
       "website": "https://saftexperten.de",
@@ -2842,8 +2842,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Bestell-Seite von saftexperten.de angepasst"
-    },
-    {
+  },
+  {
       "post_date": "13.9.2023",
       "tagesarbeit": "Migration Website RA Krämer lokal. Probleme mit Darstellung der Website im Frontend. Nach Aktivierung von WP-Sweep und löschen der Transienten Problem behoben",
       "website": "https://localhost/rakraemer",
@@ -2854,8 +2854,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Migration Website RA Krämer lokal. "
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Zunächst alle mit TEC zusammenhängenden Plugins per FTP bei hgg-cloud.de gelöscht und dann von https://localhost/aachenerkinder/ wieder hochgeladen, um sicherzustellen, dass nichts mehr da ist. Performance-Problem nicht behoben.",
       "website": "https://hgg-cloud.de",
@@ -2866,8 +2866,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Zunächst alle mit TEC zusammenhängenden Plugins gelöscht"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Bestell-Seite nochmals angepasst und entsprechend wie Download-Seite geändert.",
       "website": "https://saftexperten.de",
@@ -2878,8 +2878,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Bestell-Seite nochmals angepasst"
-    },
-    {
+  },
+  {
       "post_date": "14.9.2023",
       "tagesarbeit": "WordPress-Instanz für Lina ",
       "website": "https://blende6.de",
@@ -2890,8 +2890,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "WordPress-Instanz für Lina"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Plugin für OPcache auf https://hgg-cloud.de getestet",
       "website": "https://hgg-cloud.de",
@@ -2902,8 +2902,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Plugin für OPcache auf Testinstanz"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Cherry Tree: Eintrag für Brücke Südwestfalen nach Auftragserteilung",
       "website": "https://www.bruecke-suedwestfalen.de/",
@@ -2914,8 +2914,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Cherry Tree: Eintrag für Brücke Südwestfalen"
-    },
-    {
+  },
+  {
       "post_date": "15.9.2023",
       "tagesarbeit": "Einrichtung der Testinstanz für die Brücke Südwestfalen auf https://space4.yd-sgs.de/ mit Themes wie z. B. Lemmony, GeneratePress (Vorlage Summercamp) und Spectra One",
       "website": "https://www.bruecke-suedwestfalen.de/",
@@ -2926,8 +2926,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Einrichtung der Testinstanz für Brücke Südwestfalen"
-    },
-    {
+  },
+  {
       "post_date": "16.9.2023",
       "tagesarbeit": "Präsentation für WCGER vorbereitet (H:\\wordcamp\\wordcamp_deutschland_2023)",
       "website": "",
@@ -2938,8 +2938,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Präsentation für WCGER vorbereitet "
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Wartungsarbeiten",
       "website": "",
@@ -2950,8 +2950,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Wartungsarbeiten"
-    },
-    {
+  },
+  {
       "post_date": "17.9.2023",
       "tagesarbeit": "Experten-Servie umgestellt auf Raster und Umbruch (responsive) eingestellt.",
       "website": "https://saftexperten.de",
@@ -2962,8 +2962,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Experten-Servie umgestellt auf Raster"
-    },
-    {
+  },
+  {
       "post_date": "18.9.2023",
       "tagesarbeit": "Twenty Twenty-Four installiert und getestet",
       "website": "https://localhost/fse_tc_new/",
@@ -2974,8 +2974,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Twenty Twenty-Four installiert und getestet"
-    },
-    {
+  },
+  {
       "post_date": "19.9.2023",
       "tagesarbeit": "Änderungen in der wp-config.php und .htaccess bei aachenerkinder.de - leider ohne Auswirkungen auf Performance",
       "website": "",
@@ -2986,8 +2986,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Änderungen in der wp-config.php und .htaccess"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Heute ist der Zugriff auf hgg-cloud.de wesentlich schneller. Evtl. ist die Aktivierung des Plugins Docket Cache doch effektiv gewesen",
       "website": "hgg-cloud.de",
@@ -2998,8 +2998,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Heute ist der Zugriff auf hgg-cloud.de"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Installation und Aktivierung von docket cache auf aachenerkinder.de. Offensichtlich erfolgt der Zugriff bei Veranstaltungen zwar beim ersten Aufruf langsamer, danach aber schneller. Weiter testen, ob das auch bei anderen Veranstaltungen zutrifft.",
       "website": "",
@@ -3010,8 +3010,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Installation und Aktivierung von docket cache"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Auch auf kids.dev-haurand.de und aachenerkinder.de Docket Cache installiert und aktiviert. Weiter beobachten.",
       "website": "",
@@ -3022,8 +3022,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Auch auf kids.dev-haurand.de und aachenerkinder.de"
-    },
-    {
+  },
+  {
       "post_date": "20.9.2023",
       "tagesarbeit": "Lokale Migration der Website saftexperten.de",
       "website": "https://localhost/saftexperten/",
@@ -3034,8 +3034,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Lokale Migration der Website saftexperten.de"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Anpassungen der Templates wie von Wolfgang nach der Präsentation mitgeteilt",
       "website": "https://localhost/saftexperten/",
@@ -3046,8 +3046,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Anpassungen der Templates wie von Wolfgang"
-    },
-    {
+  },
+  {
       "post_date": "21.9.2023",
       "tagesarbeit": "Weitere Anpassungen der Website wie mit Wolfgang besprochen",
       "website": "https://localhost/saftexperten/",
@@ -3058,8 +3058,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Weitere Anpassungen der Website"
-    },
-    {
+  },
+  {
       "post_date": "22.9.2023",
       "tagesarbeit": "Test des Plugins https://wordpress.org/plugins/index-wp-mysql-for-speed/ auf https://kids.dev-haurand.de/, um zu sehen, ob damit das Problem auf aachenerkinder.de gelöst werden kann. Einstellungen mussten bei dem Plugin offenbar nicht geändert werden.",
       "website": "https://kids.dev-haurand.de/",
@@ -3070,8 +3070,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Test des Plugins index-wp-mysql-for-speed"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Präsentation für WCGER ergänzt (H:\\wordcamp\\wordcamp_deutschland_2023)",
       "website": "",
@@ -3082,8 +3082,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Präsentation für WCGER ergänzt"
-    },
-    {
+  },
+  {
       "post_date": "24.9.2023",
       "tagesarbeit": "Design für Kacheln (Magazin) und Buttons erstellt.",
       "website": "",
@@ -3094,8 +3094,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Design für Kacheln und Buttons"
-    },
-    {
+  },
+  {
       "post_date": "26.9.2023",
       "tagesarbeit": "Anpassungen der Templates wie von Wolfgang nach der Präsentation mitgeteilt (Unsere Kompetenzen) auf Live-Version",
       "website": "https://saftexperten.de",
@@ -3106,8 +3106,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Anpassungen der Templates"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Kacheln für Hauptseite",
       "website": "https://www.bruecke-suedwestfalen.de/",
@@ -3118,8 +3118,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Kacheln für Hauptseite Brücke Südwestfalen"
-    },
-    {
+  },
+  {
       "post_date": "27.9.2023",
       "tagesarbeit": "Andere Lösung für das vorgesehene Layout bei TT2 (Block Theme). Eine weitere Anpassung wäre in dem Fall notwendig. Hier wird nicht GenerateBlocks, sondern der Block Editor verwendet. ",
       "website": "https://www.bruecke-suedwestfalen.de/",
@@ -3130,8 +3130,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Andere Lösung für das vorgesehene Layout"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Runde Kacheln bzw. runde Kachel mit einer Ecke",
       "website": "",
@@ -3142,8 +3142,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Runde Kacheln bzw. runde Kachel mit einer Ecke"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Test der Website nach Erstellung der Indexe mit dem Plugin Index MySQL. Resultat: Die Website istnoch etwas schneller, aber war vorher auch bereits schnell. Erstanlicherweise findet sich auf der Staging-Website kein Hinweis, dass die Indexe erstellt wurden. Danach habe ich die Sicherung wiederhergestellt, die ich vorher erstellt hatte. Das war erfolgreich.",
       "website": "https://kids.dev-haurand.de/",
@@ -3154,8 +3154,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Test der Website nach Erstellung der Indizes"
-    },
-    {
+  },
+  {
       "post_date": "28.9.2023",
       "tagesarbeit": "Performance-Test bei hgg-cloud.de mit und ohne Docket Cache: Auch ohne Docket Cache bessere Performance",
       "website": "",
@@ -3166,8 +3166,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Performance-Test bei hgg-cloud.de mit und ohne Docket Cache"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "DB-Sicherung (backup_2023-09-28-0600_aachenerkinderde_bb555cdfabb4-db.gz) aus aachenerkinder.de von heute morgen auf dev.kids-haurand.de hochgeladen und wiederhergestellt.",
       "website": "https://kids.dev-haurand.de/",
@@ -3178,8 +3178,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "DB-Sicherung"
-    },
-    {
+  },
+  {
       "post_date": "",
       "tagesarbeit": "Aktuelle Version von TT4 installiert und aktiviert.",
       "website": "https://localhost/fse_tc_new/",
@@ -3190,8 +3190,8 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Aktuelle Version von TT4 installiert"
-    },
-    {
+  },
+  {
       "post_date": "29.9.2023",
       "tagesarbeit": "Erstellung der Navigation bei TT3 für blende6.de (Website von Lina). Mail zum Umgang mit Fotos",
       "website": "https://blende6.de",
@@ -3202,5 +3202,5 @@
       "post_type": "post",
       "post_status": "publish",
       "post_title": "Erstellung der Navigation bei TT3 Blende6"
-    }
-   ]
+  }
+]

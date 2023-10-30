@@ -35,14 +35,14 @@ div.bruecke_links_oben div.wp-block-group__inner-container {
 
 p.kachel_absatz_oben,
 h2.kachel_absatz_oben {
-border-radius: 0px 0px 40px 0px;
+/* border-radius: 0px 0px 40px 0px; */
 margin: 0px;
 font-size: clamp(1rem, 0.88rem + 0.6vw, 1.6rem);
 }
 
 div.kachel_oben_links p,
 div.kachel_oben_links h2 {
-  padding: 20px 50px 20px 20px;
+  padding: 20px 30px 20px 30px;
 }
 
 div.kachel_unten_links p,
@@ -71,7 +71,7 @@ h2.kachel_absatz_oben.gb-headline-text {
 /* Einstellungen für das Desktop-Menü */
 @media (min-width: 769px) {
   /* nav links effect */
-  .main-navigation .menu > .menu-item > a::after {
+  .main-navigation .menu > .menu-item > a::after{
       content: "";
       position: absolute;
       right: 0;
@@ -79,24 +79,24 @@ h2.kachel_absatz_oben.gb-headline-text {
       bottom: 0px;
       -webkit-transform: translateX(-50%);
       transform: translateX(-50%);
-      color: var(--gruen-color);
+      color: var(--dunkelblau-color);
       display: block;
       width: 0;
       height: 3px;   
-      background-color: var(--gruen-color); 
+      background-color: currentcolor; 
       transition: 0.3s width ease;
   }
   .main-navigation .menu > .menu-item.current-menu-item > a::after,
   .main-navigation .menu > .menu-item > a:hover::after {
       width: 100%;
-      color: #000000;
+      color: var(--hellblau-color);
   }
 
 .main-navigation .menu > .menu-item.current-menu-item > a::after,
   .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
   .main-navigation .menu > .menu-item > a:active::after {
   width: 100%;
-  color: var(--rot-color);
+  color: var(--dunkelblau-color);
   }
 /* Submenü 
 ul.sub-menu {

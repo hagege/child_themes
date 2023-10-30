@@ -1,0 +1,27 @@
+/*
+@media (min-width: 768px) {
+	/* Submenü weiter nach oben 
+	.main-navigation ul ul{
+			margin-top: -20x;
+	}
+	/* Logo weiter nach oben 
+	.sticky-navigation-logo {
+			margin-top: -20px;
+	}
+	/* Menüzeile etwas mehr nach unten 
+	ul#menu-hauptmenue, .gp-icon icon-search {
+    margin-top: 37px;
+  }
+	nav#sticky-navigation ul#menu-hauptmenue {
+    margin-top: 0px;
+  }
+
+}	
+/*
+@media (max-width: 1200px) {
+	/* Lupe weiter nach oben 
+	.gp-icon icon-search {
+    margin-top: 0px;
+  }
+}
+*/
