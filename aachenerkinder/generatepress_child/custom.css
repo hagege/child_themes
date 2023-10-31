@@ -38,10 +38,11 @@ label.embed-privacy-opt-out-label {
 }
 
 /* Logo für Mitglieder bei Veranstaltungsliste */
-article.cat_premium a.tribe-events-calendar-list__event-featured-image-link::after {
+article.cat_premium a.tribe-events-calendar-list__event-featured-image-link::before {
   content: url('https://aachenerkinder.de/wp-content/uploads/2020/08/siegel_mitglied_klein.png');
-  margin-top: 1rem;
+  margin-bottom: 1rem;
   display: block;
+  text-align: center;
 }
 
 /* Logo für Mitglieder bei Einzelansicht */
