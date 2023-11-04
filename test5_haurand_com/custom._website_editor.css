@@ -1,0 +1,54 @@
+/* zunächst als Kpmmentar:
+h2#eine-testseite-von-haurand-com,
+figure.wp-block-image.size-large {
+-moz-animation-duration: 3s;
+-webkit-animation-duration: 3s;
+-moz-animation-name: slidein;
+-webkit-animation-name: slidein;
+}
+@-moz-keyframes slidein {
+from {
+   margin-left:50%;
+}
+to {
+   margin-left:0%;
+}
+}
+@-webkit-keyframes slidein {
+from {
+   margin-left:50%;
+}
+to {
+   margin-left:0%;
+}
+}
+*/
+
+/* für schräg oben rechts */
+div.schraeg {
+    transform: rotate(45deg);
+    right: 0;
+    left: auto;
+}
+
+div.schraeg p {
+    margin: 0px;
+    padding: 10px;
+}
+
+/* umgekehrte Reihenfolge von Spalten mobil */
+@media only screen and (max-width: 767px) {
+div.mobil_umgekehrt {
+    flex-direction: column-reverse;
+ }
+}
+
+/* der neue details-block in WordPress 6.3 */
+details.wp-block-details.my_details {
+    background-color: darkblue;
+    padding: 20px;
+}
+
+details.wp-block-details.my_details:hover {
+    background-color: azure;
+}

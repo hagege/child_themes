@@ -1,0 +1,434 @@
+:root {
+	--column--margin-bottom: 1rem;	
+	--column--margin-top: 3rem;		
+  --column--font-size-h2: 2rem;
+	--columns--background: #f0f0f0;
+	--columns--margin: 10vw;
+	--columns--padding: 0.5rem;
+	--columns--width: 90vw;
+	--column--width--1: 95%;
+	--column--width--2: 38%;
+	--column--width--3: 29%;
+	--column--width--4: 22%;	
+}
+
+/* Kachel für Brücke 
+div.bruecke_links_oben {
+    margin: 0px;
+    padding: 10px;
+    /* border-bottom-right-radius: 150px; 
+}
+*/
+
+p.kachel_absatz_oben {
+    border-radius: 0px 0px 150px 0px;
+		margin: 0px;
+}
+
+
+/* Animation auf Bild */
+div.wp-block-cover.alignfull.has-custom-content-position.is-position-top-right.bild_animation {
+    overflow: hidden; 
+}
+
+/* hier die Regeln für das Bild */
+div.wp-block-cover.alignfull.has-custom-content-position.is-position-top-right.bild_animation img{	
+		/* SCALE */
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-ms-transform: scale(1);
+		-o-transform: scale(1);
+		transform: scale(1);
+		/* VERZÖGERUNG */
+		-webkit-transition: all 0.7s linear;
+		-moz-transition: all 0.7s linear;
+		-ms-transition: all 0.7s linear;
+		-o-transition: all 0.7s linear;
+		transition: all 0.7s linear;
+}
+
+/* hier die Regeln für das Bild */
+div.wp-block-cover.alignfull.has-custom-content-position.is-position-top-right.bild_animation img:hover{	
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+
+
+/* Aufteilung Text auf 2 Spalten */
+@media (min-width: 720px) {
+p.two_columns_text {
+	column-count: 2;
+}
+}
+
+
+
+/* klappt nicht (archive) 
+@media (min-width: 800px) {
+.wp-block-post-template.is-flex-container.is-flex-container.columns-2>li {
+    width: calc(50% - .625em);
+}
+}
+*/
+
+/* überlappendes Cover - siehe Beitrag mit Kletter-Bild */
+.wp-block-cover.is-light.cover_ueberlappend {
+    z-index: 1;
+}
+
+/* negativer Rand, siehe Beitrag https://test5.haurand.com/grafik-mit-3-spalten/
+.wp-block-columns.negativ_margin {
+    margin-top: -12rem;
+    position: relative;
+}
+ */
+
+/* split screen */
+.wp-block-column.links.is-layout-flow,
+.wp-block-column.rechts.is-layout-flow{
+transition: all 2s ease-in-out;
+-webkit-filter: grayscale(0%);
+filter: grayscale(0%);
+}
+
+
+.wp-block-column.links.is-layout-flow:hover
+{
+  background-color:#f7f8f9;
+  transform: translateX(50vw);
+  -webkit-transition: all 3.5s ease-in-out 0s;
+  transition: all 2.5s ease-in-out 0s;
+}
+
+
+.wp-block-column.rechts.is-layout-flow:hover
+{
+  background-color:#f7f8f9;
+  transform: translateX(-50vw);
+  -webkit-transition: all 3.5s ease-in-out 0s;
+  transition: all 2.5s ease-in-out 0s;
+}
+
+
+.wp-block-columns.alignfull.is-layout-flex.wp-container-25 {
+    background-image: url("https://test5.haurand.com/wp-content/uploads/2022/01/sorrent_2021.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+
+/*
+@media screen and (min-width: 600px) {
+.wp-block-group.alignfull.has-foreground-color.has-background-background-color.has-text-color.has-background.is-layout-flow {
+    display: none;
+}
+}
+*/
+
+/* von rechts reinfliegen - buggy 
+.wp-block-columns.is-layout-flex.wp-container-9>div {
+    opacity: 1;
+    -webkit-animation: element-from-right .55s 1 ease;
+    animation: element-from-right .55s 1 ease;
+}
+*/
+
+.wp-block-columns.alignfull.is-not-stacked-on-mobile.fly_right.is-layout-flex.wp-container-10>div {
+    opacity: 1;
+    -webkit-animation: element-from-right .55s 1 ease;
+    animation: element-from-right .55s 1 ease;
+}
+
+figure.wp-block-image.size-large.has-custom-border.bild_ueberlappend {
+    transform: translateX(-30%);
+}
+
+/* Größe Hamburger */
+.wp-block-navigation__responsive-container-open svg {
+    height: 48px;
+    width: 48px;
+}
+
+/* The Events Calendar */
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
+    min-height: 700px;
+    padding-bottom: var(--tec-spacer-14);
+    padding-top: var(--tec-spacer-13);
+    background-color: white;
+    margin-top: 200px;
+    /* z-index: -1; */
+}
+
+
+.tribe-common-l-container.tribe-events-l-container {
+    background-color: white;
+}
+
+
+/* für Update und Achtung */
+@media (max-width: 781px)  {
+div.html_svg {
+    margin-left: 43%;
+    margin-right: 43%;
+}
+}
+	
+p.has-text-align-center.achtung_update {
+    margin-top: 2px;
+}
+
+svg#Layer_1, svg#Capa_1
+{
+    fill: #B70000;
+}
+
+
+/* Text auf Sorrent-Bild - Startseite */
+.page-id-36 div.wp-block-cover__inner-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+}
+
+/*leicht gedrehtes Bild mit Rahmen */
+figure.wp-block-image.size-large.bild_rotate {
+    transform: rotate(5deg);
+		box-shadow:0 20px 40px rgba(0,0,0,.2);
+}
+
+/* Überschrift nicht zeigen */
+h2.alignwide.wp-block-post-title {
+    display: none;
+}
+
+/* hours / location */
+.wp-block-columns.are-vertically-aligned-top.has-primary-background-color.has-background {
+    opacity: 0.6;
+}
+
+/* wave */
+.wp-block-wavy-wavy-divider.alignfull.has-primary-background-color.has-background {
+    background-image: url("https://test5.haurand.com/wp-content/uploads/2022/01/platzhalter_herbst_2_1920.jpg");
+}
+
+
+.wp-block-wavy-wavy-divider.alignfull.has-primary-background-color.has-background svg {
+    opacity: 0.6;
+    transition: all .5s ease;
+}
+
+/* sticky header */ 
+/* entspricht der Höhe des Menüs */
+/* heigth - nicht schön, aber sonst funktionieren die Links nicht */
+/*main#wp--skip-link--target {
+    margin-top: 150px;
+}
+
+
+header.wp-block-template-part {
+    position: fixed;
+    inset: 0;
+    padding: 0px 30px;
+	  height: 10px!important;
+		z-index: 11;
+}
+*/
+
+
+.wp-duotone-61fab3ac5518f.wp-block-cover.alignfull.has-parallax {
+    max-height: 80px;
+}
+
+
+/* Abstandhalter formatieren */
+.abstand {
+	border: 2px dashed #cbd5e1;
+	background-color: #f1f5f9;
+}
+
+
+/* ------------------------------ */
+/* Variable Spalten von 4 bis 1   */
+/* ------------------------------ */
+div.wp-block-group.alignwide.flexible_spalten {
+    max-width: calc(var(--columns--width) - var(--columns--margin));
+    width: calc(var(--columns--width) - var(--columns--margin));
+	margin-left:var(--columns--margin);
+	flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+	width: var(--columns--width);
+	/* Standardwert:
+	justify-content: flex-start; */
+	/* eingestellt: space-around*/
+	justify-content: left; 
+  /* Flexelemente werden gleichmäßig innerhalb der Zeile verteilt, sodass die Leerräume zwischen zwei angrenzenden Elementen gleich sind. Sonst:
+  justify-content: center;*/
+}
+
+/* Absatz innerhalb der Spalte */
+div.flexible_spalten .wp-block-group__inner-container p{
+		padding: 1rem;
+}
+
+/* ggfs. zusätzlicher Rand oben und unten */
+
+/*.wp-block-group .wp-block-group__inner-container > * {
+    margin-top: var(--column--vertical);
+    margin-bottom: var(--column--vertical);
+}
+*/
+
+
+
+/* unnötig bei twenty twenty, aber notwendig z. B. bei twenty twenty one */
+/*.wp-block-group .wp-block-group__inner-container > *:first-child {
+    margin-top: var(--column--vertical);
+    margin-bottom: var(--column--vertical);
+}
+
+.wp-block-group .wp-block-group__inner-container > *:last-child {
+    margin-top: var(--column--vertical);
+    margin-bottom: var(--column--vertical);
+}
+*/
+
+
+/* Schriftgröße für h2 bei Spalten */
+div.wp-block-columns.kacheln h2{
+	font-size: var(--column--font-size-h2);
+}
+
+
+/* Hintergrundfarbe und evtl. zusätzliches Padding und Margin Kacheln */
+div.wp-block-columns.kacheln {
+	  margin-top: var(--column--margin-top);
+    margin-bottom: var(--column--margin-bottom);
+	  padding-top: var(--column--vertical);
+    padding-bottom: var(--column--vertical);
+		padding-left: var(--columns--padding);
+		padding-right: var(--columns--padding);
+		background-color: var(--columns--background);
+}
+
+/* 4 Spalten (Spaltenbreite jeweils 24%)*/
+@media (min-width: 1500px)  {
+div.wp-block-columns.kacheln {
+    width: var(--column--width--4);
+		/*linksbündig mit Rand */
+		margin-left: 1.6vw;
+    margin-right: 0.4vw;
+  }
+}
+
+
+/* 3 Spalten (Spaltenbreite jeweils 30%) */
+@media (min-width: 1121px) and (max-width: 1499px) {
+div.wp-block-columns.kacheln {
+    width: var(--column--width--3);
+		/* damit bei 3 Spalten die Spalten nicht zentriert, sondern links ausgerichtet sind: */
+		/*linksbündig mit Rand */
+    margin-left: 1.9vw;
+    margin-right: 1vw;
+  }
+}
+
+/* 2 Spalten (Spaltenbreite jeweils 40%)*/
+@media (min-width: 600px) and (max-width: 1120px) {
+div.wp-block-columns.kacheln {
+    width: var(--column--width--2);
+		margin-left: 5.5vw;
+    margin-right: 4vw;
+}
+}
+
+
+/* 1 Spalte - Spaltenbreite: 90% */
+@media (max-width: 599px) {
+div.wp-block-columns.kacheln{
+    width: var(--column--width--1);
+}
+}
+
+	
+/* dezenter Hover-Effekt bei Kacheln */
+.wp-block-columns.kacheln:hover {
+ 		opacity:0.7;
+  	transform: scale(1.01, 1.01);	
+}
+
+/* -------- weitere Tests -------- */
+
+.wp-block-group.container {
+    background-color: #cacaca;
+		padding: 10px;
+		margin: 50px;
+	  margin-left: auto;
+   margin-right: auto;
+}
+
+.wp-block-columns.item {
+    background-color: #ff0037;
+		color: #fff;
+		font-size: 35px;
+		padding: 20px;
+		margin: 10px;
+}
+
+/*
+header.entry-header.has-text-align-center.header-footer-group {
+    display: none;
+}
+
+main#site-content {
+    margin-top: -18rem;
+}
+*/
+
+
+/* oben und unten kein Rand */
+.wp-site-blocks {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+/* --------------------------- */
+/* Text in Spalten überlappend */
+/* --------------------------- */
+
+.wp-block-image img{
+    filter: none;
+}
+
+@media (min-width: 782px) {
+.wp-block-column.spalte_links_ueberlappend {
+  margin-left: -15rem;
+}
+.wp-block-column.spalte_rechts_ueberlappend {
+margin-right: -15rem;
+z-index:0;
+}
+.wp-block-column.spalte_links_ueberlappend,
+.wp-block-column.spalte_rechts_ueberlappend
+{
+margin-top: 15vh;
+margin-bottom: 15vh; 
+padding: 10vh;
+}
+}
+
+@media (max-width: 781px) {
+.wp-block-column.spalte_links_ueberlappend.has-background.is-layout-flow,
+.wp-block-column.spalte_rechts_ueberlappend.has-background.is-layout-flow {
+    margin-top: -25vh;
+}
+.gerade {
+    flex-direction: column-reverse;
+}
+}
+/* --------------------------- */
+
+
