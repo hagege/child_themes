@@ -20,6 +20,10 @@ CMYK 67-19-35-35
 
 /* TEST Anfang */
 
+/* Breite Veranstaltungsliste */
+.tribe-common-l-container.tribe-events-l-container {
+  width: 90%;
+}
 
 /* Button weiterlesen mit mehr Innenabstand */
 .tribe-events-calendar-list__event-details.tribe-common-g-col a {
