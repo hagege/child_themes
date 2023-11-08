@@ -1,3 +1,20 @@
+/* Farben */
+/* Variablen */
+:root {
+    --gelb-color: rgba(243, 205, 30, 1);	  
+    --blau-color: rgba(8, 36, 69, 1);
+    --rot-color_transpa: rgba(191, 25, 25, 0.5);
+      /* funktioniert nicht, daher nur definiert */
+    --mobile-breakpoint: 767px;
+    --tablet-breakpoint: 900px;
+  }
+/*    
+
+/* Für Simple TOC */
+.simpletoc.wp-block-simpletoc-toc button {
+    background-color: var(--gelb-color);
+}
+
 /* Font size Kategorieauswahl */
 select#wp-block-categories-1 {
     font-size: 1.2rem;
@@ -7,4 +24,73 @@ select#wp-block-categories-1 {
 figure.gb-block-image img {
     width: 100%;
     height: 100%;
+}
+
+@media (min-width: 850px) {
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: auto;
+    background-color: inherit;
+  }
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) .wp-block-navigation__responsive-container-close {
+    display: none;
+  }
+  .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container {
+    left: 0;
+  }
+  .wp-block-navigation__responsive-container-open:not(.always-shown) {
+    display: none;
+  }
+}
+
+@media (max-width: 849px) {
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+    display: none;
+  }
+  .wp-block-navigation__responsive-container-open:not(.always-shown) {
+    display: flex;
+  }
+}
+
+
+/* Design für Button */
+a.wp-block-button__link.wp-element-button,  
+p.form-submit.wp-block-button{
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 800;
+    font-family: "Open Sans", sans-serif;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    white-space: normal;
+    background: none;
+    color: var(--blau-color);
+    border: 3px solid var(--blau-color);
+    border-radius: 0;
+    position: relative;
+    padding: 13px 30px;
+}
+
+a.wp-block-button__link.wp-element-button:hover, p.form-submit.wp-block-button:hover{
+color: #fff;
+    background-color: var(--blau-color);
+    outline: none;
+transition-duration: 1s;
+    transition-delay: 250ms, 250ms;
+    transition-property: background-color, color;
+}
+
+a.wp-block-button__link.wp-element-button:after, p.form-submit.wp-block-button:after{
+    content: '';
+    position: absolute;
+    height: calc(100% + 3px);
+    width: calc(100% + 3px);
+    z-index: -1;
+    bottom: -12px;
+    right: -12px;
+    background: #F3CD1E;
+    border: 3px solid #F3CD1E;
 }
