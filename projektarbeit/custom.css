@@ -1,9 +1,26 @@
 /* Farben */
+#FF6900 Leuchtendes Orange
+#9DFF20 leuchtendes Grün
+#345C00 dunkles Grün
+#ABB8C3 Bläuliches Cyangrau
+#F78DA7 Helles Rosa
+#CF2E2E Kräftiges Rot
+#FCB900 Leuchtendes, kräftiges Gelb
+#7BDCB5 Helles Cyangrün
+#00D084 Kräftiges Cyangrün
+#8ED1FC Helles Cyanblau
+#0693E3 Kräftiges Cyanblau
+#9B51E0 Kräftiges Violett
+#F3CD1E Gelb
+*/
 /* Variablen */
 :root {
     --gelb-color: rgba(243, 205, 30, 1);	  
     --blau-color: rgba(8, 36, 69, 1);
     --rot-color_transpa: rgba(191, 25, 25, 0.5);
+    --leuchtendes-gruen: #9DFF20;
+    --leuchtendes-orange: #FF6900;
+
       /* funktioniert nicht, daher nur definiert */
     --mobile-breakpoint: 767px;
     --tablet-breakpoint: 900px;
