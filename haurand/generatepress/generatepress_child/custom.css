@@ -9,11 +9,26 @@ hellblau: #f7f8f9
 
 /* TEST Anfang */
 
+/* Farben für SimpleTOC */
+
+button.simpletoc-collapsible {
+    background-color: #b70000;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+button.simpletoc-collapsible:hover {
+    background-color: #3C4346;
+    color: #fff;
+}
+
+
+
 /* TEST Ende */
 /* für Kategorien auf der Seite "Beitrags-Kategorien */
 p.beitrags_kategorien a.my_category_list {
     background-color: #D4DaDB;
-    border-radius: 20px;
+    border-radius: 30px;
     padding: 10px;
     margin: 20px 10px 0px 0px;
     text-decoration: none;
