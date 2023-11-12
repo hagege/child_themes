@@ -19,9 +19,15 @@
 }
 /*    
 
+/* Für Kommentare */
 .wp-block-post-comments-form input[type=submit]:hover {
     background-color: var(--wp--preset--color--custom-dunkelblau);
     border-color: var(--wp--preset--color--custom-dunkelblau);
+}
+
+input#submit {
+    border-width: 0px;
+    font-size: 1.2rem;
 }
 
 /* Font size Kategorieauswahl */
