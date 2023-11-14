@@ -17,7 +17,7 @@ https://www.mediaevent.de/css/display-table.html
     display: none !important;
   }
 .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open {
-    background-color: rgb(255 255 255 / 60%);
+    background-color: rgb(255 255 255 / 90%);
   }
 ul.wp-block-navigation__container.is-responsive.items-justified-right.wp-block-navigation {
     background-color: white;
