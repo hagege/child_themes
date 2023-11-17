@@ -9,6 +9,11 @@ FARBWERTE
 Web und Bildschirm Druck
 */
 
+/* wegen seltsamen Designs: */
+.tribe-events-c-messages__message.tribe-events-c-messages__message--notice {
+    display: none;
+}
+
 /* Breite Veranstaltungsliste */
 .tribe-common-l-container.tribe-events-l-container {
     width: 90%;
