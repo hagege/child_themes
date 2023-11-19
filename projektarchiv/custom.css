@@ -5,6 +5,9 @@
     --wp--preset--color--custom-leuchtendes-gr-n: #9dff20;
     --wp--preset--color--custom-leuchtendes-orange: #ff6900;
     --wp--preset--color--custom-hellblau: #8ed1fc;
+
+    --wp--preset--color--custom-hellblau--transpa: #8DD2FC26;
+
     --wp--preset--color--custom-rot: #eb1717;
 /* Variablen */
 :root {
@@ -17,7 +20,16 @@
   --mobile-breakpoint: 767px;
   --tablet-breakpoint: 900px;
 }
-/*    
+
+/* Mehr Padding nach unten bei Listen */
+ul.meetup_liste li {
+    padding-bottom: 1rem;
+}
+
+/* Oberpunkte größer */
+ul.meetup_liste li strong {
+    font-size: 1.3rem;
+}
 
 /* Für Kommentare */
 .wp-block-post-comments-form input[type=submit]:hover {
