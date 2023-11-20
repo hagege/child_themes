@@ -22,9 +22,15 @@
   }
   
   
+  /* Position bei featured image */
+  img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
+      object-position: left center;
+      object-fit: cover;
+  }
+  
   /* lange Wörter, z. B. endlose Links trennen */
-    ul.meetup_liste li a, p a {
-        word-wrap: break-word;
+  ul.meetup_liste li a, p a {
+      word-wrap: break-word;
   }
   
   /* Mehr Padding nach unten bei Listen */
