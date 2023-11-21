@@ -22,6 +22,12 @@
   }
   
   
+  /* smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  
   /* Position bei featured image */
   img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
       object-position: left center;

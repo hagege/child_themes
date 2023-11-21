@@ -21,6 +21,11 @@
     --tablet-breakpoint: 900px;
   }
   
+  /* smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
   
   /* lange Wörter, z. B. endlose Links trennen */
     ul li, ul.meetup_liste li a, p a {
