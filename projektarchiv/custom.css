@@ -23,7 +23,7 @@
   
   
   /* lange Wörter, z. B. endlose Links trennen */
-    ul.meetup_liste li a, p a {
+    ul li, ul.meetup_liste li a, p a {
         word-wrap: break-word;
   }
   
