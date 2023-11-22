@@ -27,6 +27,27 @@ Grün 	#87C12C
 
 */
 
+/* Scrollbar vertikal immer anzeigen */
+body {
+overflow-y: scroll; /* Show vertical scrollbar */
+}
+
+ul li::marker {
+color: var(--dunkelblau-color);
+font-size: 1.5em;
+}
+
+/* Schatten für Bilder */
+figure.schatten-raster img {
+  box-shadow: 10px 10px 10px 1px rgba(30,51,127,0.2);
+}
+
+
+/* für H2 bei Kacheln */
+h2.gb-headline-text.kachel_h2 {
+  color: var(--wp--preset--color--white);
+}
+
 /* Kachel für Brücke */
 div.bruecke_links_oben div.wp-block-group__inner-container {
   margin: 0px;
