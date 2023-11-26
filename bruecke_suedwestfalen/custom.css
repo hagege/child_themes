@@ -27,6 +27,11 @@ Grün 	#87C12C
 
 */
 
+/* H1 wird auf der Startseite nicht angezeigt, taucht aber im Quelltext auf */
+.page-id-7 .entry-title  {
+  display: none;
+}
+
 /* Scrollbar vertikal immer anzeigen */
 body {
 overflow-y: scroll; /* Show vertical scrollbar */
@@ -38,8 +43,8 @@ font-size: 1.5em;
 }
 
 /* Schatten für Bilder */
-figure.schatten-raster img {
-  box-shadow: 10px 10px 10px 1px rgba(30,51,127,0.2);
+figure img {
+  box-shadow: 5px 5px 5px 1px rgba(30,51,127,0.2);
 }
 
 
