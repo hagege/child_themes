@@ -28,7 +28,8 @@ Grün 	#87C12C
 */
 
 /* H1 wird auf der Startseite nicht angezeigt, taucht aber im Quelltext auf */
-.page-id-7 .entry-title  {
+.page-id-7 .entry-title,
+.page-id-68 .entry-title{
   display: none;
 }
 
