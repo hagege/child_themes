@@ -819,6 +819,7 @@ select {
   font-size: 13px;
   border-radius: 2px;
   -webkit-appearance: inherit;
+  appearance: inherit;
   user-select: auto;
   transition: border .25s linear, color .25s linear, background-color .25s linear;
   -webkit-user-select: auto;
