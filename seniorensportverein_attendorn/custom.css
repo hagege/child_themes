@@ -93,3 +93,17 @@ and (-webkit-min-device-pixel-ratio: 2) {
   background-attachment: scroll;
 }
 }
+
+
+/* Einstellungen für Contact Form 7 */
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="tel"], input[type="date"], 
+input[type="submit"],
+textarea, select {
+    width: 40rem;
+    font-size: 1.5rem;
+    background-color: aliceblue;
+    border-color: #009FE3;
+    color: black;
+}
+
+
