@@ -27,6 +27,16 @@
     scroll-behavior: smooth;
   }
   
+  /* Links anders ausgezeichnet */
+  main .entry-content a {
+  box-shadow: inset 0 -5px 0 var(--wp--preset--color--custom-gelb);
+  text-decoration: none;
+  }
+  
+  main .entry-content a:hover{
+  box-shadow: inset 0 -25px 0 var(--wp--preset--color--custom-gelb);
+  transition: all 0.2s ease-in-out;
+  }
   
   /* Position bei featured image */
   img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
