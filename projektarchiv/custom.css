@@ -142,3 +142,64 @@ right: -12px;
 background: var(--wp--preset--color--custom-gelb);
 border: 3px solid #F3CD1E;
 }
+
+
+/* Add a custom transition when opening/closing. */
+.wp-block-details {
+	transition: all 0.5s ease-in-out;
+}
+
+/* Add horizontal margin to nested blocks/elements. 
+.wp-block-details > :where( :not( summary ) ) {
+	margin-left: 2rem;
+	margin-right: 2rem;
+}
+
+*/
+
+/* If open, add some bottom padding to avoid content butting against the bottom. */
+.wp-block-details[open] {
+	padding-bottom: 2rem;
+}
+
+/* Base `summary` element styling. */
+.wp-block-details summary {
+	transition: all 0.5s ease-in-out;
+	box-sizing: border-box;
+	padding: 2rem;
+	font-weight: 500;
+}
+
+/* Change the background of the `summary` element based on state. */
+summary {
+    background: #ebeecf;
+}
+
+.wp-block-details[open] summary,
+.wp-block-details summary:hover,
+.wp-block-details summary:focus {
+	background: #e2e8f0;
+transition: all 0.2s ease-in-out;
+}
+
+/* Background content of details */
+details p {
+    background: rgba(226, 232, 240, 0.3);
+    padding: 2rem;
+    margin-top: 0;
+}
+
+
+/* Animation */
+@keyframes details-show {
+  from {
+    opacity:0;
+    transform: var(--details-translate, translateY(-0.5em));
+  }
+}
+
+details[open] > *:not(summary) {
+  animation: details-show 1000ms ease-in-out;
+}
+
+
