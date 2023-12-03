@@ -144,53 +144,62 @@ border: 3px solid #F3CD1E;
 }
 
 
-/* Add a custom transition when opening/closing. */
-.wp-block-details {
-	transition: all 0.5s ease-in-out;
-}
-
-/* Add horizontal margin to nested blocks/elements. 
-.wp-block-details > :where( :not( summary ) ) {
-	margin-left: 2rem;
-	margin-right: 2rem;
-}
-
-*/
-
-/* If open, add some bottom padding to avoid content butting against the bottom. */
-.wp-block-details[open] {
-	padding-bottom: 2rem;
-}
-
-/* Base `summary` element styling. */
-.wp-block-details summary {
-	transition: all 0.5s ease-in-out;
-	box-sizing: border-box;
-	padding: 2rem;
-	font-weight: 500;
-}
-
-/* Change the background of the `summary` element based on state. */
+/* Der Detail-Block mit einigen Anpassungen */
 summary {
-    background: #ebeecf;
+  list-style: none;
+  display: flex; /* also removes the list marker */
+  align-items: center;
+  padding: 2rem;
+  font-weight: bold;
+  background: #ebeecf;
+  border-radius: 5px;
+}
+
+summary::before{
+  content: '';
+  width: 18px;
+  height: 10px;
+  /* hier muss die arrow.svg jeweils hochgeladen werden, bevor das so benutzt wird: */
+  /* zusätzlich ist ein Plugin wie z. B. Easy SVG Support notwendig, 
+     damit die Datei hochgeladen werden kann */
+  background: url('https://space1.wp-start.de/wp-content/uploads/2023/12/arrow.svg') no-repeat;
+  background-size: cover;
+  margin-left: .75em;
+  transition: 0.2s;
+  margin-right: 2rem;
+}
+
+
+details[open] > summary::before{
+  transform: rotate(180deg);
 }
 
 .wp-block-details[open] summary,
-.wp-block-details summary:hover,
-.wp-block-details summary:focus {
+.wp-block-details summary:hover
+{
 	background: #e2e8f0;
 transition: all 0.2s ease-in-out;
 }
 
-/* Background content of details */
-details p {
-    background: rgba(226, 232, 240, 0.3);
-    padding: 2rem;
-    margin-top: 0;
+.wp-block-details 
+summary:focus {
+	background: #b1c5a4;
+transition: all 0.2s ease-in-out;
+}
+
+summary::-webkit-details-marker {
+  display: none;
 }
 
 
-/* Animation */
+/* Background content of details */
+details p {
+    background: rgba(226, 232, 240, 0.31);
+    padding: 2rem;
+    margin-top: 0;
+    border-radius: 5px;
+}
+
 @keyframes details-show {
   from {
     opacity:0;
@@ -201,5 +210,3 @@ details p {
 details[open] > *:not(summary) {
   animation: details-show 1000ms ease-in-out;
 }
-
-
