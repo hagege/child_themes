@@ -4,6 +4,7 @@
   --dunkelblau-color: rgba(30, 51, 127, 1);
   --orange-color: rgba(255, 125, 31, 1);
   --hellblau-color:  rgba(0, 123, 190, 1);
+  --hellgrau-color: rgba(234, 234, 234, 0.4);
   --lila-color: rgba(162, 50, 150, 1);
   --rot-color: rgba(238, 56, 63, 1);	     
   --gelb-color: rgba(255, 216, 0, 1);	  
@@ -26,6 +27,11 @@ Gelb	#FFD800
 Grün 	#87C12C
 
 */
+
+/* Kompletter Footer als Block */
+.footer-widgets .widget {
+  margin-bottom: -1px;
+}
 
 /* H1 wird auf der Startseite nicht angezeigt, taucht aber im Quelltext auf */
 .page-id-7 .entry-title,
@@ -132,53 +138,46 @@ ul.sub-menu {
 */
 }
 
-/*------------------------------*/
-/* Der Detail-Block mit einigen Anpassungen */
-/*------------------------------*/
+/* ---------------------*/
+/* Der Detail-Block mit */ 
+/* einigen Anpassungen  */
+/* ---------------------*/
 summary {
 list-style: none;
 display: flex; /* also removes the list marker */
 align-items: center;
 padding: 2rem;
-font-weight: bold;
-background: rgba(30, 51, 127, 1);
-border-radius: 5px;
+font-weight: 400;
+background: var(--dunkelblau-color);
 color: white;
 }
 
 summary::before{
-content: '';
-width: 18px;
-height: 10px;
-/* hier muss die arrow.svg jeweils hochgeladen werden, bevor das so benutzt wird: */
-/* zusätzlich ist ein Plugin wie z. B. Easy SVG Support notwendig, 
-   damit die Datei hochgeladen werden kann */
-background: url('http://web72.s309.goserver.host/wp-content/uploads/2023/12/arrow_weiss.svg') no-repeat;
-background-size: cover;
-margin-left: .75em;
+content: '>';
+/*  margin-left: .75em; */
 transition: 0.2s;
-margin-right: 2rem;
+margin-right: 1rem;
+font-size: 2rem;
 }
 
 
 details[open] > summary::before{
-transform: rotate(180deg);
+transform: rotate(90deg);
 }
 
 .wp-block-details[open] summary,
 .wp-block-details summary:hover
 {
-background: rgba(0, 123, 190, 1);
-color: white;
+background: var(--hellblau-color);
 transition: all 0.2s ease-in-out;
 }
 
-.wp-block-details 
+/* .wp-block-details 
 summary:focus {
-background: rgba(0, 123, 190, 1);
-color: white;
+background:var(--hellblau-color);
 transition: all 0.2s ease-in-out;
 }
+*/
 
 summary::-webkit-details-marker {
 display: none;
@@ -187,14 +186,13 @@ display: none;
 
 /* Background content of details */
 details p {
-  /* background: rgba(0, 123, 190, 0.1); */
   padding: 2rem;
   margin-top: 0;
-  border-radius: 5px;
 }
 
+/* Hintergrundfarbe details */
 details > div.wp-block-group {
-  background: rgba(0, 123, 190, 0.1);
+  background: var(--hellgrau-color);
 }
 
 @keyframes details-show {
@@ -204,7 +202,8 @@ from {
 }
 }
 
-details[open] > *:not(summary) {
+details[open] > *:not(summary),
+details[close] > *:not(summary) {
 animation: details-show 1000ms ease-in-out;
 }
 
