@@ -144,7 +144,10 @@ border: 3px solid #F3CD1E;
 }
 
 
-/* Der Detail-Block mit einigen Anpassungen */
+/* ---------------------*/
+/* Der Detail-Block mit */ 
+/* einigen Anpassungen  */
+/* ---------------------*/
 summary {
   list-style: none;
   display: flex; /* also removes the list marker */
@@ -156,22 +159,16 @@ summary {
 }
 
 summary::before{
-  content: '';
-  width: 18px;
-  height: 10px;
-  /* hier muss die arrow.svg jeweils hochgeladen werden, bevor das so benutzt wird: */
-  /* zusätzlich ist ein Plugin wie z. B. Easy SVG Support notwendig, 
-     damit die Datei hochgeladen werden kann */
-  background: url('https://space1.wp-start.de/wp-content/uploads/2023/12/arrow.svg') no-repeat;
-  background-size: cover;
-  margin-left: .75em;
+  content: '>';
+/*  margin-left: .75em; */
   transition: 0.2s;
-  margin-right: 2rem;
+  margin-right: 1rem;
+  font-size: 2rem;
 }
 
 
 details[open] > summary::before{
-  transform: rotate(180deg);
+  transform: rotate(90deg);
 }
 
 .wp-block-details[open] summary,
@@ -197,7 +194,6 @@ details p {
     background: rgba(226, 232, 240, 0.31);
     padding: 2rem;
     margin-top: 0;
-    border-radius: 5px;
 }
 
 @keyframes details-show {
@@ -207,6 +203,7 @@ details p {
   }
 }
 
-details[open] > *:not(summary) {
+details[open] > *:not(summary),
+details[close] > *:not(summary) {
   animation: details-show 1000ms ease-in-out;
 }
