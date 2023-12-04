@@ -132,3 +132,80 @@ ul.sub-menu {
 */
 }
 
+/*------------------------------*/
+/* Der Detail-Block mit einigen Anpassungen */
+/*------------------------------*/
+summary {
+list-style: none;
+display: flex; /* also removes the list marker */
+align-items: center;
+padding: 2rem;
+font-weight: bold;
+background: rgba(30, 51, 127, 1);
+border-radius: 5px;
+color: white;
+}
+
+summary::before{
+content: '';
+width: 18px;
+height: 10px;
+/* hier muss die arrow.svg jeweils hochgeladen werden, bevor das so benutzt wird: */
+/* zusätzlich ist ein Plugin wie z. B. Easy SVG Support notwendig, 
+   damit die Datei hochgeladen werden kann */
+background: url('http://web72.s309.goserver.host/wp-content/uploads/2023/12/arrow_weiss.svg') no-repeat;
+background-size: cover;
+margin-left: .75em;
+transition: 0.2s;
+margin-right: 2rem;
+}
+
+
+details[open] > summary::before{
+transform: rotate(180deg);
+}
+
+.wp-block-details[open] summary,
+.wp-block-details summary:hover
+{
+background: rgba(0, 123, 190, 1);
+color: white;
+transition: all 0.2s ease-in-out;
+}
+
+.wp-block-details 
+summary:focus {
+background: rgba(0, 123, 190, 1);
+color: white;
+transition: all 0.2s ease-in-out;
+}
+
+summary::-webkit-details-marker {
+display: none;
+}
+
+
+/* Background content of details */
+details p {
+  /* background: rgba(0, 123, 190, 0.1); */
+  padding: 2rem;
+  margin-top: 0;
+  border-radius: 5px;
+}
+
+details > div.wp-block-group {
+  background: rgba(0, 123, 190, 0.1);
+}
+
+@keyframes details-show {
+from {
+  opacity:0;
+  transform: var(--details-translate, translateY(-0.5em));
+}
+}
+
+details[open] > *:not(summary) {
+animation: details-show 1000ms ease-in-out;
+}
+
+
