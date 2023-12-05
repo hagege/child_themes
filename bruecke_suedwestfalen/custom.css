@@ -96,6 +96,14 @@ h2.kachel_absatz_oben.gb-headline-text {
 }
 }
 
+/* Ansprechpartner auf den Bereichsseiten */
+@media (max-width: 767px) {
+h2.ansprechpartner {
+  margin-left: 0px;
+  margin-top: 40px;
+}
+}
+
 
 /* ----------------------------- */
 /* Navigation                    */
