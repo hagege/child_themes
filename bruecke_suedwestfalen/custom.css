@@ -44,6 +44,7 @@ body {
 overflow-y: scroll; /* Show vertical scrollbar */
 }
 
+/* Bullet dunkelblau bei Listen */
 ul li::marker {
 color: var(--dunkelblau-color);
 font-size: 1.5em;
