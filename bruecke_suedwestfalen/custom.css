@@ -28,6 +28,11 @@ Grün 	#87C12C
 
 */
 
+/* Korrektur notwendig: Nur bei Familienunterstützender Dienst hat die folgende Zeile bei Rand oben 2em erzeugt */ 
+.entry-content:not(:first-child) {
+  margin-top: 0;
+}
+
 /* Kompletter Footer als Block */
 .footer-widgets .widget {
   margin-bottom: -1px;
@@ -193,11 +198,13 @@ display: none;
 }
 
 
-/* Background content of details */
+/* Background content of details
+ * deaktiviert 6.12.2023 
 details p {
   padding: 2rem;
   margin-top: 0;
 }
+*/
 
 /* Hintergrundfarbe details */
 details > div.wp-block-group {
