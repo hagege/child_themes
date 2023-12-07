@@ -42,6 +42,10 @@ transition: all 0.2s ease-in-out;
       word-wrap: break-word;
 }
 
+.gb-inside-container p {
+    word-break: break-word;
+}
+
 /* Mehr Padding nach unten bei Listen */
 ul.meetup_liste li {
     padding-bottom: 1rem;
