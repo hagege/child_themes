@@ -22,10 +22,12 @@
   }
   
   
-  /* smooth scrolling */
+  /* smooth scrolling und korrekte Ansteuerung interner Anker */
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 14rem;
   }
+  
   
   /* Links anders ausgezeichnet */
   main .entry-content a {
