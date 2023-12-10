@@ -29,8 +29,8 @@ html {
 
 
 main .entry-content a {
-box-shadow: inset 0 -5px 0 var(--wp--preset--color--custom-gelb);
-text-decoration: none;
+    box-shadow: inset 0 -5px 0 var(--wp--preset--color--custom-gelb);
+    text-decoration: none;
 }
 
 main .entry-content a:hover{
