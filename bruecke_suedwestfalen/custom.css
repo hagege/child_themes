@@ -28,6 +28,11 @@ Grün 	#87C12C
 
 */
 
+/* Button Zurück zur Startseite auf Startseite deaktiviert */
+.home aside#block-7 {
+    display: none;
+}
+
 /* Korrektur notwendig: Nur bei Familienunterstützender Dienst hat die folgende Zeile bei Rand oben 2em erzeugt */ 
 .entry-content:not(:first-child) {
   margin-top: 0;
