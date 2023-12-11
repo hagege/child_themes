@@ -28,7 +28,6 @@ Grün 	#87C12C
 
 */
 
-/* Button "Zurück zur Startseite" auf Startseite deaktiviert */
 .home aside#block-7 {
     display: none;
 }
