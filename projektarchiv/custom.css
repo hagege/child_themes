@@ -224,6 +224,7 @@ div.spalten_mit_schatten > .wp-block-column {
     border-radius: 20px;
 }
 
+/* bezogen in erster Linie auf Bilder */
 div.spalten_mit_schatten >
 .wp-block-column:hover {
     box-sizing: border-box;
@@ -232,6 +233,7 @@ div.spalten_mit_schatten >
     position: relative;
 }
 
+/* nur bezogen auf paragraph */
 div.spalten_mit_schatten >
 .wp-block-column:hover p{
     /* top: -5px;  */
@@ -246,8 +248,8 @@ div.spalten_mit_schatten >
 
 }
 
+/* Animation */
 @keyframes fadeInUp {
-
 0% {
     opacity: 0.1;
     -webkit-transform: translate3d(0,10%,0);
