@@ -19,18 +19,21 @@
 */
   --mobile-breakpoint: 767px;
   --tablet-breakpoint: 900px;
+  --animate-duration: 1s;
+  --animate-delay: 1s;
+  --animate-repeat: 1;
 }
 
 /* smooth scrolling und korrekte Ansteuerung interner Anker */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 14rem;
+  scroll-padding-top: 7rem;
 }
 
 
 main .entry-content a {
-    box-shadow: inset 0 -5px 0 var(--wp--preset--color--custom-gelb);
-    text-decoration: none;
+box-shadow: inset 0 -5px 0 var(--wp--preset--color--custom-gelb);
+text-decoration: none;
 }
 
 main .entry-content a:hover{
@@ -211,4 +214,48 @@ details p {
 details[open] > *:not(summary),
 details[close] > *:not(summary) {
   animation: details-show 1000ms ease-in-out;
+}
+
+
+/* Spalten mit Schatten */
+div.spalten_mit_schatten > .wp-block-column {
+    box-shadow: 1px 1px 20px rgb(0 0 0/20%);
+    transition: all ease .3s;
+    border-radius: 20px;
+}
+
+div.spalten_mit_schatten >
+.wp-block-column:hover {
+    box-sizing: border-box;
+    filter: grayscale(1) opacity(.8);
+    transition: all ease .3s;
+    position: relative;
+}
+
+div.spalten_mit_schatten >
+.wp-block-column:hover p{
+    /* top: -5px;  */
+    animation-name: fadeInUp;
+    animation-delay: .2s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+-webkit-animation-duration: 
+    calc(var(--animate-duration)*2);
+    animation-duration: 
+    calc(var(--animate-duration)*2);
+
+}
+
+@keyframes fadeInUp {
+
+0% {
+    opacity: 0.1;
+    -webkit-transform: translate3d(0,10%,0);
+    transform: translate3d(0,10%,0);
+}
+100% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
 }
