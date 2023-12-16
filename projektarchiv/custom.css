@@ -237,7 +237,7 @@ div.spalten_mit_schatten >
 div.spalten_mit_schatten >
 .wp-block-column:hover p{
     /* top: -5px;  */
-    animation-name: fadeInUp;
+    animation-name: p-show;
     animation-delay: .2s;
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
@@ -246,6 +246,14 @@ div.spalten_mit_schatten >
     animation-duration: 
     calc(var(--animate-duration)*2);
 
+}
+
+/* Animation */
+@keyframes p-show {
+  from {
+    opacity:0.2;
+    transform: var(--details-translate, translateY(-0.2em));
+  }
 }
 
 /* Animation */
