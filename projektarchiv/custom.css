@@ -31,6 +31,26 @@ html {
 }
 
 
+/* Animation für alle folgenden elemente */
+/*
+p, div.wp-block-columns, figure {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+	  animation-delay: .2s;
+	  -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-duration: calc(var(--animate-duration)*2);
+    animation-duration: calc(var(--animate-duration)*2);
+	  -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-duration: var(--animate-duration);
+    animation-duration: var(--animate-duration);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+*/
+
+
 main .entry-content a {
 box-shadow: inset 0 -5px 0 var(--wp--preset--color--custom-gelb);
 text-decoration: none;
@@ -241,7 +261,7 @@ div.spalten_mit_schatten >
     animation-delay: .2s;
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
--webkit-animation-duration: 
+    -webkit-animation-duration: 
     calc(var(--animate-duration)*2);
     animation-duration: 
     calc(var(--animate-duration)*2);
