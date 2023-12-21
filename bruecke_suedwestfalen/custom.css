@@ -28,6 +28,18 @@ Grün 	#87C12C
 
 */
 
+/* für Krankmeldung */
+span.vonbis {
+    display: inline-block;
+    width: 50px;
+}
+
+/* smooth scrolling und korrekte Ansteuerung interner Anker */
+html {
+  /* scroll-behavior: smooth; */
+  scroll-padding-top: 10rem;
+}
+
 .home aside#block-7 {
     display: none;
 }
