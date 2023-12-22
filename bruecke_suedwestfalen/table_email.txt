@@ -1,0 +1,21 @@
+Krankmeldung
+
+Es ist eine neue Krankmeldung mit folgenden Angaben eingegangen:
+
+Vorname: [vorname] 
+Name:    [your-name] 
+E-Mail:  [your-email]
+
+Typ:     [radio-127]
+Von:     [_format_von "d.m.Y"]
+Bis:     [_format_bis "d.m.Y"]
+
+Datei(en): [datei1]
+
+Nachricht:
+[your-message]
+
+Datenschutz: [acceptance-898]
+
+-- 
+Dies ist eine Benachrichtigung, dass ein Kontaktformular von deiner Website gesendet wurde ([_site_title] [_site_url]).

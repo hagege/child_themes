@@ -1,0 +1,20 @@
+Ihre Nachricht:
+
+Vorname: [vorname] 
+Name:    [your-name] 
+E-Mail:  [your-email]
+
+Typ:     [radio-127]
+Von:     [_format_von "d.m.Y"]
+Bis:     [_format_bis "d.m.Y"]
+
+Übermittelte Datei(en): [datei1]
+
+Nachricht:
+[your-message]
+
+
+Datenschutzerklärung: [acceptance-898]
+
+-- 
+Diese E-Mail ist eine Bestätigung für das Absenden deines Kontaktformulars auf unserer Website ([_site_title] [_site_url]), in der deine E-Mail-Adresse verwendet wurde. Wenn du das nicht warst, ignoriere bitte diese Nachricht.
