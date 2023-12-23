@@ -5,13 +5,13 @@
  * @package       DISABLEADM
  * @author        Hans-Gerd Gerhards
  * @license       gplv2
- * @version       0.3.1
+ * @version       0.1.1
  *
  * @wordpress-plugin
  * Plugin Name:   Disable Admin Bar in Maintenance Mode
  * Plugin URI:    https://haurand.com
  * Description:   A plugin with which the admin bar in WordPress can be optionally deactivated in maintenance mode
- * Version:       0.3.1
+ * Version:       0.1.1
  * Author:        Hans-Gerd Gerhards
  * Author URI:    https://haurand.com
  * Text Domain:   disable-admin-bar-in-maintenance-mode
@@ -49,46 +49,34 @@ function maintenance_mode_admin_bar_page() {
 
 // Register settings and fields
 function maintenance_mode_admin_bar_settings() {
-    register_setting('maintenance_mode_admin_bar_settings_group', 'admin_bar_deactivated_roles');
+    register_setting('maintenance_mode_admin_bar_settings_group', 'disable_admin_bar');
 
     add_settings_section('maintenance_mode_admin_bar_main_section', 'Admin Bar Settings', 'maintenance_mode_admin_bar_section_text', 'maintenance-mode-admin-bar');
 
-    $all_roles = wp_roles()->get_names();
-
-    foreach ($all_roles as $role => $name) {
-        add_settings_field("admin_bar_deactivated_roles_$role", "Deactivate Admin Bar for $name", 'admin_bar_deactivated_role_checkbox', 'maintenance-mode-admin-bar', 'maintenance_mode_admin_bar_main_section', array('role' => $role));
-    }
+    add_settings_field('disable_admin_bar', 'Deactivate Admin Bar in Maintenance Mode', 'disable_admin_bar_checkbox', 'maintenance-mode-admin-bar', 'maintenance_mode_admin_bar_main_section');
 }
 
 add_action('admin_init', 'maintenance_mode_admin_bar_settings');
 
 // Section text callback
 function maintenance_mode_admin_bar_section_text() {
-    echo '<p>Configure admin bar settings for each user role during maintenance mode.</p>';
+    echo '<p>Configure admin bar settings during maintenance mode.</p>';
 }
 
-// Admin bar deactivated role checkbox callback
-function admin_bar_deactivated_role_checkbox($args) {
-    $admin_bar_deactivated_roles = get_option('admin_bar_deactivated_roles');
-    $role = $args['role'];
-
-    echo '<input type="checkbox" id="admin_bar_deactivated_roles_' . esc_attr($role) . '" name="admin_bar_deactivated_roles[]" value="' . esc_attr($role) . '" ' . checked(in_array($role, $admin_bar_deactivated_roles), true, false) . ' />';
-    echo '<label for="admin_bar_deactivated_roles_' . esc_attr($role) . '">Deactivate admin bar for ' . esc_html($role) . '</label>';
+// Admin bar deactivated checkbox callback
+function disable_admin_bar_checkbox() {
+    $disable_admin_bar = get_option('disable_admin_bar');
+    echo '<input type="checkbox" id="disable_admin_bar" name="disable_admin_bar" value="1" ' . checked(1, $disable_admin_bar, false) . ' />';
+    echo '<label for="disable_admin_bar">Deactivate admin bar during maintenance mode</label>';    
 }
 
 // Check if maintenance mode is active and admin bar should be deactivated
 function check_maintenance_mode() {
+    $disable_admin_bar = get_option('disable_admin_bar');
     $maintenance_mode_active = get_option('maintenance_mode_active');
-    $admin_bar_deactivated_roles = get_option('admin_bar_deactivated_roles');
 
-    if ($maintenance_mode_active && is_user_logged_in()) {
-        $user = wp_get_current_user();
-        $user_roles = $user->roles;
-
-        // Check if the user role should have the admin bar deactivated
-        if (array_intersect($user_roles, $admin_bar_deactivated_roles)) {
-            add_filter('show_admin_bar', '__return_false');
-        }
+    if ($disable_admin_bar && $maintenance_mode_active && is_user_logged_in()) {
+        add_filter('show_admin_bar', '__return_false');
     }
 }
 

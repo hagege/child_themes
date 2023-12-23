@@ -7,7 +7,7 @@ Tags:
 Requires at least: 
 Tested up to: 
 Requires PHP: 
-Stable tag: 0.3.1
+Stable tag: 0.1.1
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -60,12 +60,16 @@ An answer to that question.
 
 == Changelog ==
 
-= 0.3.1: December 23, 2023 =
+= 0.3.2: December 23, 2023 =
 Issue: The Listbox doesn't show the role in settings
 
 = 0.3: December 23, 2023 =
-* admin bar in maintenance mode can be deactivated individually for each user role. 
+* ISSUE: admin bar in maintenance mode can be deactivated individually for each user role. 
 A separate setting option is to be created for this in the dashboard under settings
+
+
+= 0.1.1: December 23, 2023 =
+* A separate setting option is to be created for this in the dashboard under settings
 
 = 0.1: December 23, 2023 =
 * Birthday of Disable Admin Bar in Maintenance Mode
