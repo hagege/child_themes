@@ -7,7 +7,7 @@ Tags:
 Requires at least: 
 Tested up to: 
 Requires PHP: 
-Stable tag: 0.2
+Stable tag: 0.3.1
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,7 +15,10 @@ A plugin with which the admin bar in WordPress can be optionally deactivated in 
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+This plugin adds a "Maintenance Mode Admin Bar" page under the "Settings" menu in the WordPress admin. 
+On this page, you can select user roles for which the admin bar will be deactivated during maintenance mode. 
+The settings are available under "Settings > Maintenance Mode Admin Bar." 
+
 
 For backwards compatibility, if this section is missing, the full length of the short description will be used, and
 Markdown parsed.
@@ -56,6 +59,13 @@ An answer to that question.
 4. Click on `Activate plugin`
 
 == Changelog ==
+
+= 0.3.1: December 23, 2023 =
+Issue: The Listbox doesn't show the role in settings
+
+= 0.3: December 23, 2023 =
+* admin bar in maintenance mode can be deactivated individually for each user role. 
+A separate setting option is to be created for this in the dashboard under settings
 
 = 0.1: December 23, 2023 =
 * Birthday of Disable Admin Bar in Maintenance Mode
