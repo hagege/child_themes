@@ -151,3 +151,18 @@
   background: var(--wp--preset--color--custom-gelb);
   border: 3px solid #F3CD1E;
   }
+  
+  /* Anpassung Suche in Navigation */
+  button.wp-block-search__button.has-background.has-custom-gelb-background-color.has-border-color.has-custom-gelb-border-color.has-icon.wp-element-button {
+      margin-bottom: 20px;
+      padding-right: 45px;
+  }
+  
+  input#wp-block-search__input-1 {
+      margin-bottom: 20px;
+  }
+  
+  .wp-block-search__button svg {
+      min-height: 30px;
+      min-width: 30px;
+  }
