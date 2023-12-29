@@ -289,3 +289,34 @@ div.spalten_mit_schatten >
     transform: translateZ(0);
 }
 }
+
+/* Anpassung Suche in Navigation */
+button.wp-block-search__button.has-background.has-tertiary-background-color.has-icon.wp-element-button {
+    margin-bottom: 20px;
+    padding-right: 45px;
+}
+
+input#wp-block-search__input-1 {
+    margin-bottom: 20px;
+}
+
+.wp-block-search__button svg {
+    min-height: 30px;
+    min-width: 30px;
+}
+
+
+/* Cover mit graum Hintergrund bei Hover */
+
+.cover_referenzen > .wp-block-cover__inner-container {
+    display: none;
+}
+
+.cover_referenzen:hover > .wp-block-cover__inner-container {
+    display: inherit;
+}
+
+
+.cover_referenzen span.wp-block-cover__background.has-background-dim-0.has-background-dim:hover {
+    opacity: 1;
+}
