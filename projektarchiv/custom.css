@@ -306,7 +306,7 @@ input#wp-block-search__input-1 {
 }
 
 
-/* Cover mit graum Hintergrund bei Hover */
+/* Cover mit grauem Hintergrund bei Hover */
 
 .cover_referenzen > .wp-block-cover__inner-container {
     display: none;
@@ -318,5 +318,11 @@ input#wp-block-search__input-1 {
 
 
 .cover_referenzen span.wp-block-cover__background.has-background-dim-0.has-background-dim:hover {
-    opacity: 1;
+  opacity: 1;
+  display: inherit;
+	-webkit-filter: blur(40px);
+  filter: blur(40px);
+  -webkit-transform: scale(3);
+  transform: scale(3);
+	transition: all 1s ease;
 }
