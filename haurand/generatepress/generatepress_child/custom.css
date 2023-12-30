@@ -9,373 +9,436 @@ hellblau: #f7f8f9
 
 /* TEST Anfang */
 
+/* Cover mit grauem Hintergrund bei Hover */
+
+.cover_referenzen > .wp-block-cover__inner-container {
+    display: none;
+}
+
+.cover_referenzen:hover > .wp-block-cover__inner-container {
+    display: inherit;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+
+
+.cover_referenzen span.wp-block-cover__background.has-background-dim-0.has-background-dim:hover {
+  opacity: 1;
+  display: inherit;
+	-webkit-filter: blur(40px);
+  filter: blur(40px);
+  -webkit-transform: scale(3);
+  transform: scale(3);
+  transition: all 2s ease;
+}
+
+
+.cover_referenzen .wp-block-cover__inner-container > p > a {
+    text-decoration: none;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
 /* für Sticky Button auf der Startseite */
 @media (min-width: 782px) {
-	div.sticky_button > div.wp-block-button a {
-	   font-size: clamp(0.7rem, 0.3rem + 1.5vw, 1.3rem)!important;
+div.sticky_button > div.wp-block-button a {
+   font-size: clamp(0.7rem, 0.3rem + 1.5vw, 1.3rem)!important;
+}
+}
+
+@media (max-width: 781px)  {
+	.wp-block-spacer.spacer_vor_grauem_kasten {
+			display: none;
 	}
-	}
-	
-	@media (max-width: 781px)  {
-		.wp-block-spacer.spacer_vor_grauem_kasten {
-				display: none;
-		}
-	}
-	
-	/* Farben für SimpleTOC */
-	button.simpletoc-collapsible {
-		background-color: #b70000;
-		color: #fff;
-		font-size: 1.5rem;
-	}
-	
-	button.simpletoc-collapsible:hover {
-		background-color: #3C4346;
-		color: #fff;
-	}
-	
-	
-	
-	/* TEST Ende */
-	/* für Kategorien auf der Seite "Beitrags-Kategorien */
-	p.beitrags_kategorien a.my_category_list {
-		background-color: #D4DaDB;
-		border-radius: 30px;
-		padding: 10px;
-		margin: 20px 10px 0px 0px;
-		text-decoration: none;
-		color: black;
-		display: inline-flex;
-		flex-direction: row;
-		justify-content: flex-end;
-	}
-	
-	p.beitrags_kategorien a.my_category_list:hover {
-		  background-color: #B70000;
-			color: white;
-	}
-	
-	/* unsichtbarer Text */
-	p.unsichtbar {
-		display: none;
-	}
-	
-	/* Unterschrift unter Bildern in weiß */
-	.aligncenter figcaption {
+}
+
+/* Farben für SimpleTOC */
+button.simpletoc-collapsible {
+    background-color: #b70000;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+button.simpletoc-collapsible:hover {
+    background-color: #3C4346;
+    color: #fff;
+}
+
+
+
+/* TEST Ende */
+/* für Kategorien auf der Seite "Beitrags-Kategorien */
+p.beitrags_kategorien a.my_category_list {
+    background-color: #D4DaDB;
+    border-radius: 30px;
+    padding: 10px;
+    margin: 20px 10px 0px 0px;
+    text-decoration: none;
+    color: black;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+p.beitrags_kategorien a.my_category_list:hover {
+	  background-color: #B70000;
 		color: white;
-	}
+}
+
+/* unsichtbarer Text */
+p.unsichtbar {
+	display: none;
+}
+
+/* Unterschrift unter Bildern in weiß */
+.aligncenter figcaption {
+    color: white;
+}
+
+/* Unterschrift unter Bildern in schswarz bei Vorlagen */
+.wp-block-image.bild_zentriert figcaption {
+    color: black;
+}
+
+
+/* für Block Pattern Update und Achtung */
+@media (max-width: 781px)  {
+div.html_svg {
+    margin-left: 43%;
+    margin-right: 43%;
+}
+}
+
+.html_svg .wp-block-group__inner-container,
+.svg_container .wp-block-group__inner-container{
+    padding: 0px;
+		margin: 0px;
+		background-color: #f7f8f9;
+}
+
 	
-	/* Unterschrift unter Bildern in schswarz bei Vorlagen */
-	.wp-block-image.bild_zentriert figcaption {
-		color: black;
-	}
-	
-	
-	/* für Block Pattern Update und Achtung */
-	@media (max-width: 781px)  {
-	div.html_svg {
-		margin-left: 43%;
-		margin-right: 43%;
-	}
-	}
-	
-	.html_svg .wp-block-group__inner-container,
-	.svg_container .wp-block-group__inner-container{
-		padding: 0px;
-			margin: 0px;
-			background-color: #f7f8f9;
-	}
-	
-		
-	p.has-text-align-center.achtung_update {
-		margin-top: 2px;
-	}
-	
-	p.svg_meldung {
-		padding-left: 1rem;
-		padding-right: 1rem;
-	}
-	
-	svg#Layer_1, svg#Capa_1
-	{
-		fill: #B70000;
-	}
-	
-	/* Ränder und Zeilenhöhe beim angepassten Abfrage-Loop */
-	div.abfrage_tags {
-		margin: 0 0 1.5em 3em;
-	}
-	
-	
-	div.abfrage_tags li {
-	 line-height: 1;
-	}
-	
-	
-	/* damit der Anker korrekt angesteuert werden kann */
-	[id^="htoc-"] { 
-		padding-top: 150px; 
-		margin-top: -150px!important;
-	}
-	
-	/* Bei Suche Container mit max. 1400 px */
-	/* damit die Breite der Archive besser dargestellt wird, z. B. bei Schlagwörtern */
-	body.search > .grid-container
-	{
-		max-width: 1500px;
-	}
-	
-	/* Veröffentlichungsdatum zentriert */
-	header.entry-header > .entry-meta {
-			text-align: center;	
-	}
-	
-	
-	/* optisch schöner - fast zentriert */
+p.has-text-align-center.achtung_update {
+    margin-top: 2px;
+}
+
+p.svg_meldung {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+svg#Layer_1, svg#Capa_1
+{
+    fill: #B70000;
+}
+
+/* Ränder und Zeilenhöhe beim angepassten Abfrage-Loop */
+div.abfrage_tags {
+    margin: 0 0 1.5em 3em;
+}
+
+
+div.abfrage_tags li {
+ line-height: 1;
+}
+
+
+/* damit der Anker korrekt angesteuert werden kann */
+[id^="htoc-"] { 
+	padding-top: 150px; 
+	margin-top: -150px!important;
+}
+
+/* Bei Suche Container mit max. 1400 px */
+/* damit die Breite der Archive besser dargestellt wird, z. B. bei Schlagwörtern */
+body.search > .grid-container
+{
+    max-width: 1500px;
+}
+
+/* Veröffentlichungsdatum zentriert */
+header.entry-header > .entry-meta {
+		text-align: center;	
+}
+
+
+/* optisch schöner - fast zentriert */
+.footer-widget-1 {
+    margin-left: calc(10px + 8rem);
+}
+
+@media (max-width:768px) {
 	.footer-widget-1 {
-		margin-left: calc(10px + 8rem);
+    margin-left: inherit;
 	}
+}
 	
-	@media (max-width:768px) {
-		.footer-widget-1 {
-		margin-left: inherit;
-		}
+
+/* Code: Schriftgröße ist zu klein */
+code {
+    font: 18px Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace;
+		 background-color: #D4DaDB;
+}
+
+
+/* Schriftgröße bei Beiträgen */
+@media (max-width:768px) {
+	.entry-content > p,
+	.entry-content > ul.weisse_liste,
+	footer.entry-meta > span {
+			font-size: 0.8em;
 	}
-		
-	
-	/* Code: Schriftgröße ist zu klein */
-	code {
-		font: 18px Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace;
-			 background-color: #D4DaDB;
+}
+
+
+/* TEST */
+
+/* Bei Update-Textabschnitten */
+p.update {
+    background-color: #d4dadb;
+    padding: 25px;
+}
+
+/* Farbe für Cookie-Banner */
+.cn-button.bootstrap {
+    background: #B70000;
+}
+
+
+
+
+/* Beim Überfahren mehr Schatten 
+
+ .bild_zentriert:hover {
+  box-shadow: 20px -19px 20px 0px #A9B2B5;
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  transform: scale(1.02);
+  /* VERZÖGERUNG 
+ -webkit-transition: all 0.7s linear;
+ -moz-transition: all 0.7s linear;
+ -ms-transition: all 0.7s linear;
+ -o-transition: all 0.7s linear;
+ transition: all 0.7s linear;
+}
+ */
+
+
+
+
+/* unklar */
+.page.separate-containers:not(.blog):not(.home) .inside-article {
+    padding: 10px;
+}
+
+
+/* ------------------------------ */
+/* Bild auf dem Video */
+/* ------------------------------ */
+/* Animation deaktiviert, 29.10.2021
+ * 
+img.wp-image-3780 {
+		width: 50%;
+    animation-name: video_logo;
+    animation-delay: 0.75s;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+}
+
+@keyframes video_logo {
+			0% {
+					width: 0%;
 	}
-	
-	
-	/* Schriftgröße bei Beiträgen */
-	@media (max-width:768px) {
-		.entry-content > p,
-		.entry-content > ul.weisse_liste,
-		footer.entry-meta > span {
-				font-size: 0.8em;
-		}
-	}
-	
-	
-	/* TEST */
-	
-	/* Bei Update-Textabschnitten */
-	p.update {
-		background-color: #d4dadb;
-		padding: 25px;
-	}
-	
-	/* Farbe für Cookie-Banner */
-	.cn-button.bootstrap {
-		background: #B70000;
-	}
-	
-	
-	
-	
-	/* Beim Überfahren mehr Schatten 
-	
-	 .bild_zentriert:hover {
-	  box-shadow: 20px -19px 20px 0px #A9B2B5;
-	  -webkit-transform: scale(1.02);
-	  -moz-transform: scale(1.02);
-	  -ms-transform: scale(1.02);
-	  -o-transform: scale(1.02);
-	  transform: scale(1.02);
-	  /* VERZÖGERUNG 
-	 -webkit-transition: all 0.7s linear;
-	 -moz-transition: all 0.7s linear;
-	 -ms-transition: all 0.7s linear;
-	 -o-transition: all 0.7s linear;
-	 transition: all 0.7s linear;
-	}
-	 */
-	
-	
-	
-	
-	/* unklar */
-	.page.separate-containers:not(.blog):not(.home) .inside-article {
-		padding: 10px;
-	}
-	
-	
-	/* ------------------------------ */
-	/* Bild auf dem Video */
-	/* ------------------------------ */
-	/* Animation deaktiviert, 29.10.2021
-	 * 
-	img.wp-image-3780 {
-			width: 50%;
-		animation-name: video_logo;
-		animation-delay: 0.75s;
-		animation-duration: 10s;
-		animation-timing-function: ease-in-out;
-		animation-fill-mode: both;
-	}
-	
-	@keyframes video_logo {
-				0% {
-						width: 0%;
-		}
-	
-				100% {
-						width: 100%;
-				}
-	
-		}
-	/* ------------------------------ */
-	
-	/* ------------------------------ */
-	/* Text auf dem Video */
-	/* ------------------------------ */
-	/* Animation deaktiviert, 29.10.2021
-	 * 
-	h2.video_text{
-		font-weight: 700;
-		font-size: 2rem;
-		text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
-		animation-name: video_header;
-		animation-delay: 2.75s;
-		animation-duration: 10s;
-		animation-timing-function: ease-in-out;
-		animation-fill-mode: both;
-			text-shadow: 0px 0px 0.2rem #F9B81E;
-	}
-	
-	@media only screen and (max-width: 767px) {
-		@keyframes video_header {
-				0% {
-						opacity: 0;
-						font-size: 1.2rem;
-				}
-	
-				100% {
-						opacity: 1;
-						font-size: 3rem;
-				}
-	
-		}
-	}
-	
-	@media only screen and (min-width: 768px) {
-		@keyframes video_header {
-				0% {
-						opacity: 0;
-						font-size: 2rem;
-				}
-	
-				100% {
-						opacity: 1;
-						font-size: 5rem;
-				}
-	
-		}
-	}
-	/* ------------------------------ */
-	/*
-	.wp-block-cover__inner-container {
-		padding: 20px;
-		background: rgba(0, 0, 0, 0.2);
-		margin-bottom: 20px;
-		color: white;
-	}
-	*/
-	
-	
-	
-	
-	/* ------------------------------ */
-	/* runde bilder */
-	/* ------------------------------ */
-	img.wp-image-2111,
-	img.wp-image-2110{
-		height: 178px;
-		margin-top: 3rem;
-	}
-	
-	
-	
-	
-	/* ------------------------------ */
-	/* ab hier wahrscheinlich nicht benötigt */
-	/* ------------------------------ */
-	
-	
-	/* ------------------------------ */
-	/* Beschriftung der Kachel */
-	/* ------------------------------ */
-	figcaption {
-		padding: 10px;
-		color: black;
-	}
-	
-	
-	
-	/* ------------------------------ */
-	/* hier die Regeln für das Bild */
-	/* ------------------------------ */
-	.das_waere_die_regel_fuer_das_bild {	
-		/*min-width: 100%;
-		min-height: 100%; 
-		/* Add infinite to loop. */
-		animation: move 15s ease;
-		-ms-animation: move 15s ease;
-		-webkit-animation: move 15s ease;
-		-animation: move 15s ease;
-		-moz-animation: move 15s ease;
-		/* position: relative; 
-		/* width: 100%; 
-		max-height: 400px; */
-	}
-	
-	@keyframes move {
-		0% {
-			transform: scale(1.0);
-			-ms-transform: scale(1.0);
-			/* IE 9 */
-	
-			-webkit-transform: scale(1.0);
-			/* Safari and Chrome */
-	
-			-o-transform: scale(1.0);
-			/* Opera */
-	
-			-moz-transform: scale(1.0);
-			/* Firefox */
-		}
-		50% {
-			transform: scale(1.1);
-			-ms-transform: scale(1.1);
-			/* IE 9 */
-	
-			-webkit-transform: scale(1.1);
-			/* Safari and Chrome */
-	
-			-o-transform: scale(1.1);
-			/* Opera */
-	
-			-moz-transform: scale(1.1);
-			/* Firefox */
-		}
-		100% {
-	
-			transform: scale(1.0);
-			-ms-transform: scale(1.0);
-			/* IE 9 */
-	
-			-webkit-transform: scale(1.0);
-			/* Safari and Chrome */
-	
-			-o-transform: scale(1.0);
-			/* Opera */
-	
-			-moz-transform: scale(1.0);
-			/* Firefox */
+
+			100% {
+					width: 100%;
 			}
+
 	}
-	
-	
+/* ------------------------------ */
+
+/* ------------------------------ */
+/* Text auf dem Video */
+/* ------------------------------ */
+/* Animation deaktiviert, 29.10.2021
+ * 
+h2.video_text{
+    font-weight: 700;
+    font-size: 2rem;
+    text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    animation-name: video_header;
+    animation-delay: 2.75s;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+		text-shadow: 0px 0px 0.2rem #F9B81E;
+}
+
+@media only screen and (max-width: 767px) {
+	@keyframes video_header {
+			0% {
+					opacity: 0;
+					font-size: 1.2rem;
+			}
+
+			100% {
+					opacity: 1;
+					font-size: 3rem;
+			}
+
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	@keyframes video_header {
+			0% {
+					opacity: 0;
+					font-size: 2rem;
+			}
+
+			100% {
+					opacity: 1;
+					font-size: 5rem;
+			}
+
+	}
+}
+/* ------------------------------ */
+/*
+.wp-block-cover__inner-container {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    color: white;
+}
+*/
+
+
+
+
+/* ------------------------------ */
+/* runde bilder */
+/* ------------------------------ */
+img.wp-image-2111,
+img.wp-image-2110{
+	height: 178px;
+	margin-top: 3rem;
+}
+
+
+
+
+/* ------------------------------ */
+/* ab hier wahrscheinlich nicht benötigt */
+/* ------------------------------ */
+
+
+/* ------------------------------ */
+/* Beschriftung der Kachel */
+/* ------------------------------ */
+figcaption {
+	padding: 10px;
+	color: black;
+}
+
+
+
+/* ------------------------------ */
+/* hier die Regeln für das Bild */
+/* ------------------------------ */
+.das_waere_die_regel_fuer_das_bild {	
+	/*min-width: 100%;
+	min-height: 100%; 
+	/* Add infinite to loop. */
+	animation: move 15s ease;
+	-ms-animation: move 15s ease;
+	-webkit-animation: move 15s ease;
+	-animation: move 15s ease;
+	-moz-animation: move 15s ease;
+	/* position: relative; 
+	/* width: 100%; 
+	max-height: 400px; */
+}
+
+@keyframes move {
+	0% {
+		transform: scale(1.0);
+		-ms-transform: scale(1.0);
+		/* IE 9 */
+
+		-webkit-transform: scale(1.0);
+		/* Safari and Chrome */
+
+		-o-transform: scale(1.0);
+		/* Opera */
+
+		-moz-transform: scale(1.0);
+		/* Firefox */
+	}
+	50% {
+		transform: scale(1.1);
+		-ms-transform: scale(1.1);
+		/* IE 9 */
+
+		-webkit-transform: scale(1.1);
+		/* Safari and Chrome */
+
+		-o-transform: scale(1.1);
+		/* Opera */
+
+		-moz-transform: scale(1.1);
+		/* Firefox */
+	}
+	100% {
+
+		transform: scale(1.0);
+		-ms-transform: scale(1.0);
+		/* IE 9 */
+
+		-webkit-transform: scale(1.0);
+		/* Safari and Chrome */
+
+		-o-transform: scale(1.0);
+		/* Opera */
+
+		-moz-transform: scale(1.0);
+		/* Firefox */
+		}
+}
+
