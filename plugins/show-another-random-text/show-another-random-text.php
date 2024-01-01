@@ -60,7 +60,7 @@ function get_random_text() {
 	echo "Woche in Sekunden: " . var_dump($one_week);
     */ 
 
-    /* Wenn eine Woche vorbei ist, neuen Random-Text suchen */
+    /* Wenn eine Woche vorbei ist, neuen Random-Text suchen - aus dem Grund kommt WP-Cron ins Spiel */
     if ($current_time - $last_updated >= $one_week) {
         $args = array(
             'post_type' => 'custom_text',
