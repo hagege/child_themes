@@ -54,7 +54,13 @@ function get_random_text() {
     $current_time = current_time('timestamp');
     $last_updated = get_option('random_text_last_updated', 0);
     $one_week = 7 * 24 * 60 * 60; // One week in seconds
+    /* 
+    echo "Zeit: " . var_dump($current_time);
+	echo "zuletzt: " . var_dump($last_updated);
+	echo "Woche in Sekunden: " . var_dump($one_week);
+    */ 
 
+    /* Wenn eine Woche vorbei ist, neuen Random-Text suchen */
     if ($current_time - $last_updated >= $one_week) {
         $args = array(
             'post_type' => 'custom_text',
