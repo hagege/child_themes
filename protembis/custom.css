@@ -24,6 +24,11 @@ img.wp-image-519 {
     display: inherit!important;
 }
 
+/* Korrektur Position Pfeil nach oben, 5.1.2024 */
+div#oben {
+    margin-bottom: 1.5em;
+}
+
 
 /* ----------------------------- */
 /* Rahmen auf der Privacy-Seite  */
