@@ -26,6 +26,9 @@ Weitere Optionen:
 4. Es sollte ein Ordner nur für den Upload der PDF-Dateien (wochenplan) gewählt werden können
 	> erledigt
 5. für berechtigte Rollen muss eine Option zum Hochladen der Datei geschaffen werden.
+6. an sich müsste immere überprüft werden, ob in dem jeweileigen Upload-Ordner eine index.html liegt, 
+	die dafür sorgt, dass die Dateien in dem Ordner nicht gezeigt werden. 
+7. Bei Änderung des Ordnernamens sollte ein Hinweis erfolgen, dass der Shortcode immer nur für den aktuellen Ordner gilt.
 
 
 == change log ==
