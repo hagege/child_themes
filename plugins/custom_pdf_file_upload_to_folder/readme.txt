@@ -1,8 +1,15 @@
 === Custom PDF-File Upload to Folder ===
+Author URI: https://haurand.com
+Plugin URI: https://haurand.com
+Donate link: 
 Contributors: Hans-Gerd Gerhards, haurand.com
-Stable tag: 0.2.4
-Tested up to: 6.2.2
-Requires at least: 4.6
+Tags: 
+Requires at least: 5.0
+Tested up to: 6.4.2
+Requires PHP: 8.0
+Stable tag: 0.3
+License: GPLv2
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 
 == Description ==
@@ -22,6 +29,13 @@ Weitere Optionen:
 
 
 == change log ==
+
+5.1.2024: Version 0.3
+			Änderungen am Backend: 
+			- Jetzt wird zusätzlich der Name der Datei gezeigt, der hochgeladen werden soll.
+			- Zusätzliche Anzeige des Ordners, in den die Datei hochgeladen wird.
+			
+
 8.6.2023: Version 0.2.4
 			Änderungen beim Upload (Text)
 			Es wird nur noch der aktuelle und nächste Wochenplan angezeigt.
