@@ -1,4 +1,4 @@
-=== sort_post_by_modified_date ===
+=== Sort Post by modified Date ===
 Author URI: https://haurand.com
 Plugin URI: https://haurand.com
 Donate link: 
@@ -7,7 +7,7 @@ Tags:
 Requires at least: 
 Tested up to: 
 Requires PHP: 
-Stable tag: 0.1
+Stable tag: 0.1.1
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 

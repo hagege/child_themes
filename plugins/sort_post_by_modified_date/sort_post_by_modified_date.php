@@ -1,26 +1,26 @@
 <?php
 /**
- * sort_post_by_modified_date
+ * Sort Post by modified Date
  *
  * @package       SORTPOST
  * @author        Hans-Gerd Gerhards
  * @license       gplv2
- * @version       0.1
+ * @version       0.1.1
  *
  * @wordpress-plugin
- * Plugin Name:   sort_post_by_modified_date
+ * Plugin Name:   Sort Post by modified Date
  * Plugin URI:    https://haurand.com
  * Description:   Sorts the posts in the backend not by publication date, but by update date
- * Version:       0.1
+ * Version:       0.1.1
  * Author:        Hans-Gerd Gerhards
  * Author URI:    https://haurand.com
- * Text Domain:   sort_post_by_modified_date
+ * Text Domain:   Sort Post by modified Date
  * Domain Path:   /languages
  * License:       GPLv2
  * License URI:   https://www.gnu.org/licenses/gpl-2.0.html
  *
  * You should have received a copy of the GNU General Public License
- * along with sort_post_by_modified_date. If not, see <https://www.gnu.org/licenses/gpl-2.0.html/>.
+ * along with Sort Post by modified Date. If not, see <https://www.gnu.org/licenses/gpl-2.0.html/>.
  */
 
 // Exit if accessed directly.
