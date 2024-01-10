@@ -15,6 +15,12 @@
   
   }
 
+/* für Krankmeldung */
+span.vonbis {
+    display: inline-block;
+    width: 50px;
+}
+
 /* Schatten für überlappende Container */
 .schatten-raster {
     box-shadow: 15px 15px 30px 0px rgba(29,31,60,0.5);
@@ -434,5 +440,189 @@ h2.gb-headline.kachel_h2 {
 }
 }
 
-	
+/* Content schräg gestellt */
+.hintergrund_design {
+    transform: skewY(-8deg);
+} 
+
+.hintergrund_design .wp-block-columns {
+		transform: skewY(+8deg);
+}
+
+.karte_schatten {
+box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+	background-color: #f7f8f9;
+}
+
+.karte_schatten:hover {
+box-shadow: 0 0 30px 0 rgba(0,0,0,.15);
+}
+
+/* ---------------------*/
+/* Der Detail-Block mit */ 
+/* einigen Anpassungen  */
+/* ---------------------*/
+.mein_details_block summary {
+  list-style: none;
+  display: flex; /* also removes the list marker */
+  align-items: center;
+  padding: 2rem;
+  font-weight: bold;
+  background: #ebeecf;
+  border-radius: 5px;
+}
+
+.mein_details_block summary::before{
+  content: '>';
+/*  margin-left: .75em; */
+  transition: 0.2s;
+  margin-right: 1rem;
+  font-size: 2rem;
+}
+
+
+.mein_details_block details[open] > summary::before{
+  transform: rotate(90deg);
+}
+
+.mein_details_block .wp-block-details[open] summary,
+.wp-block-details summary:hover
+{
+	background: #e2e8f0;
+transition: all 0.2s ease-in-out;
+}
+
+.mein_details_block .wp-block-details 
+summary:focus {
+	background: #b1c5a4;
+transition: all 0.2s ease-in-out;
+}
+
+.mein_details_block summary::-webkit-details-marker {
+  display: none;
+}
+
+
+/* Background content of details */
+.mein_details_block details p {
+    background: rgba(226, 232, 240, 0.31);
+    padding: 2rem;
+    margin-top: 0;
+}
+
+@keyframes details-show {
+  from {
+    opacity:0;
+    transform: var(--details-translate, translateY(-0.5em));
+  }
+}
+
+.mein_details_block details[open] > *:not(summary),
+.mein_details_block details[close] > *:not(summary) {
+  animation: details-show 1000ms ease-in-out;
+}
+
+
+/* ------------------------------ */
+/* Variable Spalten von 4 bis 1   */
+/* ------------------------------ */
+div.flexible_spalten {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
   
+  div.flexible_spalten .wp-block-group__inner-container{
+	  max-width: 100%;
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: wrap;
+  }
+  
+  /* 4 Spalten */
+  @media (min-width: 1500px)  {
+     div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+	    width: 25%;
+     }
+  }
+  
+  
+  /* 3 Spalten */
+  @media (min-width: 1121px) and (max-width: 1499px) {
+     div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+	     width: 33%;
+     }
+  }
+  
+  /* 2 Spalten */
+  @media (min-width: 640px) and (max-width: 1120px) {
+     div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+	     width: 50%;
+     }
+  }
+  
+   
+  /* 1 Spalte */
+  @media (max-width: 639px) {
+     div.flexible_spalten .wp-block-group__inner-container > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+	     width: 100%;
+     }
+  }
+	  
+  /* dezenter Hover-Effekt */
+  .wp-block-columns.vier_kacheln:hover {
+		opacity:0.7;
+		transform: scale(1.01, 1.01);	
+  }
+  
+  /* Schriftgröße auf Kollegiumsseite bei Anker */
+  p.has-text-align-center.kollegium_anker a {
+	  font-size: 1.8rem;
+	  padding: 0.2rem;
+  }
+  
+  
+  
+  /* Animation für Text über Video */
+  p.has-text-align-left.animated_1.animated.fadeInLeft.slow.has-background-color.has-text-color {
+	  padding-top: 30rem;
+	  margin-bottom: 1rem;
+  }
+  
+  
+  /* ------------------------------ */
+  /* Vier Spalten mit Bild schattiert und hover-Effekt, siehe Beitrag: "Drei Spalten mit Kacheln" */
+  /* ------------------------------ */
+  /* Titel unter Bildern größer */
+  div.wp-block-column.vier_kacheln {
+		  padding: 20px 5px 24px 5px;
+	      margin: 0px 15px 0px 15px;
+		  background-color: white;
+		  /* box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff; */
+		  -webkit-filter: drop-shadow(3px 3px 1px #CCCCCC);
+	      filter: drop-shadow(2px 2px 5px #CCCCCC); 
+		  margin-bottom: 3rem;
+		  justify-content: center; 
+		  /* abgerundete Ecken 
+		  border-radius: 20px 20px 0px 0px; */
+  }
+  
+  div.wp-block-column.vier_kacheln p {
+	  font-size: 0.8em;
+  }
+  
+  div.wp-block-column.vier_kacheln h3 {
+	  font-size: 1.1em;
+	  margin-bottom: 0px;
+  }
+  
+  
+  @media (max-width: 999px) {
+	  div.wp-block-column.vier_kacheln {
+	     /* nur Rand unten */
+	     padding: 20px 0px 24px 0px;
+		 margin: 0px 15px 40px 15px;
+		 justify-content: center;
+	  }
+  }
+ 
