@@ -57,6 +57,9 @@ An answer to that question.
 
 == Changelog ==
 
+= 0.3: January 11, 2024 =
+* Added last modified by
+
 = 0.2: January 11, 2024 =
 * Sort posts in wp_list_table by column "Last Updated" in descending order.
 
