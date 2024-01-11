@@ -6,6 +6,12 @@ Dunkelgrau: #818181
 https://www.mediaevent.de/css/display-table.html
 */
 
+/* smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+
 @media screen and (max-width: 900px) {
   /* hamburger button */
   .wp-block-navigation__responsive-container-open  {
@@ -99,11 +105,16 @@ and (-webkit-min-device-pixel-ratio: 2) {
 input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="tel"], input[type="date"], 
 input[type="submit"],
 textarea, select {
-    width: 40rem;
+    width: 90%;
     font-size: 1.5rem;
     background-color: aliceblue;
     border-color: #009FE3;
     color: black;
 }
 
+
+/* Radio untereinander */	
+.wpcf7-list-item {
+    display: block!important;
+}
 
