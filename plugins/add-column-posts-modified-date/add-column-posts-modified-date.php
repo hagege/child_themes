@@ -5,13 +5,13 @@
  * @package       ADDCOLUMNP
  * @author        Hans-Gerd Gerhards
  * @license       gplv2
- * @version       0.2
+ * @version       0.3
  *
  * @wordpress-plugin
  * Plugin Name:   Add Column Posts Modified Date 
  * Plugin URI:    https://haurand.com
  * Description:   Add a “Last Updated” Column To The WordPress Backend (Works for Posts & Pages)
- * Version:       0.2
+ * Version:       0.3
  * Author:        Hans-Gerd Gerhards
  * Author URI:    https://haurand.com
  * Text Domain:   add-column-posts-modified-date
@@ -40,7 +40,12 @@ add_filter('manage_posts_columns', 'custom_columns');
 function custom_columns_content($column_name, $post_id) {
     if ($column_name == 'last_updated') {
         $last_updated = get_the_modified_date("d.m.Y - H:i");
-        echo $last_updated;
+        echo esc_html__($last_updated) . '<br>';
+		if ( !empty( get_the_modified_author() ) ) {
+			echo esc_html__( 'by', 'show-modified-date-in-admin-lists' ) . ' <strong>'.get_the_modified_author().'<strong>';
+		} else {
+			echo esc_html__( 'by', 'show-modified-date-in-admin-lists' ) . ' <strong>' . esc_html__( 'UNKNOWN', 'show-modified-date-in-admin-lists' ) . '<strong>';
+		}
     }
 }
 add_action('manage_posts_custom_column', 'custom_columns_content', 10, 2);
@@ -59,7 +64,8 @@ function custom_columns_orderby($query) {
     }
 
     $orderby = $query->get('orderby');
-
+	// echo "Hier kommt der Wert der Variablen: " . var_dump($orderby);
+    
     if ('last_updated' == $orderby) {
         $query->set('orderby', 'modified');
     }
