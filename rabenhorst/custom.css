@@ -20,6 +20,10 @@
 
 /* --- TEST-ANFANG ----------------- */
 
+.sib-form {
+    padding: 0px;
+}
+
 /* Font-Family für Titel */
 h2.gb-headline {
    font-family: 'Carnas Med';
@@ -31,6 +35,10 @@ div.archive_erste_spalte figure.gb-block-image {
     aspect-ratio: 1/1;
 }
 
+
+.wpcf7-list-item-label::before, .wpcf7-list-item-label::after {
+    padding-left: 3px;
+}
 
 /* --- TEST-ENDE ----------------- */
 
@@ -115,7 +123,7 @@ ul li::marker{
 	/* Logo Höhe Tablet */
 	.site-logo.mobile-header-logo a img {
 		padding-top: 0px;
-		height: 120px;
+		height: 100px;
 	}
 }
 
@@ -423,7 +431,7 @@ p.bild_rechts_startseite {
 
 @media only screen and (min-width: 783px) {
 	.footer-widget-1 .wp-block-columns {
-        justify-content: center;
+    justify-content: center;
 	}
 	div.footer_mobil {
 		display:none;
