@@ -57,7 +57,7 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/paragraph',
 			array(
-				'name'         => 'full width Paragraph',
+				'name'         => 'full-width-Paragraph',
 				'label'        => 'Absatz mit voller Breite',
 				'style_handle' => 'block-styles-stylesheet',
 			)
