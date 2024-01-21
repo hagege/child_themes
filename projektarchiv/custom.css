@@ -308,6 +308,10 @@ input#wp-block-search__input-1 {
 
 /* Cover mit grauem Hintergrund bei Hover */
 
+.cover_referenzen {
+   object-fit: contain;
+}
+
 .cover_referenzen > .wp-block-cover__inner-container {
     display: none;
 }
@@ -328,9 +332,13 @@ input#wp-block-search__input-1 {
   filter: blur(40px);
   -webkit-transform: scale(3);
   transform: scale(3);
-	transition: all 1s ease;
+  transition: all 2s ease;
 }
 
+
+.cover_referenzen span.wp-block-cover__background.has-background-dim-0.has-background-dim > p > a {
+  box-shadow: initial;
+}
 
 @keyframes fadein {
     from {
@@ -363,4 +371,63 @@ input#wp-block-search__input-1 {
     to {
         opacity: 1;
     }
+}
+
+
+/* Galerie als Akkordeon */
+/* 
+.galerie_spalten >.galerie_spalte {
+flex-basis: 0!important; 
+flex: 1 1 100px;
+}
+*/
+
+.galerie_spalten {
+    display: flex;
+    flex-basis: content;
+    flex-grow: 1;
+    height: 20rem;
+    gap: 10px;
+    padding: 50px;
+}
+
+
+.galerie_spalte {
+    flex: 1;
+    flex-basis: content;
+    flex-grow: 1;
+    flex-shrink: 1;
+    border-radius: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all 600ms cubic-bezier(0.25, 0.4, 0.45, 1.4);
+}
+
+.galerie_spalte:hover {
+    flex-grow: 3!important;
+    flex-shrink: 1!important;
+    flex-basis: 10%!important;
+}
+
+
+/* split screen */
+.wp-block-column.links.is-layout-flow, .wp-block-column.rechts.is-layout-flow {
+    transition: all 2s ease-in-out;
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
+.wp-block-column.links.is-layout-flow:hover {
+    background-color: #f7f8f9;
+    transform: translateX(20vw);
+    -webkit-transition: all 3.5s ease-in-out 0s;
+    transition: all 2.5s ease-in-out 0s;
+}
+
+.wp-block-column.rechts.is-layout-flow:hover {
+    background-color: #f7f8f9;
+    transform: translateX(-20vw);
+    -webkit-transition: all 3.5s ease-in-out 0s;
+    transition: all 2.5s ease-in-out 0s;
 }
