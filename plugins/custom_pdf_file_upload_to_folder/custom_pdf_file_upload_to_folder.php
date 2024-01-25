@@ -3,7 +3,7 @@
 Plugin Name: Custom PDF File Upload to Folder
 Plugin URI: http://haurand.com
 Description: A plugin to upload PDF-Files to a custom folder and post automatic per shortcode PDF-Files as link
-Version: 0.3.1
+Version: 0.3.2
 Author: Hans-Gerd Gerhards
 Author URI: http://haurand.com
 License: GPLv2 or later
@@ -109,14 +109,16 @@ function wochenplan_shortcode(){
   $upload_dir = wp_upload_dir();
   $out = '';
   /* https://seniorensport-attendorn.de/wp-content/uploads/2023/05/KW_21_Wochenplan_SeniorenSport.pdf */ 
-  $week_number = date("W");
+  $week_number = (int) date("W");
+  // echo "Woche Nummer: ". (int) $week_number;
   /* $i=$week_number-1 --> vorherige Woche */
   for ($i=$week_number; $i <= $week_number+1; $i++) { 
+	  // echo "Woche: " . $i;
 	  $upload_dir = wp_upload_dir(); // Get the default upload directory
 	  $current_folder_name = get_option('custom_file_upload_folder_name');
       $pdf_file = $upload_dir['baseurl'] . '/' . $current_folder_name . '/' . 'KW_' . $i . '_Wochenplan_SeniorenSport.pdf'; // Custom folder path
 	  $pdf_file_name = 'KW_' . $i . '_Wochenplan_SeniorenSport.pdf';
-	  echo 'Dateiname: ' . $pdf_file_name;
+	  // echo 'Dateiname: ' . $pdf_file_name;
    	  if(UR_exists($pdf_file)){ 
 		  $out .= '<div class="pdf-button"><a href="';
 		  $out .= esc_url( $pdf_file) . '">';

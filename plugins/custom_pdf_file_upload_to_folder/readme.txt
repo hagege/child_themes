@@ -1,4 +1,6 @@
 === Custom PDF-File Upload to Folder ===
+Contributors: Hans-Gerd Gerhards, haurand.com
+=== Custom PDF-File Upload to Folder ===
 Author URI: https://haurand.com
 Plugin URI: https://haurand.com
 Donate link: 
@@ -7,7 +9,7 @@ Tags:
 Requires at least: 5.0
 Tested up to: 6.4.2
 Requires PHP: 8.0
-Stable tag: 0.3.1
+Stable tag: 0.3.2
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,19 +28,19 @@ Weitere Optionen:
 4. Es sollte ein Ordner nur für den Upload der PDF-Dateien (wochenplan) gewählt werden können
 	> erledigt
 5. für berechtigte Rollen muss eine Option zum Hochladen der Datei geschaffen werden.
-6. an sich müsste immere überprüft werden, ob in dem jeweileigen Upload-Ordner eine index.html liegt, 
-	die dafür sorgt, dass die Dateien in dem Ordner nicht gezeigt werden. 
-7. Bei Änderung des Ordnernamens sollte ein Hinweis erfolgen, dass der Shortcode immer nur für den aktuellen Ordner gilt.
 
 
 == change log ==
+
+25.1.2024: Version 0.3.2
+			Wochenpläne wurden nicht korrekt für jede Woche ausgegeben
+			Typecasting fehlte und echo hatte ich fälschlicherweise nicht auskommentiert.
 
 5.1.2024: Version 0.3.1
 			Änderungen am Backend: 
 			- Jetzt wird zusätzlich der Name der Datei gezeigt, der hochgeladen werden soll.
 			- Zusätzliche Anzeige des Ordners, in den die Datei hochgeladen wird.
 			- Klasse description für Absatz entfernt
-			
 
 8.6.2023: Version 0.2.4
 			Änderungen beim Upload (Text)
