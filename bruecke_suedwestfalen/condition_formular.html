@@ -1,0 +1,48 @@
+<label> Vorname
+    [text* vorname] </label>
+
+<label> Name
+    [text* your-name] </label>
+
+<label> E-Mail-Adresse
+    [email* your-email autocomplete:email] </label>
+
+Typ
+[radio auswahl use_label_element default:1 "Krankmeldung" "AU-Bescheinigung einreichen" "Klient abwesend" "Eigenes Kind krank"]
+
+<p><span class="vonbis">Von: </span><label>[date* von placeholder]</label></p>
+<p><span class="vonbis">Bis: </span><label>[date* bis placeholder]</label></p>
+
+<label>
+[file datei1 filetypes:pdf|jpg|png limit:5mb] </label>
+
+[group vorzeitige_km]
+
+[/group]
+
+[group au_bescheinigung]
+<p>Festgestellt am: <label>[date* festgestellt placeholder]</label></p>
+
+<p>Handelt es sich um eine elektronische Arbeitsunfähigkeitsbescheinigung? [checkbox* au_elektronisch use_label_element "Ja" "Nein"]</p>
+<p>Handelt es sich um eine Folge-AU? [checkbox* au_folge use_label_element "Ja" "Nein"]</label></p>
+<p>Handelt es sich um einen Arbeitsunfall/Wegeunfall? [checkbox* arbeitsunfall use_label_element "Ja" "Nein"]</p>
+<p>Haben Sie am ersten Ausfalltag noch gearbeitet? [checkbox* erster_ausfalltag use_label_element "Ja" "Nein"]</p>
+
+[/group]
+
+[group klient_abwesend]
+
+[/group]
+
+[group kind_krank]
+
+<p><span style="color: #ff0000;">Bitte fügen Sie eine ärztliche Bescheinigung als Anhang hinzu.</span></p>
+
+[/group]
+
+<label> Anmerkung (optional)
+    [textarea your-message] </label>
+
+[acceptance acceptance-898 acceptance_as_validation: on] Ich stimme zu, dass meine Angaben aus dem Formular zur Beantwortung meiner Anfrage erhoben und verarbeitet werden. Die Daten werden nach abgeschlossener Bearbeitung Ihrer Anfrage gelöscht. Hinweis: Sie können Ihre Einwilligung jederzeit für die Zukunft per E-Mail an info@bruecke-suedwestfalen.de widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer Datenschutzerklärung. [/acceptance]
+
+[submit "Senden"]

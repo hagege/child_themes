@@ -1,0 +1,89 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width" />
+<meta http-equiv="Content-Type" content="text/html" />
+<style>
+body {margin-left:20px; font-family: Arial; font-size: 100%; }
+</style>
+</head>
+
+<body>
+
+<h2>Krankmeldung</h2>
+
+<p>Sie haben eine Krankmeldung mit folgenden Angaben gesendet:</p>
+
+<p> 
+
+<table bgcolor="#fafafa" style="background-color: #fafafa; padding: 20px; line-height: 1.6rem; font-size: 100%;">
+    <tbody>
+      <tr style="height: 12px;">
+        <td>Vorname:</td>
+        <td>[vorname]</td>
+      </tr>
+      <tr style="height: 12px;">
+        <td>Name:</td>
+        <td>[your-name]</td>
+      </tr>
+      <tr style="height: 12px;">
+        <td>E-Mail:</td>
+        <td>[your-email]</td>
+      </tr>
+      <tr style="height: 12px;">
+        <td>Typ:</td>
+        <td>[auswahl]</td>
+      </tr>
+      <!-- allgemein -->
+      <tr style="height: 12px;">
+        <td>Von:</td>
+        <td>[_format_von "d.m.Y"]</td>
+      </tr>
+      <tr style="height: 12px;">
+        <td>Bis:</td>
+        <td>[_format_bis "d.m.Y"]</td>
+      </tr>
+      <tr style="height: 12px;">
+        <td>Datei(en):</td>
+        <td>[datei1]</td>
+      </tr>
+      <!-- hier evtl. Angaben aus den jeweiligen Gruppen -->
+      [vorzeitige_km]
+      <!-- hier wird nichts benötigt --> 	
+      [/vorzeitige_km]
+      [au_bescheinigung]
+        <tr style="height: 12px;">
+            <td>Festgestellt am: </td>
+            <td>[festgestellt] </td>
+        </tr>
+        <tr style="height: 12px;">
+            <td>Handelt es sich um eine elektronische Arbeitsunfähigkeitsbescheinigung?</td>
+            <td>[au_elektronisch]</td>
+        </tr>
+        <tr style="height: 12px;">	
+            <td>Handelt es sich um eine Folge-AU?</td>
+            <td>[au_folge]</td>		
+        </tr>	
+        <tr style="height: 12px;">	
+            <td>Handelt es sich um einen Arbeitsunfall/Wegeunfall?</td>
+            <td>[arbeitsunfall]</td>		
+        </tr>	
+        <tr style="height: 12px;">	
+            <td>Haben Sie am ersten Ausfalltag noch gearbeitet?</td>
+            <td>[erster_ausfalltag]</td>
+        </tr>			
+      [/au_bescheinigung]
+      [klient_abwesend]
+        <!-- hier wird nichts benötigt --> 
+      [/klient_abwesend]
+      [kind_krank]
+        <!-- hier wird nichts benötigt --> 
+      [/kind_krank]
+
+    </tbody>
+  </table>
+<p style="font-size: 100%;"><strong>Nachricht: </strong>[your-message]</p>
+<br>
+<p style="font-size: 10px;"><strong>Datenschutz - </strong>[acceptance-898]</p>
+<br>
+</body>
+</html>
