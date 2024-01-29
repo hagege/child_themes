@@ -7,17 +7,24 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 
 /* Variablen */
 :root {
-    --dunkelblau-color: rgba(29, 31, 60, 1);
-    --orange-color: rgba(248, 89, 0, 1);
-    --weiss-color: rgba(255, 255, 255, 1);
-    --wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
-    --wp--preset--font-size--cover-paragraph: clamp(2rem, 10vw, 6rem);
-    --wp--preset--font-size--h2: clamp(1.5rem, 2vw, 6rem);
-      /* funktioniert nicht, daher nur definiert */
-	--rot-color_transpa: rgba(191, 25, 25, 0.5);
-    --mobile-breakpoint: 767px;
-    --tablet-breakpoint: 900px;
-  }
+  --dunkelblau-color: rgba(29, 31, 60, 1);
+  --orange-color: rgba(248, 89, 0, 1);
+  --weiss-color: rgba(255, 255, 255, 1);
+    --box-shadow: 15px 15px 30px 0px rgba(29,31,60,0.5);
+  --wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
+  --wp--preset--font-size--cover-paragraph: clamp(2rem, 10vw, 6rem);
+  --wp--preset--font-size--h2: clamp(1.5rem, 2vw, 6rem);
+    /* funktioniert nicht, daher nur definiert */
+--rot-color_transpa: rgba(191, 25, 25, 0.5);
+  --mobile-breakpoint: 767px;
+  --tablet-breakpoint: 900px;
+}
+
+
+/* Schatten für überlappende Container */
+.schatten-raster {
+  box-shadow: var(--box-shadow);
+}
 
 /* ----------------------------- */
 /* Navigation                    */
@@ -25,37 +32,37 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 
 /* Einstellungen für das Desktop-Menü */
 @media (min-width: 769px) {
-  /* nav links effect */
-  .main-navigation .menu > .menu-item > a::after{
-      content: "";
-      position: absolute;
-      right: 0;
-      left: 50%;
-      bottom: 0px;
-      -webkit-transform: translateX(-50%);
-      transform: translateX(-50%);
-      color: var(--orange-color);
-      display: block;
-      width: 0;
-      height: 3px;   
-      background-color: currentcolor; 
-      transition: 0.3s width ease;
-  }
-  .main-navigation .menu > .menu-item.current-menu-item > a::after,
-  .main-navigation .menu > .menu-item > a:hover::after {
-      width: 100%;
-      color: var(--orange-color);
-  }
+/* nav links effect */
+.main-navigation .menu > .menu-item > a::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 50%;
+    bottom: 0px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    color: var(--orange-color);
+    display: block;
+    width: 0;
+    height: 3px;   
+    background-color: currentcolor; 
+    transition: 0.3s width ease;
+}
+.main-navigation .menu > .menu-item.current-menu-item > a::after,
+.main-navigation .menu > .menu-item > a:hover::after {
+    width: 100%;
+    color: var(--orange-color);
+}
 
 .main-navigation .menu > .menu-item.current-menu-item > a::after,
-  .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
-  .main-navigation .menu > .menu-item > a:active::after {
-  width: 100%;
-  color: var(--orange-color);
-  }
+.main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
+.main-navigation .menu > .menu-item > a:active::after {
+width: 100%;
+color: var(--orange-color);
+}
 /* Submenü 
 ul.sub-menu {
-  opacity: 0.9;
+opacity: 0.9;
 }
 */
 }
