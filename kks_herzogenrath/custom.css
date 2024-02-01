@@ -1,0 +1,24 @@
+/* Vorschlag: Umstellung auf Mobil bei 870px */
+
+/* Variablen */
+:root {
+    --gelb-color: rgba(255, 303, 0, 1);
+    --gruen-color: rgba(0, 203, 98, 1);
+    --rot-color: rgba(254, 42, 62, 1);
+	  --blau-color: rgba(12, 88, 157, 1);
+    --hellgrau-2-color: rgba(213, 213, 213, 1);
+
+    --wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
+    --wp--preset--font-size--cover-paragraph: clamp(2rem, 10vw, 6rem);
+    --wp--preset--font-size--h2: clamp(1.5rem, 2vw, 6rem);
+      /* funktioniert nicht, daher nur definiert */
+    --mobile-breakpoint: 767px;
+    --tablet-breakpoint: 900px;
+  }
+
+/* Buttons mit leicht runden Ecken */
+button, html input[type="button"], input[type="reset"], input[type="submit"], a.button, a.wp-block-button__link:not(.has-background) {
+    color: var(--base-3);
+    background-color: var(--blau-header);
+    border-radius: 5px;
+}

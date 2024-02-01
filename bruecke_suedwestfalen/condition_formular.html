@@ -8,13 +8,10 @@
     [email* your-email autocomplete:email] </label>
 
 Typ
-[radio auswahl use_label_element default:1 "Krankmeldung" "AU-Bescheinigung einreichen" "Klient abwesend" "Eigenes Kind krank"]
+[radio auswahl use_label_element default:1 "Vorzeitige Krankmeldung" "AU-Bescheinigung einreichen" "Klient abwesend" "Eigenes Kind krank"]
 
 <p><span class="vonbis">Von: </span><label>[date* von placeholder]</label></p>
 <p><span class="vonbis">Bis: </span><label>[date* bis placeholder]</label></p>
-
-<label>
-[file datei1 filetypes:pdf|jpg|png limit:5mb] </label>
 
 [group vorzeitige_km]
 
@@ -23,10 +20,11 @@ Typ
 [group au_bescheinigung]
 <p>Festgestellt am: <label>[date* festgestellt placeholder]</label></p>
 
-<p>Handelt es sich um eine elektronische Arbeitsunfähigkeitsbescheinigung? [checkbox* au_elektronisch use_label_element "Ja" "Nein"]</p>
-<p>Handelt es sich um eine Folge-AU? [checkbox* au_folge use_label_element "Ja" "Nein"]</label></p>
-<p>Handelt es sich um einen Arbeitsunfall/Wegeunfall? [checkbox* arbeitsunfall use_label_element "Ja" "Nein"]</p>
-<p>Haben Sie am ersten Ausfalltag noch gearbeitet? [checkbox* erster_ausfalltag use_label_element "Ja" "Nein"]</p>
+<p>Handelt es sich um eine elektronische Arbeitsunfähigkeitsbescheinigung? [radio au_elektronisch use_label_element default:1 "Ja" "Nein"]</p>
+<p>Handelt es sich um eine Folge-AU? [radio au_folge use_label_element "Ja" "Nein"]</p>
+<p>Handelt es sich um einen Arbeitsunfall/Wegeunfall? [radio arbeitsunfall use_label_element "Ja" "Nein"]</p>
+<p>Haben Sie am ersten Ausfalltag noch gearbeitet? [radio erster_ausfalltag use_label_element "Ja" "Nein"]</p>
+
 
 [/group]
 
@@ -39,6 +37,8 @@ Typ
 <p><span style="color: #ff0000;">Bitte fügen Sie eine ärztliche Bescheinigung als Anhang hinzu.</span></p>
 
 [/group]
+<label>
+[file datei1 filetypes:pdf|jpg|png limit:5mb] </label>
 
 <label> Anmerkung (optional)
     [textarea your-message] </label>
