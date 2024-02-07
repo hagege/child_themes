@@ -10,7 +10,8 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
   --dunkelblau-color: rgba(29, 31, 60, 1);
   --orange-color: rgba(248, 89, 0, 1);
   --weiss-color: rgba(255, 255, 255, 1);
-    --box-shadow: 15px 15px 30px 0px rgba(29,31,60,0.5);
+  --box-shadow: 15px 15px 30px 0px rgba(29,31,60,0.5);
+  --video-max-width-default: 100%;
   --wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
   --wp--preset--font-size--cover-paragraph: clamp(2rem, 10vw, 6rem);
   --wp--preset--font-size--h2: clamp(1.5rem, 2vw, 6rem);
@@ -18,6 +19,14 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 --rot-color_transpa: rgba(191, 25, 25, 0.5);
   --mobile-breakpoint: 767px;
   --tablet-breakpoint: 900px;
+}
+
+/* Anzeige des Videos auf der Startseite */
+video.background-video {
+  max-width: var(--video-max-width,var(--video-max-width-default,100%));
+  height: auto;
+  display: block;
+/*  max-width: 100%; */
 }
 
 
@@ -66,4 +75,3 @@ opacity: 0.9;
 }
 */
 }
-
