@@ -24,6 +24,25 @@
     --animate-repeat: 1;
   }
   
+  
+  /* Zentrierter Container ohne GB */
+  .center_container_800px {
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  
+  /* show google spreadsheet */
+  div.embed_iframe iframe {
+      width: 100%;
+  }
+  
+  .switcherOuter td {
+      font-size: 20px;
+      padding-bottom: 150px;
+  }
+  
   /* smooth scrolling und korrekte Ansteuerung interner Anker */
   html {
     scroll-behavior: smooth;
@@ -436,6 +455,7 @@
   /* Bildwechsel bei hover */
   .custom-cover:hover .custom-image {
      opacity:1;
+     position: unset;
   }
   
   .custom-image {
@@ -443,4 +463,5 @@
      opacity: 0;
      transition: 0.3s ease-in-out;
   }
+  
   
