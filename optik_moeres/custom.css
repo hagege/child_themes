@@ -21,12 +21,26 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
   --tablet-breakpoint: 900px;
 }
 
+/* Terminleiste oben sticky */
+.sticky_termin {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 60px;
+}
+
+
+/* Anzeige Logos im Slider */
+.gs_logo_single .gs_logo_single--inner img {
+  max-height: 75px;
+  max-width: 150px;
+}
+
 /* Anzeige des Videos auf der Startseite */
 video.background-video {
   max-width: var(--video-max-width,var(--video-max-width-default,100%));
   height: auto;
   display: block;
-/*  max-width: 100%; */
+/*	  max-width: 100%; */
 }
 
 
