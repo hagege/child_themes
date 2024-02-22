@@ -25,6 +25,7 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 /* Hintergrundfarbe für Overlay bei Embed Privacy */
 .schatten-raster.embed-color {
   background-color: var(--dunkelblau-color);
+  transition: background-color 1s;
 }
 
 .schatten-raster.embed-color:hover {
