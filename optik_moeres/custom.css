@@ -27,10 +27,12 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 .embed-color .embed-privacy-overlay {
     background-color: var(--dunkelblau-color);
   transition: background-color 1s;
+	z-index: 5; 
 }
 
 .embed-color .embed-privacy-overlay:hover {
   background-color: var(--dunkelblau-color-transpa);
+  z-index: 5; 
 }
 
 /* Terminleiste oben sticky */
@@ -38,7 +40,7 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
   position: sticky;
   position: -webkit-sticky;
   top: 60px;
-  z-index: 101;
+	z-index: 10; 
 }
 
 
