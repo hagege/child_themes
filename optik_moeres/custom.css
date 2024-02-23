@@ -8,7 +8,7 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 /* Variablen */
 :root {
   --dunkelblau-color: rgba(29, 31, 60, 1);
-  --dunkelblau-color-transpa: rgba(29, 31, 60, 0.2);	
+  --dunkelblau-color-transpa: rgba(29, 31, 60, 0.7);	
   --orange-color: rgba(248, 89, 0, 1);
   --weiss-color: rgba(255, 255, 255, 1);
   --box-shadow: 15px 15px 30px 0px rgba(29,31,60,0.5);
@@ -23,22 +23,22 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 }
 
 /* Hintergrundfarbe für Overlay bei Embed Privacy */
-.schatten-raster.embed-color {
-  background-color: var(--dunkelblau-color);
+
+.embed-color .embed-privacy-overlay {
+    background-color: var(--dunkelblau-color);
   transition: background-color 1s;
 }
 
-.schatten-raster.embed-color:hover {
+.embed-color .embed-privacy-overlay:hover {
   background-color: var(--dunkelblau-color-transpa);
 }
-
 
 /* Terminleiste oben sticky */
 .sticky_termin {
   position: sticky;
   position: -webkit-sticky;
   top: 60px;
-  z-index: 200;
+  z-index: 101;
 }
 
 
