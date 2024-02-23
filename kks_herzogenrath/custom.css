@@ -4,7 +4,7 @@
 :root {
   --gelb-color: rgba(255, 303, 0, 1);
   --gruen-color: rgba(0, 203, 98, 1);
-  --rot-color: rgba(254, 42, 62, 1);
+  --rot-color: rgba(255, 41, 25, 1);
   --blau-color: rgba(12, 88, 157, 1);
   --hellgrau-2-color: rgba(213, 213, 213, 1);
 
@@ -17,8 +17,16 @@
 }
 
 /* Buttons mit leicht runden Ecken */
-button, html input[type="button"], input[type="reset"], input[type="submit"], a.button, a.wp-block-button__link:not(.has-background) {
+button, html input[type="button"], input[type="reset"], input[type="submit"], a.button, a.wp-block-button__link:not(.has-background), a.wp-block-file__button.wp-element-button, a.wp-block-file__button {
   color: var(--base-3);
   background-color: var(--blau-header);
   border-radius: 5px;
+  font-weight: 500;
 }
+
+a.wp-block-file__button.wp-element-button:hover, a.wp-block-file__button:hover {
+background-color: var(--rot-color);
+color: white;
+font-weight: 500;
+}
+
