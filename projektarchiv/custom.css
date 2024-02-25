@@ -465,3 +465,24 @@
   }
   
   
+  /* Bewegende Kugel */
+  figure.wp-block-image.size-full.turbulenz {
+      max-width: 200px;
+      margin-top: 50px;
+      margin-bottom: 35px;
+      animation: turbulenz 8s ease-in-out 4.5s infinite none;
+  }
+  
+  @keyframes turbulenz {
+      0%, 100% {
+          transform: translate(0, 0);
+      }
+      25% {
+          transform: translate(2px, -34px);
+      }
+      50% {
+          transform: translate(0, 34px);
+      }
+  }
+  
+  
