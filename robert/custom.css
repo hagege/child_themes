@@ -1,0 +1,93 @@
+:root {
+    /* funktioniert nicht mehr bei TT4, daher nur definiert */
+
+    --rot-color: rgb(199, 23, 31);
+    --blau-color: rgb(2, 75, 126);	  
+    --hellblau-color: rgb(227, 235, 241);
+    --grau-color: rgb(227, 235, 241);
+    --rot-color_transpa: rgba(199, 23, 31, 0.5);
+}
+
+/* 
+rot: #C7171F
+dunkelblau: #024B7E
+hellblau: #E3EBF1
+grau: #D5D5D5
+*/
+
+.wp-block-image.turbulenz {
+    max-width: 200px;
+    margin-top: 50px;
+    margin-bottom: 35px;
+    animation: turbulenz 8s ease-in-out 4.5s infinite none;
+}
+
+@keyframes turbulenz {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(2px, -34px);
+    }
+    50% {
+        transform: translate(0, 34px);
+    }
+}
+
+/* ---------------------*/
+/* Der Detail-Block mit */ 
+/* einigen Anpassungen  */
+/* ---------------------*/
+summary {
+list-style: none;
+display: flex; /* also removes the list marker */
+align-items: center;
+padding: 2rem;
+font-weight: 400;
+background: var(--blau-color);
+color: white;
+}
+
+summary::before{
+content: '>';
+/*  margin-left: .75em; */
+transition: 0.2s;
+margin-right: 1rem;
+font-size: 2rem;
+}
+
+
+details[open] > summary::before{
+transform: rotate(90deg);
+}
+
+.wp-block-details[open] summary,
+.wp-block-details summary:hover
+{
+background: var(--hellblau-color);
+transition: all 0.2s ease-in-out;
+}
+
+summary::-webkit-details-marker {
+display: none;
+}
+
+
+/* Hintergrundfarbe details */
+details > div.wp-block-group {
+  background: var(--hellgrau-color);
+}
+
+@keyframes details-show {
+from {
+  opacity:0;
+  transform: var(--details-translate, translateY(-0.5em));
+}
+}
+
+details[open] > *:not(summary),
+details[close] > *:not(summary) {
+animation: details-show 1000ms ease-in-out;
+}
+
+
