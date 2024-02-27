@@ -7,7 +7,7 @@ Tags:
 Requires at least: 
 Tested up to: 
 Requires PHP: 
-Stable tag: 0.1
+Stable tag: 0.2
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -60,6 +60,9 @@ An answer to that question.
 4. Click on `Activate plugin`
 
 == Changelog ==
+
+= 0.2: February 27, 2024 =
+* Add plugin settings page to the dashboard menu
 
 = 0.1: February 27, 2024 =
 * Birthday of Restrict Access Redirect
