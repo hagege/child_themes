@@ -16,7 +16,7 @@
     padding: 0px;
 }
 
-@media only screen and (max-width: var(--breakpoint-mobile)){ 
+@media only screen and (max-width: 1024px){ 
 	.nav-align-right .inside-navigation, .nav-align-center .inside-navigation {
         justify-content: end;
     }
