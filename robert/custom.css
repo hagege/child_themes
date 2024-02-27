@@ -7,6 +7,19 @@
     --grau-color: rgb(227, 235, 241);
     --rot-color_transpa: rgba(199, 23, 31, 0.5);
     --details-translate: 30px;
+	--breakpoint-mobile: 1024px;
+}
+
+
+/* Mobiles Menü */
+.nav-below-header .main-navigation .inside-navigation.grid-container, .nav-above-header .main-navigation .inside-navigation.grid-container {
+    padding: 0px;
+}
+
+@media only screen and (max-width: var(--breakpoint-mobile)){ 
+	.nav-align-right .inside-navigation, .nav-align-center .inside-navigation {
+        justify-content: end;
+    }
 }
 
 /* 
