@@ -6,6 +6,7 @@
     --hellblau-color: rgb(227, 235, 241);
     --grau-color: rgb(227, 235, 241);
     --rot-color_transpa: rgba(199, 23, 31, 0.5);
+    --details-translate: 30px;
 }
 
 /* 
@@ -19,7 +20,7 @@ grau: #D5D5D5
     max-width: 200px;
     margin-top: 50px;
     margin-bottom: 35px;
-    animation: turbulenz 8s ease-in-out 4.5s infinite none;
+    animation: turbulenz 6s ease-in-out 2.5s infinite none;
 }
 
 @keyframes turbulenz {
@@ -27,10 +28,10 @@ grau: #D5D5D5
         transform: translate(0, 0);
     }
     25% {
-        transform: translate(2px, -34px);
+        transform: translate(2px, -54x);
     }
     50% {
-        transform: translate(0, 34px);
+        transform: translate(0, 54px);
     }
 }
 
@@ -43,8 +44,9 @@ list-style: none;
 display: flex; /* also removes the list marker */
 align-items: center;
 padding: 2rem;
+margin-bottom: 1rem;
 font-weight: 400;
-background: var(--blau-color);
+background: var(--rot-color);
 color: white;
 }
 
@@ -64,7 +66,7 @@ transform: rotate(90deg);
 .wp-block-details[open] summary,
 .wp-block-details summary:hover
 {
-background: var(--hellblau-color);
+background: var(--blau-color);
 transition: all 0.2s ease-in-out;
 }
 
