@@ -1,3 +1,9 @@
+/* 
+rot: #C7171F
+dunkelblau: #024B7E
+hellblau: #E3EBF1
+grau: #D5D5D5
+*/
 :root {
     /* funktioniert nicht mehr bei TT4, daher nur definiert */
 
@@ -7,7 +13,7 @@
     --grau-color: rgb(227, 235, 241);
     --rot-color_transpa: rgba(199, 23, 31, 0.5);
     --details-translate: 30px;
-	--breakpoint-mobile: 1024px;
+	  --breakpoint-mobile: 1024px;
 }
 
 
@@ -16,19 +22,17 @@
     padding: 0px;
 }
 
+/*
 @media only screen and (max-width: 1024px){ 
 	.nav-align-right .inside-navigation, .nav-align-center .inside-navigation {
-        justify-content: end;
-    }
-}
-
-/* 
-rot: #C7171F
-dunkelblau: #024B7E
-hellblau: #E3EBF1
-grau: #D5D5D5
+    display: flex;
+    justify-content: flex-end;
+	}
+} 
 */
 
+
+/* Animation für Kugel */
 .wp-block-image.turbulenz {
     max-width: 200px;
     margin-top: 50px;
@@ -53,38 +57,38 @@ grau: #D5D5D5
 /* einigen Anpassungen  */
 /* ---------------------*/
 summary {
-list-style: none;
-display: flex; /* also removes the list marker */
-align-items: center;
-padding: 2rem;
-margin-bottom: 1rem;
-font-weight: 400;
-background: var(--rot-color);
-color: white;
+    list-style: none;
+    display: flex; /* also removes the list marker */
+    align-items: center;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    background: var(--rot-color);
+    color: white;
 }
 
 summary::before{
-content: '>';
-/*  margin-left: .75em; */
-transition: 0.2s;
-margin-right: 1rem;
-font-size: 2rem;
+    content: '>';
+    /*  margin-left: .75em; */
+    transition: 0.2s;
+    margin-right: 1rem;
+    font-size: 2rem;
 }
 
 
 details[open] > summary::before{
-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 .wp-block-details[open] summary,
 .wp-block-details summary:hover
 {
-background: var(--blau-color);
-transition: all 0.2s ease-in-out;
+    background: var(--blau-color);
+    transition: all 0.2s ease-in-out;
 }
 
 summary::-webkit-details-marker {
-display: none;
+    display: none;
 }
 
 
@@ -102,7 +106,7 @@ from {
 
 details[open] > *:not(summary),
 details[close] > *:not(summary) {
-animation: details-show 1000ms ease-in-out;
+    animation: details-show 1000ms ease-in-out;
 }
 
 
