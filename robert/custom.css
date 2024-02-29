@@ -22,6 +22,11 @@ grau: #D5D5D5
     padding: 0px;
 }
 
+/* Header unsichtbar */
+header.entry-header {
+    visibility: hidden;
+}
+
 /*
 @media only screen and (max-width: 1024px){ 
 	.nav-align-right .inside-navigation, .nav-align-center .inside-navigation {
@@ -31,6 +36,11 @@ grau: #D5D5D5
 } 
 */
 
+img.header-image.is-logo-image {
+    animation-name: fadeInUp;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+}
 
 /* Animation für Kugel */
 .wp-block-image.turbulenz {
