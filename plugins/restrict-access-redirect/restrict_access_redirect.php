@@ -5,13 +5,13 @@
  * @package       RESTRICTAC
  * @author        Hans-Gerd Gerhards
  * @license       gplv2
- * @version       0.2
+ * @version       0.3.1
  *
  * @wordpress-plugin
  * Plugin Name:   Restrict Access Redirect
  * Plugin URI:    https://haurand.com
  * Description:   WordPress plugin that prevents non-logged-in users from accessing the website and redirects them to the login page with a message
- * Version:       0.2
+ * Version:       0.3.1
  * Author:        Hans-Gerd Gerhards
  * Author URI:    https://haurand.com
  * Text Domain:   restrict-access-redirect
@@ -87,6 +87,7 @@ add_action('template_redirect', 'restrict_access_custom_login_redirect');
 function restrict_access_custom_login_message_and_center_title($message) {
     if (isset($_REQUEST['message'])) {
         $custom_message = urldecode($_REQUEST['message']);
+        $message .= '<h2 style="background-color: red; color: white; font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">' . get_bloginfo( 'name' ) . '</h2>';
         $message .= '<p class="message">' . esc_html($custom_message) . '</p>';
     }
 
