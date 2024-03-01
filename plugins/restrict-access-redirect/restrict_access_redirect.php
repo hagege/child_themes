@@ -91,16 +91,6 @@ function restrict_access_custom_login_message_and_center_title($message) {
         $message .= '<p class="message">' . esc_html($custom_message) . '</p>';
     }
 
-    // Center the title on the login page
-    $message .= '<style>#login h1 { text-align: center; }</style>';
-
     return $message;
 }
 add_filter('login_message', 'restrict_access_custom_login_message_and_center_title');
-
-// Function to display website title above WordPress logo on login page
-function restrict_access_custom_login_headertext($headertext) {
-    $headertext = get_bloginfo('name');
-    return $headertext;
-}
-add_filter('login_headertext', 'restrict_access_custom_login_headertext');

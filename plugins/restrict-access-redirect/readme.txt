@@ -7,7 +7,7 @@ Tags:
 Requires at least: 
 Tested up to: 
 Requires PHP: 
-Stable tag: 0.3
+Stable tag: 0.3.1
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -60,6 +60,10 @@ An answer to that question.
 4. Click on `Activate plugin`
 
 == Changelog ==
+
+= 0.3.1: March 01, 2024 =
+* superfluous lines and functions removed
+
 = 0.3.1: February 29, 2024 =
 * H2 with a corresponding "Projektarchiv" message
 * Instead of the static name (Projektarchiv), the title of the blog is now displayed.
