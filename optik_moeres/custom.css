@@ -35,6 +35,13 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
   z-index: 5; 
 }
 
+/* Auf mobilen Geräten Bild zuerst und dann Textblock */
+@media (max-width: 767px) {
+	.gb-grid-wrapper.raster_responsive {
+			flex-direction: column-reverse;
+	}
+}
+
 /* Terminleiste oben sticky */
 .sticky_termin {
   position: sticky;
@@ -104,3 +111,23 @@ opacity: 0.9;
 }
 */
 }
+
+
+/* wegen Problem mit ios */
+@media (pointer: coarse) {
+    .gb-container,
+    .gb-container:before {
+        background-attachment: initial !important;
+    }
+}
+
+/* wegen Problem mit ios
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) 
+and (-webkit-min-device-pixel-ratio: 2) {
+.moeres_cover {
+  background-attachment: scroll;
+}
+}
+ */
