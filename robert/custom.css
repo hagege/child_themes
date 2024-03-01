@@ -36,7 +36,8 @@ header.entry-header {
 } 
 */
 
-img.header-image.is-logo-image {
+/* Logo mit Animation */
+.home img.header-image.is-logo-image {
     animation-name: fadeInUp;
     animation-duration: 3s;
     animation-fill-mode: both;
