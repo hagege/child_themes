@@ -120,4 +120,23 @@ details[close] > *:not(summary) {
     animation: details-show 1000ms ease-in-out;
 }
 
+@keyframes spalten_effekt {
+   0% {
+      opacity: 0;
+      transform: translateY(40px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+
+.animierte_spalten {
+    animation: spalten_effekt;
+		animation-delay: .2s;
+    animation-duration: 2s;
+    /* animation-duration: calc(var(--animate-duration)*2); */	
+}
+
 
