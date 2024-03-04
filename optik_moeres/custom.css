@@ -162,7 +162,8 @@ input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
 
 /* Einstellungen für Radio-Button */
 .wpcf7-form input[type=checkbox], .wpcf7-form input[type=radio] {
--webkit-appearance: inner-spin-button!important;
+/*    -webkit-appearance: inner-spin-button!important;
+    appearance: inner-spin-button!important; */
     width: 2rem;
     height: 2rem;
     accent-color: #0062af;
@@ -177,5 +178,12 @@ select.wpcf7-form-control.wpcf7-select {
     border-color: var(--dunkelblau-color);
     color: black;	
 		margin-left: 0px
+}
+
+/* Datenschutz einrücken */
+span.wpcf7-list-item {
+    text-indent: -2.7em;
+    margin-left: 2.7em;
+    margin-top: 1em;
 }
 
