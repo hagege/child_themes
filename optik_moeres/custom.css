@@ -4,13 +4,15 @@ weiß: #FFFFFF - RGB: (255, 255, 255)
 orange: #F85900 - RGB: (248, 89, 0)
 rot: #B70000 - RGB: (183, 0, 0)
 mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
-
+#F1F1F1
 /* Variablen */
 :root {
   --dunkelblau-color: rgba(29, 31, 60, 1);
-  --dunkelblau-color-transpa: rgba(29, 31, 60, 0.7);	
+  --dunkelblau-color-transpa: rgba(29, 31, 60, 0.7);
   --orange-color: rgba(248, 89, 0, 1);
+	--orange-color-transpa: rgba(248, 89, 0, 0.1);
   --weiss-color: rgba(255, 255, 255, 1);
+	--grau-color-transpa: rgba(241, 241, 241, 0.5); 
   --box-shadow: 15px 15px 30px 0px rgba(29,31,60,0.5);
   --video-max-width-default: 100%;
   --wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
@@ -24,15 +26,15 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
 
 /* Hintergrundfarbe für Overlay bei Embed Privacy */
 
-.embed-color .embed-privacy-overlay {
-    background-color: var(--dunkelblau-color);
-  transition: background-color 1s;
-	z-index: 5; 
+.embed-privacy-overlay {
+    background-color: var(--dunkelblau-color)!important;
+    transition: background-color 1s!important;
+    z-index: 5!important;
 }
 
-.embed-color .embed-privacy-overlay:hover {
-  background-color: var(--dunkelblau-color-transpa);
-  z-index: 5; 
+.embed-privacy-overlay:hover {
+  background-color: var(--dunkelblau-color-transpa)!important;
+  z-index: 5!important; 
 }
 
 /* Auf mobilen Geräten Bild zuerst und dann Textblock */
@@ -131,3 +133,49 @@ and (-webkit-min-device-pixel-ratio: 2) {
 }
 }
  */
+
+
+/* Design-Anpassungen beim Formular */
+
+input.wpcf7-form-control.wpcf7-submit.has-spinner {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.5em;
+    width: 50%;
+    font-weight: 500;
+    text-align: center;
+    padding: 15px 20px;
+    margin-right: 5%;
+    margin-bottom: 30px;
+    margin-left: 0%;
+    border: 0px solid;
+    background-color: var(--orange);
+    color: #ffffff;
+	  text-transform: uppercase;
+}
+
+input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
+	background-color: var(--dunkelblau-color);
+}
+
+/* Einstellungen für Radio-Button */
+.wpcf7-form input[type=checkbox], .wpcf7-form input[type=radio] {
+-webkit-appearance: inner-spin-button!important;
+    width: 2rem;
+    height: 2rem;
+    accent-color: #0062af;
+    margin-right: 0.5rem;
+}
+
+
+.wpcf7-form input, textarea,
+select.wpcf7-form-control.wpcf7-select.wpcf7-validates-as-required,
+select.wpcf7-form-control.wpcf7-select {
+    background-color: var(--grau-color-transpa);
+    border-color: var(--dunkelblau-color);
+    color: black;	
+		margin-left: 0px
+}
+
