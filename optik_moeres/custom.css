@@ -24,6 +24,18 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
   --tablet-breakpoint: 900px;
 }
 
+
+/* smooth scrolling und korrekte Ansteuerung interner Anker */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 14rem;
+}
+
+/* wenn nicht href, dann Standard-Cursor */
+a:not([href]) {
+  cursor: default;
+}
+
 /* Hintergrundfarbe für Overlay bei Embed Privacy */
 
 .embed-privacy-overlay {
@@ -166,7 +178,7 @@ input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
     appearance: inner-spin-button!important; */
     width: 2rem;
     height: 2rem;
-    accent-color: #0062af;
+    accent-color: var(--orange-color);
     margin-right: 0.5rem;
 }
 
