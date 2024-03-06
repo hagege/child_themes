@@ -11,7 +11,7 @@
  * Plugin Name:   List Posts sorted by update date
  * Plugin URI:    https://haurand.com
  * Description:   the posts are listed sorted by update date in \"All posts\". 
- * Version:       0.1
+ * Version:       0.2
  * Author:        Hans-Gerd Gerhards
  * Author URI:    https://haurand.com
  * Text Domain:   list-posts-sorted-by-update-date
@@ -28,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 // Include your custom code here.
 
-/*
+
 
 function hgg_custom_posts_orderby( $query ) {
     if ( is_admin() && $query->is_main_query() && $query->get('post_type') == 'post' ) {
