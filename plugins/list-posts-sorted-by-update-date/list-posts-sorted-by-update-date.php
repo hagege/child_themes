@@ -5,7 +5,7 @@
  * @package       LISTPOSTSS
  * @author        Hans-Gerd Gerhards
  * @license       gplv2
- * @version       0.1
+ * @version       0.2
  *
  * @wordpress-plugin
  * Plugin Name:   List Posts sorted by update date
@@ -30,16 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 /*
 
-function custom_posts_orderby( $query ) {
-    if ( is_admin() && $query->is_main_query() && $query->get('post_type') == 'post' ) {
-        $query->set( 'orderby', 'modified' );
-        $query->set( 'order', 'DESC' );
-    }
-}
-add_action( 'pre_get_posts', 'custom_posts_orderby' );
-*/
-
-function custom_posts_orderby( $query ) {
+function hgg_custom_posts_orderby( $query ) {
     if ( is_admin() && $query->is_main_query() && $query->get('post_type') == 'post' ) {
         $orderby_options = array(
             'date'       => 'Date',
@@ -57,15 +48,15 @@ function custom_posts_orderby( $query ) {
         $query->set( 'orderby', $orderby );
     }
 }
-add_action( 'pre_get_posts', 'custom_posts_orderby' );
+add_action( 'pre_get_posts', 'hgg_custom_posts_orderby' );
 
-function custom_posts_orderby_options( $orderby_options ) {
+function hgg_custom_posts_orderby_options( $orderby_options ) {
     // Add more orderby options if needed
     $orderby_options['date'] = 'Date';
     $orderby_options['title'] = 'Title';
     $orderby_options['modified'] = 'Last Modified';
     return $orderby_options;
 }
-add_filter( 'custom_posts_orderby_options', 'custom_posts_orderby_options' );
+add_filter( 'custom_posts_orderby_options', 'hgg_custom_posts_orderby_options' );
 
 

@@ -7,11 +7,11 @@ Tags:
 Requires at least: 
 Tested up to: 
 Requires PHP: 
-Stable tag: 0.1
+Stable tag: 0.2
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-the posts are listed sorted by update date in \"All posts\". 
+Posts are listed either sorted by date of publication, title or update date. The default setting is update date.
 
 == Description ==
 
@@ -56,6 +56,9 @@ An answer to that question.
 4. Click on `Activate plugin`
 
 == Changelog ==
+
+= 0.2: March 6, 2024 =
+* Change Namespace
 
 = 0.1: March 6, 2024 =
 * Birthday of List Posts sorted by update date
