@@ -24,10 +24,14 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
   --tablet-breakpoint: 900px;
 }
 
+/* Kasten auf Lindberg-Brillen-Seite */
+.lindberg_raster > .gb-grid-column {
+    z-index: 5;
+}
 
 /* smooth scrolling und korrekte Ansteuerung interner Anker */
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   scroll-padding-top: 14rem;
 }
 
