@@ -486,3 +486,69 @@
   }
   
   
+  
+  /* FAQ mit Buttons */
+  .faq .faq_summary {
+      display: none;
+  }
+  
+  .faq:active .faq_summary {
+      display: block;
+  }
+  
+  /*
+  .faq:visited .faq_summary {
+      display: block;
+  }
+  */
+  
+  
+  /* Image Hover fade-in-right
+   */
+  .hover-box {
+      overflow: hidden;
+      position: relative;
+  }
+  
+  .hover-box:hover .wp-block-group {
+      right: -50%;
+  }
+  
+  .hover-box .wp-block-group {
+      width: 100%;
+      transition: right 1s;
+      position: absolute;
+      top: 50%;
+      right: -150%;
+      transform: translate(-50%, -50%);
+  }
+  
+  .hover-box .wp-block-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+  }
+  
+  .hover-box img {
+      object-fit: cover;
+  }
+  
+  
+  
+  /* Nachbau Croquette Website */
+  path.shape-fill-oben {
+      fill: white;
+      transform-origin: center;
+  }
+  
+  path.shape-fill-unten {
+      fill: white;
+      transform-origin: center;
+      transform: rotateX(180deg);
+  }
+  
+  .svg_gruppe_cover {
+      max-height: 120px;
+      bottom: 0;
+  }
