@@ -5,13 +5,13 @@
  * @package       HAURANDMOD
  * @author        Hans-Gerd Gerhards
  * @license       gplv2
- * @version       0.1
+ * @version       0.2
  *
  * @wordpress-plugin
  * Plugin Name:   haurand modified query loop
  * Plugin URI:    https://haurand.com
  * Description:   Sorts posts in "Wartung" category by update date (ascending) and displays all posts in a individual category (f. e. Wartung).
- * Version:       0.1
+ * Version:       0.2
  * Author:        Hans-Gerd Gerhards
  * Author URI:    https://haurand.com
  * Text Domain:   haurand-modified-query-loop
@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 function custom_category_sort_query( $query ) {
 	// var_dump($query);
 	// echo $query->is_category( 'wartung' );
-	if (!is_admin() && is_category('wartung')) {
+	if (!is_admin() && ((is_category('wartung')) || (is_category('hans-gerd')) || (is_category('regina')))) {
 		$query->set( 'posts_per_page', -1 ); // Display all posts
 		$query->set( 'orderby', 'modified' );
 	    $query->set( 'order', 'ASC' ); // Order by ascending (oldest first)

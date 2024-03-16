@@ -7,7 +7,7 @@ Tags:
 Requires at least: 
 Tested up to: 
 Requires PHP: 
-Stable tag: 0.1
+Stable tag: 0.2
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -56,6 +56,9 @@ An answer to that question.
 4. Click on `Activate plugin`
 
 == Changelog ==
+
+= 0.2: March 16, 2024 =
+* modified query loop even for subcategories hans-gerd and regina
 
 = 0.1: March 16, 2024 =
 * Birthday of haurand modified query loop
