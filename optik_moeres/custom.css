@@ -60,6 +60,13 @@ a:not([href]) {
 	}
 }
 
+/* Auf mobilen Geräten Filiale Haaren */
+@media (max-width: 1024px) {
+	.gb-grid-wrapper.haaren {
+    flex-flow: wrap-reverse;
+	}
+}
+
 /* Terminleiste oben sticky */
 .sticky_termin {
   position: sticky;
