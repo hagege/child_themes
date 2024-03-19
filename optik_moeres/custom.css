@@ -40,6 +40,21 @@ a:not([href]) {
   cursor: default;
 }
 
+
+/* Hover bei social icons */
+.wp-block-image.social_icon :hover
+{
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    transform: scale(1.05);
+    -webkit-transform: scale(1.07);
+    -moz-transform: scale(1.07);
+	  -webkit-transition: all .9s;
+    -moz-transition: all .9s;
+    transition: all .9s;
+}
+
 /* Hintergrundfarbe für Overlay bei Embed Privacy */
 
 .embed-privacy-overlay {
