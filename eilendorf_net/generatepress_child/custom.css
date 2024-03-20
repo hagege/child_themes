@@ -35,6 +35,11 @@ Helltürkis:   #00F5F6
 
 }
 
+/* Border um Anzeigen */
+img.anzeigen {
+    border: 1px solid #eaeaea;
+}
+
 /* Für Button "Senden" bei Contact Form 7 */
 input.wpcf7-form-control.has-spinner.wpcf7-submit
 {
