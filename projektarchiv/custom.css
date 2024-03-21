@@ -1,14 +1,3 @@
-/* Definierte individuelle Farben 
-    --wp--preset--color--custom-gelb: #f3cd1e;
-    --wp--preset--color--custom-dunkelblau: #082445;
-    --wp--preset--color--custom-rot-transparent: #bf191980;
-    --wp--preset--color--custom-leuchtendes-gr-n: #9dff20;
-    --wp--preset--color--custom-leuchtendes-orange: #ff6900;
-    --wp--preset--color--custom-hellblau: #8ed1fc;
-
-    --wp--preset--color--custom-hellblau--transpa: #8DD2FC26;
-
-    --wp--preset--color--custom-rot: #eb1717;
 /* Variablen */
 :root {
     /* funktioniert nicht mehr bei TT4, daher nur definiert */
@@ -22,6 +11,17 @@
     --animate-duration: 1s;
     --animate-delay: 1s;
     --animate-repeat: 1;
+/* Definierte individuelle Farben */
+    --wp--preset--color--custom-gelb: #f3cd1e;
+    --wp--preset--color--custom-dunkelblau: #082445;
+    --wp--preset--color--custom-rot-transparent: #bf191980;
+    --wp--preset--color--custom-leuchtendes-gr-n: #9dff20;
+    --wp--preset--color--custom-leuchtendes-orange: #ff6900;
+    --wp--preset--color--custom-hellblau: #8ed1fc;
+
+    --wp--preset--color--custom-hellblau--transpa: #8DD2FC26;
+
+    --wp--preset--color--custom-rot: #eb1717;
   }
   
   
