@@ -1,0 +1,261 @@
+/* Farben */
+/* Variablen */
+:root {
+    --dunkelblau-color: rgba(30, 51, 127, 1);
+    --orange-color: rgba(255, 125, 31, 1);
+    --hellblau-color:  rgba(0, 123, 190, 1);
+    --hellgrau-color: rgba(234, 234, 234, 0.4);
+    --lila-color: rgba(162, 50, 150, 1);
+    --rot-color: rgba(238, 56, 63, 1);	     
+    --gelb-color: rgba(255, 216, 0, 1);	  
+    --gruen-color: rgba(135, 193, 44, 1);			
+    --wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
+    --wp--preset--font-size--cover-paragraph: clamp(2rem, 10vw, 6rem);
+    --wp--preset--font-size--h2: clamp(1.5rem, 2vw, 6rem);
+      /* funktioniert nicht, daher nur definiert */
+  --rot-color_transpa: rgba(191, 25, 25, 0.5);
+    --mobile-breakpoint: 767px;
+    --tablet-breakpoint: 900px;
+  }
+  /*
+  Dunkelblau	#1E337F
+  Orange		#FF7D1F
+  Hellblau	#007BBE
+  Lila		# A23296
+  Rot	#EE383F
+  Gelb	#FFD800
+  Grün 	#87C12C
+  
+  */
+  
+  /* auf Home andere farbliche GEstaltung */
+  .home .inside-article {
+      background-color: var(--dunkelblau-color); 
+        padding-top: 0px;
+  }
+  
+  /* Cursor beim Logo entfernen */
+  .navigation-stick .site-logo a {
+      pointer-events: none;
+  }
+  
+  /* verindert die Anzeige "Werden Sie Mitglied bei uns" bei der Anmeldung */
+  .swpm-join-us-link {
+      display: none;
+  }
+  
+  /* für Krankmeldung */
+  span.vonbis {
+      display: inline-block;
+      width: 50px;
+  }
+  
+  /* smooth scrolling und korrekte Ansteuerung interner Anker */
+  html {
+    /* scroll-behavior: smooth; */
+    scroll-padding-top: 10rem;
+  }
+  
+  .home aside#block-7 {
+      display: none;
+  }
+  
+  /* Korrektur notwendig: Nur bei Familienunterstützender Dienst hat die folgende Zeile bei Rand oben 2em erzeugt */ 
+  .entry-content:not(:first-child) {
+    margin-top: 0;
+  }
+  
+  /* Kompletter Footer als Block */
+  .footer-widgets .widget {
+    margin-bottom: -1px;
+  }
+  
+  /* H1 wird auf der Startseite nicht angezeigt, taucht aber im Quelltext auf */
+  .page-id-7 .entry-title,
+  .page-id-68 .entry-title{
+    display: none;
+  }
+  
+  /* Scrollbar vertikal immer anzeigen */
+  body {
+  overflow-y: scroll; /* Show vertical scrollbar */
+  }
+  
+  /* Bullet dunkelblau bei Listen */
+  ul li::marker {
+  color: var(--dunkelblau-color);
+  font-size: 1.5em;
+  }
+  
+  /* Schatten für Bilder */
+  figure img {
+    box-shadow: 5px 5px 5px 1px rgba(30,51,127,0.2);
+  }
+  
+  
+  /* für H2 bei Kacheln */
+  h2.gb-headline-text.kachel_h2 {
+    color: var(--wp--preset--color--white);
+  }
+  
+  /* Kachel für Brücke */
+  div.bruecke_links_oben div.wp-block-group__inner-container {
+    margin: 0px;
+    padding: 10px;
+  }
+  
+  p.kachel_absatz_oben,
+  h2.kachel_absatz_oben {
+  /* border-radius: 0px 0px 40px 0px; */
+  margin: 0px;
+  font-size: clamp(1rem, 0.88rem + 0.6vw, 1.6rem);
+  }
+  
+  div.kachel_oben_links p,
+  div.kachel_oben_links h2 {
+    padding: 20px 30px 20px 30px;
+  }
+  
+  div.kachel_unten_links p,
+  div.kachel_unten_links h2
+  {
+    margin-bottom: 0px;
+  }
+  
+  /* h2 auf Einzelseiten */
+  h2.kachel_absatz_oben.gb-headline-text {
+    color: white;
+  }
+  
+  /* Auf 100% Breite bei 850px */
+  @media (max-width: 850px) {
+  .bruecke_gruppe_kacheln .gb-grid-wrapper .gb-grid-column {
+    width: 100%;
+  }
+  }
+  
+  /* Ansprechpartner auf den Bereichsseiten */
+  @media (max-width: 767px) {
+  h2.ansprechpartner {
+    margin-left: 0px;
+    margin-top: 40px;
+  }
+  }
+  
+  
+  /* ----------------------------- */
+  /* Navigation                    */
+  /* ----------------------------- */
+  
+  /* Einstellungen für das Desktop-Menü */
+  @media (min-width: 769px) {
+    /* nav links effect */
+    .main-navigation .menu > .menu-item > a::after{
+        content: "";
+        position: absolute;
+        right: 0;
+        left: 50%;
+        bottom: 0px;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        color: var(--dunkelblau-color);
+        display: block;
+        width: 0;
+        height: 3px;   
+        background-color: currentcolor; 
+        transition: 0.3s width ease;
+    }
+    .main-navigation .menu > .menu-item.current-menu-item > a::after,
+    .main-navigation .menu > .menu-item > a:hover::after {
+        width: 100%;
+        color: var(--hellblau-color);
+    }
+  
+  .main-navigation .menu > .menu-item.current-menu-item > a::after,
+    .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
+    .main-navigation .menu > .menu-item > a:active::after {
+    width: 100%;
+    color: var(--dunkelblau-color);
+    }
+  /* Submenü 
+  ul.sub-menu {
+    opacity: 0.9;
+  }
+  */
+  }
+  
+  /* ---------------------*/
+  /* Der Detail-Block mit */ 
+  /* einigen Anpassungen  */
+  /* ---------------------*/
+  summary {
+  list-style: none;
+  display: flex; /* also removes the list marker */
+  align-items: center;
+  padding: 2rem;
+  font-weight: 400;
+  background: var(--dunkelblau-color);
+  color: white;
+  }
+  
+  summary::before{
+  content: '>';
+  /*  margin-left: .75em; */
+  transition: 0.2s;
+  margin-right: 1rem;
+  font-size: 2rem;
+  }
+  
+  
+  details[open] > summary::before{
+  transform: rotate(90deg);
+  }
+  
+  .wp-block-details[open] summary,
+  .wp-block-details summary:hover
+  {
+  background: var(--hellblau-color);
+  transition: all 0.2s ease-in-out;
+  }
+  
+  /* .wp-block-details 
+  summary:focus {
+  background:var(--hellblau-color);
+  transition: all 0.2s ease-in-out;
+  }
+  */
+  
+  summary::-webkit-details-marker {
+  display: none;
+  }
+  
+  
+  /* Background content of details
+   * deaktiviert 6.12.2023 
+  details p {
+    padding: 2rem;
+    margin-top: 0;
+  }
+  */
+  
+  /* Hintergrundfarbe details */
+  details > div.wp-block-group {
+    background: var(--hellgrau-color);
+  }
+  
+  @keyframes details-show {
+  from {
+    opacity:0;
+    transform: var(--details-translate, translateY(-0.5em));
+  }
+  }
+  
+  details[open] > *:not(summary),
+  details[close] > *:not(summary) {
+  animation: details-show 1000ms ease-in-out;
+  }
+  
+  .home .separate-containers .inside-article {
+      background-color: var(--dunkelblau-color);
+  }
+  
