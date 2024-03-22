@@ -35,6 +35,11 @@ Helltürkis:   #00F5F6
 
 }
 
+/* oberer Rand für Fußzeile 1 (Widget) */ 
+aside#block-115 {
+    padding-top: 8px;
+}
+
 /* Border um Anzeigen */
 img.anzeigen {
     border: 1px solid #eaeaea;
