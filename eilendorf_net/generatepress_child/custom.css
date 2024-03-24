@@ -11,7 +11,7 @@ Hellblau:     #08ADAD
 Orange:       #FA660F
 Braun:        #AD4609
 Braunorange:  #FF9354
-Dunkeltürkis: #08ADAD
+Dunkeltürkis: #227676
 Helltürkis:   #00F5F6
 
 
@@ -21,7 +21,7 @@ Helltürkis:   #00F5F6
 	--orange-color: rgba(250, 102, 15, 1);
 	--braun-color: rgba(173, 70, 9, 1);
 	--braunorange-color: rgba(255, 147, 84, 1);
-	--dunkeltuerkis-color: rgba(8, 173, 173, 1);
+	--dunkeltuerkis-color: rgba(34, 118, 118, 1);
   --dunkeltuerkis-color-opacity: rgba(8, 173, 173, 0.2);
 	--helltuerkis-color: rgba(0, 245, 246, 1);
 	--shadow-kacheln: 0 1px 4px 0 rgb(12 12 13 / 10%);
