@@ -166,14 +166,14 @@ p.has-text-align-center.animated.fadeInLeft.slower {
 p.has-text-align-center.animated.fadeInLeft.slow {
     padding-top: 30rem;
     margin-bottom: 1rem;
-    margin-left: 10rem;
+    margin-left: clamp(1rem, -5.909rem + 34.55vw, 15rem) ;
     text-align: left;
 		color: white;
 		font-size: 3rem;
 }
 
 p.has-text-align-center.animated.fadeInLeft.slower {
-    margin-left: 10rem;
+    margin-left: clamp(1rem, -5.909rem + 34.55vw, 15rem);
     text-align: left;
 		color: white;
 		font-size: 2rem;
