@@ -71,13 +71,19 @@
   
   
   main .entry-content a {
-  box-shadow: inset 0 -5px 0 var(--wp--preset--color--custom-gelb);
-  text-decoration: none;
+    box-shadow: inset 0 -3px 0 var(--wp--preset--color--custom-gelb);
+    text-decoration: none;
+  }
+
+  main .entry-content a.wp-block-button__link {
+    box-shadow: inset 0 -1px 0 var(--wp--preset--color--custom-gelb);
+    text-decoration: none;
   }
   
   main .entry-content a:hover{
-  box-shadow: inset 0 -25px 0 var(--wp--preset--color--custom-gelb);
-  transition: all 0.2s ease-in-out;
+    box-shadow: inset 0 -50px 0 var(--wp--preset--color--custom-gelb);
+    transition: all 0.4s ease-in-out;
+    color: black;
   }
   
   /* lange Wörter, z. B. endlose Links trennen */
@@ -151,7 +157,7 @@
   
   
   /* Design für Button */
-  a.wp-block-button__link.wp-element-button,  
+div.button_im_header a.wp-block-button__link.wp-element-button,  
   p.form-submit.wp-block-button, .simpletoc.wp-block-simpletoc-toc button{
   cursor: pointer;
   font-size: 14px;
@@ -169,7 +175,7 @@
   padding: 13px 30px;
   }
   
-  a.wp-block-button__link.wp-element-button:hover, p.form-submit.wp-block-button:hover, .simpletoc.wp-block-simpletoc-toc button:hover{
+div.button_im_header a.wp-block-button__link.wp-element-button:hover, p.form-submit.wp-block-button:hover, .simpletoc.wp-block-simpletoc-toc button:hover{
   color: #fff;
   background-color: var(--wp--preset--color--custom-dunkelblau);
   outline: none;
@@ -178,7 +184,7 @@
   transition-property: background-color, color;
   }
   
-  a.wp-block-button__link.wp-element-button:after, p.form-submit.wp-block-button:after,.simpletoc.wp-block-simpletoc-toc button:after{
+div.button_im_header a.wp-block-button__link.wp-element-button:after, p.form-submit.wp-block-button:after,.simpletoc.wp-block-simpletoc-toc button:after{
   content: '';
   position: absolute;
   height: calc(100% + 3px);
