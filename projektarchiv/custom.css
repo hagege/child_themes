@@ -195,7 +195,12 @@ div.button_im_header a.wp-block-button__link.wp-element-button:after, p.form-sub
   background: var(--wp--preset--color--custom-gelb);
   border: 3px solid #F3CD1E;
   }
-  
+ 
+ 
+/* runder Button mit schrägem Text */
+.wp-block-buttons.schraeger_text {
+    transform: rotate(15deg);
+}
   
   /* ---------------------*/
   /* Der Detail-Block mit */ 
