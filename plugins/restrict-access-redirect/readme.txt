@@ -7,7 +7,7 @@ Tags:
 Requires at least: 
 Tested up to: 
 Requires PHP: 
-Stable tag: 0.3.1
+Stable tag: 0.4
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -60,6 +60,10 @@ An answer to that question.
 4. Click on `Activate plugin`
 
 == Changelog ==
+
+= 0.4: March 26, 2024 =
+* Function to hide Admin Bar for any non-admin users
+* Settings to enable/disable Admin Bar
 
 = 0.3.1: March 01, 2024 =
 * superfluous lines and functions removed
