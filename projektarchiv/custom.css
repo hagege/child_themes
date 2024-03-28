@@ -23,6 +23,29 @@
 
     --wp--preset--color--custom-rot: #eb1717;
   }
+
+/* shrink header */
+.wp-block-group.header_outer {
+    position: sticky;
+    top: -100px;
+    height: 200px;
+    z-index: 99999;    
+}
+
+
+.wp-block-group.alignfull.header_inner {
+    height: 100px;
+    position: sticky;
+    top: 0;
+}
+
+@media (max-width: 599px) {
+.wp-block-group.alignfull.header_inner {
+    height: 50px;
+    position: sticky;
+    top: 50px;
+}
+}
   
   
   /* Zentrierter Container ohne GB */
