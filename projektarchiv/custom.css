@@ -41,9 +41,15 @@
 
 @media (max-width: 599px) {
 .wp-block-group.alignfull.header_inner {
+    padding-top: 20px;
+    padding-bottom: 50px;
     height: 50px;
     position: sticky;
     top: 50px;
+    background-color: var(--wp--preset--color--custom-hellblau);
+}
+.wp-block-group.has-pale-cyan-blue-background-color.has-background.has-global-padding.is-layout-constrained.wp-block-group-is-layout-constrained {
+    display: none;
 }
 }
   
