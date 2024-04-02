@@ -24,6 +24,7 @@
     --wp--preset--color--custom-rot: #eb1717;
   }
 
+
 /* shrink header */
 .wp-block-group.header_outer {
     position: sticky;
@@ -35,7 +36,7 @@
 
 .wp-block-group.alignfull.header_inner {
     height: 100px;
-    position: sticky;
+    position: sticky; /* seltsam: wenn deaktivert wird der Button im Menue nicht richtig angezeigt */
     top: 0;
 }
 
@@ -44,11 +45,12 @@
     padding-top: 20px;
     padding-bottom: 50px;
     height: 50px;
-    position: sticky;
+    position: sticky; 
     top: 50px;
     background-color: var(--wp--preset--color--custom-hellblau);
 }
-.wp-block-group.has-pale-cyan-blue-background-color.has-background.has-global-padding.is-layout-constrained.wp-block-group-is-layout-constrained {
+
+.wp-block-group.blauer_abstand {
     display: none;
 }
 }
@@ -592,3 +594,41 @@ div.button_im_header a.wp-block-button__link.wp-element-button:after, p.form-sub
       max-height: 120px;
       bottom: 0;
   }
+
+
+.cover-block-container {
+     /* Enables vertical scrolling */
+     overflow-y: scroll;
+
+     /* Sets the height to a fixed value or based on the viewport height */
+     height: 100vh; /* This will make the container take the full height of the viewport */
+     /* Enables scroll snapping */
+     scroll-snap-type: y mandatory;
+   }
+
+   .wp-block-cover {
+     /* This will align the snapping point at the start of each block */
+     scroll-snap-align: start;
+   }
+
+/* container holding the cover block */
+.scroll-snap-container {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory; /*vertical snapping */
+    height: 100vh; /*Adjust based on layout */
+}
+
+/* Individual Cover Blocks */
+.scroll-snap-container .wp-block-cover {
+    scroll-snap-align: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smotth transition for the effect */
+}
+
+/* when a user scrolls and the block snas into place add a more pronounced effect */
+.scroll-snap-container .wp-block-cover:target {
+    transform: scale(1.02); /* slightly scale up the snapped cover block */
+    box-shadow: 0 0 20px rgba (0,0,0,0.5); /* add a shadow for emphasis */
+}
