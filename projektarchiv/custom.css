@@ -352,6 +352,7 @@ div.button_im_header a.wp-block-button__link.wp-element-button:after, p.form-sub
   }
   
   /* Anpassung Suche in Navigation */
+  /*
   button.wp-block-search__button.has-background.has-tertiary-background-color.has-icon.wp-element-button {
       margin-bottom: 20px;
       padding-right: 45px;
@@ -360,6 +361,7 @@ div.button_im_header a.wp-block-button__link.wp-element-button:after, p.form-sub
   input#wp-block-search__input-1 {
       margin-bottom: 20px;
   }
+  */
   
   .wp-block-search__button svg {
       min-height: 30px;
