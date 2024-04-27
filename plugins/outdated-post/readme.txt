@@ -7,7 +7,7 @@ Tags:
 Requires at least: 
 Tested up to: 
 Requires PHP: 
-Stable tag: 0.2.1
+Stable tag: 0.3.1
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -56,6 +56,12 @@ An answer to that question.
 4. Click on `Activate plugin`
 
 == Changelog ==
+
+= 0.3.1: April 27, 2024 =
+* Disable warning too old and reading time
+
+= 0.3: April 27, 2024 =
+* Estimated Reading Time
 
 = 0.2.1: April 27, 2024 =
 * Show Last Updated and Post date
