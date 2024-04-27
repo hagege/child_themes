@@ -9,6 +9,21 @@ hellblau: #f7f8f9
 
 /* TEST Anfang */
 
+/* Meldungen bei Beiträgen */
+.post-update-warning {
+    background-color: var(--base-2);
+    font-size: 1rem;
+	  padding: 0.5rem;
+}
+
+.post-show-update {
+background-color: var(--wp--preset--color--vivid-red);
+    color: white;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
 /* Cover mit grauem Hintergrund bei Hover */
 
 .cover_referenzen > .wp-block-cover__inner-container {
