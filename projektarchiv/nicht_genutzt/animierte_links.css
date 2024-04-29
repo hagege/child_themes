@@ -1,0 +1,45 @@
+:where(.wp-site-blocks *:focus){outline-width:2px;outline-style:solid}
+
+
+/* blauer Unterstrich bei Links */ 
+main .entry-content a, .wp-block-group.has-global-padding.is-layout-constrained.wp-block-group-is-layout-constrained a {
+    box-shadow: inset 0 -1px 0 var(--wp--preset--color--vivid-cyan-blue);
+    text-decoration: none;
+  }
+
+
+
+  main .entry-content a.wp-block-button__link {
+    box-shadow: inset 0 -50px 0 var(--wp--preset--color--vivid-cyan-blue);
+    text-decoration: none;
+  }
+  
+  main .entry-content a:hover, .wp-block-group.has-global-padding.is-layout-constrained.wp-block-group-is-layout-constrained a:hover{
+    box-shadow: inset 0 -4px 0 var(--wp--preset--color--vivid-cyan-blue);
+    transition: all 0.6s ease-in-out;
+  }
+
+
+/*
+span.wp-block-navigation-item__label:after {
+    display: block;
+    background-color: #13aff0;
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+    visibility: hidden;
+    -moz-transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    -webkit-transition: all .25s ease-out;
+    -moz-transition: all .25s ease-out;
+    -ms-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+}
+
+*/
