@@ -812,4 +812,46 @@ function my_category_list_shortcode() {
 }
 add_shortcode('my_category_list', 'my_category_list_shortcode');
 
+
+
+/* AntispamBee-Filter, siehe https://antispambee.pluginkollektiv.org/de/dokumentation/#hooks */
+
+function antispam_bee_patterns() {
+  add_filter( 'antispam_bee_patterns', 'antispam_bee_add_custom_patterns' );
+}
+add_action( 'init', 'antispam_bee_patterns' );
+
+// Einzelne Filter bestimmen (author, host, body, ip, email). Mehrere Reguläre Ausdrücke durch | trennen
+function antispam_bee_add_custom_patterns($patterns) {
+
+  // Autoren filtern
+  $patterns[] = array(
+    'author' => 'Neha|Sruti|Autor3'
+  );
+
+  // URL filtern (Beispiel filtert example.de.cool und example.de mit und ohne www.)
+  $patterns[] = array(
+    'host' => '^(www\.)?gigolomania\.com|^(www\.)?gigolomania\.com$'
+  );
+
+  // Kommentarinhalt filtern (Beispiel behandelt 3 oder mehr Links im Kommentar als Spam)
+  $patterns[] = array(
+    'body' => '(.*(http|https|ftp|ftps)\:\/\/){4,}'
+  );
+
+  // IP Adresse filtern (Beispiel filtert 192.168.XXX.XXX) 
+  /*
+  $patterns[] = array(
+    'ip' => '^(192\.)(168\.)(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.)([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$'
+  );
+  */
+  // E-Mail-Adresse filtern (Beispiel behandelt .xx oder .xxx als Spam)
+  /*
+  $patterns[] = array(
+    'email' => '(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.(xx|xxx)+$)'
+  );
+  */
+return $patterns;
+}
+
 ?>
