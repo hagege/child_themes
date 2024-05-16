@@ -9,6 +9,12 @@ FARBWERTE
 Web und Bildschirm Druck
 */
 
+/* Link Veranstaltung erfassen */
+a.tribe-events-button-beitrag, a.tribe-events-button-beitrag:focus, a.tribe-events-button-beitrag:visited {
+    color: #fff!important;
+}
+
+
 /* wegen seltsamen Designs: */
 .tribe-events-c-messages__message.tribe-events-c-messages__message--notice {
     display: none;
