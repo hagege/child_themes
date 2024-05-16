@@ -11,6 +11,12 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Kartendarstellung soll Navigation nicht überlappen */
+.wp-block-group.kartendarstellung {
+    position: relative;
+    z-index: 2;
+}
+
 
 @media screen and (max-width: 900px) {
   /* hamburger button */
