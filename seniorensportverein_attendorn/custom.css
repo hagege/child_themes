@@ -6,87 +6,113 @@ Dunkelgrau: #818181
 https://www.mediaevent.de/css/display-table.html
 */
 
+/* barrierefreies Formular */
+input.wpcf7-form-control:focus {
+  outline: none;
+  border-color: black;
+  border-width: 6px;
+  border-style: double;
+}
+
+/* Links im Paragraph */
+.wp-block-post-content a:where(:not(.wp-element-button)) {
+  color: var(--wp--preset--color--contrast);
+}
+
+@media screen and (min-width: 781px){
+.wp-block-spacer.abstand_kacheln {
+  display: none;
+}
+}
+
+
+@media screen and (max-width: 600px){
+h2.titel_abfrage_loop {
+  flex-basis: 0;
+}
+}
+
 /* smooth scrolling */
 html {
-  scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
 
 /* Kartendarstellung soll Navigation nicht überlappen */
 .wp-block-group.kartendarstellung {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 
 @media screen and (max-width: 900px) {
-  /* hamburger button */
-  .wp-block-navigation__responsive-container-open  {
-    display: block !important;
-  }
+/* hamburger button */
+.wp-block-navigation__responsive-container-open  {
+  display: block !important;
+}
 
-  /* full menu */
-  .wp-block-navigation__responsive-container:not(.is-menu-open.has-modal-open) {
-    display: none !important;
-  }
+/* full menu */
+.wp-block-navigation__responsive-container:not(.is-menu-open.has-modal-open) {
+  display: none !important;
+}
 .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open {
-    background-color: rgb(255 255 255 / 90%);
-  }
+  background-color: rgb(255 255 255 / 90%);
+}
 ul.wp-block-navigation__container.is-responsive.items-justified-right.wp-block-navigation {
-    background-color: white;
-    padding: 3rem;
+  background-color: white;
+  padding: 3rem;
 }
 }
 
 /* wenn nicht href, dann Standard-Cursor */
 a:not([href]) {
-  cursor: default;
+cursor: default;
 }
 
 
 /* color für Schrift auf Kachel */
 p.has-text-align-center.p_kachel.has-large-font-size {
-    color: white;
+  color: white;
 }
 
 /* PDF-Wochenplan-Dateien */
 .pdf-button {
-    display: table;
-    background-color: var(--wp--preset--color--hellblau);
-    color: var(--wp--preset--color--contrast);
-    padding: calc(0.667em + 2px) calc(1.333em + 2px);
-    text-align: center;
+  display: table;
+  background-color: var(--wp--preset--color--hellblau);
+  color: var(--wp--preset--color--contrast);
+  padding: calc(0.667em + 2px) calc(1.333em + 2px);
+  text-align: center;
 }
 
 .pdf-button a {
-    text-decoration:none;
+  text-decoration:none;
 color: var(--wp--preset--color--contrast);
 }
 
 .pdf-button a:hover {
-    text-decoration:none;
-    color: var(--wp--preset--color--base);
+  text-decoration:none;
+  color: var(--wp--preset--color--base);
 }
 
 .pdf-button:hover {
-    background-color: var(--wp--preset--color--kraeftiges-blau);
-    color: var(--wp--preset--color--base);
+  background-color: var(--wp--preset--color--kraeftiges-blau);
+  color: var(--wp--preset--color--base);
 }
 
 
 .pdf-button-not-found {
-    width: inherit;
-    text-align: center;
+  width: inherit;
+  text-align: center;
 }
 
 /* oberen Rand deaktivieren */
 .wp-site-blocks {
-  padding-top: 0px;
+padding-top: 0px;
 }
 
 
 /* Größe des Logos je nach Viewport anpassen */
 img.custom-logo {
-  width: clamp(15.625rem, 12.216rem + 17.05vw, 15rem);
+width: clamp(15.625rem, 12.216rem + 17.05vw, 15rem);
 }
 
 
@@ -102,7 +128,7 @@ and (min-device-width: 768px)
 and (max-device-width: 1024px) 
 and (-webkit-min-device-pixel-ratio: 2) {
 .sport_cover .wp-block-cover__image-background {
-  background-attachment: scroll;
+background-attachment: scroll;
 }
 }
 
@@ -111,16 +137,16 @@ and (-webkit-min-device-pixel-ratio: 2) {
 input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="tel"], input[type="date"], 
 input[type="submit"],
 textarea, select {
-    width: 90%;
-    font-size: 1.5rem;
-    background-color: aliceblue;
-    border-color: #009FE3;
-    color: black;
+  width: 90%;
+  font-size: 1.5rem;
+  background-color: aliceblue;
+  border-color: #009FE3;
+  color: black;
 }
 
 
 /* Radio untereinander */	
 .wpcf7-list-item {
-    display: block!important;
+  display: block!important;
 }
 
