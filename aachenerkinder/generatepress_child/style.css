@@ -176,7 +176,7 @@ div.ackids_container {
   div.abgesagt {
       color: #ffffff;
       font-size: 1.0em;
-      background-color: #77BCC7;;
+      background-color: #457D80;;
       padding: 10px;
       margin-bottom: 1.0rem;
   }
@@ -299,7 +299,7 @@ div.ackids_container {
 
 /* Farben für "Weiterlesen-Button" */
 a.read-more.button {
-    background-color: #77BCC7;
+    background-color: #457D80;
     color: white;
     font-weight: 600;
 }
@@ -353,7 +353,7 @@ a.button-mitglied {
     color: #ffffff;
     font-size: 1.0em;
     font-weight: 600;
-    background-color: #77BCC7;
+    background-color: #457D80;
     /* keine runden Ecken */
     /* border-radius: 4px; */
     text-decoration: none!important;
@@ -435,8 +435,8 @@ main#tribe-events {
 
 /* Veranstaltungen exportieren */
 a.tribe-events-c-ical__link, .tribe-events .tribe-events-c-ical__link {
-    background-color: #77BCC7;
-    border: 1px solid #77BCC7;
+    background-color: #457D80;
+    border: 1px solid #457D80;
     color: #fff;
 }
 
@@ -682,7 +682,7 @@ td.tribe-events-othermonth.tribe-events-past.tribe-events-has-events.mobile-trig
 
 /* Farben für Suchen-Button TEC */
 button.tribe-common-c-btn.tribe-events-c-search__button {
-    background-color: #77BCC7!important;
+    background-color: #457D80!important;
 }
 
 button.tribe-common-c-btn.tribe-events-c-search__button:hover {
@@ -694,7 +694,7 @@ a.tribe-events-button-beitrag, a.tribe-events-button-beitrag:focus, a.tribe-even
     color: #ffffff;
     font-size:  0.9em;
     font-weight: 600;
-    background-color: #77BCC7;
+    background-color: #457D80;
     text-decoration: none!important;
 }
 
@@ -709,7 +709,7 @@ a.tribe-events-button-beitrag:hover {
     padding: 10px;
     color: #ffffff!important;
     font-size: 1.0em;
-    background-color: #77BCC7;
+    background-color: #457D80;
     /* keine runden Ecken */
     /* border-radius: 4px; */
     text-decoration: none!important;
@@ -857,7 +857,7 @@ body .dataTables_wrapper .dataTables_filter input {
 }
 
 #wpgmza_table_1 thead tr,#wpgmza_table_1 thead th{
-  background: #77BCC7;
+  background: #457D80;
   color: #fff;
 }
 
