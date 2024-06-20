@@ -20,6 +20,17 @@ CMYK 67-19-35-35
 
 /* TEST Anfang */
 
+/* Links im Footer */
+.footer-widgets a {
+  color: black;
+  text-decoration: underline;
+}
+
+.footer-widgets a:hover {
+  color: #457D80;
+  text-decoration: underline;
+}
+
 /* Breite Veranstaltungsliste */
 .tribe-common-l-container.tribe-events-l-container {
   width: 90%;
