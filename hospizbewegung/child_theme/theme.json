@@ -23,24 +23,19 @@
 					"slug": "contrast-1"
 				},
 				{
-					"color": "#ffffff",
+					"color": "#444444",
 					"name": "Kontrast / Zwei",
 					"slug": "contrast-2"
 				},
 				{
-					"color": "#444444",
+					"color": "#ffffff",
 					"name": "Kontrast / Drei",
 					"slug": "contrast-3"
 				},
 				{
 					"color": "#fbe1e1",
-					"name": "Contrast / Four",
+					"name": "Contrast / Vier",
 					"slug": "contrast-4"
-				},
-				{
-					"color": "#A62E30",
-					"name": "Contrast / Five",
-					"slug": "contrast-5"
 				}
 			]
 		},
@@ -181,6 +176,11 @@
 			"button": {
 				"color": {
 					"text": "var(--wp--preset--color--base)"
+				},
+				":hover": {
+					"color": {
+						"text": "var(--wp--preset--color--contrast-3)"
+					}
 				}
 			},
 			"caption": {
@@ -224,6 +224,11 @@
 				}
 			},
 			"link": {
+				":hover": {
+					"color": {
+						"text": "var(--wp--preset--color--base-2)"
+					}
+				},
 				"color": {
 					"text": "var(--wp--preset--color--contrast)"
 				}
