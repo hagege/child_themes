@@ -131,10 +131,14 @@
 				}
 			},
 			"core/navigation": {
-				"typography": {
-					"fontStyle": "normal",
-					"fontWeight": "400"
-				}
+					"elements": {
+							"link": {
+								"typography": {
+									"fontStyle": "normal",
+									"fontWeight": "400"
+								}
+						}
+					}
 			},
 			"core/paragraph": {
 				"color": {
