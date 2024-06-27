@@ -6,16 +6,16 @@ figure.wp-block-image figcaption {
 }
 
 
-/* Button: hover */
+/* Button: hover 
 .wp-element-button:hover, .wp-block-button__link:hover {
     background-color: var(--wp--preset--color--contrast-3);
     border-color: var(--wp--preset--color--contrast-3);
     color: var(--wp--preset--color--base);
 }
-
+*/
 
 a.wp-block-navigation-item__content {
-    text-underline-offset: 3px;
+    text-underline-offset: 7px;
     transition: all .2s;
     text-decoration: underline;
     text-decoration-thickness: 1px;
@@ -23,14 +23,16 @@ a.wp-block-navigation-item__content {
 
 
 a.wp-block-navigation-item__content:hover {
-    text-underline-offset: 5px;
-    transition: all .2s;
-    text-decoration: underline;
+    text-underline-offset: 10px;
     text-decoration-thickness: 2px;
 }
 
 
-/* Media Query für Navigation */
+a.wp-block-navigation-item__content:focus{
+    outline: 1px dotted;
+}
+
+
 @media (min-width: 600px) {
 .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
 display: none;

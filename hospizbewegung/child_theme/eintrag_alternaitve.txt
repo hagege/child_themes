@@ -1,0 +1,30 @@
+			"core/navigation": {
+					"elements": {
+							"link": {
+								"typography": {
+									"fontStyle": "normal",
+									"fontWeight": "400",
+									"font-size": "1.2rem"
+								},
+								"border": {
+									"bottom": {
+										"width": "14px",
+										"color": "white",
+										"style": "dotted"
+									}
+								},
+								":active": {
+									"typography": {
+										"textDecoration": "none"
+									},
+									"border": {
+										"bottom": {
+											"width": "4px",
+											"color": "currentColor",
+											"style": "solid"
+										}
+								}
+						}
+					}
+				}
+			},
