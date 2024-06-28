@@ -24,6 +24,22 @@
     --wp--preset--color--custom-rot: #eb1717;
   }
 
+/* fixierter Container mit der Navigation */
+.navi_container {
+    z-index: 50!important;
+}
+
+/* Bilder anders designen */
+figure.andere_form img {
+    background-color: var(--wp--preset--color--custom-gelb);
+    border-radius: 40% 60% 80% 30% / 30% 30% 70% 70%;
+    padding: 3em;
+}
+
+/* Lange Wörter immer trennen */
+.entry-content {
+    word-wrap: break-word;
+}
 
   /* Zentrierter Container ohne GB */
   .center_container_800px {
@@ -84,7 +100,7 @@ main .entry-content a, .wp-block-group.has-global-padding.is-layout-constrained.
   
   main .entry-content a:hover, .wp-block-group.has-global-padding.is-layout-constrained.wp-block-group-is-layout-constrained a:hover{
     box-shadow: inset 0 -50px 0 var(--wp--preset--color--custom-gelb);
-    transition: all 0.4s ease-in-out;
+    transition: all 0.8s ease-in-out;
     color: black;
   }
   
