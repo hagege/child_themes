@@ -30,7 +30,7 @@
 }
 
 /* Bilder anders designen */
-figure.andere_form img {
+figure.fancy_form img, p.fancy_form, div.fancy_form  {
     background-color: var(--wp--preset--color--custom-gelb);
     border-radius: 40% 60% 80% 30% / 30% 30% 70% 70%;
     padding: 3em;
