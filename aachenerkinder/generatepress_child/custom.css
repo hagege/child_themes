@@ -20,6 +20,11 @@ CMYK 67-19-35-35
 
 /* TEST Anfang */
 
+/* Änderung der Schriftfarbe für Balken "Veranstaltung erfassen" bei Terminen */
+.tribe-events-before-html a.button-mitglied {
+  color: white;
+}
+
 /* Links im Footer */
 .footer-widgets a {
   color: black;
