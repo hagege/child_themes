@@ -30,9 +30,9 @@
   
   /* Bilder anders designen */
   figure.fancy_form img, p.fancy_form, div.fancy_form  {
-      background-color: var(--gelb-color);
-      /* border-radius: 40% 60% 80% 30% / 20% 30% 70% 70%; */
-      /* border-radius: 50% 20% / 10% 40%; */
+      background-color: var(--gelb-color); 
+      /* border-radius: 40% 60% 80% 30% / 20% 30% 70% 70%; 
+      border-radius: 50% 20% / 10% 40%; */
       padding: 3em;
   }
   
