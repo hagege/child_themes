@@ -136,12 +136,32 @@ background-attachment: scroll;
 /* Einstellungen für Contact Form 7 */
 input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="tel"], input[type="date"], 
 input[type="submit"],
+input[type="number"],
 textarea, select {
   width: 90%;
   font-size: 1.5rem;
   background-color: aliceblue;
   border-color: #009FE3;
   color: black;
+}
+
+input[type="number"] {
+  width: inherit;
+}
+
+/* Einstellungen für Radio-Button */
+.wpcf7-form input[type=checkbox], .wpcf7-form input[type=radio] {
+-webkit-appearance: inner-spin-button!important;
+appearance: inner-spin-button!important;
+width: 2rem;
+height: 2rem;
+accent-color: #009FE3;
+margin-right: 0.5rem;
+}
+
+.themeform input[type="radio"]:checked::before, .widget_archive input[type="radio"]:checked::before, .widget_categories input[type="radio"]:checked::before, .wpcf7-form input[type="radio"]:checked::before {
+content: ""!important;
+background-color: #009FE3;
 }
 
 

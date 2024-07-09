@@ -17,7 +17,8 @@ form.wpcf7-form.init h2 {
 
 /* Einstellungen für Radio-Button */
 .wpcf7-form input[type=checkbox], .wpcf7-form input[type=radio] {
--webkit-appearance: inner-spin-button!important;
+  -webkit-appearance: inner-spin-button!important;
+  appearance: inner-spin-button!important;
   width: 2rem;
   height: 2rem;
   accent-color: #008000;
@@ -146,6 +147,7 @@ overflow: hidden;
 /* Damit die Checkboxen im Formular angezeigt werden */
 .wpcf7-form input[type=checkbox]{
   -webkit-appearance: checkbox!important;
+  appearance: checkbox!important;
   position: relative!important;
 }
 
