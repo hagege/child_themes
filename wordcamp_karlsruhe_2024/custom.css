@@ -33,7 +33,7 @@
       background-color: var(--gelb-color); 
       /* border-radius: 40% 60% 80% 30% / 20% 30% 70% 70%; 
       border-radius: 50% 20% / 10% 40%; */
-      padding: 3em;
+      padding: clamp(1rem, 0.4rem + 3vw, 4rem);
   }
   
   
