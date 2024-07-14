@@ -134,8 +134,7 @@
 				"elements": {
 					"link": {
 						"typography": {
-							"fontStyle": "normal",
-							"fontWeight": "500"
+							"fontStyle": "normal"
 						}
 					}
 				}
@@ -204,17 +203,17 @@
 					"color": {
 						"background": "var(--wp--preset--color--contrast-2)",
 						"text": "var(--wp--preset--color--contrast-4)"
+					},
+					"outline": {
+						"color": "var(--wp--preset--color--contrast)",
+						"offset": "4px",
+						"style": "dotted",
+						"width": "4px"
 					}
 				},
 				"color": {
 					"background": "var(--wp--preset--color--contrast)",
 					"text": "var(--wp--preset--color--base)"
-				},
-				"outline": {
-					"color": "var(--wp--preset--color--contrast)",
-					"offset": "4px",
-					"style": "dotted",
-					"width": "4px"
 				}
 			},
 			"caption": {
