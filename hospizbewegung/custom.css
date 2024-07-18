@@ -1,5 +1,11 @@
 :where(.wp-site-blocks *:focus){outline-width:2px;outline-style:solid}
 
+/* Rand zwischen Header und Content */ 
+:where(.wp-site-blocks) > * {
+    margin-block-start: 0rem;
+}
+
+
 /* Bildunterschriften zentriert */
 figure.wp-block-image figcaption {
     text-align: center;
@@ -65,4 +71,34 @@ display: block;
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container {
     left: 0
 }
+}
+
+
+/* Breakpoint für mobiles Menü */
+@media (min-width: 900px) {
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: auto;
+    background-color: inherit;
+  }
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) .wp-block-navigation__responsive-container-close {
+    display: none;
+  }
+  .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container {
+    left: 0;
+  }
+  .wp-block-navigation__responsive-container-open:not(.always-shown) {
+    display: none;
+  }
+}
+
+@media (max-width: 899px) {
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+    display: none;
+  }
+  .wp-block-navigation__responsive-container-open:not(.always-shown) {
+    display: flex;
+  }
 }
