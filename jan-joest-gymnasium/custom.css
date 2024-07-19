@@ -27,7 +27,15 @@
     "color": "#5A7A8a",
     "name": "Dunkelblau",
     "slug": "Dunkelblau"
-},
+}
+
+custom:
+orange: 
+--wp--preset--color--custom-orange
+#e95d0f;
+dunkleres orange: 
+--wp--preset--color--custom-dunkleres-orange
+#c94e0c
 */
 
 :where(.wp-site-blocks *:focus){outline-width:2px;outline-style:solid}
@@ -83,8 +91,8 @@ summary {
   list-style: none;
   display: flex; /* also removes the list marker */
   align-items: center;
-  padding: 2rem;
-  font-weight: bold;
+  padding-left: 0.7rem;
+  margin-bottom: 0.5rem;
   color: var(--wp--preset--color--base-2);
   background: var(--wp--preset--color--dunkelblau);
   border-radius: 5px;
@@ -105,7 +113,7 @@ details[open] > summary::before{
 .wp-block-details[open] summary,
 .wp-block-details summary:hover
 {
-    background: var(--wp--preset--color--contrast-2);
+    background: var(--wp--preset--color--custom-dunkleres-orange);
     transition: all 0.2s ease-in-out;
 }
 
