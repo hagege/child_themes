@@ -1,3 +1,35 @@
+/* {
+    "color": "#f9f9f9",
+    "name": "Base",
+    "slug": "base"
+},
+{
+    "color": "#ffffff",
+    "name": "Base / Two",
+    "slug": "base-2"
+},
+{
+    "color": "#111111",
+    "name": "Contrast",
+    "slug": "contrast"
+},
+{
+    "color": "#636363",
+    "name": "Contrast / Two",
+    "slug": "contrast-2"
+},
+{
+    "color": "#A4A4A4",
+    "name": "Contrast / Three",
+    "slug": "contrast-3"
+},
+{
+    "color": "#5A7A8a",
+    "name": "Dunkelblau",
+    "slug": "Dunkelblau"
+},
+*/
+
 :where(.wp-site-blocks *:focus){outline-width:2px;outline-style:solid}
 
 /* Menü bei hover */
@@ -40,3 +72,72 @@
     animation-duration: 0s!important;
 }
 /* b-slider Ende */
+
+
+
+/* ---------------------*/
+/* Der Detail-Block mit */ 
+/* einigen Anpassungen  */
+/* ---------------------*/
+summary {
+  list-style: none;
+  display: flex; /* also removes the list marker */
+  align-items: center;
+  padding: 2rem;
+  font-weight: bold;
+  color: var(--wp--preset--color--base-2);
+  background: var(--wp--preset--color--dunkelblau);
+  border-radius: 5px;
+}
+
+summary::before{
+  content: '>';
+  transition: 0.2s;
+  margin-right: 1rem;
+  font-size: 2rem;
+}
+
+
+details[open] > summary::before{
+  transform: rotate(90deg);
+}
+
+.wp-block-details[open] summary,
+.wp-block-details summary:hover
+{
+    background: var(--wp--preset--color--contrast-2);
+    transition: all 0.2s ease-in-out;
+}
+
+.wp-block-details summary:focus {
+    color: var(--wp--preset--color--contrast);
+    background: var(--wp--preset--color--hellblau);
+    transition: all 0.2s ease-in-out;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+.wp-block-details summary:focus {
+    outline-style: none;
+}
+
+/* Background content of details */
+details p {
+    background: var(--wp--preset--color--base);
+    padding: 2rem;
+    margin-top: 0;
+}
+
+@keyframes details-show {
+  from {
+    opacity:0;
+    transform: var(--details-translate, translateY(-0.5em));
+  }
+}
+
+details[open] > *:not(summary),
+details[close] > *:not(summary) {
+  animation: details-show 1000ms ease-in-out;
+}
