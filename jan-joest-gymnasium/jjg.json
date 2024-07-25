@@ -3,6 +3,7 @@
 	"version": 3,
 	"title": "JJG",
 	"settings": {
+		"appearanceTools": true,
 		"color": {
 			"palette": [
 				{
