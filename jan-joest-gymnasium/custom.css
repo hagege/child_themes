@@ -40,6 +40,11 @@ dunkleres orange:
 
 :where(.wp-site-blocks *:focus){outline-width:2px;outline-style:solid}
 
+/* Kein margin-top beim Footer */
+footer.wp-block-template-part {
+    margin-top: 0px;
+}
+
 /* Hintergrund Content */
 .entry-content {
     background-color: var(--wp--preset--color--base);
