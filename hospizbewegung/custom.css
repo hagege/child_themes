@@ -75,7 +75,7 @@ display: block;
 
 
 /* Breakpoint für mobiles Menü */
-@media (min-width: 900px) {
+@media (min-width: 1060px) {
   .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
     display: block;
     width: 100%;
@@ -94,7 +94,7 @@ display: block;
   }
 }
 
-@media (max-width: 899px) {
+@media (max-width: 1059px) {
   .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
     display: none;
   }
