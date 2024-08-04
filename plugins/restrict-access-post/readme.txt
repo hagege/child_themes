@@ -52,11 +52,17 @@ An answer to that question.
 
 1. Go to `Plugins` in the Admin menu
 2. Click on the button `Add new`
-3. Search for `Restrict Access` and click 'Install Now' or click on the `upload` link to upload `restrict-access.zip`
+3. Search for `Restrict Access Post` and click 'Install Now' or click on the `upload` link to upload `restrict-access.zip`
 4. Click on `Activate plugin`
 
 == Changelog ==
 
-= 0.1: August 4, 2024 =
+= 0.3: August 4, 2024 =
+* Tweaked: Display of the featured images and text excerpt is now also not shown in the archives in case of access restrictions.
+* New Name for plugin: Restrict Access Post
+
+= 0.2: August 4, 2024 =
 * Fixed: The issue was that the function caused the value for _restrict_access to always be set to "yes", even though "no" was set in the post.
+
+= 0.1: August 4, 2024 =
 * Birthday of Restrict Access

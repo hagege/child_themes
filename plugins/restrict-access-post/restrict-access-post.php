@@ -1,20 +1,20 @@
 <?php
 /**
- * Restrict Access
+ * Restrict Access Post
  *
  * @package       RESTRICTAC
  * @author        Hans-Gerd Gerhards
  * @license       gplv2
- * @version       0.2
+ * @version       0.3
  *
  * @wordpress-plugin
- * Plugin Name:   Restrict Access
+ * Plugin Name:   Restrict Access Post
  * Plugin URI:    https://haurand.com
  * Description:   Benutzerrolle, bei der Berechtigungen für bestimmte Beiträge zum Lesen eingerichtet werden kann.
- * Version:       0.2
+ * Version:       0.3
  * Author:        Hans-Gerd Gerhards
  * Author URI:    https://haurand.com
- * Text Domain:   restrict-access
+ * Text Domain:   restrict-access-post
  * Domain Path:   /languages
  * License:       GPLv2
  * License URI:   https://www.gnu.org/licenses/gpl-2.0.html
@@ -59,6 +59,97 @@ function restrict_content_by_role_and_meta($content) {
     return $content;
 }
 add_filter('the_content', 'restrict_content_by_role_and_meta');
+
+
+function restrict_post_content($content) {
+    if (is_singular('post') && !current_user_can('read_private_posts')) {
+        $post_id = get_the_ID();
+        $restricted = get_post_meta($post_id, '_restrict_access', true);
+
+		if ($restricted === '') {
+			$restricted = 'yes'; // Standardwert setzen
+		}
+		// echo('restricted: ') . $restricted . '<br>';
+        if ($restricted === 'yes' && !current_user_can('read_custom_posts')) {
+            return 'Dieser Inhalt ist für dich nicht verfügbar.';
+        }
+    }
+    return $content;
+}
+add_filter('the_content', 'restrict_post_content');
+
+// Excerpt verstecken
+function restrict_post_excerpt($excerpt) {
+    if (is_singular('post') && !current_user_can('read_private_posts')) {
+        $post_id = get_the_ID();
+        $restricted = get_post_meta($post_id, '_restrict_access', true);
+
+		if ($restricted === '') {
+			$restricted = 'yes'; // Standardwert setzen
+		}
+		// echo('restricted: ') . $restricted . '<br>';
+        if ($restricted === 'yes' && !current_user_can('read_custom_posts')) {
+            return 'Dieser Inhalt ist für dich nicht verfügbar.';
+        }
+    }
+    return $excerpt;
+}
+add_filter('the_excerpt', 'restrict_post_excerpt');
+
+// Featured Image verstecken
+function restrict_post_thumbnail($html, $post_id) {
+    if (!current_user_can('read_private_posts')) {
+        $restricted = get_post_meta($post_id, '_restrict_access', true);
+
+		if ($restricted === '') {
+			$restricted = 'yes'; // Standardwert setzen
+		}
+		// echo('restricted: ') . $restricted . '<br>';
+        if ($restricted === 'yes' && !current_user_can('read_custom_posts')) {
+            return 'Dieser Inhalt ist für dich nicht verfügbar.';
+        }
+    }
+    return $html;
+}
+add_filter('post_thumbnail_html', 'restrict_post_thumbnail', 10, 2);
+
+// Verstecken des Excerpts in Archiven für nicht berechtigte Benutzer
+function restrict_archive_excerpt($excerpt) {
+    if (!current_user_can('read_private_posts')) {
+        global $post;
+		$post_id = $post->ID;
+        $restricted = get_post_meta($post_id, '_restrict_access', true);
+
+		if ($restricted === '') {
+			$restricted = 'yes'; // Standardwert setzen
+		}
+		// echo('restricted: ') . $restricted . '<br>';
+        if ($restricted === 'yes' && !current_user_can('read_custom_posts')) {
+            return 'Dieser Inhalt ist für dich nicht verfügbar.';
+        }
+
+    }
+    return $excerpt;
+}
+add_filter('get_the_excerpt', 'restrict_archive_excerpt');
+
+// Verstecken des Featured Images in Archiven für nicht berechtigte Benutzer
+function restrict_archive_thumbnail($html, $post_id) {
+    if (is_archive() && !current_user_can('read_private_posts')) {
+        $restricted = get_post_meta($post_id, '_restrict_access', true);
+
+		if ($restricted === '') {
+			$restricted = 'yes'; // Standardwert setzen
+		}
+		// echo('restricted: ') . $restricted . '<br>';
+        if ($restricted === 'yes' && !current_user_can('read_custom_posts')) {
+            return 'Dieser Inhalt ist für dich nicht verfügbar.';
+        }
+    }
+    return $html;
+}
+add_filter('post_thumbnail_html', 'restrict_archive_thumbnail', 10, 2);
+
 
 // Custom Meta Box hinzufügen
 function add_custom_meta_box() {
