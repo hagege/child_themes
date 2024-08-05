@@ -5,13 +5,13 @@
  * @package       RESTRICTPO
  * @author        Hans-Gerd Gerhards
  * @license       gplv2
- * @version       0.2
+ * @version       0.3
  *
  * @wordpress-plugin
  * Plugin Name:   Restrict Post Access
  * Plugin URI:    https://haurand.com
  * Description:   Benutzerrolle, bei der Berechtigungen für bestimmte Beiträge zum Lesen eingerichtet werden können und ansonsten kein Zugriff auf die Website möglich sein soll..
- * Version:       0.2
+ * Version:       0.3
  * Author:        Hans-Gerd Gerhards
  * Author URI:    https://haurand.com
  * Text Domain:   restrict-post-access
@@ -27,6 +27,7 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 // Include your custom code here.
+
 // Benutzerrolle "Eingeschränkter Benutzer" hinzufügen
 function add_restricted_user_role() {
     add_role('restricted_user', 'Eingeschränkter Benutzer', array(
@@ -61,6 +62,23 @@ function block_other_pages_for_restricted_user() {
     }
 }
 add_action('template_redirect', 'block_other_pages_for_restricted_user');
+
+
+// Inhalt basierend auf der Berechtigung einschränken
+// Damit kann das Problem z. B. für sticky posts umgangen werden.
+function restrict_content_by_role_and_meta($content) {
+	$restricted = 'yes';            // zunächst nicht freigegeben
+	$post_id = get_the_ID();        // Hole die Post-ID
+	$category_slug = 'freigegeben'; // Slug der Kategorie
+	if (has_category($category_slug, $post_id)) {
+		$restricted = 'no';         // freigegeben
+	}
+    if (is_single() && $restricted === 'yes') {
+       return 'Dieser Inhalt ist für dich nicht verfügbar.';
+    }
+    return $content;
+}
+add_filter('the_content', 'restrict_content_by_role_and_meta');
 
 
 // Deaktivierung der Dashboard-Zugriffe für eingeschränkte Benutzer

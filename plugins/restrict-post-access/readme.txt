@@ -7,7 +7,7 @@ Tags:
 Requires at least: 
 Tested up to: 
 Requires PHP: 
-Stable tag: 0.2
+Stable tag: 0.3
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,7 +15,10 @@ Benutzerrolle, bei der Berechtigungen für bestimmte Beiträge zum Lesen eingeri
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+Dazu müssen die Beiträge der Kategorie "freigegeben" zugeordnet werden. 
+Das Plugin ersetzt das folgende Plugin. 
+Es gibt nur noch das Problem, dass man in der Adresszeile die URL ändern kann und dann alle Einträge auf der Startseite sieht. 
+Das ist aber nicht schlimm, weil jeder Eintrag automatisch wieder auf die Ansicht der freigegebenen Beiträge geleitet wird.
 
 For backwards compatibility, if this section is missing, the full length of the short description will be used, and
 Markdown parsed.
@@ -57,8 +60,11 @@ An answer to that question.
 
 == Changelog ==
 
+= 0.3: August 5, 2024 =
+* fixed Issues: don't show sticky posts, if restricted (workaround for sticky posts).
+
 = 0.2: August 5, 2024 =
-* Not fixed Issues: showed sticky posts and access on start page.
+* Not fixed Issues: access on start page.
 
 = 0.1: August 5, 2024 =
 * Birthday of Restrict Post Access
