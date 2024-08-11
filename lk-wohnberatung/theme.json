@@ -1,0 +1,360 @@
+{
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"color": "#F7F7F7",
+					"name": "Base",
+					"slug": "base"
+				},
+				{
+					"color": "#138735",
+					"name": "Base / Two",
+					"slug": "base-2"
+				},
+				{
+					"color": "#ED0518",
+					"name": "Contrast / 2",
+					"slug": "contrast-2"
+				},
+				{
+					"color": "#000000",
+					"name": "Contrast",
+					"slug": "contrast"
+				},
+				{
+					"color": "#38629F",
+					"name": "Contrast / 3",
+					"slug": "contrast-3"
+				}
+			]
+		},
+		"typography": {
+			"defaultFontSizes": false,
+			"fontFamilies": [
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Cardo",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/cardo/cardo_normal_400.woff2"
+							]
+						},
+						{
+							"fontFamily": "Cardo",
+							"fontStyle": "italic",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/cardo/cardo_italic_400.woff2"
+							]
+						},
+						{
+							"fontFamily": "Cardo",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": [
+								"file:./assets/fonts/cardo/cardo_normal_700.woff2"
+							]
+						}
+					],
+					"fontFamily": "Cardo",
+					"name": "Cardo",
+					"slug": "body"
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Jost",
+							"fontStyle": "normal",
+							"fontWeight": "100 900",
+							"src": [
+								"file:./assets/fonts/jost/Jost-VariableFont_wght.woff2"
+							]
+						},
+						{
+							"fontFamily": "Jost",
+							"fontStyle": "italic",
+							"fontWeight": "100 900",
+							"src": [
+								"file:./assets/fonts/jost/Jost-Italic-VariableFont_wght.woff2"
+							]
+						}
+					],
+					"fontFamily": "\"Jost\", sans-serif",
+					"name": "Jost",
+					"slug": "heading"
+				},
+				{
+					"fontFamily": "-apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif",
+					"name": "System Sans-serif",
+					"slug": "system-sans-serif"
+				},
+				{
+					"fontFamily": "Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol",
+					"name": "System Serif",
+					"slug": "system-serif"
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Lexend",
+							"fontStyle": "normal",
+							"fontWeight": "200",
+							"src": [
+								"file:./assets/fonts/wlptgwvFAVdoq2_F94zlCfv0bz1WC7sW_LVte6KuGEo.woff2"
+							]
+						},
+						{
+							"fontFamily": "Lexend",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/wlptgwvFAVdoq2_F94zlCfv0bz1WCzsW_LVte6KuGEo.woff2"
+							]
+						},
+						{
+							"fontFamily": "Lexend",
+							"fontStyle": "normal",
+							"fontWeight": "600",
+							"src": [
+								"file:./assets/fonts/wlptgwvFAVdoq2_F94zlCfv0bz1WC-UR_LVte6KuGEo.woff2"
+							]
+						},
+						{
+							"fontFamily": "Lexend",
+							"fontStyle": "normal",
+							"fontWeight": "800",
+							"src": [
+								"file:./assets/fonts/wlptgwvFAVdoq2_F94zlCfv0bz1WC7sR_LVte6KuGEo.woff2"
+							]
+						}
+					],
+					"fontFamily": "Lexend, sans-serif",
+					"name": "Lexend",
+					"slug": "lexend"
+				}
+			],
+			"fontSizes": [
+				{
+					"fluid": false,
+					"name": "Small",
+					"size": "1rem",
+					"slug": "small"
+				},
+				{
+					"fluid": false,
+					"name": "Medium",
+					"size": "1.2rem",
+					"slug": "medium"
+				},
+				{
+					"fluid": {
+						"max": "2rem",
+						"min": "1.5rem"
+					},
+					"name": "Large",
+					"size": "2rem",
+					"slug": "large"
+				},
+				{
+					"fluid": {
+						"max": "2.65rem",
+						"min": "2rem"
+					},
+					"name": "Extra Large",
+					"size": "2.65rem",
+					"slug": "x-large"
+				},
+				{
+					"fluid": {
+						"max": "3.5rem",
+						"min": "2.65rem"
+					},
+					"name": "Extra Extra Large",
+					"size": "3.5rem",
+					"slug": "xx-large"
+				}
+			]
+		}
+	},
+	"styles": {
+		"blocks": {
+			"core/button": {
+				"variations": {
+					"outline": {
+						"border": {
+							"bottom": {
+								"color": "var(--wp--preset--color--base-2)",
+								"style": "solid",
+								"width": "5px"
+							},
+							"left": {
+								"color": "var(--wp--preset--color--base-2)",
+								"style": "solid",
+								"width": "5px"
+							},
+							"right": {
+								"color": "var(--wp--preset--color--base-2)",
+								"style": "solid",
+								"width": "5px"
+							},
+							"top": {
+								"color": "var(--wp--preset--color--base-2)",
+								"style": "solid",
+								"width": "5px"
+							},
+							"width": "2px"
+						},
+						"spacing": {
+							"padding": {
+								"bottom": "calc(0.8rem - 2px)",
+								"left": "calc(1.6rem - 2px)",
+								"right": "calc(1.6rem - 2px)",
+								"top": "calc(0.8rem - 2px)"
+							}
+						}
+					}
+				}
+			},
+			"core/calendar": {
+				"css": " .wp-block-calendar table:where(:not(.has-text-color)) th{background-color:var(--wp--preset--color--contrast);color:var(--wp--preset--color--base);border-color:var(--wp--preset--color--contrast)} & table:where(:not(.has-text-color)) td{border-color:var(--wp--preset--color--contrast)} .wp-block-calendar table:where(:not(.has-text-color)) th{background-color:var(--wp--preset--color--contrast);color:var(--wp--preset--color--base);border-color:var(--wp--preset--color--contrast)} & table:where(:not(.has-text-color)) td{border-color:var(--wp--preset--color--contrast)} .wp-block-calendar table:where(:not(.has-text-color)) th{background-color:var(--wp--preset--color--contrast);color:var(--wp--preset--color--base);border-color:var(--wp--preset--color--contrast)} & table:where(:not(.has-text-color)) td{border-color:var(--wp--preset--color--contrast)} .wp-block-calendar table:where(:not(.has-text-color)) th{background-color:var(--wp--preset--color--contrast);color:var(--wp--preset--color--base);border-color:var(--wp--preset--color--contrast)} & table:where(:not(.has-text-color)) td{border-color:var(--wp--preset--color--contrast)} .wp-block-calendar table:where(:not(.has-text-color)) th{background-color:var(--wp--preset--color--contrast);color:var(--wp--preset--color--base);border-color:var(--wp--preset--color--contrast)} & table:where(:not(.has-text-color)) td{border-color:var(--wp--preset--color--contrast)} .wp-block-calendar table:where(:not(.has-text-color)) th{background-color:var(--wp--preset--color--contrast);color:var(--wp--preset--color--base);border-color:var(--wp--preset--color--contrast)} & table:where(:not(.has-text-color)) td{border-color:var(--wp--preset--color--contrast)} .wp-block-calendar table:where(:not(.has-text-color)) th{background-color:var(--wp--preset--color--contrast);color:var(--wp--preset--color--base);border-color:var(--wp--preset--color--contrast)} & table:where(:not(.has-text-color)) td{border-color:var(--wp--preset--color--contrast)} .wp-block-calendar table:where(:not(.has-text-color)) th{background-color:var(--wp--preset--color--contrast);color:var(--wp--preset--color--base);border-color:var(--wp--preset--color--contrast)} & table:where(:not(.has-text-color)) td{border-color:var(--wp--preset--color--contrast)}"
+			},
+			"core/navigation": {
+				"elements": {
+					"link": {
+						":hover": {
+							"border": {
+								"bottom": {
+									"color": "currentColor",
+									"style": "solid",
+									"width": "4px"
+								}
+							},
+							"typography": {
+								"textDecoration": "none"
+							}
+						},
+						"border": {
+							"bottom": {
+								"color": "transparent",
+								"style": "solid",
+								"width": "4px"
+							}
+						},
+						"typography": {
+							"textDecoration": "none"
+						}
+					}
+				},
+				"typography": {
+					"fontFamily": "Jost",
+					"fontSize": "var(--wp--preset--font-size--medium)",
+					"fontWeight": "normal"
+				}
+			},
+			"core/post-terms": {
+				"css": " & .wp-block-post-terms__prefix{color: var(--wp--preset--color--contrast);} & .wp-block-post-terms__prefix{color: var(--wp--preset--color--contrast);} & .wp-block-post-terms__prefix{color: var(--wp--preset--color--contrast);} & .wp-block-post-terms__prefix{color: var(--wp--preset--color--contrast);} & .wp-block-post-terms__prefix{color: var(--wp--preset--color--contrast);} & .wp-block-post-terms__prefix{color: var(--wp--preset--color--contrast);} & .wp-block-post-terms__prefix{color: var(--wp--preset--color--contrast);} & .wp-block-post-terms__prefix{color: var(--wp--preset--color--contrast);}"
+			},
+			"core/site-title": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading)",
+					"fontWeight": "normal"
+				}
+			}
+		},
+		"css": "           :where(.wp-site-blocks *:focus){outline-width:2px;outline-style:solid}\n\na.wp-block-navigation-item__content {\n    transition: all 1.5s;\n}\n\n\na.wp-block-navigation-item__content:hover {\n    transition: all 1.5s;\n}           :where(.wp-site-blocks *:focus){outline-width:2px;outline-style:solid}\n\na.wp-block-navigation-item__content {\n    transition: all 1.5s;\n}\n\n\na.wp-block-navigation-item__content:hover {\n    transition: all 1.5s;\n}           :where(.wp-site-blocks *:focus){outline-width:2px;outline-style:solid}\n\na.wp-block-navigation-item__content {\n    transition: all 1.5s;\n}\n\n\na.wp-block-navigation-item__content:hover {\n    transition: all 1.5s;\n}           :where(.wp-site-blocks *:focus){outline-width:2px;outline-style:solid}\n\na.wp-block-navigation-item__content {\n    transition: all 1.5s;\n}\n\n\na.wp-block-navigation-item__content:hover {\n    transition: all 1.5s;\n} ",
+		"elements": {
+			"button": {
+				":active": {
+					"color": {
+						"background": "var(--wp--preset--color--contrast-3)",
+						"text": "var(--wp--preset--color--base)"
+					}
+				},
+				":focus": {
+					"border": {
+						"color": "var(--wp--preset--color--contrast-4)"
+					},
+					"color": {
+						"background": "var(--wp--preset--color--contrast-2)",
+						"text": "var(--wp--preset--color--base)"
+					},
+					"outline": {
+						"color": "var(--wp--preset--color--contrast)",
+						"offset": "4px"
+					}
+				},
+				":hover": {
+					"border": {
+						"color": "var(--wp--preset--color--contrast-4)"
+					},
+					"color": {
+						"background": "var(--wp--preset--color--base-2)",
+						"text": "var(--wp--preset--color--base)"
+					},
+					"outline": {
+						"color": "var(--wp--preset--color--base-2)",
+						"offset": "8px"
+					}
+				},
+				"color": {
+					"background": "var(--wp--preset--color--contrast)",
+					"text": "var(--wp--preset--color--base)"
+				}
+			},
+			"caption": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--lexend)"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--lexend)"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--lexend)"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--lexend)"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--lexend)"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--lexend)"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--lexend)"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--lexend)",
+					"letterSpacing": "0"
+				}
+			},
+			"link": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--lexend)"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--lexend)"
+		}
+	},
+	"version": 3,
+	"$schema": "https://schemas.wp.org/wp/6.6/theme.json"
+}
