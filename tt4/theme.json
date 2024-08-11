@@ -1,0 +1,241 @@
+{
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"color": "#38629F",
+					"name": "Base",
+					"slug": "base"
+				},
+				{
+					"color": "#244E8A",
+					"name": "Base / Two",
+					"slug": "base-2"
+				},
+				{
+					"color": "#FFFFFFA1",
+					"name": "Contrast / 2",
+					"slug": "contrast-2"
+				},
+				{
+					"color": "#FFFFFF",
+					"name": "Contrast",
+					"slug": "contrast"
+				},
+				{
+					"color": "#D5E0F0",
+					"name": "Contrast / 3",
+					"slug": "contrast-3"
+				}
+			]
+		},
+		"typography": {
+			"defaultFontSizes": false,
+			"fontFamilies": [
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Cardo",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/cardo/cardo_normal_400.woff2"
+							]
+						},
+						{
+							"fontFamily": "Cardo",
+							"fontStyle": "italic",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/cardo/cardo_italic_400.woff2"
+							]
+						},
+						{
+							"fontFamily": "Cardo",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": [
+								"file:./assets/fonts/cardo/cardo_normal_700.woff2"
+							]
+						}
+					],
+					"fontFamily": "Cardo",
+					"name": "Cardo",
+					"slug": "body"
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Jost",
+							"fontStyle": "normal",
+							"fontWeight": "100 900",
+							"src": [
+								"file:./assets/fonts/jost/Jost-VariableFont_wght.woff2"
+							]
+						},
+						{
+							"fontFamily": "Jost",
+							"fontStyle": "italic",
+							"fontWeight": "100 900",
+							"src": [
+								"file:./assets/fonts/jost/Jost-Italic-VariableFont_wght.woff2"
+							]
+						}
+					],
+					"fontFamily": "\"Jost\", sans-serif",
+					"name": "Jost",
+					"slug": "heading"
+				},
+				{
+					"fontFamily": "-apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif",
+					"name": "System Sans-serif",
+					"slug": "system-sans-serif"
+				},
+				{
+					"fontFamily": "Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol",
+					"name": "System Serif",
+					"slug": "system-serif"
+				}
+			],
+			"fontSizes": [
+				{
+					"fluid": false,
+					"name": "Small",
+					"size": "1rem",
+					"slug": "small"
+				},
+				{
+					"fluid": false,
+					"name": "Medium",
+					"size": "1.2rem",
+					"slug": "medium"
+				},
+				{
+					"fluid": {
+						"max": "2rem",
+						"min": "1.5rem"
+					},
+					"name": "Large",
+					"size": "2rem",
+					"slug": "large"
+				},
+				{
+					"fluid": {
+						"max": "2.65rem",
+						"min": "2rem"
+					},
+					"name": "Extra Large",
+					"size": "2.65rem",
+					"slug": "x-large"
+				},
+				{
+					"fluid": {
+						"max": "3.5rem",
+						"min": "2.65rem"
+					},
+					"name": "Extra Extra Large",
+					"size": "3.5rem",
+					"slug": "xx-large"
+				}
+			]
+		}
+	},
+	"styles": {
+		"blocks": {
+			"core/button": {
+				"variations": {
+					"outline": {
+						"border": {
+							"width": "2px"
+						},
+						"spacing": {
+							"padding": {
+								"bottom": "calc(0.8rem - 2px)",
+								"left": "calc(1.6rem - 2px)",
+								"right": "calc(1.6rem - 2px)",
+								"top": "calc(0.8rem - 2px)"
+							}
+						}
+					}
+				}
+			},
+			"core/navigation": {
+				"typography": {
+					"fontFamily": "Jost",
+					"fontSize": "var(--wp--preset--font-size--medium)",
+					"fontWeight": "normal"
+				},
+				"elements": {
+					"link": {
+						"typography": {
+							"textDecoration": "none"
+						},
+						"border": {
+							"bottom": {
+								"width": "4px",
+								"color": "transparent",
+								"style": "solid"
+							}
+						},
+						":hover": {
+							"typography": {
+								"textDecoration": "none"
+							},
+							"border": {
+								"bottom": {
+									"width": "4px",
+									"color": "currentColor",
+									"style": "solid"
+								}
+							}
+						}
+					}
+				}
+
+			},
+			"core/site-title": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading)",
+					"fontWeight": "normal"
+				}
+			}
+		},
+		"elements": {
+			"button": {
+				":hover": {
+					"color": {
+						"background": "var(--wp--preset--color--contrast)"
+					}
+				},
+				"border": {
+					"radius": "6px"
+				},
+				"color": {
+					"background": "var(--wp--preset--color--contrast)",
+					"text": "var(--wp--preset--color--base-2)"
+				},
+				"spacing": {
+					"padding": {
+						"bottom": "0.98rem",
+						"left": "1.6rem",
+						"right": "1.6rem",
+						"top": "0.8rem"
+					}
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading)",
+					"fontSize": "var(--wp--preset--font-size--small)",
+					"fontStyle": "normal"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading)",
+					"letterSpacing": "0"
+				}
+			}
+		}
+	},
+	"version": 3,
+	"$schema": "https://schemas.wp.org/wp/6.6/theme.json"
+}
