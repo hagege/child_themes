@@ -133,12 +133,13 @@ details[open] > summary::before{
 .wp-block-details[open] summary,
 .wp-block-details summary:hover
 {
-    background: var(--wp--preset--color--custom-dunkleres-orange);
+  color: var(--wp--preset--color--contrast);
+    background: var(--wp--preset--color--hellblau);
     transition: all 0.2s ease-in-out;
 }
 
 .wp-block-details summary:focus {
-    color: var(--wp--preset--color--contrast);
+  color: var(--wp--preset--color--contrast);
     background: var(--wp--preset--color--hellblau);
     transition: all 0.2s ease-in-out;
 }
