@@ -46,6 +46,11 @@ body.home .entry-content {
     margin-top: 0;
 }
 
+/* kein oberer Rand nach oben */
+header.wp-block-template-part {
+    margin-block-start: 0;
+}
+
 
 /* Kein margin-top beim Footer */
 footer.wp-block-template-part {
