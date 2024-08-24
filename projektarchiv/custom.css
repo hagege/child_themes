@@ -230,7 +230,7 @@ div.button_im_header a.wp-block-button__link.wp-element-button:after, p.form-sub
     align-items: center;
     padding: 2rem;
     font-weight: bold;
-    background: #ebeecf;
+    background: var(--wp--preset--color--custom-gelb);
     border-radius: 5px;
   }
   
