@@ -228,10 +228,11 @@ div.button_im_header a.wp-block-button__link.wp-element-button:after, p.form-sub
     list-style: none;
     display: flex; /* also removes the list marker */
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
     font-weight: bold;
     background: var(--wp--preset--color--custom-gelb);
-    border-radius: 5px;
+    border-radius: 0px;
+    outline: auto;
   }
   
   summary::before{
