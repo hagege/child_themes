@@ -36,13 +36,11 @@
 		},
 		"spacing": {
 			"spacingScale": {
-				"theme": {
 					"increment": 0.5,
 					"mediumStep": 1.5,
 					"operator": "+",
 					"steps": 9,
 					"unit": "rem"
-				}
 			},
 			"spacingSizes": [
 				{
