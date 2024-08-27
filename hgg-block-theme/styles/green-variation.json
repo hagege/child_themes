@@ -42,7 +42,7 @@
 			}
 		},
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--system-font)"
+			"fontFamily": "var(--wp--preset--font-family--lexend)"
 		}
 	},
 	"title": "green-variation",

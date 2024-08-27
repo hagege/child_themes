@@ -3,7 +3,7 @@
 		"color": {
 			"palette": [
 				{
-					"color": "#E85C0D",
+					"color": "#821131",
 					"name": "Base",
 					"slug": "base"
 				},
@@ -23,7 +23,7 @@
 					"slug": "contrast"
 				},
 				{
-					"color": "#821131",
+					"color": "#E85C0D",
 					"name": "Contrast / 3",
 					"slug": "contrast-3"
 				}
@@ -42,7 +42,7 @@
 			}
 		},
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--system-font)"
+			"fontFamily": "var(--wp--preset--font-family--lexend)"
 		}
 	},
 	"title": "red-variation",

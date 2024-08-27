@@ -244,7 +244,7 @@
 			}
 		},
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--system-font)",
+			"fontFamily": "var(--wp--preset--font-family--lexend)",
 			"fontSize": "var(--wp--preset--font-size--medium)",
 			"lineHeight": "1.6"
 		}
