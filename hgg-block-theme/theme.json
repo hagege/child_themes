@@ -4,27 +4,27 @@
 		"color": {
 			"palette": [
 				{
-					"color": "#2E073F",
+					"color": "#262626",
 					"name": "Base",
 					"slug": "base"
 				},
 				{
-					"color": "#FFFFFF",
+					"color": "#FF9F1C",
 					"name": "Base / Two",
 					"slug": "base-2"
 				},
 				{
-					"color": "#AD49E1",
+					"color": "#F49097",
 					"name": "Contrast / 2",
 					"slug": "contrast-2"
 				},
 				{
-					"color": "#EBD3F8",
+					"color": "#FFFFFF",
 					"name": "Contrast",
 					"slug": "contrast"
 				},
 				{
-					"color": "#7A1CAC",
+					"color": "#DFB2F4",
 					"name": "Contrast / 3",
 					"slug": "contrast-3"
 				}
@@ -143,7 +143,7 @@
 	"styles": {
 		"color": {
 			"background": "var(--wp--preset--color--base)",
-			"text": "var(--wp--preset--color--base-2)"
+			"text": "var(--wp--preset--color--contrast)"
 		},
 		"elements": {
 			"button": {
@@ -230,7 +230,7 @@
 					}
 				},
 				"color": {
-					"text": "var(--wp--preset--color--base-2)"
+					"text": "var(--wp--preset--color--contrast)"
 				}
 			}
 		},
