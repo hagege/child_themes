@@ -1,7 +1,7 @@
 <?php
 /**
- * Title: 404
- * Slug: hgg-block-theme/404
+ * Title: wp-custom-template-page-alternative
+ * Slug: hgg-block-theme/wp-custom-template-page-alternative
  * Categories: hidden
  * Inserter: no
  */
@@ -16,15 +16,11 @@
 <div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
-<!-- wp:group {"layout":{"type":"constrained"}} -->
+<!-- wp:group {"style":{"background":{"backgroundImage":{"url":"<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/circle_light_orange.svg","id":6935,"source":"file","title":"circle_light_orange"},"backgroundPosition":"50% 0"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:group {"align":"full","style":{"background":{"backgroundImage":{"url":"<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/circle_light_orange.svg","id":6935,"source":"file","title":"circle_light_orange"},"backgroundPosition":"35% 42%"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull"><!-- wp:heading -->
-<h2 class="wp-block-heading"><?php esc_html_e('404 - Fehler', 'hgg-block-theme');?></h2>
-<!-- /wp:heading -->
+<div class="wp-block-group alignfull"><!-- wp:post-title /-->
 
-<!-- wp:paragraph -->
-<p><?php esc_html_e('Sorry, leider nichts gefunden', 'hgg-block-theme');?></p>
-<!-- /wp:paragraph --></div>
+<!-- wp:post-content /--></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
