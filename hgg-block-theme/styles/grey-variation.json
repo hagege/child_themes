@@ -18,12 +18,12 @@
 					"slug": "contrast-2"
 				},
 				{
-					"color": "#F66B0E",
+					"color": "#000000",
 					"name": "Contrast",
 					"slug": "contrast"
 				},
 				{
-					"color": "#000000",
+					"color": "#F66B0E",
 					"name": "Contrast / 3",
 					"slug": "contrast-3"
 				}
