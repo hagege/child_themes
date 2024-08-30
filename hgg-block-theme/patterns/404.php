@@ -6,7 +6,7 @@
  * Inserter: no
  */
 ?>
-<!-- wp:template-part {"slug":"header-2","area":"uncategorized"} /-->
+<!-- wp:template-part {"slug":"neuer-header","area":"header"} /-->
 
 <!-- wp:separator -->
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
@@ -32,4 +32,4 @@
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 <!-- /wp:separator -->
 
-<!-- wp:template-part {"slug":"footer","area":"uncategorized"} /-->
+<!-- wp:template-part {"slug":"neuer-footer","area":"footer"} /-->

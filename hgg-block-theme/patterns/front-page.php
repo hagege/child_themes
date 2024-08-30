@@ -6,7 +6,7 @@
  * Inserter: no
  */
 ?>
-<!-- wp:template-part {"slug":"header-2"} /-->
+<!-- wp:template-part {"slug":"neuer-header"} /-->
 
 <!-- wp:separator -->
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
@@ -25,7 +25,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none","align":"wide"} -->
-<figure class="wp-block-image alignwide size-large"><img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/sorrent_2021-1024x768.jpg" alt="<?php esc_html_e('', 'hgg-block-theme');?>" class=""/></figure>
+<figure class="wp-block-image alignwide size-large"><img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/sorrent_2021-1024x768.jpg" alt="<?php esc_html_e('', 'hgg-block-theme');?>"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"layout":{"type":"default"}} -->
@@ -92,4 +92,4 @@
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 <!-- /wp:separator -->
 
-<!-- wp:template-part {"slug":"footer"} /-->
+<!-- wp:template-part {"slug":"neuer-footer","area":"footer"} /-->
