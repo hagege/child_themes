@@ -1,49 +1,66 @@
 /* .wp-site-blocks *:focus{outline-width:2px;outline-style:solid}
 */
 
-/* Variablen */
-:root {
-    --gelb-color: rgba(254, 205, 15, 1);	  
-    --rot-color: rgba(225, 36, 15, 1);
-    --mobile-breakpoint: 767px;
-    --tablet-breakpoint: 900px;
-    --animate-duration: 1s;
-    --animate-delay: 1s;
-    --animate-repeat: 1;
-  }
-  
-  a.wp-block-navigation-item__content {
-      text-underline-offset: 3px;
-      transition: all .2s;
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-  }
-  
-  
-  a.wp-block-navigation-item__content:hover {
-      text-underline-offset: 5px;
-      transition: all .2s;
-      text-decoration: underline;
-      text-decoration-thickness: 3px;
-  }
-  
-  
-  /* Bilder anders designen */
-  figure.fancy_form img, p.fancy_form, div.fancy_form  {
-      background-color: var(--gelb-color); 
-      /* border-radius: 40% 60% 80% 30% / 20% 30% 70% 70%; 
-      border-radius: 50% 20% / 10% 40%; */
-      padding: clamp(1rem, 0.4rem + 3vw, 4rem);
-  }
-  
-  
-  /* versteckte Inhalte */
-  div.versteckt, h1.alignwide.wp-block-query-title {
-      display: none !important;
-  }
-  
-  
-  /* set mail input box white */
-  p#subscribe-email input {
-  background-color:white;
-  }
+/* Stapel in Beiträgen */
+@media (max-width: 768px){
+    .wp-block-group.is-vertical.is-layout-flex {
+         min-height: 0em;
+    }
+    }
+    
+    @media (min-width: 769px){
+    .wp-block-group.is-vertical.is-layout-flex {
+         min-height: 13em;
+    }
+    }
+    
+    /* Variablen */
+    :root {
+      --gelb-color: rgba(254, 205, 15, 1);	  
+      --rot-color: rgba(225, 36, 15, 1);
+      --mobile-breakpoint: 767px;
+      --tablet-breakpoint: 900px;
+      --animate-duration: 1s;
+      --animate-delay: 1s;
+      --animate-repeat: 1;
+    }
+    
+    a.wp-block-navigation-item__content {
+        text-underline-offset: 3px;
+        transition: all .2s;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+    }
+    
+    
+    a.wp-block-navigation-item__content:hover {
+        text-underline-offset: 5px;
+        transition: all .2s;
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+    }
+    
+    
+    /* Bilder anders designen */
+    figure.fancy_form img, p.fancy_form, div.fancy_form  {
+        background-color: var(--gelb-color); 
+        /* border-radius: 40% 60% 80% 30% / 20% 30% 70% 70%; 
+        border-radius: 50% 20% / 10% 40%; */
+        padding: clamp(1rem, 0.4rem + 3vw, 4rem);
+    }
+    
+    
+    /* versteckte Inhalte */
+    div.versteckt, h1.alignwide.wp-block-query-title {
+        display: none !important;
+    }
+    
+    
+    /* set mail input box white */
+    p#subscribe-email input {
+    background-color:white;
+    }
+    
+    figure.galerie_margin_fix {
+        margin-bottom: 32px; 
+    }
