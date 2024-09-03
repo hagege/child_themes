@@ -229,20 +229,6 @@
 					"text": "var(--wp--preset--color--contrast)"
 				}
 			}
-		},
-		"spacing": {
-			"blockGap": "1.5rem",
-			"padding": {
-				"bottom": "0px",
-				"left": "var(--wp--preset--spacing--30)",
-				"right": "var(--wp--preset--spacing--30)",
-				"top": "0px"
-			}
-		},
-		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--lexend)",
-			"fontSize": "var(--wp--preset--font-size--medium)",
-			"lineHeight": "1.6"
 		}
 	}
 }
