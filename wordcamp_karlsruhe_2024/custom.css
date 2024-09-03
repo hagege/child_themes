@@ -3,15 +3,15 @@
 
 /* Stapel in Beiträgen */
 @media (max-width: 768px){
-    .wp-block-group.is-vertical.is-layout-flex {
-         min-height: 0em;
+    .wp-block-group.speaker_titel {
+        min-height: 0em;
     }
     }
     
     @media (min-width: 769px){
-    .wp-block-group.is-vertical.is-layout-flex {
-         min-height: 13em;
-    }
+    .wp-block-group.speaker_titel {
+        min-height: 13em;
+    } 
     }
     
     /* Variablen */
