@@ -11,7 +11,7 @@
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--60)"><!-- wp:site-title {"level":2,"fontSize":"medium"} /-->
 
 <!-- wp:paragraph -->
-<p><?php esc_html_e('Proudly powered by <a href="https://wordpress.org">WordPress</a>', 'yabtis');?></p>
+<p><?php esc_html_e('Proudly powered by WordPress', 'yabtis');?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

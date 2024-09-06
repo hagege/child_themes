@@ -3,7 +3,7 @@ Contributors: wordpressdotorg
 Requires at least: 6.4
 Tested up to: 6.4
 Requires PHP: 7.0
-Stable tag: 0.2
+Stable tag: 0.3.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,6 +12,25 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Yet another Block Theme is simple (YABTIS) is designed to be flexible, versatile and applicable to any website. Its collection of templates and patterns tailor to different needs, such as presenting a business, blogging and writing or showcasing work. Twenty Twenty-Four comes with style variations and full page designs to help speed up the site building process, is fully compatible with the site editor, and takes advantage of new design tools introduced in WordPress 6.4.
 
 == Changelog ==
+
+= 0.3.4 =
+* Released: September 6, 2024
+* Mobile Menue centered
+* Spelling of headings back to standard
+
+= 0.3.3 =
+* Released: September 6, 2024
+* Group-Block with Background Image on Start Page
+
+= 0.3.2 =
+* Released: September 6, 2024
+* Startseiten-Template und Footer korrigiert
+
+= 0.3.1 =
+* Released: September 6, 2024
+
+= 0.3 =
+* Released: September 6, 2024
 
 = 0.2 =
 * Released: September 2, 2024
@@ -32,7 +51,5 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 === Images ===
-License: CC0 https://creativecommons.org/publicdomain/zero/1.0/
-
-museum.webp - https://www.rawpixel.com/image/3297419/free-photo-image-interior-hallway-architecture
+License: CC0 https://haurand.com
 
