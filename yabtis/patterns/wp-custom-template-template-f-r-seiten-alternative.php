@@ -16,12 +16,12 @@
 <div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
-<!-- wp:group {"style":{"background":{"backgroundImage":{"url":"<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/circle_light_orange.svg","id":6935,"source":"file","title":"circle_light_orange"},"backgroundPosition":"50% 0"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:group {"tagName":"main","align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}},"background":{"backgroundPosition":"50% 0"}}} -->
-<main class="wp-block-group alignwide" style="margin-top:var(--wp--preset--spacing--40);margin-bottom:var(--wp--preset--spacing--40)"><!-- wp:post-title /-->
+<!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"0"},"padding":{"top":"0","bottom":"0","left":"var:preset|spacing|10","right":"var:preset|spacing|10"}},"background":{"backgroundRepeat":"no-repeat","backgroundSize":"contain","backgroundPosition":"41% 64%"}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+<main class="wp-block-group" style="margin-top:0;padding-top:0;padding-right:var(--wp--preset--spacing--10);padding-bottom:0;padding-left:var(--wp--preset--spacing--10)"><!-- wp:group {"style":{"spacing":{"padding":{"bottom":"0"},"margin":{"top":"50px"}},"background":{"backgroundPosition":"35% 37%","backgroundImage":{"url":"<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/circle_light_orange.svg","id":6935,"source":"file","title":"circle_light_orange"}}},"layout":{"type":"default"}} -->
+<div class="wp-block-group" style="margin-top:50px;padding-bottom:0"><!-- wp:post-title {"level":1,"align":"wide","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|40"}}}} /-->
 
-<!-- wp:post-content {"lock":{"move":false,"remove":true},"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"default"}} /--></main>
-<!-- /wp:group --></div>
+<!-- wp:post-content {"align":"wide","layout":{"type":"default"}} /--></div>
+<!-- /wp:group --></main>
 <!-- /wp:group -->
 
 <!-- wp:separator -->

@@ -1,6 +1,5 @@
 {
 	"$schema": "https://schemas.wp.org/wp/6.6/theme.json",
-	"version": 3,
 	"settings": {
 		"appearanceTools": true,
 		"color": {
@@ -38,7 +37,13 @@
 		},
 		"spacing": {
 			"spacingScale": {
-				"steps": 1
+				"theme": {
+					"increment": 0.5,
+					"mediumStep": 1.5,
+					"operator": "+",
+					"steps": 9,
+					"unit": "rem"
+				}
 			},
 			"spacingSizes": [
 				{
@@ -141,6 +146,7 @@
 			"background": "var(--wp--preset--color--base)",
 			"text": "var(--wp--preset--color--contrast)"
 		},
+		"css": "/* Abstand zwischen Blöcken \n.wp-container-core-post-content-is-layout-1 > * + * {\n    margin-block-start: 1em !important;\n}\n\n*/",
 		"elements": {
 			"button": {
 				":active": {
@@ -244,5 +250,6 @@
 			"fontSize": "var(--wp--preset--font-size--medium)",
 			"lineHeight": "1.6"
 		}
-	}
+	},
+	"version": 3
 }
