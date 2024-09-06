@@ -12,34 +12,37 @@
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 <!-- /wp:separator -->
 
-<!-- wp:spacer {"height":"30px"} -->
+<!-- wp:group {"tagName":"main","align":"wide","layout":{"type":"constrained"}} -->
+<main class="wp-block-group alignwide"><!-- wp:spacer {"height":"30px"} -->
 <div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
-<!-- wp:group {"layout":{"type":"default"}} -->
-<div class="wp-block-group"><!-- wp:cover {"overlayColor":"base-2","isUserOverlayColor":true,"minHeight":500,"isDark":false,"align":"full","layout":{"type":"default"}} -->
+<!-- wp:group {"align":"full","layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull"><!-- wp:cover {"overlayColor":"base-2","isUserOverlayColor":true,"minHeight":500,"isDark":false,"align":"full","layout":{"type":"default"}} -->
 <div class="wp-block-cover alignfull is-light" style="min-height:500px"><span aria-hidden="true" class="wp-block-cover__background has-base-2-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","style":{"typography":{"fontSize":"10rem"}}} -->
-<p class="has-text-align-center" style="font-size:10rem"><?php esc_html_e('Das ist eine neue Startseite', 'yabtis');?></p>
+<p class="has-text-align-center" style="font-size:10rem"><?php esc_html_e('Our new Start Page', 'yabtis');?></p>
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:cover --></div>
 <!-- /wp:group -->
 
-<!-- wp:image {"sizeSlug":"large","linkDestination":"none","align":"wide"} -->
-<figure class="wp-block-image alignwide size-large"><img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/sorrent_2021-1024x768.jpg" alt="<?php esc_html_e('', 'yabtis');?>"/></figure>
-<!-- /wp:image -->
+<!-- wp:cover {"url":"<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/sorrent_2021-1024x768.jpg","dimRatio":20,"align":"full","style":{"color":[]}} -->
+<div class="wp-block-cover alignfull"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-20 has-background-dim"></span><img class="wp-block-cover__image-background" alt="<?php esc_html_e('', 'yabtis');?>" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/sorrent_2021-1024x768.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","fontSize":"large"} -->
+<p class="has-text-align-center has-large-font-size"><?php esc_html_e('', 'yabtis');?></p>
+<!-- /wp:paragraph --></div></div>
+<!-- /wp:cover -->
 
-<!-- wp:group {"layout":{"type":"default"}} -->
-<div class="wp-block-group"><!-- wp:cover {"overlayColor":"contrast-3","isUserOverlayColor":true,"minHeight":500,"isDark":false,"align":"full","layout":{"type":"default"}} -->
+<!-- wp:group {"align":"full","layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull"><!-- wp:cover {"overlayColor":"contrast-3","isUserOverlayColor":true,"minHeight":500,"isDark":false,"align":"full","layout":{"type":"default"}} -->
 <div class="wp-block-cover alignfull is-light" style="min-height:500px"><span aria-hidden="true" class="wp-block-cover__background has-contrast-3-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"left","placeholder":"Write title…","style":{"typography":{"fontSize":"6rem"}}} -->
-<p class="has-text-align-left" style="font-size:6rem"><?php esc_html_e('Zweites Cover', 'yabtis');?></p>
+<p class="has-text-align-left" style="font-size:6rem"><?php esc_html_e('Second Cover', 'yabtis');?></p>
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:cover --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"layout":{"type":"default"}} -->
-<div class="wp-block-group"><!-- wp:cover {"overlayColor":"contrast","isUserOverlayColor":true,"minHeight":500,"isDark":false,"align":"full","layout":{"type":"default"}} -->
+<!-- wp:group {"align":"full","layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull"><!-- wp:cover {"overlayColor":"contrast","isUserOverlayColor":true,"minHeight":500,"isDark":false,"align":"full","layout":{"type":"default"}} -->
 <div class="wp-block-cover alignfull is-light" style="min-height:500px"><span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"right","placeholder":"Write title…","style":{"typography":{"fontSize":"6rem"}}} -->
-<p class="has-text-align-right" style="font-size:6rem"><?php esc_html_e('Drittes Cover', 'yabtis');?></p>
+<p class="has-text-align-right" style="font-size:6rem"><?php esc_html_e('Third Cover', 'yabtis');?></p>
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:cover --></div>
 <!-- /wp:group -->
@@ -55,7 +58,7 @@
 
 <!-- wp:group {"align":"wide","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide"><!-- wp:heading {"align":"wide"} -->
-<h2 class="wp-block-heading alignwide"><?php esc_html_e('Beiträge', 'yabtis');?></h2>
+<h2 class="wp-block-heading alignwide"><?php esc_html_e('Posts', 'yabtis');?></h2>
 <!-- /wp:heading -->
 
 <!-- wp:query {"queryId":9,"query":{"perPage":6,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"enhancedPagination":true,"metadata":{"categories":["posts"],"patternName":"core/query-standard-posts","name":"Standard"},"align":"wide"} -->
@@ -86,6 +89,7 @@
 <!-- /wp:query-pagination --></div>
 <!-- /wp:query --></div>
 <!-- /wp:group --></div>
+<!-- /wp:group --></main>
 <!-- /wp:group -->
 
 <!-- wp:separator -->

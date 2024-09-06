@@ -12,12 +12,13 @@
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 <!-- /wp:separator -->
 
-<!-- wp:spacer {"height":"30px"} -->
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group"><!-- wp:spacer {"height":"30px"} -->
 <div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
-<!-- wp:group {"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:group {"align":"full","style":{"background":{"backgroundImage":{"url":"<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/circle_light_orange.svg","id":6935,"source":"file","title":"circle_light_orange"},"backgroundPosition":"35% 42%"}},"layout":{"type":"constrained"}} -->
+<!-- wp:group {"align":"full","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull"><!-- wp:group {"align":"full","style":{"background":{"backgroundImage":{"url":"<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/circle_light_orange.svg","id":6935,"source":"file","title":"circle_light_orange"},"backgroundPosition":"35% 42%"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull"><!-- wp:post-featured-image {"height":"20em","align":"full"} /-->
 
 <!-- wp:post-title /-->
@@ -63,6 +64,7 @@
 
 <!-- wp:post-comments-form /--></div>
 <!-- /wp:comments --></div>
+<!-- /wp:group --></main>
 <!-- /wp:group --></main>
 <!-- /wp:group -->
 
