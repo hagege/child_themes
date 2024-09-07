@@ -144,21 +144,16 @@
 					"slug": "gradient-12"
 				}
 			],
-			"palette": [
+				"palette": [
 				{
-					"color": "#F7F7F7",
+					"color": "#FFFFFF",
 					"name": "Base",
 					"slug": "base"
 				},
 				{
-					"color": "#138735",
+					"color": "#128234",
 					"name": "Base / Two",
 					"slug": "base-2"
-				},
-				{
-					"color": "#138735",
-					"name": "Contrast / 2",
-					"slug": "contrast-2"
 				},
 				{
 					"color": "#000000",
@@ -166,16 +161,26 @@
 					"slug": "contrast"
 				},
 				{
+					"color": "#F7F7F7",
+					"name": "Contrast / 2",
+					"slug": "contrast-2"
+				},
+				{
 					"color": "#38629F",
 					"name": "Contrast / 3",
 					"slug": "contrast-3"
 				},
 				{
-					"color": "#ED0518",
+					"color": "#E30517",
 					"name": "Contrast / 4",
 					"slug": "contrast-4"
+				},
+				{
+					"color": "#D9D9D9",
+					"name": "Contrast / 5",
+					"slug": "contrast-5"
 				}
-			]
+			]		
 		},
 		"layout": {
 			"contentSize": "1200px",

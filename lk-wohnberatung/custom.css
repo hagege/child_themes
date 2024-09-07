@@ -1,0 +1,54 @@
+:where(.wp-site-blocks *:focus){outline-width:2px;outline-style:solid}
+
+/* für die Spalten in den Kacheln */
+.kachel-spalte {
+    border-radius: 15px;
+}
+
+/* Animation in der Navigation */
+a.wp-block-navigation-item__content {
+    transition: all 1.5s;
+}
+
+
+a.wp-block-navigation-item__content:hover {
+    transition: all 1.5s;
+}           
+
+:where(.wp-site-blocks *:focus){outline-width:2px;outline-style:solid}
+a.wp-block-navigation-item__content {
+    transition: all 1.5s;
+}
+
+
+a.wp-block-navigation-item__content:hover {
+    transition: all 1.5s;
+}           
+
+:where(.wp-site-blocks *:focus){outline-width:2px;outline-style:solid}
+a.wp-block-navigation-item__content {
+    transition: all 1.5s;
+}
+
+
+a.wp-block-navigation-item__content:hover {
+    transition: all 1.5s;
+}           
+
+:where(.wp-site-blocks *:focus){outline-width:2px;outline-style:solid}
+a.wp-block-navigation-item__content {
+    transition: all 1.5s;
+}
+
+
+a.wp-block-navigation-item__content:hover {
+    transition: all 1.5s;
+} 
+
+/* Unterstrich grün */
+:root :where(.wp-block-navigation a:where(:not(.wp-element-button)):hover) {
+    border-bottom-color: var(--wp--preset--color--base-2);
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    text-decoration: none;
+}
