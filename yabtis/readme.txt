@@ -3,7 +3,7 @@ Contributors: wordpressdotorg
 Requires at least: 6.4
 Tested up to: 6.4
 Requires PHP: 7.0
-Stable tag: 0.3.4
+Stable tag: 0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,6 +12,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Yet another Block Theme is simple (YABTIS) is designed to be flexible, versatile and applicable to any website. Its collection of templates and patterns tailor to different needs, such as presenting a business, blogging and writing or showcasing work. Twenty Twenty-Four comes with style variations and full page designs to help speed up the site building process, is fully compatible with the site editor, and takes advantage of new design tools introduced in WordPress 6.4.
 
 == Changelog ==
+
+= 0.4 =
+* Released: September 7, 2024
+* Page Templates with padding left and right
+* Minor changes to the templates
+* Delete unnecessary templates and patterns 
 
 = 0.3.4 =
 * Released: September 6, 2024
