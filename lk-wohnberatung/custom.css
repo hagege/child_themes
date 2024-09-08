@@ -5,6 +5,30 @@
     border-radius: 15px;
 }
 
+
+/* Gestaltung der Kategorienliste */
+
+ul.kategorie-liste {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ul.kategorie-liste >li a {
+    display: flex;
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: var(--wp--preset--color--base-2);
+    color: var(--wp--preset--color--contrast-2);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+ul.kategorie-liste >li a:hover {
+    background-color: var(--wp--preset--color--contrast-4);
+}
+
 /* Animation in der Navigation */
 a.wp-block-navigation-item__content {
     transition: all 1.5s;
