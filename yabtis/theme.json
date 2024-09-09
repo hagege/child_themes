@@ -10,7 +10,7 @@
 					"slug": "base"
 				},
 				{
-					"color": "#FF9F1C",
+					"color": "#FFFFFF",
 					"name": "Base / Two",
 					"slug": "base-2"
 				},
@@ -20,7 +20,7 @@
 					"slug": "contrast-2"
 				},
 				{
-					"color": "#FFFFFF",
+					"color": "#FF9F1C",
 					"name": "Contrast",
 					"slug": "contrast"
 				},
@@ -144,36 +144,66 @@
 	"styles": {
 		"color": {
 			"background": "var(--wp--preset--color--base)",
-			"text": "var(--wp--preset--color--contrast)"
+			"text": "var(--wp--preset--color--base-2)"
 		},
 		"css": "/* html {\n    overflow-y: scroll;\n}\n*/",
 		"elements": {
 			"button": {
 				":active": {
 					"color": {
+						"background": "var(--wp--preset--color--base-2)",
 						"text": "var(--wp--preset--color--base)"
 					}
 				},
 				":focus": {
+					"border": {
+						"color": "var(--wp--preset--color--base-2)"
+					},
 					"color": {
-						"background": "var(--wp--preset--color--contrast)",
+						"background": "var(--wp--preset--color--base-2)",
 						"text": "var(--wp--preset--color--base)"
+					},
+					"outline": {
+						"color": "var(--wp--preset--color--contrast)",
+						"offset": "4px"
 					}
 				},
 				":hover": {
+					"border": {
+						"color": "var(--wp--preset--color--base)"
+					},
 					"color": {
-						"background": "var(--wp--preset--color--contrast)",
-						"text": "var(--wp--preset--color--base)"
+						"background": "var(--wp--preset--color--base)",
+						"text": "var(--wp--preset--color--base-2)"
+					},
+					"outline": {
+						"color": "var(--wp--preset--color--base-2)",
+						"offset": "4px",
+						"style": "groove",
+						"width": "4px"
 					}
 				},
 				"border": {
-					"radius": "0"
+					"color": "var(--wp--preset--color--base-2)",
+					"radius": ".33rem"
 				},
 				"color": {
-					"text": "var(--wp--preset--color--contrast)"
+					"background": "var(--wp--preset--color--base-2)",
+					"text": "var(--wp--preset--color--base)"
+				},
+				"spacing": {
+					"padding": {
+						"bottom": "0.6rem",
+						"left": "1rem",
+						"right": "1rem",
+						"top": "0.6rem"
+					}
 				},
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--medium)"
+					"fontFamily": "var(--wp--preset--font-family--lexend)",
+					"fontSize": "var(--wp--preset--font-size--medium)",
+					"fontStyle": "normal",
+					"fontWeight": "600"
 				}
 			},
 			"h1": {
@@ -232,7 +262,7 @@
 					}
 				},
 				"color": {
-					"text": "var(--wp--preset--color--contrast)"
+					"text": "var(--wp--preset--color--base-2)"
 				}
 			}
 		},
