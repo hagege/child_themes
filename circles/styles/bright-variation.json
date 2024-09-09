@@ -3,27 +3,27 @@
 		"color": {
 			"palette": [
 				{
-					"color": "#21295c",
+					"color": "#fafafa",
 					"name": "Base",
 					"slug": "base"
 				},
 				{
-					"color": "#fafafa",
+					"color": "#262626",
 					"name": "Base / Two",
 					"slug": "base-2"
 				},
 				{
-					"color": "#B14AED",
+					"color": "#858AE3",
 					"name": "Contrast / 2",
 					"slug": "contrast-2"
 				},
 				{
-					"color": "#f1d302",
+					"color": "#f6ae2d",
 					"name": "Contrast",
 					"slug": "contrast"
 				},
 				{
-					"color": "#C874D9",
+					"color": "#f26419",
 					"name": "Contrast / 3",
 					"slug": "contrast-3"
 				}
@@ -45,7 +45,7 @@
 			"fontFamily": "var(--wp--preset--font-family--lexend)"
 		}
 	},
-	"title": "blue-variation",
+	"title": "bright-variation",
 	"version": 3,
 	"$schema": "https://schemas.wp.org/wp/6.6/theme.json"
 }
