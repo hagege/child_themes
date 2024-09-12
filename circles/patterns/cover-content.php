@@ -1,9 +1,8 @@
 <?php
 /**
- * Title: cover-content
+ * Title: Cover Content
  * Slug: circles/cover-content
- * Categories: hidden
- * Inserter: no
+ * Categories: Banners
  */
 ?>
 <!-- wp:cover {"url":"<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/circle_light_orange.svg","dimRatio":0,"isUserOverlayColor":true,"isDark":false,"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->

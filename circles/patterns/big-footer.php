@@ -2,8 +2,7 @@
 /**
  * Title: big-footer
  * Slug: circles/big-footer
- * Categories: hidden
- * Inserter: no
+ * Categories: circles
  */
 ?>
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|20"}},"border":{"top":{"color":"var:preset|color|contrast-5","width":"1px"},"right":[],"bottom":[],"left":[]}},"layout":{"type":"constrained"}} -->

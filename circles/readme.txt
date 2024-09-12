@@ -3,7 +3,7 @@ Contributors: wordpressdotorg
 Requires at least: 6.4
 Tested up to: 6.4
 Requires PHP: 7.0
-Stable tag: 0.4.2
+Stable tag: 0.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,6 +12,17 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Circles is designed to be flexible, versatile and applicable to any website. Its collection of templates and patterns tailor to different needs, such as presenting a business, blogging and writing or showcasing work. Circles comes with style variations and full page designs to help speed up the site building process, is fully compatible with the site editor, and takes advantage of new design tools introduced in WordPress 6.4.
 
 == Changelog ==
+
+= 0.5.1 =
+* Released: September 12, 2024
+* Fix: Differentiated presentation of patterns and templates
+* Fix: Missing Patterns added
+
+= 0.4.4 =
+* Released: September 9, 2024
+* Template Start Page deleted
+* various Changes at different Templates
+* new Template "Full Width"
 
 = 0.4.3 =
 * Released: September 9, 2024

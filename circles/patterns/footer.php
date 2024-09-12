@@ -1,9 +1,8 @@
 <?php
 /**
- * Title: footer
+ * Title: Footer
  * Slug: circles/footer
- * Categories: hidden
- * Inserter: no
+ * Categories: Footer
  */
 ?>
 <!-- wp:group {"layout":{"type":"constrained"}} -->
