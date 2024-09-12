@@ -3,7 +3,7 @@ Contributors: wordpressdotorg
 Requires at least: 6.4
 Tested up to: 6.4
 Requires PHP: 7.0
-Stable tag: 0.5.1
+Stable tag: 0.5.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,10 +13,12 @@ Circles is designed to be flexible, versatile and applicable to any website. Its
 
 == Changelog ==
 
-= 0.5.1 =
+= 0.5.3 =
 * Released: September 12, 2024
 * Fix: Differentiated presentation of patterns and templates
 * Fix: Missing Patterns added
+* Fix: Missing right column on templates with sidebar
+* Tweak: Renaming Patterns and correcting categories
 
 = 0.4.4 =
 * Released: September 9, 2024

@@ -2,7 +2,7 @@
 /**
  * Title: Footer
  * Slug: circles/footer
- * Categories: Footer
+ * Categories: circles, footers
  */
 ?>
 <!-- wp:group {"layout":{"type":"constrained"}} -->

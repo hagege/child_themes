@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: cover-pages
+ * Title: Cover Pages
  * Slug: circles/cover-pages
- * Categories: circles-page
+ * Categories: circles
  */
 ?>
 <!-- wp:group {"layout":{"type":"default"}} -->

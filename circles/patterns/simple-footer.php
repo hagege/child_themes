@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: simple-footer
+ * Title: Simple Footer
  * Slug: circles/simple-footer
- * Categories: Footer
+ * Categories: circles, footers
  */
 ?>
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|20"}},"border":{"top":{"width":"0px","style":"none"},"right":[],"bottom":[],"left":[]}},"layout":{"type":"constrained"}} -->

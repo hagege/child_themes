@@ -2,7 +2,7 @@
 /**
  * Title: Banner as example for a landing page
  * Slug: circles/landing-page-example
- * Categories: Banners
+ * Categories: circles, banners
  */
 ?>
 <!-- wp:separator {"className":"is-style-default"} -->

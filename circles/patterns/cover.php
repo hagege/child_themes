@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Cover with Circle
- * Slug: circles/cover-with-circles
+ * Slug: circles/cover
  * Categories: circles
  */
 ?>

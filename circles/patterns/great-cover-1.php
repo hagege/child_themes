@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: First Cover
- * Slug: circles/Banners
- * Categories: Banners
+ * Title: Great Cover 1
+ * Slug: circles/great-cover-1
+ * Categories: circles, banners
  */
 ?>
 <!-- wp:group {"layout":{"type":"default"}} -->
