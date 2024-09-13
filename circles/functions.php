@@ -25,8 +25,8 @@ if ( ! function_exists( 'circles_pattern_categories' ) ) :
 		register_block_pattern_category(
 			'circles_page',
 			array(
-				'label'       => _x( 'Pages', 'Block pattern category', 'circles' ),
-				'description' => __( 'A collection of full page layouts.', 'circles' ),
+				'label'       => _x( 'Pages', 'Block pattern category', 'Circles' ),
+				'description' => __( 'A collection of full page layouts.', 'Circles' ),
 			)
 		);
 	}
