@@ -1,9 +1,12 @@
 <?php
 /**
- * Title: single-post-with-sidebar
+ * Title: Single Post with Sidebar
  * Slug: circles/single-post-with-sidebar
- * Categories: hidden
- * Inserter: no
+ * Categories: circles_page
+ * Keywords: page
+ * Block Types: core/post-content
+ * Post Types: page, wp_template
+ * Description: Single Post with Sidebar
  */
 ?>
 <!-- wp:template-part {"slug":"header","area":"header"} /-->
@@ -116,15 +119,15 @@
 
 <!-- wp:list -->
 <ul class="wp-block-list"><!-- wp:list-item -->
-<li><?php esc_html_e('<a href="#">Ein erster Link</a>', 'circles');?></li>
+<li><?php esc_html_e('&lt;a href="#"&gt;Ein erster Link&lt;/a&gt;', 'circles');?></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li><?php esc_html_e('<a href="#">Ein zweiter Link</a>', 'circles');?></li>
+<li><?php esc_html_e('&lt;a href="#"&gt;Ein zweiter Link&lt;/a&gt;', 'circles');?></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li><?php esc_html_e('<a href="#">Ein dritter Link</a>', 'circles');?></li>
+<li><?php esc_html_e('&lt;a href="#"&gt;Ein dritter Link&lt;/a&gt;', 'circles');?></li>
 <!-- /wp:list-item --></ul>
 <!-- /wp:list --></div>
 <!-- /wp:group --></div>

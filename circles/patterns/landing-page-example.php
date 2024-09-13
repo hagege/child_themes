@@ -23,8 +23,8 @@
 <!-- /wp:group -->
 
 <!-- wp:group {"align":"full","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull"><!-- wp:cover {"url":"http://localhost/fse_neu/wp-content/themes/circles/assets/images/wordcamp_images_1920_023.jpg","dimRatio":0,"customOverlayColor":"#667fa6","isUserOverlayColor":true,"align":"full","layout":{"type":"constrained"}} -->
-<div class="wp-block-cover alignfull"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim" style="background-color:#667fa6"></span><img class="wp-block-cover__image-background" alt="" src="http://localhost/fse_neu/wp-content/themes/circles/assets/images/wordcamp_images_1920_023.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"color":{"background":"#ffffff2e"},"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull"><!-- wp:cover {"url":"<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/wordcamp_images_1920_023.webp","dimRatio":0,"customOverlayColor":"#667fa6","isUserOverlayColor":true,"align":"full","layout":{"type":"constrained"}} -->
+<div class="wp-block-cover alignfull"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim" style="background-color:#667fa6"></span><img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/wordcamp_images_1920_023.webp" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"color":{"background":"#ffffff2e"},"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group has-background" style="background-color:#ffffff2e;padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:heading {"textAlign":"center","fontSize":"x-large"} -->
 <h2 class="wp-block-heading has-text-align-center has-x-large-font-size">Wonderful Image</h2>
 <!-- /wp:heading -->
