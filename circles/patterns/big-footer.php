@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: big-footer
+ * Title: Big Footer
  * Slug: circles/big-footer
- * Categories: circles, footers
+ * Categories: circles, footer
  */
 ?>
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|20"}},"border":{"top":{"color":"var:preset|color|contrast-5","width":"1px"},"right":[],"bottom":[],"left":[]}},"layout":{"type":"constrained"}} -->

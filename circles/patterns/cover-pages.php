@@ -2,7 +2,7 @@
 /**
  * Title: Cover Pages
  * Slug: circles/cover-pages
- * Categories: circles
+ * Categories: circles, posts
  */
 ?>
 <!-- wp:group {"layout":{"type":"default"}} -->

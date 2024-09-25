@@ -1,4 +1,5 @@
 {
+	"$schema": "https://schemas.wp.org/wp/6.6/theme.json",
 	"settings": {
 		"appearanceTools": true,
 		"color": {
@@ -110,8 +111,41 @@
 					"slug": "system-font"
 				},
 				{
-					"fontFace": [],
-					"fontFamily": "Lexend, sans-serif",
+					"fontFace": [
+						{
+							"fontFamily": "Lexend",
+							"fontStyle": "normal",
+							"fontWeight": "250",
+							"src": [
+								"file:./assets/fonts/lexend-v19-latin-200.woff2"
+							]
+						},
+						{
+							"fontFamily": "Lexend",
+							"fontStyle": "normal",
+							"fontWeight": "600",
+							"src": [
+								"file:./assets/fonts/lexend-v19-latin-600.woff2"
+							]
+						},
+						{
+							"fontFamily": "Lexend",
+							"fontStyle": "normal",
+							"fontWeight": "800",
+							"src": [
+								"file:./assets/fonts/lexend-v19-latin-800.woff2"
+							]
+						},
+						{
+							"fontFamily": "Lexend",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/lexend-v19-latin-regular.woff2"
+							]
+						}
+					],
+					"fontFamily": "Lexend",
 					"name": "Lexend",
 					"slug": "lexend"
 				}
@@ -280,6 +314,5 @@
 			"lineHeight": "1.6"
 		}
 	},
-	"version": 3,
-	"$schema": "https://schemas.wp.org/wp/6.6/theme.json"
+	"version": 3
 }

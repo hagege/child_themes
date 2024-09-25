@@ -1,17 +1,57 @@
 === Circles ===
 Contributors: wordpressdotorg
 Requires at least: 6.4
-Tested up to: 6.4
-Requires PHP: 7.0
-Stable tag: 0.6.1
+Tested up to: 6.6
+Requires PHP: 7.4
+Stable tag: 0.6.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Circles is designed to be flexible, versatile and applicable to any website. Its collection of templates and patterns tailor to different needs, such as presenting a business, blogging and writing or showcasing work. Circles comes with style variations and full page designs to help speed up the site building process, is fully compatible with the site editor, and takes advantage of new design tools introduced in WordPress 6.4.
+Circles is a clean, flexible, fast and accessibility-ready block theme. Its default look is a stylish white on black background color scheme with an orange circle in background and lexend  font (a sans-serif typography). Circles is built from the ground up for flexibility. It includes nine different theme styles to choose from, and different block patterns that you can use to quickly create unique page layouts.
+
+Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, sticky-post, threaded-comments, translation-ready, block-styles, wide-blocks, full-site-editing, accessibility-ready
 
 == Changelog ==
+
+= 0.6.5.1 =
+* Released: September 23, 2024
+* Tweak: Category Circles is now displayed correctly in the editor (see functions.php)
+* Tweak: Renaming Patterns and deleting Pattern "Cover Content"
+* Add: Patterns for posts (one and two columns)
+
+= 0.6.5 =
+* Released: September 22, 2024
+* Fix: Category Circles is now displayed correctly in the editor (see functions.php)
+* Add: New pattern "cards", "cover with call-to-action", "Banner with Image on the left"
+
+= 0.6.4.3 =
+* Released: September 21, 2024
+* Tweak: Color for yellow circle slightly more intense
+
+= 0.6.4.2 =
+* Released: September 20, 2024
+* Tweak: Update Description of style.css and readme.txt
+* Fix: Corrected the names of the categories in the patterns.
+
+= 0.6.4 =
+* Released: September 19, 2024
+* New: Templates with green and blue Circles
+* Tweak: Change Image in Template with red Circle
+
+= 0.6.3.1 =
+* Released: September 18, 2024
+* Fix: Replace dynamical reference to image in cover-circle.php (also renaming this pattern)
+
+= 0.6.3 =
+* Released: September 17, 2024
+* Tweak: Embedding Font Lexend in /assets folder
+
+= 0.6.2 =
+* Released: September 16, 2024
+* Tweak: Padding left and right Single Post Template
+* Tweak: Padding left and right Full with Post Template
 
 = 0.6.1 =
 * Released: September 13, 2024
@@ -93,4 +133,12 @@ GNU General Public License for more details.
 
 === Images ===
 License: CC0 https://haurand.com
+
+=== Font ===
+Lexend - https://lexend.com
+OFL-1.1 licens - https://github.com/googlefonts/lexend?tab=OFL-1.1-1-ov-file
+Copyright 2018 The Lexend Project Authors (https://github.com/googlefonts/lexend), with Reserved Font Name “RevReading Lexend”. 
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://scripts.sil.org/OFL
 

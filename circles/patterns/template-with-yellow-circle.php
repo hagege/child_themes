@@ -1,12 +1,9 @@
 <?php
 /**
- * Title: Template with yellow Circle
+ * Title: template-with-yellow-circle
  * Slug: circles/template-with-yellow-circle
- * Categories: circles_page
- * Keywords: page
- * Block Types: core/post-content
- * Post Types: page, wp_template
- * Description: Template with yellow Circle
+ * Categories: hidden
+ * Inserter: no
  */
 ?>
 <!-- wp:template-part {"slug":"header","area":"header"} /-->
@@ -16,7 +13,7 @@
 <!-- /wp:separator -->
 
 <!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"0","bottom":"0"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
-<main class="wp-block-group" style="margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0"><!-- wp:group {"align":"full","style":{"background":{"backgroundImage":{"url":"<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/circle_light_yellow.svg","id":7146,"source":"file","title":"circle_light_yellow"},"backgroundPosition":"50% 0"}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group" style="margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0"><!-- wp:group {"align":"full","style":{"background":{"backgroundImage":{"url":"<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/circle_yellow.svg","id":5912,"source":"file","title":"circle_yellow"},"backgroundPosition":"50% 0"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull"><!-- wp:post-featured-image {"height":"25em","align":"full"} /-->
 
 <!-- wp:group {"style":{"background":{"backgroundPosition":"35% 42%"},"spacing":{"padding":{"right":"var:preset|spacing|30","left":"var:preset|spacing|30"}}},"layout":{"type":"constrained"}} -->

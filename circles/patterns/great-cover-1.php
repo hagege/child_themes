@@ -2,7 +2,7 @@
 /**
  * Title: Great Cover 1
  * Slug: circles/great-cover-1
- * Categories: circles, banners
+ * Categories: circles, banner
  */
 ?>
 <!-- wp:group {"layout":{"type":"default"}} -->

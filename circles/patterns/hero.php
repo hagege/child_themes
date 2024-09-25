@@ -2,7 +2,7 @@
 /**
  * Title: Hero
  * Slug: circles/hero
- * Categories: circles, hero
+ * Categories: circles, call-to-action
  */
 ?>
 <!-- wp:cover {"overlayColor":"contrast-3","isUserOverlayColor":true,"isDark":false,"align":"full"} -->
