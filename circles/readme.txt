@@ -3,7 +3,7 @@ Contributors: wordpressdotorg
 Requires at least: 6.4
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 0.6.5.1
+Stable tag: 0.6.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,6 +14,11 @@ Circles is a clean, flexible, fast and accessibility-ready block theme. Its defa
 Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, sticky-post, threaded-comments, translation-ready, block-styles, wide-blocks, full-site-editing, accessibility-ready
 
 == Changelog ==
+
+= 0.6.6 =
+* Released: September 25, 2024
+* Add: accessibility-ready font Atkinson Hyperlegible
+* Tweak: better formatting of the query loop in the index template
 
 = 0.6.5.1 =
 * Released: September 23, 2024
@@ -132,9 +137,9 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 === Images ===
-License: CC0 https://haurand.com
+All Images: License: CC0 https://haurand.com
 
-=== Font ===
+=== Fonts ===
 Lexend - https://lexend.com
 OFL-1.1 licens - https://github.com/googlefonts/lexend?tab=OFL-1.1-1-ov-file
 Copyright 2018 The Lexend Project Authors (https://github.com/googlefonts/lexend), with Reserved Font Name “RevReading Lexend”. 
@@ -142,3 +147,9 @@ This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
 https://scripts.sil.org/OFL
 
+Atkinson Hyperlegible - https://www.brailleinstitute.org
+OFL-1.1 licens - https://github.com/googlefonts/atkinson-hyperlegible?tab=OFL-1.1-1-ov-file
+Copyright 2020 Braille Institute of America, Inc.
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL

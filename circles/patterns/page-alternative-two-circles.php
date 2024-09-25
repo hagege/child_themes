@@ -2,11 +2,8 @@
 /**
  * Title: Page Alternative with Two Circles
  * Slug: circles/page-alternative-two-circles
- * Categories: circles_page
- * Keywords: page
- * Block Types: core/post-content
- * Post Types: page, wp_template
- * Description: Page Alternative with Two Circles
+ * Template Types: front-page, home
+ * Inserter: no
  */
 ?>
 <!-- wp:template-part {"slug":"header","area":"header"} /-->
@@ -22,7 +19,7 @@
 
 <!-- wp:group {"tagName":"main","align":"full","style":{"background":{"backgroundImage":{"url":"<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/circle_light_orange.svg","id":6935,"source":"file","title":"circle_light_orange"},"backgroundPosition":"50% 0"}},"layout":{"type":"constrained"}} -->
 <main class="wp-block-group alignfull"><!-- wp:group {"style":{"background":{"backgroundImage":{"url":"<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/circle_light_orange.svg","id":6935,"source":"file","title":"circle_light_orange"},"backgroundPosition":"35% 42%"},"spacing":{"padding":{"right":"var:preset|spacing|30","left":"var:preset|spacing|30"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:post-title /-->
+<div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:post-title {"level":1} /-->
 
 <!-- wp:post-content /--></div>
 <!-- /wp:group --></main>

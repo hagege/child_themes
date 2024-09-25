@@ -2,11 +2,8 @@
 /**
  * Title: Page Alternative with One Circle
  * Slug: circles/page-alternative-one-circle
- * Categories: circles_page
- * Keywords: page
- * Block Types: core/post-content
- * Post Types: page, wp_template
- * Description: Page Alternative with One Circle
+ * Template Types: front-page, home
+ * Inserter: no
  */
 ?>
 <!-- wp:template-part {"slug":"header","area":"header"} /-->

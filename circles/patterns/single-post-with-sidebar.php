@@ -1,12 +1,8 @@
 <?php
 /**
- * Title: Single Post with Sidebar
+ * Title: single-post-with-sidebar
  * Slug: circles/single-post-with-sidebar
- * Categories: circles_page
- * Keywords: page
- * Block Types: core/post-content
- * Post Types: page, wp_template
- * Description: Single Post with Sidebar
+ * Inserter: no
  */
 ?>
 <!-- wp:template-part {"slug":"header","area":"header"} /-->
@@ -27,7 +23,7 @@
 <div class="wp-block-group alignfull"><!-- wp:group {"style":{"background":{"backgroundPosition":"35% 42%"},"spacing":{"padding":{"right":"var:preset|spacing|30","left":"var:preset|spacing|30"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:post-featured-image {"style":{"spacing":{"padding":{"bottom":"2vh"}}}} /-->
 
-<!-- wp:post-title {"style":{"spacing":{"padding":{"top":"30px"}}}} /-->
+<!-- wp:post-title {"level":1,"style":{"spacing":{"padding":{"top":"30px"}}}} /-->
 
 <!-- wp:post-content /--></div>
 <!-- /wp:group --></div>

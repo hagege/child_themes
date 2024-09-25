@@ -1,5 +1,4 @@
 {
-	"$schema": "https://schemas.wp.org/wp/6.6/theme.json",
 	"settings": {
 		"appearanceTools": true,
 		"color": {
@@ -148,6 +147,21 @@
 					"fontFamily": "Lexend",
 					"name": "Lexend",
 					"slug": "lexend"
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "\"Atkinson Hyperlegible\"",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/atkinson-hyperlegible/atkinson-hyperlegible-400-normal.woff2"
+							]
+						}
+					],
+					"fontFamily": "\"Atkinson Hyperlegible\"",
+					"name": "Atkinson Hyperlegible",
+					"slug": "atkinson-hyperlegible"
 				}
 			],
 			"fontSizes": [
@@ -314,5 +328,6 @@
 			"lineHeight": "1.6"
 		}
 	},
-	"version": 3
+	"version": 3,
+	"$schema": "https://schemas.wp.org/wp/6.6/theme.json"
 }
