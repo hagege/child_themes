@@ -4,7 +4,9 @@
 	"title": "JJG",
 	"settings": {
 		"appearanceTools": true,
-
+		"spacing": {
+			"blockGap": true
+		},
 		"color": {
 			"palette": [
 				{
@@ -35,12 +37,12 @@
 				{
 					"color": "#5A7A8a",
 					"name": "Dunkelblau",
-					"slug": "Dunkelblau"
+					"slug": "dunkelblau"
 				},
 				{
 					"color": "#92c4e0",
 					"name": "Hellblau",
-					"slug": "Hellblau"
+					"slug": "hellblau"
 				}						
 			]
 		},
@@ -200,10 +202,10 @@
 		"elements": {
 			"button": {
 				"border": {
-					"radius": "0px"
+					"radius": "5px"
 				},
 				"color": {
-					"background": "var(--wp--preset--color--contrast)",
+					"background": "var(--wp--preset--color--dunkelblau)",
 					"text": "var(--wp--preset--color--base-2)"
 				},
 				"spacing": {
@@ -221,7 +223,14 @@
 				},
 				":hover": {
 					"color": {
-						"background": "var(--wp--preset--color--contrast)"
+						"background": "var(--wp--preset--color--hellblau)",
+						"text": "var(--wp--preset--color--contrast)"
+					}
+				},
+				":focus": {
+					"color": {
+						"background": "var(--wp--preset--color--hellblau)",
+						"text": "var(--wp--preset--color--contrast)"
 					}
 				}
 			},

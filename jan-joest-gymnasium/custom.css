@@ -26,7 +26,7 @@
 {
     "color": "#5A7A8a",
     "name": "Dunkelblau",
-    "slug": "Dunkelblau"
+    "slug": "dunkelblau"
 }
 
 custom:
@@ -165,26 +165,13 @@ details p, details ol.wp-block-list, details ul.wp-block-list {
 }
 
 /* Buttons */
-a.wp-block-button__link.wp-element-button {
-  list-style: none;
-  display: flex; /* also removes the list marker */
-  align-items: center;
-  margin-bottom: 0.5rem;
-  color: var(--wp--preset--color--base-2);
-  background: var(--wp--preset--color--dunkelblau);
-  border-radius: 5px;
-}
 
 a.wp-block-button__link.wp-element-button:hover
 {
-  color: var(--wp--preset--color--contrast);
-    background: var(--wp--preset--color--hellblau);
     transition: all 0.2s ease-in-out;
 }
 
 a.wp-block-button__link.wp-element-button:focus {
-  color: var(--wp--preset--color--contrast);
-    background: var(--wp--preset--color--hellblau);
     transition: all 0.2s ease-in-out;
 }
 
