@@ -1,17 +1,46 @@
 {
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "JJG",
 	"settings": {
+		"appearanceTools": true,
 		"color": {
 			"palette": [
 				{
-					"color": "#e95d0f",
-					"name": "orange",
-					"slug": "custom-orange"
+					"color": "#f9f9f9",
+					"name": "Base",
+					"slug": "base"
 				},
 				{
-					"color": "#c94e0c",
-					"name": "dunkleres orange",
-					"slug": "custom-dunkleres-orange"
-				}
+					"color": "#ffffff",
+					"name": "Base / Two",
+					"slug": "base-2"
+				},
+				{
+					"color": "#111111",
+					"name": "Contrast",
+					"slug": "contrast"
+				},
+				{
+					"color": "#636363",
+					"name": "Contrast / Two",
+					"slug": "contrast-2"
+				},
+				{
+					"color": "#A4A4A4",
+					"name": "Contrast / Three",
+					"slug": "contrast-3"
+				},
+				{
+					"color": "#5A7A8a",
+					"name": "Dunkelblau",
+					"slug": "Dunkelblau"
+				},
+				{
+					"color": "#92c4e0",
+					"name": "Hellblau",
+					"slug": "Hellblau"
+				}						
 			]
 		},
 		"typography": {
@@ -22,25 +51,19 @@
 							"fontFamily": "Cardo",
 							"fontStyle": "normal",
 							"fontWeight": "400",
-							"src": [
-								"file:./assets/fonts/cardo/cardo_normal_400.woff2"
-							]
+							"src": ["file:./assets/fonts/cardo/cardo_normal_400.woff2"]
 						},
 						{
 							"fontFamily": "Cardo",
 							"fontStyle": "italic",
 							"fontWeight": "400",
-							"src": [
-								"file:./assets/fonts/cardo/cardo_italic_400.woff2"
-							]
+							"src": ["file:./assets/fonts/cardo/cardo_italic_400.woff2"]
 						},
 						{
 							"fontFamily": "Cardo",
 							"fontStyle": "normal",
 							"fontWeight": "700",
-							"src": [
-								"file:./assets/fonts/cardo/cardo_normal_700.woff2"
-							]
+							"src": ["file:./assets/fonts/cardo/cardo_normal_700.woff2"]
 						}
 					],
 					"fontFamily": "Cardo",
@@ -53,9 +76,7 @@
 							"fontFamily": "Jost",
 							"fontStyle": "normal",
 							"fontWeight": "100 900",
-							"src": [
-								"file:./assets/fonts/jost/Jost-VariableFont_wght.woff2"
-							]
+							"src": ["file:./assets/fonts/jost/Jost-VariableFont_wght.woff2"]
 						},
 						{
 							"fontFamily": "Jost",
@@ -79,105 +100,136 @@
 					"fontFamily": "Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol",
 					"name": "System Serif",
 					"slug": "system-serif"
+				}
+			],
+			"fontSizes": [
+				{
+					"fluid": true,
+					"name": "Small",
+					"size": "1rem",
+					"slug": "small"
 				},
 				{
-					"fontFace": [
-						{
-							"fontFamily": "Lexend",
-							"fontStyle": "normal",
-							"fontWeight": "400",
-							"src": "http://neu.jan-joest-gymnasium.de/wp-content/uploads/fonts/wlptgwvFAVdoq2_F94zlCfv0bz1WCzsW_LVte6KuGEo.woff2"
-						},
-						{
-							"fontFamily": "Lexend",
-							"fontStyle": "normal",
-							"fontWeight": "600",
-							"src": "http://neu.jan-joest-gymnasium.de/wp-content/uploads/fonts/wlptgwvFAVdoq2_F94zlCfv0bz1WC-UR_LVte6KuGEo.woff2"
-						},
-						{
-							"fontFamily": "Lexend",
-							"fontStyle": "normal",
-							"fontWeight": "800",
-							"src": "http://neu.jan-joest-gymnasium.de/wp-content/uploads/fonts/wlptgwvFAVdoq2_F94zlCfv0bz1WC7sR_LVte6KuGEo.woff2"
-						},
-						{
-							"fontFamily": "Lexend",
-							"fontStyle": "normal",
-							"fontWeight": "200",
-							"src": "http://neu.jan-joest-gymnasium.de/wp-content/uploads/fonts/wlptgwvFAVdoq2_F94zlCfv0bz1WC7sW_LVte6KuGEo.woff2"
-						},
-						{
-							"fontFamily": "Lexend",
-							"fontStyle": "normal",
-							"fontWeight": "300",
-							"src": "http://neu.jan-joest-gymnasium.de/wp-content/uploads/fonts/wlptgwvFAVdoq2_F94zlCfv0bz1WC2UW_LVte6KuGEo.woff2"
-						}
-					],
-					"fontFamily": "Lexend, sans-serif",
-					"name": "Lexend",
-					"slug": "lexend"
+					"fluid": true,
+					"name": "Medium",
+					"size": "1.2rem",
+					"slug": "medium"
+				},
+				{
+					"fluid": {
+						"min": "1.5rem",
+						"max": "2rem"
+					},
+					"name": "Large",
+					"size": "2rem",
+					"slug": "large"
+				},
+				{
+					"fluid": {
+						"min": "2rem",
+						"max": "2.65rem"
+					},
+					"name": "Extra Large",
+					"size": "2.65rem",
+					"slug": "x-large"
+				},
+				{
+					"fluid": {
+						"min": "2.65rem",
+						"max": "3.5rem"
+					},
+					"name": "Extra Extra Large",
+					"size": "3.5rem",
+					"slug": "xx-large"
 				}
 			]
+		},
+		"layout": {
+			"contentSize": "1200px",
+			"wideSize": "1920px"
 		}
 	},
 	"styles": {
 		"blocks": {
-			"core/heading": {
-				"spacing": {
-					"margin": {
-						"bottom": "0",
-						"top": "0"
-					},
-					"padding": {
-						"bottom": "var(--wp--preset--spacing--20)",
-						"top": "var(--wp--preset--spacing--30)"
+			"core/button": {
+				"variations": {
+					"outline": {
+						"spacing": {
+							"padding": {
+								"bottom": "calc(0.8rem - 2px)",
+								"left": "calc(1.6rem - 2px)",
+								"right": "calc(1.6rem - 2px)",
+								"top": "calc(0.8rem - 2px)"
+							}
+						},
+						"border": {
+							"width": "2px"
+						}
 					}
 				}
 			},
-			"core/paragraph": {
-				"spacing": {
-					"margin": {
-						"bottom": "var(--wp--preset--spacing--20)",
-						"top": "var(--wp--preset--spacing--20)"
+			"core/site-title": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading)",
+					"fontWeight": "normal"
+				}
+			},
+			"core/navigation": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)",
+					"fontWeight": "normal"
+				}
+			},
+			"core/image": {
+				"variations": {
+					"rounded": {
+						"border": {
+							"radius": "0px"
+						}
 					}
+				}
+			},
+			"core/post-featured-image": {
+				"border": {
+					"radius": "0px"
 				}
 			}
+
 		},
-		"color": {
-			"background": "var(--wp--preset--color--base-2)"
-		},
-		"css": "/* {\n    \"color\": \"#f9f9f9\",\n    \"name\": \"Base\",\n    \"slug\": \"base\"\n},\n{\n    \"color\": \"#ffffff\",\n    \"name\": \"Base / Two\",\n    \"slug\": \"base-2\"\n},\n{\n    \"color\": \"#111111\",\n    \"name\": \"Contrast\",\n    \"slug\": \"contrast\"\n},\n{\n    \"color\": \"#636363\",\n    \"name\": \"Contrast / Two\",\n    \"slug\": \"contrast-2\"\n},\n{\n    \"color\": \"#A4A4A4\",\n    \"name\": \"Contrast / Three\",\n    \"slug\": \"contrast-3\"\n},\n{\n    \"color\": \"#5A7A8a\",\n    \"name\": \"Dunkelblau\",\n    \"slug\": \"Dunkelblau\"\n}\n\ncustom:\norange: \n--wp--preset--color--custom-orange\n#e95d0f;\ndunkleres orange: \n--wp--preset--color--custom-dunkleres-orange\n#c94e0c\n*/\n\n:where(.wp-site-blocks *:focus){outline-width:2px;outline-style:solid}\n\n/* Menü bei hover */\n.wp-block-navigation a:where(:not(.wp-element-button)) {\n    text-decoration: none;\n    padding: .5em 1em;\n}\n\n.wp-block-navigation a:where(:not(.wp-element-button)):hover {\n    text-decoration: none;\n    background-color: var(--wp--preset--color--contrast-3);\n    padding: .5em 1em;\n    color: #ffffff!important;\n}\n\n.wp-block-navigation a:where(:not(.wp-element-button)):focus {\n    text-decoration: none;\n    padding: .5em 1em;\n    outline:2px;\n}\n\n/* b-slider Anfang */\n.wp-site-blocks *:focus {\n    outline-width: 0px; \n    outline-style: solid;\n}\n\n#bsbCarousel-09b6e5ef-a .bsbTitle {\n    color: #fff;\n    margin: 5px 0px 5px 0px;\n    animation-delay: 0s!important;\n    animation-duration: 0s!important;\n}\n\n\n#bsbCarousel-09b6e5ef-a p {\n    color: #fff;\n    margin: 5px 0px 5px 0px;\n    animation-delay: 0s!important;\n    animation-duration: 0s!important;\n}\n/* b-slider Ende */\n\n\n\n/* ---------------------*/\n/* Der Detail-Block mit */ \n/* einigen Anpassungen  */\n/* ---------------------*/\nsummary {\n  list-style: none;\n  display: flex; /* also removes the list marker */\n  align-items: center;\n  padding-left: 0.7rem;\n  margin-bottom: 0.5rem;\n  color: var(--wp--preset--color--base-2);\n  background: var(--wp--preset--color--dunkelblau);\n  border-radius: 5px;\n}\n\nsummary::before{\n  content: '>';\n  transition: 0.2s;\n  margin-right: 1rem;\n  font-size: 2rem;\n}\n\n\ndetails.wp-block-details.is-layout-flow.wp-block-details-is-layout-flow {\n    margin-block-start: 20px;\n}\n\ndetails[open] > summary::before{\n  transform: rotate(90deg);\n}\n\n.wp-block-details[open] summary,\n.wp-block-details summary:hover\n{\n    background: var(--wp--preset--color--custom-dunkleres-orange);\n    transition: all 0.2s ease-in-out;\n}\n\n.wp-block-details summary:focus {\n    color: var(--wp--preset--color--contrast);\n    background: var(--wp--preset--color--hellblau);\n    transition: all 0.2s ease-in-out;\n}\n\nsummary::-webkit-details-marker {\n    display: none;\n}\n\n.wp-block-details summary:focus {\n    outline-style: none;\n}\n\n/* Background content of details */\ndetails p, details ol.wp-block-list, details ul.wp-block-list {\n    background: var(--wp--preset--color--base);\n    padding: 2rem;\n    margin-top: 0;\n}\n\n/*\np.has-base-2-background-color.has-background{\n    background: var(--wp--preset--color--base);\n}\n*/\n\n@keyframes details-show {\n  from {\n    opacity:0;\n    transform: var(--details-translate, translateY(-0.5em));\n  }\n}\n\ndetails[open] > *:not(summary),\ndetails[close] > *:not(summary) {\n  animation: details-show 1000ms ease-in-out;\n}\n\n/* Breakpoint für mobiles Menü */\n@media (min-width: 1220px) {\n  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {\n    display: block;\n    width: 100%;\n    position: relative;\n    z-index: auto;\n    background-color: inherit;\n  }\n  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) .wp-block-navigation__responsive-container-close {\n    display: none;\n  }\n  .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container {\n    left: 0;\n  }\n  .wp-block-navigation__responsive-container-open:not(.always-shown) {\n    display: none;\n  }\n}\n\n@media (max-width: 1219px) {\n  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {\n    display: none;\n  }\n  .wp-block-navigation__responsive-container-open:not(.always-shown) {\n    display: flex;\n  }\n}",
 		"elements": {
 			"button": {
+				"border": {
+					"radius": "0px"
+				},
+				"color": {
+					"background": "var(--wp--preset--color--contrast)",
+					"text": "var(--wp--preset--color--base-2)"
+				},
+				"spacing": {
+					"padding": {
+						"bottom": "0.98rem",
+						"left": "1.6rem",
+						"right": "1.6rem",
+						"top": "0.8rem"
+					}
+				},
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--lexend)"
-				}
-			},
-			"h1": {
-				"typography": {
-					"fontSize": "var(--wp--preset--font-size--xx-large)"
+					"fontFamily": "var(--wp--preset--font-family--heading)",
+					"fontSize": "var(--wp--preset--font-size--small)",
+					"fontStyle": "normal"
+				},
+				":hover": {
+					"color": {
+						"background": "var(--wp--preset--color--contrast)"
+					}
 				}
 			},
 			"heading": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--lexend)",
-					"fontStyle": "normal",
-					"fontWeight": "600"
-				}
-			},
-			"link": {
-				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--lexend)",
-					"fontStyle": "normal",
-					"fontWeight": "600"
+					"fontFamily": "var(--wp--preset--font-family--heading)",
+					"letterSpacing": "0"
 				}
 			}
-		},
-		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--lexend)"
 		}
-	},
-	"title": "jjg",
-	"version": 3,
-	"$schema": "https://schemas.wp.org/wp/6.6/theme.json"
+	}
 }
