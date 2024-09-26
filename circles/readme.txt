@@ -20,6 +20,7 @@ Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, 
 * Released: September 26, 2024
 * Fix: Delete pattern cover-pages, cover-circles
 * Tweak: Minor Changes to descriptions of Patterns
+* Tweak: Better formatting PHP-Files in Patterns Folder
 
 = 0.6.6 =
 * Released: September 25, 2024

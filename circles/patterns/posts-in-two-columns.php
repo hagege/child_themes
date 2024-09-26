@@ -1,9 +1,10 @@
 <?php
 	/**
-		* Title: Posts in two columns. Can be inserted on pages.
+		* Title: Posts in two columns
 		* Slug: circles/posts-in-two-columns
-		* Categories: circles, posts, query, blog
+		* Categories: circles, query
 		* Block Types: core/query
+		* Description: Posts in one column. Can be inserted on pages. Do not use for posts.
 	*/
 ?>
 <!-- wp:group {"align":"wide","layout":{"type":"constrained"}} -->

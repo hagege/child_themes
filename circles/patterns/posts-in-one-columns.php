@@ -1,9 +1,10 @@
 <?php
 	/**
-		* Title: Posts in one column. Can be inserted on pages.
+		* Title: Posts in one column
 		* Slug: circles/posts-in-one-column
-		* Categories: circles, posts, query, blog
+		* Categories: circles, query
 		* Block Types: core/query
+		* Description: Posts in one column. Can be inserted on pages. Do not use for posts.
 	*/
 ?>
 <!-- wp:group {"metadata":{"categories":["posts"],"patternName":"circles/posts-in-two-columns","name":"Posts in one column"},"align":"full","layout":{"type":"constrained"}} -->
