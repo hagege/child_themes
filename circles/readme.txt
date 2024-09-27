@@ -19,6 +19,7 @@ Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, 
 * Released: September 27, 2024
 * Add: New Template "Template with grey Circle"
 * Tweak: New Screenshot
+* Tweak: All Circles (red, green, blue, yellow, orange, grey) have now the same dimensions - updated Templates
 
 = 0.6.7 =
 * Released: September 26, 2024
