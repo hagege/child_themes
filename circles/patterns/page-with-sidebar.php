@@ -60,15 +60,15 @@
 			
 			<!-- wp:list -->
 			<ul class="wp-block-list"><!-- wp:list-item -->
-			<li><?php esc_html_e('&lt;a href="#"&gt;Ein erster Link&lt;/a&gt;', 'circles');?></li>
+			<li><?php esc_html_e('Ein erster Link', 'circles');?></li>
 			<!-- /wp:list-item -->
 			
 			<!-- wp:list-item -->
-			<li><?php esc_html_e('&lt;a href="#"&gt;Ein zweiter Link&lt;/a&gt;', 'circles');?></li>
+			<li><?php esc_html_e('Ein zweiter Link', 'circles');?></li>
 			<!-- /wp:list-item -->
 			
 			<!-- wp:list-item -->
-			<li><?php esc_html_e('&lt;a href="#"&gt;Ein dritter Link&lt;/a&gt;', 'circles');?></li>
+			<li><?php esc_html_e('Ein dritter Link', 'circles');?></li>
 			<!-- /wp:list-item --></ul>
 			<!-- /wp:list --></div>
 			<!-- /wp:group --></div>
