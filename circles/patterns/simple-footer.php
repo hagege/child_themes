@@ -1,8 +1,10 @@
 <?php
 	/**
-		* Title: Simple Footer
+		* Title: simple-footer
 		* Slug: circles/simple-footer
-		* Categories: circles, footers
+		* Categories: footer
+		* Block Types: core/template-part/footer
+		* Description: A footer section with three sections
 	*/
 ?>
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|20"}},"border":{"top":{"width":"0px","style":"none"},"right":[],"bottom":[],"left":[]}},"layout":{"type":"constrained"}} -->
@@ -15,8 +17,8 @@
 		
 		<!-- wp:column {"width":"10%"} -->
 		<div class="wp-block-column" style="flex-basis:10%"><!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"0"}}}} -->
-			<div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:0"><!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|contrast"}}}},"fontSize":"small"} -->
-				<p class="has-link-color has-small-font-size">
+			<div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:0"><!-- wp:paragraph {"fontSize":"small"} -->
+				<p class="has-small-font-size">
 				Gestaltet mit <a href="https://de.wordpress.org" rel="nofollow">WordPress</a>		</p>
 			<!-- /wp:paragraph --></div>
 		<!-- /wp:group --></div>
@@ -50,7 +52,7 @@
 			<!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"left"}} -->
 			<div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|10","padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}},"border":{"top":{"width":"2px"},"right":[],"bottom":{"width":"2px"},"left":[]}},"layout":{"type":"flex","orientation":"vertical"}} -->
 				<div class="wp-block-group" style="border-top-width:2px;border-bottom-width:2px;padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)"><!-- wp:heading {"className":"has-medium-font-size","style":{"typography":{"fontStyle":"normal","fontWeight":"600"}},"fontFamily":"lexend"} -->
-					<h2 class="wp-block-heading has-medium-font-size has-lexend-font-family" style="font-style:normal;font-weight:600"><?php esc_html_e('Social', 'circles');?></h2>
+				<h2 class="wp-block-heading has-medium-font-size has-lexend-font-family" style="font-style:normal;font-weight:600"><?php esc_html_e('Social', 'circles');?></h2>
 				<!-- /wp:heading -->
 				
 				<!-- wp:navigation {"overlayMenu":"never","style":{"typography":{"fontStyle":"normal","fontWeight":"400"},"spacing":{"blockGap":"var:preset|spacing|20"}},"fontSize":"medium","layout":{"type":"flex","orientation":"horizontal"}} -->

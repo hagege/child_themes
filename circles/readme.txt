@@ -3,17 +3,29 @@ Contributors: wordpressdotorg
 Requires at least: 6.4
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 0.7
+Stable tag: 0.7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Circles is a clean, flexible, fast and accessibility-ready block theme. Its default look is a stylish white on black background color scheme with an orange circle in background and lexend  font (a sans-serif typography). Circles is built from the ground up for flexibility. It includes nine different theme styles to choose from, and different block patterns that you can use to quickly create unique page layouts. Circles is suitable for websites that contain few photos. The theme is therefore not suitable for photo-heavy websites.
+Circles is a clean, flexible, fast and accessibility-ready block theme. Its default look is a stylish white on black background color scheme with an orange circle in background and lexend  font (a sans-serif typography). Circles is built from the ground up for flexibility. It includes ten different theme styles to choose from, and different block patterns that you can use to quickly create unique page layouts. Circles is suitable for websites that contain few photos. The theme is therefore not suitable for photo-heavy websites.
 
 Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, sticky-post, threaded-comments, translation-ready, block-styles, wide-blocks, full-site-editing, accessibility-ready
 
 == Changelog ==
+
+= 0.7.2 =
+* Released: September 29, 2024
+* Add: Template Part "Header with contact row"
+* Fix: Corrected structure of parts and patterns
+* Tweak: New screenshot.png
+
+= 0.7.1 =
+* Released: September 28, 2024
+* Tweak: Delete custom change for link in footer template parts because of accessibility
+* Fix: Missing yellow Circle in Template
+* Tweak: Change background color and font color on image in Pattern "Banner as example for a landing page" because of accessibility
 
 = 0.7 =
 * Released: September 27, 2024

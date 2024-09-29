@@ -2,7 +2,9 @@
 	/**
 		* Title: Big Footer
 		* Slug: circles/big-footer
-		* Categories: circles, footer
+		* Categories: footer
+		* Block Types: core/template-part/footer
+		* Description: A footer section with logo, navigation and WordPress credits.
 	*/
 ?>
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|20"}},"border":{"top":{"color":"var:preset|color|contrast-5","width":"1px"},"right":[],"bottom":[],"left":[]}},"layout":{"type":"constrained"}} -->
@@ -50,7 +52,7 @@
 					<!-- /wp:navigation --></div>
 				<!-- /wp:group --></div>
 				<!-- /wp:group -->
-				
+			
 			<!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
 			<div class="wp-block-group"><!-- wp:heading {"className":"has-medium-font-size","style":{"typography":{"fontStyle":"normal","fontWeight":"600"}},"fontFamily":"lexend"} -->
 			<h2 class="wp-block-heading has-medium-font-size has-lexend-font-family" style="font-style:normal;font-weight:600"><?php esc_html_e('Social', 'circles');?></h2>
@@ -65,15 +67,15 @@
 			<!-- wp:navigation-link {"label":"Twitter/X","url":"#"} /-->
 			<!-- /wp:navigation --></div>
 			<!-- /wp:group --></div>
-			<!-- /wp:group --></div>
-			<!-- /wp:group --></div>
-			<!-- /wp:column --></div>
-			<!-- /wp:columns -->
+			<!-- /wp:group -->
 			
 			<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"0"}}}} -->
-			<div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:0"><!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|contrast"}}}},"fontSize":"small"} -->
-			<p class="has-link-color has-small-font-size">
+			<div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:0"><!-- wp:paragraph {"fontSize":"small"} -->
+			<p class="has-small-font-size">
 			Gestaltet mit <a href="https://de.wordpress.org" rel="nofollow">WordPress</a>		</p>
 			<!-- /wp:paragraph --></div>
 			<!-- /wp:group --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:column --></div>
+			<!-- /wp:columns --></div>
 			<!-- /wp:group -->			
