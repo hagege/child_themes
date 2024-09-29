@@ -5,20 +5,45 @@
     --mittelgrau-color: rgba(150, 150, 150, 1);
     --hellgrau-color: rgba(232, 232, 232, 1);
     --hellblau-color: rgba(227, 235, 241, 1);
-	--hellblau-color-20: rgba(226, 233, 245, 1);
+    --hellblau-color-20: rgba(226, 233, 245, 1);
     --hellgrau-2-color: rgba(213, 213, 213, 1);
-    --rot-color: rgba(178, 10, 15, 1);			
+    --rot-color: rgba(178, 10, 15, 1);
     --wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
     --wp--preset--font-size--cover-paragraph: clamp(2rem, 10vw, 6rem);
     --wp--preset--font-size--h2: clamp(1.5rem, 2vw, 6rem);
-      /* funktioniert nicht, daher nur definiert */
-	--rot-color_transpa: rgba(191, 25, 25, 0.5);
+    /* funktioniert nicht, daher nur definiert */
+    --rot-color_transpa: rgba(191, 25, 25, 0.5);
     --mobile-breakpoint: 767px;
     --tablet-breakpoint: 900px;
-  }
+}
 
 
 /* --- TEST-ANFANG ----------------- */
+
+/* Button für Download auf der Seite "Infomaterial */
+a.simple-download-counter-link {
+    /* content: "download"; */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5px 20px;
+    margin-top: 10px;
+    border-radius: 35px;
+    background-color: var(--global-color-10);
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Carnas Med';
+}
+
+a.simple-download-counter-link:hover,
+a.simple-download-counter-link:focus,
+a.simple-download-counter-link:active {
+    background-color: var(--global-color-8);
+    color: #ffffff;
+}
+
+
 
 .sib-form {
     padding: 0px;
@@ -26,7 +51,7 @@
 
 /* Font-Family für Titel */
 h2.gb-headline {
-   font-family: 'Carnas Med';
+    font-family: 'Carnas Med';
 }
 
 
@@ -36,7 +61,8 @@ div.archive_erste_spalte figure.gb-block-image {
 }
 
 
-.wpcf7-list-item-label::before, .wpcf7-list-item-label::after {
+.wpcf7-list-item-label::before,
+.wpcf7-list-item-label::after {
     padding-left: 3px;
 }
 
@@ -61,31 +87,31 @@ span.wpcf7-not-valid-tip {
 
 /* damit der blaue Kasten nicht aus dem Design */
 @media (min-width: 1301px) and (max-width: 1460px) {
-p.text_blauer_kasten {
-    font-size: 1.2rem!important;
-}
+    p.text_blauer_kasten {
+        font-size: 1.2rem !important;
+    }
 }
 
 
-/* für Listen mit hellblauem Hintergrund und Absätze */ 
+/* für Listen mit hellblauem Hintergrund und Absätze */
 p.hellblau.has-background,
 ul.hellblau.has-background {
     border-radius: 20px;
 }
 
 ul.hellblau.has-background {
-    margin-left:0px;
-	  background-color:var(--hellblau-color-20);
+    margin-left: 0px;
+    background-color: var(--hellblau-color-20);
 }
 
 /* Mehr Rand bei Listenelementen */
 ul li {
-   margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 /* Bullets rot bei Listenelementen */
-ul li::marker{
-    color:var(--rot-color);
+ul li::marker {
+    color: var(--rot-color);
 }
 
 /* kein Rand unten bei Menüpunkten */
@@ -106,56 +132,59 @@ ul li::marker{
 
 
 
-/* kleinere Änderungen an der Navigation */ 
+/* kleinere Änderungen an der Navigation */
 /* Header Padding: 150px links und rechts (Desktop), 30px links und rechts (mobil) */
 
 .sticky-navigation-logo img {
     padding-top: 0px;
 }
 
-@media (max-width: 768px){
-	/* Innenabstand links und rechts */	
-	.main-navigation.navigation-stick.has-sticky-branding .inside-navigation.grid-container {
-		padding-left: 0px;
-		padding-right: 0px;
-	}
+@media (max-width: 768px) {
 
-	/* Logo Höhe Tablet */
-	.site-logo.mobile-header-logo a img {
-		padding-top: 0px;
-		height: 100px;
-	}
+    /* Innenabstand links und rechts */
+    .main-navigation.navigation-stick.has-sticky-branding .inside-navigation.grid-container {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    /* Logo Höhe Tablet */
+    .site-logo.mobile-header-logo a img {
+        padding-top: 0px;
+        height: 100px;
+    }
 }
 
 
 @media (min-width: 769px) AND (max-width: 1200px) {
-	/* Innenabstand links und rechts */	
-	.main-navigation.navigation-stick.has-sticky-branding .inside-navigation.grid-container {
-		padding-left: 0px;
-		padding-right: 0px;
-	}
 
-	/* Logo Höhe Tablet */
-	.site-logo.mobile-header-logo a img {
-		padding-top: 0px;
-		height: 120px;
-	}
+    /* Innenabstand links und rechts */
+    .main-navigation.navigation-stick.has-sticky-branding .inside-navigation.grid-container {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    /* Logo Höhe Tablet */
+    .site-logo.mobile-header-logo a img {
+        padding-top: 0px;
+        height: 120px;
+    }
 }
 
 
-@media (min-width: 1201px){
-	/* Innenabstand links und rechts */	
-	.main-navigation.navigation-stick.has-sticky-branding .inside-navigation.grid-container {
-		padding-left: 150px;
-		padding-right: 150px;
-	}
+@media (min-width: 1201px) {
 
-	/* Logo desktop */
-	.main-navigation.sticky-navigation-transition .site-logo img  {
-		height: 80px;
-		padding-top: 0px;
-		padding-bottom: 1em;
-	}
+    /* Innenabstand links und rechts */
+    .main-navigation.navigation-stick.has-sticky-branding .inside-navigation.grid-container {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+
+    /* Logo desktop */
+    .main-navigation.sticky-navigation-transition .site-logo img {
+        height: 80px;
+        padding-top: 0px;
+        padding-bottom: 1em;
+    }
 }
 
 
@@ -190,25 +219,26 @@ div.beitrag .gb-container.gb-container-30c9d30e {
 
 /* Breite bei Einzelbeiträgen ab 1350px */
 @media screen and (max-width: 1350px) {
-	div.einzelseite >div.gb-grid-column,
-	div.experten_raster >div.gb-grid-column
-	{
-			width: 100%;
-	}
-	.gb-container.gb-container-8f02caa0 
-	{
-			aspect-ratio: 1/1;
-	}
+
+    div.einzelseite>div.gb-grid-column,
+    div.experten_raster>div.gb-grid-column {
+        width: 100%;
+    }
+
+    .gb-container.gb-container-8f02caa0 {
+        aspect-ratio: 1/1;
+    }
 }
 
 @media screen and (max-width: 1000px) {
-	div.raster_einzeln >div.gb-grid-column   {
-		width: 100%;
-		padding-bottom: 20px;
-	}
-		div.raster_einzeln div.gb-grid-column div.gb-container   {
-    margin-left:0px
-	}
+    div.raster_einzeln>div.gb-grid-column {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    div.raster_einzeln div.gb-grid-column div.gb-container {
+        margin-left: 0px
+    }
 }
 
 /* roter Abstandhalter */
@@ -225,7 +255,7 @@ h2.h2_beitraege {
 
 /* Beitrags-Kategorien Rand unten */
 p.beitrags_kategorien {
-	margin-bottom:0px;
+    margin-bottom: 0px;
 }
 
 /* gleicher Rand nach unten */
@@ -234,69 +264,77 @@ div.my_categories .wp-block-group__inner-container {
 }
 
 /* Bild in Übersicht weiter links */
-.gb-grid-wrapper.gb-grid-wrapper-a9208927.gb-query-loop-wrapper > .gb-grid-column > .gb-container {
+.gb-grid-wrapper.gb-grid-wrapper-a9208927.gb-query-loop-wrapper>.gb-grid-column>.gb-container {
     margin-left: 0px;
-	margin-right: 0px;
+    margin-right: 0px;
     padding-left: 0px;
 }
 
 
 /* Accordion z. B. bei Mediation */
-body, body.elementor-default {
- --pds-tabs-color-accent: var(--mittelgrau-color);
- --pds-tabs-active-tab-text-color: var(--mittelgrau-color);
+body,
+body.elementor-default {
+    --pds-tabs-color-accent: var(--mittelgrau-color);
+    --pds-tabs-active-tab-text-color: var(--mittelgrau-color);
 }
 
-div.plethoraplugins-accordion.plethoraplugins-theme__minimal.plethoraplugins-theme__basic div:focus{
+div.plethoraplugins-accordion.plethoraplugins-theme__minimal.plethoraplugins-theme__basic div:focus {
     background: var(--rot-color);
 }
 
 /* Einstellungen für Contact Form 7 */
-input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="tel"], textarea, select {
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+textarea,
+select {
     width: 40rem;
 }
 
-input[type="submit"]{
+input[type="submit"] {
     border-radius: 35px;
 }
 
 /* Coantainer für Bestellungen */
 div.bestellformular_column {
-  float: left;
-  width: 25%;
-  padding: 20px;
+    float: left;
+    width: 25%;
+    padding: 20px;
 }
 
 
 /* Clear floats after the columns */
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* Damit die Bilder horizontal korrekt ausgerichtet sind */
 @media screen and (min-width: 1251px) {
-h2.bestellformular_h2 {
-    height: 4.5rem;
-	}
+    h2.bestellformular_h2 {
+        height: 4.5rem;
+    }
 }
 
 /* Responsive layout - when the screen is less than 900px wide, make the four columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 900px) {
-  div.bestellformular_column {
-    width: 100%;
-	margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
+    div.bestellformular_column {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
 }
 
 /* Responsive layout - when the screen is between 768px and 1100px, make two columns next to each other */
-@media screen and (min-width: 901px) and (max-width: 1250px){
-  div.bestellformular_column {
-    width: 50%;
-  }
+@media screen and (min-width: 901px) and (max-width: 1250px) {
+    div.bestellformular_column {
+        width: 50%;
+    }
 }
 
 
@@ -305,16 +343,19 @@ h2.bestellformular_h2 {
     padding-left: 5px;
 }
 
-span.gb-button, a.gb-button {
+span.gb-button,
+a.gb-button {
     font-family: 'Carnas Med';
 }
 
 /* Ansteuerung für Anker korrigiert */
 :target:before {
-    content:"";
-    display:block;
-    height:120px; /* fixed header height*/
-    margin:-120px 0 0; /* negative fixed header height */
+    content: "";
+    display: block;
+    height: 120px;
+    /* fixed header height*/
+    margin: -120px 0 0;
+    /* negative fixed header height */
 }
 
 /* Schriften im Slider auf der Startseite */
@@ -328,35 +369,39 @@ div.kasten_rechts_slider p {
 
 /* Hier Der Breakpoint für den Slider auf der Startseite */
 @media only screen and (max-width: 1300px) {
-	
-	.wp-block-columns.kernthemen_spalten {
-    flex-wrap: wrap!important;
-	}
-	
-	.wp-block-columns.kernthemen_spalten .wp-block-column.is-layout-flow.wp-block-column-is-layout-flow {
-		flex-basis: 100%!important;
-	}
-	.gb-grid-wrapper > .gb-grid-column-0e0f8b88, .gb-grid-wrapper.gb-grid-wrapper-641e0a28.einzelseite {
-        width: 100%;
-		/* padding-right: 18px; */
-	}
-	.gb-grid-wrapper > .gb-grid-column-b4c4e46f, .gb-grid-column.gb-grid-column-28859ee2 {
-        width: 100%;
-	}
-	
-	
-	.wp-block-eedee-block-gutenslider .swiper {
-        border-radius: 20px 20px 0px 0px;
-}
 
-  .gb-container-b4c4e46f {
-		border-radius: 0px 0px 20px 20px;
-  }
-	
-	div.sticky_container > .gb-inside-container {
+    .wp-block-columns.kernthemen_spalten {
+        flex-wrap: wrap !important;
+    }
+
+    .wp-block-columns.kernthemen_spalten .wp-block-column.is-layout-flow.wp-block-column-is-layout-flow {
+        flex-basis: 100% !important;
+    }
+
+    .gb-grid-wrapper>.gb-grid-column-0e0f8b88,
+    .gb-grid-wrapper.gb-grid-wrapper-641e0a28.einzelseite {
+        width: 100%;
+        /* padding-right: 18px; */
+    }
+
+    .gb-grid-wrapper>.gb-grid-column-b4c4e46f,
+    .gb-grid-column.gb-grid-column-28859ee2 {
+        width: 100%;
+    }
+
+
+    .wp-block-eedee-block-gutenslider .swiper {
+        border-radius: 20px 20px 0px 0px;
+    }
+
+    .gb-container-b4c4e46f {
+        border-radius: 0px 0px 20px 20px;
+    }
+
+    div.sticky_container>.gb-inside-container {
         padding-left: 0px;
-				position: inherit;
-	}
+        position: inherit;
+    }
 }
 
 /* damit bei Einzelseiten kein linker Rand gesetzt wird */
@@ -365,14 +410,15 @@ div.kasten_rechts_slider p {
 }
 
 /* Runde Ecken links beim Slider */
-@media only screen and (min-width: 1301px) {  
-	.wp-block-eedee-block-gutenslider .swiper {
+@media only screen and (min-width: 1301px) {
+    .wp-block-eedee-block-gutenslider .swiper {
         border-radius: 20px 0px 0px 20px;
-  }
-		div.sticky_container > .gb-inside-container {
+    }
+
+    div.sticky_container>.gb-inside-container {
         padding-left: 0px;
-				position: fixed;
-	}
+        position: fixed;
+    }
 }
 
 
@@ -380,20 +426,20 @@ div.kasten_rechts_slider p {
 /* Links im Kasten "Kernthemen" */
 
 /* funktioniert nicht: */
-hr.kernthemen_separator  {
-    margin-bottom: 0em!important;
-		width: 100%;
+hr.kernthemen_separator {
+    margin-bottom: 0em !important;
+    width: 100%;
 }
 
 
 
-div.menue_rechts_sticky div.wp-block-group{
-	border-radius: 20px;
-	padding-top: 20px;
-	margin-top: 5px!important;
+div.menue_rechts_sticky div.wp-block-group {
+    border-radius: 20px;
+    padding-top: 20px;
+    margin-top: 5px !important;
 }
 
-div.menue_rechts_sticky  {
+div.menue_rechts_sticky {
     padding: 0px 40px 20px 20px;
 }
 
@@ -408,9 +454,9 @@ div.menue_rechts_sticky a {
 
 /* klappt noch nicht: Menü im Sticky Header */
 div.menue_rechts_sticky a:active,
-div.menue_rechts_sticky a:focus{
+div.menue_rechts_sticky a:focus {
     color: var(--rot-color);
-	  text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* Schrift auf Kachel rechts Startseite */
@@ -421,53 +467,58 @@ p.bild_rechts_startseite {
 
 /* für die Alternative statt gutenslider mit einem Image-Block */
 @media only screen and (max-width: 782px) {
-.gb-container-6a6a0c75,
-.gb-container-d69b8428 {
-    border-radius: 0px;
+
+    .gb-container-6a6a0c75,
+    .gb-container-d69b8428 {
+        border-radius: 0px;
     }
 }
 
 /* Design für Footer */
 
 @media only screen and (min-width: 783px) {
-	.footer-widget-1 .wp-block-columns {
-    justify-content: center;
-	}
-	div.footer_mobil {
-		display:none;
-	}
-	div.footer_desktop {
-		display:inherit;
-	}
-	div.footer_rand_links {
+    .footer-widget-1 .wp-block-columns {
+        justify-content: center;
+    }
+
+    div.footer_mobil {
+        display: none;
+    }
+
+    div.footer_desktop {
+        display: inherit;
+    }
+
+    div.footer_rand_links {
         border-left: 2px solid white;
-	}
-	div.innenabstand {
+    }
+
+    div.innenabstand {
         padding-top: 0px;
         padding-bottom: 0px;
-		padding-left: 20px;
-	}
+        padding-left: 20px;
+    }
 }
 
 @media only screen and (max-width: 782px) {
-	div.footer_mobil {
-		display:inherit;
-	}
-	
-	p.footer_mobil_rand_links {
-		padding-left: 1.5rem;
-		margin-top: 1.5rem;
-		margin-bottom: 1.5rem!important;
-	}
+    div.footer_mobil {
+        display: inherit;
+    }
 
-	div.footer_desktop {
-		display:none;
-	}
+    p.footer_mobil_rand_links {
+        padding-left: 1.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem !important;
+    }
+
+    div.footer_desktop {
+        display: none;
+    }
 }
 
 /* damit der Info-Kasten auf dem Bild links oben beim Gutenslider bzw. Image-Block angeordnet wird */
 .wp-block-eedee-block-gutenslider .wp-block-eedee-block-gutenslide.is-position-center-center .slide-content {
-    align-items: flex-start!important;
+    align-items: flex-start !important;
 }
 
 
@@ -478,18 +529,19 @@ p.bild_rechts_startseite {
 
 
 @media (max-width: 981px) {
-	.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column {
-		flex-basis: 100%!important;
-	}
+    .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column {
+        flex-basis: 100% !important;
+    }
 
 
-	.wp-block-columns.wp-container-3, .wp-block-columns.wp-container-6 {
-		flex-wrap: nowrap;
-		margin-bottom: 1.75em;
-		box-sizing: border-box;
-		flex-wrap: wrap!important;
-		align-items: normal!important;
-	}
+    .wp-block-columns.wp-container-3,
+    .wp-block-columns.wp-container-6 {
+        flex-wrap: nowrap;
+        margin-bottom: 1.75em;
+        box-sizing: border-box;
+        flex-wrap: wrap !important;
+        align-items: normal !important;
+    }
 }
 
 
@@ -510,119 +562,120 @@ p.bild_rechts_startseite {
 .wp-block-cover.cover_square {
     aspect-ratio: 1/1;
     height: auto;
-		min-height: unset;
-		padding: 0px;
-		border-radius: 20px;
-	  overflow: hidden;
+    min-height: unset;
+    padding: 0px;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 
 /* kein Padding */
-.cover_square > .wp-block-cover__inner-container > .wp-block-group > .wp-block-group__inner-container{
-    padding: 0px; 
+.cover_square>.wp-block-cover__inner-container>.wp-block-group>.wp-block-group__inner-container {
+    padding: 0px;
 }
 
 
 /* kein Padding */
-.wp-block-cover.cover_square > .wp-block-cover__inner-container > .is-layout-constrained > .gb-inside-container {
+.wp-block-cover.cover_square>.wp-block-cover__inner-container>.is-layout-constrained>.gb-inside-container {
     padding: 0px;
 }
 
 /* Überschrift h2 im weißen Container */
 .wp-block-cover h2:not(.has-text-color) {
-	color: var(--contrast);
-	padding-top: 1rem;
-	font-size: clamp(1rem, 0.75rem + 1.25vw, 2.25rem);
+    color: var(--contrast);
+    padding-top: 1rem;
+    font-size: clamp(1rem, 0.75rem + 1.25vw, 2.25rem);
 }
 
 /* Padding nach unten */
 .gb-container.cover_white_container {
-   padding-bottom: 3rem;
+    padding-bottom: 3rem;
 }
 
 
 /* GP-Lösung zu zweispaltigem Grid */
-  
-@media (min-width: 969px) {
-      .gb-grid-wrapper.raster_ansicht_2 > .gb-grid-column {
-          width: unset;
-      }
-  
-      .gb-grid-wrapper.raster_ansicht_2 {
-          flex-wrap: nowrap;
-      }
-  
-      .gb-grid-wrapper.raster_ansicht_2 > .gb-grid-column:last-child {
-          flex: 1 0 33%;
-      }
-  }
-  
-  .gb-grid-wrapper.raster_ansicht_2 > .gb-grid-column:last-child > .gb-container {
-      aspect-ratio: 1/1;
-      height: auto;
-  }
-  
-  
-/* GP-Lösung zu vierspaltigem Grid */
-  .gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog{
-      aspect-ratio: 1 / 1;
-      height: auto;
-      width: 100%;
-  }
 
-.gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog > .gb-inside-container:hover {
+@media (min-width: 969px) {
+    .gb-grid-wrapper.raster_ansicht_2>.gb-grid-column {
+        width: unset;
+    }
+
+    .gb-grid-wrapper.raster_ansicht_2 {
+        flex-wrap: nowrap;
+    }
+
+    .gb-grid-wrapper.raster_ansicht_2>.gb-grid-column:last-child {
+        flex: 1 0 33%;
+    }
+}
+
+.gb-grid-wrapper.raster_ansicht_2>.gb-grid-column:last-child>.gb-container {
+    aspect-ratio: 1/1;
+    height: auto;
+}
+
+
+/* GP-Lösung zu vierspaltigem Grid */
+.gb-grid-wrapper.raster_ansicht>.gb-grid-column>.gb-container .kachel_blog {
+    aspect-ratio: 1 / 1;
+    height: auto;
+    width: 100%;
+}
+
+.gb-grid-wrapper.raster_ansicht>.gb-grid-column>.gb-container .kachel_blog>.gb-inside-container:hover {
     border-radius: 30px;
     /* background-color: var(--rot-color_transpa); */
 }
-  
-  .gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog > .gb-inside-container{
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-  }
-  
-  .gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog > .gb-inside-container > :last-child{
-      margin-top: auto;
-  }
-  /* Antwort von GP */
-  
-  /* zweispaltig */	
-  @media (max-width: 1300px) {
-  .raster_ansicht .gb-grid-column {
-          width: 50%;
-      }
-  }
-  
-  /* einspaltig */	
-  @media (max-width: 1100px) {
-  .raster_ansicht .gb-grid-column {
-          width: 100%;
-          text-align: center;
-      }
-  }	
-      
-  
-  /* Kategorienanzeige */
+
+.gb-grid-wrapper.raster_ansicht>.gb-grid-column>.gb-container .kachel_blog>.gb-inside-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.gb-grid-wrapper.raster_ansicht>.gb-grid-column>.gb-container .kachel_blog>.gb-inside-container> :last-child {
+    margin-top: auto;
+}
+
+/* Antwort von GP */
+
+/* zweispaltig */
+@media (max-width: 1300px) {
+    .raster_ansicht .gb-grid-column {
+        width: 50%;
+    }
+}
+
+/* einspaltig */
+@media (max-width: 1100px) {
+    .raster_ansicht .gb-grid-column {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* Kategorienanzeige */
 /* deaktiviert: 19.2.2023  
   @media (max-width: 767px) {
   .gb-grid-wrapper.gb-grid-wrapper-641e0a28.einzelseite .gb-inside-container {
       padding: 0.5rem;
       }
   }
-*/  
-  
-  /* Kategorien bei Einzelbeitrag */
-  .gb-button-wrapper.gb-button-wrapper-6d7bfb40 a, 
-.gb-button-wrapper.gb-button-wrapper-c95c0080 a{
-      /* background-color: var(--hellgrau-color); */
+*/
+
+/* Kategorien bei Einzelbeitrag */
+.gb-button-wrapper.gb-button-wrapper-6d7bfb40 a,
+.gb-button-wrapper.gb-button-wrapper-c95c0080 a {
+    /* background-color: var(--hellgrau-color); */
     border-radius: 30px;
     padding: 10px;
     margin: 0px 10px 0px 0px;
-  }
-  
-  /* für Kategorien auf der Seite "Beitrags-Kategorien */
+}
+
+/* für Kategorien auf der Seite "Beitrags-Kategorien */
 a.my_category_list {
-	  background-color: var(--rot-color);
+    background-color: var(--rot-color);
     border-radius: 30px;
     padding: 2px 10px 2px 10px;
     /* margin: 20px 10px 0px 0px; */
@@ -631,10 +684,10 @@ a.my_category_list {
     display: inline-flex;
     flex-direction: row;
     justify-content: flex-end;
-	font-family:'Carnas Med';
-	font-size: 1rem;
-  }
-  
+    font-family: 'Carnas Med';
+    font-size: 1rem;
+}
+
 a.my_category_list:hover {
     background-color: var(--hellgrau-color);
     color: black;
@@ -647,29 +700,28 @@ div.my_categories.categories_single_post .wp-block-group__inner-container {
 }
 
 div.my_categories.categories_single_post h3 {
-	display:none;
+    display: none;
 }
-  
-  /* Keine Unterstriche in Archive */
-  .gb-inside-container .gb-inside-container a {
-      text-decoration: none;
-  }
-  
-  
-  
-  /* Kachel rot */
-  .kachel_header_rot{
-      padding: 10px;
-      margin-bottom: 0px;
-      border-radius: 20px 20px 0px 0px;
-  }
-  
-  .kachel_foto_rot img{
-      border-radius: 0px 0px 20px 20px;
-  }
-  
+
+/* Keine Unterstriche in Archive */
+.gb-inside-container .gb-inside-container a {
+    text-decoration: none;
+}
+
+
+
+/* Kachel rot */
+.kachel_header_rot {
+    padding: 10px;
+    margin-bottom: 0px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.kachel_foto_rot img {
+    border-radius: 0px 0px 20px 20px;
+}
+
 /* Kacheln für Expertenseite */
-.gb-grid-wrapper.raster_ansicht > .gb-grid-column > .gb-container .kachel_blog_experten {
-	aspect-ratio: 3/5;
+.gb-grid-wrapper.raster_ansicht>.gb-grid-column>.gb-container .kachel_blog_experten {
+    aspect-ratio: 3/5;
 }
-  
