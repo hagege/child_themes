@@ -1,6 +1,6 @@
 <?php
 	/**
-		* Title: template-index-alternative
+		* Title: Template Index Alterantive
 		* Slug: circles/template-index-alternative
 		* Inserter: no
 	*/
@@ -52,6 +52,8 @@
 			
 		<!-- wp:query-pagination {"paginationArrow":"arrow","layout":{"type":"flex","justifyContent":"space-between"}} -->
 		<!-- wp:query-pagination-previous /-->
+		
+		<!-- wp:query-pagination-numbers /-->
 		
 		<!-- wp:query-pagination-next /-->
 		<!-- /wp:query-pagination --></div>

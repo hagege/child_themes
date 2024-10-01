@@ -3,7 +3,7 @@ Contributors: wordpressdotorg
 Requires at least: 6.4
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 0.7.2
+Stable tag: 0.7.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,9 +15,18 @@ Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, 
 
 == Changelog ==
 
+
+= 0.7.3 =
+* Released: October 1, 2024
+* Add: Two More Circle-Images (very light grey and very dark grey)
+* Add: Pattern Two Columns with sticky button in the right Column
+* Tweak: Replace Pagination in Templates with Query Loops (show Additional the Page Numbers) and add Archive Title
+
 = 0.7.2 =
 * Released: September 29, 2024
 * Add: Template Part "Header with contact row"
+* Add: Template with white Circle
+* Add: Template with light blue Circle
 * Fix: Corrected structure of parts and patterns
 * Tweak: New screenshot.png
 
