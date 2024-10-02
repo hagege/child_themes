@@ -71,10 +71,8 @@ function circles_register_pattern_categories() {
 	register_block_pattern_category(
 		'circles_patterns',
 			array( 
-				'label' => __( 'Circles Patterns', 'Block pattern category', 'circles' ), 
+				'label' => __x( 'Circles Patterns', 'Block pattern category', 'circles' ), 
 				'description' => __( 'A collection of Circles Patterns.', 'circles' ),
 		)
 	);
 }
-
-add_action( 'init', 'circles_register_pattern_categories' );
