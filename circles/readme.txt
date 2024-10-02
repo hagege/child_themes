@@ -20,6 +20,7 @@ Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, 
 * Released: October 2, 2024
 * Add: New Style haurand variation 2 (with changed style for buttons)
 * Tweak: Register pattern categories Circles in function.php
+* Add: Fluid to fontsizes
 
 = 0.7.3 =
 * Released: October 1, 2024
