@@ -3,18 +3,23 @@ Contributors: wordpressdotorg
 Requires at least: 6.4
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 0.7.3
+Stable tag: 0.7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Circles is a clean, flexible, fast and accessibility-ready block theme. Its default look is a stylish white on black background color scheme with an orange circle in background and lexend  font (a sans-serif typography). Circles is built from the ground up for flexibility. It includes ten different theme styles to choose from, and different block patterns that you can use to quickly create unique page layouts. Circles is suitable for websites that contain few photos. The theme is therefore not suitable for photo-heavy websites.
+Circles is a clean, flexible, fast and accessibility-ready block theme. Its default look is a stylish white on black background color scheme with an orange circle in background and lexend font (a sans-serif typography). Circles is built from the ground up for flexibility. It includes eleven different theme styles to choose from, and different block patterns that you can use to quickly create unique page layouts. Circles is suitable for websites that contain few photos. The theme is therefore not suitable for photo-heavy websites.
 
 Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, sticky-post, threaded-comments, translation-ready, block-styles, wide-blocks, full-site-editing, accessibility-ready
 
 == Changelog ==
 
+
+= 0.7.4 =
+* Released: October 2, 2024
+* Add: New Style haurand variation 2 (with changed style for buttons)
+* Tweak: Register pattern categories Circles in function.php
 
 = 0.7.3 =
 * Released: October 1, 2024

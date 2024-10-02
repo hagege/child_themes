@@ -56,6 +56,10 @@ endif;
 
 add_action( 'admin_init', 'circles_editor_styles' );
 
+/**
+	* Register pattern categories.
+ */
+
 function circles_register_pattern_categories() {
 	/**
 	 * Register pattern categories.
@@ -65,15 +69,12 @@ function circles_register_pattern_categories() {
 	 * @return void
 	 */
 	register_block_pattern_category(
-		'Circles Patterns',
-		array( 'label' => __( 'Circle Patterns', 'circles' ) )
+		'circles_patterns',
+			array( 
+				'label' => __( 'Circles Patterns', 'Block pattern category', 'circles' ), 
+				'description' => __( 'A collection of Circles Patterns.', 'circles' ),
+		)
 	);
-/*		register_block_pattern_category(
-		'blog',
-		array( 'label' => __( 'Blog', 'circles' ) )
-	);
-*/
 }
 
 add_action( 'init', 'circles_register_pattern_categories' );
-
