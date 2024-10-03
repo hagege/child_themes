@@ -12,54 +12,64 @@
 :root {
   --dunkelblau-color: rgba(2, 75, 126, 1);
   --hellblau-color: rgba(227, 235, 241, 1);
-    --mittelgrau-color: rgba(85, 85, 85, 1);
-    --hellgrau-color: rgba(213, 213, 213, 1);
-    --rot-color: rgba(177, 46, 32, 1);			--wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
-    --wp--preset--font-size--cover-paragraph: clamp(2rem, 10vw, 6rem);
+  --mittelgrau-color: rgba(85, 85, 85, 1);
+  --hellgrau-color: rgba(213, 213, 213, 1);
+  --rot-color: rgba(177, 46, 32, 1);
+  --wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
+  --wp--preset--font-size--cover-paragraph: clamp(2rem, 10vw, 6rem);
   --wp--preset--font-size--h2: clamp(1.5rem, 2vw, 6rem);
 
+}
+
+/* Schrift im Cover responsive */
+.wp-block-cover.alignfull.is-light.has-parallax.coverbild p {
+  font-size: clamp(2rem, 1.494rem + 2.53vw, 5rem) !important;
 }
 
 
 
 /* h1 nicht zeigen - würde auch über Elemente deaktivieren einzeln funktionieren - ist so besser: */
-.entry-header h1, .page-header h1 {
-display: none;
+.entry-header h1,
+.page-header h1 {
+  display: none;
 }
 
 /* p auf Cover mit leichtem blauem Schatten */
-div.wp-block-cover__inner-container > p.has-text-align-center.animated.fadeInUp.delay-200ms.slower.has-base-2-color.has-text-color 
-{
-text-shadow: 0px 0px 0.1rem var(--dunkelblau-color);
-font-size: var(--wp--preset--font-size--cover-paragraph)!important;
-font-weight: 400!important;
+div.wp-block-cover__inner-container>p.has-text-align-center.animated.fadeInUp.delay-200ms.slower.has-base-2-color.has-text-color {
+  text-shadow: 0px 0px 0.1rem var(--dunkelblau-color);
+  font-size: var(--wp--preset--font-size--cover-paragraph) !important;
+  font-weight: 400 !important;
 }
 
 
 /* Ränder bei Block Pattern */
 div.block_pattern_raender {
-padding: 70px 40px 10px 40px;
+  padding: 70px 40px 10px 40px;
 }
 
 
 /* Ränder innerhalb Gruppe */
-div.block_pattern_raender > .wp-block-group__inner-container{
-padding: 0px 40px 20px 40px;
+div.block_pattern_raender>.wp-block-group__inner-container {
+  padding: 0px 40px 20px 40px;
 }
 
 @media (max-width: 768px) {
-div.block_pattern_raender > .wp-block-group__inner-container{
-padding: 0px 0px 20px 0px;
-}
+  div.block_pattern_raender>.wp-block-group__inner-container {
+    padding: 0px 0px 20px 0px;
+  }
 }
 
 /* Kein Rand beim off-canvas-Menue */
-.nav-below-header .main-navigation .inside-navigation.grid-container, .nav-above-header .main-navigation .inside-navigation.grid-container {
-     padding: 0px;
+.nav-below-header .main-navigation .inside-navigation.grid-container,
+.nav-above-header .main-navigation .inside-navigation.grid-container {
+  padding: 0px;
 }
 
 /* Links (rot) und unterstrichen */
-.inside-article a, .paging-navigation a, .comments-area a, .page-header a {
+.inside-article a,
+.paging-navigation a,
+.comments-area a,
+.page-header a {
   text-decoration: underline;
   text-decoration-style: solid;
 }
@@ -98,19 +108,21 @@ p.has-background {
 }
 
 */
+
+/* Submenue hellblau */
 .main-navigation ul ul {
   box-shadow: none;
   background-color: var(--hellblau-color);
 }
 
 /* Schmankerl bei Bildern auf der Hauptseite unten */
-img.wp-image-61:hover{
+img.wp-image-61:hover {
   transform: rotate(35deg);
   transition: all 0.5s ease-in-out;
 }
 
 img.wp-image-60:hover,
-img.wp-image-62:hover{
-transform:scale(1.2);
-transition: all 1s ease-in-out;
+img.wp-image-62:hover {
+  transform: scale(1.3);
+  transition: all 1s ease-in-out;
 }
