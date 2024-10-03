@@ -1,9 +1,9 @@
 === Circles ===
 Contributors: wordpressdotorg
-Requires at least: 6.4
+Requires at least: 6.6
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 0.7.4
+Stable tag: 0.7.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,6 +15,13 @@ Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, 
 
 == Changelog ==
 
+
+= 0.7.5 =
+* Released: October 3, 2024
+* Tweak: Renaming styles
+* Tweak: less thickness of border (circle_white.svg)
+* Fix: Fluid to fontsizes (issue because having declared fluid to spacingSizes)
+* Fix: Issue with fontsizes. After Migrating to version 3 (theme.json) and setting "defaultFontSizes": false, setting of font sizes works fine.
 
 = 0.7.4 =
 * Released: October 2, 2024

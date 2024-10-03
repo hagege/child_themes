@@ -35,92 +35,49 @@
 			"wideSize": "1200px"
 		},
 		"spacing": {
-			"spacingScale": {
-				"theme": {
-					"increment": 0.5,
-					"mediumStep": 1.5,
-					"operator": "+",
-					"steps": 9,
-					"unit": "rem"
-				}
-			},
+			"defaultSpacingSizes": false,
 			"spacingSizes": [
 				{
-					"fluid": {
-						"max": "0.5rem"
-					},
 					"name": "X-Small",
 					"size": "0.5rem",
 					"slug": "30"
 				},
 				{
-					"fluid": {
-						"max": "1.2rem",
-						"min": "0.8rem"
-					},
 					"name": "Small",
 					"size": "1rem",
 					"slug": "40"
 				},
 				{
-					"fluid": {
-						"max": "1.6rem",
-						"min": "1.3rem"
-					},
 					"name": "Medium",
 					"size": "1.5rem",
 					"slug": "50"
 				},
 				{
-					"fluid": {
-						"max": "2.1rem",
-						"min": "1.8rem"
-					},
 					"name": "Large",
 					"size": "2rem",
 					"slug": "60"
 				},
 				{
-					"fluid": {
-						"max": "2.6rem",
-						"min": "2.3rem"
-					},
 					"name": "X-Large",
 					"size": "2.5rem",
 					"slug": "70"
 				},
 				{
-					"fluid": {
-						"max": "3.1rem",
-						"min": "2.8rem"
-					},
 					"name": "2X-Large",
 					"size": "3rem",
 					"slug": "80"
 				},
 				{
-					"fluid": {
-						"max": "3.6rem",
-						"min": "3.3rem"
-					},
 					"name": "3X-Large",
 					"size": "3.5rem",
 					"slug": "90"
 				},
 				{
-					"fluid": {
-						"max": "4.1rem",
-						"min": "3.8rem"
-					},
 					"name": "4X-Large",
 					"size": "4rem",
 					"slug": "100"
 				},
 				{
-					"fluid": {
-						"max": "4.6rem",
-						"min": "4.3rem"
-					},
 					"name": "5X-Large",
 					"size": "4.5rem",
 					"slug": "110"
@@ -136,6 +93,7 @@
 			]
 		},
 		"typography": {
+			"defaultFontSizes": false,
 			"dropCap": false,
 			"fluid": true,
 			"fontFamilies": [
@@ -201,22 +159,42 @@
 			],
 			"fontSizes": [
 				{
+					"fluid": {
+						"max": "1rem",
+						"min": "0.9rem"
+					},
 					"size": "1rem",
 					"slug": "small"
 				},
 				{
+					"fluid": {
+						"max": "1.2rem",
+						"min": "1rem"
+					},
 					"size": "1.125rem",
 					"slug": "medium"
 				},
 				{
+					"fluid": {
+						"max": "1.85rem",
+						"min": "1.4rem"
+					},
 					"size": "1.75rem",
 					"slug": "large"
 				},
 				{
+					"fluid": {
+						"max": "3.3rem",
+						"min": "2.7rem"
+					},
 					"size": "3rem",
 					"slug": "x-large"
 				},
 				{
+					"fluid": {
+						"max": "6rem",
+						"min": "3.5rem"
+					},
 					"size": "6rem",
 					"slug": "xx-large"
 				}
