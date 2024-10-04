@@ -3,7 +3,7 @@ Contributors: wordpressdotorg
 Requires at least: 6.6
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 0.7.5
+Stable tag: 0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,6 +15,9 @@ Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, 
 
 == Changelog ==
 
+= 0.8 =
+* Released: October 4, 2024
+* Tweak: Changed the height of the circles to 100vh so that, for example, pages with less content are better displayed (thanks to @Thomas for the hint) 
 
 = 0.7.5 =
 * Released: October 3, 2024
@@ -63,7 +66,7 @@ Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, 
 
 = 0.6.6 =
 * Released: September 25, 2024
-* Add: accessibility-ready font Atkinson Hyperlegible
+* Add: accessibility-ready font Atkinson Hyperlegible (thanks @Karl for hint)
 * Tweak: better formatting of the query loop in the index template
 
 = 0.6.5.1 =
