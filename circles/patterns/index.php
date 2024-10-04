@@ -1,9 +1,9 @@
 <?php
-	/**
-		* Title: index
-		* Slug: circles/index
-		* Inserter: no
-	*/
+/**
+ * Title: index
+ * Slug: circles/index
+ * Inserter: no
+ */
 ?>
 <!-- wp:template-part {"slug":"header","area":"header"} /-->
 

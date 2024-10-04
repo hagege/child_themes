@@ -17,7 +17,8 @@ Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, 
 
 = 0.8 =
 * Released: October 4, 2024
-* Tweak: Changed the height of the circles to 100vh so that, for example, pages with less content are better displayed (thanks to @Thomas for the hint) 
+* Tweak: Changed the height of circles to 100vh so that, for example, pages with less content are better displayed (thanks to @Thomas for the hint)
+* Add: Show Image in full width container
 
 = 0.7.5 =
 * Released: October 3, 2024
