@@ -2,7 +2,7 @@
 /*
 Plugin Name: All Used Category Names
 Description: Displays a list of all used category names in your WordPress site
-Version: 1.1
+Version: 1.1.1
 Author: Hans-Gerd Gerhards
 */
 
@@ -11,6 +11,9 @@ Author: Hans-Gerd Gerhards
 /* Datum: 04.2.2023
 /* Autor: hgg
 /*----------------------------------------------------------------*/
+
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 function my_category_list_shortcode() {
     $args = array(
