@@ -32,8 +32,10 @@
 	},
 	"styles": {
 		"color": {
+			"background": "var(--wp--preset--color--base)",
 			"text": "var(--wp--preset--color--base-2)"
 		},
+		"css": "/* html {\n    overflow-y: scroll;\n}\n*/\n\n\n/* Einstellung Bildunterschrift bei roten Containern */\n.wp-block-columns.rechte_untere_ecke figcaption {\n    color: white;\n}\n\n\n/* Anzeige der Bilder im Blog */\n.bildanzeige {\n    margin-left: calc(-50vw + 50%);\n    margin-right: calc(-50vw + 50%);\n}\n\n.bildanzeige figure {\n    width: 90%;\n}",
 		"elements": {
 			"button": {
 				":active": {
@@ -89,7 +91,7 @@
 			},
 			"caption": {
 				"color": {
-					"text": "var(--wp--preset--color--base)"
+					"text": "var(--wp--preset--color--base-2)"
 				},
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--small)"
