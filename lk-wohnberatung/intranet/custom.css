@@ -1,0 +1,137 @@
+:where(.wp-site-blocks *:focus) {
+    outline-width: 2px;
+    outline-style: solid
+}
+
+
+/* Anmeldung */
+.swpm-login-widget-form input,
+.swpm-login-widget-form checkbox,
+.swpm-registration-widget-form input[type=checkbox],
+.swpm-registration-widget-form input[type=checkbox],
+.swpm-registration-widget-form input[type=text],
+.swpm-registration-widget-form input[type=password],
+input#password_re {
+    font-size: 1.5em;
+}
+
+form#swpm-login-form input[type=checkbox],
+input#swpm-accept-pp,
+input#swpm-accept-terms {
+    width: 1em;
+    height: 1em;
+    accent-color: #E30517;
+    margin-top: 0.5em;
+}
+
+
+input.swpm-login-form-submit.swpm-submit-btn-default-style,
+button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style {
+    background-color: #E30517;
+    color: white;
+    border-radius: 5px;
+    border-color: #E30517;
+    font-size: inherit;
+}
+
+input.swpm-login-form-submit.swpm-submit-btn-default-style:hover,
+button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style:hover {
+    background-color: var(--wp--preset--color--contrast-4);
+    border-color: var(--wp--preset--color--contrast-4);
+    color: var(--wp--preset--color--base);
+    outline-color: var(--wp--preset--color--contrast);
+    outline-offset: 4px;
+    outline-style: groove;
+    outline-width: 4px;
+}
+
+/* für die Spalten in den Kacheln */
+.kachel-spalte {
+    border-radius: 15px;
+}
+
+
+/* Gestaltung der Kategorienliste */
+
+ul.kategorie-liste {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ul.kategorie-liste>li a {
+    display: flex;
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: var(--wp--preset--color--base-2);
+    color: var(--wp--preset--color--contrast-2);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+ul.kategorie-liste>li a:hover {
+    background-color: var(--wp--preset--color--contrast-4);
+}
+
+/* Animation in der Navigation */
+a.wp-block-navigation-item__content {
+    transition: all 1.5s;
+}
+
+
+a.wp-block-navigation-item__content:hover {
+    transition: all 1.5s;
+}
+
+:where(.wp-site-blocks *:focus) {
+    outline-width: 2px;
+    outline-style: solid
+}
+
+a.wp-block-navigation-item__content {
+    transition: all 1.5s;
+}
+
+
+a.wp-block-navigation-item__content:hover {
+    transition: all 1.5s;
+}
+
+:where(.wp-site-blocks *:focus) {
+    outline-width: 2px;
+    outline-style: solid
+}
+
+a.wp-block-navigation-item__content {
+    transition: all 1.5s;
+}
+
+
+a.wp-block-navigation-item__content:hover {
+    transition: all 1.5s;
+}
+
+:where(.wp-site-blocks *:focus) {
+    outline-width: 2px;
+    outline-style: solid
+}
+
+a.wp-block-navigation-item__content {
+    transition: all 1.5s;
+}
+
+
+a.wp-block-navigation-item__content:hover {
+    transition: all 1.5s;
+}
+
+
+
+/* Unterstrich grün */
+:root :where(.wp-block-navigation a:where(:not(.wp-element-button)):hover) {
+    border-bottom-color: var(--wp--preset--color--base-2);
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    text-decoration: none;
+}
