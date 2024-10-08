@@ -3,7 +3,7 @@ Contributors: wordpressdotorg
 Requires at least: 6.6
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 0.8.2
+Stable tag: 0.8.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,6 +14,10 @@ Circles is a clean, flexible, fast and accessibility-ready block theme. Its defa
 Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, sticky-post, threaded-comments, translation-ready, block-styles, wide-blocks, full-site-editing, accessibility-ready
 
 == Changelog ==
+
+= 0.8.5 =
+* Released: October 8, 2024
+* Fix: Missing <header> and <footer> tag added
 
 = 0.8.2 =
 * Released: October 5, 2024
