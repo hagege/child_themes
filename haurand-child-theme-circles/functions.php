@@ -107,7 +107,7 @@ function my_category_list_shortcode() {
   // $my_output .= '<a class="my_category_list" href="' . get_category_link($my_category->term_id) . '">' . $my_category->name . '</a>' . '   ';
   }
   $my_output .= '</p></ul>';
-  return "<h3>Alle Beitrags-Kategorien auf haurand.com:</h3>$my_output";
+  return "<h3>Beitrags-Kategorien:</h3>$my_output";
 }
 add_shortcode('my_category_list', 'my_category_list_shortcode');
 

@@ -5,7 +5,9 @@
  * Inserter: no
  */
 ?>
-<!-- wp:template-part {"slug":"header","area":"header"} /-->
+<!-- wp:group {"style":{"position":{"type":"sticky","top":"0px"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:template-part {"slug":"header","tagName":"header","area":"header","align":"full"} /--></div>
+<!-- /wp:group -->
 
 <!-- wp:separator {"className":"is-style-default"} -->
 <hr class="wp-block-separator has-alpha-channel-opacity is-style-default"/>
