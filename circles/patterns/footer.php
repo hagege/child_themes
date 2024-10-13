@@ -1,6 +1,6 @@
 <?php
 	/**
-		* Title: Footer
+		* Title: Another simple Footer
 		* Slug: circles/footer
 		* Categories: circles, footer
 	*/
