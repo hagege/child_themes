@@ -13,6 +13,8 @@ wp_enqueue_style( 'child-theme-css', get_stylesheet_directory_uri() .'/style.css
 }
 add_action( 'wp_enqueue_scripts', 'child_theme_styles' );
 
+
+
 /*----------------------------------------------------------------*/
 /* Start: Alle Medien zeigen - abschalten von jeweils 40 Medien
 /* Datum: 22.08.2021
@@ -48,7 +50,7 @@ add_filter('manage_posts_custom_column', 'manage_img_column', 10, 2);
 function add_img_column($columns) {
   // Spalte mit featured image am Ende:
   $columns['img'] = 'Featured Image';
-  // Spalte mit featured image ale 1. Spalte:
+  // Spalte mit featured image als 1. Spalte:
   // $columns = array_slice($columns, 0, 1, true) + array("img" => "Beitragsbild") + array_slice($columns, 1, count($columns) - 1, true);
   return $columns;
 }
@@ -107,10 +109,9 @@ function my_category_list_shortcode() {
   // $my_output .= '<a class="my_category_list" href="' . get_category_link($my_category->term_id) . '">' . $my_category->name . '</a>' . '   ';
   }
   $my_output .= '</p></ul>';
-  return "<h3>Beitrags-Kategorien:</h3>$my_output";
+  return $my_output;
 }
 add_shortcode('my_category_list', 'my_category_list_shortcode');
-
 
 
 /* AntispamBee-Filter, siehe https://antispambee.pluginkollektiv.org/de/dokumentation/#hooks */

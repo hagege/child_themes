@@ -1,7 +1,7 @@
 <?php
 /**
- * Title: index
- * Slug: haurand-child-theme-circles/index
+ * Title: archive
+ * Slug: haurand-child-theme-circles/archive
  * Inserter: no
  */
 ?>
@@ -20,10 +20,6 @@
 <div class="wp-block-group alignwide category_shortcode"><!-- wp:spacer {"height":"80px"} -->
 <div style="height:80px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
-
-<!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading"><?php esc_html_e('Kategorien:', 'haurand-child-theme-circles');?></h3>
-<!-- /wp:heading -->
 
 <!-- wp:shortcode -->
 [my_category_list]
@@ -52,10 +48,6 @@
 <!-- wp:column {"width":"80%","style":{"spacing":{"padding":{"right":"var:preset|spacing|100"}}}} -->
 <div class="wp-block-column" style="padding-right:var(--wp--preset--spacing--100);flex-basis:80%"><!-- wp:group {"tagName":"main","style":{"background":{"backgroundImage":{"url":"<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/circle_light_blue.svg","id":6935,"source":"file","title":"circle_light_blue"},"backgroundPosition":"50% 0"}},"layout":{"type":"constrained"}} -->
 <main class="wp-block-group"><!-- wp:query-title {"type":"archive","align":"wide","style":{"typography":{"lineHeight":"1"}}} /-->
-
-<!-- wp:heading {"align":"wide"} -->
-<h2 class="wp-block-heading alignwide"><?php esc_html_e('Beiträge', 'haurand-child-theme-circles');?></h2>
-<!-- /wp:heading -->
 
 <!-- wp:query {"queryId":4,"query":{"perPage":10,"pages":0,"offset":"0","postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"align":"wide","layout":{"type":"default"}} -->
 <div class="wp-block-query alignwide"><!-- wp:query-no-results -->
