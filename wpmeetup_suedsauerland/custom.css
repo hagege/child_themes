@@ -19,150 +19,184 @@
   */
     --mobile-breakpoint: 767px;
     --tablet-breakpoint: 900px;
-  }
-  
-  
-  /* smooth scrolling und korrekte Ansteuerung interner Anker */
-  html {
+}
+
+.edit-post-visual-editor {
+    background-color: #F9F9F9;
+}
+
+
+/* smooth scrolling und korrekte Ansteuerung interner Anker */
+html {
     scroll-behavior: smooth;
     scroll-padding-top: 14rem;
+}
+
+
+/* Links anders ausgezeichnet */
+main .entry-content a,
+a.wp-block-navigation-item__content {
+    box-shadow: inset 0 -5px 0 var(--wp--preset--color--custom-gelb);
+    text-decoration: none;
+}
+
+main .entry-content a:hover,
+a.wp-block-navigation-item__content:hover {
+    box-shadow: inset 0 -25px 0 var(--wp--preset--color--custom-gelb);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Position bei featured image */
+img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
+    object-position: left center;
+    object-fit: cover;
+}
+
+/* lange Wörter, z. B. endlose Links trennen */
+ul.meetup_liste li a,
+p a,
+a {
+    word-wrap: break-word;
+}
+
+/* Mehr Padding nach unten bei Listen */
+ul.meetup_liste li {
+    padding-bottom: 1rem;
+}
+
+/* Oberpunkte größer */
+ul.meetup_liste li strong {
+    font-size: 1.3rem;
+}
+
+/* Für Kommentare */
+.wp-block-post-comments-form input[type=submit]:hover {
+    background-color: var(--wp--preset--color--custom-dunkelblau);
+    border-color: var(--wp--preset--color--custom-dunkelblau);
+}
+
+input#submit {
+    border-width: 0px;
+    font-size: 1.2rem;
+}
+
+/* Font size Kategorieauswahl */
+select#wp-block-categories-1 {
+    font-size: 1.2rem;
+}
+
+/* damit die Image-Blöcke von GB korrekt dargestellt werden */
+figure.gb-block-image img {
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 850px) {
+    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+        display: block;
+        width: 100%;
+        position: relative;
+        z-index: auto;
+        background-color: inherit;
+    }
+
+    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) .wp-block-navigation__responsive-container-close {
+        display: none;
+    }
+
+    .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container {
+        left: 0;
+    }
+
+    .wp-block-navigation__responsive-container-open:not(.always-shown) {
+        display: none;
+    }
+}
+
+@media (max-width: 849px) {
+    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+        display: none;
+    }
+
+    .wp-block-navigation__responsive-container-open:not(.always-shown) {
+        display: flex;
+    }
+}
+
+
+/* Design für Button */
+a.wp-block-button__link.wp-element-button,
+p.form-submit.wp-block-button,
+.simpletoc.wp-block-simpletoc-toc button {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 800;
+    font-family: "Open Sans", sans-serif;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    white-space: normal;
+    background: var(--wp--preset--color--custom-gelb);
+    color: var(--wp--preset--color--custom-dunkelblau);
+    border: 3px solid var(--wp--preset--color--custom-dunkelblau);
+    border-radius: 0;
+    position: relative;
+    padding: 13px 30px;
+}
+
+a.wp-block-button__link.wp-element-button:hover,
+p.form-submit.wp-block-button:hover,
+.simpletoc.wp-block-simpletoc-toc button:hover {
+    color: #fff;
+    background-color: var(--wp--preset--color--custom-dunkelblau);
+    outline: none;
+    transition-duration: 1s;
+    transition-delay: 250ms, 250ms;
+    transition-property: background-color, color;
+}
+
+a.wp-block-button__link.wp-element-button:after,
+p.form-submit.wp-block-button:after,
+.simpletoc.wp-block-simpletoc-toc button:after {
+    content: '';
+    position: absolute;
+    height: calc(100% + 3px);
+    width: calc(100% + 3px);
+    z-index: -1;
+    bottom: -12px;
+    right: -12px;
+    background: var(--wp--preset--color--custom-gelb);
+    border: 3px solid #F3CD1E;
+}
+
+/* Anpassung Suche in Navigation */
+button.wp-block-search__button.has-background.has-custom-gelb-background-color.has-border-color.has-custom-gelb-border-color.has-icon.wp-element-button {
+    margin-bottom: 20px;
+    padding-right: 45px;
+}
+
+input#wp-block-search__input-1 {
+    margin-bottom: 20px;
+}
+
+.wp-block-search__button svg {
+    min-height: 30px;
+    min-width: 30px;
+}
+
+/*
+  
+  figure img{
+      box-shadow: 2px 2px 30px rgb(0 0 0/30%);
+      transition: all ease .3s;
+      border-radius: 30px;
   }
   
-  
-  /* Links anders ausgezeichnet */
-  main .entry-content a {
-  box-shadow: inset 0 -5px 0 var(--wp--preset--color--custom-gelb);
-  text-decoration: none;
+  figure img a{
+     text-decoration:none;
   }
   
-  main .entry-content a:hover{
-  box-shadow: inset 0 -25px 0 var(--wp--preset--color--custom-gelb);
-  transition: all 0.2s ease-in-out;
+  figure img a:hover{
+     text-decoration:none;
   }
-  
-  /* Position bei featured image */
-  img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
-      object-position: left center;
-      object-fit: cover;
-  }
-  
-  /* lange Wörter, z. B. endlose Links trennen */
-  ul.meetup_liste li a, p a, a {
-      word-wrap: break-word;
-  }
-  
-  /* Mehr Padding nach unten bei Listen */
-  ul.meetup_liste li {
-      padding-bottom: 1rem;
-  }
-  
-  /* Oberpunkte größer */
-  ul.meetup_liste li strong {
-      font-size: 1.3rem;
-  }
-  
-  /* Für Kommentare */
-  .wp-block-post-comments-form input[type=submit]:hover {
-      background-color: var(--wp--preset--color--custom-dunkelblau);
-      border-color: var(--wp--preset--color--custom-dunkelblau);
-  }
-  
-  input#submit {
-      border-width: 0px;
-      font-size: 1.2rem;
-  }
-  
-  /* Font size Kategorieauswahl */
-  select#wp-block-categories-1 {
-  font-size: 1.2rem;
-  }
-  
-  /* damit die Image-Blöcke von GB korrekt dargestellt werden */
-  figure.gb-block-image img {
-  width: 100%;
-  height: 100%;
-  }
-  
-  @media (min-width: 850px) {
-  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
-  display: block;
-  width: 100%;
-  position: relative;
-  z-index: auto;
-  background-color: inherit;
-  }
-  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) .wp-block-navigation__responsive-container-close {
-  display: none;
-  }
-  .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container {
-  left: 0;
-  }
-  .wp-block-navigation__responsive-container-open:not(.always-shown) {
-  display: none;
-  }
-  }
-  
-  @media (max-width: 849px) {
-  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
-  display: none;
-  }
-  .wp-block-navigation__responsive-container-open:not(.always-shown) {
-  display: flex;
-  }
-  }
-  
-  
-  /* Design für Button */
-  a.wp-block-button__link.wp-element-button,  
-  p.form-submit.wp-block-button, .simpletoc.wp-block-simpletoc-toc button{
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 800;
-  font-family: "Open Sans", sans-serif;
-  padding: 15px 30px;
-  text-align: center;
-  text-decoration: none;
-  white-space: normal;
-  background: var(--wp--preset--color--custom-gelb);
-  color: var(--wp--preset--color--custom-dunkelblau);
-  border: 3px solid var(--wp--preset--color--custom-dunkelblau);
-  border-radius: 0;
-  position: relative;
-  padding: 13px 30px;
-  }
-  
-  a.wp-block-button__link.wp-element-button:hover, p.form-submit.wp-block-button:hover, .simpletoc.wp-block-simpletoc-toc button:hover{
-  color: #fff;
-  background-color: var(--wp--preset--color--custom-dunkelblau);
-  outline: none;
-  transition-duration: 1s;
-  transition-delay: 250ms, 250ms;
-  transition-property: background-color, color;
-  }
-  
-  a.wp-block-button__link.wp-element-button:after, p.form-submit.wp-block-button:after,.simpletoc.wp-block-simpletoc-toc button:after{
-  content: '';
-  position: absolute;
-  height: calc(100% + 3px);
-  width: calc(100% + 3px);
-  z-index: -1;
-  bottom: -12px;
-  right: -12px;
-  background: var(--wp--preset--color--custom-gelb);
-  border: 3px solid #F3CD1E;
-  }
-  
-  /* Anpassung Suche in Navigation */
-  button.wp-block-search__button.has-background.has-custom-gelb-background-color.has-border-color.has-custom-gelb-border-color.has-icon.wp-element-button {
-      margin-bottom: 20px;
-      padding-right: 45px;
-  }
-  
-  input#wp-block-search__input-1 {
-      margin-bottom: 20px;
-  }
-  
-  .wp-block-search__button svg {
-      min-height: 30px;
-      min-width: 30px;
-  }
+  */
