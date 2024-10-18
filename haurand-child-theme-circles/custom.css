@@ -4,8 +4,8 @@
 */
 
 /* Für Kategorienliste in Blog */
-.category_shortcode.wp-container-3 {
-    z-index: unset;
+div#sticky_group_left {
+    z-index: -1;
 }
 
 /* Einstellung Bildunterschrift bei roten Containern */
