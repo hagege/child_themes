@@ -1,8 +1,15 @@
-/* html {
-    overflow-y: scroll;
+/* Container mit Bild(ern) */
+.wp-block-columns.alignfull.container_mit_bildern {
+    background-color: var(--wp--preset--color--contrast-4) !important;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
-*/
 
+.wp-block-columns.alignfull.container_mit_bildern figure {
+    width: 90%;
+}
 
 /* Meldungen bei Beiträgen */
 .post-update-warning {
