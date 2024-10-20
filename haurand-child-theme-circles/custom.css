@@ -3,9 +3,14 @@
 }
 */
 
-/* Für Kategorienliste in Blog */
+/* Header: z-index overlapped categories and tags */
+.wp-block-group.has-base-background-color.has-background.has-global-padding.is-layout-constrained.wp-block-group-is-layout-constrained.wp-container-2.is-position-sticky {
+    z-index: 20;
+}
+
+/* Gruppe Erstberatung/Newsletter */
 div#sticky_group_left {
-    z-index: -1;
+    z-index: 1;
 }
 
 /* Einstellung Bildunterschrift bei roten Containern */
