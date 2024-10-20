@@ -3,6 +3,22 @@
 }
 */
 
+
+/* Meldungen bei Beiträgen */
+.post-update-warning {
+    background-color: var(--wp--preset--color--contrast-2);
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.post-show-update {
+    background-color: var(--wp--preset--color--contrast-2);
+    color: white;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
 /* Header: z-index overlapped categories and tags */
 .wp-block-group.has-base-background-color.has-background.has-global-padding.is-layout-constrained.wp-block-group-is-layout-constrained.wp-container-2.is-position-sticky {
     z-index: 20;
