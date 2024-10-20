@@ -13,11 +13,11 @@ hellblau: #f7f8f9
 .post-update-warning {
     background-color: var(--base-2);
     font-size: 1rem;
-	  padding: 0.5rem;
+    padding: 0.5rem;
 }
 
 .post-show-update {
-background-color: var(--wp--preset--color--vivid-red);
+    background-color: var(--global-color-9);
     color: white;
     padding: 0.5rem;
     margin-bottom: 2rem;
@@ -26,62 +26,78 @@ background-color: var(--wp--preset--color--vivid-red);
 
 /* Cover mit grauem Hintergrund bei Hover */
 
-.cover_referenzen > .wp-block-cover__inner-container {
+.cover_referenzen>.wp-block-cover__inner-container {
     display: none;
 }
 
-.cover_referenzen:hover > .wp-block-cover__inner-container {
+.cover_referenzen:hover>.wp-block-cover__inner-container {
     display: inherit;
     animation: fadein 2s;
-    -moz-animation: fadein 2s; /* Firefox */
-    -webkit-animation: fadein 2s; /* Safari and Chrome */
-    -o-animation: fadein 2s; /* Opera */
+    -moz-animation: fadein 2s;
+    /* Firefox */
+    -webkit-animation: fadein 2s;
+    /* Safari and Chrome */
+    -o-animation: fadein 2s;
+    /* Opera */
 }
 
 
 .cover_referenzen span.wp-block-cover__background.has-background-dim-0.has-background-dim:hover {
-  opacity: 1;
-  display: inherit;
-	-webkit-filter: blur(40px);
-  filter: blur(40px);
-  -webkit-transform: scale(3);
-  transform: scale(3);
-  transition: all 2s ease;
+    opacity: 1;
+    display: inherit;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    -webkit-transform: scale(3);
+    transform: scale(3);
+    transition: all 2s ease;
 }
 
 
-.cover_referenzen .wp-block-cover__inner-container > p > a {
+.cover_referenzen .wp-block-cover__inner-container>p>a {
     text-decoration: none;
 }
 
 @keyframes fadein {
     from {
-        opacity:0;
+        opacity: 0;
     }
+
     to {
-        opacity:1;
+        opacity: 1;
     }
 }
-@-moz-keyframes fadein { /* Firefox */
+
+@-moz-keyframes fadein {
+
+    /* Firefox */
     from {
-        opacity:0;
+        opacity: 0;
     }
+
     to {
-        opacity:1;
+        opacity: 1;
     }
 }
-@-webkit-keyframes fadein { /* Safari and Chrome */
+
+@-webkit-keyframes fadein {
+
+    /* Safari and Chrome */
     from {
-        opacity:0;
+        opacity: 0;
     }
+
     to {
-        opacity:1;
+        opacity: 1;
     }
 }
-@-o-keyframes fadein { /* Opera */
+
+@-o-keyframes fadein {
+
+    /* Opera */
     from {
-        opacity:0;
+        opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -90,15 +106,15 @@ background-color: var(--wp--preset--color--vivid-red);
 
 /* für Sticky Button auf der Startseite */
 @media (min-width: 782px) {
-div.sticky_button > div.wp-block-button a {
-   font-size: clamp(0.7rem, 0.3rem + 1.5vw, 1.3rem)!important;
-}
+    div.sticky_button>div.wp-block-button a {
+        font-size: clamp(0.7rem, 0.3rem + 1.5vw, 1.3rem) !important;
+    }
 }
 
-@media (max-width: 781px)  {
-	.wp-block-spacer.spacer_vor_grauem_kasten {
-			display: none;
-	}
+@media (max-width: 781px) {
+    .wp-block-spacer.spacer_vor_grauem_kasten {
+        display: none;
+    }
 }
 
 /* Farben für SimpleTOC */
@@ -130,13 +146,13 @@ p.beitrags_kategorien a.my_category_list {
 }
 
 p.beitrags_kategorien a.my_category_list:hover {
-	  background-color: #B70000;
-		color: white;
+    background-color: #B70000;
+    color: white;
 }
 
 /* unsichtbarer Text */
 p.unsichtbar {
-	display: none;
+    display: none;
 }
 
 /* Unterschrift unter Bildern in weiß */
@@ -151,21 +167,21 @@ p.unsichtbar {
 
 
 /* für Block Pattern Update und Achtung */
-@media (max-width: 781px)  {
-div.html_svg {
-    margin-left: 43%;
-    margin-right: 43%;
-}
+@media (max-width: 781px) {
+    div.html_svg {
+        margin-left: 43%;
+        margin-right: 43%;
+    }
 }
 
 .html_svg .wp-block-group__inner-container,
-.svg_container .wp-block-group__inner-container{
+.svg_container .wp-block-group__inner-container {
     /* padding: 20px; */
-	margin: 0px;
-	background-color: #f7f8f9;
+    margin: 0px;
+    background-color: #f7f8f9;
 }
 
-	
+
 p.has-text-align-center.achtung_update {
     margin-top: 2px;
 }
@@ -175,8 +191,8 @@ p.svg_meldung {
     padding-right: 1rem;
 }
 
-svg#Layer_1, svg#Capa_1
-{
+svg#Layer_1,
+svg#Capa_1 {
     fill: #B70000;
 }
 
@@ -187,26 +203,25 @@ div.abfrage_tags {
 
 
 div.abfrage_tags li {
- line-height: 1;
+    line-height: 1;
 }
 
 
 /* damit der Anker korrekt angesteuert werden kann */
-[id^="htoc-"] { 
-	padding-top: 150px; 
-	margin-top: -150px!important;
+[id^="htoc-"] {
+    padding-top: 150px;
+    margin-top: -150px !important;
 }
 
 /* Bei Suche Container mit max. 1400 px */
 /* damit die Breite der Archive besser dargestellt wird, z. B. bei Schlagwörtern */
-body.search > .grid-container
-{
+body.search>.grid-container {
     max-width: 1500px;
 }
 
 /* Veröffentlichungsdatum zentriert */
-header.entry-header > .entry-meta {
-		text-align: center;	
+header.entry-header>.entry-meta {
+    text-align: center;
 }
 
 
@@ -216,26 +231,27 @@ header.entry-header > .entry-meta {
 }
 
 @media (max-width:768px) {
-	.footer-widget-1 {
-    margin-left: inherit;
-	}
+    .footer-widget-1 {
+        margin-left: inherit;
+    }
 }
-	
+
 
 /* Code: Schriftgröße ist zu klein */
 code {
-    font: 18px Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace;
-		 background-color: #D4DaDB;
+    font: 18px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+    background-color: #D4DaDB;
 }
 
 
 /* Schriftgröße bei Beiträgen */
 @media (max-width:768px) {
-	.entry-content > p,
-	.entry-content > ul.weisse_liste,
-	footer.entry-meta > span {
-			font-size: 0.8em;
-	}
+
+    .entry-content>p,
+    .entry-content>ul.weisse_liste,
+    footer.entry-meta>span {
+        font-size: 0.8em;
+    }
 }
 
 
@@ -371,9 +387,9 @@ h2.video_text{
 /* runde bilder */
 /* ------------------------------ */
 img.wp-image-2111,
-img.wp-image-2110{
-	height: 178px;
-	margin-top: 3rem;
+img.wp-image-2110 {
+    height: 178px;
+    margin-top: 3rem;
 }
 
 
@@ -388,8 +404,8 @@ img.wp-image-2110{
 /* Beschriftung der Kachel */
 /* ------------------------------ */
 figcaption {
-	padding: 10px;
-	color: black;
+    padding: 10px;
+    color: black;
 }
 
 
@@ -397,63 +413,64 @@ figcaption {
 /* ------------------------------ */
 /* hier die Regeln für das Bild */
 /* ------------------------------ */
-.das_waere_die_regel_fuer_das_bild {	
-	/*min-width: 100%;
+.das_waere_die_regel_fuer_das_bild {
+    /*min-width: 100%;
 	min-height: 100%; 
 	/* Add infinite to loop. */
-	animation: move 15s ease;
-	-ms-animation: move 15s ease;
-	-webkit-animation: move 15s ease;
-	-animation: move 15s ease;
-	-moz-animation: move 15s ease;
-	/* position: relative; 
+    animation: move 15s ease;
+    -ms-animation: move 15s ease;
+    -webkit-animation: move 15s ease;
+    -animation: move 15s ease;
+    -moz-animation: move 15s ease;
+    /* position: relative; 
 	/* width: 100%; 
 	max-height: 400px; */
 }
 
 @keyframes move {
-	0% {
-		transform: scale(1.0);
-		-ms-transform: scale(1.0);
-		/* IE 9 */
+    0% {
+        transform: scale(1.0);
+        -ms-transform: scale(1.0);
+        /* IE 9 */
 
-		-webkit-transform: scale(1.0);
-		/* Safari and Chrome */
+        -webkit-transform: scale(1.0);
+        /* Safari and Chrome */
 
-		-o-transform: scale(1.0);
-		/* Opera */
+        -o-transform: scale(1.0);
+        /* Opera */
 
-		-moz-transform: scale(1.0);
-		/* Firefox */
-	}
-	50% {
-		transform: scale(1.1);
-		-ms-transform: scale(1.1);
-		/* IE 9 */
+        -moz-transform: scale(1.0);
+        /* Firefox */
+    }
 
-		-webkit-transform: scale(1.1);
-		/* Safari and Chrome */
+    50% {
+        transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        /* IE 9 */
 
-		-o-transform: scale(1.1);
-		/* Opera */
+        -webkit-transform: scale(1.1);
+        /* Safari and Chrome */
 
-		-moz-transform: scale(1.1);
-		/* Firefox */
-	}
-	100% {
+        -o-transform: scale(1.1);
+        /* Opera */
 
-		transform: scale(1.0);
-		-ms-transform: scale(1.0);
-		/* IE 9 */
+        -moz-transform: scale(1.1);
+        /* Firefox */
+    }
 
-		-webkit-transform: scale(1.0);
-		/* Safari and Chrome */
+    100% {
 
-		-o-transform: scale(1.0);
-		/* Opera */
+        transform: scale(1.0);
+        -ms-transform: scale(1.0);
+        /* IE 9 */
 
-		-moz-transform: scale(1.0);
-		/* Firefox */
-		}
+        -webkit-transform: scale(1.0);
+        /* Safari and Chrome */
+
+        -o-transform: scale(1.0);
+        /* Opera */
+
+        -moz-transform: scale(1.0);
+        /* Firefox */
+    }
 }
-
