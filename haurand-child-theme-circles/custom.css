@@ -1,3 +1,8 @@
+/* Umbruch bei langen Zeilen, z. B. Links */
+a:where(:not(.wp-element-button)) {
+    word-wrap: break-word;
+}
+
 /* Container mit Bild(ern) */
 .wp-block-columns.alignfull.container_mit_bildern {
     background-color: var(--wp--preset--color--contrast-4) !important;
@@ -7,9 +12,12 @@
     padding-bottom: 1em;
 }
 
-.wp-block-columns.alignfull.container_mit_bildern figure {
-    width: 90%;
+.wp-block-group.svg_container.is-layout-flow.wp-block-group-is-layout-flow {
+    background-color: unset !important;
+    border-left: var(--wp--preset--color--contrast-2) 2px solid;
+    padding-left: 0.5em;
 }
+
 
 /* Meldungen bei Beiträgen */
 .post-update-warning {
