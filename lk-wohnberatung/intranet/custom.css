@@ -3,17 +3,48 @@
     outline-style: solid
 }
 
-
-/* Anmeldung */
-.swpm-login-widget-form input,
-.swpm-login-widget-form checkbox,
-.swpm-registration-widget-form input[type=checkbox],
-.swpm-registration-widget-form input[type=checkbox],
-.swpm-registration-widget-form input[type=text],
-.swpm-registration-widget-form input[type=password],
-input#password_re {
-    font-size: 1.5em;
+/* Make form fields taller and text larger */
+.swpm-registration-form input,
+.swpm-profile-form input {
+    height: 45px;
+    /* Adjust the height */
+    font-size: 16px;
+    /* Adjust the font size */
+    padding: 10px;
+    /* Add some padding */
 }
+
+
+.swpm-form input,
+.swpm-form select,
+.swpm-form textarea,
+.swpm-login-widget-form input {
+    height: 2.5rem;
+    font-size: 1.2rem;
+}
+
+
+/* Ensure focus outline is clear */
+.swpm-form input:focus,
+.swpm-form select:focus,
+.swpm-form textarea:focus,
+.swpm-login-widget-form input:focus {
+    background-color: var(--wp--preset--color--contrast-4);
+    border-color: var(--wp--preset--color--contrast-4);
+    color: var(--wp--preset--color--base);
+    outline-color: var(--wp--preset--color--contrast);
+    outline-offset: 4px;
+    outline-style: groove;
+    outline-width: 4px;
+}
+
+/* Increase label size for better visibility */
+.swpm-form label {
+    font-size: 1.2rem;
+    display: block;
+    /* Ensure label is on its own line */
+}
+
 
 form#swpm-login-form input[type=checkbox],
 input#swpm-accept-pp,
@@ -24,9 +55,8 @@ input#swpm-accept-terms {
     margin-top: 0.5em;
 }
 
-
-input.swpm-login-form-submit.swpm-submit-btn-default-style,
-button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style {
+/*
+input.swpm-login-form-submit.swpm-submit-btn-default-style, button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style {
     background-color: #E30517;
     color: white;
     border-radius: 5px;
@@ -34,8 +64,7 @@ button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style
     font-size: inherit;
 }
 
-input.swpm-login-form-submit.swpm-submit-btn-default-style:hover,
-button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style:hover {
+input.swpm-login-form-submit.swpm-submit-btn-default-style:hover, button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style:hover {
     background-color: var(--wp--preset--color--contrast-4);
     border-color: var(--wp--preset--color--contrast-4);
     color: var(--wp--preset--color--base);
@@ -44,6 +73,7 @@ button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style
     outline-style: groove;
     outline-width: 4px;
 }
+*/
 
 /* für die Spalten in den Kacheln */
 .kachel-spalte {
