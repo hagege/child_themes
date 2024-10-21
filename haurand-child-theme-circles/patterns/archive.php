@@ -13,13 +13,21 @@
 <hr class="wp-block-separator has-alpha-channel-opacity is-style-default"/>
 <!-- /wp:separator -->
 
+<!-- wp:spacer {"height":"50px"} -->
+<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
 <!-- wp:group -->
 <div class="wp-block-group"><!-- wp:columns -->
-<div class="wp-block-columns"><!-- wp:column {"width":"20%","style":{"spacing":{"padding":{"left":"var:preset|spacing|100"}}}} -->
-<div class="wp-block-column" style="padding-left:var(--wp--preset--spacing--100);flex-basis:20%"><!-- wp:group {"align":"wide","className":"category_shortcode","style":{"position":{"type":"sticky","top":"0px"},"background":{"backgroundPosition":"50% 0"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-columns"><!-- wp:column {"width":"20%","style":{"spacing":{"padding":{"left":"var:preset|spacing|80"}}}} -->
+<div class="wp-block-column" style="padding-left:var(--wp--preset--spacing--80);flex-basis:20%"><!-- wp:group {"align":"wide","className":"category_shortcode","style":{"position":{"type":"sticky","top":"0px"},"background":{"backgroundPosition":"50% 0"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide category_shortcode"><!-- wp:spacer {"height":"80px"} -->
 <div style="height:80px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><?php esc_html_e('Kategorien:', 'haurand-child-theme-circles');?></h3>
+<!-- /wp:heading -->
 
 <!-- wp:shortcode -->
 [my_category_list]

@@ -14,9 +14,9 @@
 <!-- /wp:separator -->
 
 <!-- wp:group -->
-<div class="wp-block-group"><!-- wp:columns -->
-<div class="wp-block-columns"><!-- wp:column {"width":"20%","style":{"spacing":{"padding":{"left":"var:preset|spacing|100"}}}} -->
-<div class="wp-block-column" style="padding-left:var(--wp--preset--spacing--100);flex-basis:20%"><!-- wp:group {"align":"wide","className":"category_shortcode","style":{"position":{"type":"sticky","top":"0px"},"background":{"backgroundPosition":"50% 0"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:columns {"style":{"spacing":{"padding":{"right":"var:preset|spacing|80","left":"var:preset|spacing|80"}}}} -->
+<div class="wp-block-columns" style="padding-right:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--80)"><!-- wp:column {"width":"20%"} -->
+<div class="wp-block-column" style="flex-basis:20%"><!-- wp:group {"align":"wide","className":"category_shortcode","style":{"position":{"type":"sticky","top":"0px"},"background":{"backgroundPosition":"50% 0"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide category_shortcode"><!-- wp:spacer {"height":"80px"} -->
 <div style="height:80px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
@@ -51,7 +51,11 @@
 
 <!-- wp:column {"width":"80%","style":{"spacing":{"padding":{"right":"var:preset|spacing|100"}}}} -->
 <div class="wp-block-column" style="padding-right:var(--wp--preset--spacing--100);flex-basis:80%"><!-- wp:group {"tagName":"main","style":{"background":{"backgroundImage":{"url":"<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/circle_light_blue.svg","id":6935,"source":"file","title":"circle_light_blue"},"backgroundPosition":"50% 0"}},"layout":{"type":"constrained"}} -->
-<main class="wp-block-group"><!-- wp:query-title {"type":"archive","align":"wide","style":{"typography":{"lineHeight":"1"}}} /-->
+<main class="wp-block-group"><!-- wp:spacer {"height":"50px"} -->
+<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:query-title {"type":"archive","align":"wide","style":{"typography":{"lineHeight":"1"}}} /-->
 
 <!-- wp:heading {"align":"wide"} -->
 <h2 class="wp-block-heading alignwide"><?php esc_html_e('Beiträge', 'haurand-child-theme-circles');?></h2>
