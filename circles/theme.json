@@ -315,7 +315,7 @@
 			"background": "var(--wp--preset--color--base)",
 			"text": "var(--wp--preset--color--base-2)"
 		},
-		"css": "/* html {\n    overflow-y: scroll;\n}\n*/",
+		"css": "",
 		"elements": {
 			"button": {
 				":active": {
