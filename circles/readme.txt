@@ -3,7 +3,7 @@ Contributors: wordpressdotorg
 Requires at least: 6.6
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 0.9.3
+Stable tag: 0.9.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,11 +15,18 @@ Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, 
 
 == Changelog ==
 
+
+
+= 0.9.4 =
+* Released: October 24, 2024
+* Tweak: All page patterns: more padding-top and margin-top in relation to title. This prevents the title from slipping into the menu if the logo is not set
+* Fix: Header Template Part - Background Color set to Base Color so that the header covers the content in the sticky setting (grouping of the header)
+* Fix: The assignment of templates to posts and pages is now correct. 
+* Fix: The names are now correctly labeled
+
 = 0.9.3 =
 * Released: October 23, 2024
 * Add: Pattern "Query loop with round image, title and text excerpt"
-* Fix: Header Template Part - Background Color set to Base Color so that the header covers the content in the sticky setting (grouping of the header)
-
 
 = 0.9.2 =
 * Released: October 20, 2024

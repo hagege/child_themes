@@ -1,6 +1,6 @@
 <?php
 	/**
-		* Title: simple-footer
+		* Title: Simple Footer
 		* Slug: circles/simple-footer
 		* Categories: footer
 		* Block Types: core/template-part/footer
