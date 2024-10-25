@@ -3,7 +3,7 @@ Contributors: wordpressdotorg
 Requires at least: 6.6
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 0.9.4
+Stable tag: 0.9.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,7 +15,10 @@ Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, 
 
 == Changelog ==
 
-
+= 0.9.5 =
+* Released: October 25, 2024
+* Tweak: Superfluous template deleted
+* Tweak: Structure theme.json improved and some minor adjustments made
 
 = 0.9.4 =
 * Released: October 24, 2024

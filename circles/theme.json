@@ -1,97 +1,6 @@
 {
-	"customTemplates": [
-		{
-			"name": "page-alternative-one-circle",
-			"postTypes": [
-				"page"
-			],
-			"title": "Page Alternative With One Circle"
-		},
-		{
-			"name": "page-alternative-two-circles",
-			"postTypes": [
-				"page"
-			],
-			"title": "Page Alternative With Two Circles"
-		},
-		{
-			"name": "page-with-sidebar",
-			"postTypes": [
-				"page"
-			],
-			"title": "Page with Sidebar"
-		},
-		{
-			"name": "template-with-grey-circle",
-			"postTypes": [
-				"page"
-			],
-			"title": "Page with grey Circle"
-		},
-		{
-			"name": "template-with-light-blue-circle",
-			"postTypes": [
-				"page"
-			],
-			"title": "Page with light blue Circle"
-		},
-		{
-			"name": "template-with-red-circle",
-			"postTypes": [
-				"page"
-			],
-			"title": "Page with red Circle"
-		},
-		{
-			"name": "template-with-white-circle",
-			"postTypes": [
-				"page"
-			],
-			"title": "Page with white Circle"
-		},
-		{
-			"name": "template-with-yellow-circle",
-			"postTypes": [
-				"page"
-			],
-			"title": "Page with yellow Circle"
-		},
-		{
-			"name": "template-with-blue-circle",
-			"postTypes": [
-				"page"
-			],
-			"title": "Page with blue Circle"
-		},
-		{
-			"name": "template-with-green-circle",
-			"postTypes": [
-				"page"
-			],
-			"title": "Page with green Circle"
-		},
-		{
-			"name": "template-blank-template",
-			"postTypes": [
-				"page"
-			],
-			"title": "Blank Page"
-		},
-		{
-			"name": "template-full-width",
-			"postTypes": [
-				"page"
-			],
-			"title": "Full width Page"
-		},
-		{
-			"name": "single-post-with-sidebar",
-			"postTypes": [
-				"post"
-			],
-			"title": "Single Post with Sidebar"
-		}
-	],
+	"version": 3,
+	"$schema": "https://schemas.wp.org/wp/6.6/theme.json",
 	"settings": {
 		"appearanceTools": true,
 		"color": {
@@ -291,7 +200,8 @@
 					"size": "6rem",
 					"slug": "xx-large"
 				}
-			]
+			],
+			"writingMode": true
 		},
 		"useRootPaddingAwareAlignments": true
 	},
@@ -468,6 +378,15 @@
 					"fontWeight": "600"
 				}
 			},
+			"caption": {
+				"color": {
+					"text": "var(--wp--preset--color--base-2)"
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--lexend)",
+					"fontSize": "0.8rem"
+				}
+			},
 			"h1": {
 				"typography": {
 					"fontSize": "3.625rem",
@@ -551,8 +470,104 @@
 			"area": "footer",
 			"name": "footer",
 			"title": "Footer"
+		},
+		{
+			"area": "uncategorized",
+			"name": "post-meta",
+			"title": "Post Meta"
 		}
 	],
-	"version": 3,
-	"$schema": "https://schemas.wp.org/wp/6.6/theme.json"
+	"customTemplates": [
+		{
+			"name": "page-alternative-one-circle",
+			"postTypes": [
+				"page"
+			],
+			"title": "Page Alternative With One Circle"
+		},
+		{
+			"name": "page-alternative-two-circles",
+			"postTypes": [
+				"page"
+			],
+			"title": "Page Alternative With Two Circles"
+		},
+		{
+			"name": "page-with-sidebar",
+			"postTypes": [
+				"page"
+			],
+			"title": "Page with Sidebar"
+		},
+		{
+			"name": "template-with-grey-circle",
+			"postTypes": [
+				"page"
+			],
+			"title": "Page with grey Circle"
+		},
+		{
+			"name": "template-with-light-blue-circle",
+			"postTypes": [
+				"page"
+			],
+			"title": "Page with light blue Circle"
+		},
+		{
+			"name": "template-with-red-circle",
+			"postTypes": [
+				"page"
+			],
+			"title": "Page with red Circle"
+		},
+		{
+			"name": "template-with-white-circle",
+			"postTypes": [
+				"page"
+			],
+			"title": "Page with white Circle"
+		},
+		{
+			"name": "template-with-yellow-circle",
+			"postTypes": [
+				"page"
+			],
+			"title": "Page with yellow Circle"
+		},
+		{
+			"name": "template-with-blue-circle",
+			"postTypes": [
+				"page"
+			],
+			"title": "Page with blue Circle"
+		},
+		{
+			"name": "template-with-green-circle",
+			"postTypes": [
+				"page"
+			],
+			"title": "Page with green Circle"
+		},
+		{
+			"name": "template-blank-template",
+			"postTypes": [
+				"page"
+			],
+			"title": "Blank Page"
+		},
+		{
+			"name": "template-full-width",
+			"postTypes": [
+				"page"
+			],
+			"title": "Full width Page"
+		},
+		{
+			"name": "single-post-with-sidebar",
+			"postTypes": [
+				"post"
+			],
+			"title": "Single Post with Sidebar"
+		}
+	]
 }
