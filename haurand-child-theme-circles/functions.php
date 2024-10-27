@@ -69,50 +69,6 @@ function manage_img_column($column_name, $post_id) {
 /*----------------------------------------------------------------*/
 
 
-/*----------------------------------------------------------------*/
-/* Start: Shortcode für Kategorienliste - Aufruf mit [haurand_catelist]
-/* nicht mehr benötigt
-/* Datum: 21.1.2023
-/* Autor: hgg
-/*----------------------------------------------------------------*/
-function createGridCategories() {
-  $list = wp_list_categories( array(
-      'taxonomy'   => 'category',
-      'hide_empty' => 1,
-      'echo'       => 0,
-      'title_li'   => '',
-      'show_count' => 1,
-      'exclude'    => array( 1486 ),
-      // 1486: Kategorie: Keine Anzeige
-      // other args here
-) );
-
-  return "<h3>Beitrags-Kategorien</h3><ul>$list</ul>";
-}
-add_shortcode('haurand_catelist', 'createGridCategories');
-
-/*----------------------------------------------------------------*/
-/* Start: Shortcode für Kategorienliste - Aufruf mit [my_category_list]
-/* Datum: 04.2.2023
-/* Autor: hgg
-/*----------------------------------------------------------------*/
-
-function my_category_list_shortcode() {
-  $args = array(
-      'orderby' => 'name',
-      'hide_empty' => 1
-  );
-  $my_categories = get_categories($args);
-  $my_output = '<p><ul>';
-  foreach($my_categories as $my_category) {
-      $my_output .= '<li><a class="my_category_list" href="' . get_category_link($my_category->term_id) . '">' . $my_category->name . ' (' . $my_category->count . ')</a></li>' . '   ';
-  // $my_output .= '<a class="my_category_list" href="' . get_category_link($my_category->term_id) . '">' . $my_category->name . '</a>' . '   ';
-  }
-  $my_output .= '</p></ul>';
-  return $my_output;
-}
-add_shortcode('my_category_list', 'my_category_list_shortcode');
-
 
 /* AntispamBee-Filter, siehe https://antispambee.pluginkollektiv.org/de/dokumentation/#hooks */
 

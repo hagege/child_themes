@@ -39,6 +39,11 @@ a:where(:not(.wp-element-button)) {
     z-index: 20;
 }
 
+/* left column with categories and tags */
+.wp-block-group.category_shortcode.wp-container-4 {
+    z-index: 8;
+}
+
 /* Gruppe Erstberatung/Newsletter */
 div#sticky_group_left {
     z-index: 1;
