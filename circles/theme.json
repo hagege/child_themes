@@ -165,6 +165,7 @@
 						"max": "1rem",
 						"min": "0.9rem"
 					},
+					"name": "Small",
 					"size": "1rem",
 					"slug": "small"
 				},
@@ -173,6 +174,7 @@
 						"max": "1.2rem",
 						"min": "1rem"
 					},
+					"name": "Medium",
 					"size": "1.125rem",
 					"slug": "medium"
 				},
@@ -181,6 +183,7 @@
 						"max": "1.85rem",
 						"min": "1.4rem"
 					},
+					"name": "Large",
 					"size": "1.75rem",
 					"slug": "large"
 				},
@@ -189,6 +192,7 @@
 						"max": "3.3rem",
 						"min": "2.7rem"
 					},
+					"name": "Extra Large",
 					"size": "3rem",
 					"slug": "x-large"
 				},
@@ -197,6 +201,7 @@
 						"max": "6rem",
 						"min": "3.5rem"
 					},
+					"name": "Extra Extra Large",
 					"size": "6rem",
 					"slug": "xx-large"
 				}
