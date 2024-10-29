@@ -32,8 +32,8 @@
 
 .is-style-card--interactive:not(.has-child-selected):focus-within :where(.wp-block-cover__image-background),
 .is-style-card--interactive:not(.has-child-selected):hover :where(.wp-block-cover__image-background) {
-   filter: saturate(200%) brightness(40%);
-   transform: scale(1.15);
+   filter: saturate(200%) brightness(80%);
+   transform: scale(1.05);
 }
 
 /* Animate label area */
