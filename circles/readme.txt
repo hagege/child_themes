@@ -18,6 +18,7 @@ Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, 
 = 0.9.7 =
 * Released: October 29, 2024
 * Tweak: Superfluous template part deleted
+* Improvements: Some margins and paddings in templates optimized
 
 = 0.9.6 =
 * Released: October 27, 2024
