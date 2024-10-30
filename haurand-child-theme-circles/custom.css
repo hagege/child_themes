@@ -1,3 +1,8 @@
+/* Altlasten aus Kompatibilitätsgründen*/
+.wp-block-group.html_svg {
+    text-align: center;
+}
+
 /* Text unter Bildern */
 figcaption.wp-element-caption {
     color: var(--wp--preset--color--base);
