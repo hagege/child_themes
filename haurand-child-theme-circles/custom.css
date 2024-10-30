@@ -5,7 +5,7 @@ a:where(:not(.wp-element-button)) {
 
 /* Container mit Bild(ern) */
 .wp-block-columns.alignfull.container_mit_bildern {
-    background-color: var(--wp--preset--color--contrast-4) !important;
+    background-color: #004E89 !important;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
     padding-top: 1em;
