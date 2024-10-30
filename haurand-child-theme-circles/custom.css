@@ -1,3 +1,8 @@
+/* Text unter Bildern */
+figcaption.wp-element-caption {
+    color: var(--wp--preset--color--base);
+}
+
 /* Umbruch bei langen Zeilen, z. B. Links */
 a:where(:not(.wp-element-button)) {
     word-wrap: break-word;
