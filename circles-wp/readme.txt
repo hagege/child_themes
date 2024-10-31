@@ -1,5 +1,5 @@
-=== Circles ===
-Contributors: wordpressdotorg
+=== Circles WP ===
+Contributors: Hans-Gerd Gerhards
 Requires at least: 6.6
 Tested up to: 6.6
 Requires PHP: 7.4
@@ -7,13 +7,14 @@ Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
+
 == Description ==
 
-Circles is a clean, flexible, fast and accessibility-ready block theme. 
+Circles WP is a clean, flexible, fast and accessibility-ready block theme. 
 Its default look is a stylish white on black background color scheme with an orange circle in background and lexend font (a sans-serif typography). 
-It is possible to change the background graphic with the circles. 10 circles with different colors are supplied in the \assets\images folder as SVG graphics.
-Circles is built from the ground up for flexibility. It includes ten different theme styles to choose from, and different block patterns that you can use to quickly create unique page layouts. 
-Circles is suitable for websites that contain few photos. The theme is therefore not suitable for photo-heavy websites.
+It is possible to change the background graphic with the Circles WP. 10 Circles WP with different colors are supplied in the \assets\images folder as SVG graphics.
+Circles WP is built from the ground up for flexibility. It includes ten different theme styles to choose from, and different block patterns that you can use to quickly create unique page layouts. 
+Circles WP is suitable for websites that contain few photos. The theme is therefore not suitable for photo-heavy websites.
 
 Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, sticky-post, threaded-comments, translation-ready, block-styles, wide-blocks, full-site-editing, accessibility-ready
 
@@ -78,7 +79,7 @@ Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, 
 
 = 0.8 =
 * Released: October 4, 2024
-* Tweak: Changed the height of circles to 100vh so that, for example, pages with less content are better displayed (thanks to @Thomas for the hint)
+* Tweak: Changed the height of Circles to 100vh so that, for example, pages with less content are better displayed (thanks to @Thomas for the hint)
 * Add: Show Image in full width container
 
 = 0.7.5 =
@@ -91,7 +92,7 @@ Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, 
 = 0.7.4 =
 * Released: October 2, 2024
 * Add: New Style haurand variation 2 (with changed style for buttons)
-* Tweak: Register pattern categories Circles in function.php
+* Tweak: Register pattern categories Circles WP in function.php
 * Add: Fluid to fontsizes
 
 = 0.7.3 =
@@ -122,7 +123,7 @@ Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, 
 
 = 0.6.7 =
 * Released: September 26, 2024
-* Fix: Delete pattern cover-pages, cover-circles
+* Fix: Delete pattern cover-pages, cover-Circles
 * Tweak: Minor Changes to descriptions of Patterns
 * Tweak: Better formatting PHP-Files in Patterns Folder
 
@@ -133,13 +134,13 @@ Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, 
 
 = 0.6.5.1 =
 * Released: September 23, 2024
-* Tweak: Category Circles is now displayed correctly in the editor (see functions.php)
+* Tweak: Category Circles WP is now displayed correctly in the editor (see functions.php)
 * Tweak: Renaming Patterns and deleting Pattern "Cover Content"
 * Add: Patterns for posts (one and two columns)
 
 = 0.6.5 =
 * Released: September 22, 2024
-* Fix: Category Circles is now displayed correctly in the editor (see functions.php)
+* Fix: Category Circles WP is now displayed correctly in the editor (see functions.php)
 * Add: New pattern "cards", "cover with call-to-action", "Banner with Image on the left"
 
 = 0.6.4.3 =
@@ -190,7 +191,7 @@ Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, 
 
 = 0.4.3 =
 * Released: September 9, 2024
-* Name of Theme changed (YABTIS) in Circles
+* Name of Theme changed (YABTIS) in Circles WP
 
 = 0.4.2 =
 * Released: September 9, 2024
@@ -234,8 +235,8 @@ Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, 
 
 == Copyright ==
 
-Circles WordPress Theme, (C) 2024 haurand.com
-Circles is distributed under the terms of the GNU GPL.
+Circles WP WordPress Theme, (C) 2024 haurand.com
+Circles WP is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
