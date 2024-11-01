@@ -1,4 +1,4 @@
-== haurand Child Theme Circles ==
+== haurand Child Theme circles-wp ==
 
 Contributors: 
 Requires at least: 6.6
@@ -31,8 +31,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Copyright ==
 
-haurand Child Theme Circles WordPress Theme, (C) 2024 
-haurand Child Theme Circles is distributed under the terms of the GNU GPL.
+haurand Child Theme circles-wp WordPress Theme, (C) 2024 
+haurand Child Theme circles-wp is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -45,5 +45,5 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 
-haurand Child Theme Circles is a child theme of Circles (https://haurand.com/), (C) Hans-Gerd Gerhards, [GPLv2 or later](http://www.gnu.org/licenses/gpl-2.0.html)
+haurand Child Theme circles-wp is a child theme of circles-wp (https://haurand.com/), (C) Hans-Gerd Gerhards, [GPLv2 or later](http://www.gnu.org/licenses/gpl-2.0.html)
 

@@ -1,7 +1,7 @@
 <?php
 /**
- * Title: page-alternative-two-circles
- * Slug: haurand-child-theme-circles/page-alternative-two-circles
+ * Title: page-alternative-two-circles-wp
+ * Slug: haurand-child-theme-circles-wp/page-alternative-two-circles-wp
  * Inserter: no
  */
 ?>

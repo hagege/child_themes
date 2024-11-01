@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: single
- * Slug: haurand-child-theme-circles/single
+ * Slug: haurand-child-theme-circles-wp/single
  * Inserter: no
  */
 ?>

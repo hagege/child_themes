@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: single-post-with-sidebar
- * Slug: haurand-child-theme-circles/single-post-with-sidebar
+ * Slug: haurand-child-theme-circles-wp/single-post-with-sidebar
  * Inserter: no
  */
 ?>
@@ -33,7 +33,7 @@
 				
 				<!-- wp:comments {"className":"wp-block-comments-query-loop"} -->
 				<div class="wp-block-comments wp-block-comments-query-loop"><!-- wp:heading -->
-					<h2 class="wp-block-heading"><?php esc_html_e('Kommentare', 'haurand-child-theme-circles');?></h2>
+					<h2 class="wp-block-heading"><?php esc_html_e('Kommentare', 'haurand-child-theme-circles-wp');?></h2>
 					<!-- /wp:heading -->
 					
 					<!-- wp:comments-title {"level":3} /-->
@@ -93,7 +93,7 @@
 					
 					<!-- wp:group {"style":{"spacing":{"blockGap":"16px"}},"layout":{"type":"constrained"}} -->
 					<div class="wp-block-group"><!-- wp:heading {"style":{"typography":{"fontSize":"1.6rem"}}} -->
-					<h2 class="wp-block-heading" style="font-size:1.6rem"><?php esc_html_e('Beliebte Kategorien', 'haurand-child-theme-circles');?></h2>
+					<h2 class="wp-block-heading" style="font-size:1.6rem"><?php esc_html_e('Beliebte Kategorien', 'haurand-child-theme-circles-wp');?></h2>
 					<!-- /wp:heading -->
 					
 					<!-- wp:categories {"showHierarchy":true,"showPostCounts":true,"fontSize":"medium"} /--></div>
@@ -106,20 +106,20 @@
 					<!-- wp:group {"style":{"spacing":{"blockGap":"26px"}},"layout":{"type":"constrained"}} -->
 					<div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"16px"}},"layout":{"type":"flex","orientation":"vertical","verticalAlignment":"space-between"}} -->
 					<div class="wp-block-group"><!-- wp:heading {"style":{"typography":{"fontSize":"1.6rem"}}} -->
-					<h2 class="wp-block-heading" style="font-size:1.6rem"><?php esc_html_e('Nützliche Links', 'haurand-child-theme-circles');?></h2>
+					<h2 class="wp-block-heading" style="font-size:1.6rem"><?php esc_html_e('Nützliche Links', 'haurand-child-theme-circles-wp');?></h2>
 					<!-- /wp:heading -->
 					
 					<!-- wp:list -->
 					<ul class="wp-block-list"><!-- wp:list-item -->
-					<li><?php esc_html_e('Ein erster Link', 'haurand-child-theme-circles');?></li>
+					<li><?php esc_html_e('Ein erster Link', 'haurand-child-theme-circles-wp');?></li>
 					<!-- /wp:list-item -->
 					
 					<!-- wp:list-item -->
-					<li><?php esc_html_e('Ein zweiter Link', 'haurand-child-theme-circles');?></li>
+					<li><?php esc_html_e('Ein zweiter Link', 'haurand-child-theme-circles-wp');?></li>
 					<!-- /wp:list-item -->
 					
 					<!-- wp:list-item -->
-					<li><?php esc_html_e('Ein dritter Link', 'haurand-child-theme-circles');?></li>
+					<li><?php esc_html_e('Ein dritter Link', 'haurand-child-theme-circles-wp');?></li>
 					<!-- /wp:list-item --></ul>
 					<!-- /wp:list --></div>
 					<!-- /wp:group --></div>
@@ -131,7 +131,7 @@
 					
 					<!-- wp:group {"style":{"spacing":{"blockGap":"16px"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
 					<div class="wp-block-group"><!-- wp:heading {"style":{"typography":{"fontSize":"1.6rem"}}} -->
-					<h2 class="wp-block-heading" style="font-size:1.6rem"><?php esc_html_e('Die Website durchsuchen', 'haurand-child-theme-circles');?></h2>
+					<h2 class="wp-block-heading" style="font-size:1.6rem"><?php esc_html_e('Die Website durchsuchen', 'haurand-child-theme-circles-wp');?></h2>
 					<!-- /wp:heading -->
 					
 					<!-- wp:search {"label":"Suchen","showLabel":false,"placeholder":"Suchen …","width":100,"widthUnit":"%","buttonText":"Suchen"} /--></div>

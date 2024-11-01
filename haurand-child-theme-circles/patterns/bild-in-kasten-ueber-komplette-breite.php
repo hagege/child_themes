@@ -1,7 +1,7 @@
 <?php
 	/**
 		* Title: Bild in Kasten über komplette Breite
-		* Slug: haurand-child-theme-circles/bild-in-kasten-ueber-komplette-breite
+		* Slug: haurand-child-theme-circles-wp/bild-in-kasten-ueber-komplette-breite
 		* Categories: 
 	*/
 ?>

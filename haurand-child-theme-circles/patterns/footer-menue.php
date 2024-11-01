@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Footer-Menue
- * Slug: haurand-child-theme-circles/footer-menue
+ * Slug: haurand-child-theme-circles-wp/footer-menue
  * Categories: 
  */
 ?>

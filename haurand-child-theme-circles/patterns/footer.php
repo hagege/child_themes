@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: footer
- * Slug: haurand-child-theme-circles/footer
+ * Slug: haurand-child-theme-circles-wp/footer
  * Inserter: no
  */
 ?>
@@ -10,11 +10,11 @@
 <div class="wp-block-columns alignfull are-vertically-aligned-top" style="padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--70)"><!-- wp:column {"verticalAlignment":"top","width":"33%"} -->
 <div class="wp-block-column is-vertically-aligned-top" style="flex-basis:33%"><!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:paragraph -->
-<p><?php esc_html_e('Hans-Gerd Gerhards<br>haurand.com<br>USt-IdNr.: DE327898905', 'haurand-child-theme-circles');?></p>
+<p><?php esc_html_e('Hans-Gerd Gerhards<br>haurand.com<br>USt-IdNr.: DE327898905', 'haurand-child-theme-circles-wp');?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p><?php esc_html_e('E-Mail: <a href="mailto:info@haurand.com">info@haurand.com</a>', 'haurand-child-theme-circles');?></p>
+<p><?php esc_html_e('E-Mail: <a href="mailto:info@haurand.com">info@haurand.com</a>', 'haurand-child-theme-circles-wp');?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:navigation /-->
@@ -28,11 +28,11 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|10"},"border":{"top":{"width":"0px","style":"none"},"right":[],"bottom":{"width":"0px","style":"none"},"left":[]}},"layout":{"type":"flex","orientation":"vertical","verticalAlignment":"center","justifyContent":"stretch"}} -->
 <div class="wp-block-group" style="border-top-style:none;border-top-width:0px;border-bottom-style:none;border-bottom-width:0px"><!-- wp:paragraph {"align":"left"} -->
-<p class="has-text-align-left"><?php esc_html_e('Standort Attendorn<br>Am Hellepädchen 7<br>57439 Attendorn<br>Telefon: 0049(0)2722 65 777 25', 'haurand-child-theme-circles');?></p>
+<p class="has-text-align-left"><?php esc_html_e('Standort Attendorn<br>Am Hellepädchen 7<br>57439 Attendorn<br>Telefon: 0049(0)2722 65 777 25', 'haurand-child-theme-circles-wp');?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"align":"left"} -->
-<p class="has-text-align-left"><?php esc_html_e('<br>Standort Aachen<br>Teichwinkel 28<br>52074 Aachen<br>Telefon: 0049(0)241 955 1861', 'haurand-child-theme-circles');?></p>
+<p class="has-text-align-left"><?php esc_html_e('<br>Standort Aachen<br>Teichwinkel 28<br>52074 Aachen<br>Telefon: 0049(0)241 955 1861', 'haurand-child-theme-circles-wp');?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:column -->
@@ -40,7 +40,7 @@
 <!-- wp:column {"verticalAlignment":"top","width":"33%"} -->
 <div class="wp-block-column is-vertically-aligned-top" style="flex-basis:33%"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|10"},"border":{"top":{"width":"0px","style":"none"},"right":[],"bottom":{"width":"0px","style":"none"},"left":[]}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group" style="border-top-style:none;border-top-width:0px;border-bottom-style:none;border-bottom-width:0px"><!-- wp:paragraph -->
-<p><?php esc_html_e('<a href="https://haurand.com/feed">RSS-Feed</a>', 'haurand-child-theme-circles');?></p>
+<p><?php esc_html_e('<a href="https://haurand.com/feed">RSS-Feed</a>', 'haurand-child-theme-circles-wp');?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:rss {"feedURL":"https://haurand.com/feed"} /-->

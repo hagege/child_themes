@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: template-index-alternative
- * Slug: haurand-child-theme-circles/template-index-alternative
+ * Slug: haurand-child-theme-circles-wp/template-index-alternative
  * Inserter: no
  */
 ?>
@@ -14,14 +14,14 @@
 <!-- wp:group {"tagName":"main","style":{"background":{"backgroundImage":{"url":"<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/circle_light_blue.svg","id":6935,"source":"file","title":"circle_light_blue"},"backgroundPosition":"50% 0"},"spacing":{"padding":{"bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained"}} -->
 <main class="wp-block-group" style="padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:group {"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group"><!-- wp:heading {"level":1,"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|50"}}}} -->
-		<h1 class="wp-block-heading alignwide" style="padding-top:var(--wp--preset--spacing--50)"><?php esc_html_e('Posts', 'haurand-child-theme-circles');?></h1>
+		<h1 class="wp-block-heading alignwide" style="padding-top:var(--wp--preset--spacing--50)"><?php esc_html_e('Posts', 'haurand-child-theme-circles-wp');?></h1>
 	<!-- /wp:heading --></div>
 	<!-- /wp:group -->
 	
 	<!-- wp:query {"queryId":4,"query":{"perPage":6,"pages":0,"offset":"0","postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"layout":{"type":"default"}} -->
 	<div class="wp-block-query"><!-- wp:query-no-results -->
 		<!-- wp:paragraph -->
-		<p><?php esc_html_e('No posts were found.', 'haurand-child-theme-circles');?></p>
+		<p><?php esc_html_e('No posts were found.', 'haurand-child-theme-circles-wp');?></p>
 		<!-- /wp:paragraph -->
 		<!-- /wp:query-no-results -->
 		
@@ -38,7 +38,7 @@
 				<div class="wp-block-group"><!-- wp:post-date /-->
 					
 					<!-- wp:paragraph -->
-					<p><?php esc_html_e('-', 'haurand-child-theme-circles');?></p>
+					<p><?php esc_html_e('-', 'haurand-child-theme-circles-wp');?></p>
 					<!-- /wp:paragraph -->
 					
 				<!-- wp:post-author {"showAvatar":false} /--></div>

@@ -1,6 +1,6 @@
 <?php
 /**
- * haurand-child-theme-circles Child Theme: Circles functions and definitions
+ * haurand-child-theme-circles-wp Child Theme: circles-wp functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
