@@ -1,0 +1,49 @@
+/*
+Theme Name: haurand Child Theme circles-wp
+Theme URI: https://haurand.com/
+Author: HG Gerhards
+Author URI: https://haurand.com/
+Description: Child Theme für haurand.com
+Requires at least: 6.6
+Tested up to: 6.6
+Requires PHP: 5.7
+Version: 1.4
+License: GNU General Public License v2 or later
+Template: circles-wp
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: circles-wp
+Tags: blog
+*/
+
+
+/* SVG-Icons im grauen Kasten */
+figure.img_kontakte img {
+    display: block;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    filter: invert(100%) sepia(52%) saturate(20%) hue-rotate(320deg) brightness(60%);
+}
+
+
+/* SVG-Icons im grauen Kasten bei hover */
+figure.img_kontakte img:hover {
+    filter: invert(100%) sepia(52%) saturate(20%) hue-rotate(320deg) brightness(30%);
+}
+
+/* Info, Achtung, Update: Paragraph Format */
+p.svg_meldung {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Referenzen */
+h3.clickable_card_link a {
+    text-decoration: none;
+    /* color: black; */
+}
+
+h3.clickable_card_link a:hover {
+    text-decoration: none;
+    /* color: black; */
+}
