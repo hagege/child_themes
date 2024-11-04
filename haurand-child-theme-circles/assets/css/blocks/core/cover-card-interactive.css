@@ -1,14 +1,14 @@
 /* Siehe https://developer.wordpress.org/news/2024/07/30/building-a-card-layout-with-a-hover-reveal-effect/ */
 
 .is-style-card--interactive {
-   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+/*   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1); */
    position: relative;
    transition: box-shadow 0.5s ease;
 }
 
 .is-style-card--interactive:focus-within,
 .is-style-card--interactive:hover {
-   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.2), 0 8px 8px rgba(0, 0, 0, 0.2), 0 16px 16px rgba(0, 0, 0, 0.2);
+/*   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.2), 0 8px 8px rgba(0, 0, 0, 0.2), 0 16px 16px rgba(0, 0, 0, 0.2); */
 }
 
 .is-style-card--interactive :where(.wp-block-group.wp-block-group-is-layout-constrained) {
@@ -32,7 +32,8 @@
 
 .is-style-card--interactive:not(.has-child-selected):focus-within :where(.wp-block-cover__image-background),
 .is-style-card--interactive:not(.has-child-selected):hover :where(.wp-block-cover__image-background) {
-   filter: saturate(200%) brightness(80%);
+   /* filter: saturate(200%) brightness(80%); */
+   /* filter: saturate(100%) brightness(100%); */
    transform: scale(1.05);
 }
 
@@ -77,4 +78,14 @@
        transition: none !important;
        visibility: visible !important;
    }
+}
+
+
+/* Referenzen */
+h3.clickable_card_link a{
+    text-decoration: none;
+}
+
+h3.clickable_card_link a:hover {
+    text-decoration: none;
 }

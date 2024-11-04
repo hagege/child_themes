@@ -11,6 +11,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Changelog ==
 
+= 1.5 =
+* Improvements Clickable Cards: hover an no shadow
+
 = 1.4 =
 * Improvements Clickable Cards 
 * Fix: Issue with Archive and Index-Template

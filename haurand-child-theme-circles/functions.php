@@ -125,28 +125,28 @@ function wpu_enqueue_block_variations() {
 add_action( 'enqueue_block_editor_assets', 'wpu_enqueue_block_variations' );
 
 */
-add_action( 'init', 'themeslug_enqueue_block_styles' );
+add_action( 'init', 'circles_wp_enqueue_block_styles' );
 
-function themeslug_enqueue_block_styles() {
+function circles_wp_enqueue_block_styles() {
    wp_enqueue_block_style(
        'core/cover',
        array(
-           'handle' => 'themeslug--card-interactive',
+           'handle' => 'circles-wp--card-interactive',
            'src'    => get_theme_file_uri( 'assets/css/blocks/core/cover-card-interactive.css' ),
            'path'   => get_theme_file_path( 'assets/css/blocks/core/cover-card-interactive.css' ),
        )
    );
 }
 
-add_action( 'init', 'themeslug_register_block_styles' );
+add_action( 'init', 'circles_wp_register_block_styles' );
 
-function themeslug_register_block_styles() {
+function circles_wp_register_block_styles() {
    register_block_style(
        'core/cover',
        array(
            'name'         => 'card--interactive',
-           'label'        => __( 'Card (Interactive)', 'themeslug' ),
-           'style_handle' => 'themeslug--card-interactive',
+           'label'        => __( 'Card (Interactive)', 'circles-wp' ),
+           'style_handle' => 'circles-wp--card-interactive',
        )
    );
 }
