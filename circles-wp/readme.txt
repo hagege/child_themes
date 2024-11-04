@@ -24,6 +24,7 @@ Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, 
 * Released: November 2, 2024
 * Fix: duplicate object keys in theme.json deleted
 * Improvements: Fonts for Lexend are now located in a folder assets\fonts\lexend
+* Added: Template Single Post wide width
 
 = 1.0 =
 * Released: October 30, 2024

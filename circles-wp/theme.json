@@ -568,6 +568,14 @@
 				"post"
 			],
 			"title": "Single Post with Sidebar"
+		},
+		{
+			"name": "single-post-wide-width",
+			"postTypes": [
+				"post"
+			],
+			"title": "Single Post wide width"
 		}
+
 	]
 }
