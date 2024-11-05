@@ -5,13 +5,13 @@
  * @package       HAURANDCA
  * @author        Hans-Gerd Gerhards
  * @license       gplv2
- * @version       0.1
+ * @version       0.2
  *
  * @wordpress-plugin
  * Plugin Name:   haurand-category-list
  * Plugin URI:    https://haurand.com
  * Description:   shows the number of entries in a category
- * Version:       0.1
+ * Version:       0.2
  * Author:        Hans-Gerd Gerhards
  * Author URI:    https://haurand.com
  * Text Domain:   haurand-category-list
@@ -24,10 +24,11 @@
  */
 
 // Exit if accessed directly.
-if ( ! defined( 'ABSPATH' ) ) exit;
+if (!defined('ABSPATH')) {
+    exit;
+}
 
 // Include your custom code here.
-
 
 /*----------------------------------------------------------------*/
 /* Start: Shortcode für Kategorienliste - Aufruf mit [haurand_catelist]
@@ -35,19 +36,20 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /* Datum: 21.1.2023
 /* Autor: hgg
 /*----------------------------------------------------------------*/
-function haurand_createGridCategories() {
-  $list = wp_list_categories( array(
-      'taxonomy'   => 'category',
-      'hide_empty' => 1,
-      'echo'       => 0,
-      'title_li'   => '',
-      'show_count' => 1,
-      'exclude'    => array( 1486 ),
-      // 1486: Kategorie: Keine Anzeige
-      // other args here
-) );
+function haurand_createGridCategories()
+{
+    $list = wp_list_categories(array(
+        'taxonomy' => 'category',
+        'hide_empty' => 1,
+        'echo' => 0,
+        'title_li' => '',
+        'show_count' => 1,
+        'exclude' => array(1486),
+        // 1486: Kategorie: Keine Anzeige
+        // other args here
+    ));
 
-  return "<h3>Beitrags-Kategorien</h3><ul>$list</ul>";
+    return "<h3>Beitrags-Kategorien</h3><ul>$list</ul>";
 }
 add_shortcode('haurand_catelist', 'haurand_createGridCategories');
 
@@ -57,18 +59,21 @@ add_shortcode('haurand_catelist', 'haurand_createGridCategories');
 /* Autor: hgg
 /*----------------------------------------------------------------*/
 
-function my_category_list_shortcode() {
-  $args = array(
-      'orderby' => 'name',
-      'hide_empty' => 1
-  );
-  $my_categories = get_categories($args);
-  $my_output = '<p><ul>';
-  foreach($my_categories as $my_category) {
-      $my_output .= '<li><a class="my_category_list" href="' . get_category_link($my_category->term_id) . '">' . $my_category->name . ' (' . $my_category->count . ')</a></li>' . '   ';
-  // $my_output .= '<a class="my_category_list" href="' . get_category_link($my_category->term_id) . '">' . $my_category->name . '</a>' . '   ';
-  }
-  $my_output .= '</p></ul>';
-  return $my_output;
+function my_category_list_shortcode()
+{
+    $args = array(
+        'orderby' => 'name',
+        'hide_empty' => 1,
+    );
+    $my_categories = get_categories($args);
+    $my_output = '<p><ul>';
+    foreach ($my_categories as $my_category) {
+        if ($my_category->name != "Keine Anzeige") {
+            $my_output .= '<li><a class="my_category_list" href="' . get_category_link($my_category->term_id) . '">' . $my_category->name . ' (' . $my_category->count . ')</a></li>' . '   ';
+        }
+        // $my_output .= '<a class="my_category_list" href="' . get_category_link($my_category->term_id) . '">' . $my_category->name . '</a>' . '   ';
+    }
+    $my_output .= '</p></ul>';
+    return $my_output;
 }
 add_shortcode('my_category_list', 'my_category_list_shortcode');
