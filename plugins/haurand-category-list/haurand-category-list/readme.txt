@@ -58,7 +58,7 @@ An answer to that question.
 == Changelog ==
 
 = 0.2: November 5, 2024 =
-* Prevent “Keine Anzeige” from being shown in the list
+* Prevent Category “Keine Anzeige” from being shown in the list
 
 = 0.1: October 27, 2024 =
 * Birthday of haurand-category-list
