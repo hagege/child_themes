@@ -11,7 +11,7 @@
  * Plugin Name:   haurand-category-list
  * Plugin URI:    https://haurand.com
  * Description:   shows the number of entries in a category
- * Version:       0.2
+ * Version:       0.3
  * Author:        Hans-Gerd Gerhards
  * Author URI:    https://haurand.com
  * Text Domain:   haurand-category-list
@@ -69,7 +69,7 @@ function my_category_list_shortcode()
     $my_output = '<p><ul>';
     foreach ($my_categories as $my_category) {
         if ($my_category->name != "Keine Anzeige") {
-            $my_output .= '<li><a class="my_category_list" href="' . get_category_link($my_category->term_id) . '">' . $my_category->name . ' (' . $my_category->count . ')</a></li>' . '   ';
+            $my_output .= '<li><a class="my_category_list" href="' . get_category_link($my_category->term_id) . '#filtered_posts' . '">' . $my_category->name . ' (' . $my_category->count . ')</a></li>' . '   ';
         }
         // $my_output .= '<a class="my_category_list" href="' . get_category_link($my_category->term_id) . '">' . $my_category->name . '</a>' . '   ';
     }

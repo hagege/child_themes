@@ -57,6 +57,9 @@ An answer to that question.
 
 == Changelog ==
 
+= 0.3: November 9, 2024 =
+* Jump to Anchor filtered_posts after choosing a category
+
 = 0.2: November 5, 2024 =
 * Prevent Category “Keine Anzeige” from being shown in the list
 
