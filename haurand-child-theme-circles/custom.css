@@ -3,6 +3,28 @@
     text-align: center;
 }
 
+
+/* Prevents blurred edges with circles */
+.wp-block-group.has-background {
+    background-repeat: no-repeat;
+}
+
+/* Newsletter */
+.email_posts_subscribers.wp-block-post-comments-form input {
+    height: 45px;
+    font-size: 18px;
+}
+
+.email_posts_subscribers.wp-block-post-comments-form input:focus {
+    background-color: var(--wp--preset--color--contrast-4);
+    border-color: var(--wp--preset--color--contrast-4);
+    color: var(--wp--preset--color--base);
+    outline-color: var(--wp--preset--color--contrast-2);
+    outline-offset: 4px;
+    outline-style: groove;
+    outline-width: 4px;
+}
+
 /* Text unter Bildern */
 figcaption.wp-element-caption {
     color: var(--wp--preset--color--base);
