@@ -3,6 +3,18 @@
     text-align: center;
 }
 
+/* so that the anchor can be accessed correctly if a category has been filtered in the blog */
+#filtered_posts {
+    padding-top: 200px;
+    margin-top: -200px !important;
+}
+
+
+/* Prevents blurred edges with circles */
+.wp-block-group.has-background {
+    background-repeat: no-repeat;
+}
+
 /* Newsletter */
 .email_posts_subscribers.wp-block-post-comments-form input {
     height: 45px;
