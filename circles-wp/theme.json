@@ -1,6 +1,6 @@
 {
 	"version": 3,
-	"$schema": "https://schemas.wp.org/wp/6.6/theme.json",
+	"$schema": "https://schemas.wp.org/wp/6.7/theme.json",
 	"settings": {
 		"appearanceTools": true,
 		"color": {
@@ -317,7 +317,7 @@
 			"background": "var(--wp--preset--color--base)",
 			"text": "var(--wp--preset--color--base-2)"
 		},
-		"css": "",
+		"css": "/* Prevents blurred edges with circles */\n.wp-block-group.has-background {\n    background-repeat: no-repeat;\n}",
 		"elements": {
 			"button": {
 				":active": {
@@ -576,6 +576,5 @@
 			],
 			"title": "Single Post wide width"
 		}
-
 	]
 }

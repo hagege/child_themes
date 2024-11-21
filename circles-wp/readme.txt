@@ -3,7 +3,7 @@ Contributors: Hans-Gerd Gerhards
 Requires at least: 6.6
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,6 +19,11 @@ Circles WP is suitable for websites that contain few photos. The theme is theref
 Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, sticky-post, threaded-comments, translation-ready, block-styles, wide-blocks, full-site-editing
 
 == Changelog ==
+
+= 1.0.4 =
+* Released: November 21, 2024
+* Added: Template Search
+* Fix: Typo correction style "bright"
 
 = 1.0.3 =
 * Released: November 11, 2024
