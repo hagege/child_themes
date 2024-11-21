@@ -3,6 +3,69 @@
     text-align: center;
 }
 
+/* ---------------------*/
+/* Der Detail-Block mit */
+/* einigen Anpassungen  */
+/* ---------------------*/
+summary {
+    list-style: none;
+    display: flex;
+    /* also removes the list marker */
+    align-items: center;
+    padding: 1.2rem;
+    font-weight: bold;
+    background: var(--wp--preset--color--contrast-2);
+    color: var(--wp--preset--color--base);
+    border-radius: 0px;
+    outline: auto;
+}
+
+summary::before {
+    content: '>';
+    /*  margin-left: .75em; */
+    transition: 0.2s;
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+
+
+details[open]>summary::before {
+    transform: rotate(90deg);
+}
+
+.wp-block-details[open] summary,
+.wp-block-details summary:hover {
+    transition: all 0.2s ease-in-out;
+}
+
+.wp-block-details summary:focus {
+    transition: all 0.2s ease-in-out;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+
+/* Background content of details */
+details p {
+    /*    background: rgba(226, 232, 240, 0.31); */
+    padding: 2rem;
+    margin-top: 0;
+}
+
+@keyframes details-show {
+    from {
+        opacity: 0;
+        transform: var(--details-translate, translateY(-0.5em));
+    }
+}
+
+details[open]>*:not(summary),
+details[close]>*:not(summary) {
+    animation: details-show 1000ms ease-in-out;
+}
+
 /* wegen Problem mit Überlappung des BacktoTop Kreises im mobilen Menü */
 .progress-wrap {
     z-index: unset !important;
