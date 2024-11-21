@@ -3,7 +3,7 @@ Contributors: Hans-Gerd Gerhards
 Requires at least: 6.6
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,10 +16,14 @@ It is possible to change the background graphic with the Circles WP. 10 Circles 
 Circles WP is built from the ground up for flexibility. It includes ten different theme styles to choose from, and different block patterns that you can use to quickly create unique page layouts. 
 Circles WP is suitable for websites that contain few photos. The theme is therefore not suitable for photo-heavy websites.
 
-Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, sticky-post, threaded-comments, translation-ready, block-styles, wide-blocks, full-site-editing, accessibility-ready
+Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, sticky-post, threaded-comments, translation-ready, block-styles, wide-blocks, full-site-editing
 
 == Changelog ==
 
+= 1.0.3 =
+* Released: November 11, 2024
+* Tweak: Change readme.txt
+* Tweak: Superfluous style deleted
 
 = 1.0.2 =
 * Released: November 10, 2024

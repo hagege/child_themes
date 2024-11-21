@@ -3,6 +3,11 @@
     text-align: center;
 }
 
+/* wegen Problem mit Überlappung des BacktoTop Kreises im mobilen Menü */
+.progress-wrap {
+    z-index: unset !important;
+}
+
 /* so that the anchor can be accessed correctly if a category has been filtered in the blog */
 #filtered_posts {
     padding-top: 200px;
