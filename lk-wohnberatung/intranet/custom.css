@@ -18,7 +18,8 @@
 
 /* Buttons von Membership rot wie andere Buttons auch */
 input.swpm-login-form-submit.swpm-submit-btn-default-style,
-button.swpm-submit.swpm-profile-submit-button.swpm-submit-btn-default-style {
+button.swpm-submit.swpm-profile-submit-button.swpm-submit-btn-default-style,
+button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style {
     color: var(--wp--preset--color--base);
     border-radius: .33rem;
     border-color: var(--wp--preset--color--base-2);
@@ -52,7 +53,8 @@ button.swpm-submit.swpm-profile-submit-button.swpm-submit-btn-default-style {
 .swpm-form textarea:focus,
 .swpm-login-widget-form input:focus,
 button.swpm-submit.swpm-profile-submit-button.swpm-submit-btn-default-style:hover,
-.swpm-login-widget-form input:hover {
+.swpm-login-widget-form input:hover,
+button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style:hover {
     background-color: var(--wp--preset--color--contrast-5);
     border-color: var(--wp--preset--color--contrast-5);
     color: var(--wp--preset--color--contrast);
