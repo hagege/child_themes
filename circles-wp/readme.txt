@@ -1,9 +1,9 @@
 === Circles WP ===
 Contributors: Hans-Gerd Gerhards
 Requires at least: 6.6
-Tested up to: 6.6
+Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,11 +14,19 @@ Circles WP is a clean, flexible, fast and accessibility-ready block theme.
 Its default look is a stylish white on black background color scheme with an orange circle in background and lexend font (a sans-serif typography). 
 It is possible to change the background graphic with the Circles WP. 10 Circles WP with different colors are supplied in the \assets\images folder as SVG graphics.
 Circles WP is built from the ground up for flexibility. It includes ten different theme styles to choose from, and different block patterns that you can use to quickly create unique page layouts. 
-Circles WP is suitable for websites that contain few photos. The theme is therefore not suitable for photo-heavy websites.
+If you use the “Blank Page” template, the theme can also be used on websites with lots of photos. 
+Another alternative is to delete the background graphic for the group block or to use a more subtle color for a circle. 
+This great flexibility characterizes the theme. 
 
 Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, sticky-post, threaded-comments, translation-ready, block-styles, wide-blocks, full-site-editing
 
 == Changelog ==
+
+= 1.0.5 =
+* Released: December 10, 2024
+* Added: All Archives Template (showing Categories and Tags in the left column sticky and the Posts in in the right column) 
+* Enhancement: Added Search to 404-Template
+* Fix: German terms replaced by English terms in some templates
 
 = 1.0.4 =
 * Released: November 21, 2024

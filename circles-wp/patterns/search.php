@@ -15,7 +15,7 @@
 <main class="wp-block-group"><!-- wp:query-title {"type":"search","align":"wide","style":{"typography":{"lineHeight":"1"},"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|10"}}}} /-->
 	
 	<!-- wp:group {"align":"wide","layout":{"type":"constrained","contentSize":"840px","justifyContent":"left"}} -->
-	<div class="wp-block-group alignwide"><!-- wp:search {"label":"Suchen","showLabel":false,"buttonText":"Suchen","fontSize":"medium"} /--></div>
+	<div class="wp-block-group alignwide"><!-- wp:search {"label":"Search","showLabel":false,"buttonText":"Search","fontSize":"medium"} /--></div>
 	<!-- /wp:group -->
 	
 	<!-- wp:query {"queryId":4,"query":{"perPage":6,"pages":0,"offset":"0","postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"align":"wide","layout":{"type":"default"}} -->
@@ -51,22 +51,22 @@
 			<!-- /wp:spacer -->
 			
 			<!-- wp:query-pagination {"paginationArrow":"arrow","layout":{"type":"flex","justifyContent":"space-between"}} -->
-			<!-- wp:query-pagination-previous /-->
-			
-			<!-- wp:query-pagination-numbers /-->
-			
-			<!-- wp:query-pagination-next /-->
+		<!-- wp:query-pagination-previous /-->
+		
+		<!-- wp:query-pagination-numbers /-->
+		
+		<!-- wp:query-pagination-next /-->
 		<!-- /wp:query-pagination --></div>
-	<!-- /wp:group --></div>
-	<!-- /wp:query -->
-	
-	<!-- wp:spacer {"height":"30px"} -->
-	<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer --></main>
-<!-- /wp:group -->
-
-<!-- wp:separator {"className":"is-style-default"} -->
-<hr class="wp-block-separator has-alpha-channel-opacity is-style-default"/>
-<!-- /wp:separator -->
-
-<!-- wp:template-part {"slug":"footer","area":"footer"} /-->
+		<!-- /wp:group --></div>
+		<!-- /wp:query -->
+		
+		<!-- wp:spacer {"height":"30px"} -->
+		<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+		<!-- /wp:spacer --></main>
+		<!-- /wp:group -->
+		
+		<!-- wp:separator {"className":"is-style-default"} -->
+		<hr class="wp-block-separator has-alpha-channel-opacity is-style-default"/>
+		<!-- /wp:separator -->
+		
+		<!-- wp:template-part {"slug":"footer","area":"footer"} /-->		
