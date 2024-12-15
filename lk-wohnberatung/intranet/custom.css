@@ -27,7 +27,8 @@ table#tablepress-1 {
 input.swpm-login-form-submit.swpm-submit-btn-default-style,
 button.swpm-submit.swpm-profile-submit-button.swpm-submit-btn-default-style,
 button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style,
-input.swpm-pw-reset-submit.swpm-submit-btn-default-style {
+input.swpm-pw-reset-submit.swpm-submit-btn-default-style,
+input.swpm-login-form-submit.swpm-submit-btn-default-style {
     color: var(--wp--preset--color--base);
     border-radius: .33rem;
     border-color: var(--wp--preset--color--base-2);
@@ -45,6 +46,13 @@ input.swpm-pw-reset-submit.swpm-submit-btn-default-style {
     text-decoration: none;
 }
 
+/* Anmelden - Button */
+input.swpm-login-form-submit.swpm-submit-btn-default-style:hover,
+button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style:hover {
+    background-color: var(--wp--preset--color--contrast-4);
+    color: var(--wp--preset--color--base);
+    /* font-size: 1.2rem; */
+}
 
 .swpm-form input,
 .swpm-form select,
@@ -52,9 +60,11 @@ input.swpm-pw-reset-submit.swpm-submit-btn-default-style {
 .swpm-login-widget-form input,
 input#swpm_reset_email,
 input#swpm_new_password,
-input#swpm_reenter_new_password {
+input#swpm_reenter_new_password,
+input.swpm-login-form-submit.swpm-submit-btn-default-style,
+button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style {
     height: 2.5rem;
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
 }
 
 
@@ -81,6 +91,11 @@ input#swpm_reenter_new_password:hover {
     outline-width: 4px;
 }
 
+button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style:hover {
+    background-color: var(--wp--preset--color--contrast-4);
+    color: var(--wp--preset--color--base);
+}
+
 /* Increase label size for better visibility */
 .swpm-form label {
     font-size: 1.2rem;
@@ -94,7 +109,7 @@ input#swpm-accept-pp,
 input#swpm-accept-terms {
     width: 1em;
     height: 1em;
-    accent-color: #E30517;
+    accent-color: var(--wp--preset--color--base-2);
     margin-top: 0.5em;
 }
 
@@ -107,10 +122,10 @@ input#swpm-accept-terms {
 
 /*
 input.swpm-login-form-submit.swpm-submit-btn-default-style, button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style {
-    background-color: #E30517;
+    background-color: var(--wp--preset--color--base-2);
     color: white;
     border-radius: 5px;
-    border-color: #E30517;
+    border-color: var(--wp--preset--color--base-2);
     font-size: inherit;
 }
 */
@@ -196,8 +211,6 @@ a.wp-block-navigation-item__content {
 a.wp-block-navigation-item__content:hover {
     transition: all 1.5s;
 }
-
-
 
 /* Unterstrich grün */
 :root :where(.wp-block-navigation a:where(:not(.wp-element-button)):hover) {
