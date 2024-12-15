@@ -3,6 +3,42 @@
     outline-style: solid
 }
 
+/* Buttons von Membership rot wie andere Buttons auch */
+div#wpgmza_table_6_filter input {
+    color: var(--wp--preset--color--contrast);
+    border-radius: .33rem;
+    border-color: var(--wp--preset--color--base-2);
+    background-color: var(--wp--preset--color--base);
+    border-width: 0;
+    color: var(--wp--preset--color--base);
+    font-family: var(--wp--preset--font-family--lexend);
+    font-size: var(--wp--preset--font-size--small);
+    font-style: normal;
+    font-weight: 500;
+    padding-top: 0.6rem;
+    padding-right: 1rem;
+    padding-bottom: 0.6rem;
+    padding-left: 1rem;
+    text-decoration: none;
+    outline-color: var(--wp--preset--color--contrast);
+    outline-offset: 2px;
+    outline-style: groove;
+    outline-width: 2px;
+    margin-left: 10px;
+}
+
+div#wpgmza_table_6_filter input:hover,
+div#wpgmza_table_6_filter input:focus {
+    background-color: var(--wp--preset--color--base);
+    border-color: var(--wp--preset--color--contrast);
+    color: var(--wp--preset--color--contrast);
+    outline-color: var(--wp--preset--color--contrast);
+    outline-offset: 4px;
+    outline-style: groove;
+    outline-width: 4px;
+    margin-left: 10px;
+}
+
 /* für die Spalten in den Kacheln */
 .kachel-spalte {
     border-radius: 15px;

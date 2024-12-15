@@ -1,15 +1,15 @@
 :root {
-	--column--margin-bottom: 1rem;	
-	--column--margin-top: 3rem;		
-  --column--font-size-h2: 2rem;
-	--columns--background: #f0f0f0;
-	--columns--margin: 10vw;
-	--columns--padding: 0.5rem;
-	--columns--width: 90vw;
-	--column--width--1: 95%;
-	--column--width--2: 38%;
-	--column--width--3: 29%;
-	--column--width--4: 22%;	
+    --column--margin-bottom: 1rem;
+    --column--margin-top: 3rem;
+    --column--font-size-h2: 2rem;
+    --columns--background: #f0f0f0;
+    --columns--margin: 10vw;
+    --columns--padding: 0.5rem;
+    --columns--width: 90vw;
+    --column--width--1: 95%;
+    --column--width--2: 38%;
+    --column--width--3: 29%;
+    --column--width--4: 22%;
 }
 
 /*
@@ -61,19 +61,19 @@ figure.wp-block-image.size-large.has-custom-border.bild_ueberlappend {
 
 
 /* für Update und Achtung */
-@media (max-width: 781px)  {
-div.html_svg {
-    margin-left: 43%;
-    margin-right: 43%;
+@media (max-width: 781px) {
+    div.html_svg {
+        margin-left: 43%;
+        margin-right: 43%;
+    }
 }
-}
-	
+
 p.has-text-align-center.achtung_update {
     margin-top: 2px;
 }
 
-svg#Layer_1, svg#Capa_1
-{
+svg#Layer_1,
+svg#Capa_1 {
     fill: #B70000;
 }
 
@@ -87,7 +87,7 @@ svg#Layer_1, svg#Capa_1
 /*leicht gedrehtes Bild mit Rahmen */
 figure.wp-block-image.size-large.bild_rotate {
     transform: rotate(5deg);
-		box-shadow:0 20px 40px rgba(0,0,0,.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
 }
 
 /* Überschrift nicht zeigen */
@@ -111,7 +111,7 @@ h2.alignwide.wp-block-post-title {
     transition: all .5s ease;
 }
 
-/* sticky header */ 
+/* sticky header */
 /* entspricht der Höhe des Menüs */
 /* heigth - nicht schön, aber sonst funktionieren die Links nicht */
 /*main#wp--skip-link--target {
@@ -136,8 +136,8 @@ header.wp-block-template-part {
 
 /* Abstandhalter formatieren */
 .abstand {
-	border: 2px dashed #cbd5e1;
-	background-color: #f1f5f9;
+    border: 2px dashed #cbd5e1;
+    background-color: #f1f5f9;
 }
 
 
@@ -147,22 +147,22 @@ header.wp-block-template-part {
 div.wp-block-group.alignwide.flexible_spalten {
     max-width: calc(var(--columns--width) - var(--columns--margin));
     width: calc(var(--columns--width) - var(--columns--margin));
-	margin-left:var(--columns--margin);
-	flex-direction: row;
-  display: flex;
-  flex-wrap: wrap;
-	width: var(--columns--width);
-	/* Standardwert:
+    margin-left: var(--columns--margin);
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    width: var(--columns--width);
+    /* Standardwert:
 	justify-content: flex-start; */
-	/* eingestellt: space-around*/
-	justify-content: left; 
-  /* Flexelemente werden gleichmäßig innerhalb der Zeile verteilt, sodass die Leerräume zwischen zwei angrenzenden Elementen gleich sind. Sonst:
+    /* eingestellt: space-around*/
+    justify-content: left;
+    /* Flexelemente werden gleichmäßig innerhalb der Zeile verteilt, sodass die Leerräume zwischen zwei angrenzenden Elementen gleich sind. Sonst:
   justify-content: center;*/
 }
 
 /* Absatz innerhalb der Spalte */
-div.flexible_spalten .wp-block-group__inner-container p{
-		padding: 1rem;
+div.flexible_spalten .wp-block-group__inner-container p {
+    padding: 1rem;
 }
 
 /* ggfs. zusätzlicher Rand oben und unten */
@@ -189,84 +189,84 @@ div.flexible_spalten .wp-block-group__inner-container p{
 
 
 /* Schriftgröße für h2 bei Spalten */
-div.wp-block-columns.kacheln h2{
-	font-size: var(--column--font-size-h2);
+div.wp-block-columns.kacheln h2 {
+    font-size: var(--column--font-size-h2);
 }
 
 
 /* Hintergrundfarbe und evtl. zusätzliches Padding und Margin Kacheln */
 div.wp-block-columns.kacheln {
-	  margin-top: var(--column--margin-top);
+    margin-top: var(--column--margin-top);
     margin-bottom: var(--column--margin-bottom);
-	  padding-top: var(--column--vertical);
+    padding-top: var(--column--vertical);
     padding-bottom: var(--column--vertical);
-		padding-left: var(--columns--padding);
-		padding-right: var(--columns--padding);
-		background-color: var(--columns--background);
+    padding-left: var(--columns--padding);
+    padding-right: var(--columns--padding);
+    background-color: var(--columns--background);
 }
 
 /* 4 Spalten (Spaltenbreite jeweils 24%)*/
-@media (min-width: 1500px)  {
-div.wp-block-columns.kacheln {
-    width: var(--column--width--4);
-		/*linksbündig mit Rand */
-		margin-left: 1.6vw;
-    margin-right: 0.4vw;
-  }
+@media (min-width: 1500px) {
+    div.wp-block-columns.kacheln {
+        width: var(--column--width--4);
+        /*linksbündig mit Rand */
+        margin-left: 1.6vw;
+        margin-right: 0.4vw;
+    }
 }
 
 
 /* 3 Spalten (Spaltenbreite jeweils 30%) */
 @media (min-width: 1121px) and (max-width: 1499px) {
-div.wp-block-columns.kacheln {
-    width: var(--column--width--3);
-		/* damit bei 3 Spalten die Spalten nicht zentriert, sondern links ausgerichtet sind: */
-		/*linksbündig mit Rand */
-    margin-left: 1.9vw;
-    margin-right: 1vw;
-  }
+    div.wp-block-columns.kacheln {
+        width: var(--column--width--3);
+        /* damit bei 3 Spalten die Spalten nicht zentriert, sondern links ausgerichtet sind: */
+        /*linksbündig mit Rand */
+        margin-left: 1.9vw;
+        margin-right: 1vw;
+    }
 }
 
 /* 2 Spalten (Spaltenbreite jeweils 40%)*/
 @media (min-width: 600px) and (max-width: 1120px) {
-div.wp-block-columns.kacheln {
-    width: var(--column--width--2);
-		margin-left: 5.5vw;
-    margin-right: 4vw;
-}
+    div.wp-block-columns.kacheln {
+        width: var(--column--width--2);
+        margin-left: 5.5vw;
+        margin-right: 4vw;
+    }
 }
 
 
 /* 1 Spalte - Spaltenbreite: 90% */
 @media (max-width: 599px) {
-div.wp-block-columns.kacheln{
-    width: var(--column--width--1);
-}
+    div.wp-block-columns.kacheln {
+        width: var(--column--width--1);
+    }
 }
 
-	
+
 /* dezenter Hover-Effekt bei Kacheln */
 .wp-block-columns.kacheln:hover {
- 		opacity:0.7;
-  	transform: scale(1.01, 1.01);	
+    opacity: 0.7;
+    transform: scale(1.01, 1.01);
 }
 
 /* -------- weitere Tests -------- */
 
 .wp-block-group.container {
     background-color: #cacaca;
-		padding: 10px;
-		margin: 50px;
-	  margin-left: auto;
+    padding: 10px;
+    margin: 50px;
+    margin-left: auto;
     margin-right: auto;
 }
 
 .wp-block-columns.item {
     background-color: #ff0037;
-		color: #fff;
-		font-size: 35px;
-		padding: 20px;
-		margin: 10px;
+    color: #fff;
+    font-size: 35px;
+    padding: 20px;
+    margin: 10px;
 }
 
 /*
@@ -290,40 +290,41 @@ main#site-content {
 /* Text in Spalten überlappend */
 /* ----------------------- */
 
-.wp-block-image img{
+.wp-block-image img {
     filter: none;
 }
 
 @media (min-width: 782px) {
-.wp-block-column.spalte_links_ueberlappend {
-  margin-left: -15rem!important;
-}
-.wp-block-column.spalte_rechts_ueberlappend {
-margin-right: -15rem!important;
-z-index:0;
-}
-.wp-block-column.spalte_links_ueberlappend,
-.wp-block-column.spalte_rechts_ueberlappend
-{
-margin-top: 15vh;
-/* margin-bottom: 15vh; */
-padding: 10vh;
-}
+    .wp-block-column.spalte_links_ueberlappend {
+        margin-left: -15rem !important;
+    }
+
+    .wp-block-column.spalte_rechts_ueberlappend {
+        margin-right: -15rem !important;
+        z-index: 0;
+    }
+
+    .wp-block-column.spalte_links_ueberlappend,
+    .wp-block-column.spalte_rechts_ueberlappend {
+        margin-top: 15vh;
+        /* margin-bottom: 15vh; */
+        padding: 10vh;
+    }
 }
 
 @media (max-width: 781px) {
-.wp-block-column.spalte_links_ueberlappend.has-background.is-layout-flow,
-.wp-block-column.spalte_rechts_ueberlappend.has-background.is-layout-flow {
-    margin-top: -25vh;
-}
-.gerade {
-    flex-direction: column-reverse;
-}
+
+    .wp-block-column.spalte_links_ueberlappend.has-background.is-layout-flow,
+    .wp-block-column.spalte_rechts_ueberlappend.has-background.is-layout-flow {
+        margin-top: -25vh;
+    }
+
+    .gerade {
+        flex-direction: column-reverse;
+    }
 }
 
 
 
 
 /* ------------------------------ */
-
-

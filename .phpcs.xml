@@ -1,0 +1,5 @@
+<ruleset name="MyProject">
+    <rule ref="Generic.Commenting.DocComment.MissingParamTag">
+        <exclude name="Generic.Commenting.DocComment.MissingParamTag"/>
+    </rule>
+</ruleset>
