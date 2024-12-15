@@ -28,7 +28,8 @@ input.swpm-login-form-submit.swpm-submit-btn-default-style,
 button.swpm-submit.swpm-profile-submit-button.swpm-submit-btn-default-style,
 button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style,
 input.swpm-pw-reset-submit.swpm-submit-btn-default-style,
-input.swpm-login-form-submit.swpm-submit-btn-default-style {
+input.swpm-login-form-submit.swpm-submit-btn-default-style,
+input.wpcf7-form-control.wpcf7-submit.has-spinner {
     color: var(--wp--preset--color--base);
     border-radius: .33rem;
     border-color: var(--wp--preset--color--base-2);
@@ -48,12 +49,14 @@ input.swpm-login-form-submit.swpm-submit-btn-default-style {
 
 /* Anmelden - Button */
 input.swpm-login-form-submit.swpm-submit-btn-default-style:hover,
-button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style:hover {
+button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style:hover,
+input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
     background-color: var(--wp--preset--color--contrast-4);
     color: var(--wp--preset--color--base);
     /* font-size: 1.2rem; */
 }
 
+/* Eingabefelder SWPM und Events */
 .swpm-form input,
 .swpm-form select,
 .swpm-form textarea,
@@ -62,9 +65,11 @@ input#swpm_reset_email,
 input#swpm_new_password,
 input#swpm_reenter_new_password,
 input.swpm-login-form-submit.swpm-submit-btn-default-style,
-button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style {
+button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style,
+span.wpcf7-form-control-wrap input,
+span.wpcf7-list-item checkbox {
     height: 2.5rem;
-    /* font-size: 1.2rem; */
+    font-size: 1.2rem;
 }
 
 
@@ -81,7 +86,10 @@ button.swpm-submit.swpm-profile-submit-button.swpm-submit-btn-default-style:hove
 button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style:hover,
 input#swpm_reset_email:hover,
 input#swpm_new_password:hover,
-input#swpm_reenter_new_password:hover {
+input#swpm_reenter_new_password:hover,
+span.wpcf7-form-control-wrap input:focus,
+span.wpcf7-list-item checkbox:focus,
+input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
     background-color: var(--wp--preset--color--base);
     border-color: var(--wp--preset--color--contrast);
     color: var(--wp--preset--color--contrast);
@@ -91,7 +99,8 @@ input#swpm_reenter_new_password:hover {
     outline-width: 4px;
 }
 
-button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style:hover {
+button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style:hover,
+input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
     background-color: var(--wp--preset--color--contrast-4);
     color: var(--wp--preset--color--base);
 }
@@ -130,6 +139,17 @@ input.swpm-login-form-submit.swpm-submit-btn-default-style, button.swpm-submit.s
 }
 */
 
+/* Event-Eingabe */
+.tribe-events-single-event-description.tribe-events-content {
+    padding-left: 10px;
+}
+
+/* Textfeld unten */
+textarea.wpcf7-form-control.wpcf7-textarea {
+    /* height: 2.5rem; */
+    font-size: 1.2rem;
+    /* height: 200px; */
+}
 
 /* für die Spalten in den Kacheln */
 .kachel-spalte {
@@ -211,6 +231,8 @@ a.wp-block-navigation-item__content {
 a.wp-block-navigation-item__content:hover {
     transition: all 1.5s;
 }
+
+
 
 /* Unterstrich grün */
 :root :where(.wp-block-navigation a:where(:not(.wp-element-button)):hover) {
