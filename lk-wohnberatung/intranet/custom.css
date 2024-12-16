@@ -60,7 +60,6 @@ input#swpm_reset_email,
 input#swpm_new_password,
 input#swpm_reenter_new_password,
 button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style,
-span.wpcf7-form-control-wrap input,
 span.wpcf7-list-item checkbox {
     height: 2.5rem;
     font-size: 1.2rem;
@@ -102,7 +101,9 @@ input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
 
 /* Button bei Events */
 .single-tribe_events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button,
-.tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button {
+.tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button,
+.tribe-events .tribe-events-c-search__button,
+.tribe-events button.tribe-events-c-search__button {
     background-color: var(--wp--preset--color--base-2);
     border-color: var(--wp--preset--color--contrast);
     color: var(--wp--preset--color--base);
@@ -110,8 +111,11 @@ input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
 }
 
 
+
 .single-tribe_events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:hover,
-.tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:hover {
+.tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:hover,
+.tribe-events .tribe-events-c-search__button:hover,
+.tribe-events button.tribe-events-c-search__button:hover {
     background-color: var(--wp--preset--color--contrast-4) !important;
     border-color: var(--wp--preset--color--contrast);
     color: var(--wp--preset--color--contrast);
@@ -119,6 +123,18 @@ input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
     outline-offset: 4px;
     outline-style: groove;
     outline-width: 4px;
+    margin-left: 10px;
+}
+
+.tribe-events .tribe-events-c-search__button:hover,
+.tribe-events button.tribe-events-c-search__button:hover {
+    background-color: var(--wp--preset--color--contrast-4) !important;
+    border-color: var(--wp--preset--color--contrast);
+    color: var(--wp--preset--color--contrast);
+    outline-color: var(--wp--preset--color--contrast) !important;
+    outline-offset: 4px !important;
+    outline-style: groove !important;
+    outline-width: 4px !important;
     margin-left: 10px;
 }
 
@@ -136,6 +152,12 @@ input.swpm-pw-reset-submit.swpm-submit-btn-default-style:hover {
     outline-width: 4px;
 }
 
+
+button.tribe-common-c-btn.tribe-events-c-search__button {
+    margin-right: 10px;
+}
+
+
 /* Increase label size for better visibility */
 .swpm-form label {
     font-size: 1.2rem;
@@ -149,7 +171,7 @@ input#swpm-accept-pp,
 input#swpm-accept-terms {
     width: 1em;
     height: 1em;
-    accent-color: var(--wp--preset--color--base-2);
+    accent-color: var(--wp--preset--color--contrast-4);
     margin-top: 0.5em;
 }
 
@@ -168,6 +190,12 @@ input#swpm-accept-terms {
 /* Textfeld unten */
 textarea.wpcf7-form-control.wpcf7-textarea {
     font-size: 1.2rem;
+}
+
+/* Einzeilige Texte */
+input.wpcf7-form-control.wpcf7-text {
+    line-height: 2.5rem;
+    font-size: 1.5rem;
 }
 
 /* für die Spalten in den Kacheln */
@@ -252,11 +280,19 @@ a.wp-block-navigation-item__content:hover {
 }
 
 
-
 /* Unterstrich grün */
 :root :where(.wp-block-navigation a:where(:not(.wp-element-button)):hover) {
-    border-bottom-color: var(--wp--preset--color--base-2);
+    border-bottom-color: var(--wp--preset--color--contrast-4);
     border-bottom-width: 4px;
     border-bottom-style: solid;
     text-decoration: none;
+}
+
+
+input[type="checkbox"] {
+    transform: scale(1.5);
+}
+
+input[type="checkbox"]:checked {
+    accent-color: var(--wp--preset--color--contrast-4);
 }
