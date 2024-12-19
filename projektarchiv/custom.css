@@ -24,6 +24,12 @@
     --wp--preset--color--custom-rot: #eb1717;
 }
 
+
+figure.megaphon_ausrichtung img {
+    vertical-align: middle;
+}
+
+
 /* fixierter Container mit der Navigation */
 .navi_container {
     z-index: 50 !important;
