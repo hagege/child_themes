@@ -1,0 +1,40 @@
+/* Prevents blurred edges with circles */
+.wp-block-group.has-background {
+    background-repeat: no-repeat;
+}
+
+/* Immer mobiles Menü - größer */
+.wp-block-navigation__responsive-container-open svg {
+    height: 4rem;
+    width: 4rem;
+}
+
+
+/* Contact Form 7 */
+input.wpcf7-form-control.wpcf7-submit.has-spinner {
+    background-color: var(--wp--preset--color--contrast-2);
+    color: var(--wp--preset--color--base);
+    padding: 15px;
+    border-radius: 20px;
+    font-size: large;
+}
+
+/* Textfeld unten */
+textarea.wpcf7-form-control.wpcf7-textarea {
+    font-size: large;
+}
+
+/* Einzeilige Texte */
+input.wpcf7-form-control.wpcf7-text {
+    line-height: 2.5rem;
+    font-size: large;
+}
+
+input.wpcf7-form-control.wpcf7-submit.has-spinner:hover,
+input.wpcf7-form-control.wpcf7-text:hover,
+textarea.wpcf7-form-control.wpcf7-textarea:hover {
+    outline-color: var(--wp--preset--color--contrast-2);
+    outline-offset: 4px;
+    outline-style: groove;
+    outline-width: 4px;
+}
