@@ -14,9 +14,11 @@
 input.wpcf7-form-control.wpcf7-submit.has-spinner {
     background-color: var(--wp--preset--color--contrast-2);
     color: var(--wp--preset--color--base);
-    padding: 15px;
-    border-radius: 20px;
+    padding: 15px 40px 15px 40px;
+    cursor: pointer;
+    border-radius: 40px;
     font-size: large;
+    border-color: var(--wp--preset--color--contrast-2);
 }
 
 /* Textfeld unten */
@@ -37,4 +39,10 @@ textarea.wpcf7-form-control.wpcf7-textarea:hover {
     outline-offset: 4px;
     outline-style: groove;
     outline-width: 4px;
+    border-color: var(--wp--preset--color--contrast-2);
+}
+
+/* externe Logos */
+figure.logo_extern:hover {
+    filter: grayscale(1);
 }
