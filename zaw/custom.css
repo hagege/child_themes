@@ -18,7 +18,8 @@ input.wpcf7-form-control.wpcf7-submit.has-spinner {
     cursor: pointer;
     border-radius: 40px;
     font-size: large;
-    border-color: var(--wp--preset--color--contrast-2);
+    border-width: 0px;
+    text-decoration: underline;
 }
 
 /* Textfeld unten */
@@ -34,12 +35,14 @@ input.wpcf7-form-control.wpcf7-text {
 
 input.wpcf7-form-control.wpcf7-submit.has-spinner:hover,
 input.wpcf7-form-control.wpcf7-text:hover,
-textarea.wpcf7-form-control.wpcf7-textarea:hover {
+textarea.wpcf7-form-control.wpcf7-textarea:hover,
+.wp-block-group.button:hover {
     outline-color: var(--wp--preset--color--contrast-2);
     outline-offset: 4px;
     outline-style: groove;
     outline-width: 4px;
-    border-color: var(--wp--preset--color--contrast-2);
+    border-width: 0px;
+    text-decoration: underline dashed;
 }
 
 /* externe Logos */
