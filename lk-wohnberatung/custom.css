@@ -3,6 +3,18 @@
     outline-style: solid
 }
 
+/* Links als Buttons am oberen Rand */
+.wp-block-group.button:hover {
+    background-color: var(--wp--preset--color--contrast-4) !important;
+    border-color: var(--wp--preset--color--contrast-4);
+    color: var(--wp--preset--color--base);
+    outline-color: var(--wp--preset--color--contrast);
+    outline-offset: 4px;
+    outline-style: groove;
+    outline-width: 4px;
+    cursor: pointer;
+}
+
 /* Buttons von Membership rot wie andere Buttons auch */
 div#wpgmza_table_6_filter input {
     color: var(--wp--preset--color--contrast);
