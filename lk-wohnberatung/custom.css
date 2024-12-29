@@ -81,6 +81,7 @@ a.wp-block-navigation-item__content:hover {
     text-decoration-thickness: 2px;
     text-decoration: none;
     transition: all 3.5s;
+    border-bottom-color: var(--wp--preset--color--base-2);
 }
 
 
@@ -90,10 +91,11 @@ a.wp-block-navigation-item__content:focus {
 
 
 
-/* Unterstrich grün */
+/* Unterstrich grün 
 :root :where(.wp-block-navigation a:where(:not(.wp-element-button)):hover) {
     border-bottom-color: var(--wp--preset--color--base-2);
     border-bottom-width: 4px;
     border-bottom-style: solid;
     text-decoration: none;
 }
+*/
