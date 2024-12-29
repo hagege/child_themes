@@ -68,23 +68,24 @@ ul.kategorie-liste>li a:hover {
     background-color: var(--wp--preset--color--contrast-4);
 }
 
-/* Animation in der Navigation */
+/* Animation bei der Navigation */
 a.wp-block-navigation-item__content {
-    transition: all 1.5s;
+    text-decoration: underline var(--wp--preset--color--base-2);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
 }
 
 
 a.wp-block-navigation-item__content:hover {
-    transition: all 1.5s;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 2px;
+    text-decoration: none;
+    transition: all 3.5s;
 }
 
-:where(.wp-site-blocks *:focus) {
-    outline-width: 2px;
-    outline-style: solid
-}
 
-a.wp-block-navigation-item__content {
-    transition: all 1.5s;
+a.wp-block-navigation-item__content:focus {
+    outline: 1px dotted;
 }
 
 
