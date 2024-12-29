@@ -72,7 +72,7 @@ ul.kategorie-liste>li a:hover {
 a.wp-block-navigation-item__content {
     text-decoration: underline var(--wp--preset--color--base-2);
     text-decoration-thickness: 2px;
-    text-underline-offset: 3px;
+    text-underline-offset: 6px;
 }
 
 
