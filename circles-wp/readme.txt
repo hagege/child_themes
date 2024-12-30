@@ -26,7 +26,9 @@ Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, 
 
 = 1.0.6 =
 * Released: January 4, 2025
-* Added: New style for paragraph, so that links can be displayed as buttons if necessary: Link as Button 
+* Added: New styles for paragraph with different Color and Background Color, so that links can be displayed as buttons if necessary: Link as Button
+* Added: New styles for paragraph with different Color and Background Color 
+* Enhancement: Further information on customization with link to https://haurand.com/circles-wp-developing-a-block-theme/ in readme.txt 
 
 = 1.0.5 =
 * Released: December 10, 2024
