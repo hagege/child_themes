@@ -12,7 +12,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Circles WP is a clean, flexible, fast and accessibility-ready block theme. 
 Its default look is a stylish white on black background color scheme with an orange circle in background and lexend font (a sans-serif typography). 
-It is possible to easily change the background graphic in code-edtior. Detailed instructions can be found on the following page: 
+It is possible to easily change the background graphic in code-editor. Detailed instructions can be found on the following page: 
 https://haurand.com/circles-wp-developing-a-block-theme/
 10 Circles WP with different colors are supplied in the \assets\images folder as SVG graphics.
 Circles WP is built from the ground up for flexibility. It includes ten different theme styles to choose from, and different block patterns that you can use to quickly create unique page layouts. 
@@ -26,7 +26,7 @@ Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, 
 
 = 1.0.6 =
 * Released: January 4, 2025
-* Added: New Style for accessible Link as button 
+* Added: New style for paragraph, so that links can be displayed as buttons if necessary: Link as Button 
 
 = 1.0.5 =
 * Released: December 10, 2024
