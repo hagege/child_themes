@@ -1,8 +1,8 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Link as button",
-	"slug": "text-link-as-button",
+	"title": "Link as button 1",
+	"slug": "text-link-as-button-1",
 	"blockTypes": [
 		"core/paragraph"
 	],

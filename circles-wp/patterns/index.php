@@ -11,8 +11,14 @@
 <hr class="wp-block-separator has-alpha-channel-opacity is-style-default"/>
 <!-- /wp:separator -->
 
-<!-- wp:group {"tagName":"main","style":{"background":{"backgroundImage":{"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/circle_light_orange.svg","id":6935,"source":"file","title":"circle_light_orange"},"backgroundPosition":"50% 0"}},"layout":{"type":"constrained"}} -->
-<main class="wp-block-group"><!-- wp:query-title {"type":"archive","align":"wide","style":{"typography":{"lineHeight":"1"}}} /-->
+<!-- wp:group {"tagName":"main","style":{"background":{"backgroundImage":{"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/circle_light_orange.svg","id":6935,"source":"file","title":"circle_light_orange"},"backgroundPosition":"50% 0"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group" style="margin-top:0;margin-bottom:0">
+	<!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/waldweg-1024x768.webp","id":11,"alt":"Forest path in Sauerland","dimRatio":0,"isDark":false,"align":"full","style":{"color":{}}} -->
+	<div class="wp-block-cover alignfull is-light"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-11" alt="Forest path in Sauerland" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/waldweg-1024x768.webp" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","fontSize":"large"} -->
+		<p class="has-text-align-center has-large-font-size"></p>
+	<!-- /wp:paragraph --></div></div>
+	<!-- /wp:cover -->
+	<!-- wp:query-title {"type":"archive","align":"wide","style":{"typography":{"lineHeight":"1"}}} /-->
 	
 	<!-- wp:query {"queryId":4,"query":{"perPage":6,"pages":0,"offset":"0","postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"align":"wide","layout":{"type":"default"}} -->
 	<div class="wp-block-query alignwide"><!-- wp:query-no-results -->
@@ -50,7 +56,7 @@
 			<!-- wp:query-pagination-previous /-->
 			
 			<!-- wp:query-pagination-numbers /-->
-		
+			
 		<!-- wp:query-pagination-next /-->
 		<!-- /wp:query-pagination --></div>
 		<!-- /wp:group --></div>
@@ -65,4 +71,4 @@
 		<hr class="wp-block-separator has-alpha-channel-opacity is-style-default"/>
 		<!-- /wp:separator -->
 		
-		<!-- wp:template-part {"slug":"footer","area":"footer"} /-->		
+		<!-- wp:template-part {"slug":"footer","area":"footer"} /-->				

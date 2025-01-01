@@ -1,8 +1,8 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Base on Contrast",
-	"slug": "base-on-contrast",
+	"title": "Base on Contrast 1",
+	"slug": "base-on-contrast-1",
 	"blockTypes": ["core/paragraph"],
 	"styles": {
 		"typography": {
