@@ -3,6 +3,12 @@
     outline-style: solid
 }
 
+/* smooth scrolling und korrekte Ansteuerung interner Anker */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 14rem;
+}
+
 /* Links als Buttons am oberen Rand */
 .wp-block-group.button:hover {
     background-color: var(--wp--preset--color--contrast-4) !important;

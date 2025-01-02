@@ -25,7 +25,7 @@ Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, 
 == Changelog ==
 
 = 1.0.6 =
-* Released: January 4, 2025
+* Released: January 2, 2025
 * Added: New styles for paragraph with different Color and Background Color, so that links can be displayed as buttons if necessary: Link as Button
 * Added: New styles for paragraph with different Color and Background Color
 * Enhancement: Added Cover Image in index.php
