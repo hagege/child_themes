@@ -24,6 +24,10 @@ Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, 
 
 == Changelog ==
 
+= 1.0.7 =
+* Released: January x, 2025
+* Fix: In the style variations for Paragraph (base on contrast), the colors for links were not set optimally.
+
 = 1.0.6 =
 * Released: January 2, 2025
 * Added: New styles for paragraph with different Color and Background Color, so that links can be displayed as buttons if necessary: Link as Button

@@ -21,6 +21,14 @@
 		"color": {
  		       "text": "var(--wp--preset--color--base)",
 			   "background": "var(--wp--preset--color--contrast)"
+		},
+		"elements": {
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--base)",
+					"background": "var(--wp--preset--color--contrast)"
+				}
+			}
 		}
 	}
 }
