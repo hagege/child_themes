@@ -6,7 +6,7 @@
 /* smooth scrolling und korrekte Ansteuerung interner Anker */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 14rem;
+    scroll-padding-top: 16rem;
 }
 
 /* Links als Buttons am oberen Rand */
@@ -110,6 +110,64 @@ a.wp-block-navigation-item__content:focus {
     outline: 1px dotted;
 }
 
+
+/* Contact Form 7 */
+/* Buttons Contact Form 7 wie andere Buttons auch */
+input.wpcf7-form-control.wpcf7-submit.has-spinner {
+    color: var(--wp--preset--color--base);
+    border-radius: .33rem;
+    border-color: var(--wp--preset--color--base-2);
+    background-color: var(--wp--preset--color--base-2);
+    border-width: 0;
+    color: var(--wp--preset--color--base);
+    font-family: var(--wp--preset--font-family--lexend);
+    font-size: var(--wp--preset--font-size--small);
+    font-style: normal;
+    font-weight: 500;
+    padding-top: 0.6rem;
+    padding-right: 1rem;
+    padding-bottom: 0.6rem;
+    padding-left: 1rem;
+    text-decoration: none;
+}
+
+/* Senden - Button Contact Form 7 */
+input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
+    background-color: var(--wp--preset--color--contrast-4);
+    color: var(--wp--preset--color--base);
+    /* font-size: 1.2rem; */
+}
+
+/* Eingabefelder Contact Form 7 */
+span.wpcf7-list-item checkbox {
+    height: 2.5rem;
+    font-size: 1.2rem;
+}
+
+/* /* Ensure focus outline is clear - buttons and input fields, etc. background: grey Contact Form 7 */
+span.wpcf7-form-control-wrap input:focus,
+span.wpcf7-list-item checkbox:focus,
+input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
+    background-color: var(--wp--preset--color--base);
+    border-color: var(--wp--preset--color--contrast);
+    color: var(--wp--preset--color--contrast);
+    outline-color: var(--wp--preset--color--contrast);
+    outline-offset: 4px;
+    outline-style: groove;
+    outline-width: 4px;
+}
+
+
+/* Textfeld unten */
+textarea.wpcf7-form-control.wpcf7-textarea {
+    font-size: 1.2rem;
+}
+
+/* Einzeilige Texte */
+input.wpcf7-form-control.wpcf7-text {
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+}
 
 /* Unterstrich grün 
 :root :where(.wp-block-navigation a:where(:not(.wp-element-button)):hover) {
