@@ -113,7 +113,8 @@ a.wp-block-navigation-item__content:focus {
 
 /* Contact Form 7 */
 /* Buttons Contact Form 7 wie andere Buttons auch */
-input.wpcf7-form-control.wpcf7-submit.has-spinner {
+input.wpcf7-form-control.wpcf7-submit.has-spinner,
+button.wpgmza-api-consent {
     color: var(--wp--preset--color--base);
     border-radius: .33rem;
     border-color: var(--wp--preset--color--base-2);
@@ -132,7 +133,8 @@ input.wpcf7-form-control.wpcf7-submit.has-spinner {
 }
 
 /* Senden - Button Contact Form 7 */
-input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
+input.wpcf7-form-control.wpcf7-submit.has-spinner:hover,
+button.wpgmza-api-consent:hover {
     background-color: var(--wp--preset--color--contrast-4);
     color: var(--wp--preset--color--base);
     /* font-size: 1.2rem; */
@@ -144,7 +146,7 @@ span.wpcf7-list-item checkbox {
     font-size: 1.2rem;
 }
 
-/* /* Ensure focus outline is clear - buttons and input fields, etc. background: grey Contact Form 7 */
+/* Ensure focus outline is clear - buttons and input fields, etc. background: grey Contact Form 7 */
 span.wpcf7-form-control-wrap input:focus,
 span.wpcf7-list-item checkbox:focus,
 input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
@@ -157,6 +159,29 @@ input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
     outline-width: 4px;
 }
 
+/* Button für DSGVO WP Go Maps */
+button.wpgmza-api-consent {
+    background-color: var(--wp--preset--color--base-2);
+    color: var(--wp--preset--color--base);
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+
+button.wpgmza-api-consent:hover {
+    background-color: var(--wp--preset--color--contrast-4);
+    border-color: var(--wp--preset--color--contrast);
+    color: var(--wp--preset--color--base);
+    outline-color: var(--wp--preset--color--contrast);
+    outline-offset: 4px;
+    outline-style: groove;
+    outline-width: 4px;
+    cursor: pointer;
+}
+
+/* Textfeld für DSGVO */
+.wpgmza-gdpr-compliance {
+    width: 800px;
+}
 
 /* Textfeld unten */
 textarea.wpcf7-form-control.wpcf7-textarea {
