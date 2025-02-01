@@ -3,7 +3,7 @@ Contributors: Hans-Gerd Gerhards
 Requires at least: 6.6
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,7 +25,7 @@ Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, 
 == Changelog ==
 
 = 1.0.7 =
-* Released: January x, 2025
+* Released: February 1, 2025
 * Fix: In the style variations for Paragraph (base on contrast), the colors for links were not set optimally.
 
 = 1.0.6 =
