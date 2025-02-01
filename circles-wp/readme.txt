@@ -27,6 +27,7 @@ Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, 
 = 1.0.7 =
 * Released: February 1, 2025
 * Fix: In the style variations for Paragraph (base on contrast), the colors for links were not set optimally.
+       Please see example shown here: https://space4.yd-sgs.de/beispiele-mit-links-und-links-als-buttons/#
 
 = 1.0.6 =
 * Released: January 2, 2025
