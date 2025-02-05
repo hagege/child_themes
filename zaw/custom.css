@@ -21,28 +21,44 @@ input.wpcf7-form-control.wpcf7-submit.has-spinner {
     border-width: 0px;
     border-color: var(--wp--preset--color--contrast-2);
     text-decoration: underline;
+    width: 300px;
+    margin-top: 10px;
 }
 
 /* Textfeld unten */
 textarea.wpcf7-form-control.wpcf7-textarea {
     font-size: large;
+    width: 300px;
+    margin-top: 10px;
 }
 
 /* Einzeilige Texte */
 input.wpcf7-form-control.wpcf7-text {
     line-height: 2.5rem;
     font-size: large;
+    width: 300px;
+    margin-top: 10px;
 }
 
-input.wpcf7-form-control.wpcf7-submit.has-spinner:hover,
-input.wpcf7-form-control.wpcf7-text:hover,
-textarea.wpcf7-form-control.wpcf7-textarea:hover,
-.wp-block-group.button:hover {
+/* Links als Buttons */
+.wp-block-group.button:hover,
+input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
     outline-color: var(--wp--preset--color--contrast-2);
     outline-offset: 4px;
     outline-style: groove;
     outline-width: 4px;
     border-width: 0px;
+    border-color: var(--wp--preset--color--contrast-2);
+    text-decoration: underline dashed;
+}
+
+/* Textfelder bei CF7 */
+input.wpcf7-form-control.wpcf7-text:hover,
+textarea.wpcf7-form-control.wpcf7-textarea:hover {
+    outline-color: var(--wp--preset--color--contrast-2);
+    outline-offset: 4px;
+    outline-width: 4px;
+    outline-style: groove;
     border-color: var(--wp--preset--color--contrast-2);
     text-decoration: underline dashed;
 }
