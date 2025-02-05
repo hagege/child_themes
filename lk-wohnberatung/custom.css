@@ -110,11 +110,17 @@ a.wp-block-navigation-item__content:focus {
     outline: 1px dotted;
 }
 
+/* Eingabefeld Newsletter Cleverreach */
+div#\39 229282 {
+    margin-bottom: 15px;
+}
+
 
 /* Contact Form 7 */
 /* Buttons Contact Form 7 wie andere Buttons auch */
 input.wpcf7-form-control.wpcf7-submit.has-spinner,
-button.wpgmza-api-consent {
+button.wpgmza-api-consent,
+button.cr_form-block.cr_button {
     color: var(--wp--preset--color--base);
     border-radius: .33rem;
     border-color: var(--wp--preset--color--base-2);
@@ -133,8 +139,7 @@ button.wpgmza-api-consent {
 }
 
 /* Senden - Button Contact Form 7 */
-input.wpcf7-form-control.wpcf7-submit.has-spinner:hover,
-button.wpgmza-api-consent:hover {
+input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
     background-color: var(--wp--preset--color--contrast-4);
     color: var(--wp--preset--color--base);
     /* font-size: 1.2rem; */
@@ -167,7 +172,9 @@ button.wpgmza-api-consent {
     margin-left: 10px;
 }
 
-button.wpgmza-api-consent:hover {
+/* Button für DSGVO WP Go Maps, Cleverreach (Hover) */
+button.wpgmza-api-consent:hover,
+button.cr_form-block.cr_button:hover {
     background-color: var(--wp--preset--color--contrast-4);
     border-color: var(--wp--preset--color--contrast);
     color: var(--wp--preset--color--base);
@@ -191,7 +198,8 @@ textarea.wpcf7-form-control.wpcf7-textarea {
 }
 
 /* Einzeilige Texte */
-input.wpcf7-form-control.wpcf7-text {
+input.wpcf7-form-control.wpcf7-text,
+input#text9229282 {
     line-height: 2.5rem;
     font-size: 1.5rem;
 }
