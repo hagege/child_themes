@@ -138,13 +138,6 @@ button.cr_form-block.cr_button {
     text-decoration: none;
 }
 
-/* Senden - Button Contact Form 7 */
-input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
-    background-color: var(--wp--preset--color--contrast-4);
-    color: var(--wp--preset--color--base);
-    /* font-size: 1.2rem; */
-}
-
 /* Eingabefelder Contact Form 7 */
 span.wpcf7-list-item checkbox {
     height: 2.5rem;
@@ -163,6 +156,15 @@ input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
     outline-style: groove;
     outline-width: 4px;
 }
+
+/* Senden - Button Contact Form 7 */
+input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
+    background-color: var(--wp--preset--color--contrast-4);
+    color: var(--wp--preset--color--base);
+    /* font-size: 1.2rem; */
+    cursor: pointer;
+}
+
 
 /* Button für DSGVO WP Go Maps */
 button.wpgmza-api-consent {
@@ -195,6 +197,7 @@ button.cr_form-block.cr_button:hover {
 /* Textfeld unten */
 textarea.wpcf7-form-control.wpcf7-textarea {
     font-size: 1.2rem;
+    border-radius: 5px;
 }
 
 /* Einzeilige Texte */
@@ -202,8 +205,19 @@ input.wpcf7-form-control.wpcf7-text,
 input#text9229282 {
     line-height: 2.5rem;
     font-size: 1.5rem;
+    border-radius: 5px;
 }
 
+/*
+@media (max-width: 780px) {
+.alignleft.wp-block-site-logo {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+}
+*/
 /* Unterstrich grün 
 :root :where(.wp-block-navigation a:where(:not(.wp-element-button)):hover) {
     border-bottom-color: var(--wp--preset--color--base-2);
