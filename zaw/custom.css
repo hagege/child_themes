@@ -9,6 +9,10 @@
     width: 4rem;
 }
 
+/* Link as Button */
+p.link_as_button a:hover {
+    text-decoration: none;
+}
 
 /* Contact Form 7 */
 input.wpcf7-form-control.wpcf7-submit.has-spinner {
@@ -49,7 +53,7 @@ input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
     outline-width: 4px;
     border-width: 0px;
     border-color: var(--wp--preset--color--contrast-2);
-    text-decoration: underline dashed;
+    text-decoration: none;
 }
 
 /* Textfelder bei CF7 */
@@ -60,7 +64,7 @@ textarea.wpcf7-form-control.wpcf7-textarea:hover {
     outline-width: 4px;
     outline-style: groove;
     border-color: var(--wp--preset--color--contrast-2);
-    text-decoration: underline dashed;
+    text-decoration: none;
 }
 
 /* externe Logos */
@@ -88,9 +92,9 @@ figure.logo_extern:hover {
 .zaw-list li::before {
     content: "";
     display: inline-block;
-    width: 1rem;
+    width: 1.2rem;
     /* Breite des SVGs */
-    height: 1rem;
+    height: 1.2rem;
     /* Höhe des SVGs */
     background-image: url('https://zaw-koeln.de/wp-content/uploads/2024/12/Polygon.svg');
     /* Pfad zur SVG-Datei */
