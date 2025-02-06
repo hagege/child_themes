@@ -21,7 +21,7 @@ input.wpcf7-form-control.wpcf7-submit.has-spinner {
     padding: 15px 40px 15px 40px;
     cursor: pointer;
     border-radius: 40px;
-    font-size: large;
+    font-size: 1.3rem;
     border-width: 0px;
     border-color: var(--wp--preset--color--contrast-2);
     text-decoration: underline;
