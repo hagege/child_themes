@@ -67,3 +67,43 @@ textarea.wpcf7-form-control.wpcf7-textarea:hover {
 figure.logo_extern:hover {
     filter: grayscale(1);
 }
+
+/* Listen mit SVG */
+.zaw-list {
+    list-style-type: none;
+    /* Standard-Bullets entfernen */
+    padding: 0;
+    margin: 1rem;
+}
+
+.zaw-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    /* Platz für das SVG */
+    padding-top: 1.2em;
+    /* Platz zwischen den Listenpunkten */
+
+}
+
+.zaw-list li::before {
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    /* Breite des SVGs */
+    height: 1rem;
+    /* Höhe des SVGs */
+    background-image: url('https://zaw-koeln.de/wp-content/uploads/2024/12/Polygon.svg');
+    /* Pfad zur SVG-Datei */
+    background-size: contain;
+    /* Skaliert das SVG passend */
+    background-repeat: no-repeat;
+    margin-right: 0.5rem;
+    /* Abstand zwischen Icon und Text */
+    vertical-align: middle;
+    /* Text und Icon vertikal ausrichten */
+    position: absolute;
+    left: 0;
+    /* Positioniert das SVG links vom Text */
+    top: 1.5em;
+    /* Vertikale Ausrichtung */
+}
