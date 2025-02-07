@@ -75,6 +75,7 @@ button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style
 span.wpcf7-list-item checkbox {
     height: 2.5rem;
     font-size: 1.2rem;
+    border-radius: 5px;
 }
 
 input.swpm-login-form-submit.swpm-submit-btn-default-style,
