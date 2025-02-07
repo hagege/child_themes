@@ -46,7 +46,8 @@ div#wpgmza_table_6_filter input {
 }
 
 div#wpgmza_table_6_filter input:hover,
-div#wpgmza_table_6_filter input:focus {
+div#wpgmza_table_6_filter input:focus,
+input#text9229282:hover {
     background-color: var(--wp--preset--color--base);
     border-color: var(--wp--preset--color--contrast);
     color: var(--wp--preset--color--contrast);
