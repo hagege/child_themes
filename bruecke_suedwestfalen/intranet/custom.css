@@ -136,11 +136,15 @@ button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style
   /*    background-color: var(--dunkelblau-color);
     border-color: var(--dunkelblau-color);
 */
-  color: white;
+  color: black;
   outline-color: black;
   outline-offset: 4px;
   outline-style: groove;
   outline-width: 4px;
+}
+
+button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style:hover {
+  color: white;
 }
 
 /* Ende Design Memebership */
