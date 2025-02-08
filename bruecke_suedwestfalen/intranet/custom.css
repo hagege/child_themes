@@ -36,9 +36,10 @@ a.wp-block-button__link:not(.has-background):hover {
   background-color: var(--hellblau-color);
 }
 
-/* Checkboxen bei Registrierung */
+
 input#swpm-accept-terms,
-input#swpm-accept-pp {
+input#swpm-accept-pp,
+input#swpm-rememberme {
   width: 1em;
   height: 1em;
   accent-color: var(--dunkelblau-color);
