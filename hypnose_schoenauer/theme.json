@@ -1,0 +1,124 @@
+{
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"color": "#d3e4cd",
+					"name": "hellgrün",
+					"slug": "custom-hellgr-n"
+				},
+				{
+					"color": "#99a799",
+					"name": "mittelgrün",
+					"slug": "custom-mittelgr-n"
+				},
+				{
+					"color": "#6d786d",
+					"name": "dunkelgrün",
+					"slug": "custom-dunkelgr-n"
+				},
+				{
+					"color": "#f2ddc1",
+					"name": "Creme",
+					"slug": "custom-creme"
+				},
+				{
+					"color": "#e2c2b9",
+					"name": "Rosa",
+					"slug": "custom-rosa"
+				},
+				{
+					"color": "#85736d",
+					"name": "Dunkelrosa",
+					"slug": "custom-dunkelrosa"
+				},
+				{
+					"color": "#ffffff",
+					"name": "weiß",
+					"slug": "custom-weiss"
+				},
+				{
+					"color": "#000000c9",
+					"name": "Dunkelgrau",
+					"slug": "custom-dunkelgrau"
+				}
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Manrope",
+							"fontStyle": "normal",
+							"fontWeight": "200 800",
+							"src": [
+								"file:./assets/fonts/manrope/Manrope-VariableFont_wght.woff2"
+							]
+						}
+					],
+					"fontFamily": "Manrope, sans-serif",
+					"name": "Manrope",
+					"slug": "manrope"
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "\"Fira Code\"",
+							"fontStyle": "normal",
+							"fontWeight": "300 700",
+							"src": [
+								"file:./assets/fonts/fira-code/FiraCode-VariableFont_wght.woff2"
+							]
+						}
+					],
+					"fontFamily": "\"Fira Code\", monospace",
+					"name": "Fira Code",
+					"slug": "fira-code"
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Kalam",
+							"fontStyle": "normal",
+							"fontWeight": "300",
+							"src": "https://hypnose-fuer-dich.de/wp-content/uploads/fonts/YA9Qr0Wd4kDdMtD6GgLOmCUItqGt.woff2"
+						},
+						{
+							"fontFamily": "Kalam",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": "https://hypnose-fuer-dich.de/wp-content/uploads/fonts/YA9dr0Wd4kDdMuhTMibDszkB.woff2"
+						},
+						{
+							"fontFamily": "Kalam",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": "https://hypnose-fuer-dich.de/wp-content/uploads/fonts/YA9Qr0Wd4kDdMtDqHQLOmCUItqGt.woff2"
+						}
+					],
+					"fontFamily": "Kalam, cursive",
+					"name": "Kalam",
+					"slug": "kalam"
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "#ffffff"
+		},
+		"css": "\n\n",
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--kalam)",
+					"fontStyle": "normal",
+					"fontWeight": "400"
+				}
+			}
+		}
+	},
+	"version": 3,
+	"$schema": "https://schemas.wp.org/wp/6.7/theme.json"
+}
