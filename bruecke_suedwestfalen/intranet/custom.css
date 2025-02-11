@@ -29,6 +29,11 @@ Grün 	#87C12C
 
 */
 
+/* Buttons */
+.wp-block-button__link {
+  border-radius: 0;
+}
+
 /* Design Membership */
 
 /* Registrierung */
