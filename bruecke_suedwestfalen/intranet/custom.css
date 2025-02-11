@@ -51,7 +51,8 @@ input#swpm-rememberme {
 .swpm-registration-form input,
 .swpm-profile-form input,
 .swpm-registration-widget-form input,
-.swpm-login-widget-form input {
+.swpm-login-widget-form input,
+.swpm-edit-profile-form input {
   height: 45px;
   font-size: 16px;
   padding: 10px;
@@ -106,6 +107,7 @@ input.swpm-login-form-submit.swpm-submit-btn-default-style {
 
 /* Eingabefelder SWPM und Events */
 .swpm-form input,
+.swpm-edit-profile-form input,
 .swpm-form select,
 .swpm-form textarea,
 input#swpm_reset_email,
@@ -129,7 +131,9 @@ input.swpm-pw-reset-submit.swpm-submit-btn-default-style {
 .swpm-registration-widget-form input:hover,
 .swpm-profile-form input:hover,
 .swpm-registration-form input:focus,
-.swpm-profile-form input:focus {
+.swpm-profile-form input:focus,
+.swpm-edit-profile-form input:hover,
+.swpm-edit-profile-form input:focus {
   outline-color: var(--dunkelblau-color);
   outline-offset: 4px;
   outline-style: groove;
