@@ -5,6 +5,13 @@ table#tablepress-1 {
     white-space: nowrap;
 }
 
+/* Instagram Menüpunkt in der Navigation */
+span.wp-block-navigation-item__label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 /* Links als Buttons am oberen Rand */
 .wp-block-group.button:hover {
     background-color: var(--wp--preset--color--contrast-4) !important;

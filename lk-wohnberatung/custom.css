@@ -3,11 +3,24 @@
     outline-style: solid
 }
 
+/* Instagram Menüpunkt in der Navigation */
+span.wp-block-navigation-item__label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 /* smooth scrolling und korrekte Ansteuerung interner Anker */
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 16rem;
 }
+
+/* Abstand Menüpunkte - klappt nicht 
+li.wp-block-navigation-item.has-child.open-on-hover-click.wp-block-navigation-submenu {
+    height: 2rem;
+}
+*/
 
 /* Links als Buttons am oberen Rand */
 .wp-block-group.button:hover {
