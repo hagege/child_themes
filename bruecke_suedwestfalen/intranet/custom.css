@@ -3,7 +3,7 @@
 :root {
   --dunkelblau-color: rgba(30, 51, 127, 1);
   --orange-color: rgba(255, 125, 31, 1);
-  --hellblau-color: rgba(0, 123, 190, 1);
+  --hellblau-color: rgba(57, 96, 237, 1);
   --hellgrau-color: rgba(234, 234, 234, 0.4);
   --lila-color: rgba(162, 50, 150, 1);
   --rot-color: rgba(238, 56, 63, 1);
@@ -33,6 +33,78 @@ Grün 	#87C12C
 .wp-block-button__link {
   border-radius: 0;
 }
+
+
+/* Barrierefreies Kontaktformular CF7 */
+/* Buttons von CF7 */
+input.wpcf7-form-control.wpcf7-submit.has-spinner {
+  color: var(--dunkelblau-color);
+  background-color: white;
+  border-radius: .33rem;
+  border-color: var(--dunkelblau-color);
+  border: 2px solid var(--dunkelblau-color);
+  border-width: 0;
+  font-style: normal;
+  font-weight: 500;
+  padding-top: 0.6rem;
+  padding-right: 1rem;
+  padding-bottom: 0.6rem;
+  padding-left: 1rem;
+  text-decoration: none;
+}
+
+/* Anmelden - Button */
+input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
+  color: var(--dunkelblau-color);
+  background-color: white;
+}
+
+/* Eingabefelder CF7 */
+span.wpcf7-list-item checkbox {
+  height: 2.5rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+
+/* CF7: Ensure focus outline is clear - buttons and input fields, etc. background: grey */
+span.wpcf7-form-control-wrap input:focus,
+span.wpcf7-list-item checkbox:focus,
+input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
+  color: var(--dunkelblau-color);
+  background-color: white;
+  border-color: var(--dunkelblau-color);
+  outline-color: var(--dunkelblau-color);
+  outline-offset: 4px;
+  outline-style: groove;
+  outline-width: 4px;
+}
+
+
+/* Buttons, etc. */
+input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
+  color: var(--dunkelblau-color);
+  background-color: white;
+  outline-color: var(--dunkelblau-color);
+  outline-offset: 4px;
+  outline-style: groove;
+  outline-width: 4px;
+}
+
+
+/* Textfeld unten */
+textarea.wpcf7-form-control.wpcf7-textarea {
+  font-size: 1.2rem;
+}
+
+/* Einzeilige Texte */
+input.wpcf7-form-control.wpcf7-text {
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+}
+
+/* Barrierefreies Kontaktformular CF7 */
+
 
 /* Design Membership */
 
