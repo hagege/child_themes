@@ -37,7 +37,8 @@ textarea.wpcf7-form-control.wpcf7-textarea {
 }
 
 /* Einzeilige Texte */
-input.wpcf7-form-control.wpcf7-text {
+input.wpcf7-form-control.wpcf7-text,
+input.wpcf7-form-control.wpcf7-quiz {
     line-height: 2.5rem;
     font-size: large;
     width: 300px;
@@ -58,7 +59,8 @@ input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
 
 /* Textfelder bei CF7 */
 input.wpcf7-form-control.wpcf7-text:hover,
-textarea.wpcf7-form-control.wpcf7-textarea:hover {
+textarea.wpcf7-form-control.wpcf7-textarea:hover,
+input.wpcf7-form-control.wpcf7-quiz:hover {
     outline-color: var(--wp--preset--color--contrast-2);
     outline-offset: 4px;
     outline-width: 4px;
