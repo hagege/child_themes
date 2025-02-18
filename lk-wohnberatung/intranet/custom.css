@@ -29,17 +29,16 @@ span.wp-block-navigation-item__label {
 
 input#swpm-14,
 input#swpm-8 {
-    background-color: var(--wp--preset--color--base-2) !important;
-    border-color: var(--wp--preset--color--base-2);
+    background-color: var(--wp--preset--color--base-2);
     color: var(--wp--preset--color--base);
     cursor: pointer;
+    border-width: 0px;
     font-size: var(--wp--preset--font-size--medium);
 }
 
 input#swpm-14:hover,
 input#swpm-8:hover {
-    background-color: var(--wp--preset--color--contrast-4) !important;
-    border-color: var(--wp--preset--color--contrast-4);
+    background-color: var(--wp--preset--color--contrast-4);
     outline-color: var(--wp--preset--color--contrast);
     outline-offset: 4px;
     outline-style: groove;
