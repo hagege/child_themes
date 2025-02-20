@@ -10,6 +10,12 @@ span.wp-block-navigation-item__label {
     gap: 8px;
 }
 
+/* Lexend beim Text "Menü" und "Schließen" */
+.wp-block-navigation__responsive-container-open.wp-block-navigation__responsive-container-open.wp-block-navigation__responsive-container-open,
+.wp-block-navigation__responsive-container-close.wp-block-navigation__responsive-container-close.wp-block-navigation__responsive-container-close {
+    font-family: var(--wp--preset--font-family--lexend);
+}
+
 /* smooth scrolling und korrekte Ansteuerung interner Anker */
 html {
     scroll-behavior: smooth;

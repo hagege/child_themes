@@ -12,6 +12,12 @@ span.wp-block-navigation-item__label {
     gap: 8px;
 }
 
+/* Lexend beim Text "Menü" und "Schließen" */
+.wp-block-navigation__responsive-container-open.wp-block-navigation__responsive-container-open.wp-block-navigation__responsive-container-open,
+.wp-block-navigation__responsive-container-close.wp-block-navigation__responsive-container-close.wp-block-navigation__responsive-container-close {
+    font-family: var(--wp--preset--font-family--lexend);
+}
+
 /* Links als Buttons am oberen Rand */
 .wp-block-group.button:hover {
     background-color: var(--wp--preset--color--contrast-4) !important;
@@ -25,7 +31,13 @@ span.wp-block-navigation-item__label {
 }
 
 
-/* Simple Membership Registrierung und Profil */
+/* Simple Membership Registrierung und Profil - Form Builder */
+
+/* weißer Hintergrund ohne Rahmen */
+.swpm-form-builder fieldset {
+    border: 0px !important;
+    background-color: white !important;
+}
 
 input#swpm-14,
 input#swpm-8 {
