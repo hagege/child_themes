@@ -3,6 +3,92 @@
     text-align: center;
 }
 
+/* Runde Fläche mit breiterem Text */
+.runde_flaeche {
+    width: 150px;
+    display: flex;
+    align-items: center;
+}
+
+span.gross {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* ---------------------*/
+/* Der Detail-Block mit */
+/* einigen Anpassungen  */
+/* ---------------------*/
+summary {
+    list-style: none;
+    display: flex;
+    /* also removes the list marker */
+    align-items: center;
+    padding: 1.2rem;
+    font-weight: bold;
+    background: var(--wp--preset--color--contrast-2);
+    color: var(--wp--preset--color--base);
+    border-radius: 0px;
+    outline: auto;
+}
+
+summary::before {
+    content: '>';
+    /*  margin-left: .75em; */
+    transition: 0.2s;
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+
+
+details[open]>summary::before {
+    transform: rotate(90deg);
+}
+
+.wp-block-details[open] summary,
+.wp-block-details summary:hover {
+    transition: all 0.2s ease-in-out;
+}
+
+.wp-block-details summary:focus {
+    transition: all 0.2s ease-in-out;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+
+/* Background content of details */
+details p {
+    /*    background: rgba(226, 232, 240, 0.31); */
+    padding: 2rem;
+    margin-top: 0;
+}
+
+@keyframes details-show {
+    from {
+        opacity: 0;
+        transform: var(--details-translate, translateY(-0.5em));
+    }
+}
+
+details[open]>*:not(summary),
+details[close]>*:not(summary) {
+    animation: details-show 1000ms ease-in-out;
+}
+
+/* wegen Problem mit Überlappung des BacktoTop Kreises im mobilen Menü */
+.progress-wrap {
+    z-index: unset !important;
+}
+
+/* so that the anchor can be accessed correctly if a category has been filtered in the blog */
+#filtered_posts {
+    padding-top: 200px;
+    margin-top: -200px !important;
+}
+
 
 /* Prevents blurred edges with circles */
 .wp-block-group.has-background {
@@ -121,6 +207,28 @@ a.wp-block-navigation-item__content:active {
 a.wp-block-navigation-item__content:focus {
     outline: 1px dotted;
 }
+
+
+/* featured image bei query loop */
+li figure.wp-block-post-featured-image {
+    position: relative;
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-bottom-color: var(--wp--preset--color--contrast-2);
+    transition: all 0.6s ease-in-out;
+}
+
+li figure.wp-block-post-featured-image:hover {
+    border: 2px solid var(--wp--preset--color--contrast-2);
+    padding: 0.5rem;
+    transition: all 0.6s ease-in-out;
+}
+
+li figure.wp-block-post-featured-image:focus {
+    border: 2px solid var(--wp--preset--color--base-2);
+    padding: 0.2rem;
+    transition: all 0.6s ease-in-out;
+}
+
 
 /*
 span.wp-block-navigation-item__label:after {
