@@ -24,6 +24,28 @@
     --wp--preset--color--custom-rot: #eb1717;
 }
 
+/* Design mit Wave im unteren Bereich */
+.negativer-spacer {
+    margin-top: -10rem;
+}
+
+.gruppe-mit-cover {
+    overflow: hidden;
+}
+
+/* runde Fläche mit Text */
+.runde_flaeche {
+    width: 8em;
+    display: flex;
+    align-items: center;
+}
+
+span.gross {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+
 
 figure.megaphon_ausrichtung img {
     vertical-align: middle;
