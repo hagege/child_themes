@@ -29,6 +29,23 @@ Grün 	#87C12C
 
 */
 
+
+
+.clickable-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.clickable-container a {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+
 /* Buttons */
 .wp-block-button__link {
   border-radius: 0;
@@ -40,7 +57,6 @@ Grün 	#87C12C
 input.wpcf7-form-control.wpcf7-submit.has-spinner {
   color: var(--dunkelblau-color);
   background-color: white;
-  border-radius: .33rem;
   border-color: var(--dunkelblau-color);
   border: 2px solid var(--dunkelblau-color);
   border-width: 0;
@@ -82,7 +98,9 @@ input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
 
 
 /* Buttons, etc. */
-input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
+input.wpcf7-form-control.wpcf7-submit.has-spinner:hover,
+textarea.wpcf7-form-control.wpcf7-textarea:focus,
+textarea.wpcf7-form-control.wpcf7-textarea:hover {
   color: var(--dunkelblau-color);
   background-color: white;
   outline-color: var(--dunkelblau-color);
