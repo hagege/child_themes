@@ -52,7 +52,7 @@ Grün 	#87C12C
   color: var(--dunkelblau-color);
   background-color: white;
   padding: 1em;
-  font-size: clamp(0.75rem, 0.55rem + 1vw, 1.75rem);
+  font-size: clamp(1rem, 0.85rem + 0.75vw, 1.75rem);
   font-weight: 400;
   box-shadow: 5px 5px 5px 1px rgba(30, 51, 127, 0.2);
   border: 1px solid;
@@ -79,7 +79,7 @@ p.clickable-button a {
   color: var(--dunkelblau-color);
   background-color: white;
   padding: 20px;
-  font-size: clamp(0.75rem, 0.55rem + 1vw, 1.75rem);
+  font-size: clamp(1rem, 0.85rem + 0.75vw, 1.75rem);
   font-weight: 400;
   box-shadow: 5px 5px 5px 1px rgba(30, 51, 127, 0.2);
   border: 1px solid;
