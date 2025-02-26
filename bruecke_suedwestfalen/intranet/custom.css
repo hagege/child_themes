@@ -29,20 +29,70 @@ Grün 	#87C12C
 
 */
 
-
-
-.clickable-container {
-  position: relative;
-  cursor: pointer;
+/* Clickable Cards */
+.clickable-card h2 a::before,
+.clickable-card h3 a::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 }
 
-.clickable-container a {
+.clickable-card {
+  position: relative
+}
+
+.clickable-card h2.wp-block-heading {
+  margin-top: -5em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+.clickable-card h2.wp-block-heading a {
+  color: var(--dunkelblau-color);
+  background-color: white;
+  padding: 1em;
+  font-size: clamp(0.75rem, 0.55rem + 1vw, 1.75rem);
+  font-weight: 400;
+  box-shadow: 5px 5px 5px 1px rgba(30, 51, 127, 0.2);
+  border: 1px solid;
+}
+
+.clickable-card h2.wp-block-heading a:hover {
+  color: grey;
+  text-decoration: none;
+}
+
+/* Clickable Buttons */
+p.clickable-button a::before {
+  content: '';
   position: absolute;
-  top: 0px;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 10;
+  inset: 0;
+  z-index: 1;
+}
+
+p.clickable-button {
+  position: relative
+}
+
+p.clickable-button a {
+  color: var(--dunkelblau-color);
+  background-color: white;
+  padding: 20px;
+  font-size: clamp(0.75rem, 0.55rem + 1vw, 1.75rem);
+  font-weight: 400;
+  box-shadow: 5px 5px 5px 1px rgba(30, 51, 127, 0.2);
+  border: 1px solid;
+
+}
+
+p.clickable-button a:hover {
+  color: grey;
+  outline-color: var(--dunkelblau-color);
+  outline-offset: 4px;
+  outline-style: groove;
+  outline-width: 4px;
+  text-decoration: none;
 }
 
 
