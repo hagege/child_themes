@@ -8,6 +8,32 @@
     object-position: 80% top;
 }
 
+/* Clickable Cards */
+.card {
+    position: relative;
+    box-shadow: 1px 1px 20px rgb(0 0 0 / 20%);
+    padding: 1em;
+    transition: filter 0.5s ease-in-out;
+}
+
+.card:hover {
+    filter: grayscale(1) opacity(.8);
+}
+
+.card h2 a::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.card h3 a::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
 /* Runde Fläche mit breiterem Text */
 .runde_flaeche {
     width: 150px;
