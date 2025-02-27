@@ -3,6 +3,23 @@
     text-align: center;
 }
 
+/* Featured Image Seite Vorträge */
+.page-id-2700 img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
+    object-position: 80% top;
+}
+
+/* Runde Fläche mit breiterem Text */
+.runde_flaeche {
+    width: 150px;
+    display: flex;
+    align-items: center;
+}
+
+span.gross {
+    font-size: 2em;
+    font-weight: bold;
+}
+
 /* ---------------------*/
 /* Der Detail-Block mit */
 /* einigen Anpassungen  */
