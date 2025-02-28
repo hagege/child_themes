@@ -1,0 +1,21 @@
+/* Design mit Wave im unteren Bereich */
+.negativer-spacer {
+    margin-top: -10rem;
+}
+
+.gruppe-mit-cover {
+    overflow: hidden;
+}
+
+@media (max-width:1100px) {
+    .desktop-gruppe {
+        display: none;
+    }
+}
+
+/* Hamburger größer */
+.wp-block-navigation__responsive-container-close svg,
+.wp-block-navigation__responsive-container-open svg {
+    height: 4rem;
+    width: 4rem;
+}
