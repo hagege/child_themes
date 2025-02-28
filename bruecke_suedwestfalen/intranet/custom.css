@@ -29,26 +29,39 @@ Grün 	#87C12C
 
 */
 
+/* #######################
+automat. Silbentrennung
+####################### */
+h1.wp-block-post-title,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  hyphens: auto;
+}
+
 /* Clickable Cards */
-.clickable-card h2 a::before,
-.clickable-card h3 a::before {
+.haurand-card h2 a::before,
+.haurand-card h3 a::before {
   content: '';
   position: absolute;
   inset: 0;
   z-index: 1;
 }
 
-.clickable-card {
+.haurand-card {
   position: relative
 }
 
-.clickable-card h2.wp-block-heading {
+.haurand-card h2.wp-block-heading {
   margin-top: -5em;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 }
 
-.clickable-card h2.wp-block-heading a {
+.haurand-card h2.wp-block-heading a {
   color: var(--dunkelblau-color);
   background-color: white;
   padding: 1em;
@@ -58,24 +71,24 @@ Grün 	#87C12C
   border: 1px solid;
 }
 
-.clickable-card h2.wp-block-heading a:hover {
+.haurand-card h2.wp-block-heading a:hover {
   color: grey;
   text-decoration: none;
 }
 
 /* Clickable Buttons */
-p.clickable-button a::before {
+p.haurand-button a::before {
   content: '';
   position: absolute;
   inset: 0;
   z-index: 1;
 }
 
-p.clickable-button {
+p.haurand-button {
   position: relative
 }
 
-p.clickable-button a {
+p.haurand-button a {
   color: var(--dunkelblau-color);
   background-color: white;
   padding: 20px;
@@ -86,7 +99,7 @@ p.clickable-button a {
 
 }
 
-p.clickable-button a:hover {
+p.haurand-button a:hover {
   color: grey;
   outline-color: var(--dunkelblau-color);
   outline-offset: 4px;
