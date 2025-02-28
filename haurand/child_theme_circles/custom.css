@@ -9,29 +9,52 @@
 }
 
 /* Clickable Cards */
-.card {
+.haurand-card {
     position: relative;
     box-shadow: 1px 1px 20px rgb(0 0 0 / 20%);
     padding: 1em;
     transition: filter 0.5s ease-in-out;
 }
 
-.card:hover {
+.haurand-card:hover {
     filter: grayscale(1) opacity(.8);
 }
 
-.card h2 a::before {
+.haurand-card h2 a::before {
     content: '';
     position: absolute;
     inset: 0;
     z-index: 1;
 }
 
-.card h3 a::before {
+.haurand-card h3 a::before {
     content: '';
     position: absolute;
     inset: 0;
     z-index: 1;
+}
+
+p.haurand-button a::before {
+    content: '';
+    /* position: absolute; */
+    inset: 0;
+    z-index: 1;
+}
+
+p.haurand-button {
+    /* position: relative; */
+    margin: 1rem;
+}
+
+p.haurand-button a {
+    color: white;
+    background-color: black;
+    padding: 20px;
+    font-size: clamp(1rem, 0.75rem + 1.25vw, 2.25rem);
+}
+
+p.haurand-button a:hover {
+    color: grey;
 }
 
 /* Runde Fläche mit breiterem Text */
