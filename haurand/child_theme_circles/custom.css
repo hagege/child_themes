@@ -20,19 +20,14 @@
     filter: grayscale(1) opacity(.8);
 }
 
-.haurand-card h2 a::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-}
-
+.haurand-card h2 a::before,
 .haurand-card h3 a::before {
     content: '';
     position: absolute;
     inset: 0;
     z-index: 1;
 }
+
 
 p.haurand-button a::before {
     content: '';
@@ -267,19 +262,20 @@ a.wp-block-navigation-item__content:focus {
 li figure.wp-block-post-featured-image {
     position: relative;
     border: 2px solid rgba(0, 0, 0, 0);
+    padding: 0.6rem;
     border-bottom-color: var(--wp--preset--color--contrast-2);
     transition: all 0.6s ease-in-out;
 }
 
 li figure.wp-block-post-featured-image:hover {
     border: 2px solid var(--wp--preset--color--contrast-2);
-    padding: 0.5rem;
+    padding: 0.4rem;
     transition: all 0.6s ease-in-out;
 }
 
 li figure.wp-block-post-featured-image:focus {
     border: 2px solid var(--wp--preset--color--base-2);
-    padding: 0.2rem;
+    padding: 0.4rem;
     transition: all 0.6s ease-in-out;
 }
 
