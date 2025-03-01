@@ -10,15 +10,16 @@
 
 /* Clickable Cards */
 .haurand-card {
-    position: relative;
+    /*    position: relative; */
     box-shadow: 1px 1px 20px rgb(0 0 0 / 20%);
-    padding: 1em;
-    transition: filter 0.5s ease-in-out;
+    /*    transition: filter 0.5s ease-in-out; */
 }
 
+/*
 .haurand-card:hover {
     filter: grayscale(1) opacity(.8);
 }
+*/
 
 .haurand-card h2 a::before,
 .haurand-card h3 a::before {
@@ -26,6 +27,17 @@
     position: absolute;
     inset: 0;
     z-index: 1;
+}
+
+.haurand-card p,
+.haurand-card h2,
+.haurand-card h3 {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.haurand-card p {
+    padding-bottom: 1em;
 }
 
 
@@ -51,6 +63,7 @@ p.haurand-button a {
 p.haurand-button a:hover {
     color: grey;
 }
+
 
 /* Runde Fläche mit breiterem Text */
 .runde_flaeche {
@@ -259,7 +272,8 @@ a.wp-block-navigation-item__content:focus {
 
 
 /* featured image bei query loop */
-li figure.wp-block-post-featured-image {
+li figure.wp-block-post-featured-image,
+.haurand-card {
     position: relative;
     border: 2px solid rgba(0, 0, 0, 0);
     padding: 0.6rem;
@@ -267,13 +281,15 @@ li figure.wp-block-post-featured-image {
     transition: all 0.6s ease-in-out;
 }
 
-li figure.wp-block-post-featured-image:hover {
+li figure.wp-block-post-featured-image:hover,
+.haurand-card:hover {
     border: 2px solid var(--wp--preset--color--contrast-2);
     padding: 0.4rem;
     transition: all 0.6s ease-in-out;
 }
 
-li figure.wp-block-post-featured-image:focus {
+li figure.wp-block-post-featured-image:focus,
+.haurand-card:focus {
     border: 2px solid var(--wp--preset--color--base-2);
     padding: 0.4rem;
     transition: all 0.6s ease-in-out;
