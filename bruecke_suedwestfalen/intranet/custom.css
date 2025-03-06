@@ -50,6 +50,11 @@ p {
   }
 }
 
+/* Hintergrundfarbe für Hamburger */
+.main-navigation .menu-toggle {
+  background-color: white;
+}
+
 /* Clickable Cards */
 .haurand-card h2 a::before,
 .haurand-card h3 a::before {
@@ -97,8 +102,8 @@ p.haurand-button {
 }
 
 p.haurand-button a {
-  color: var(--dunkelblau-color);
-  background-color: white;
+  color: white;
+  background-color: var(--dunkelblau-color);
   padding: 20px;
   font-size: clamp(1rem, 0.85rem + 0.75vw, 1.75rem);
   font-weight: 400;
@@ -108,7 +113,7 @@ p.haurand-button a {
 }
 
 p.haurand-button a:hover {
-  color: grey;
+  color: lightgray;
   outline-color: var(--dunkelblau-color);
   outline-offset: 4px;
   outline-style: groove;
@@ -455,6 +460,8 @@ h2.kachel_absatz_oben.gb-headline-text {
     height: 3px;
     background-color: currentcolor;
     transition: 0.3s width ease;
+    /* Rand, damit der Unterstrich weiter oben gezeigt wird */
+    margin-bottom: 25px;
   }
 
   .main-navigation .menu>.menu-item.current-menu-item>a::after,
