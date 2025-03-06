@@ -218,10 +218,12 @@ input#swpm-rememberme {
 .swpm-profile-form input,
 .swpm-registration-widget-form input,
 .swpm-login-widget-form input,
-.swpm-edit-profile-form input {
+.swpm-edit-profile-form input,
+.swpm-form select {
   height: 45px;
   font-size: 16px;
   padding: 10px;
+  height: 3.5em !important;
   margin: 10px 0;
   /* Kombiniert margin-top und margin-bottom */
 }
@@ -254,7 +256,8 @@ button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style
 .swpm-login-widget-form button:hover,
 .wp-block-button.is-style-fill.bs-button:hover,
 input.swpm-login-form-submit.swpm-submit-btn-default-style:hover,
-button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style:hover {
+button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style:hover,
+select#country:hover {
   border-color: var(--dunkelblau-color);
   outline-color: var(--dunkelblau-color);
   outline-offset: 4px;
@@ -314,10 +317,11 @@ button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style
 /* Design Membership Ende */
 
 
-/* auf Home andere farbliche GEstaltung */
+/* auf Home andere farbliche Gestaltung */
 .home .inside-article {
-  background-color: var(--dunkelblau-color);
+  /* background-color: var(--dunkelblau-color); */
   padding-top: 0px;
+  border: 1px solid silver;
 }
 
 /* Cursor beim Logo entfernen */
