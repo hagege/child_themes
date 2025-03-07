@@ -114,10 +114,12 @@ input.wpcf7-form-control.wpcf7-submit.has-spinner:focus,
 span.wpcf7-form-control-wrap input:hover,
 span.wpcf7-list-item checkbox:hover,
 input.wpcf7-form-control.wpcf7-submit.has-spinner:hover,
-textarea.wpcf7-form-control.wpcf7-textarea:hover {
+textarea.wpcf7-form-control.wpcf7-textarea:hover,
+input#wp-block-search__input-3:hover {
     background-color: white;
     border-color: black;
     color: black;
+    border-radius: .33rem;
     outline-color: black;
     outline-offset: 4px;
     outline-style: groove;
