@@ -14,10 +14,20 @@ p[class^="haurand-button-"] a::before {
 p.haurand-button-creme, 
 p.haurand-button-rosa,
 p.haurand-button-mint,
-p.haurand-button-mittelgruen  { 
+p.haurand-button-mittelgruen,
+p.haurand-button-dunkelgruen { 
    margin: 1rem; 
 }
 */
+
+p[class^="haurand-button-"] a {
+    color: black;
+    font-size: var(--wp--preset--font-size--medium);
+    font-weight: 500;
+    padding: 1rem;
+    text-decoration: none;
+    border-radius: 10px;
+}
 
 p.haurand-button-creme a {
     background-color: var(--wp--preset--color--custom-creme);
@@ -35,15 +45,10 @@ p.haurand-button-mittelgruen a {
     background-color: var(--wp--preset--color--custom-mittelgruen);
 }
 
-p[class^="haurand-button-"] a {
-    color: black;
-    font-size: var(--wp--preset--font-size--medium);
-    font-weight: 500;
-    padding: 1rem;
-    text-decoration: none;
-    border-radius: 10px;
+p.haurand-button-dunkelgruen a {
+    background-color: var(--wp--preset--color--custom-dunkelgruen);
+    color: white;
 }
-
 
 p[class^="haurand-button-"] a:hover {
     outline-offset: 2px;
@@ -68,4 +73,71 @@ p[class^="haurand-button-"] a:hover {
 .wp-block-navigation__responsive-container-open svg {
     height: 4rem;
     width: 4rem;
+}
+
+
+/* Contact Form 7 */
+/* Buttons Contact Form 7 wie andere Buttons auch */
+input.wpcf7-form-control.wpcf7-submit.has-spinner {
+    color: black;
+    border-radius: .33rem;
+    border-color: black;
+    background-color: white;
+    border-width: 0;
+    font-family: var(--wp--preset--font-family--lexend);
+    font-size: var(--wp--preset--font-size--small);
+    font-style: normal;
+    font-weight: 500;
+    padding-top: 0.6rem;
+    padding-right: 1rem;
+    padding-bottom: 0.6rem;
+    padding-left: 1rem;
+    text-decoration: none;
+}
+
+/* Senden - Button Contact Form 7 */
+input.wpcf7-form-control.wpcf7-submit.has-spinner {
+    background-color: var(--wp--preset--color--custom-mittelgruen);
+    color: black;
+}
+
+/* Eingabefelder Contact Form 7 */
+span.wpcf7-list-item checkbox {
+    height: 2.5rem;
+    font-size: 1.2rem;
+}
+
+/* Ensure focus outline is clear - buttons and input fields, etc. background: grey Contact Form 7 */
+span.wpcf7-form-control-wrap input:focus,
+span.wpcf7-list-item checkbox:focus,
+input.wpcf7-form-control.wpcf7-submit.has-spinner:focus,
+span.wpcf7-form-control-wrap input:hover,
+span.wpcf7-list-item checkbox:hover,
+input.wpcf7-form-control.wpcf7-submit.has-spinner:hover,
+textarea.wpcf7-form-control.wpcf7-textarea:hover {
+    background-color: white;
+    border-color: black;
+    color: black;
+    outline-color: black;
+    outline-offset: 4px;
+    outline-style: groove;
+    outline-width: 4px;
+}
+
+
+input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
+    background-color: var(--wp--preset--color--custom-mittelgruen);
+    color: black;
+}
+
+
+/* Textfeld unten */
+textarea.wpcf7-form-control.wpcf7-textarea {
+    font-size: 1.2rem;
+}
+
+/* Einzeilige Texte */
+input.wpcf7-form-control.wpcf7-text {
+    line-height: 2.5rem;
+    font-size: 1.5rem;
 }
