@@ -20,26 +20,23 @@ p.haurand-button-mittelgruen  {
 */
 
 p.haurand-button-creme a {
-    color: black;
     background-color: var(--wp--preset--color--custom-creme);
 }
 
 p.haurand-button-rosa a {
-    color: black;
     background-color: var(--wp--preset--color--custom-rosa);
 }
 
 p.haurand-button-mint a {
-    color: black;
     background-color: var(--wp--preset--color--custom-hellgruen);
 }
 
 p.haurand-button-mittelgruen a {
-    color: black;
     background-color: var(--wp--preset--color--custom-mittelgruen);
 }
 
 p[class^="haurand-button-"] a {
+    color: black;
     font-size: var(--wp--preset--font-size--medium);
     font-weight: 500;
     padding: 1rem;
@@ -55,7 +52,6 @@ p[class^="haurand-button-"] a:hover {
     border-color: black;
     outline-color: black;
 }
-
 
 .gruppe-mit-cover {
     overflow: hidden;
