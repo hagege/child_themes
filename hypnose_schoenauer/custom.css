@@ -3,6 +3,60 @@
     margin-top: -10rem;
 }
 
+
+p[class^="haurand-button-"] a::before {
+    content: '';
+    inset: 0;
+    z-index: 1;
+}
+
+/*
+p.haurand-button-creme, 
+p.haurand-button-rosa,
+p.haurand-button-mint,
+p.haurand-button-mittelgruen  { 
+   margin: 1rem; 
+}
+*/
+
+p.haurand-button-creme a {
+    color: black;
+    background-color: var(--wp--preset--color--custom-creme);
+}
+
+p.haurand-button-rosa a {
+    color: black;
+    background-color: var(--wp--preset--color--custom-rosa);
+}
+
+p.haurand-button-mint a {
+    color: black;
+    background-color: var(--wp--preset--color--custom-hellgruen);
+}
+
+p.haurand-button-mittelgruen a {
+    color: black;
+    background-color: var(--wp--preset--color--custom-mittelgruen);
+}
+
+p[class^="haurand-button-"] a {
+    font-size: var(--wp--preset--font-size--medium);
+    font-weight: 500;
+    padding: 1rem;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+
+p[class^="haurand-button-"] a:hover {
+    outline-offset: 2px;
+    outline-style: groove;
+    outline-width: 3px;
+    border-color: black;
+    outline-color: black;
+}
+
+
 .gruppe-mit-cover {
     overflow: hidden;
 }
