@@ -130,9 +130,10 @@ p.haurand-button a:hover {
 
 /* Barrierefreies Kontaktformular CF7 */
 /* Buttons von CF7 */
-input.wpcf7-form-control.wpcf7-submit.has-spinner {
-  color: var(--dunkelblau-color);
-  background-color: white;
+input.wpcf7-form-control.wpcf7-submit.has-spinner,
+input.wpcf7-form-control.wpcf7-file {
+  color: white;
+  background-color: var(--dunkelblau-color);
   border-color: var(--dunkelblau-color);
   border: 2px solid var(--dunkelblau-color);
   border-width: 0;
@@ -145,11 +146,19 @@ input.wpcf7-form-control.wpcf7-submit.has-spinner {
   text-decoration: none;
 }
 
-/* Anmelden - Button */
-input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
-  color: var(--dunkelblau-color);
-  background-color: white;
+/* Bestätigung von Datenschutz, etc. */
+input[type="checkbox"] {
+  width: 1em;
+  height: 1em;
+  accent-color: var(--wp--preset--color--global-color-8);
 }
+
+/* Anmelden - Button 
+input.wpcf7-form-control.wpcf7-submit.has-spinner:hover, input.wpcf7-form-control.wpcf7-file:hover {
+  color: white;
+  background-color: var(--dunkelblau-color);
+}
+*/
 
 /* Eingabefelder CF7 */
 span.wpcf7-list-item checkbox {
@@ -162,9 +171,10 @@ span.wpcf7-list-item checkbox {
 /* CF7: Ensure focus outline is clear - buttons and input fields, etc. background: grey */
 span.wpcf7-form-control-wrap input:focus,
 span.wpcf7-list-item checkbox:focus,
-input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
-  color: var(--dunkelblau-color);
-  background-color: white;
+input.wpcf7-form-control.wpcf7-submit.has-spinner:hover,
+input.wpcf7-form-control.wpcf7-file:hover {
+  color: white;
+  background-color: var(--dunkelblau-color);
   border-color: var(--dunkelblau-color);
   outline-color: var(--dunkelblau-color);
   outline-offset: 4px;
@@ -174,9 +184,10 @@ input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
 
 
 /* Buttons, etc. */
-input.wpcf7-form-control.wpcf7-submit.has-spinner:hover,
 textarea.wpcf7-form-control.wpcf7-textarea:focus,
-textarea.wpcf7-form-control.wpcf7-textarea:hover {
+textarea.wpcf7-form-control.wpcf7-textarea:hover,
+input.wpcf7-form-control.wpcf7-text:focus,
+input.wpcf7-form-control.wpcf7-text:hover {
   color: var(--dunkelblau-color);
   background-color: white;
   outline-color: var(--dunkelblau-color);
@@ -195,6 +206,20 @@ textarea.wpcf7-form-control.wpcf7-textarea {
 input.wpcf7-form-control.wpcf7-text {
   line-height: 2.5rem;
   font-size: 1.5rem;
+}
+
+.wpcf7 label {
+  margin-bottom: 10px;
+  /* Abstand unter dem Label */
+  display: block;
+  /* Stellt sicher, dass das Label über dem Eingabefeld bleibt */
+}
+
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 textarea {
+  margin-top: 10px;
+  /* Abstand oberhalb des Eingabefelds */
 }
 
 /* Barrierefreies Kontaktformular CF7 */
@@ -228,7 +253,7 @@ input#swpm-rememberme {
   height: 45px;
   font-size: 16px;
   padding: 10px;
-  height: 3.5em !important;
+  /* height:3.5em !important; */
   margin: 10px 0;
   /* Kombiniert margin-top und margin-bottom */
 }
