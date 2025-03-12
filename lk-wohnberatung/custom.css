@@ -8,6 +8,14 @@
 .wpgmza_map .wpgmza-inner-stack .dataTables_wrapper .dataTables_filter input {
     margin-right: 0px;
     margin-left: 15px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+}
+
+.wpgmza-standalone-component .dataTables_wrapper .dataTables_filter input:focus,
+.wpgmza_map .wpgmza-inner-stack .dataTables_wrapper .dataTables_filter input:focus {
     outline-color: black;
     outline-offset: 4px;
     outline-style: groove;
