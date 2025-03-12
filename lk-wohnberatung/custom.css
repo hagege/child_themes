@@ -3,6 +3,17 @@
     outline-style: solid
 }
 
+/* Suche bei WP Go Maps */
+.wpgmza-standalone-component .dataTables_wrapper .dataTables_filter input,
+.wpgmza_map .wpgmza-inner-stack .dataTables_wrapper .dataTables_filter input {
+    margin-right: 0px;
+    margin-left: 15px;
+    outline-color: black;
+    outline-offset: 4px;
+    outline-style: groove;
+    outline-width: 4px;
+}
+
 /* Instagram Menüpunkt in der Navigation */
 span.wp-block-navigation-item__label {
     display: flex;
