@@ -8,6 +8,14 @@
 
 add_theme_support( 'appearance-tools' );
 
+
+/* Bei Klick auf Logo nicht auf die definierte Startseite (Anmeldung), sondern auf die Startseite des intern-Bereichs */
+
+add_filter( 'generate_logo_href', function() {
+    return home_url('/startseite/');
+});
+
+
 /*
 add_action( 'init', 'themeslug_enqueue_block_styles' );
 
