@@ -29,6 +29,11 @@ Grün 	#87C12C
 
 */
 
+/* Profiländerung ausblenden */
+.swpm-edit-profile-link {
+  display: none;
+}
+
 /* #######################
 automat. Silbentrennung
 ####################### */
@@ -131,7 +136,6 @@ p.haurand-button a:hover {
 /* Barrierefreies Kontaktformular CF7 */
 /* Buttons von CF7 */
 
-/* weniger RAnd nach unten bei den Feldern */
 form.wpcf7-form p {
   margin-bottom: 0.5em;
 }
