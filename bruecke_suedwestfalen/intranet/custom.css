@@ -130,6 +130,13 @@ p.haurand-button a:hover {
 
 /* Barrierefreies Kontaktformular CF7 */
 /* Buttons von CF7 */
+
+/* weniger RAnd nach unten bei den Feldern */
+form.wpcf7-form p {
+  margin-bottom: 0.5em;
+}
+
+
 input.wpcf7-form-control.wpcf7-submit.has-spinner,
 input.wpcf7-form-control.wpcf7-file {
   color: white;
@@ -204,8 +211,8 @@ textarea.wpcf7-form-control.wpcf7-textarea {
 
 /* Einzeilige Texte */
 input.wpcf7-form-control.wpcf7-text {
-  line-height: 2.5rem;
-  font-size: 1.5rem;
+  line-height: 1.2em;
+  font-size: 1.2em;
 }
 
 .wpcf7 label {
