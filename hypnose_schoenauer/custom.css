@@ -3,6 +3,16 @@
     margin-top: -10rem;
 }
 
+/* Hintergrundfarbe für Embed Privacy */
+.embed-privacy-overlay {
+    background-color: #99A799;
+    z-index: 1;
+}
+
+.embed-privacy-overlay label,
+.embed-privacy-overlay p {
+    color: black;
+}
 
 p[class^="haurand-button-"] a::before {
     content: '';
@@ -77,6 +87,13 @@ p[class^="haurand-button-"] a:hover {
 
 
 /* Contact Form 7 */
+/* Länge der Felder */
+input.wpcf7-form-control.wpcf7-text,
+textarea.wpcf7-form-control.wpcf7-textarea {
+    max-width: 80vw;
+}
+
+
 /* Buttons Contact Form 7 wie andere Buttons auch */
 input.wpcf7-form-control.wpcf7-submit.has-spinner {
     color: black;
