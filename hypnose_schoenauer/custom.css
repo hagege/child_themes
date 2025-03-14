@@ -3,6 +3,13 @@
     margin-top: -10rem;
 }
 
+/* Problem bei Firefox auf der Startpage */
+.wp-block-image.alignfull.size-full.wave_startpage_image img,
+.wp-block-image.alignfull.size-full.wave_image img {
+    height: 9rem;
+}
+
+
 /* Hintergrundfarbe für Embed Privacy */
 .embed-privacy-overlay {
     background-color: #99A799;
