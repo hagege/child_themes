@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Variation code base",
+	"slug": "variation-code-base",
+	"blockTypes": ["core/code"],
+	"styles": {
+		"typography": {
+			"fontSize": "var:preset|font-size|small",
+			"lineHeight": "1.5",
+			"letterSpacing": "normal"
+		},
+		"color": {
+				"text": "var(--wp--preset--color--base)",
+				"background": "var(--wp--preset--color--base-2)" 
+		}
+	}
+}

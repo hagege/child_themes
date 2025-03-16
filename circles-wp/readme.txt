@@ -3,7 +3,7 @@ Contributors: Hans-Gerd Gerhards
 Requires at least: 6.6
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,6 +23,11 @@ This great flexibility characterizes the theme.
 Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, sticky-post, threaded-comments, translation-ready, block-styles, wide-blocks, full-site-editing
 
 == Changelog ==
+
+= 1.0.8 =
+* Released: March 14, 2025
+* Added: New style for code block with different Color and Background Color
+* Added: New style for group block with different Background Color - Full Viewport Width
 
 = 1.0.7 =
 * Released: February 1, 2025

@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Full Viewport Width 2",
+	"slug": "full-viewport-width-2",
+	"blockTypes": ["core/group"],
+	"layout": {
+		"contentSize": "100%",
+		"wideSize": "100%"
+	},
+	"styles": {
+		"typography": {
+			"fontSize": "var:preset|font-size|medium",
+			"lineHeight": "1.5",
+			"letterSpacing": "normal"
+		},
+		"spacing": {
+			  "padding": {
+				"top": "3rem",
+				"right": "1rem",
+				"bottom": "3rem",
+				"left": "1rem"
+			  },
+        "margin": {
+				"left": "calc(50% - 50vw)",
+				"right": "calc(50% - 50vw)"
+		      }
+		},
+		"color": {
+ 		       "text": "var(--wp--preset--color--base)",
+			   "background": "var(--wp--preset--color--contrast-4)"
+		},
+		"elements": {
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--base)",
+					"background": "var(--wp--preset--color--contrast-3)"
+				}
+			}
+		}
+	}
+}
