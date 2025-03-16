@@ -110,11 +110,11 @@ p.haurand-button a {
   color: white;
   background-color: var(--dunkelblau-color);
   padding: 20px;
-  font-size: clamp(1rem, 0.85rem + 0.75vw, 1.75rem);
+  font-size: clamp(0.8rem, 0.909vw + 0.618rem, 1.3rem);
   font-weight: 400;
   box-shadow: 5px 5px 5px 1px rgba(30, 51, 127, 0.2);
   border: 1px solid;
-
+  text-decoration: none;
 }
 
 p.haurand-button a:hover {
@@ -365,10 +365,11 @@ button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style
   border: 1px solid silver;
 }
 
-/* Cursor beim Logo entfernen */
+/* Cursor beim Logo entfernen - entfernt 13.3.2025 
 .navigation-stick .site-logo a {
   pointer-events: none;
 }
+*/
 
 /* verindert die Anzeige "Werden Sie Mitglied bei uns" bei der Anmeldung */
 .swpm-join-us-link {
