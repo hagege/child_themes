@@ -1,8 +1,32 @@
 /* Tabelle with scrollbar */
-table#tablepress-1 {
+
+/* Anmeldung-Notiz Forum ausblenden */
+.notices-panel {
+    display: none;
+}
+
+/* Einstellungen für TabelPress */
+table#tablepress-1,
+table#tablepress-2 {
     display: block;
     overflow-x: auto;
     white-space: nowrap;
+}
+
+.tablepress>:where(thead, tfoot)>*>th {
+    background-color: var(--wp--preset--color--base-2);
+    color: white;
+    font-weight: 500;
+    vertical-align: middle;
+    word-break: normal;
+}
+
+.tablepress thead .dt-orderable-asc:hover,
+.tablepress thead .dt-orderable-desc:hover,
+.tablepress thead .dt-ordering-asc,
+.tablepress thead .dt-ordering-desc {
+    background-color: var(--wp--preset--color--contrast-4);
+    color: white;
 }
 
 /* Instagram Menüpunkt in der Navigation */
