@@ -24,6 +24,40 @@
     --wp--preset--color--custom-rot: #eb1717;
 }
 
+
+/* Styling checked items 
+https://wordpress.org/support/plugin/todo-list-block/ */
+.Tasklist-Item[data-checked="checked"] {
+    text-decoration: underline dotted green;
+    opacity: 0.7;
+    list-style-type: none;
+    padding-left: 1.5em;
+    position: relative;
+}
+
+.Tasklist-Item[data-checked="checked"]::before {
+    content: "☑";
+    position: absolute;
+    left: 0;
+    color: green;
+    font-weight: bold;
+}
+
+/* Styling unchecked items */
+.Tasklist-Item:not([data-checked="checked"]) {
+    list-style-type: none;
+    padding-left: 1.5em;
+    position: relative;
+}
+
+.Tasklist-Item:not([data-checked="checked"])::before {
+    content: "☐";
+    position: absolute;
+    left: 0;
+    color: #ccc;
+    font-size: 1em;
+}
+
 /* Design mit Wave im unteren Bereich */
 .negativer-spacer {
     margin-top: -10rem;
