@@ -57,6 +57,11 @@ span.wp-block-navigation-item__label {
 
 /* Simple Membership Registrierung und Profil - Form Builder */
 
+/* Anzeige Asterisk ausblenden */
+span.swpm-required-asterisk {
+    display: none;
+}
+
 /* weißer Hintergrund ohne Rahmen */
 .swpm-form-builder fieldset {
     border: 0px !important;
@@ -91,39 +96,22 @@ label.swpm-desc {
     font-size: 16px;
 }
 
-form#registrierung-landeskoordination-1 input[type="text"],
-form#registrierung-landeskoordination-1 input[type="email"],
-form#registrierung-landeskoordination-1 input[type="password"],
-form#registrierung-landeskoordination-1 input[type="tel"],
-form#registrierung-landeskoordination-1 input[type="url"],
-form#registrierung-landeskoordination-1 input[type="number"],
-form#profile-edit-form-for-level-0-2 input[type="text"],
-form#profile-edit-form-for-level-0-2 input[type="email"],
-form#profile-edit-form-for-level-0-2 input[type="password"],
-form#profile-edit-form-for-level-0-2 input[type="tel"],
-form#profile-edit-form-for-level-0-2 input[type="url"],
-form#profile-edit-form-for-level-0-2 input[type="number"],
+form#registrierung-landeskoordination-1 input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
+form#profile-edit-form-for-level-0-2 input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
+form#profil-landeskoordination-2 input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
 form#registrierung-landeskoordination-1 select,
 .swpm-registration-form textarea {
     height: 45px;
-    /* Höhe der Eingabefelder */
     padding: 10px;
     font-size: 16px;
-    /* Größere Schrift */
+    width: 90%;
 }
 
-form#registrierung-landeskoordination-1 input[type="text"]:focus,
-form#registrierung-landeskoordination-1 input[type="email"]:focus,
-form#registrierung-landeskoordination-1 input[type="password"]:focus,
-form#registrierung-landeskoordination-1 input[type="tel"]:focus,
-form#registrierung-landeskoordination-1 input[type="url"]:focus,
-form#registrierung-landeskoordination-1 input[type="number"]:focus,
-form#profile-edit-form-for-level-0-2 input[type="text"]:focus,
-form#profile-edit-form-for-level-0-2 input[type="email"]:focus,
-form#profile-edit-form-for-level-0-2 input[type="password"]:focus,
-form#profile-edit-form-for-level-0-2 input[type="tel"]:focus,
-form#profile-edit-form-for-level-0-2 input[type="url"]:focus,
-form#profile-edit-form-for-level-0-2 input[type="number"]:focus {
+form#registrierung-landeskoordination-1 input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):focus,
+form#profile-edit-form-for-level-0-2 input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):focus,
+form#profil-landeskoordination-2 input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):focus,
+form#registrierung-landeskoordination-1 select,
+.swpm-registration-form textarea:focus {
     background-color: var(--wp--preset--color--base);
     border-color: var(--wp--preset--color--contrast);
     color: var(--wp--preset--color--contrast);
@@ -134,20 +122,11 @@ form#profile-edit-form-for-level-0-2 input[type="number"]:focus {
 }
 
 /* Simple Membership Registrierung */
-form#registrierung-landeskoordination-1 input[type="text"]:hover,
-form#registrierung-landeskoordination-1 input[type="email"]:hover,
-form#registrierung-landeskoordination-1 input[type="password"]:hover,
-form#registrierung-landeskoordination-1 input[type="tel"]:hover,
-form#registrierung-landeskoordination-1 input[type="url"]:hover,
-form#registrierung-landeskoordination-1 input[type="number"]:hover,
+form#registrierung-landeskoordination-1 input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):hover,
+form#profile-edit-form-for-level-0-2 input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):hover,
+form#profil-landeskoordination-2 input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):hover,
 form#registrierung-landeskoordination-1 select:hover,
-.swpm-registration-form textarea:hover,
-form#profile-edit-form-for-level-0-2 input[type="text"]:hover,
-form#profile-edit-form-for-level-0-2 input[type="email"]:hover,
-form#profile-edit-form-for-level-0-2 input[type="password"]:hover,
-form#profile-edit-form-for-level-0-2 input[type="tel"]:hover,
-form#profile-edit-form-for-level-0-2 input[type="url"]:hover,
-form#profile-edit-form-for-level-0-2 input[type="number"]:hover {
+.swpm-registration-form textarea:hover {
     background-color: var(--wp--preset--color--base);
     border-color: var(--wp--preset--color--contrast);
     color: var(--wp--preset--color--contrast);
