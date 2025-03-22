@@ -27,12 +27,24 @@
 
 /* Styling checked items 
 https://wordpress.org/support/plugin/todo-list-block/ */
+
+/* Customization Backend Todo-List-Block */
+.wp-block-tabor-todo-list {
+    --color: #128234;
+}
+
+.wp-block-tabor-todo-item.is-checked .block-editor-rich-text__editable {
+    /* text-decoration: line-through; */
+    color: #999;
+}
+
 .Tasklist-Item[data-checked="checked"] {
-    text-decoration: underline dotted green;
+    /* text-decoration: underline dotted green; */
     opacity: 0.7;
     list-style-type: none;
     padding-left: 1.5em;
     position: relative;
+    color: #999;
 }
 
 .Tasklist-Item[data-checked="checked"]::before {
