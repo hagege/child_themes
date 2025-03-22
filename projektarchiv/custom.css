@@ -34,8 +34,13 @@ https://wordpress.org/support/plugin/todo-list-block/ */
 }
 
 .wp-block-tabor-todo-item.is-checked .block-editor-rich-text__editable {
-    /* text-decoration: line-through; */
+    text-decoration: none;
     color: #999;
+}
+
+.wp-block-tabor-todo-item {
+    align-items: baseline;
+    gap: 12px;
 }
 
 .Tasklist-Item[data-checked="checked"] {
