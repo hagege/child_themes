@@ -57,6 +57,11 @@ span.wp-block-navigation-item__label {
 
 /* Simple Membership Registrierung und Profil - Form Builder */
 
+/* Meldung Registrierung soll nicht angezeigt werden */
+p#form_success {
+    display: none;
+}
+
 /* Anzeige Asterisk ausblenden */
 span.swpm-required-asterisk {
     display: none;
@@ -341,12 +346,16 @@ input#swpm-accept-terms {
 /* Textfeld unten */
 textarea.wpcf7-form-control.wpcf7-textarea {
     font-size: 1.2rem;
+    border-radius: 5px;
+    width: 95%;
 }
 
 /* Einzeilige Texte */
 input.wpcf7-form-control.wpcf7-text {
     line-height: 2.5rem;
     font-size: 1.5rem;
+    border-radius: 5px;
+    width: 95%;
 }
 
 /* für die Spalten in den Kacheln */
