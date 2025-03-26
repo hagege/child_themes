@@ -5,6 +5,12 @@
     display: none;
 }
 
+/* Asgaros-Profil ändern: deaktiviert */
+a.edit-profile-link {
+    display: none !important;
+}
+
+
 /* Einstellungen für TabelPress */
 table#tablepress-1,
 table#tablepress-2 {
@@ -56,6 +62,11 @@ span.wp-block-navigation-item__label {
 
 
 /* Simple Membership Registrierung und Profil - Form Builder */
+
+/* Anzeige links Registrierung deaktiviert */
+.swpm-join-us-link {
+    display: none;
+}
 
 /* Meldung Registrierung soll nicht angezeigt werden */
 p#form_success {
