@@ -187,7 +187,9 @@ button.swpm-submit.swpm-profile-submit-button.swpm-submit-btn-default-style,
 button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style,
 input.swpm-pw-reset-submit.swpm-submit-btn-default-style,
 input.swpm-login-form-submit.swpm-submit-btn-default-style,
-input.wpcf7-form-control.wpcf7-submit.has-spinner {
+input.wpcf7-form-control.wpcf7-submit.has-spinner,
+input#basic-local-avatar,
+input[type="submit"] {
     color: var(--wp--preset--color--base);
     border-radius: .33rem;
     border-color: var(--wp--preset--color--base-2);
@@ -208,7 +210,9 @@ input.wpcf7-form-control.wpcf7-submit.has-spinner {
 /* Anmelden - Button */
 input.swpm-login-form-submit.swpm-submit-btn-default-style:hover,
 button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style:hover,
-input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
+input.wpcf7-form-control.wpcf7-submit.has-spinner:hover,
+input#basic-local-avatar:hover,
+input[type="submit"]:hover {
     background-color: var(--wp--preset--color--contrast-4);
     color: var(--wp--preset--color--base);
     /* font-size: 1.2rem; */
@@ -255,7 +259,9 @@ input#swpm_reenter_new_password:hover,
 span.wpcf7-form-control-wrap input:focus,
 span.wpcf7-list-item checkbox:focus,
 input.wpcf7-form-control.wpcf7-submit.has-spinner:hover,
-span.wpcf7-form-control-wrap textarea:hover {
+span.wpcf7-form-control-wrap textarea:hover,
+input#basic-local-avatar:hover,
+input[type="submit"]:hover {
     background-color: var(--wp--preset--color--base);
     border-color: var(--wp--preset--color--contrast);
     color: var(--wp--preset--color--contrast);
@@ -310,7 +316,9 @@ span.wpcf7-form-control-wrap textarea:hover {
 button.swpm-submit.swpm-registration-submit-button.swpm-submit-btn-default-style:hover,
 input.wpcf7-form-control.wpcf7-submit.has-spinner:hover,
 button.swpm-submit.swpm-profile-submit-button.swpm-submit-btn-default-style:hover,
-input.swpm-pw-reset-submit.swpm-submit-btn-default-style:hover {
+input.swpm-pw-reset-submit.swpm-submit-btn-default-style:hover,
+input#basic-local-avatar:hover,
+input[type="submit"]:hover {
     background-color: var(--wp--preset--color--contrast-4);
     color: var(--wp--preset--color--base);
     outline-color: var(--wp--preset--color--contrast);
