@@ -1,0 +1,140 @@
+{
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"color": "#c60000",
+					"name": "rot",
+					"slug": "custom-rot"
+				},
+				{
+					"color": "#636363",
+					"name": "mittelgrau",
+					"slug": "custom-mittelgrau"
+				},
+				{
+					"color": "#979999",
+					"name": "hellgrau",
+					"slug": "custom-hellgrau"
+				},
+				{
+					"color": "#000",
+					"name": "Schwarz",
+					"slug": "custom-schwarz"
+				},
+				{
+					"color": "#ffffff",
+					"name": "Weiß",
+					"slug": "custom-wei"
+				}
+			]
+		},
+		"layout": {
+			"contentSize": "900px"
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Lexend",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/lexend/lexend-400-normal.woff2"
+							]
+						},
+						{
+							"fontFamily": "Lexend",
+							"fontStyle": "normal",
+							"fontWeight": "300",
+							"src": [
+								"file:./assets/fonts/lexend/lexend-300-normal.woff2"
+							]
+						},
+						{
+							"fontFamily": "Lexend",
+							"fontStyle": "normal",
+							"fontWeight": "600",
+							"src": [
+								"file:./assets/fonts/lexend/lexend-600-normal.woff2"
+							]
+						}
+					],
+					"fontFamily": "Lexend, sans-serif",
+					"name": "Lexend",
+					"slug": "lexend"
+				}
+			]
+		}
+	},
+	"styles": {
+		"blocks": {
+			"core/list": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--lexend)"
+				}
+			},
+			"core/paragraph": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--medium)"
+				}
+			},
+			"core/quote": {
+				"typography": {
+					"fontStyle": "normal",
+					"fontWeight": "300"
+				}
+			}
+		},
+		"color": {
+			"background": "#ffffff",
+			"text": "var(--wp--preset--color--custom-mittelgrau)"
+		},
+		"css": "/* Menü bei hover */\n.wp-block-navigation a:where(:not(.wp-element-button)) {\n  text-decoration: none;\n  padding: 0.3em 0.5em;\n}\n\n.wp-block-navigation a:where(:not(.wp-element-button)):hover {\n  text-decoration: none;\n  background-color: var(--wp--preset--color--dunkelblau);\n  color: #ffffff !important;\n}\n\n.wp-block-navigation a:where(:not(.wp-element-button)):focus {\n  text-decoration: none;\n  outline: 2px;\n}",
+		"elements": {
+			"button": {
+				"color": {
+					"background": "var(--wp--preset--color--custom-mittelgrau)",
+					"text": "var(--wp--preset--color--base)"
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--lexend)"
+				}
+			},
+			"caption": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--lexend)"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--lexend)",
+					"fontStyle": "normal",
+					"fontWeight": "400"
+				}
+			},
+			"link": {
+				":hover": {
+					"color": {
+						"text": "var(--wp--preset--color--custom-hellgrau)"
+					}
+				},
+				"color": {
+					"text": "var(--wp--preset--color--custom-mittelgrau)"
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--lexend)"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--lexend)",
+			"fontSize": "var(--wp--preset--font-size--medium)",
+			"fontStyle": "normal",
+			"fontWeight": "300"
+		}
+	},
+	"version": 3,
+	"$schema": "https://schemas.wp.org/wp/6.7/theme.json"
+}
