@@ -48,11 +48,11 @@ p.haurand-button a:hover {
 /* Unterstrich bei Überschriften */
 .haurand-card h3.wp-block-heading a {
     text-decoration: none;
-    background-image: linear-gradient(to right, var(--wp--preset--color--custom-rot) 50%, transparent 100%);
+    background-image: linear-gradient(to right, var(--wp--preset--color--custom-rot) 80%, transparent 20%);
     background-position: 0 100%;
-    background-size: 100% 3px;
+    background-size: 100% 5px;
     background-repeat: no-repeat;
-    padding-bottom: 5px;
+    padding-bottom: 8px;
 }
 
 
@@ -78,7 +78,6 @@ p.haurand-button a:hover {
 li figure.wp-block-post-featured-image,
 .haurand-card {
     position: relative;
-    border: 2px solid rgba(0, 0, 0, 0);
     padding: 0.6rem;
     border-bottom-color: var(--wp--preset--color--custom-rot);
     transition: all 1s ease-in-out;
@@ -87,7 +86,6 @@ li figure.wp-block-post-featured-image,
 
 li figure.wp-block-post-featured-image:hover,
 .haurand-card:hover {
-    border: 2px solid var(--wp--preset--color--custom-rot);
     padding: 0.4rem;
     transition: all 1s ease-in-out;
     filter: grayscale(40%) opacity(.6);
