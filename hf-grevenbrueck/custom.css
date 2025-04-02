@@ -17,39 +17,8 @@
     outline: 2px;
 }
 
-/* Clickable Cards */
-.haurand-card {
-    /*    position: relative; */
-    box-shadow: 1px 1px 20px rgb(0 0 0 / 20%);
-    /*    transition: filter 0.5s ease-in-out; */
-}
 
-/*
-  .haurand-card:hover {
-      filter: grayscale(1) opacity(.8);
-  }
-  */
-
-.haurand-card h2 a::before,
-.haurand-card h3 a::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-}
-
-.haurand-card p,
-.haurand-card h2,
-.haurand-card h3 {
-    padding-left: 1em;
-    padding-right: 1em;
-}
-
-.haurand-card p {
-    padding-bottom: 1em;
-}
-
-
+/* Clickable Buttons */
 p.haurand-button a::before {
     content: '';
     /* position: absolute; */
@@ -74,25 +43,62 @@ p.haurand-button a:hover {
 }
 
 /* featured image bei query loop und Referenzen */
+
+/* Clickable Cards */
+/* .haurand-card {
+     position: relative; 
+      box-shadow: 1px 1px 20px rgb(0 0 0 / 20%);
+     transition: filter 0.5s ease-in-out; 
+  
+  }
+  
+  
+  .haurand-card:hover {
+      filter: grayscale(1) opacity(.8);
+     transition: filter 1s ease-in-out; 
+  }
+  */
+
+.haurand-card h2 a::before,
+.haurand-card h3 a::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.haurand-card p,
+.haurand-card h2,
+.haurand-card h3 {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.haurand-card p {
+    padding-bottom: 1em;
+}
+
 li figure.wp-block-post-featured-image,
 .haurand-card {
     position: relative;
     border: 2px solid rgba(0, 0, 0, 0);
     padding: 0.6rem;
-    border-bottom-color: var(--wp--preset--color--contrast-2);
-    transition: all 0.6s ease-in-out;
+    border-bottom-color: var(--wp--preset--color--custom-rot);
+    transition: all 1s ease-in-out;
+    box-shadow: 1px 1px 20px rgb(0 0 0 / 20%);
 }
 
 li figure.wp-block-post-featured-image:hover,
 .haurand-card:hover {
-    border: 2px solid var(--wp--preset--color--contrast-2);
+    border: 2px solid var(--wp--preset--color--custom-rot);
     padding: 0.4rem;
-    transition: all 0.6s ease-in-out;
+    transition: all 1s ease-in-out;
+    filter: grayscale(1) opacity(.6);
 }
 
 li figure.wp-block-post-featured-image:focus,
 .haurand-card:focus {
-    border: 2px solid var(--wp--preset--color--base-2);
+    border: 2px solid var(--wp--preset--color--custom-rot);
     padding: 0.4rem;
-    transition: all 0.6s ease-in-out;
+    transition: all 1s ease-in-out;
 }
