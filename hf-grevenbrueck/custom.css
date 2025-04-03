@@ -1,3 +1,35 @@
+/* Infokasten auf der Startseite 
+.infokasten {
+    box-shadow: 1px 1px 20px rgb(0 0 0 / 20%);
+    border-right-width: 0px !important;
+}
+*/
+
+
+/* Desktop (4 Spalten) 
+.grid-hauptseite {
+    box-shadow: 1px 1px 20px rgb(0 0 0 / 20%);
+   display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem; 
+
+}
+*/
+
+/* Tablet (2x2 Grid) */
+@media (max-width: 1024px) {
+    .grid-hauptseite {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* Mobile (1x4 Grid) */
+@media (max-width: 368px) {
+    .grid-hauptseite {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+}
+
 /* Menü bei hover */
 .wp-block-navigation a:where(:not(.wp-element-button)) {
     text-decoration: none;
@@ -81,14 +113,14 @@ li figure.wp-block-post-featured-image,
     padding: 0.6rem;
     border-bottom-color: var(--wp--preset--color--custom-rot);
     transition: all 1s ease-in-out;
-    box-shadow: 1px 1px 20px rgb(0 0 0 / 20%);
+    /* box-shadow: 1px 1px 20px rgb(0 0 0 / 20%); */
 }
 
 li figure.wp-block-post-featured-image:hover,
 .haurand-card:hover {
     padding: 0.4rem;
     transition: all 1s ease-in-out;
-    filter: grayscale(40%) opacity(.6);
+    filter: grayscale(40%) opacity(0.6);
 }
 
 li figure.wp-block-post-featured-image:focus,
