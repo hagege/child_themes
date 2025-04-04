@@ -10,6 +10,15 @@ a.edit-profile-link {
     display: none !important;
 }
 
+/* Damit das Suchfeld das Menü nicht überdeckt */
+input#wp-block-search__input-4 {
+    z-index: 0 !important;
+}
+
+.search-in-place {
+    z-index: 0;
+}
+
 
 /* Einstellungen für TabelPress */
 table#tablepress-1,
@@ -127,7 +136,8 @@ form#registrierung-landeskoordination-1 input:not([type="submit"]):not([type="ch
 form#profile-edit-form-for-level-0-2 input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):focus,
 form#profil-landeskoordination-2 input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):focus,
 form#registrierung-landeskoordination-1 select,
-.swpm-registration-form textarea:focus {
+.swpm-registration-form textarea:focus,
+input[name="s"]:hover {
     background-color: var(--wp--preset--color--base);
     border-color: var(--wp--preset--color--contrast);
     color: var(--wp--preset--color--contrast);

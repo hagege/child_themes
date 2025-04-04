@@ -22,6 +22,15 @@
     outline-width: 4px;
 }
 
+/* Damit das Suchfeld das Menü nicht überdeckt */
+input#wp-block-search__input-3 {
+    z-index: 0 !important;
+}
+
+.search-in-place {
+    z-index: 0;
+}
+
 /* Instagram Menüpunkt in der Navigation */
 span.wp-block-navigation-item__label {
     display: flex;
