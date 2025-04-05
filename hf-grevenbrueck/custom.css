@@ -5,6 +5,12 @@
 }
 */
 
+@media (min-width: 1030px) {
+    p.schrift_menue {
+        display: none;
+    }
+}
+
 
 /* Desktop (4 Spalten) 
 .grid-hauptseite {
