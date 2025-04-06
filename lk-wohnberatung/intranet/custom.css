@@ -5,9 +5,24 @@
     display: none;
 }
 
+/* zusätzlicher oberer Rand bei Events (einzeln und Archive) */
+.tribe-block.tec-block__single-event,
+.tribe-block.tec-block__archive-events {
+    margin-top: 10em;
+}
+
 /* Asgaros-Profil ändern: deaktiviert */
 a.edit-profile-link {
     display: none !important;
+}
+
+/* Colors accessible */
+#af-wrapper .forum small,
+#af-wrapper .topic small,
+#af-wrapper .member small,
+#af-wrapper .unread-topic small,
+#af-wrapper .unapproved-topic small {
+    color: black;
 }
 
 /* Damit das Suchfeld das Menü nicht überdeckt */
