@@ -5,7 +5,19 @@
 }
 */
 
-@media (min-width: 1070px) {
+/* Breakpoint mobiles Menü */
+@media screen and (max-width: 1070px) {
+    .wp-block-navigation__responsive-container-open {
+        display: block !important;
+    }
+
+    .wp-block-navigation__responsive-container:not(.is-menu-open.has-modal-open) {
+        display: none !important;
+    }
+}
+
+/* Schriftzug Menü */
+@media screen and (min-width: 1070px) {
     p.schrift_menue {
         display: none;
     }
@@ -13,14 +25,14 @@
 
 
 /* Desktop (4 Spalten) 
-    .grid-hauptseite {
-        box-shadow: 1px 1px 20px rgb(0 0 0 / 20%);
-       display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem; 
-    
-    }
-    */
+ .grid-hauptseite {
+     box-shadow: 1px 1px 20px rgb(0 0 0 / 20%);
+    display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 1rem; 
+ 
+ }
+ */
 
 /* Tablet (2x2 Grid) */
 @media (max-width: 1024px) {
