@@ -1,11 +1,16 @@
-/* Infokasten auf der Startseite 
-.infokasten {
-    box-shadow: 1px 1px 20px rgb(0 0 0 / 20%);
-    border-right-width: 0px !important;
+/* Variablen */
+:root {
+    -hf--breakpoint: 1070px;
 }
-*/
 
-/* Breakpoint mobiles Menü */
+/* Infokasten auf der Startseite 
+ .infokasten {
+     box-shadow: 1px 1px 20px rgb(0 0 0 / 20%);
+     border-right-width: 0px !important;
+ }
+ */
+
+/* Breakpoint für mobiles Menü anpassen */
 @media screen and (max-width: 1070px) {
     .wp-block-navigation__responsive-container-open {
         display: block !important;
