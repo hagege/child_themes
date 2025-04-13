@@ -5,7 +5,8 @@ p.haurand-button a::before {
     z-index: 1;
 }
 
-p.haurand-button {
+p.haurand-button,
+p.haurand-button-blau {
     /* position: relative; */
     margin: 1rem;
 }
@@ -13,11 +14,27 @@ p.haurand-button {
 p.haurand-button a {
     color: var(--wp--preset--color--custom-weiss);
     background-color: var(--wp--preset--color--custom-blau);
-    padding: 20px;
-    font-size: clamp(1rem, 0.909vw + 0.818rem, 1.5rem);
+    padding: 0.8em;
+    font-size: inherit;
+    text-decoration: none;
 }
 
-p.haurand-button a:hover {
+p.haurand-button-blau a {
+    color: var(--wp--preset--color--custom-blau);
+    background-color: var(--wp--preset--color--custom-weiss);
+    padding: 0.8em;
+    font-size: inherit;
+    text-decoration: none;
+}
+
+p.haurand-button a:hover,
+p.haurand-button-blau a:hover {
     color: var(--wp--preset--color--custom-weiss);
     background-color: var(--wp--preset--color--custom-graublau);
+}
+
+/* Hover bei Buttons im seitenheader-blau */
+a.wp-block-button__link.has-custom-blau-color.has-custom-weiss-background-color.has-text-color.has-background.has-link-color.wp-element-button:hover {
+    color: var(--wp--preset--color--custom-weiss) !important;
+    background-color: var(--wp--preset--color--custom-graublau) !important;
 }
