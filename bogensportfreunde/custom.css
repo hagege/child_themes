@@ -1,0 +1,23 @@
+p.haurand-button a::before {
+    content: '';
+    /* position: absolute; */
+    inset: 0;
+    z-index: 1;
+}
+
+p.haurand-button {
+    /* position: relative; */
+    margin: 1rem;
+}
+
+p.haurand-button a {
+    color: var(--wp--preset--color--custom-weiss);
+    background-color: var(--wp--preset--color--custom-blau);
+    padding: 20px;
+    font-size: clamp(1rem, 0.909vw + 0.818rem, 1.5rem);
+}
+
+p.haurand-button a:hover {
+    color: var(--wp--preset--color--custom-weiss);
+    background-color: var(--wp--preset--color--custom-graublau);
+}

@@ -32,11 +32,6 @@
                     "slug": "custom-graublau"
                 },
                 {
-                    "color": "#000000",
-                    "name": "schwarz",
-                    "slug": "custom-schwarz"
-                },
-                {
                     "color": "#ffffff",
                     "name": "Weiß",
                     "slug": "custom-weiss"
@@ -2476,6 +2471,10 @@
                     "color": {
                         "background": "color-mix(in srgb, var(--wp--preset--color--custom-graublau) 85%, transparent)",
                         "text": "var(--wp--preset--color--custom-weiss)"
+                    },
+                    "outline": {
+                        "color": "var(--wp--preset--color--custom-graublau)",
+                        "offset": "2px"
                     }
                 },
                 "color": {
