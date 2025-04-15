@@ -55,16 +55,17 @@
 
 /* mobiles Menü */
 /* Mobile Menü - Standard-Zustand */
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container a {
-    background-color: var(--wp--preset--color--custom-wei);
-    color: var(--wp--preset--color--custom-mittelgrau);
-}
+/*
+ .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container a {
+   background-color: var(--wp--preset--color--custom-rot);
+   color: var(--wp--preset--color--custom-wei);
+ }
+ */
 
 /* Hover- und Focus-Zustand */
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container a:hover,
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container a:focus {
     background-color: var(--wp--preset--color--custom-rot);
-    color: var(--wp--preset--color--custom-wei);
 }
 
 /* Desktop Menü */
@@ -77,13 +78,14 @@
 .wp-block-navigation a:where(:not(.wp-element-button)):hover {
     text-decoration: none;
     background-color: var(--wp--preset--color--custom-rot);
-
-    color: #ffffff !important;
+    color: var(--wp--preset--color--custom-wei) !important;
 }
 
-.wp-block-navigation a:where(:not(.wp-element-button)):focus {
+.wp-block-navigation a:where(:not(.wp-element-button)):focus,
+.wp-block-navigation a:where(:not(.wp-element-button)):active {
     text-decoration: none;
-    background-color: var(--wp--preset--color--custom-mittelgrau);
+    background-color: var(--wp--preset--color--custom-rot);
+    color: var(--wp--preset--color--custom-wei) !important;
     outline: 2px;
 }
 
