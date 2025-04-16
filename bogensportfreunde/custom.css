@@ -14,10 +14,15 @@
     }
 }
 
-/* Websitetitel im Menü zweizeilig */
+/* Websitetitel im Menü zweizeilig - muss später noch geprüft werden */
 @media screen and (max-width: 590px) {
     p.has-text-align-center.bsf-websitetitel.wp-block-site-title {
-        display: none;
+        font-size: clamp(0.8rem, 0.727vw + 0.655rem, 1.2rem)
+    }
+
+    img.custom-logo {
+        /*    height: 20vw !important; */
+        width: 20vw;
     }
 }
 
