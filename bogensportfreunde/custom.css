@@ -39,7 +39,7 @@
 /* Mobile Menü - Standard-Zustand */
 /*
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container a {
-  background-color: var(--wp--preset--color--custom-blau);
+  background-color: var(--wp--preset--color--custom-blau) ;
   color: var(--wp--preset--color--custom-weiss);
 }
 */
