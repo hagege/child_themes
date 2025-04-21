@@ -1,3 +1,9 @@
+/* Mehr Rand bei der H2 */
+h2.wp-block-heading {
+    margin-top: var(--wp--preset--spacing--60);
+    margin-bottom: var(--wp--preset--spacing--40);
+}
+
 /* Kalender */
 .tribe-events .tribe-events-header {
     margin-top: 5em !important;
@@ -37,12 +43,6 @@
 
 /* mobiles Menü */
 /* Mobile Menü - Standard-Zustand */
-/*
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container a {
-  background-color: var(--wp--preset--color--custom-blau) ;
-  color: var(--wp--preset--color--custom-weiss);
-}
-*/
 
 /* Hover- und Focus-Zustand */
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container a:hover,
@@ -78,7 +78,7 @@
     }
 }
 
-/* Links un Footer besser darstellen */
+/* Links im Footer besser darstellen */
 .footer_links a {
     box-shadow: inset 0 -1px 0 var(--wp--preset--color--custom-weiss);
 }

@@ -80,6 +80,22 @@
                 "typography": {
                     "fontFamily": "var(--wp--preset--font-family--lexend)"
                 }
+            },
+            "h1": {
+                "color": {
+                    "text": "var(--wp--preset--color--custom-blau)"
+                }
+            },
+            "h2": {
+                "color": {
+                    "text": "var(--wp--preset--color--custom-blau)"
+                },
+                "spacing": {
+                    "margin": {
+                        "top": "var(--wp--preset--spacing--40)",
+                        "bottom": "var(--wp--preset--spacing--40)"
+                    }
+                }
             }
         },
         "typography": {
