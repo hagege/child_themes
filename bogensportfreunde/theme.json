@@ -13,9 +13,9 @@
                     "slug": "custom-hellblau"
                 },
                 {
-                    "color": "#0092FA",
-                    "name": "Mittelblau",
-                    "slug": "custom-mittelblau"
+                    "color": "#d6d6d6",
+                    "name": "Mittelgrau",
+                    "slug": "custom-mittelgrau"
                 },
                 {
                     "color": "#ffffff",

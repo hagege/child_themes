@@ -1,3 +1,16 @@
+/* #######################
+smooth scrolling und korrekte Ansteuerung interner Anker
+######################### */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+/* Background-color für embed privacy */
+.embed-privacy-overlay {
+    background-color: var(--wp--preset--color--custom-blau);
+}
+
 /* Kalender */
 .tribe-events .tribe-events-header {
     margin-top: 5em !important;
@@ -60,7 +73,7 @@
 
 .wp-block-navigation a:where(:not(.wp-element-button)):focus {
     text-decoration: none;
-    background-color: var(--wp--preset--color--custom-mittelblau);
+    background-color: var(--wp--preset--color--custom-mittelgrau);
     outline: 2px;
 }
 
@@ -78,7 +91,7 @@
 }
 
 .footer_links a:hover {
-    box-shadow: inset 0 -1px 0 var(--wp--preset--color--custom-mittelblau);
+    box-shadow: inset 0 -1px 0 var(--wp--preset--color--custom-mittelgrau);
 }
 
 /* clickable button */
@@ -115,11 +128,11 @@ p.haurand-button-blau a {
 p.haurand-button a:hover,
 p.haurand-button-blau a:hover {
     color: var(--wp--preset--color--custom-schwarz);
-    background-color: var(--wp--preset--color--custom-mittelblau);
+    background-color: var(--wp--preset--color--custom-mittelgrau);
 }
 
 /* Hover bei Buttons im seitenheader-blau */
 a.wp-block-button__link.has-custom-blau-color.has-custom-weiss-background-color.has-text-color.has-background.has-link-color.wp-element-button:hover {
     color: var(--wp--preset--color--custom-weiss) !important;
-    background-color: var(--wp--preset--color--custom-mittelblau) !important;
+    background-color: var(--wp--preset--color--custom-mittelgrau) !important;
 }
