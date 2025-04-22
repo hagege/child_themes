@@ -13,9 +13,9 @@
                     "slug": "custom-hellblau"
                 },
                 {
-                    "color": "#6c8ba4",
-                    "name": "Graublau",
-                    "slug": "custom-graublau"
+                    "color": "#0092FA",
+                    "name": "Mittelblau",
+                    "slug": "custom-mittelblau"
                 },
                 {
                     "color": "#ffffff",
@@ -54,10 +54,20 @@
         }
     },
     "styles": {
-        "color": {
-            "background": "var(--wp--preset--color--custom-wei)"
+        "blocks": {
+            "core/heading": {
+                "spacing": {
+                    "padding": {
+                        "bottom": "0",
+                        "top": "0"
+                    }
+                }
+            }
         },
-        "css": "/* Kalender */\n.tribe-events .tribe-events-header {\n    margin-top: 5em !important;\n}\n\n/* Breakpoint für mobiles Menü anpassen */\n@media screen and (max-width: 1070px) {\n    .wp-block-navigation__responsive-container-open {\n        display: block !important;\n    }\n\n    .wp-block-navigation__responsive-container:not(.is-menu-open.has-modal-open) {\n        display: none !important;\n    }\n}\n\n/* Websitetitel im Menü zweizeilig - muss später noch geprüft werden */\n@media screen and (max-width: 590px) {\n    p.has-text-align-center.bsf-websitetitel.wp-block-site-title {\n        font-size: clamp(0.8rem, 0.727vw + 0.655rem, 1.2rem)\n    }\n\n    img.custom-logo {\n        /*    height: 20vw !important; */\n        width: 20vw;\n    }\n}\n\n@media screen and (min-width: 590px) {\n    p.has-text-align-center.bsf-websitetitel.wp-block-site-title {\n        white-space: normal !important;\n        overflow-wrap: anywhere;\n        line-height: 1.2;\n        text-align: center;\n    }\n}\n\n/* mobiles Menü */\n/* Mobile Menü - Standard-Zustand */\n/*\n.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container a {\n  background-color: var(--wp--preset--color--custom-blau);\n  color: var(--wp--preset--color--custom-weiss);\n}\n*/\n\n/* Hover- und Focus-Zustand */\n.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container a:hover,\n.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container a:focus {\n    background-color: var(--wp--preset--color--custom-blau);\n    color: var(--wp--preset--color--custom-weiss);\n}\n\n/* Desktop Menü */\n/* Menü bei hover */\n.wp-block-navigation a:where(:not(.wp-element-button)) {\n    text-decoration: none;\n    padding: 0.3em 0.5em;\n}\n\n.wp-block-navigation a:where(:not(.wp-element-button)):hover {\n    text-decoration: none;\n    background-color: var(--wp--preset--color--custom-blau);\n    color: #ffffff !important;\n}\n\n.wp-block-navigation a:where(:not(.wp-element-button)):focus {\n    text-decoration: none;\n    background-color: var(--wp--preset--color--custom-graublau);\n    outline: 2px;\n}\n\n\n/* Schriftzug Menü */\n@media screen and (min-width: 1070px) {\n    p.schrift_menue {\n        display: none;\n    }\n}\n\n/* Links un Footer besser darstellen */\n.footer_links a {\n    box-shadow: inset 0 -1px 0 var(--wp--preset--color--custom-weiss);\n}\n\n.footer_links a:hover {\n    box-shadow: inset 0 -1px 0 var(--wp--preset--color--custom-graublau);\n}\n\n/* clickable button */\np.haurand-button a::before {\n    content: '';\n    /* position: absolute; */\n    inset: 0;\n    z-index: 1;\n}\n\np.haurand-button,\np.haurand-button-blau {\n    /* position: relative; */\n    margin: 1rem;\n}\n\np.haurand-button a {\n    color: var(--wp--preset--color--custom-weiss);\n    background-color: var(--wp--preset--color--custom-blau);\n    padding: 0.8em;\n    font-size: inherit;\n    text-decoration: none;\n}\n\np.haurand-button-blau a {\n    color: var(--wp--preset--color--custom-blau);\n    background-color: var(--wp--preset--color--custom-weiss);\n    padding: 0.8em;\n    font-size: inherit;\n    text-decoration: none;\n}\n\np.haurand-button a:hover,\np.haurand-button-blau a:hover {\n    color: var(--wp--preset--color--custom-weiss);\n    background-color: var(--wp--preset--color--custom-graublau);\n}\n\n/* Hover bei Buttons im seitenheader-blau */\na.wp-block-button__link.has-custom-blau-color.has-custom-weiss-background-color.has-text-color.has-background.has-link-color.wp-element-button:hover {\n    color: var(--wp--preset--color--custom-weiss) !important;\n    background-color: var(--wp--preset--color--custom-graublau) !important;\n}",
+        "color": {
+            "background": "var(--wp--preset--color--custom-weiss)"
+        },
+        "css": "/* Kalender */\n.tribe-events .tribe-events-header {\n    margin-top: 5em !important;\n}\n\n/* Breakpoint für mobiles Menü anpassen */\n@media screen and (max-width: 1070px) {\n    .wp-block-navigation__responsive-container-open {\n        display: block !important;\n    }\n\n    .wp-block-navigation__responsive-container:not(.is-menu-open.has-modal-open) {\n        display: none !important;\n    }\n}\n\n/* Websitetitel im Menü zweizeilig - muss später noch geprüft werden */\n@media screen and (max-width: 590px) {\n    p.has-text-align-center.bsf-websitetitel.wp-block-site-title {\n        font-size: clamp(0.8rem, 0.727vw + 0.655rem, 1.2rem)\n    }\n\n    img.custom-logo {\n        /*    height: 20vw !important; */\n        width: 20vw;\n    }\n}\n\n@media screen and (min-width: 590px) {\n    p.has-text-align-center.bsf-websitetitel.wp-block-site-title {\n        white-space: normal !important;\n        overflow-wrap: anywhere;\n        line-height: 1.2;\n        text-align: center;\n    }\n}\n\n/* mobiles Menü */\n/* Mobile Menü - Standard-Zustand */\n\n/* Hover- und Focus-Zustand */\n.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container a:hover,\n.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container a:focus {\n    background-color: var(--wp--preset--color--custom-blau);\n    color: var(--wp--preset--color--custom-weiss);\n}\n\n/* Desktop Menü */\n/* Menü bei hover */\n.wp-block-navigation a:where(:not(.wp-element-button)) {\n    text-decoration: none;\n    padding: 0.3em 0.5em;\n}\n\n.wp-block-navigation a:where(:not(.wp-element-button)):hover {\n    text-decoration: none;\n    background-color: var(--wp--preset--color--custom-blau);\n    color: #ffffff !important;\n}\n\n.wp-block-navigation a:where(:not(.wp-element-button)):focus {\n    text-decoration: none;\n    background-color: var(--wp--preset--color--custom-mittelblau);\n    outline: 2px;\n}\n\n\n/* Schriftzug Menü */\n@media screen and (min-width: 1070px) {\n    p.schrift_menue {\n        display: none;\n    }\n}\n\n/* Links im Footer besser darstellen */\n.footer_links a {\n    box-shadow: inset 0 -1px 0 var(--wp--preset--color--custom-weiss);\n}\n\n.footer_links a:hover {\n    box-shadow: inset 0 -1px 0 var(--wp--preset--color--custom-mittelblau);\n}\n\n/* clickable button */\np.haurand-button a::before {\n    content: '';\n    /* position: absolute; */\n    inset: 0;\n    z-index: 1;\n}\n\np.haurand-button,\np.haurand-button-blau {\n    /* position: relative; */\n    margin: 1rem;\n}\n\np.haurand-button a {\n    color: var(--wp--preset--color--custom-weiss);\n    background-color: var(--wp--preset--color--custom-blau);\n    padding: 0.8em;\n    font-size: inherit;\n    text-decoration: none;\n}\n\np.haurand-button-blau a {\n    color: var(--wp--preset--color--custom-blau);\n    background-color: var(--wp--preset--color--custom-weiss);\n    padding: 0.8em;\n    font-size: inherit;\n    text-decoration: none;\n}\n\n\np.haurand-button a:hover,\np.haurand-button-blau a:hover {\n    color: var(--wp--preset--color--custom-schwarz);\n    background-color: var(--wp--preset--color--custom-mittelblau);\n}\n\n/* Hover bei Buttons im seitenheader-blau */\na.wp-block-button__link.has-custom-blau-color.has-custom-weiss-background-color.has-text-color.has-background.has-link-color.wp-element-button:hover {\n    color: var(--wp--preset--color--custom-weiss) !important;\n    background-color: var(--wp--preset--color--custom-mittelblau) !important;\n}",
         "elements": {
             "button": {
                 "typography": {
@@ -65,18 +75,6 @@
                 }
             },
             "caption": {
-                "typography": {
-                    "fontFamily": "var(--wp--preset--font-family--lexend)"
-                }
-            },
-            "heading": {
-                "typography": {
-                    "fontFamily": "var(--wp--preset--font-family--lexend)",
-                    "fontStyle": "normal",
-                    "fontWeight": "400"
-                }
-            },
-            "link": {
                 "typography": {
                     "fontFamily": "var(--wp--preset--font-family--lexend)"
                 }
@@ -89,12 +87,18 @@
             "h2": {
                 "color": {
                     "text": "var(--wp--preset--color--custom-blau)"
-                },
-                "spacing": {
-                    "margin": {
-                        "top": "var(--wp--preset--spacing--40)",
-                        "bottom": "var(--wp--preset--spacing--40)"
-                    }
+                }
+            },
+            "heading": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--lexend)",
+                    "fontStyle": "normal",
+                    "fontWeight": "700"
+                }
+            },
+            "link": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--lexend)"
                 }
             }
         },

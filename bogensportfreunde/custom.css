@@ -1,9 +1,3 @@
-/* Mehr Rand bei der H2 */
-h2.wp-block-heading {
-    margin-top: var(--wp--preset--spacing--60);
-    margin-bottom: var(--wp--preset--spacing--40);
-}
-
 /* Kalender */
 .tribe-events .tribe-events-header {
     margin-top: 5em !important;
@@ -66,7 +60,7 @@ h2.wp-block-heading {
 
 .wp-block-navigation a:where(:not(.wp-element-button)):focus {
     text-decoration: none;
-    background-color: var(--wp--preset--color--custom-graublau);
+    background-color: var(--wp--preset--color--custom-mittelblau);
     outline: 2px;
 }
 
@@ -84,7 +78,7 @@ h2.wp-block-heading {
 }
 
 .footer_links a:hover {
-    box-shadow: inset 0 -1px 0 var(--wp--preset--color--custom-graublau);
+    box-shadow: inset 0 -1px 0 var(--wp--preset--color--custom-mittelblau);
 }
 
 /* clickable button */
@@ -117,14 +111,15 @@ p.haurand-button-blau a {
     text-decoration: none;
 }
 
+
 p.haurand-button a:hover,
 p.haurand-button-blau a:hover {
-    color: var(--wp--preset--color--custom-weiss);
-    background-color: var(--wp--preset--color--custom-graublau);
+    color: var(--wp--preset--color--custom-schwarz);
+    background-color: var(--wp--preset--color--custom-mittelblau);
 }
 
 /* Hover bei Buttons im seitenheader-blau */
 a.wp-block-button__link.has-custom-blau-color.has-custom-weiss-background-color.has-text-color.has-background.has-link-color.wp-element-button:hover {
     color: var(--wp--preset--color--custom-weiss) !important;
-    background-color: var(--wp--preset--color--custom-graublau) !important;
+    background-color: var(--wp--preset--color--custom-mittelblau) !important;
 }
