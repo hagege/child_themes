@@ -6,6 +6,23 @@ html {
     scroll-padding-top: 6rem;
 }
 
+
+/* Farben für TEC */
+h1.tribe-events-single-event-title,
+h3.tribe-events-calendar-list__event-title.tribe-common-h6.tribe-common-h4--min-medium a,
+h3.tribe-events-calendar-month__calendar-event-title.tribe-common-h8.tribe-common-h--alt a {
+    background-color: var(--wp--preset--color--custom-blau);
+    color: var(--wp--preset--color--custom-weiss);
+    padding: 10px;
+}
+
+h3.tribe-events-calendar-month__calendar-event-title.tribe-common-h8.tribe-common-h--alt a {
+    background-color: var(--wp--preset--color--custom-blau);
+    color: var(--wp--preset--color--custom-weiss);
+    padding: 3px;
+    display: block;
+}
+
 /* Background-color für embed privacy */
 .embed-privacy-overlay {
     background-color: var(--wp--preset--color--custom-blau);
