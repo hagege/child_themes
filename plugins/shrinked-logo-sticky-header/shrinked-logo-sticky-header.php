@@ -5,13 +5,13 @@
  * @package       SHRINKEDLO
  * @author        Hans-Gerd Gerhards
  * @license       gplv2
- * @version       0.3
+ * @version       0.3.1
  *
  * @wordpress-plugin
  * Plugin Name:   Shrinked Logo Sticky Header
  * Plugin URI:    https://haurand.com
  * Description:   Adds a sticky header with animated logo shrink effect.
- * Version:       0.3
+ * Version:       0.3.1
  * Author:        Hans-Gerd Gerhards
  * Author URI:    https://haurand.com
  * Text Domain:   shrinked-logo-sticky-header
@@ -25,8 +25,6 @@
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) exit;
-
-// Include your custom code here.
 
 function slsh_sticky_header() {
     ?>
@@ -45,7 +43,7 @@ function slsh_sticky_header() {
 			height: 90px;
 		}
 
-		/* Optional: Wenn du eine innere Gruppe hast, diese auch animieren */
+		/* innere Gruppe ebenfalls animieren */
 		header.wp-block-template-part .wp-block-group {
 			transition: height 0.4s cubic-bezier(.4,0,.2,1), padding 0.4s cubic-bezier(.4,0,.2,1);
 			height: 100%;
@@ -57,6 +55,7 @@ function slsh_sticky_header() {
 			transform: scale(1);
 		}
 			
+		/* Logo-Animation bei shrink*/
 		header.wp-block-template-part.shrink .wp-block-site-logo img {
 			transition: transform 1s cubic-bezier(.4,0,.2,1);
 			transform: scale(0.6);
