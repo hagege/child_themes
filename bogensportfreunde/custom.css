@@ -11,11 +11,6 @@ html {
     background-color: var(--wp--preset--color--custom-blau);
 }
 
-/* Kalender */
-.tribe-events .tribe-events-header {
-    margin-top: 5em !important;
-}
-
 /* Breakpoint für mobiles Menü anpassen */
 @media screen and (max-width: 1070px) {
     .wp-block-navigation__responsive-container-open {
