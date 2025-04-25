@@ -7,7 +7,7 @@ Tags:
 Requires at least: 
 Tested up to: 
 Requires PHP: 
-Stable tag: 0.3.1
+Stable tag: 0.4
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -56,6 +56,9 @@ An answer to that question.
 4. Click on `Activate plugin`
 
 == Changelog ==
+
+= 0.4: April 25, 2025 =
+* Added Settings in Backend for Heigth of Header/Logo, Animation duration
 
 = 0.3: April 24, 2025 =
 * Optimized shrinked effect
