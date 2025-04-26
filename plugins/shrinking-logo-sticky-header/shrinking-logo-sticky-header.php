@@ -14,7 +14,7 @@
  * Version:       0.4.4
  * Author:        Hans-Gerd Gerhards
  * Author URI:    https://haurand.com
- * Text Domain:   slsh
+ * Text Domain:   shrinking-logo-sticky-header
  * Domain Path:   /languages
  * License:       GPLv2
  * License URI:   https://www.gnu.org/licenses/gpl-2.0.html

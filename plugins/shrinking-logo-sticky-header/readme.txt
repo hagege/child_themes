@@ -1,12 +1,12 @@
-=== shrinking Logo Sticky Header ===
+=== Shrinking Logo Sticky Header ===
 Author URI: https://haurand.com
 Plugin URI: https://haurand.com
 Donate link: 
-Contributors: 
-Tags: 
+Contributors: @hage
+Tags: Block Theme, Header, shrink, sticky-header
 Requires at least: 
-Tested up to: 
-Requires PHP: 
+Tested up to: 6.8
+Requires PHP: 7.4
 Stable tag: 0.4.4
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
