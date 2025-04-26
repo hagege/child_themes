@@ -5,13 +5,13 @@
  * @package       shrinkingLO
  * @author        Hans-Gerd Gerhards
  * @license       gplv2
- * @version       0.4.3
+ * @version       0.4.4
  *
  * @wordpress-plugin
  * Plugin Name:   Shrinking Logo Sticky Header
  * Plugin URI:    https://haurand.com
  * Description:   Adds a sticky header with animated logo shrink effect.
- * Version:       0.4.3
+ * Version:       0.4.4
  * Author:        Hans-Gerd Gerhards
  * Author URI:    https://haurand.com
  * Text Domain:   slsh
@@ -73,7 +73,6 @@ function slsh_options_page() {
                     <th scope="row"><label style="display: block; text-align: left" for="slsh_logo_in_header_shrink_height"><?php esc_html_e('Logo shrinking factor (Value in 0.05 steps):', 'slsh'); ?></label></th>
                     <td><input type="number" step="0.05" id="slsh_logo_in_header_shrink_height" name="slsh_logo_in_header_shrink_height" value="<?php echo esc_attr(get_option('slsh_logo_in_header_shrink_height', 0.8)); ?>" min="0.4" max="1" /></td>
                 </tr>
-
             </table>
             <?php submit_button(); ?>
         </form>
@@ -93,7 +92,6 @@ function slsh_sticky_header() {
         position: sticky;
         top: 0;
         z-index: 1000;
-        background: rgba(255,255,255,0.95);
         transition: height <?php echo $anim_duration; ?>s cubic-bezier(.4,0,.2,1), background-color <?php echo $anim_duration; ?>s;
         height: <?php echo $header_height; ?>px; 
     }  

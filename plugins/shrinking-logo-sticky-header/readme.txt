@@ -7,7 +7,7 @@ Tags:
 Requires at least: 
 Tested up to: 
 Requires PHP: 
-Stable tag: 0.4.3
+Stable tag: 0.4.4
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,9 +57,12 @@ An answer to that question.
 
 == Changelog ==
 
+= 0.4.4: April 26, 2025 =
+* Enhancement: Option for Transparency for background colour in the header (Value in 0.05 steps)
+
 = 0.4.3: April 26, 2025 =
 * Added: Option for Logo shrinking factor (Value in 0.05 steps)
-* Enhancement: Rename plugin (shrinking instead of shrinked)
+* Enhancement: CSS optimised
 
 = 0.4.2: April 26, 2025 =
 * Added: Translation option and Translation files in language folder
