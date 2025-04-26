@@ -58,7 +58,7 @@ An answer to that question.
 == Changelog ==
 
 = 0.4.4: April 26, 2025 =
-* Enhancement: Option for Transparency for background colour in the header (Value in 0.05 steps)
+* Enhancement: Optimize CSS
 
 = 0.4.3: April 26, 2025 =
 * Added: Option for Logo shrinking factor (Value in 0.05 steps)
