@@ -2,9 +2,9 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: Shrinked Logo Sticky Header\n"
-"POT-Creation-Date: 2025-04-26 06:32+0200\n"
-"PO-Revision-Date: 2025-04-26 06:32+0200\n"
+"Project-Id-Version: Shrinking Logo Sticky Header\n"
+"POT-Creation-Date: 2025-04-26 11:49+0200\n"
+"PO-Revision-Date: 2025-04-26 11:49+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.11\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-WPHeader: shrinked-logo-sticky-header.php\n"
+"X-Poedit-WPHeader: shrinking-logo-sticky-header.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
@@ -20,16 +20,28 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: shrinked-logo-sticky-header.php:57
+#: shrinking-logo-sticky-header.php:56
+msgid "Shrinking Logo Sticky Header – Settings"
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:61
 msgid "Height of the shrunk header and logo (px):"
 msgstr ""
 
-#: shrinked-logo-sticky-header.php:61
+#: shrinking-logo-sticky-header.php:65
 msgid "Animation duration (seconds):"
 msgstr ""
 
+#: shrinking-logo-sticky-header.php:69
+msgid "Height of header (px):"
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:73
+msgid "Logo shrinking factor (Value in 0.05 steps):"
+msgstr ""
+
 #. Plugin Name of the plugin/theme
-msgid "Shrinked Logo Sticky Header"
+msgid "Shrinking Logo Sticky Header"
 msgstr ""
 
 #. Plugin URI of the plugin/theme

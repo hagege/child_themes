@@ -1,17 +1,17 @@
 <?php
 /**
- * Shrinked Logo Sticky Header
+ * Shrinking Logo Sticky Header
  *
- * @package       SHRINKEDLO
+ * @package       shrinkingLO
  * @author        Hans-Gerd Gerhards
  * @license       gplv2
- * @version       0.4.2
+ * @version       0.4.3
  *
  * @wordpress-plugin
- * Plugin Name:   Shrinked Logo Sticky Header
+ * Plugin Name:   Shrinking Logo Sticky Header
  * Plugin URI:    https://haurand.com
  * Description:   Adds a sticky header with animated logo shrink effect.
- * Version:       0.4.2
+ * Version:       0.4.3
  * Author:        Hans-Gerd Gerhards
  * Author URI:    https://haurand.com
  * Text Domain:   slsh
@@ -20,7 +20,7 @@
  * License URI:   https://www.gnu.org/licenses/gpl-2.0.html
  *
  * You should have received a copy of the GNU General Public License
- * along with Shrinked Logo Sticky Header. If not, see <https://www.gnu.org/licenses/gpl-2.0.html/>.
+ * along with shrinking Logo Sticky Header. If not, see <https://www.gnu.org/licenses/gpl-2.0.html/>.
  */
 
 // Exit if accessed directly.
@@ -33,40 +33,47 @@ add_action('plugins_loaded', 'slsh_load_textdomain');
 
 // --- Einstellungen registrieren ---
 function slsh_register_settings() {
-    add_option('slsh_logo_shrink_height', 80);
+    add_option('slsh_header_shrink_height', 80);
     add_option('slsh_animation_duration', 0.6);
 	add_option('slsh_heigth_header', 120);
-    register_setting('slsh_options_group', 'slsh_logo_shrink_height', array('type' => 'integer', 'sanitize_callback' => 'absint'));
+	add_option('slsh_logo_in_header_shrink_height', 0.8);
+    register_setting('slsh_options_group', 'slsh_header_shrink_height', array('type' => 'integer', 'sanitize_callback' => 'absint'));
     register_setting('slsh_options_group', 'slsh_animation_duration', array('type' => 'float', 'sanitize_callback' => 'floatval'));
 	register_setting('slsh_options_group', 'slsh_heigth_header', array('type' => 'integer', 'sanitize_callback' => 'absint'));
+	register_setting('slsh_options_group', 'slsh_logo_in_header_shrink_height', array('type' => 'float', 'sanitize_callback' => 'floatval'));
 }
 add_action('admin_init', 'slsh_register_settings');
 
 // --- Einstellungsseite im Admin-Menü ---
 function slsh_register_options_page() {
-    add_options_page('Shrinked Logo Sticky Header', 'Sticky Header Settings', 'manage_options', 'slsh', 'slsh_options_page');
+    add_options_page('Shrinking Logo Sticky Header', 'Shrinking Logo Sticky Header', 'manage_options', 'slsh', 'slsh_options_page');
 }
 add_action('admin_menu', 'slsh_register_options_page');
 
 function slsh_options_page() {
 ?>
     <div>
-        <h2><?php esc_html_e('Shrinked Logo Sticky Header – Settings', 'slsh'); ?></h2>
+        <h2><?php esc_html_e('Shrinking Logo Sticky Header – Settings', 'slsh'); ?></h2>
         <form method="post" action="options.php">
             <?php settings_fields('slsh_options_group'); ?>
             <table>
                 <tr valign="top">
-                    <th scope="row"><label style="display: block; text-align: left" for="slsh_logo_shrink_height"><?php esc_html_e('Height of the shrunk header and logo (px):', 'slsh'); ?></label></th>
-                    <td><input type="number" id="slsh_logo_shrink_height" name="slsh_logo_shrink_height" value="<?php echo esc_attr(get_option('slsh_logo_shrink_height', 80)); ?>" min="40" max="300" /></td>
+                    <th scope="row"><label style="display: block; text-align: left" for="slsh_header_shrink_height"><?php esc_html_e('Height of the shrunk header (px):', 'slsh'); ?></label></th>
+                    <td><input type="number" id="slsh_header_shrink_height" name="slsh_header_shrink_height" value="<?php echo esc_attr(get_option('slsh_header_shrink_height', 80)); ?>" min="40" max="300" /></td>
                 </tr>
-                <tr valign="top">
-                    <th scope="row"><label style="display: block; text-align: left" for="slsh_heigth_header"><?php esc_html_e('Height of header (px):', 'slsh'); ?></label></th>
-                    <td><input type="number" id="slsh_heigth_header" name="slsh_heigth_header" value="<?php echo esc_attr(get_option('slsh_heigth_header', 120)); ?>" min="40" max="300" /></td>
-                </tr>
-                <tr valign="top">
+				<tr valign="top">
                     <th scope="row"><label style="display: block; text-align: left" for="slsh_animation_duration"><?php esc_html_e('Animation duration (seconds):', 'slsh'); ?></label></th>
                     <td><input type="number" step="0.05" id="slsh_animation_duration" name="slsh_animation_duration" value="<?php echo esc_attr(get_option('slsh_animation_duration', 0.6)); ?>" min="0.05" max="3" /></td>
                 </tr>
+                <tr valign="top">
+                    <th scope="row"><label style="display: block; text-align: left" for="slsh_heigth_header"><?php esc_html_e('Normal height of header (px):', 'slsh'); ?></label></th>
+                    <td><input type="number" id="slsh_heigth_header" name="slsh_heigth_header" value="<?php echo esc_attr(get_option('slsh_heigth_header', 120)); ?>" min="40" max="300" /></td>
+                </tr>
+				<tr valign="top">
+                    <th scope="row"><label style="display: block; text-align: left" for="slsh_logo_in_header_shrink_height"><?php esc_html_e('Logo shrinking factor (Value in 0.05 steps):', 'slsh'); ?></label></th>
+                    <td><input type="number" step="0.05" id="slsh_logo_in_header_shrink_height" name="slsh_logo_in_header_shrink_height" value="<?php echo esc_attr(get_option('slsh_logo_in_header_shrink_height', 0.8)); ?>" min="0.4" max="1" /></td>
+                </tr>
+
             </table>
             <?php submit_button(); ?>
         </form>
@@ -76,9 +83,10 @@ function slsh_options_page() {
 
 // --- CSS und JS im Frontend ausgeben ---
 function slsh_sticky_header() {
-    $shrink_height = intval(get_option('slsh_logo_shrink_height', 80));
+    $shrink_height = intval(get_option('slsh_header_shrink_height', 80));
     $anim_duration = floatval(get_option('slsh_animation_duration', 0.6));
 	$header_height = intval(get_option('slsh_heigth_header', 120));
+	$logo_shrink_height = floatval(get_option('slsh_logo_in_header_shrink_height', 0.8));
     ?>
     <style>
     header.wp-block-template-part {
@@ -87,7 +95,7 @@ function slsh_sticky_header() {
         z-index: 1000;
         background: rgba(255,255,255,0.95);
         transition: height <?php echo $anim_duration; ?>s cubic-bezier(.4,0,.2,1), background-color <?php echo $anim_duration; ?>s;
-        height: <?php echo $header_height; ?>px;; 
+        height: <?php echo $header_height; ?>px; 
     }  
 	
 	header.wp-block-template-part.shrink {
@@ -107,7 +115,7 @@ function slsh_sticky_header() {
 		
 	/* Logo-Animation bei shrink*/
 	header.wp-block-template-part.shrink .wp-block-site-logo img {
-		transform: scale(0.6);
+		transform: scale(<?php echo $logo_shrink_height; ?>);
 	}
 
     </style>

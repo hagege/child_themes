@@ -1,4 +1,4 @@
-=== Shrinked Logo Sticky Header ===
+=== shrinking Logo Sticky Header ===
 Author URI: https://haurand.com
 Plugin URI: https://haurand.com
 Donate link: 
@@ -7,7 +7,7 @@ Tags:
 Requires at least: 
 Tested up to: 
 Requires PHP: 
-Stable tag: 0.4.2
+Stable tag: 0.4.3
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,10 +52,14 @@ An answer to that question.
 
 1. Go to `Plugins` in the Admin menu
 2. Click on the button `Add new`
-3. Search for `Shrinked Logo Sticky Header` and click 'Install Now' or click on the `upload` link to upload `shrinked-logo-sticky-header.zip`
+3. Search for `shrinking Logo Sticky Header` and click 'Install Now' or click on the `upload` link to upload `shrinking-logo-sticky-header.zip`
 4. Click on `Activate plugin`
 
 == Changelog ==
+
+= 0.4.3: April 26, 2025 =
+* Added: Option for Logo shrinking factor (Value in 0.05 steps)
+* Enhancement: Rename plugin (shrinking instead of shrinked)
 
 = 0.4.2: April 26, 2025 =
 * Added: Translation option and Translation files in language folder
@@ -68,7 +72,7 @@ An answer to that question.
 * Added Settings in Backend for Heigth of Header/Logo, Animation duration
 
 = 0.3: April 24, 2025 =
-* Optimized shrinked effect
+* Optimized shrinking effect
 
 = 0.1: April 24, 2025 =
-* Birthday of Shrinked Logo Sticky Header
+* Birthday of shrinking Logo Sticky Header
