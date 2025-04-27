@@ -15,33 +15,25 @@ Adds a sticky header with animated logo shrink effect.
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+Shrinking Logo Sticky Header is a lightweight WordPress plugin designed specifically for Block Themes. 
+It adds a modern sticky header with smooth, animated shrinking effects for both the header and the site logo. 
+As users scroll down the page, the header and logo automatically reduce in size, maximizing on-screen space and keeping navigation easily accessible without disrupting the browsing experience.
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+The plugin allows you to individually configure the heights for the header and logo in both their normal and shrunken states, giving you full control over your site’s appearance. 
+These settings can be easily adjusted to match your branding or design preferences.
 
-A few notes about the sections above:
-
-*   "Contributors" is a comma separated list of wordpress.org usernames
-*   "Tags" is a comma separated list of tags that apply to the plugin
-*   "Requires at least" is the lowest version that the plugin will work on
-*   "Tested up to" is the highest version that you've *successfully used to test the plugin*. Note that it might work on
-higher versions... this is just the highest one you've verified.
-*   Stable tag should indicate the Subversion "tag" of the latest stable version, or "trunk," if you use `/trunk/` for
-stable.
-
-    Note that the `readme.txt` of the stable tag is the one that is considered the defining one for the plugin, so
-if the `/trunk/readme.txt` file says that the stable tag is `4.3`, then it is `/tags/4.3/readme.txt` that'll be used
-for displaying information about the plugin.  In this situation, the only thing considered from the trunk `readme.txt`
-is the stable tag pointer.  Thus, if you develop in trunk, you can update the trunk `readme.txt` to reflect changes in
-your in-development version, without having that information incorrectly disclosed about the current stable version
-that lacks those changes -- as long as the trunk's `readme.txt` points to the correct stable tag.
-
-    If no stable tag is provided, it is assumed that trunk is stable, but you should specify "trunk" if that's where
-you put the stable version, in order to eliminate any doubt.
-
+One of the key advantages of Shrinking Logo Sticky Header is its simplicity: 
+After activation, the sticky and shrinking effects work in principle immediately - no additional setup or configuration is required. 
+This makes it ideal for users who want a professional, dynamic header effect without dealing with complex options or custom code.
 
 == Frequently Asked Questions ==
+= Is it possible to use this plugin also for classical Themes (e. g. Astra, OceanWP, GeneratePress)? =
+
+sorry, no. The classic themes usually already offer such options. 
+
+= Is it possible to use this plugin for all block Themes? =
+Tested with Twenty Twenty-Three, Twenty Twenty-Four, Twenty Twenty-Five, Circles WP. 
+If the plugin does not work with your block theme, please write to the support forum. I will then see what I can do. 
 
 = A question that someone might have =
 
