@@ -1,0 +1,25 @@
+/*
+Theme Name: WP Simple FSE
+Theme URI: 
+Author: Hans-Gerd Gerhards
+Author URI: 
+Description: Simple WordPress Block Theme
+Requires at least: 6.8
+Tested up to: 6.8
+Requires PHP: 7.4
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: wp-simple-fse
+Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, sticky-post, threaded-comments, translation-ready, block-styles, wide-blocks, full-site-editing
+
+/* Only for pattern "Show Image in full width container" */
+
+.wp_simple_fse_show_image {
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+}
+
+.wp_simple_fse_show_image figure {
+    width: 90%;
+}

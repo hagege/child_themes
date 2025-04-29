@@ -1,0 +1,4 @@
+/* Prevents blurred edges with circles */
+.wp-block-group.has-background {
+    background-repeat: no-repeat;
+}
