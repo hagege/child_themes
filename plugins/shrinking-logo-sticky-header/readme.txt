@@ -7,7 +7,7 @@ Tags: Block Theme, Header, shrink, sticky-header
 Requires at least: 
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 0.4.4
+Stable tag: 1.0
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,6 +48,11 @@ An answer to that question.
 4. Click on `Activate plugin`
 
 == Changelog ==
+
+= 1.0: May 1, 2025 =
+* Enhancement: Security (Additional escaping of the values)
+* Enhancement: Rename the text domain due to Internationalize this plugin
+* Check with Plugin Check: "Check completed. No errors were found."
 
 = 0.4.4: April 26, 2025 =
 * Enhancement: Optimize CSS

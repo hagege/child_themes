@@ -5,13 +5,13 @@
  * @package       shrinkingLO
  * @author        Hans-Gerd Gerhards
  * @license       gplv2
- * @version       0.4.4
+ * @version       1.0
  *
  * @wordpress-plugin
  * Plugin Name:   Shrinking Logo Sticky Header
  * Plugin URI:    https://haurand.com
  * Description:   Adds a sticky header with animated logo shrink effect.
- * Version:       0.4.4
+ * Version:       1.0
  * Author:        Hans-Gerd Gerhards
  * Author URI:    https://haurand.com
  * Text Domain:   shrinking-logo-sticky-header
@@ -53,24 +53,24 @@ add_action('admin_menu', 'slsh_register_options_page');
 function slsh_options_page() {
 ?>
     <div>
-        <h2><?php esc_html_e('Shrinking Logo Sticky Header – Settings', 'slsh'); ?></h2>
+        <h2><?php esc_html_e('Shrinking Logo Sticky Header – Settings', 'shrinking-logo-sticky-header'); ?></h2>
         <form method="post" action="options.php">
             <?php settings_fields('slsh_options_group'); ?>
             <table>
                 <tr valign="top">
-                    <th scope="row"><label style="display: block; text-align: left" for="slsh_header_shrink_height"><?php esc_html_e('Height of the shrunk header (px):', 'slsh'); ?></label></th>
+                    <th scope="row"><label style="display: block; text-align: left" for="slsh_header_shrink_height"><?php esc_html_e('Height of the shrunk header (px):', 'shrinking-logo-sticky-header'); ?></label></th>
                     <td><input type="number" id="slsh_header_shrink_height" name="slsh_header_shrink_height" value="<?php echo esc_attr(get_option('slsh_header_shrink_height', 80)); ?>" min="40" max="300" /></td>
                 </tr>
 				<tr valign="top">
-                    <th scope="row"><label style="display: block; text-align: left" for="slsh_animation_duration"><?php esc_html_e('Animation duration (seconds):', 'slsh'); ?></label></th>
+                    <th scope="row"><label style="display: block; text-align: left" for="slsh_animation_duration"><?php esc_html_e('Animation duration (seconds):', 'shrinking-logo-sticky-header'); ?></label></th>
                     <td><input type="number" step="0.05" id="slsh_animation_duration" name="slsh_animation_duration" value="<?php echo esc_attr(get_option('slsh_animation_duration', 0.6)); ?>" min="0.05" max="3" /></td>
                 </tr>
                 <tr valign="top">
-                    <th scope="row"><label style="display: block; text-align: left" for="slsh_heigth_header"><?php esc_html_e('Normal height of header (px):', 'slsh'); ?></label></th>
+                    <th scope="row"><label style="display: block; text-align: left" for="slsh_heigth_header"><?php esc_html_e('Normal height of header (px):', 'shrinking-logo-sticky-header'); ?></label></th>
                     <td><input type="number" id="slsh_heigth_header" name="slsh_heigth_header" value="<?php echo esc_attr(get_option('slsh_heigth_header', 120)); ?>" min="40" max="300" /></td>
                 </tr>
 				<tr valign="top">
-                    <th scope="row"><label style="display: block; text-align: left" for="slsh_logo_in_header_shrink_height"><?php esc_html_e('Logo shrinking factor (Value in 0.05 steps):', 'slsh'); ?></label></th>
+                    <th scope="row"><label style="display: block; text-align: left" for="slsh_logo_in_header_shrink_height"><?php esc_html_e('Logo shrinking factor (Value in 0.05 steps):', 'shrinking-logo-sticky-header'); ?></label></th>
                     <td><input type="number" step="0.05" id="slsh_logo_in_header_shrink_height" name="slsh_logo_in_header_shrink_height" value="<?php echo esc_attr(get_option('slsh_logo_in_header_shrink_height', 0.8)); ?>" min="0.4" max="1" /></td>
                 </tr>
             </table>
@@ -92,12 +92,12 @@ function slsh_sticky_header() {
         position: sticky;
         top: 0;
         z-index: 1000;
-        transition: height <?php echo $anim_duration; ?>s cubic-bezier(.4,0,.2,1), background-color <?php echo $anim_duration; ?>s;
-        height: <?php echo $header_height; ?>px; 
+        transition: height <?php echo esc_attr($anim_duration); ?>s cubic-bezier(.4,0,.2,1), background-color <?php echo esc_attr($anim_duration); ?>s;
+        height: <?php echo esc_attr($header_height); ?>px; 
     }  
 	
 	header.wp-block-template-part.shrink {
-        height: <?php echo $shrink_height; ?>px;
+        height: <?php echo esc_attr($shrink_height); ?>px;
     }
 	
 	/* innere Gruppe auch animieren */
@@ -107,13 +107,13 @@ function slsh_sticky_header() {
 	
 	/* Logo-Animation */
 	header.wp-block-template-part .wp-block-site-logo img {
-		transition: transform <?php echo $anim_duration; ?>s cubic-bezier(0.4,0,0.2,1), height <?php echo $anim_duration; ?>s cubic-bezier(0.4,0,0.2,1);
+		transition: transform <?php echo esc_attr($anim_duration); ?>s cubic-bezier(0.4,0,0.2,1), height <?php echo esc_attr($anim_duration); ?>s cubic-bezier(0.4,0,0.2,1);
 		transform: scale(1);
 	}
 		
 	/* Logo-Animation bei shrink*/
 	header.wp-block-template-part.shrink .wp-block-site-logo img {
-		transform: scale(<?php echo $logo_shrink_height; ?>);
+		transform: scale(<?php echo esc_attr($logo_shrink_height); ?>);
 	}
 
     </style>
