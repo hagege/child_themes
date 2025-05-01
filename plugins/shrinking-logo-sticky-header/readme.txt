@@ -1,6 +1,6 @@
 === Shrinking Logo Sticky Header ===
-Author URI: https://haurand.com
-Plugin URI: https://haurand.com
+Author URI: https://haurand.com/author/hgg/
+Plugin URI: https://haurand.com/plugin-shrinking-logo-sticky-header/
 Donate link: 
 Contributors: @hage
 Tags: Block Theme, Header, shrink, sticky-header
@@ -31,7 +31,7 @@ This makes it ideal for users who want a professional, dynamic header effect wit
 
 sorry, no. The classic themes usually already offer such options. 
 
-= Is it possible to use this plugin for all block Themes? =
+= Is it possible to use this plugin for all Block Themes? =
 Tested with Twenty Twenty-Three, Twenty Twenty-Four, Twenty Twenty-Five, Circles WP. 
 If the plugin does not work with your block theme, please write to the support forum. I will then see what I can do. 
 
