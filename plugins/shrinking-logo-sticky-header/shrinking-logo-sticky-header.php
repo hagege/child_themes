@@ -9,11 +9,11 @@
  *
  * @wordpress-plugin
  * Plugin Name:   Shrinking Logo Sticky Header
- * Plugin URI:    https://haurand.com
+ * Plugin URI:    https://haurand.com/plugin-shrinking-logo-sticky-header/
  * Description:   Adds a sticky header with animated logo shrink effect.
  * Version:       1.0
  * Author:        Hans-Gerd Gerhards
- * Author URI:    https://haurand.com
+ * Author URI:    https://haurand.com/author/hgg/
  * Text Domain:   shrinking-logo-sticky-header
  * Domain Path:   /languages
  * License:       GPLv2
