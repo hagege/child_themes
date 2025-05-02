@@ -6,6 +6,16 @@ html {
     scroll-padding-top: 6rem;
 }
 
+/* Schriftzug Menü immer unter Hambuger */
+.mobile_menu {
+    flex-wrap: nowrap;
+}
+
+/* Logo beim Shrinken linksbündig */
+img.custom-logo {
+    transform-origin: left;
+    display: block;
+}
 
 /* Farben für TEC */
 h1.tribe-events-single-event-title,
