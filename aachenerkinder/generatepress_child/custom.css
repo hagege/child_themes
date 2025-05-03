@@ -20,33 +20,43 @@ CMYK 67-19-35-35
 
 /* TEST Anfang */
 
+/* Obere Zeile 
+p.has-text-align-center.has-contrast-background-color.has-text-color.has-background.has-link-color.wp-elements-78be9e52e0f1605d8e33362261df8adb {
+    margin-bottom: 0px;
+}
+*/
+.zeile_oben {
+  margin-bottom: 0px;
+  padding: 5px;
+}
+
+
 /* Änderung der Schriftfarbe für Balken "Veranstaltung erfassen" bei Terminen */
 .tribe-events-before-html a.button-mitglied,
-.tribe-events-after-html a.button-mitglied
-{
-    color: white;
+.tribe-events-after-html a.button-mitglied {
+  color: white;
 }
 
 /* Links im Footer */
 .footer-widgets a {
-    color: black;
-    text-decoration: underline;
+  color: black;
+  text-decoration: underline;
 }
 
 .footer-widgets a:hover {
-    color: #457D80;
-    text-decoration: underline;
+  color: #457D80;
+  text-decoration: underline;
 }
 
 /* Breite Veranstaltungsliste */
 .tribe-common-l-container.tribe-events-l-container {
-    width: 90%;
+  width: 90%;
 }
 
 /* Button weiterlesen mit mehr Innenabstand */
 .tribe-events-calendar-list__event-details.tribe-common-g-col a {
-    padding: 0.5rem;
-    margin-top: 0.2rem;
+  padding: 0.5rem;
+  margin-top: 0.2rem;
 }
 
 
@@ -56,20 +66,20 @@ CMYK 67-19-35-35
 
 /* Embed Privacy in Datenschutzerklärung */
 label.embed-privacy-opt-out-label {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
 /* Logo für Mitglieder bei Veranstaltungsliste */
 article.cat_premium a.tribe-events-calendar-list__event-featured-image-link::before {
-    content: url('https://aachenerkinder.de/wp-content/uploads/2020/08/siegel_mitglied_klein.png');
-    margin-bottom: 1rem;
-    display: block;
-    text-align: center;
+  content: url('https://aachenerkinder.de/wp-content/uploads/2020/08/siegel_mitglied_klein.png');
+  margin-bottom: 1rem;
+  display: block;
+  text-align: center;
 }
 
 /* Logo für Mitglieder bei Einzelansicht */
 .tribe-events-single>.tribe_events.cat_premium::after {
-    content: url('https://aachenerkinder.de/wp-content/uploads/2020/08/siegel_mitglied.png');
+  content: url('https://aachenerkinder.de/wp-content/uploads/2020/08/siegel_mitglied.png');
 }
 
 /* damit der Anker korrekt angesteuert werden kann - deaktiviert: 3.11.2022 
@@ -81,186 +91,186 @@ article.cat_premium a.tribe-events-calendar-list__event-featured-image-link::bef
 
 /* Ausschalter für Anzeige Freizeitmöglichkeit */
 i.fa.fa-times.ol-info-window-close {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 /* Block Pattern Neuigkeiten */
 h2.neuigkeiten.has-background,
 h3.neuigkeiten.has-background,
-p.neuigkeiten.has-background{
-		background-color: #fbf9eb;
-		padding-left: 1rem;
-    margin-bottom: 0px;
-	  padding-bottom: 0px;
+p.neuigkeiten.has-background {
+  background-color: #fbf9eb;
+  padding-left: 1rem;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 
-p.neuigkeiten.has-background{
-	  padding-bottom: 1rem;
+p.neuigkeiten.has-background {
+  padding-bottom: 1rem;
 }
 
 h2.neuigkeiten.has-background {
-	border-bottom: 1rem solid;
-	border-color: #EF7F1A;
+  border-bottom: 1rem solid;
+  border-color: #EF7F1A;
 }
 
 
 div.is-layout-constrained.wp-block-group.neuigkeiten div.wp-block-group__inner-container {
-    padding: 20px 0px 40px 0px;
+  padding: 20px 0px 40px 0px;
 }
 
 /* für Spende auf der Hauptseite */
 div.spende {
-	padding: 0px 40px 0px 40px;
+  padding: 0px 40px 0px 40px;
 }
 
 /* Farben im Cookie-Banner */
 .cn-button.bootstrap {
-    color: #fff;
-    background: #77bcc7;
+  color: #fff;
+  background: #77bcc7;
 }
 
 /* Mini-Calendar */
 /* Tagesdatum gelb */
 button.tribe-events-calendar-month__day-cell.tribe-events-calendar-month__day-cell--mobile.tribe-events-calendar-month__day-cell--selected {
-    background-color: #F9B81E;
+  background-color: #F9B81E;
 }
 
 
 /* ausgewählter Tag */
 .tribe-events .tribe-events-calendar-month__day-cell--selected .tribe-events-calendar-month__day-date {
-	opacity: 1.0;
+  opacity: 1.0;
 }
 
 /* vergangene Tage */
-.tribe-events .tribe-events-calendar-month__day--past .tribe-events-calendar-month__day-date
-{
-	opacity: 0.5;
+.tribe-events .tribe-events-calendar-month__day--past .tribe-events-calendar-month__day-date {
+  opacity: 0.5;
 }
 
 
 /* Farbe eiergelb beim Hover */
-.tribe-common.tribe-events.tribe-events-widget-shortcode.tribe-events-widget-shortcode-events-month .tribe-events-calendar-month__day-cell--mobile:focus, .tribe-common.tribe-events.tribe-events-widget-shortcode.tribe-events-widget-shortcode-events-month .tribe-events-calendar-month__day-cell--mobile:hover {
-    background-color: rgba(249,184,30,.4)!important;
+.tribe-common.tribe-events.tribe-events-widget-shortcode.tribe-events-widget-shortcode-events-month .tribe-events-calendar-month__day-cell--mobile:focus,
+.tribe-common.tribe-events.tribe-events-widget-shortcode.tribe-events-widget-shortcode-events-month .tribe-events-calendar-month__day-cell--mobile:hover {
+  background-color: rgba(249, 184, 30, .4) !important;
 }
 
 /* Hintergrund bei Tagen */
 .tribe-events-calendar-month__header-row {
-    background-color: #F9B81E;
+  background-color: #F9B81E;
 }
 
 /* Farbe für einzelnen Tag */
 h3.tribe-events-calendar-month__header-column-title.tribe-common-b3 {
-    font-size: 1.0em;
-    color: white;
+  font-size: 1.0em;
+  color: white;
 }
 
 
 /* Farbe für den aktuellen Tag */
 time.tribe-events-calendar-month__day-date-daynum {
-    color: black;
+  color: black;
 }
 
 
 /* Schriftgröße im Kalender */
 .tribe-common .tribe-common-h--alt {
-    padding: 1.3em;
-		/*font-size: calc(0.6em + 5px);
+  padding: 1.3em;
+  /*font-size: calc(0.6em + 5px);
      font-size: 0.8em; */
-    line-height: 0.5;
+  line-height: 0.5;
 }
 
 @media (max-width: 425px) {
-	.tribe-common .tribe-common-h--alt{
-			font-size: 0.8em; 
-	}
+  .tribe-common .tribe-common-h--alt {
+    font-size: 0.8em;
+  }
 }
 
 @media (min-width: 426px) {
-	.tribe-common .tribe-common-h--alt{
-			font-size: 1.2em; 
-	}
+  .tribe-common .tribe-common-h--alt {
+    font-size: 1.2em;
+  }
 }
 
 @media (min-width: 769px) {
-	.tribe-common .tribe-common-h--alt{
-			font-size: 0.7em; 
-	}
+  .tribe-common .tribe-common-h--alt {
+    font-size: 0.7em;
+  }
 }
 
 
 @media (min-width: 1095px) {
-	.tribe-common .tribe-common-h--alt{
-			font-size: 1em; 
-	}
+  .tribe-common .tribe-common-h--alt {
+    font-size: 1em;
+  }
 }
 
 
 /* runder Punkt rot */
 .tribe-events .tribe-events-calendar-month__mobile-events-icon--event {
-    background-color: #DF5022!important;
+  background-color: #DF5022 !important;
 }
 
-/* statt 50% Breite Calendar-Widget */  
+/* statt 50% Breite Calendar-Widget */
 .tribe-events .tribe-events-calendar-month-mobile-events__mobile-event {
-    width: 100%!important;
+  width: 100% !important;
 }
 
 /* Link unter Calendar-Widget */
 .sidebar .widget a {
-    color: #CA4175;
-		text-decoration: underline;
+  color: #CA4175;
+  text-decoration: underline;
 }
 
 .sidebar .widget a:hover {
-    background-color: #F9B81E;
-		color: white;
-		border-bottom: 0px;
-	  text-decoration: none;
+  background-color: #F9B81E;
+  color: white;
+  border-bottom: 0px;
+  text-decoration: none;
 }
 
 
 
-/* schräge Kante beim Bild auf der Startseite */ 
+/* schräge Kante beim Bild auf der Startseite */
 .schraeg {
-	clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
 
 /* Unterer Bereich einer Einzelveranstaltung (Metadaten) besser aufteilen */
 .tribe-events-single-section.tribe-events-event-meta.primary.tribe-clearfix,
 .tribe-events-single-section.tribe-events-event-meta.secondary.tribe-clearfix {
-    width: 100%;
+  width: 100%;
 }
 
 /* Einstellungen Überschrift Mini-Kalender */
 /* bis 768px: */
 @media (max-width: 768px) {
-span#tribe-mini-calendar-month-0 {
+  span#tribe-mini-calendar-month-0 {
     font-size: 1.2rem;
-    }
+  }
 }
 
 
-/* ab 769px: */ 
+/* ab 769px: */
 @media (min-width: 769px) and (max-width: 975px) {
-span#tribe-mini-calendar-month-0 {
+  span#tribe-mini-calendar-month-0 {
     font-size: 0.6rem;
-    }
+  }
 }
 
 
-/* ab 976px: */ 
+/* ab 976px: */
 @media (min-width: 976px) {
-span#tribe-mini-calendar-month-0 {
+  span#tribe-mini-calendar-month-0 {
     font-size: 0.8rem;
-    }
+  }
 }
 
 
 /* Kein unterer Rand bei Links (Einzelveranstaltungen) */
-.tribe-events-content a, 
-.tribe-events-content a:hover{
-    border-bottom: 0px;
+.tribe-events-content a,
+.tribe-events-content a:hover {
+  border-bottom: 0px;
 }
 
 
@@ -275,24 +285,24 @@ span#tribe-mini-calendar-month-0 {
 /*------------------------------------*/
 
 @media (max-width: 450px) {
-.header_links {
-  display:unset;
-  padding: 10px 0px 0px 20px;
-}
+  .header_links {
+    display: unset;
+    padding: 10px 0px 0px 20px;
+  }
 }
 
 @media (min-width: 451px) {
-.header_links {
-  display:flex;
-  padding: 20px 0px 0px 20px;
-}
+  .header_links {
+    display: flex;
+    padding: 20px 0px 0px 20px;
+  }
 }
 
 @media (min-width: 768px) {
-.header_links {
-  display:flex;
-  padding: 30px 0px 0px 30px;
-}
+  .header_links {
+    display: flex;
+    padding: 30px 0px 0px 30px;
+  }
 }
 
 
@@ -305,7 +315,7 @@ span#tribe-mini-calendar-month-0 {
 
 /* Damit die Karte das Sticky Menue nicht überdeckt */
 .leaflet-container {
- z-index:0;
+  z-index: 0;
 }
 
 
@@ -322,15 +332,16 @@ span#tribe-mini-calendar-month-0 {
 /*------------------------------------*/
 /* Einstellungen für die Frontpage */
 /*------------------------------------*/
-.page-hero-buttons, .ackids_front {
-  margin-left:20%;
-  margin-right:20%;	
+.page-hero-buttons,
+.ackids_front {
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .ackids_front {
   padding: 20px;
   background: rgba(0, 0, 0, 0.4);
-  margin-bottom: 20px;	
+  margin-bottom: 20px;
   color: white;
 }
 
@@ -342,22 +353,22 @@ span#tribe-mini-calendar-month-0 {
 }
 
 @media (max-width: 350px) {
-.ackids_front h2 {
-  font-size: 0.8rem;
+  .ackids_front h2 {
+    font-size: 0.8rem;
+  }
 }
-}	
 
 @media (min-width: 351px) {
-.ackids_front h2 {
-  font-size: 1.1rem;
+  .ackids_front h2 {
+    font-size: 1.1rem;
+  }
 }
-}	
 
 @media (min-width: 461px) {
-.ackids_front h2 {
-  font-size: 2rem;
+  .ackids_front h2 {
+    font-size: 2rem;
+  }
 }
-}	
 
 
 /* Maximale Breite für den Minikalender */
@@ -368,75 +379,77 @@ span#tribe-mini-calendar-month-0 {
 
 /* Ken Burns Effekt auf Beitragsseiten */
 .featured-image.page-header-image-single {
-overflow: hidden;
+  overflow: hidden;
 }
 
 /* hier die Regeln für das Bild */
-.featured-image.page-header-image-single img {	
-min-width: 100%;
-min-height: 100%; 
-/* Add infinite to loop. */
-animation: move 15s ease;
--ms-animation: move 15s ease;
--webkit-animation: move 15s ease;
--animation: move 15s ease;
--moz-animation: move 15s ease;
-position: relative; 
-/* width: 100%; 
+.featured-image.page-header-image-single img {
+  min-width: 100%;
+  min-height: 100%;
+  /* Add infinite to loop. */
+  animation: move 15s ease;
+  -ms-animation: move 15s ease;
+  -webkit-animation: move 15s ease;
+  -animation: move 15s ease;
+  -moz-animation: move 15s ease;
+  position: relative;
+  /* width: 100%; 
 max-height: 400px; */
 }
 
 @keyframes move {
-0% {
-  /*
+  0% {
+    /*
   -webkit-transform-origin: left;
   -moz-transform-origin: left;
   -ms-transform-origin: left;
   -o-transform-origin: left;
   transform-origin: left;
   */
-  transform: scale(1.0);
-  -ms-transform: scale(1.0);
-  /* IE 9 */
+    transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    /* IE 9 */
 
-  -webkit-transform: scale(1.0);
-  /* Safari and Chrome */
+    -webkit-transform: scale(1.0);
+    /* Safari and Chrome */
 
-  -o-transform: scale(1.0);
-  /* Opera */
+    -o-transform: scale(1.0);
+    /* Opera */
 
-  -moz-transform: scale(1.0);
-  /* Firefox */
-}
-50% {
-  transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  /* IE 9 */
+    -moz-transform: scale(1.0);
+    /* Firefox */
+  }
 
-  -webkit-transform: scale(1.1);
-  /* Safari and Chrome */
+  50% {
+    transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    /* IE 9 */
 
-  -o-transform: scale(1.1);
-  /* Opera */
+    -webkit-transform: scale(1.1);
+    /* Safari and Chrome */
 
-  -moz-transform: scale(1.1);
-  /* Firefox */
-}
-100% {
+    -o-transform: scale(1.1);
+    /* Opera */
 
-  transform: scale(1.0);
-  -ms-transform: scale(1.0);
-  /* IE 9 */
+    -moz-transform: scale(1.1);
+    /* Firefox */
+  }
 
-  -webkit-transform: scale(1.0);
-  /* Safari and Chrome */
+  100% {
 
-  -o-transform: scale(1.0);
-  /* Opera */
+    transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    /* IE 9 */
 
-  -moz-transform: scale(1.0);
-  /* Firefox */
-}
+    -webkit-transform: scale(1.0);
+    /* Safari and Chrome */
+
+    -o-transform: scale(1.0);
+    /* Opera */
+
+    -moz-transform: scale(1.0);
+    /* Firefox */
+  }
 }
 
 
@@ -458,4 +471,3 @@ div#primary-menu {
 
 
 /*------------------------------------*/
-
