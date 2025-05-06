@@ -1,3 +1,50 @@
+/* #######################
+smooth scrolling und korrekte Ansteuerung interner Anker
+######################### */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+
+/* Breakpoint für mobiles Menü anpassen */
+@media screen and (max-width: 900px) {
+    .wp-block-navigation__responsive-container-open {
+        display: block !important;
+    }
+
+    .wp-block-navigation__responsive-container:not(.is-menu-open.has-modal-open) {
+        display: none !important;
+    }
+}
+
+
+/* Off canvas */
+@media (max-width: 900px) {
+    .wp-block-navigation__responsive-container {
+        right: -70vw;
+        left: auto;
+        width: 70vw;
+        transition: none;
+        /* Keine Transition */
+        border-radius: 0;
+    }
+
+    .wp-block-navigation__responsive-container.is-menu-open {
+        animation: slideInMenu 0.5s linear forwards
+    }
+
+    @keyframes slideInMenu {
+        from {
+            right: -70vw;
+        }
+
+        to {
+            right: 0vw;
+        }
+    }
+}
+
 /* Altlasten aus Kompatibilitätsgründen*/
 .wp-block-group.html_svg {
     text-align: center;
@@ -12,14 +59,15 @@
 .haurand-card {
     /*    position: relative; */
     box-shadow: 1px 1px 20px rgb(0 0 0 / 20%);
+    /*    padding: 1em; */
     /*    transition: filter 0.5s ease-in-out; */
 }
 
 /*
-.haurand-card:hover {
-    filter: grayscale(1) opacity(.8);
-}
-*/
+  .haurand-card:hover {
+      filter: grayscale(1) opacity(.8);
+  }
+  */
 
 .haurand-card h2 a::before,
 .haurand-card h3 a::before {
@@ -271,7 +319,7 @@ a.wp-block-navigation-item__content:focus {
 }
 
 
-/* featured image bei query loop */
+/* featured image bei query loop und Referenzen */
 li figure.wp-block-post-featured-image,
 .haurand-card {
     position: relative;
@@ -297,24 +345,24 @@ li figure.wp-block-post-featured-image:focus,
 
 
 /*
-span.wp-block-navigation-item__label:after {
-    display: block;
-    background-color: #13aff0;
-    position: absolute;
-    bottom: -30%;
-    left: 0;
-    content: "";
-    width: 100%;
-    height: 2px;
-    visibility: hidden;
-    -moz-transform: scaleX(0);
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    transform-origin: bottom left;
-    -webkit-transition: all .25s ease-out;
-    -moz-transition: all .25s ease-out;
-    -ms-transition: all .25s ease-out;
-    -o-transition: all .25s ease-out;
-    transition: all .25s ease-out;
-}
-*/
+  span.wp-block-navigation-item__label:after {
+      display: block;
+      background-color: #13aff0;
+      position: absolute;
+      bottom: -30%;
+      left: 0;
+      content: "";
+      width: 100%;
+      height: 2px;
+      visibility: hidden;
+      -moz-transform: scaleX(0);
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      transform-origin: bottom left;
+      -webkit-transition: all .25s ease-out;
+      -moz-transition: all .25s ease-out;
+      -ms-transition: all .25s ease-out;
+      -o-transition: all .25s ease-out;
+      transition: all .25s ease-out;
+  }
+  */
