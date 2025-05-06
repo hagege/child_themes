@@ -19,22 +19,22 @@ input.wpcf7-form-control:focus {
   color: var(--wp--preset--color--contrast);
 }
 
-@media screen and (min-width: 781px){
-.wp-block-spacer.abstand_kacheln {
-  display: none;
-}
+@media screen and (min-width: 781px) {
+  .wp-block-spacer.abstand_kacheln {
+    display: none;
+  }
 }
 
 
-@media screen and (max-width: 600px){
-h2.titel_abfrage_loop {
-  flex-basis: 0;
-}
+@media screen and (max-width: 600px) {
+  h2.titel_abfrage_loop {
+    flex-basis: 0;
+  }
 }
 
 /* smooth scrolling */
 html {
-scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 /* Kartendarstellung soll Navigation nicht überlappen */
@@ -45,27 +45,30 @@ scroll-behavior: smooth;
 
 
 @media screen and (max-width: 900px) {
-/* hamburger button */
-.wp-block-navigation__responsive-container-open  {
-  display: block !important;
-}
 
-/* full menu */
+  /* hamburger button */
+  .wp-block-navigation__responsive-container-open {
+    display: block !important;
+  }
+
+  /* full menu 
 .wp-block-navigation__responsive-container:not(.is-menu-open.has-modal-open) {
   display: none !important;
 }
 .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open {
-  background-color: rgb(255 255 255 / 90%);
+   background-color: rgb(255 255 255 / 90%); 
 }
 ul.wp-block-navigation__container.is-responsive.items-justified-right.wp-block-navigation {
   background-color: white;
   padding: 3rem;
 }
+*/
 }
+
 
 /* wenn nicht href, dann Standard-Cursor */
 a:not([href]) {
-cursor: default;
+  cursor: default;
 }
 
 
@@ -84,12 +87,12 @@ p.has-text-align-center.p_kachel.has-large-font-size {
 }
 
 .pdf-button a {
-  text-decoration:none;
-color: var(--wp--preset--color--contrast);
+  text-decoration: none;
+  color: var(--wp--preset--color--contrast);
 }
 
 .pdf-button a:hover {
-  text-decoration:none;
+  text-decoration: none;
   color: var(--wp--preset--color--base);
 }
 
@@ -106,38 +109,42 @@ color: var(--wp--preset--color--contrast);
 
 /* oberen Rand deaktivieren */
 .wp-site-blocks {
-padding-top: 0px;
+  padding-top: 0px;
 }
 
 
 /* Größe des Logos je nach Viewport anpassen */
 img.custom-logo {
-width: clamp(15.625rem, 12.216rem + 17.05vw, 15rem);
+  width: clamp(15.625rem, 12.216rem + 17.05vw, 15rem);
 }
 
 
 /* kleine Animation bei sticky navigation */
 .wp-block-group.has-base-background-color.has-background.has-global-padding.is-layout-constrained.wp-container-6.is-position-sticky {
-top: -10px;
-background-color: white;
+  top: -10px;
+  background-color: white;
 }
 
 /* wegen Problem mit ios */
-@media only screen 
-and (min-device-width: 768px) 
-and (max-device-width: 1024px) 
-and (-webkit-min-device-pixel-ratio: 2) {
-.sport_cover .wp-block-cover__image-background {
-background-attachment: scroll;
-}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  .sport_cover .wp-block-cover__image-background {
+    background-attachment: scroll;
+  }
 }
 
 
 /* Einstellungen für Contact Form 7 */
-input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="tel"], input[type="date"], 
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="date"],
 input[type="submit"],
 input[type="number"],
-textarea, select {
+textarea,
+select {
   width: 90%;
   font-size: 1.5rem;
   background-color: aliceblue;
@@ -150,23 +157,53 @@ input[type="number"] {
 }
 
 /* Einstellungen für Radio-Button */
-.wpcf7-form input[type=checkbox], .wpcf7-form input[type=radio] {
--webkit-appearance: inner-spin-button!important;
-appearance: inner-spin-button!important;
-width: 2rem;
-height: 2rem;
-accent-color: #009FE3;
-margin-right: 0.5rem;
+.wpcf7-form input[type=checkbox],
+.wpcf7-form input[type=radio] {
+  -webkit-appearance: inner-spin-button !important;
+  appearance: inner-spin-button !important;
+  width: 2rem;
+  height: 2rem;
+  accent-color: #009FE3;
+  margin-right: 0.5rem;
 }
 
-.themeform input[type="radio"]:checked::before, .widget_archive input[type="radio"]:checked::before, .widget_categories input[type="radio"]:checked::before, .wpcf7-form input[type="radio"]:checked::before {
-content: ""!important;
-background-color: #009FE3;
+.themeform input[type="radio"]:checked::before,
+.widget_archive input[type="radio"]:checked::before,
+.widget_categories input[type="radio"]:checked::before,
+.wpcf7-form input[type="radio"]:checked::before {
+  content: "" !important;
+  background-color: #009FE3;
 }
 
 
-/* Radio untereinander */	
+/* Radio untereinander */
 .wpcf7-list-item {
-  display: block!important;
+  display: block !important;
 }
 
+
+/* Off canvas */
+@media (max-width: 1070px) {
+  .wp-block-navigation__responsive-container {
+    right: -70vw;
+    left: auto;
+    width: 70vw;
+    transition: none;
+    /* Keine Transition */
+    border-radius: 0;
+  }
+
+  .wp-block-navigation__responsive-container.is-menu-open {
+    animation: slideInMenu 0.5s linear forwards
+  }
+
+  @keyframes slideInMenu {
+    from {
+      right: -70vw;
+    }
+
+    to {
+      right: 0vw;
+    }
+  }
+}
