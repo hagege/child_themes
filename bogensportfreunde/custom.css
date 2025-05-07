@@ -75,26 +75,27 @@ h3.tribe-events-calendar-month__calendar-event-title.tribe-common-h8.tribe-commo
     }
 }
 
-/* Websitetitel im Menü zweizeilig - muss später noch geprüft werden */
-@media screen and (max-width: 590px) {
-    p.has-text-align-center.bsf-websitetitel.wp-block-site-title {
-        font-size: clamp(0.8rem, 0.727vw + 0.655rem, 1.2rem)
-    }
-
-    img.custom-logo {
-        /*    height: 20vw !important; */
-        width: 20vw;
-    }
-}
-
-@media screen and (min-width: 590px) {
-    p.has-text-align-center.bsf-websitetitel.wp-block-site-title {
-        white-space: normal !important;
-        overflow-wrap: anywhere;
-        line-height: 1.2;
-        text-align: center;
-    }
-}
+/* Websitetitel im Menü zweizeilig - muss später noch geprüft werden - nicht mehr genutzt, 7.5.2025
+  @media screen and (max-width: 590px) {
+      p.has-text-align-center.bsf-websitetitel.wp-block-site-title {
+          font-size: clamp(0.8rem, 0.727vw + 0.655rem, 1.2rem)
+      }
+  
+      img.custom-logo {
+          width: 20vw;
+      }
+  }
+  
+  @media screen and (min-width: 590px) {
+      p.has-text-align-center.bsf-websitetitel.wp-block-site-title {
+          white-space: normal !important;
+          overflow-wrap: anywhere;
+          line-height: 1.2;
+          text-align: center;
+      }
+  }
+  
+  */
 
 /* mobiles Menü */
 /* Mobile Menü - Standard-Zustand */
