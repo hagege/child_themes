@@ -3,6 +3,13 @@
     margin-top: -10rem;
 }
 
+/* Instagram Menüpunkt in der Navigation */
+span.wp-block-navigation-item__label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 /* Problem bei Firefox auf der Startpage */
 .wp-block-image.alignfull.size-full.wave_startpage_image img,
 .wp-block-image.alignfull.size-full.wave_image img {
@@ -57,12 +64,25 @@ p.haurand-button-dunkelgruen {
 
 p[class^="haurand-button-"] a {
     color: black;
-    font-size: clamp(0.75rem, 0.675rem + 0.38vw, 1.125rem);
     font-weight: 500;
     padding: 1rem;
     text-decoration: none;
     border-radius: 10px;
 }
+
+@media (max-width:390px) {
+    p[class^="haurand-button-"] a {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width:391px) {
+    p[class^="haurand-button-"] a {
+        font-size: var(--wp--preset--font-size--medium);
+    }
+}
+
+
 
 p.haurand-button-creme a {
     background-color: var(--wp--preset--color--custom-creme);
@@ -99,7 +119,7 @@ p[class^="haurand-button-"] a:hover {
 
 @media (max-width:1100px) {
     .desktop-gruppe {
-        display: none;
+        visibility: hidden;
     }
 }
 
