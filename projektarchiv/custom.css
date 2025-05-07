@@ -24,6 +24,17 @@
     --wp--preset--color--custom-rot: #eb1717;
 }
 
+/* Liste ausblenden */
+li.nicht_zeigen ul {
+    color: lightgray;
+    display: none;
+}
+
+li.nicht_zeigen::after {
+    content: "Achtung: Liste wird nicht gezeigt";
+    font-style: italic;
+    background-color: lightgray;
+}
 
 /* Styling checked items 
 https://wordpress.org/support/plugin/todo-list-block/ */
