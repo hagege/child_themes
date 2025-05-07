@@ -21,13 +21,13 @@ img.custom-logo {
 h1.tribe-events-single-event-title,
 h3.tribe-events-calendar-list__event-title.tribe-common-h6.tribe-common-h4--min-medium a,
 h3.tribe-events-calendar-month__calendar-event-title.tribe-common-h8.tribe-common-h--alt a {
-    background-color: var(--wp--preset--color--custom-blau);
+    background-color: var(--wp--preset--color--custom-rostrot);
     color: var(--wp--preset--color--custom-weiss);
     padding: 10px;
 }
 
 h3.tribe-events-calendar-month__calendar-event-title.tribe-common-h8.tribe-common-h--alt a {
-    background-color: var(--wp--preset--color--custom-blau);
+    background-color: var(--wp--preset--color--custom-rostrot);
     color: var(--wp--preset--color--custom-weiss);
     padding: 3px;
     display: block;
@@ -35,7 +35,7 @@ h3.tribe-events-calendar-month__calendar-event-title.tribe-common-h8.tribe-commo
 
 /* Background-color für embed privacy */
 .embed-privacy-overlay {
-    background-color: var(--wp--preset--color--custom-blau);
+    background-color: var(--wp--preset--color--custom-rostrot);
 }
 
 /* Breakpoint für mobiles Menü anpassen */
@@ -103,7 +103,7 @@ h3.tribe-events-calendar-month__calendar-event-title.tribe-common-h8.tribe-commo
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container a:hover,
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container a:focus,
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container a:active {
-    background-color: var(--wp--preset--color--custom-blau);
+    background-color: var(--wp--preset--color--custom-rostrot);
     color: var(--wp--preset--color--custom-weiss) !important;
 }
 
@@ -116,7 +116,7 @@ h3.tribe-events-calendar-month__calendar-event-title.tribe-common-h8.tribe-commo
 
 .wp-block-navigation a:where(:not(.wp-element-button)):hover {
     text-decoration: none;
-    background-color: var(--wp--preset--color--custom-blau);
+    background-color: var(--wp--preset--color--custom-rostrot);
     color: var(--wp--preset--color--custom-weiss) !important;
 }
 
@@ -154,21 +154,21 @@ p.haurand-button a::before {
 }
 
 p.haurand-button,
-p.haurand-button-blau {
+p.haurand-button-rostrot {
     /* position: relative; */
     margin: 1rem;
 }
 
 p.haurand-button a {
     color: var(--wp--preset--color--custom-weiss);
-    background-color: var(--wp--preset--color--custom-blau);
+    background-color: var(--wp--preset--color--custom-rostrot);
     padding: 0.8em;
     font-size: inherit;
     text-decoration: none;
 }
 
-p.haurand-button-blau a {
-    color: var(--wp--preset--color--custom-blau);
+p.haurand-button-rostrot a {
+    color: var(--wp--preset--color--custom-rostrot);
     background-color: var(--wp--preset--color--custom-weiss);
     padding: 0.8em;
     font-size: inherit;
@@ -177,13 +177,13 @@ p.haurand-button-blau a {
 
 
 p.haurand-button a:hover,
-p.haurand-button-blau a:hover {
+p.haurand-button-rostrot a:hover {
     color: var(--wp--preset--color--custom-schwarz);
     background-color: var(--wp--preset--color--custom-mittelgrau);
 }
 
-/* Hover bei Buttons im seitenheader-blau */
-a.wp-block-button__link.has-custom-blau-color.has-custom-weiss-background-color.has-text-color.has-background.has-link-color.wp-element-button:hover {
+/* Hover bei Buttons im seitenheader-rostrot */
+a.wp-block-button__link.has-custom-rostrot-color.has-custom-weiss-background-color.has-text-color.has-background.has-link-color.wp-element-button:hover {
     color: var(--wp--preset--color--custom-weiss) !important;
     background-color: var(--wp--preset--color--custom-mittelgrau) !important;
 }
