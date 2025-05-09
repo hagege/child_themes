@@ -11,7 +11,7 @@ Stable tag: 1.1
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Adds a sticky header with animated logo shrink effect.
+Adds a sticky header with animated logo shrink effect. It is also possible to set a breakpoint for the mobile menu.
 
 == Description ==
 
