@@ -1,53 +1,68 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Shrinking Logo Sticky Header\n"
-"POT-Creation-Date: 2025-04-26 11:56+0200\n"
-"PO-Revision-Date: 2025-04-26 12:03+0200\n"
+"POT-Creation-Date: 2025-05-07 08:29+0200\n"
+"PO-Revision-Date: 2025-05-07 08:33+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.11\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.6\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: shrinking-logo-sticky-header.php\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: shrinking-logo-sticky-header.php:56
+#: shrinking-logo-sticky-header.php:63
 msgid "Shrinking Logo Sticky Header – Settings"
-msgstr "Shrinking Logo Sticky Header - Einstellungen "
+msgstr "Shrinking Logo Sticky Header - Einstellungen"
 
-#: shrinking-logo-sticky-header.php:61
+#: shrinking-logo-sticky-header.php:68
 msgid "Height of the shrunk header (px):"
 msgstr "Höhe des geschrumpften Headers (px):"
 
-#: shrinking-logo-sticky-header.php:65
+#: shrinking-logo-sticky-header.php:72
 msgid "Animation duration (seconds):"
 msgstr "Animationsdauer (Sekunden):"
 
-#: shrinking-logo-sticky-header.php:69
+#: shrinking-logo-sticky-header.php:76
 msgid "Normal height of header (px):"
 msgstr "Normale Höhe des Headers (px):"
 
-#: shrinking-logo-sticky-header.php:73
+#: shrinking-logo-sticky-header.php:80
 msgid "Logo shrinking factor (Value in 0.05 steps):"
 msgstr "Schrumpfungsfaktor des Logos (Wert in 0,05 Schritten):"
+
+#: shrinking-logo-sticky-header.php:90
+msgid "Activate Breakpoint settings (CSS Rules):"
+msgstr "Aktivieren Sie die Breakpoint-Einstellungen (CSS-Regeln):"
+
+#: shrinking-logo-sticky-header.php:93
+msgid "Activates special CSS rules for the Breakpoint in Block Themes."
+msgstr ""
+"Aktiviert spezielle CSS-Regeln für den Breakpoint in Block Themes."
+
+#: shrinking-logo-sticky-header.php:97
+msgid "Breakpoint for Navigation (px):"
+msgstr "Breakpoint für die Navigation (px):"
+
+#: shrinking-logo-sticky-header.php:100
+msgid "Standard: 782"
+msgstr "Standard: 782"
 
 #. Plugin Name of the plugin/theme
 msgid "Shrinking Logo Sticky Header"
 msgstr "Shrinking Logo Sticky Header"
 
 #. Plugin URI of the plugin/theme
-#. Author URI of the plugin/theme
-msgid "https://haurand.com"
-msgstr "https://haurand.com"
+msgid "https://haurand.com/plugin-shrinking-logo-sticky-header/"
+msgstr "https://haurand.com/plugin-shrinking-logo-sticky-header/"
 
 #. Description of the plugin/theme
 msgid "Adds a sticky header with animated logo shrink effect."
@@ -57,6 +72,10 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Hans-Gerd Gerhards"
 msgstr "Hans-Gerd Gerhards"
+
+#. Author URI of the plugin/theme
+msgid "https://haurand.com/author/hgg/"
+msgstr "https://haurand.com/author/hgg/"
 
 #~ msgid "Height of header (px):"
 #~ msgstr "Headerhöhe (px):"
