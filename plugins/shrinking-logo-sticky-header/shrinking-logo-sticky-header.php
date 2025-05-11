@@ -10,7 +10,7 @@
  * @wordpress-plugin
  * Plugin Name:   Shrinking Logo Sticky Header
  * Plugin URI:    https://haurand.com/plugin-shrinking-logo-sticky-header/
- * Description:   Adds a sticky header with animated logo shrink effect.
+ * Description:   Adds a sticky header with animated logo shrink effect. It is also possible to set a breakpoint for the mobile menu.
  * Version:       1.1
  * Author:        Hans-Gerd Gerhards
  * Author URI:    https://haurand.com/author/hgg/
@@ -24,111 +24,161 @@
  */
 
 // Exit if accessed directly.
-if ( ! defined( 'ABSPATH' ) ) exit;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 // set version.
 const SLSH_VERSION = '1.1.0';
 
-function slsh_load_textdomain() {
-    load_plugin_textdomain('slsh', false, dirname(plugin_basename(__FILE__)) . '/languages');
+/**
+ * Registering settings
+ */
+function slsh_register_settings(): void {
+	add_option( 'slsh_header_shrink_height', 80 );
+	add_option( 'slsh_animation_duration', 0.6 );
+	add_option( 'slsh_heigth_header', 120 );
+	add_option( 'slsh_logo_in_header_shrink_height', 0.8 );
+
+	// Options for Breakpoint.
+	add_option( 'slsh_enable_nav_css', 'no' );
+	add_option( 'slsh_nav_breakpoint', 782 );
+
+	register_setting(
+		'slsh_options_group',
+		'slsh_header_shrink_height',
+		array(
+			'type'              => 'integer',
+			'sanitize_callback' => 'absint',
+		)
+	);
+	register_setting(
+		'slsh_options_group',
+		'slsh_animation_duration',
+		array(
+			'type'              => 'float',
+			'sanitize_callback' => 'floatval',
+		)
+	);
+	register_setting(
+		'slsh_options_group',
+		'slsh_heigth_header',
+		array(
+			'type'              => 'integer',
+			'sanitize_callback' => 'absint',
+		)
+	);
+	register_setting(
+		'slsh_options_group',
+		'slsh_logo_in_header_shrink_height',
+		array(
+			'type'              => 'float',
+			'sanitize_callback' => 'floatval',
+		)
+	);
+	register_setting(
+		'slsh_options_group',
+		'slsh_enable_nav_css',
+		array(
+			'type'              => 'string',
+			'sanitize_callback' => function ( $v ) {
+				return 'yes' === $v ? 'yes' : 'no';
+			},
+		)
+	);
+	register_setting(
+		'slsh_options_group',
+		'slsh_nav_breakpoint',
+		array(
+			'type'              => 'integer',
+			'sanitize_callback' => 'absint',
+		)
+	);
 }
-add_action('plugins_loaded', 'slsh_load_textdomain');
+add_action( 'admin_init', 'slsh_register_settings' );
 
-// --- Registering settings ---
-function slsh_register_settings() {
-    add_option('slsh_header_shrink_height', 80);
-    add_option('slsh_animation_duration', 0.6);
-    add_option('slsh_heigth_header', 120);
-    add_option('slsh_logo_in_header_shrink_height', 0.8);
-
-    // Options for Breakpoint
-    add_option('slsh_enable_nav_css', 'no');
-    add_option('slsh_nav_breakpoint', 782);
-
-    register_setting('slsh_options_group', 'slsh_header_shrink_height', array('type' => 'integer', 'sanitize_callback' => 'absint'));
-    register_setting('slsh_options_group', 'slsh_animation_duration', array('type' => 'float', 'sanitize_callback' => 'floatval'));
-    register_setting('slsh_options_group', 'slsh_heigth_header', array('type' => 'integer', 'sanitize_callback' => 'absint'));
-    register_setting('slsh_options_group', 'slsh_logo_in_header_shrink_height', array('type' => 'float', 'sanitize_callback' => 'floatval'));
-    register_setting('slsh_options_group', 'slsh_enable_nav_css', array('type' => 'string', 'sanitize_callback' => function($v){ return $v === 'yes' ? 'yes' : 'no'; }));
-    register_setting('slsh_options_group', 'slsh_nav_breakpoint', array('type' => 'integer', 'sanitize_callback' => 'absint'));
+/**
+ * Settings page in admin menu
+ */
+function slsh_register_options_page(): void {
+	add_options_page( 'Shrinking Logo Sticky Header', 'Shrinking Logo Sticky Header', 'manage_options', 'slsh', 'slsh_options_page' );
 }
-add_action('admin_init', 'slsh_register_settings');
+add_action( 'admin_menu', 'slsh_register_options_page' );
 
-// --- Settings page in admin menu ---
-function slsh_register_options_page() {
-    add_options_page('Shrinking Logo Sticky Header', 'Shrinking Logo Sticky Header', 'manage_options', 'slsh', 'slsh_options_page');
-}
-add_action('admin_menu', 'slsh_register_options_page');
-
-function slsh_options_page() {
-?>
-    <div>
-        <h2><?php esc_html_e('Shrinking Logo Sticky Header – Settings', 'shrinking-logo-sticky-header'); ?></h2>
-        <form method="post" action="options.php">
-            <?php settings_fields('slsh_options_group'); ?>
-            <table>
-                <tr valign="top">
-                    <th scope="row"><label style="display: block; text-align: left" for="slsh_header_shrink_height"><?php esc_html_e('Height of the shrunk header (px):', 'shrinking-logo-sticky-header'); ?></label></th>
-                    <td><input type="number" id="slsh_header_shrink_height" name="slsh_header_shrink_height" value="<?php echo esc_attr(get_option('slsh_header_shrink_height', 80)); ?>" min="40" max="300" /></td>
-                </tr>
-                <tr valign="top">
-                    <th scope="row"><label style="display: block; text-align: left" for="slsh_animation_duration"><?php esc_html_e('Animation duration (seconds):', 'shrinking-logo-sticky-header'); ?></label></th>
-                    <td><input type="number" step="0.05" id="slsh_animation_duration" name="slsh_animation_duration" value="<?php echo esc_attr(get_option('slsh_animation_duration', 0.6)); ?>" min="0.05" max="3" /></td>
-                </tr>
-                <tr valign="top">
-                    <th scope="row"><label style="display: block; text-align: left" for="slsh_heigth_header"><?php esc_html_e('Normal height of header (px):', 'shrinking-logo-sticky-header'); ?></label></th>
-                    <td><input type="number" id="slsh_heigth_header" name="slsh_heigth_header" value="<?php echo esc_attr(get_option('slsh_heigth_header', 120)); ?>" min="40" max="300" /></td>
-                </tr>
-                <tr valign="top">
-                    <th scope="row"><label style="display: block; text-align: left" for="slsh_logo_in_header_shrink_height"><?php esc_html_e('Logo shrinking factor (Value in 0.05 steps):', 'shrinking-logo-sticky-header'); ?></label></th>
-                    <td><input type="number" step="0.05" id="slsh_logo_in_header_shrink_height" name="slsh_logo_in_header_shrink_height" value="<?php echo esc_attr(get_option('slsh_logo_in_header_shrink_height', 0.8)); ?>" min="0.4" max="1" /></td>
-                </tr>
-
-
-                <!-- settings for breakpoint (CSS) -->
-                <tr valign="top">
-					<th scope="row"><h3 style="text-align: left;">Breakpoint</h3></th>		    
+/**
+ * Show options page.
+ *
+ * @return void
+ */
+function slsh_options_page(): void {
+	?>
+	<div>
+		<h2><?php esc_html_e( 'Shrinking Logo Sticky Header – Settings', 'shrinking-logo-sticky-header' ); ?></h2>
+		<form method="post" action="<?php echo esc_url( get_admin_url() ); ?>options.php">
+			<?php settings_fields( 'slsh_options_group' ); ?>
+			<table>
+				<tr>
+					<th scope="row"><label style="display: block; text-align: left" for="slsh_header_shrink_height"><?php esc_html_e( 'Height of the shrunk header (px):', 'shrinking-logo-sticky-header' ); ?></label></th>
+					<td><input type="number" id="slsh_header_shrink_height" name="slsh_header_shrink_height" value="<?php echo esc_attr( get_option( 'slsh_header_shrink_height', 80 ) ); ?>" min="40" max="300" /></td>
 				</tr>
-                <tr valign="top">
-                    <th scope="row"><label style="display: block; text-align: left" for="slsh_enable_nav_css"><?php esc_html_e('Activate Breakpoint settings (CSS Rules):', 'shrinking-logo-sticky-header'); ?></label></th>
-                    <td>
-                        <input type="checkbox" id="slsh_enable_nav_css" name="slsh_enable_nav_css" value="yes" <?php checked('yes', get_option('slsh_enable_nav_css', 'no')); ?> />
-                        <span><?php esc_html_e('Activates special CSS rules for the Breakpoint in Block Themes.', 'shrinking-logo-sticky-header'); ?></span>
-                    </td>
-                </tr>
-                <tr valign="top">
-                    <th scope="row"><label style="display: block; text-align: left" for="slsh_nav_breakpoint"><?php esc_html_e('Breakpoint for Navigation (px):', 'shrinking-logo-sticky-header'); ?></label></th>
-                    <td>
-                        <input type="number" id="slsh_nav_breakpoint" name="slsh_nav_breakpoint" value="<?php echo esc_attr(get_option('slsh_nav_breakpoint', 782)); ?>" min="320" max="1920" />
-                        <span><?php esc_html_e('Standard: 782', 'shrinking-logo-sticky-header'); ?></span>
-                    </td>
-                </tr>
-            </table>
-            <?php submit_button(); ?>
-        </form>
-    </div>
-<?php
+				<tr>
+					<th scope="row"><label style="display: block; text-align: left" for="slsh_animation_duration"><?php esc_html_e( 'Animation duration (seconds):', 'shrinking-logo-sticky-header' ); ?></label></th>
+					<td><input type="number" step="0.05" id="slsh_animation_duration" name="slsh_animation_duration" value="<?php echo esc_attr( get_option( 'slsh_animation_duration', 0.6 ) ); ?>" min="0.05" max="3" /></td>
+				</tr>
+				<tr>
+					<th scope="row"><label style="display: block; text-align: left" for="slsh_heigth_header"><?php esc_html_e( 'Normal height of header (px):', 'shrinking-logo-sticky-header' ); ?></label></th>
+					<td><input type="number" id="slsh_heigth_header" name="slsh_heigth_header" value="<?php echo esc_attr( get_option( 'slsh_heigth_header', 120 ) ); ?>" min="40" max="300" /></td>
+				</tr>
+				<tr>
+					<th scope="row"><label style="display: block; text-align: left" for="slsh_logo_in_header_shrink_height"><?php esc_html_e( 'Logo shrinking factor (Value in 0.05 steps):', 'shrinking-logo-sticky-header' ); ?></label></th>
+					<td><input type="number" step="0.05" id="slsh_logo_in_header_shrink_height" name="slsh_logo_in_header_shrink_height" value="<?php echo esc_attr( get_option( 'slsh_logo_in_header_shrink_height', 0.8 ) ); ?>" min="0.4" max="1" /></td>
+				</tr>
+
+				<!-- settings for breakpoint (CSS) -->
+				<tr>
+					<th scope="row"><h3 style="text-align: left;">Breakpoint</h3></th>
+				</tr>
+				<tr>
+					<th scope="row"><label style="display: block; text-align: left" for="slsh_enable_nav_css"><?php esc_html_e( 'Activate Breakpoint settings (CSS Rules):', 'shrinking-logo-sticky-header' ); ?></label></th>
+					<td>
+						<input type="checkbox" id="slsh_enable_nav_css" name="slsh_enable_nav_css" value="yes" <?php checked( 'yes', get_option( 'slsh_enable_nav_css', 'no' ) ); ?> />
+						<span><?php esc_html_e( 'Activates special CSS rules for the Breakpoint in Block Themes.', 'shrinking-logo-sticky-header' ); ?></span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label style="display: block; text-align: left" for="slsh_nav_breakpoint"><?php esc_html_e( 'Breakpoint for Navigation (px):', 'shrinking-logo-sticky-header' ); ?></label></th>
+					<td>
+						<input type="number" id="slsh_nav_breakpoint" name="slsh_nav_breakpoint" value="<?php echo esc_attr( get_option( 'slsh_nav_breakpoint', 782 ) ); ?>" min="320" max="1920" />
+						<span><?php esc_html_e( 'Standard: 782', 'shrinking-logo-sticky-header' ); ?></span>
+					</td>
+				</tr>
+			</table>
+			<?php submit_button(); ?>
+		</form>
+	</div>
+	<?php
 }
 
-
-/* Load Dynamic CSS for Plugin Shrinking Logo Sticky Header */
-function slsh_dynamic_css() {
+/**
+ * Load Dynamic CSS for Plugin Shrinking Logo Sticky Header
+ */
+function slsh_dynamic_css(): void {
 	// include css file.
 	wp_enqueue_style(
-        'slsh_style',
-        plugins_url('assets/css/shrinking-logo-sticky-header-style.css', __FILE__),
-        array(),
-        SLSH_VERSION
-    );
-	// variables
-    $shrink_height      = intval(get_option('slsh_header_shrink_height', 80));
-    $anim_duration      = floatval(get_option('slsh_animation_duration', 0.6));
-    $header_height      = intval(get_option('slsh_heigth_header', 120));
-    $logo_shrink_height = floatval(get_option('slsh_logo_in_header_shrink_height', 0.8));
-    $enable_nav_css     = get_option('slsh_enable_nav_css', 'no');
-    $nav_breakpoint     = intval(get_option('slsh_nav_breakpoint', 782));
+		'slsh_style',
+		plugins_url( 'assets/css/shrinking-logo-sticky-header-style.css', __FILE__ ),
+		array(),
+		SLSH_VERSION
+	);
+	// variables.
+	$shrink_height      = (int) get_option( 'slsh_header_shrink_height', 80 );
+	$anim_duration      = (float) get_option( 'slsh_animation_duration', 0.6 );
+	$header_height      = (int) get_option( 'slsh_heigth_header', 120 );
+	$logo_shrink_height = (float) get_option( 'slsh_logo_in_header_shrink_height', 0.8 );
+	$enable_nav_css     = get_option( 'slsh_enable_nav_css', 'no' );
+	$nav_breakpoint     = (int) get_option( 'slsh_nav_breakpoint', 782 );
 
-    $custom_css = "
+	$custom_css = "
         header.wp-block-template-part {
             position: sticky;
             top: 0;
@@ -151,8 +201,8 @@ function slsh_dynamic_css() {
         }
     ";
 
-    if ($enable_nav_css === 'yes') {
-        $custom_css .= "
+	if ( 'yes' === $enable_nav_css ) {
+		$custom_css .= "
         @media screen and (max-width: {$nav_breakpoint}px) {
             .wp-block-navigation__responsive-container-open {
                 display: block !important;
@@ -161,14 +211,18 @@ function slsh_dynamic_css() {
                 display: none !important;
             }
         }";
-    }
+	}
 
-    wp_add_inline_style('slsh_style', $custom_css);
+	wp_add_inline_style( 'slsh_style', $custom_css );
 }
-add_action('wp_enqueue_scripts', 'slsh_dynamic_css');
+add_action( 'wp_enqueue_scripts', 'slsh_dynamic_css' );
 
-
-function slsh_enqueue(){
+/**
+ * Enqueue script.
+ *
+ * @return void
+ */
+function slsh_enqueue(): void {
 	wp_enqueue_script(
 		'slsh_js',
 		plugins_url( 'assets/js/slsh.js', __FILE__ ),
@@ -177,5 +231,4 @@ function slsh_enqueue(){
 		true
 	);
 }
-add_action('wp_enqueue_scripts', 'slsh_enqueue');
-
+add_action( 'wp_enqueue_scripts', 'slsh_enqueue' );
