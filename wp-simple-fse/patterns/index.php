@@ -7,10 +7,6 @@
 ?>
 <!-- wp:template-part {"slug":"header","area":"header"} /-->
 
-<!-- wp:separator {"className":"is-style-default"} -->
-<hr class="wp-block-separator has-alpha-channel-opacity is-style-default"/>
-<!-- /wp:separator -->
-
 <!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
 <main class="wp-block-group" style="margin-top:0;margin-bottom:0"><!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/cats.webp","alt":"Cats","dimRatio":0,"isDark":false,"align":"full","style":{"color":[]}} -->
 <div class="wp-block-cover alignfull is-light"><img class="wp-block-cover__image-background " alt="<?php esc_attr_e('Cats', 'wp-simple-fse');?>" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/cats.webp" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","fontSize":"large"} -->

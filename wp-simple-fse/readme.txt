@@ -4,13 +4,20 @@ Contributors: Hans-Gerd Gerhards
 Requires at least: 6.8
 Tested up to: 6.8
 Requires PHP: 5.7
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
 == Description ==
 
-Simple WordPress Block Theme
+WP Simple FSE is a clean, flexible, fast and accessibility-ready block theme. 
+Its default look is a stylish black on white background color scheme and lexend font (a sans-serif typography). 
+WP Simple FSE is built from the ground up for flexibility. It includes six different theme styles to choose from, and different block patterns that you can use to quickly create unique page layouts. 
+This great flexibility characterizes the theme. 
+
+Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, sticky-post, threaded-comments, translation-ready, block-styles, wide-blocks, full-site-editing
+
 
 
 == Changelog ==

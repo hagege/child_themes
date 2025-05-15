@@ -1,6 +1,6 @@
 {
-	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
 	"version": 3,
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
 	"settings": {
 		"appearanceTools": true,
 		"color": {
@@ -33,8 +33,8 @@
 			]
 		},
 		"layout": {
-			"contentSize": "800px",
-			"wideSize": "1200px"
+			"contentSize": "1200px",
+			"wideSize": "1920px"
 		},
 		"spacing": {
 			"defaultSpacingSizes": false,
@@ -317,7 +317,7 @@
 			"background": "var(--wp--preset--color--base)",
 			"text": "var(--wp--preset--color--base-2)"
 		},
-		"css": "",
+		"css": "/* Off canvas */\n@media (max-width: 900px) {\n  .wp-block-navigation__responsive-container {\n    right: -70vw;\n    left: auto;\n    width: 70vw;\n    transition: none; \n    border-radius: 0;\n  }\n\n  .wp-block-navigation__responsive-container.is-menu-open {\n    animation: slideInMenu 0.5s linear forwards\n  }\n  @keyframes slideInMenu {\n    from {\n      right: -70vw;\n    }\n    to {\n      right: 0vw;\n    }\n  }\n}",
 		"elements": {
 			"button": {
 				":active": {

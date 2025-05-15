@@ -7,10 +7,6 @@
 ?>
 <!-- wp:template-part {"slug":"header","area":"header"} /-->
 
-<!-- wp:separator {"className":"is-style-default"} -->
-<hr class="wp-block-separator has-alpha-channel-opacity is-style-default"/>
-<!-- /wp:separator -->
-
 <!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
 <main class="wp-block-group"><!-- wp:spacer {"height":"30px"} -->
 <div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>

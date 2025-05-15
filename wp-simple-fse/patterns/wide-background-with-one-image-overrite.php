@@ -1,7 +1,7 @@
 <?php
 /**
- * Title: Breiter Hintergrund mit einem Bildern (overrite)
- * Slug: wp-simple-fse/breiter-hintergrund-mit-einem-bildern-overrite
+ * Title: Wide background with one image (overrite)
+ * Slug: wp-simple-fse/wide-background-with-one-image-overrite
  * Categories: 
  */
 ?>

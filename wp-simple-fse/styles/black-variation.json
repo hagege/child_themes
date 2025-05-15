@@ -1,32 +1,32 @@
 {
 	"version": 3,
 	"$schema": "https://schemas.wp.org/wp/6.6/theme.json",
-	"title": "white-variation",
+	"title": "black-variation",
 	"settings": {
 		"color": {
 			"palette": [
 				{
-					"color": "#FFFFFF",
+					"color": "#262626",
 					"name": "Base",
 					"slug": "base"
 				},
 				{
-					"color": "#3C4346",
+					"color": "#FFFFFF",
 					"name": "Base / Two",
 					"slug": "base-2"
 				},
 				{
-					"color": "#B70000",
+					"color": "#758BFD",
 					"name": "Contrast / 2",
 					"slug": "contrast-2"
 				},
 				{
-					"color": "#f7f8f9",
+					"color": "#FF9F1C",
 					"name": "Contrast",
 					"slug": "contrast"
 				},
 				{
-					"color": "#D4DaDB",
+					"color": "#DFB2F4",
 					"name": "Contrast / 3",
 					"slug": "contrast-3"
 				}
