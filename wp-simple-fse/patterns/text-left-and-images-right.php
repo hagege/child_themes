@@ -6,8 +6,8 @@
 	*/
 ?>
 
-<!-- wp:group {"className":"alignfull is-style-section-default has-base-color has-base-2-background-color has-text-color has-background has-link-color"} -->
-<div class="wp-block-group alignfull is-style-section-default has-base-color has-base-2-background-color has-text-color has-background has-link-color"><!-- wp:columns {"align":"wide"} -->
+<!-- wp:group {"className":"alignfull is-style-section-default has-base-color has-base-2-background-color has-text-color has-background has-link-color","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|50","right":"var:preset|spacing|50"}}},"layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull is-style-section-default has-base-color has-base-2-background-color has-text-color has-background has-link-color" style="padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)"><!-- wp:columns {"align":"wide"} -->
 	<div class="wp-block-columns alignwide"><!-- wp:column -->
 		<div class="wp-block-column"><!-- wp:heading {"style":{"elements":{"link":{"color":{"text":"var:preset|color|custom-weiss"}}}},"textColor":"custom-weiss","fontSize":"x-large"} -->
 			<h2 class="wp-block-heading has-custom-weiss-color has-text-color has-link-color has-x-large-font-size">Great landscape</h2>
