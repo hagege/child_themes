@@ -7,11 +7,16 @@ Tags: Block Theme, Header, shrink, sticky-header
 Requires at least: 
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Adds a sticky header with animated logo shrink effect. It is also possible to set a breakpoint for the mobile menu.
+* Set height for header
+* Set height for shrinking header
+* Set Logo shrinking factor 
+* Set Animation duration (seconds) for shrinking header
+* Option to set a breakpoint for navigation
 
 == Description ==
 
@@ -31,15 +36,22 @@ In Version 1.1 I have added the option to set a custom breakpoint for mobile men
 == Frequently Asked Questions ==
 = Is it possible to use this plugin also for classical Themes (e. g. Astra, OceanWP, GeneratePress)? =
 
-sorry, no. The classic themes usually already offer such options. 
+Classic themes sometimes offer such an option, but possibly only in a paid version. This plugin can only be used with block themes.
 
 = Is it possible to use this plugin for all Block Themes? =
 Tested with Twenty Twenty-Three, Twenty Twenty-Four, Twenty Twenty-Five, Circles WP. 
 If the plugin does not work with your block theme, please write to the support forum. I will then see what I can do. 
 
-= A question that someone might have =
+= Why is the sticky header transparent and how can I change this? =
 
-An answer to that question.
+The template part for the header is initially transparent in many block themes. 
+For this reason, the background colour of the outer group block for the header must be changed to a colour such as white, for example. 
+If the header has a background colour, then the header ‘covers’ the content when scrolling. See also the screenshot.
+
+= Can you show me examples that demonstrate these effects? =
+
+Yes, with pleasure:
+https://haurand.com/  and  https://space4.yd-sgs.de/
 
 
 == Installation ==
