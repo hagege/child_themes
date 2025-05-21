@@ -259,10 +259,6 @@ function slsh_dynamic_css(): void {
 			border-radius: 0;
 		}
 
-		.wp-block-navigation:not(.has-text-color) .wp-block-navigation__responsive-container.is-menu-open {
-			background-color: white;
-		}
-
 		.wp-block-navigation__responsive-container.is-menu-open {
 			animation: slideInMenu 0.5s linear forwards;
 		}
