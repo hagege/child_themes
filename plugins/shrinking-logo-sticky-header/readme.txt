@@ -1,9 +1,9 @@
-=== Shrinking Logo Sticky Header ===
+=== Dynamic Header & Navigation for Block Themes ===
 Author URI: https://haurand.com/author/hgg/
 Plugin URI: https://haurand.com/plugin-shrinking-logo-sticky-header/
 Donate link: 
 Contributors: @hage
-Tags: Block Theme, Header, shrink, sticky-header
+Tags: Block Theme, Header, shrink, sticky-header, breakpoint, off-canvas
 Requires at least: 
 Tested up to: 6.8
 Requires PHP: 7.4
@@ -11,27 +11,28 @@ Stable tag: 1.2
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Adds a sticky header with animated logo shrink effect. It is also possible to set a breakpoint for the mobile menu.
+Animated shrinking header, responsive shrinking logo, custom breakpoints and off-canvas navigation – all-in-one solution for most modern WordPress block themes.
+
+== Description ==
+
 * Set height for header
 * Set height for shrinking header
 * Set Logo shrinking factor 
 * Set Animation duration (seconds) for shrinking header
-* Option to set a breakpoint for navigation
+* Option to set a breakpoint for navigation (added in Version 1.1)
+* Option to set Off-Canvas (added in Version 1.2)
 
-== Description ==
-
-Shrinking Logo Sticky Header is a lightweight WordPress plugin developed specifically for Block Themes. 
+Dynamic Header & Navigation for Block Themes (Previous name of the plugin: Shrinking Logo Sticky Header) is a lightweight WordPress plugin developed specifically for Block Themes. 
 It adds a modern sticky header with smooth, animated shrinking effects for both the header and the site logo. 
 As users scroll down the page, the header and logo automatically reduce in size, maximizing on-screen space and keeping navigation easily accessible without disrupting the browsing experience.
 
 The plugin allows you to individually configure the heights for the header and logo in both their normal and shrunken states, giving you full control over your site’s appearance. 
 These settings can be easily adjusted to match your branding or design preferences.
 
-One of the key advantages of Shrinking Logo Sticky Header is its simplicity: 
+One of the key advantages of Dynamic Header & Navigation for Block Themes is its simplicity: 
 After activation, the sticky and shrinking effects work in principle immediately - no additional setup or configuration is required. 
 This makes it ideal for users who want a professional, dynamic header effect without dealing with complex options or custom code.
 
-In Version 1.1 I have added the option to set a custom breakpoint for mobile menu.
 
 == Frequently Asked Questions ==
 = Is it possible to use this plugin also for classical Themes (e. g. Astra, OceanWP, GeneratePress)? =
@@ -62,6 +63,12 @@ https://haurand.com/  and  https://space4.yd-sgs.de/
 4. Click on `Activate plugin`
 
 == Changelog ==
+
+= 1.2: May 21, 2025 =
+* Added: Optional Off-Canvas-Menu
+* Added: Uninstall: Delete the Options in Table when unistalling this Plugin
+* Renaming the Plugin: "Dynamic Header & Navigation for Block Themes" instead of previous name of the plugin: "Shrinking Logo Sticky Header"
+* Updating the language files
 
 = 1.1: May 9, 2025 =
 * Added: Optional Breakpoint settings

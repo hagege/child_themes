@@ -5,13 +5,13 @@
  * @package       shrinkingLO
  * @author        Hans-Gerd Gerhards
  * @license       gplv2
- * @version       1.1
+ * @version       1.2
  *
  * @wordpress-plugin
- * Plugin Name:   Shrinking Logo Sticky Header
+ * Plugin Name:   Dynamic Header & Navigation for Block Themes
  * Plugin URI:    https://haurand.com/plugin-shrinking-logo-sticky-header/
- * Description:   Adds a sticky header with animated logo shrink effect. It is also possible to set a breakpoint for the mobile menu.
- * Version:       1.1
+ * Description:   Animated shrinking header, responsive shrinking logo, custom breakpoints and off-canvas navigation – all-in-one solution for most modern WordPress block themes. (Previous name of the plugin: Shrinking Logo Sticky Header)
+ * Version:       1.2
  * Author:        Hans-Gerd Gerhards
  * Author URI:    https://haurand.com/author/hgg/
  * Text Domain:   shrinking-logo-sticky-header
@@ -29,7 +29,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // set version.
-const SLSH_VERSION = '1.1.0';
+const SLSH_VERSION = '1.2.0';
+
+
 
 /**
  * Registering settings
@@ -43,6 +45,9 @@ function slsh_register_settings(): void {
 	// Options for Breakpoint.
 	add_option( 'slsh_enable_nav_css', 'no' );
 	add_option( 'slsh_nav_breakpoint', 782 );
+	
+	// Option for Off-Canvas-Menue
+	add_option( 'slsh_enable_off_canvas', 'no' );
 
 	register_setting(
 		'slsh_options_group',
@@ -94,6 +99,16 @@ function slsh_register_settings(): void {
 			'sanitize_callback' => 'absint',
 		)
 	);
+	register_setting(
+		'slsh_options_group',
+		'slsh_enable_off_canvas',
+		array(
+			'type'              => 'string',
+			'sanitize_callback' => function ( $v ) {
+				return 'yes' === $v ? 'yes' : 'no';
+			},
+		)
+	);
 }
 add_action( 'admin_init', 'slsh_register_settings' );
 
@@ -101,7 +116,7 @@ add_action( 'admin_init', 'slsh_register_settings' );
  * Settings page in admin menu
  */
 function slsh_register_options_page(): void {
-	add_options_page( 'Shrinking Logo Sticky Header', 'Shrinking Logo Sticky Header', 'manage_options', 'slsh', 'slsh_options_page' );
+	add_options_page( 'Dynamic Header & Navigation for Block Themes', 'Dynamic Header & Navigation for Block Themes', 'manage_options', 'slsh', 'slsh_options_page' );
 }
 add_action( 'admin_menu', 'slsh_register_options_page' );
 
@@ -113,7 +128,7 @@ add_action( 'admin_menu', 'slsh_register_options_page' );
 function slsh_options_page(): void {
 	?>
 	<div>
-		<h2><?php esc_html_e( 'Shrinking Logo Sticky Header – Settings', 'shrinking-logo-sticky-header' ); ?></h2>
+		<h2><?php esc_html_e( 'Dynamic Header & Navigation for Block Themes – Settings', 'shrinking-logo-sticky-header' ); ?></h2>
 		<form method="post" action="<?php echo esc_url( get_admin_url() ); ?>options.php">
 			<?php settings_fields( 'slsh_options_group' ); ?>
 			<table>
@@ -136,7 +151,10 @@ function slsh_options_page(): void {
 
 				<!-- settings for breakpoint (CSS) -->
 				<tr>
-					<th scope="row"><h3 style="text-align: left;">Breakpoint</h3></th>
+					<th scope="row"><h3 style="text-align: left; margin-top:30px">Breakpoint</h3></th>
+				</tr>
+				<tr>
+					<th scope="row"><p style="text-align: left;"><?php esc_html_e( 'A breakpoint is a screen width where the website layout changes to adapt for different devices like mobiles or desktops.', 'shrinking-logo-sticky-header' ); ?></p></th>
 				</tr>
 				<tr>
 					<th scope="row"><label style="display: block; text-align: left" for="slsh_enable_nav_css"><?php esc_html_e( 'Activate Breakpoint settings (CSS Rules):', 'shrinking-logo-sticky-header' ); ?></label></th>
@@ -152,6 +170,21 @@ function slsh_options_page(): void {
 						<span><?php esc_html_e( 'Standard: 782', 'shrinking-logo-sticky-header' ); ?></span>
 					</td>
 				</tr>
+				<!-- settings for Off-Canvas (CSS) -->
+				<tr>
+					<th scope="row"><h3 style="text-align: left;margin-top:30px">Off-Canvas-Menu</h3></th>
+				</tr>
+				<tr>
+					<th scope="row"><p style="text-align: left;"><?php esc_html_e( 'Off-canvas is a hidden navigation panel that slides in from the side of the screen, providing a space-saving way to access menu options without cluttering the main content area.', 'shrinking-logo-sticky-header' ); ?></p></th>
+				</tr>
+				<tr>
+					<th scope="row"><label style="display: block; text-align: left" for="slsh_enable_off_canvas"><?php esc_html_e( 'Activate Off-Canvas (CSS Rules):', 'shrinking-logo-sticky-header' ); ?></label></th>
+					<td>
+						<input type="checkbox" id="slsh_enable_nav_css" name="slsh_enable_off_canvas" value="yes" <?php checked( 'yes', get_option( 'slsh_enable_off_canvas', 'no' ) ); ?> />
+						<span><?php esc_html_e( 'Activates special CSS rules for Off-Canvas in Block Themes.', 'shrinking-logo-sticky-header' ); ?></span>
+					</td>
+				</tr>
+
 			</table>
 			<?php submit_button(); ?>
 		</form>
@@ -177,6 +210,7 @@ function slsh_dynamic_css(): void {
 	$logo_shrink_height = (float) get_option( 'slsh_logo_in_header_shrink_height', 0.8 );
 	$enable_nav_css     = get_option( 'slsh_enable_nav_css', 'no' );
 	$nav_breakpoint     = (int) get_option( 'slsh_nav_breakpoint', 782 );
+	$enable_off_canvas  = get_option( 'slsh_enable_off_canvas', 'no' );
 
 	$custom_css = "
         header.wp-block-template-part {
@@ -212,6 +246,37 @@ function slsh_dynamic_css(): void {
             }
         }";
 	}
+	
+	if ( 'yes' === $enable_off_canvas ) {
+		$custom_css .= "
+		/* Off canvas */
+		@media (max-width: {$nav_breakpoint}px) {
+		  .wp-block-navigation__responsive-container {
+			right: -70vw;
+			left: auto;
+			width: 70vw;
+			transition: none; 
+			border-radius: 0;
+		}
+
+		.wp-block-navigation:not(.has-text-color) .wp-block-navigation__responsive-container.is-menu-open {
+			background-color: white;
+		}
+
+		.wp-block-navigation__responsive-container.is-menu-open {
+			animation: slideInMenu 0.5s linear forwards;
+		}
+		@keyframes slideInMenu {
+			from {
+			  right: -70vw;
+			}
+			to {
+			  right: 0vw;
+			}
+		  }
+	    }";
+	}
+		
 
 	wp_add_inline_style( 'slsh_style', $custom_css );
 }

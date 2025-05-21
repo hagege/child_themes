@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Shrinking Logo Sticky Header\n"
-"POT-Creation-Date: 2025-05-07 08:28+0200\n"
+"POT-Creation-Date: 2025-05-21 12:39+0200\n"
 "PO-Revision-Date: 2025-04-26 11:49+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -19,44 +19,65 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: shrinking-logo-sticky-header.php:63
-msgid "Shrinking Logo Sticky Header – Settings"
+#: shrinking-logo-sticky-header.php:131
+msgid "Dynamic Header & Navigation for Block Themes – Settings"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:68
+#: shrinking-logo-sticky-header.php:136
 msgid "Height of the shrunk header (px):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:72
+#: shrinking-logo-sticky-header.php:140
 msgid "Animation duration (seconds):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:76
+#: shrinking-logo-sticky-header.php:144
 msgid "Normal height of header (px):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:80
+#: shrinking-logo-sticky-header.php:148
 msgid "Logo shrinking factor (Value in 0.05 steps):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:90
+#: shrinking-logo-sticky-header.php:157
+msgid ""
+"A breakpoint is a screen width where the website layout changes to "
+"adapt for different devices like mobiles or desktops."
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:160
 msgid "Activate Breakpoint settings (CSS Rules):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:93
+#: shrinking-logo-sticky-header.php:163
 msgid "Activates special CSS rules for the Breakpoint in Block Themes."
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:97
+#: shrinking-logo-sticky-header.php:167
 msgid "Breakpoint for Navigation (px):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:100
+#: shrinking-logo-sticky-header.php:170
 msgid "Standard: 782"
 msgstr ""
 
+#: shrinking-logo-sticky-header.php:178
+msgid ""
+"Off-canvas is a hidden navigation panel that slides in from the side "
+"of the screen, providing a space-saving way to access menu options "
+"without cluttering the main content area."
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:181
+msgid "Activate Off-Canvas (CSS Rules):"
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:184
+msgid "Activates special CSS rules for Off-Canvas in Block Themes."
+msgstr ""
+
 #. Plugin Name of the plugin/theme
-msgid "Shrinking Logo Sticky Header"
+msgid "Dynamic Header & Navigation for Block Themes"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
@@ -64,7 +85,11 @@ msgid "https://haurand.com/plugin-shrinking-logo-sticky-header/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Adds a sticky header with animated logo shrink effect."
+msgid ""
+"Animated shrinking header, responsive shrinking logo, custom "
+"breakpoints and off-canvas navigation – all-in-one solution for most "
+"modern WordPress block themes. (Previous name of the plugin: "
+"Shrinking Logo Sticky Header)"
 msgstr ""
 
 #. Author of the plugin/theme

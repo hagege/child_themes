@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Shrinking Logo Sticky Header\n"
-"POT-Creation-Date: 2025-05-07 08:29+0200\n"
-"PO-Revision-Date: 2025-05-07 08:33+0200\n"
+"POT-Creation-Date: 2025-05-21 12:39+0200\n"
+"PO-Revision-Date: 2025-05-21 12:40+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -19,55 +19,86 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: shrinking-logo-sticky-header.php:63
-msgid "Shrinking Logo Sticky Header – Settings"
-msgstr "Shrinking Logo Sticky Header - Einstellungen"
+#: shrinking-logo-sticky-header.php:131
+msgid "Dynamic Header & Navigation for Block Themes – Settings"
+msgstr "Dynamic Header & Navigation for Block Themes - Einstellungen"
 
-#: shrinking-logo-sticky-header.php:68
+#: shrinking-logo-sticky-header.php:136
 msgid "Height of the shrunk header (px):"
 msgstr "Höhe des geschrumpften Headers (px):"
 
-#: shrinking-logo-sticky-header.php:72
+#: shrinking-logo-sticky-header.php:140
 msgid "Animation duration (seconds):"
 msgstr "Animationsdauer (Sekunden):"
 
-#: shrinking-logo-sticky-header.php:76
+#: shrinking-logo-sticky-header.php:144
 msgid "Normal height of header (px):"
 msgstr "Normale Höhe des Headers (px):"
 
-#: shrinking-logo-sticky-header.php:80
+#: shrinking-logo-sticky-header.php:148
 msgid "Logo shrinking factor (Value in 0.05 steps):"
 msgstr "Schrumpfungsfaktor des Logos (Wert in 0,05 Schritten):"
 
-#: shrinking-logo-sticky-header.php:90
-msgid "Activate Breakpoint settings (CSS Rules):"
-msgstr "Aktivieren Sie die Breakpoint-Einstellungen (CSS-Regeln):"
-
-#: shrinking-logo-sticky-header.php:93
-msgid "Activates special CSS rules for the Breakpoint in Block Themes."
+#: shrinking-logo-sticky-header.php:157
+msgid ""
+"A breakpoint is a screen width where the website layout changes to adapt for "
+"different devices like mobiles or desktops."
 msgstr ""
-"Aktiviert spezielle CSS-Regeln für den Breakpoint in Block Themes."
+"Ein Breakpoint ist eine Bildschirmbreite, an der sich das Layout der Website "
+"ändert, um es an verschiedene Geräte wie Handys oder Desktops anzupassen."
 
-#: shrinking-logo-sticky-header.php:97
+#: shrinking-logo-sticky-header.php:160
+msgid "Activate Breakpoint settings (CSS Rules):"
+msgstr "Aktivierung Breakpoint-Einstellungen (CSS-Regeln):"
+
+#: shrinking-logo-sticky-header.php:163
+msgid "Activates special CSS rules for the Breakpoint in Block Themes."
+msgstr "Aktiviert spezielle CSS-Regeln für den Breakpoint in Block Themes."
+
+#: shrinking-logo-sticky-header.php:167
 msgid "Breakpoint for Navigation (px):"
 msgstr "Breakpoint für die Navigation (px):"
 
-#: shrinking-logo-sticky-header.php:100
+#: shrinking-logo-sticky-header.php:170
 msgid "Standard: 782"
 msgstr "Standard: 782"
 
+#: shrinking-logo-sticky-header.php:178
+msgid ""
+"Off-canvas is a hidden navigation panel that slides in from the side of the "
+"screen, providing a space-saving way to access menu options without "
+"cluttering the main content area."
+msgstr ""
+"Off-Canvas ist ein verstecktes Navigationspanel, das von der Seite des "
+"Bildschirms eingeblendet wird und eine platzsparende Möglichkeit bietet, auf "
+"Menüoptionen zuzugreifen, ohne den Hauptinhaltsbereich zu überladen."
+
+#: shrinking-logo-sticky-header.php:181
+msgid "Activate Off-Canvas (CSS Rules):"
+msgstr "Aktivierung Off-Canvas (CSS-Regeln):"
+
+#: shrinking-logo-sticky-header.php:184
+msgid "Activates special CSS rules for Off-Canvas in Block Themes."
+msgstr "Aktiviert spezielle CSS-Regeln für Off-Canvas in Block Themes."
+
 #. Plugin Name of the plugin/theme
-msgid "Shrinking Logo Sticky Header"
-msgstr "Shrinking Logo Sticky Header"
+msgid "Dynamic Header & Navigation for Block Themes"
+msgstr "Dynamic Header & Navigation for Block Themes"
 
 #. Plugin URI of the plugin/theme
 msgid "https://haurand.com/plugin-shrinking-logo-sticky-header/"
 msgstr "https://haurand.com/plugin-shrinking-logo-sticky-header/"
 
 #. Description of the plugin/theme
-msgid "Adds a sticky header with animated logo shrink effect."
+msgid ""
+"Animated shrinking header, responsive shrinking logo, custom breakpoints and "
+"off-canvas navigation – all-in-one solution for most modern WordPress block "
+"themes. (Previous name of the plugin: Shrinking Logo Sticky Header)"
 msgstr ""
-"Fügt einen fixierten Header mit animiertem Logo und Shrink-Effekt hinzu."
+"Animierter schrumpfender Header, responsives schrumpfendes Logo, "
+"benutzerdefinierte Breakpoints und Off-Canvas-Navigation - eine "
+"Komplettlösung für die meisten modernen WordPress-Block-Themes. (Vorheriger "
+"Name des Plugins: Shrinking Logo Sticky Header)"
 
 #. Author of the plugin/theme
 msgid "Hans-Gerd Gerhards"
@@ -76,6 +107,19 @@ msgstr "Hans-Gerd Gerhards"
 #. Author URI of the plugin/theme
 msgid "https://haurand.com/author/hgg/"
 msgstr "https://haurand.com/author/hgg/"
+
+#~ msgid "Shrinking Logo Sticky Header – Settings"
+#~ msgstr "Shrinking Logo Sticky Header - Einstellungen"
+
+#~ msgid "Shrinking Logo Sticky Header"
+#~ msgstr "Shrinking Logo Sticky Header"
+
+#~ msgid ""
+#~ "Adds a sticky header with animated logo shrink effect. It is also "
+#~ "possible to set a breakpoint for the mobile menu."
+#~ msgstr ""
+#~ "Fügt einen Sticky Header mit animiertem Logo-Schrumpfeffekt hinzu. Es ist "
+#~ "auch möglich, einen Haltepunkt für das mobile Menü zu setzen."
 
 #~ msgid "Height of header (px):"
 #~ msgstr "Headerhöhe (px):"
