@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Shrinking Logo Sticky Header\n"
-"POT-Creation-Date: 2025-05-21 12:39+0200\n"
-"PO-Revision-Date: 2025-05-21 12:40+0200\n"
+"POT-Creation-Date: 2025-05-22 13:08+0200\n"
+"PO-Revision-Date: 2025-05-22 13:09+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -19,27 +19,27 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: shrinking-logo-sticky-header.php:131
+#: shrinking-logo-sticky-header.php:138
 msgid "Dynamic Header & Navigation for Block Themes – Settings"
 msgstr "Dynamic Header & Navigation for Block Themes - Einstellungen"
 
-#: shrinking-logo-sticky-header.php:136
+#: shrinking-logo-sticky-header.php:143
 msgid "Height of the shrunk header (px):"
 msgstr "Höhe des geschrumpften Headers (px):"
 
-#: shrinking-logo-sticky-header.php:140
+#: shrinking-logo-sticky-header.php:147
 msgid "Animation duration (seconds):"
 msgstr "Animationsdauer (Sekunden):"
 
-#: shrinking-logo-sticky-header.php:144
+#: shrinking-logo-sticky-header.php:151
 msgid "Normal height of header (px):"
 msgstr "Normale Höhe des Headers (px):"
 
-#: shrinking-logo-sticky-header.php:148
+#: shrinking-logo-sticky-header.php:155
 msgid "Logo shrinking factor (Value in 0.05 steps):"
 msgstr "Schrumpfungsfaktor des Logos (Wert in 0,05 Schritten):"
 
-#: shrinking-logo-sticky-header.php:157
+#: shrinking-logo-sticky-header.php:164
 msgid ""
 "A breakpoint is a screen width where the website layout changes to adapt for "
 "different devices like mobiles or desktops."
@@ -47,23 +47,23 @@ msgstr ""
 "Ein Breakpoint ist eine Bildschirmbreite, an der sich das Layout der Website "
 "ändert, um es an verschiedene Geräte wie Handys oder Desktops anzupassen."
 
-#: shrinking-logo-sticky-header.php:160
+#: shrinking-logo-sticky-header.php:167
 msgid "Activate Breakpoint settings (CSS Rules):"
 msgstr "Aktivierung Breakpoint-Einstellungen (CSS-Regeln):"
 
-#: shrinking-logo-sticky-header.php:163
+#: shrinking-logo-sticky-header.php:170
 msgid "Activates special CSS rules for the Breakpoint in Block Themes."
 msgstr "Aktiviert spezielle CSS-Regeln für den Breakpoint in Block Themes."
 
-#: shrinking-logo-sticky-header.php:167
+#: shrinking-logo-sticky-header.php:174
 msgid "Breakpoint for Navigation (px):"
 msgstr "Breakpoint für die Navigation (px):"
 
-#: shrinking-logo-sticky-header.php:170
+#: shrinking-logo-sticky-header.php:177
 msgid "Standard: 782"
 msgstr "Standard: 782"
 
-#: shrinking-logo-sticky-header.php:178
+#: shrinking-logo-sticky-header.php:185
 msgid ""
 "Off-canvas is a hidden navigation panel that slides in from the side of the "
 "screen, providing a space-saving way to access menu options without "
@@ -73,11 +73,11 @@ msgstr ""
 "Bildschirms eingeblendet wird und eine platzsparende Möglichkeit bietet, auf "
 "Menüoptionen zuzugreifen, ohne den Hauptinhaltsbereich zu überladen."
 
-#: shrinking-logo-sticky-header.php:181
+#: shrinking-logo-sticky-header.php:188
 msgid "Activate Off-Canvas (CSS Rules):"
 msgstr "Aktivierung Off-Canvas (CSS-Regeln):"
 
-#: shrinking-logo-sticky-header.php:184
+#: shrinking-logo-sticky-header.php:191
 msgid "Activates special CSS rules for Off-Canvas in Block Themes."
 msgstr "Aktiviert spezielle CSS-Regeln für Off-Canvas in Block Themes."
 
@@ -92,13 +92,12 @@ msgstr "https://haurand.com/plugin-shrinking-logo-sticky-header/"
 #. Description of the plugin/theme
 msgid ""
 "Animated shrinking header, responsive shrinking logo, custom breakpoints and "
-"off-canvas navigation – all-in-one solution for most modern WordPress block "
-"themes. (Previous name of the plugin: Shrinking Logo Sticky Header)"
+"off-canvas navigation – all-in-one navigation solution for most modern "
+"WordPress block themes."
 msgstr ""
 "Animierter schrumpfender Header, responsives schrumpfendes Logo, "
-"benutzerdefinierte Breakpoints und Off-Canvas-Navigation - eine "
-"Komplettlösung für die meisten modernen WordPress-Block-Themes. (Vorheriger "
-"Name des Plugins: Shrinking Logo Sticky Header)"
+"benutzerdefinierte Breakpoints und Off-Canvas-Navigation - eine Navigation-"
+"Komplettlösung für die meisten modernen WordPress-Block-Themes."
 
 #. Author of the plugin/theme
 msgid "Hans-Gerd Gerhards"

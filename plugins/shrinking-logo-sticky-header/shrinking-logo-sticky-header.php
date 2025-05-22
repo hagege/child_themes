@@ -10,7 +10,7 @@
  * @wordpress-plugin
  * Plugin Name:   Dynamic Header & Navigation for Block Themes
  * Plugin URI:    https://haurand.com/plugin-shrinking-logo-sticky-header/
- * Description:   Animated shrinking header, responsive shrinking logo, custom breakpoints and off-canvas navigation – all-in-one navigation solution for most modern WordPress block themes. (Previous name of the plugin: Shrinking Logo Sticky Header)
+ * Description:   Animated shrinking header, responsive shrinking logo, custom breakpoints and off-canvas navigation – all-in-one navigation solution for most modern WordPress block themes.
  * Version:       1.2
  * Author:        Hans-Gerd Gerhards
  * Author URI:    https://haurand.com/author/hgg/
@@ -31,6 +31,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 // set version.
 const SLSH_VERSION = '1.2.0';
 
+add_action( 'plugins_loaded', function() {
+    load_plugin_textdomain(
+        'shrinking-logo-sticky-header',
+        false,
+        dirname( plugin_basename( __FILE__ ) ) . '/languages/'
+    );
+});
 
 
 /**

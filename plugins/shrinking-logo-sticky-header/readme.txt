@@ -3,7 +3,7 @@ Author URI: https://haurand.com/
 Plugin URI: https://haurand.com/plugin-shrinking-logo-sticky-header/
 Donate link: 
 Contributors: @hage
-Tags: Block Theme, Header, shrink, sticky-header, breakpoint, off-canvas
+Tags: Block Theme, Header, shrink, breakpoint, off-canvas
 Requires at least: 
 Tested up to: 6.8
 Requires PHP: 7.4
@@ -11,7 +11,7 @@ Stable tag: 1.2
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Animated shrinking header, responsive shrinking logo, custom breakpoints and off-canvas navigation – all-in-one navigation solution for most modern WordPress block themes.
+Animated shrinking header, responsive shrinking logo, custom breakpoints and off-canvas navigation – navigation solution for block themes.
 
 == Description ==
 
@@ -22,7 +22,7 @@ Animated shrinking header, responsive shrinking logo, custom breakpoints and off
 * Option to set a breakpoint for navigation (added in Version 1.1)
 * Option to set Off-Canvas (added in Version 1.2)
 
-Dynamic Header & Navigation for Block Themes (Previous name of the plugin: Shrinking Logo Sticky Header) is a lightweight WordPress plugin developed specifically for Block Themes. 
+Dynamic Header & Navigation for Block Themes (Previous name of the plugin: Shrinking Logo Sticky Header) is a lightweight WordPress plugin developed specifically as a navigation solution for most Block Themes. 
 It adds a modern sticky header with smooth, animated shrinking effects for both the header and the site logo. 
 As users scroll down the page, the header and logo automatically reduce in size, maximizing on-screen space and keeping navigation easily accessible without disrupting the browsing experience.
 
