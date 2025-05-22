@@ -64,11 +64,12 @@ https://haurand.com/  and  https://space4.yd-sgs.de/
 
 == Changelog ==
 
-= 1.2: May 21, 2025 =
+= 1.2: May 22, 2025 =
 * Added: Optional Off-Canvas-Menu
 * Added: Uninstall: Delete the Options in Table when unistalling this Plugin
 * Renaming the Plugin: "Dynamic Header & Navigation for Block Themes" instead of previous name of the plugin: "Shrinking Logo Sticky Header"
 * Updating the language files
+* Fix: Loading language Files Notice: "This plugin is not properly prepared for localization."
 
 = 1.1: May 9, 2025 =
 * Added: Optional Breakpoint settings

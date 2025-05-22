@@ -31,13 +31,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 // set version.
 const SLSH_VERSION = '1.2.0';
 
-add_action( 'plugins_loaded', function() {
+/**
+ * Load language files.
+ *
+ * @return void
+ */
+function slsh_load_textdomain(): void {
     load_plugin_textdomain(
         'shrinking-logo-sticky-header',
         false,
         dirname( plugin_basename( __FILE__ ) ) . '/languages/'
     );
-});
+}
+add_action( 'init', 'slsh_load_textdomain' );
 
 
 /**
