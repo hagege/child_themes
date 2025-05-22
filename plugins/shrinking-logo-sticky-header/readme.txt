@@ -1,5 +1,5 @@
 === Dynamic Header & Navigation for Block Themes ===
-Author URI: https://haurand.com/author/hgg/
+Author URI: https://haurand.com/
 Plugin URI: https://haurand.com/plugin-shrinking-logo-sticky-header/
 Donate link: 
 Contributors: @hage
@@ -11,7 +11,7 @@ Stable tag: 1.2
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Animated shrinking header, responsive shrinking logo, custom breakpoints and off-canvas navigation – all-in-one solution for most modern WordPress block themes.
+Animated shrinking header, responsive shrinking logo, custom breakpoints and off-canvas navigation – all-in-one navigation solution for most modern WordPress block themes.
 
 == Description ==
 
