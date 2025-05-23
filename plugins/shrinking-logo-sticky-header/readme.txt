@@ -70,6 +70,7 @@ https://haurand.com/  and  https://space4.yd-sgs.de/
 * Renaming the Plugin: "Dynamic Header & Navigation for Block Themes" instead of previous name of the plugin: "Shrinking Logo Sticky Header"
 * Updating the language files
 * Fix: Loading language Files Notice: "This plugin is not properly prepared for localization."
+* Enhancements: Code improvement (Delete superfluous option)
 
 = 1.1: May 9, 2025 =
 * Added: Optional Breakpoint settings

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Shrinking Logo Sticky Header\n"
-"POT-Creation-Date: 2025-05-22 13:08+0200\n"
-"PO-Revision-Date: 2025-05-22 13:09+0200\n"
+"POT-Creation-Date: 2025-05-23 07:18+0200\n"
+"PO-Revision-Date: 2025-05-23 07:19+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -19,27 +19,27 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: shrinking-logo-sticky-header.php:138
+#: shrinking-logo-sticky-header.php:136
 msgid "Dynamic Header & Navigation for Block Themes – Settings"
 msgstr "Dynamic Header & Navigation for Block Themes - Einstellungen"
 
-#: shrinking-logo-sticky-header.php:143
+#: shrinking-logo-sticky-header.php:141
 msgid "Height of the shrunk header (px):"
 msgstr "Höhe des geschrumpften Headers (px):"
 
-#: shrinking-logo-sticky-header.php:147
+#: shrinking-logo-sticky-header.php:145
 msgid "Animation duration (seconds):"
 msgstr "Animationsdauer (Sekunden):"
 
-#: shrinking-logo-sticky-header.php:151
+#: shrinking-logo-sticky-header.php:149
 msgid "Normal height of header (px):"
 msgstr "Normale Höhe des Headers (px):"
 
-#: shrinking-logo-sticky-header.php:155
+#: shrinking-logo-sticky-header.php:153
 msgid "Logo shrinking factor (Value in 0.05 steps):"
 msgstr "Schrumpfungsfaktor des Logos (Wert in 0,05 Schritten):"
 
-#: shrinking-logo-sticky-header.php:164
+#: shrinking-logo-sticky-header.php:162
 msgid ""
 "A breakpoint is a screen width where the website layout changes to adapt for "
 "different devices like mobiles or desktops."
@@ -47,23 +47,15 @@ msgstr ""
 "Ein Breakpoint ist eine Bildschirmbreite, an der sich das Layout der Website "
 "ändert, um es an verschiedene Geräte wie Handys oder Desktops anzupassen."
 
-#: shrinking-logo-sticky-header.php:167
-msgid "Activate Breakpoint settings (CSS Rules):"
-msgstr "Aktivierung Breakpoint-Einstellungen (CSS-Regeln):"
-
-#: shrinking-logo-sticky-header.php:170
-msgid "Activates special CSS rules for the Breakpoint in Block Themes."
-msgstr "Aktiviert spezielle CSS-Regeln für den Breakpoint in Block Themes."
-
-#: shrinking-logo-sticky-header.php:174
+#: shrinking-logo-sticky-header.php:165
 msgid "Breakpoint for Navigation (px):"
 msgstr "Breakpoint für die Navigation (px):"
 
-#: shrinking-logo-sticky-header.php:177
+#: shrinking-logo-sticky-header.php:168
 msgid "Standard: 782"
 msgstr "Standard: 782"
 
-#: shrinking-logo-sticky-header.php:185
+#: shrinking-logo-sticky-header.php:176
 msgid ""
 "Off-canvas is a hidden navigation panel that slides in from the side of the "
 "screen, providing a space-saving way to access menu options without "
@@ -73,11 +65,11 @@ msgstr ""
 "Bildschirms eingeblendet wird und eine platzsparende Möglichkeit bietet, auf "
 "Menüoptionen zuzugreifen, ohne den Hauptinhaltsbereich zu überladen."
 
-#: shrinking-logo-sticky-header.php:188
+#: shrinking-logo-sticky-header.php:179
 msgid "Activate Off-Canvas (CSS Rules):"
 msgstr "Aktivierung Off-Canvas (CSS-Regeln):"
 
-#: shrinking-logo-sticky-header.php:191
+#: shrinking-logo-sticky-header.php:182
 msgid "Activates special CSS rules for Off-Canvas in Block Themes."
 msgstr "Aktiviert spezielle CSS-Regeln für Off-Canvas in Block Themes."
 
@@ -106,6 +98,12 @@ msgstr "Hans-Gerd Gerhards"
 #. Author URI of the plugin/theme
 msgid "https://haurand.com/author/hgg/"
 msgstr "https://haurand.com/author/hgg/"
+
+#~ msgid "Activate Breakpoint settings (CSS Rules):"
+#~ msgstr "Aktivierung Breakpoint-Einstellungen (CSS-Regeln):"
+
+#~ msgid "Activates special CSS rules for the Breakpoint in Block Themes."
+#~ msgstr "Aktiviert spezielle CSS-Regeln für den Breakpoint in Block Themes."
 
 #~ msgid "Shrinking Logo Sticky Header – Settings"
 #~ msgstr "Shrinking Logo Sticky Header - Einstellungen"

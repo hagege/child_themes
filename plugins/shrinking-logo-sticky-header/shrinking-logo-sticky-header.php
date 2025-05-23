@@ -56,8 +56,10 @@ function slsh_register_settings(): void {
 	add_option( 'slsh_logo_in_header_shrink_height', 0.8 );
 
 	// Options for Breakpoint.
-	add_option( 'slsh_enable_nav_css', 'no' );
 	add_option( 'slsh_nav_breakpoint', 782 );
+	
+	// Delete superfluous option 
+	delete_option( 'slsh_enable_nav_css' );
 	
 	// Option for Off-Canvas-Menue
 	add_option( 'slsh_enable_off_canvas', 'no' );
@@ -92,16 +94,6 @@ function slsh_register_settings(): void {
 		array(
 			'type'              => 'float',
 			'sanitize_callback' => 'floatval',
-		)
-	);
-	register_setting(
-		'slsh_options_group',
-		'slsh_enable_nav_css',
-		array(
-			'type'              => 'string',
-			'sanitize_callback' => function ( $v ) {
-				return 'yes' === $v ? 'yes' : 'no';
-			},
 		)
 	);
 	register_setting(
@@ -170,16 +162,9 @@ function slsh_options_page(): void {
 					<th scope="row"><p style="text-align: left;"><?php esc_html_e( 'A breakpoint is a screen width where the website layout changes to adapt for different devices like mobiles or desktops.', 'shrinking-logo-sticky-header' ); ?></p></th>
 				</tr>
 				<tr>
-					<th scope="row"><label style="display: block; text-align: left" for="slsh_enable_nav_css"><?php esc_html_e( 'Activate Breakpoint settings (CSS Rules):', 'shrinking-logo-sticky-header' ); ?></label></th>
-					<td>
-						<input type="checkbox" id="slsh_enable_nav_css" name="slsh_enable_nav_css" value="yes" <?php checked( 'yes', get_option( 'slsh_enable_nav_css', 'no' ) ); ?> />
-						<span><?php esc_html_e( 'Activates special CSS rules for the Breakpoint in Block Themes.', 'shrinking-logo-sticky-header' ); ?></span>
-					</td>
-				</tr>
-				<tr>
 					<th scope="row"><label style="display: block; text-align: left" for="slsh_nav_breakpoint"><?php esc_html_e( 'Breakpoint for Navigation (px):', 'shrinking-logo-sticky-header' ); ?></label></th>
 					<td>
-						<input type="number" id="slsh_nav_breakpoint" name="slsh_nav_breakpoint" value="<?php echo esc_attr( get_option( 'slsh_nav_breakpoint', 782 ) ); ?>" min="320" max="1920" />
+						<input type="number" id="slsh_nav_breakpoint" name="slsh_nav_breakpoint" value="<?php echo esc_attr( get_option( 'slsh_nav_breakpoint', 782 ) ); ?>" min="782" max="1920" />
 						<span><?php esc_html_e( 'Standard: 782', 'shrinking-logo-sticky-header' ); ?></span>
 					</td>
 				</tr>
@@ -221,7 +206,6 @@ function slsh_dynamic_css(): void {
 	$anim_duration      = (float) get_option( 'slsh_animation_duration', 0.6 );
 	$header_height      = (int) get_option( 'slsh_heigth_header', 120 );
 	$logo_shrink_height = (float) get_option( 'slsh_logo_in_header_shrink_height', 0.8 );
-	$enable_nav_css     = get_option( 'slsh_enable_nav_css', 'no' );
 	$nav_breakpoint     = (int) get_option( 'slsh_nav_breakpoint', 782 );
 	$enable_off_canvas  = get_option( 'slsh_enable_off_canvas', 'no' );
 
@@ -248,7 +232,7 @@ function slsh_dynamic_css(): void {
         }
     ";
 
-	if ( 'yes' === $enable_nav_css ) {
+	if ( $nav_breakpoint > 782 ) {
 		$custom_css .= "
         @media screen and (max-width: {$nav_breakpoint}px) {
             .wp-block-navigation__responsive-container-open {

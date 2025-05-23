@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Shrinking Logo Sticky Header\n"
-"POT-Creation-Date: 2025-05-22 13:10+0200\n"
+"POT-Creation-Date: 2025-05-23 07:18+0200\n"
 "PO-Revision-Date: 2025-04-26 11:49+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -19,60 +19,52 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: shrinking-logo-sticky-header.php:138
+#: shrinking-logo-sticky-header.php:136
 msgid "Dynamic Header & Navigation for Block Themes – Settings"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:143
+#: shrinking-logo-sticky-header.php:141
 msgid "Height of the shrunk header (px):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:147
+#: shrinking-logo-sticky-header.php:145
 msgid "Animation duration (seconds):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:151
+#: shrinking-logo-sticky-header.php:149
 msgid "Normal height of header (px):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:155
+#: shrinking-logo-sticky-header.php:153
 msgid "Logo shrinking factor (Value in 0.05 steps):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:164
+#: shrinking-logo-sticky-header.php:162
 msgid ""
 "A breakpoint is a screen width where the website layout changes to "
 "adapt for different devices like mobiles or desktops."
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:167
-msgid "Activate Breakpoint settings (CSS Rules):"
-msgstr ""
-
-#: shrinking-logo-sticky-header.php:170
-msgid "Activates special CSS rules for the Breakpoint in Block Themes."
-msgstr ""
-
-#: shrinking-logo-sticky-header.php:174
+#: shrinking-logo-sticky-header.php:165
 msgid "Breakpoint for Navigation (px):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:177
+#: shrinking-logo-sticky-header.php:168
 msgid "Standard: 782"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:185
+#: shrinking-logo-sticky-header.php:176
 msgid ""
 "Off-canvas is a hidden navigation panel that slides in from the side "
 "of the screen, providing a space-saving way to access menu options "
 "without cluttering the main content area."
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:188
+#: shrinking-logo-sticky-header.php:179
 msgid "Activate Off-Canvas (CSS Rules):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:191
+#: shrinking-logo-sticky-header.php:182
 msgid "Activates special CSS rules for Off-Canvas in Block Themes."
 msgstr ""
 
