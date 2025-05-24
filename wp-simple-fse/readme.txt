@@ -42,5 +42,21 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 
-WP Simple FSE is based on Circles WP (https://haurand.com/circles-wp-block-theme/), (C) Hans-Gerd Gerhards, [GPLv2 or later](http://www.gnu.org/licenses/gpl-2.0.html)
+=== Images ===
+All images used in this theme have been created by our team. License: CC0 https://haurand.com
+
+=== Fonts ===
+Lexend - https://lexend.com
+OFL-1.1 licens - https://github.com/googlefonts/lexend?tab=OFL-1.1-1-ov-file
+Copyright 2018 The Lexend Project Authors (https://github.com/googlefonts/lexend), with Reserved Font Name “RevReading Lexend”. 
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://scripts.sil.org/OFL
+
+Atkinson Hyperlegible - https://www.brailleinstitute.org
+OFL-1.1 licens - https://github.com/googlefonts/atkinson-hyperlegible?tab=OFL-1.1-1-ov-file
+Copyright 2020 Braille Institute of America, Inc.
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
 
