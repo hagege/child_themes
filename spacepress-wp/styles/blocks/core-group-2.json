@@ -1,8 +1,8 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Core Group 1",
-	"slug": "core-group-1",
+	"title": "Core Group 2",
+	"slug": "core-group-2",
 	"blockTypes": ["core/group"],
 	"layout": {
 		"contentSize": "100%",
@@ -28,13 +28,13 @@
 		},
 		"color": {
  		       "text": "var(--wp--preset--color--base)",
-			   "background": "var(--wp--preset--color--contrast-2)"
+			   "background": "var(--wp--preset--color--base-2)"
 		},
 		"elements": {
 			"link": {
 				"color": {
 					"text": "var(--wp--preset--color--base)",
-					"background": "var(--wp--preset--color--contrast-2)"
+					"background": "var(--wp--preset--color--base-2)"
 				}
 			}
 		}

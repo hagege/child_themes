@@ -20,13 +20,13 @@
 		},
 		"color": {
  		       "text": "var(--wp--preset--color--base)",
-			   "background": "var(--wp--preset--color--contrast)"
+			   "background": "var(--wp--preset--color--base-2)"
 		},
 		"elements": {
 			"link": {
 				"color": {
 					"text": "var(--wp--preset--color--base)",
-					"background": "var(--wp--preset--color--contrast)"
+					"background": "var(--wp--preset--color--base-2)"
 				}
 			}
 		}
