@@ -25,7 +25,7 @@
 		
 		<!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%"><!-- wp:image {"lightbox":{"enabled":true},"id":357,"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none"} -->
-			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/attendorn_marktplatz_2022.jpg" alt="" class="wp-image-357" style="aspect-ratio:1;object-fit:cover"/></figure>
+			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/attendorn_marktplatz_2022.webp" alt="" class="wp-image-357" style="aspect-ratio:1;object-fit:cover"/></figure>
 		<!-- /wp:image --></div>
 	<!-- /wp:column --></div>
 <!-- /wp:columns --></div>

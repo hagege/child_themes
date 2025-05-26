@@ -22,13 +22,13 @@
 			<!-- /wp:spacer -->
 			
 			<!-- wp:image {"lightbox":{"enabled":true},"id":362,"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none"} -->
-			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/power_tour_06_2024_04.jpg" alt="" class="wp-image-362" style="aspect-ratio:1;object-fit:cover"/></figure>
+			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/power_tour_06_2024_04.webp" alt="" class="wp-image-362" style="aspect-ratio:1;object-fit:cover"/></figure>
 		<!-- /wp:image --></div>
 		<!-- /wp:column -->
 		
 		<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|40"}}} -->
 		<div class="wp-block-column"><!-- wp:image {"lightbox":{"enabled":true},"id":358,"aspectRatio":"4/3","scale":"cover","sizeSlug":"full","linkDestination":"none"} -->
-			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/power_tour_06_2024_17.jpg" alt="" class="wp-image-358" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/power_tour_06_2024_17.webp" alt="" class="wp-image-358" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 			<!-- /wp:image -->
 			
 			<!-- wp:image {"lightbox":{"enabled":true},"id":356,"aspectRatio":"4/3","scale":"cover","sizeSlug":"full","linkDestination":"none"} -->

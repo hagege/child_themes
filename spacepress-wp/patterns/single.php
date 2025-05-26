@@ -7,14 +7,10 @@
 ?>
 <!-- wp:template-part {"slug":"header","area":"header"} /-->
 
-<!-- wp:separator {"className":"is-style-default"} -->
-<hr class="wp-block-separator has-alpha-channel-opacity is-style-default"/>
-<!-- /wp:separator -->
-
 <!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"0","bottom":"0"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
-<main class="wp-block-group" style="margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0"><!-- wp:group {"align":"full","layout":{"type":"constrained"}} -->
-	<div class="wp-block-group alignfull"><!-- wp:group {"align":"full","style":{"background":{"backgroundImage":{"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/circle_light_orange.svg","id":6935,"source":"file","title":"circle_light_orange"},"backgroundPosition":"35% 42%"},"spacing":{"padding":{"right":"var:preset|spacing|30","left":"var:preset|spacing|30","top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}},"dimensions":{"minHeight":"100vh"}},"layout":{"type":"constrained"}} -->
-		<div class="wp-block-group alignfull" style="min-height:100vh;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--30)"><!-- wp:post-featured-image {"height":"25em","align":"full"} /-->
+<main class="wp-block-group" style="margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0"><!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"0","bottom":"0"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0"><!-- wp:group {"align":"full","style":{"spacing":{"padding":{"right":"var:preset|spacing|30","left":"var:preset|spacing|30","top":"0","bottom":"0"}},"dimensions":{"minHeight":"100vh"}},"layout":{"type":"constrained"}} -->
+		<div class="wp-block-group alignfull" style="min-height:100vh;padding-top:0;padding-right:var(--wp--preset--spacing--30);padding-bottom:0;padding-left:var(--wp--preset--spacing--30)"><!-- wp:post-featured-image {"height":"25em","align":"full"} /-->
 			
 			<!-- wp:post-title {"level":1,"style":{"spacing":{"padding":{"top":"1em"},"margin":{"top":"1em"}}}} /-->
 			
@@ -22,7 +18,7 @@
 	<!-- /wp:group --></div>
 	<!-- /wp:group -->
 	
-	<!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"0"},"padding":{"top":"0","bottom":"0","left":"var:preset|spacing|10","right":"var:preset|spacing|10"}},"background":{"backgroundRepeat":"no-repeat","backgroundSize":"contain","backgroundPosition":"41% 64%","backgroundImage":{"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/circle_light_orange.svg","id":6935,"source":"file","title":"circle_light_orange"}}},"layout":{"type":"constrained","contentSize":""}} -->
+	<!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"0"},"padding":{"top":"0","bottom":"0","left":"var:preset|spacing|10","right":"var:preset|spacing|10"}}},"layout":{"type":"constrained","contentSize":""}} -->
 	<main class="wp-block-group" style="margin-top:0;padding-top:0;padding-right:var(--wp--preset--spacing--10);padding-bottom:0;padding-left:var(--wp--preset--spacing--10)"><!-- wp:group {"layout":{"type":"constrained"}} -->
 		<div class="wp-block-group"><!-- wp:comments -->
 			<div class="wp-block-comments"><!-- wp:comments-title /-->
@@ -50,21 +46,21 @@
 				<!-- /wp:comment-template -->
 				
 				<!-- wp:comments-pagination -->
-			<!-- wp:comments-pagination-previous /-->
-			
-			<!-- wp:comments-pagination-numbers /-->
-			
-			<!-- wp:comments-pagination-next /-->
-			<!-- /wp:comments-pagination -->
-			
+				<!-- wp:comments-pagination-previous /-->
+				
+				<!-- wp:comments-pagination-numbers /-->
+				
+				<!-- wp:comments-pagination-next /-->
+				<!-- /wp:comments-pagination -->
+				
 			<!-- wp:post-comments-form /--></div>
-			<!-- /wp:comments --></div>
-			<!-- /wp:group --></main>
-			<!-- /wp:group --></main>
-			<!-- /wp:group -->
-			
-			<!-- wp:separator -->
-			<hr class="wp-block-separator has-alpha-channel-opacity"/>
-			<!-- /wp:separator -->
-			
-			<!-- wp:template-part {"slug":"footer","area":"footer"} /-->			
+		<!-- /wp:comments --></div>
+	<!-- /wp:group --></main>
+<!-- /wp:group --></main>
+<!-- /wp:group -->
+
+<!-- wp:separator -->
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- /wp:separator -->
+
+<!-- wp:template-part {"slug":"footer","area":"footer"} /-->

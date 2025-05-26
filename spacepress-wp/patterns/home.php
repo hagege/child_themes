@@ -29,14 +29,14 @@
 			
 			<!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
 			<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%"><!-- wp:image {"lightbox":{"enabled":true},"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none"} -->
-				<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/attendorn_marktplatz_2022.jpg" alt="" style="aspect-ratio:1;object-fit:cover"/></figure>
+				<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/attendorn_marktplatz_2022.webp" alt="" style="aspect-ratio:1;object-fit:cover"/></figure>
 			<!-- /wp:image --></div>
 		<!-- /wp:column --></div>
 	<!-- /wp:columns --></div>
 	<!-- /wp:group -->
 	
-	<!-- wp:cover {"overlayColor":"base","isUserOverlayColor":true,"isDark":false,"metadata":{"categories":["spacepress-wp","call-to-action"],"patternName":"spacepress-wp/hero","name":"Hero"},"align":"full"} -->
-	<div class="wp-block-cover alignfull is-light"><span aria-hidden="true" class="wp-block-cover__background has-base-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"spacing":{"blockGap":"2.5rem"}},"layout":{"type":"constrained","wideSize":"%","contentSize":"75%"}} -->
+	<!-- wp:cover {"overlayColor":"base","isUserOverlayColor":true,"isDark":false,"metadata":{"categories":["spacepress-wp","call-to-action"],"patternName":"spacepress-wp/hero","name":"Hero"},"align":"full","style":{"elements":{"link":{"color":{"text":"var:preset|color|base-2"}}}},"textColor":"base-2"} -->
+	<div class="wp-block-cover alignfull is-light has-base-2-color has-text-color has-link-color"><span aria-hidden="true" class="wp-block-cover__background has-base-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"spacing":{"blockGap":"2.5rem"}},"layout":{"type":"constrained","wideSize":"%","contentSize":"75%"}} -->
 		<div class="wp-block-group"><!-- wp:heading {"textAlign":"center"} -->
 			<h2 class="wp-block-heading has-text-align-center"><?php esc_html_e('Welcome to My Site', 'spacepress-wp');?></h2>
 			<!-- /wp:heading -->
@@ -69,13 +69,13 @@
 				<!-- /wp:spacer -->
 				
 				<!-- wp:image {"lightbox":{"enabled":true},"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none"} -->
-				<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/power_tour_06_2024_04.jpg" alt="" style="aspect-ratio:1;object-fit:cover"/></figure>
+				<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/power_tour_06_2024_04.webp" alt="" style="aspect-ratio:1;object-fit:cover"/></figure>
 			<!-- /wp:image --></div>
 			<!-- /wp:column -->
 			
 			<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|40"}}} -->
 			<div class="wp-block-column"><!-- wp:image {"lightbox":{"enabled":true},"aspectRatio":"4/3","scale":"cover","sizeSlug":"full","linkDestination":"none"} -->
-				<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/power_tour_06_2024_17.jpg" alt="" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+				<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/power_tour_06_2024_17.webp" alt="" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 				<!-- /wp:image -->
 				
 				<!-- wp:image {"lightbox":{"enabled":true},"aspectRatio":"4/3","scale":"cover","sizeSlug":"full","linkDestination":"none"} -->
