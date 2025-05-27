@@ -29,7 +29,7 @@
 					
 					<!-- wp:group {"layout":{"type":"constrained"}} -->
 					<div class="wp-block-group"><!-- wp:paragraph {"align":"center","className":"haurand-button-blau is-style-default"} -->
-						<p class="has-text-align-center haurand-button-blau is-style-default"><a href="https://haurand.com">Klick here</a></p>
+						<p class="has-text-align-center haurand-button-blau is-style-default"><a href="#">Klick here</a></p>
 					<!-- /wp:paragraph --></div>
 				<!-- /wp:group --></div>
 			<!-- /wp:group --></div></div>

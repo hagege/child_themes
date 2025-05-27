@@ -18,7 +18,7 @@
 			
 			<!-- wp:group {"layout":{"type":"constrained"}} -->
 			<div class="wp-block-group"><!-- wp:paragraph {"className":"haurand-button-blau"} -->
-				<p class="haurand-button-blau"><a href="https://haurand.com">Read More</a></p>
+				<p class="haurand-button-blau"><a href="#">Read More</a></p>
 			<!-- /wp:paragraph --></div>
 		<!-- /wp:group --></div>
 		<!-- /wp:column -->

@@ -3,23 +3,27 @@
 Contributors: Hans-Gerd Gerhards
 Requires at least: 6.8
 Tested up to: 6.8
-Requires PHP: 5.7
+Requires PHP: 7.4
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, sticky-post, threaded-comments, translation-ready, block-styles, wide-blocks, full-site-editing
 
 
 == Description ==
 
 SpacePress WP is a clean, flexible, fast and accessibility-ready block theme. Its default look is a stylish black on white background color scheme and lexend font (a sans-serif typography). 
 SpacePress WP is built from the ground up for flexibility. It includes six different theme styles to choose from, and different block patterns that you can use to quickly create unique page layouts. 
-This great flexibility characterizes the theme.
-
-
-Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, sticky-post, threaded-comments, translation-ready, block-styles, wide-blocks, full-site-editing
-
+Maximum Flexibility.
+For a more professional presentation of the navigation with Block Themes, e.g. SpacePress WP or Circles WP (https://wordpress.org/themes/circles-wp/), 
+I recommend my plugin https://de.wordpress.org/plugins/shrinking-logo-sticky-header/advanced/
 
 
 == Changelog ==
+
+= 1.0.1 =
+* Released: May 26, 2025
+* Improvements in readme.txt and style.css: e.g. Added Theme URI and Author URI in style.css 
 
 = 1.0.0 =
 * Initial release
@@ -27,7 +31,7 @@ Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, 
 
 == Copyright ==
 
-SpacePress WP WordPress Theme, (C) 2025 Hans-Gerd Gerhards
+SpacePress WP WordPress Theme, (C) 2025 Hans-Gerd Gerhards (haurand.com)
 SpacePress WP is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
@@ -43,6 +47,15 @@ GNU General Public License for more details.
 
 === Images ===
 All images used in this theme have been created by our team. License: CC0 https://haurand.com
+
+== Installation ==
+
+Before you start, make sure you're running WordPress 6.4 or later.
+
+1. Start by downloading the theme.
+2. Go to "Appearance -> Themes -> Add New"
+3. Upload the ZIP.
+4. Activate the theme.
 
 === Fonts ===
 Lexend - https://lexend.com

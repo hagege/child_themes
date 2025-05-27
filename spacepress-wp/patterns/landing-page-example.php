@@ -11,8 +11,8 @@
 	<!-- /wp:spacer -->
 	
 	<!-- wp:group {"align":"full","layout":{"type":"constrained"}} -->
-	<div class="wp-block-group alignfull"><!-- wp:cover {"overlayColor":"contrast-2","isUserOverlayColor":true,"minHeight":500,"isDark":false,"align":"full","layout":{"type":"default"}} -->
-		<div class="wp-block-cover alignfull is-light" style="min-height:500px"><span aria-hidden="true" class="wp-block-cover__background has-contrast-2-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","style":{"typography":{"fontSize":"10rem"}}} -->
+	<div class="wp-block-group alignfull"><!-- wp:cover {"overlayColor":"contrast-2","isUserOverlayColor":true,"minHeight":500,"isDark":false,"align":"full","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base","layout":{"type":"default"}} -->
+		<div class="wp-block-cover alignfull is-light has-base-color has-text-color has-link-color" style="min-height:500px"><span aria-hidden="true" class="wp-block-cover__background has-contrast-2-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","style":{"typography":{"fontSize":"10rem"}}} -->
 			<p class="has-text-align-center" style="font-size:10rem">Our new Start Page</p>
 		<!-- /wp:paragraph --></div></div>
 	<!-- /wp:cover --></div>
