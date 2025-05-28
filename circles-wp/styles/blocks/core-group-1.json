@@ -1,8 +1,8 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Full Viewport Width 2",
-	"slug": "full-viewport-width-2",
+	"title": "Core Group 1",
+	"slug": "core-group-1",
 	"blockTypes": ["core/group"],
 	"layout": {
 		"contentSize": "100%",
@@ -28,13 +28,13 @@
 		},
 		"color": {
  		       "text": "var(--wp--preset--color--base)",
-			   "background": "var(--wp--preset--color--contrast-4)"
+			   "background": "var(--wp--preset--color--contrast-2)"
 		},
 		"elements": {
 			"link": {
 				"color": {
 					"text": "var(--wp--preset--color--base)",
-					"background": "var(--wp--preset--color--contrast-3)"
+					"background": "var(--wp--preset--color--contrast-2)"
 				}
 			}
 		}

@@ -3,7 +3,7 @@ Contributors: Hans-Gerd Gerhards
 Requires at least: 6.6
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.0.8
+Stable tag: 1.0.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,10 +19,17 @@ Circles WP is built from the ground up for flexibility. It includes ten differen
 If you use the “Blank Page” template, the theme can also be used on websites with lots of photos. 
 Another alternative is to delete the background graphic for the group block or to use a more subtle color for a circle. 
 This great flexibility characterizes the theme. 
+For a more professional presentation of the navigation with Block Themes, e.g. Circles WP, 
+I recommend my plugin https://de.wordpress.org/plugins/shrinking-logo-sticky-header/advanced/
 
 Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, sticky-post, threaded-comments, translation-ready, block-styles, wide-blocks, full-site-editing
 
 == Changelog ==
+
+= 1.0.9 =
+* Released: May 26, 2025
+* Fix: Minor issues in individual block styles and patterns fixed 
+* Improvements: Rename a template
 
 = 1.0.8 =
 * Released: March 14, 2025
