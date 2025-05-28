@@ -13,7 +13,7 @@ Tags: blog, portfolio, grid-layout, one-column, two-columns, custom-background, 
 == Description ==
 
 SpacePress WP is a clean, flexible, fast and accessibility-ready block theme. Its default look is a stylish black on white background color scheme and lexend font (a sans-serif typography). 
-SpacePress WP is built from the ground up for flexibility. It includes six different theme styles to choose from, and different block patterns that you can use to quickly create unique page layouts. 
+SpacePress WP is built from the ground up for flexibility. It includes seven different theme styles to choose from, and different block patterns that you can use to quickly create unique page layouts. 
 Maximum Flexibility.
 For a more professional presentation of the navigation with Block Themes, e.g. SpacePress WP or Circles WP (https://wordpress.org/themes/circles-wp/), 
 I recommend my plugin https://de.wordpress.org/plugins/shrinking-logo-sticky-header/advanced/
