@@ -1,6 +1,29 @@
 {
 	"version": 3,
 	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"customTemplates": [
+		{
+			"name": "page-with-sidebar",
+			"postTypes": [
+				"page"
+			],
+			"title": "Page with Sidebar"
+		},
+		{
+			"name": "single-post-wide-width",
+			"postTypes": [
+				"post"
+			],
+			"title": "Single Post wide width"
+		},
+		{
+			"name": "single-post-with-sidebar",
+			"postTypes": [
+				"post"
+			],
+			"title": "Single Post with Sidebar"
+		}
+	],
 	"settings": {
 		"appearanceTools": true,
 		"color": {
