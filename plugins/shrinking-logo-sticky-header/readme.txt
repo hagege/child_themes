@@ -54,6 +54,11 @@ If the header has a background colour, then the header ‘covers’ the content 
 Yes, with pleasure:
 https://haurand.com/  and  https://space4.yd-sgs.de/
 
+= Is there any documentation and further information about the plugin? =
+Yes, of course:
+* (English): https://haurand.com/plugin-shrinking-logo-sticky-header/
+* (German): https://haurand.com/das-plugin-shrinking-logo-sticky-header/
+
 
 == Installation ==
 
