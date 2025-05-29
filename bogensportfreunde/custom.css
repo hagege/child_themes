@@ -6,6 +6,81 @@ html {
     scroll-padding-top: 6rem;
 }
 
+/* Für Dateidownload */
+.wp-block-file a {
+    font-size: var(--wp--preset--font-size--medium);
+}
+
+
+/* Überschrift H2 mit padding */
+h2.wp-block-heading {
+    padding-top: var(--wp--preset--spacing--60);
+    padding-right: 0rem;
+    padding-bottom: var(--wp--preset--spacing--40);
+    padding-left: 0rem;
+}
+
+/* ---------------------*/
+/* Der Detail-Block mit */
+/* einigen Anpassungen  */
+/* ---------------------*/
+summary {
+    list-style: none;
+    display: flex;
+    /* also removes the list marker */
+    align-items: center;
+    padding: 1rem;
+    color: var(--wp--preset--color--custom-weiss);
+    background: var(--wp--preset--color--custom-rostrot);
+    border-radius: 0px;
+    outline: auto;
+}
+
+summary::before {
+    content: '>';
+    /*  margin-left: .75em; */
+    transition: 0.2s;
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+
+
+details[open]>summary::before {
+    transform: rotate(90deg);
+}
+
+/* Strich links */
+details.bogensport {
+    border-left: solid;
+    padding-left: 1em;
+    border-left-color: var(--wp--preset--color--custom-rostrot);
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+
+/* Background content of details */
+details p {
+    background: var(--wp--preset--color--custom-mittelgrau);
+    padding: 2rem;
+    margin-top: 0;
+}
+
+@keyframes details-show {
+    from {
+        opacity: 0;
+        transform: var(--details-translate, translateY(-0.5em));
+    }
+}
+
+details[open]>*:not(summary),
+details[close]>*:not(summary) {
+    animation: details-show 1000ms ease-in-out;
+}
+
+
 /* Schriftzug Menü immer unter Hambuger */
 .mobile_menu {
     flex-wrap: nowrap;
@@ -38,64 +113,28 @@ h3.tribe-events-calendar-month__calendar-event-title.tribe-common-h8.tribe-commo
     background-color: var(--wp--preset--color--custom-rostrot);
 }
 
-/* Breakpoint für mobiles Menü anpassen */
-@media screen and (max-width: 1070px) {
-    .wp-block-navigation__responsive-container-open {
-        display: block !important;
-    }
-
-    .wp-block-navigation__responsive-container:not(.is-menu-open.has-modal-open) {
-        display: none !important;
-    }
-}
-
-/* Off canvas */
-@media (max-width: 1070px) {
-    .wp-block-navigation__responsive-container {
-        right: -70vw;
-        left: auto;
-        width: 70vw;
-        transition: none;
-        /* Keine Transition */
-        border-radius: 0;
-    }
-
-    .wp-block-navigation__responsive-container.is-menu-open {
-        animation: slideInMenu 0.5s linear forwards
-    }
-
-    @keyframes slideInMenu {
-        from {
-            right: -70vw;
-        }
-
-        to {
-            right: 0vw;
-        }
-    }
-}
 
 /* Websitetitel im Menü zweizeilig - muss später noch geprüft werden - nicht mehr genutzt, 7.5.2025
-  @media screen and (max-width: 590px) {
-      p.has-text-align-center.bsf-websitetitel.wp-block-site-title {
-          font-size: clamp(0.8rem, 0.727vw + 0.655rem, 1.2rem)
-      }
-  
-      img.custom-logo {
-          width: 20vw;
-      }
-  }
-  
-  @media screen and (min-width: 590px) {
-      p.has-text-align-center.bsf-websitetitel.wp-block-site-title {
-          white-space: normal !important;
-          overflow-wrap: anywhere;
-          line-height: 1.2;
-          text-align: center;
-      }
-  }
-  
-  */
+@media screen and (max-width: 590px) {
+    p.has-text-align-center.bsf-websitetitel.wp-block-site-title {
+        font-size: clamp(0.8rem, 0.727vw + 0.655rem, 1.2rem)
+    }
+
+    img.custom-logo {
+        width: 20vw;
+    }
+}
+
+@media screen and (min-width: 590px) {
+    p.has-text-align-center.bsf-websitetitel.wp-block-site-title {
+        white-space: normal !important;
+        overflow-wrap: anywhere;
+        line-height: 1.2;
+        text-align: center;
+    }
+}
+
+*/
 
 /* mobiles Menü */
 /* Mobile Menü - Standard-Zustand */
@@ -184,7 +223,8 @@ p.haurand-button-rostrot a:hover {
 }
 
 /* Hover bei Buttons im seitenheader-rostrot */
-a.wp-block-button__link.has-custom-rostrot-color.has-custom-weiss-background-color.has-text-color.has-background.has-link-color.wp-element-button:hover {
-    color: var(--wp--preset--color--custom-weiss) !important;
+a.wp-block-button__link.has-custom-rostrot-color.has-custom-weiss-background-color.has-text-color.has-background.has-link-color.wp-element-button:hover,
+a.wp-block-button__link.has-large-font-size.has-custom-font-size.wp-element-button:hover {
+    color: var(--wp--preset--color--custom-schwarz) !important;
     background-color: var(--wp--preset--color--custom-mittelgrau) !important;
 }
