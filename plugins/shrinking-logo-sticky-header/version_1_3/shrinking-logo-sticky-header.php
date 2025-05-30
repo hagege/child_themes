@@ -306,7 +306,7 @@ function slsh_dynamic_css(): void {
 		}
 		
 		.wp-block-navigation-submenu .wp-block-navigation-item__content::after {
-		  content: '>';
+		  /* content: '>'; */
 		  margin-left: 0.5em;
 		  font-size: 0.8em;
 	    }";
