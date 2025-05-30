@@ -178,7 +178,7 @@ function slsh_options_page(): void {
 				<tr>
 					<th scope="row"><label style="display: block; text-align: left" for="slsh_enable_off_canvas"><?php esc_html_e( 'Activate Off-Canvas (CSS Rules):', 'shrinking-logo-sticky-header' ); ?></label></th>
 					<td>
-						<input type="checkbox" id="slsh_enable_nav_css" name="slsh_enable_off_canvas" value="yes" <?php checked( 'yes', get_option( 'slsh_enable_off_canvas', 'no' ) ); ?> />
+						<input type="checkbox" id="slsh_enable_off_canvas" name="slsh_enable_off_canvas" value="yes" <?php checked( 'yes', get_option( 'slsh_enable_off_canvas', 'no' ) ); ?> />
 						<span><?php esc_html_e( 'Activates special CSS rules for Off-Canvas in Block Themes.', 'shrinking-logo-sticky-header' ); ?></span>
 					</td>
 				</tr>
