@@ -29,8 +29,10 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 // Include your custom code here.
 
 
-add_action( 'wp_enqueue_scripts', 'mobile_submenu_toggle_enqueue_scripts' );
-function mobile_submenu_toggle_enqueue_scripts() {
-    wp_enqueue_style( 'mobile-submenu-toggle', plugin_dir_url( __FILE__ ) . 'mobile-menu.css', array(), '1.0' );
-    wp_enqueue_script( 'mobile-submenu-toggle', plugin_dir_url( __FILE__ ) . 'mobile-menu.js', array('jquery'), '1.0', true );
-}
+add_action('wp_enqueue_scripts', function() {
+  // CSS nur für mobile Geräte
+  wp_enqueue_style('mobile-menu-css', plugins_url('mobile-menu.css', __FILE__), [], filemtime(__DIR__.'/mobile-menu.css'));
+
+  // JavaScript mit Modernem Ansatz
+  wp_enqueue_script('mobile-menu-js', plugins_url('mobile-menu.js', __FILE__), [], filemtime(__DIR__.'/mobile-menu.js'), true);
+});
