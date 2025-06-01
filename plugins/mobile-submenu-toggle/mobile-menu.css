@@ -1,0 +1,37 @@
+/* Untermenüs im mobilen Menü ausblenden */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-submenu .wp-block-navigation__submenu-container {
+  max-height: 0 !important;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Sichtbare Untermenüs */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-submenu.is-open .wp-block-navigation__submenu-container {
+  max-height: 1000px !important;
+  opacity: 1;
+}
+
+/* Pfeil-Styling */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-icon {
+  cursor: pointer;
+  display: inline-flex !important;
+}
+
+/* Untermenüs initial verstecken */
+.wp-block-navigation__responsive-container.is-menu-open 
+.wp-block-navigation-submenu:not(.is-open) 
+.wp-block-navigation__submenu-container {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* Nur bei .is-open anzeigen */
+.wp-block-navigation__responsive-container.is-menu-open 
+.wp-block-navigation-submenu.is-open 
+.wp-block-navigation__submenu-container {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}

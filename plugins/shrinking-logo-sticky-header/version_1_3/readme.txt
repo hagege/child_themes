@@ -7,7 +7,7 @@ Tags: Block Theme, Header, shrink, breakpoint, off-canvas
 Requires at least: 
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.2
+Stable tag: 1.3
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -63,6 +63,9 @@ https://haurand.com/  and  https://space4.yd-sgs.de/
 4. Click on `Activate plugin`
 
 == Changelog ==
+
+= 1.3: May 30, 2025 =
+* Fix: Minor issue incorrectly labelled id 
 
 = 1.2: May 22, 2025 =
 * Added: Optional Off-Canvas-Menu
