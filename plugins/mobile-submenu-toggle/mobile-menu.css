@@ -1,37 +1,58 @@
-/* Untermenüs im mobilen Menü ausblenden */
+/* Menüpunkt (Link) mit Platz für Chevron-Pfeil rechts */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-submenu > .wp-block-navigation-item__content {
+  position: relative;
+  padding-right: 2em;
+  display: block;
+  cursor: pointer;
+}
+
+/* Pfeil nach unten (zu) */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-submenu > .wp-block-navigation-item__content::before {
+  content: '';
+  position: absolute;
+  right: 0.7em;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg); /* › */
+  width: 0.7em;
+  height: 0.7em;
+  border-right: 2px solid #222;
+  border-bottom: 2px solid #222;
+  pointer-events: none;
+  opacity: 1;
+  transition: transform 0.2s;
+}
+
+/* Pfeil nach oben (auf) */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-submenu.is-open > .wp-block-navigation-item__content::before {
+  transform: translateY(-50%) rotate(225deg); /* ^ */
+}
+
+/* WordPress-eigenen Toggle-Button im mobilen Menü ausblenden */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-icon {
+  display: none !important;
+}
+
+/* Untermenü Animation & Sichtbarkeit */
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-submenu .wp-block-navigation__submenu-container {
   max-height: 0 !important;
   opacity: 0;
   overflow: hidden;
   transition: all 0.3s ease;
+  display: block !important;
+  visibility: hidden !important;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 1.5em;
+  box-sizing: border-box;
 }
-
-/* Sichtbare Untermenüs */
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-submenu.is-open .wp-block-navigation__submenu-container {
   max-height: 1000px !important;
   opacity: 1;
-}
-
-/* Pfeil-Styling */
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-icon {
-  cursor: pointer;
-  display: inline-flex !important;
-}
-
-/* Untermenüs initial verstecken */
-.wp-block-navigation__responsive-container.is-menu-open 
-.wp-block-navigation-submenu:not(.is-open) 
-.wp-block-navigation__submenu-container {
-  display: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-}
-
-/* Nur bei .is-open anzeigen */
-.wp-block-navigation__responsive-container.is-menu-open 
-.wp-block-navigation-submenu.is-open 
-.wp-block-navigation__submenu-container {
-  display: block !important;
-  opacity: 1 !important;
   visibility: visible !important;
+}
+
+/* Optional: Untermenü-Links als Block für bessere Touch-Fläche */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container .wp-block-navigation-item__content {
+  display: block;
+  padding: 0.5em 0.5em 0.5em 0;
 }
