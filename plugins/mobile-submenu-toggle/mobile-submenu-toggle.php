@@ -30,9 +30,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 
 add_action('wp_enqueue_scripts', function() {
-  // CSS nur für mobile Geräte
+  // CSS only for mobile devices
   wp_enqueue_style('mobile-menu-css', plugins_url('mobile-menu.css', __FILE__), [], filemtime(__DIR__.'/mobile-menu.css'));
 
-  // JavaScript mit Modernem Ansatz
+  // JavaScript with modern approach
   wp_enqueue_script('mobile-menu-js', plugins_url('mobile-menu.js', __FILE__), [], filemtime(__DIR__.'/mobile-menu.js'), true);
 });

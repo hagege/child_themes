@@ -1,17 +1,17 @@
 document.addEventListener('click', (e) => {
-  // Nur im geöffneten mobilen Menü reagieren
+  // Initially close all submenus
   const mobileMenu = document.querySelector('.wp-block-navigation__responsive-container.is-menu-open');
   if (!mobileMenu) return;
 
-  // Prüfe, ob auf den Toggle-Button geklickt wurde
+  // Check whether the toggle button has been clicked
   const toggle = e.target.closest('.wp-block-navigation-submenu__toggle');
-  // Prüfe, ob auf einen Menü-Link mit Submenü geklickt wurde
+  // Check whether a menu link with a submenu has been clicked
   const menuLink = e.target.closest('.wp-block-navigation-item__content');
   const parentSubmenu = menuLink && menuLink.parentElement.classList.contains('wp-block-navigation-submenu')
     ? menuLink.parentElement
     : null;
 
-  // Fall 1: Klick auf Toggle
+  // Case 1: Click on Toggle
   if (toggle && mobileMenu.contains(toggle)) {
     e.preventDefault();
     e.stopImmediatePropagation();
@@ -20,20 +20,20 @@ document.addEventListener('click', (e) => {
     if (!submenu) return;
 
     submenu.classList.toggle('is-open');
-    // Andere Untermenüs schließen
+    // Close other submenus
     mobileMenu.querySelectorAll('.wp-block-navigation-submenu').forEach(other => {
       if (other !== submenu) other.classList.remove('is-open');
     });
     return;
   }
 
-  // Fall 2: Klick auf Link mit Submenü (nur im mobilen Menü)
+  // Case 2: Click on link with submenu (only in mobile menu)
   if (parentSubmenu && mobileMenu.contains(menuLink)) {
     e.preventDefault();
     e.stopImmediatePropagation();
 
     parentSubmenu.classList.toggle('is-open');
-    // Andere Untermenüs schließen
+    // Close other submenus
     mobileMenu.querySelectorAll('.wp-block-navigation-submenu').forEach(other => {
       if (other !== parentSubmenu) other.classList.remove('is-open');
     });
@@ -41,7 +41,7 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// Untermenüs initial zuklappen, sobald das mobile Menü geöffnet wird
+// Close submenus initially as soon as the mobile menu is opened
 const observer = new MutationObserver(() => {
   const mobileMenu = document.querySelector('.wp-block-navigation__responsive-container.is-menu-open');
   if (!mobileMenu) return;

@@ -1,4 +1,4 @@
-/* Menüpunkt (Link) mit Platz für Chevron-Pfeil rechts */
+/* Menu item (link) with space for chevron arrow on the right */
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-submenu > .wp-block-navigation-item__content {
   position: relative;
   padding-right: 2em;
@@ -6,7 +6,7 @@
   cursor: pointer;
 }
 
-/* Pfeil nach unten (zu) */
+/* Down arrow (close) */
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-submenu > .wp-block-navigation-item__content::before {
   content: '';
   position: absolute;
@@ -22,17 +22,17 @@
   transition: transform 0.2s;
 }
 
-/* Pfeil nach oben (auf) */
+/* Up arrow (up) */
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-submenu.is-open > .wp-block-navigation-item__content::before {
   transform: translateY(-50%) rotate(225deg); /* ^ */
 }
 
-/* WordPress-eigenen Toggle-Button im mobilen Menü ausblenden */
+/* Hide WordPress's own toggle button in the mobile menu */
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-icon {
   display: none !important;
 }
 
-/* Untermenü Animation & Sichtbarkeit */
+/* Submenu Animation & Visibility */
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-submenu .wp-block-navigation__submenu-container {
   max-height: 0 !important;
   opacity: 0;
@@ -51,7 +51,7 @@
   visibility: visible !important;
 }
 
-/* Optional: Untermenü-Links als Block für bessere Touch-Fläche */
+/* Optional: Submenu links as a block for better touch surface */
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container .wp-block-navigation-item__content {
   display: block;
   padding: 0.5em 0.5em 0.5em 0;
