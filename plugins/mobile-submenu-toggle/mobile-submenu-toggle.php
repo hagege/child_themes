@@ -5,13 +5,13 @@
  * @package       MOBILESUBM
  * @author        Hans-Gerd Gerhards
  * @license       gplv2
- * @version       0.1
+ * @version       0.2
  *
  * @wordpress-plugin
  * Plugin Name:   Mobile Submenu Toggle
  * Plugin URI:    https://haruand.com
  * Description:   Makes submenus in the mobile menu expandable and closes the menu when clicked.
- * Version:       0.1
+ * Version:       0.2
  * Author:        Hans-Gerd Gerhards
  * Author URI:    https://haruand.com
  * Text Domain:   mobile-submenu-toggle
@@ -26,13 +26,33 @@
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-// Include your custom code here.
+// set version.
+const MST_VERSION = '0.2';
 
 
-add_action('wp_enqueue_scripts', function() {
-  // CSS only for mobile devices
-  wp_enqueue_style('mobile-menu-css', plugins_url('mobile-menu.css', __FILE__), [], filemtime(__DIR__.'/mobile-menu.css'));
+  /**
+ * Enqueue script.
+ *
+ * @return void
+ */
+function mst_css_enqueue(): void {
+	wp_enqueue_script(
+		'mst_css',
+		plugins_url( 'assets/css/mobile-menu.css', __FILE__ ),
+		array(),
+		MST_VERSION,
+		true
+	);
+}
+add_action( 'wp_enqueue_scripts', 'mst_css_enqueue' );
 
-  // JavaScript with modern approach
-  wp_enqueue_script('mobile-menu-js', plugins_url('mobile-menu.js', __FILE__), [], filemtime(__DIR__.'/mobile-menu.js'), true);
-});
+function mst_js_enqueue(): void {
+	wp_enqueue_script(
+		'mst_js',
+		plugins_url( 'assets/js/mobile-menu.js', __FILE__ ),
+		array(),
+		MST_VERSION,
+		true
+	);
+}
+add_action( 'wp_enqueue_scripts', 'mst_js_enqueue' );
