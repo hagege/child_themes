@@ -35,24 +35,32 @@ const MST_VERSION = '0.2';
  *
  * @return void
  */
-function mst_css_enqueue(): void {
-	wp_enqueue_script(
-		'mst_css',
-		plugins_url( 'assets/css/mobile-menu.css', __FILE__ ),
-		array(),
-		MST_VERSION,
-		true
-	);
-}
-add_action( 'wp_enqueue_scripts', 'mst_css_enqueue' );
+/**
+ * Enqueue plugin assets (CSS/JS) with automatic versioning using filemtime.
+ */
+function mst_enqueue_assets(): void {
+	$css_path = plugin_dir_path( __FILE__ ) . 'assets/css/mobile-menu.css';
+	$css_url  = plugins_url( 'assets/css/mobile-menu.css', __FILE__ );
+	$js_path  = plugin_dir_path( __FILE__ ) . 'assets/js/mobile-menu.js';
+	$js_url   = plugins_url( 'assets/js/mobile-menu.js', __FILE__ );
 
-function mst_js_enqueue(): void {
-	wp_enqueue_script(
-		'mst_js',
-		plugins_url( 'assets/js/mobile-menu.js', __FILE__ ),
-		array(),
-		MST_VERSION,
-		true
-	);
+	if ( file_exists( $css_path ) ) {
+		wp_enqueue_style(
+			'mst_css',
+			$css_url,
+			array(),
+			filemtime( $css_path )
+		);
+	}
+
+	if ( file_exists( $js_path ) ) {
+		wp_enqueue_script(
+			'mst_js',
+			$js_url,
+			array(),
+			filemtime( $js_path ),
+			true
+		);
+	}
 }
-add_action( 'wp_enqueue_scripts', 'mst_js_enqueue' );
+add_action( 'wp_enqueue_scripts', 'mst_enqueue_assets' );
