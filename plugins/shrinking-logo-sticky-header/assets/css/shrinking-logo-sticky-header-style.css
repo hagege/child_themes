@@ -19,7 +19,7 @@
     }
     /* Logo animation at shrink */
     header.wp-block-template-part.shrink .wp-block-site-logo img {
-        transform: scale(0.8);
+        transform: scale(0.8) translateX(0rem);
     }
 
 	/* Breakpoint */

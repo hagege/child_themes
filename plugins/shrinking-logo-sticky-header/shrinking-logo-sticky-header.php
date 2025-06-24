@@ -5,13 +5,13 @@
  * @package       shrinkingLO
  * @author        Hans-Gerd Gerhards
  * @license       gplv2
- * @version       1.2
+ * @version       1.3
  *
  * @wordpress-plugin
  * Plugin Name:   Dynamic Header & Navigation for Block Themes
  * Plugin URI:    https://haurand.com/plugin-shrinking-logo-sticky-header/
  * Description:   Animated shrinking header, responsive shrinking logo, custom breakpoints and off-canvas navigation – all-in-one navigation solution for most modern WordPress block themes.
- * Version:       1.2
+ * Version:       1.3
  * Author:        Hans-Gerd Gerhards
  * Author URI:    https://haurand.com/author/hgg/
  * Text Domain:   shrinking-logo-sticky-header
@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // set version.
-const SLSH_VERSION = '1.2.0';
+const SLSH_VERSION = '1.3.0';
 
 /**
  * Load language files.
@@ -46,6 +46,21 @@ function slsh_load_textdomain(): void {
 add_action( 'init', 'slsh_load_textdomain' );
 
 
+// Show review-notice
+add_action( 'admin_notices', 'slsh_admin_info_notice' );
+function slsh_admin_info_notice() {
+    ?>
+    <div class="notice notice-info">
+        <p>
+            <strong>Notice:</strong> 
+            We would appreciate a review of the plugin <a href="https://de.wordpress.org/plugins/shrinking-logo-sticky-header/#reviews" target="_blank">
+Dynamic Header & Navigation for Block Themes</a> - thanks a lot :-) 
+        </p>
+    </div>
+    <?php
+}
+
+
 /**
  * Registering settings
  */
@@ -54,6 +69,7 @@ function slsh_register_settings(): void {
 	add_option( 'slsh_animation_duration', 0.6 );
 	add_option( 'slsh_heigth_header', 120 );
 	add_option( 'slsh_logo_in_header_shrink_height', 0.8 );
+	add_option( 'slsh_logo_in_header_shrink_left', 0);
 
 	// Options for Breakpoint.
 	add_option( 'slsh_nav_breakpoint', 782 );
@@ -63,6 +79,10 @@ function slsh_register_settings(): void {
 	
 	// Option for Off-Canvas-Menue
 	add_option( 'slsh_enable_off_canvas', 'no' );
+	
+	// Option for Background Color
+	add_option( 'slsh_enable_background_color', 'no' );
+	
 
 	register_setting(
 		'slsh_options_group',
@@ -72,7 +92,8 @@ function slsh_register_settings(): void {
 			'sanitize_callback' => 'absint',
 		)
 	);
-	register_setting(
+
+    register_setting(
 		'slsh_options_group',
 		'slsh_animation_duration',
 		array(
@@ -80,6 +101,7 @@ function slsh_register_settings(): void {
 			'sanitize_callback' => 'floatval',
 		)
 	);
+	
 	register_setting(
 		'slsh_options_group',
 		'slsh_heigth_header',
@@ -88,6 +110,7 @@ function slsh_register_settings(): void {
 			'sanitize_callback' => 'absint',
 		)
 	);
+	
 	register_setting(
 		'slsh_options_group',
 		'slsh_logo_in_header_shrink_height',
@@ -96,6 +119,16 @@ function slsh_register_settings(): void {
 			'sanitize_callback' => 'floatval',
 		)
 	);
+
+	register_setting(
+		'slsh_options_group',
+		'slsh_logo_in_header_shrink_left',
+		array(
+			'type'              => 'float',
+			'sanitize_callback' => 'floatval',
+		)
+	);
+	
 	register_setting(
 		'slsh_options_group',
 		'slsh_nav_breakpoint',
@@ -104,9 +137,21 @@ function slsh_register_settings(): void {
 			'sanitize_callback' => 'absint',
 		)
 	);
+	
 	register_setting(
 		'slsh_options_group',
 		'slsh_enable_off_canvas',
+		array(
+			'type'              => 'string',
+			'sanitize_callback' => function ( $v ) {
+				return 'yes' === $v ? 'yes' : 'no';
+			},
+		)
+	);
+	
+	register_setting(
+		'slsh_options_group',
+		'slsh_enable_background_color',
 		array(
 			'type'              => 'string',
 			'sanitize_callback' => function ( $v ) {
@@ -153,6 +198,10 @@ function slsh_options_page(): void {
 					<th scope="row"><label style="display: block; text-align: left" for="slsh_logo_in_header_shrink_height"><?php esc_html_e( 'Logo shrinking factor (Value in 0.05 steps):', 'shrinking-logo-sticky-header' ); ?></label></th>
 					<td><input type="number" step="0.05" id="slsh_logo_in_header_shrink_height" name="slsh_logo_in_header_shrink_height" value="<?php echo esc_attr( get_option( 'slsh_logo_in_header_shrink_height', 0.8 ) ); ?>" min="0.4" max="1" /></td>
 				</tr>
+				<tr>
+					<th scope="row"><label style="display: block; text-align: left" for="slsh_logo_in_header_shrink_left"><?php esc_html_e( 'Move the shrunk logo to the left (rem):', 'shrinking-logo-sticky-header' ); ?></label></th>
+					<td><input type="number" step="0.1" id="slsh_logo_in_header_shrink_left" name="slsh_logo_in_header_shrink_left" value="<?php echo esc_attr( get_option( 'slsh_logo_in_header_shrink_left', 0 ) ); ?>" min="0" max="8" /></td>
+				</tr>
 
 				<!-- settings for breakpoint (CSS) -->
 				<tr>
@@ -182,6 +231,21 @@ function slsh_options_page(): void {
 						<span><?php esc_html_e( 'Activates special CSS rules for Off-Canvas in Block Themes.', 'shrinking-logo-sticky-header' ); ?></span>
 					</td>
 				</tr>
+				<!-- settings for Background Color (Header) -->
+				<tr>
+					<th scope="row"><h3 style="text-align: left;margin-top:30px">Background Color for Header</h3></th>
+				</tr>
+				<tr>
+					<th scope="row"><p style="text-align: left;"><?php esc_html_e( 'The header is normally transparent. However, you can set the background color for the header in the template part of your block theme (recommended). The background color for the header can also be set automatically using the following settings.', 'shrinking-logo-sticky-header' ); ?></p></th>
+				</tr>
+				<tr>
+					<th scope="row"><label style="display: block; text-align: left" for="slsh_enable_background_color"><?php esc_html_e( 'Activate Background Color for Header (CSS Rules):', 'shrinking-logo-sticky-header' ); ?></label></th>
+					<td>
+						<input type="checkbox" id="slsh_enable_off_canvas" name="slsh_enable_background_color" value="yes" <?php checked( 'yes', get_option( 'slsh_enable_background_color', 'no' ) ); ?> />
+						<span><?php esc_html_e( 'Activates special CSS rules for Background Color (Header) in Block Themes.', 'shrinking-logo-sticky-header' ); ?></span>
+					</td>
+				</tr>
+
 
 			</table>
 			<?php submit_button(); ?>
@@ -206,8 +270,10 @@ function slsh_dynamic_css(): void {
 	$anim_duration      = (float) get_option( 'slsh_animation_duration', 0.6 );
 	$header_height      = (int) get_option( 'slsh_heigth_header', 120 );
 	$logo_shrink_height = (float) get_option( 'slsh_logo_in_header_shrink_height', 0.8 );
+	$logo_shrink_left   = (float) get_option( 'slsh_logo_in_header_shrink_left', 0 );
 	$nav_breakpoint     = (int) get_option( 'slsh_nav_breakpoint', 782 );
 	$enable_off_canvas  = get_option( 'slsh_enable_off_canvas', 'no' );
+	$enable_bg_color    = get_option( 'slsh_enable_background_color', 'no' );
 
 	$custom_css = "
         header.wp-block-template-part {
@@ -228,7 +294,7 @@ function slsh_dynamic_css(): void {
             transform: scale(1);
         }
         header.wp-block-template-part.shrink .wp-block-site-logo img {
-            transform: scale({$logo_shrink_height});
+            transform: translateX(-{$logo_shrink_left}rem) scale({$logo_shrink_height});
         }
     ";
 
@@ -270,6 +336,13 @@ function slsh_dynamic_css(): void {
 	    }";
 	}
 		
+	if ( 'yes' === $enable_bg_color ) {
+		$custom_css .= "
+		/* Background Color */
+		header.wp-block-template-part {
+			background-color: var(--wp--preset--color--base);
+		}";	
+	}
 
 	wp_add_inline_style( 'slsh_style', $custom_css );
 }

@@ -7,7 +7,7 @@ Tags: Block Theme, Header, shrink, breakpoint, off-canvas
 Requires at least: 
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.2
+Stable tag: 1.3
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,6 +18,7 @@ Animated shrinking header, responsive shrinking logo, custom breakpoints and off
 * Set height for header
 * Set height for shrinking header
 * Set Logo shrinking factor 
+* Set shrinked Logo left
 * Set Animation duration (seconds) for shrinking header
 * Option to set a breakpoint for navigation (added in Version 1.1)
 * Option to set Off-Canvas (added in Version 1.2)
@@ -68,6 +69,11 @@ Yes, of course:
 4. Click on `Activate plugin`
 
 == Changelog ==
+
+= 1.3: June 22, 2025 =
+* Added: Optional setting of background Color for Header
+* Added: Optional setting to move the shrunk logo to the left
+* Added: Notice for review
 
 = 1.2: May 22, 2025 =
 * Added: Optional Off-Canvas-Menu
