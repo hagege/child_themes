@@ -46,21 +46,6 @@ function slsh_load_textdomain(): void {
 add_action( 'init', 'slsh_load_textdomain' );
 
 
-// Show review-notice
-add_action( 'admin_notices', 'slsh_admin_info_notice' );
-function slsh_admin_info_notice() {
-    ?>
-    <div class="notice notice-info">
-        <p>
-            <strong>Notice:</strong> 
-            We would appreciate a review of the plugin <a href="https://de.wordpress.org/plugins/shrinking-logo-sticky-header/#reviews" target="_blank">
-Dynamic Header & Navigation for Block Themes</a> - thanks a lot :-) 
-        </p>
-    </div>
-    <?php
-}
-
-
 /**
  * Registering settings
  */
@@ -178,9 +163,16 @@ add_action( 'admin_menu', 'slsh_register_options_page' );
 function slsh_options_page(): void {
 	?>
 	<div>
+		<div class="notice notice-info">
+			<p>
+				<strong>Notice:</strong> 
+				We would appreciate a review of the plugin <a href="https://de.wordpress.org/plugins/shrinking-logo-sticky-header/#reviews" target="_blank">Dynamic Header & Navigation for Block Themes</a> - thanks a lot :-) 
+			</p>
+		</div>
 		<h2><?php esc_html_e( 'Dynamic Header & Navigation for Block Themes – Settings', 'shrinking-logo-sticky-header' ); ?></h2>
 		<form method="post" action="<?php echo esc_url( get_admin_url() ); ?>options.php">
 			<?php settings_fields( 'slsh_options_group' ); ?>
+
 			<table>
 				<tr>
 					<th scope="row"><label style="display: block; text-align: left" for="slsh_header_shrink_height"><?php esc_html_e( 'Height of the shrunk header (px):', 'shrinking-logo-sticky-header' ); ?></label></th>
