@@ -23,3 +23,5 @@ delete_option( 'slsh_logo_in_header_shrink_height' );
 delete_option( 'slsh_enable_nav_css' );
 delete_option( 'slsh_nav_breakpoint' );
 delete_option( 'slsh_enable_off_canvas' );
+delete_option( 'slsh_logo_in_header_shrink_left' );
+delete_option( 'slsh_enable_background_color' );
