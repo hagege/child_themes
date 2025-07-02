@@ -180,25 +180,28 @@ input.wpcf7-form-control.wpcf7-text {
 
 /* Hintergrundfarbe für Embed Privacy */
 .embed-privacy-overlay {
-    background-color: var(--wp--preset--color--custom-dunkelgruen);
+    background-color: var(--wp--preset--color--custom-mittelgruen);
     z-index: 0;
 }
 
 /* eingebettete Google Maps-Karte responsive */
-.responsive_map {
-    position: relative;
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    /* 16:9 Seitenverhältnis */
-    height: 0;
-    z-index: 0;
-}
+@media (max-width: 800px) {
+    .responsive_map {
+        padding-bottom: 90%;
+        /* Erhöht die Höhe des Containers */
+        font-size: 0.8em;
+        position: relative;
+        overflow: hidden;
+        height: 0;
+        max-width: 100%;
+    }
 
-.responsive_map iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+    .responsive_map iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
 }
