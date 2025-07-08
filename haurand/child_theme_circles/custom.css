@@ -7,44 +7,6 @@ html {
 }
 
 
-/* Breakpoint für mobiles Menü anpassen */
-@media screen and (max-width: 900px) {
-    .wp-block-navigation__responsive-container-open {
-        display: block !important;
-    }
-
-    .wp-block-navigation__responsive-container:not(.is-menu-open.has-modal-open) {
-        display: none !important;
-    }
-}
-
-
-/* Off canvas */
-@media (max-width: 900px) {
-    .wp-block-navigation__responsive-container {
-        right: -70vw;
-        left: auto;
-        width: 70vw;
-        transition: none;
-        /* Keine Transition */
-        border-radius: 0;
-    }
-
-    .wp-block-navigation__responsive-container.is-menu-open {
-        animation: slideInMenu 0.5s linear forwards
-    }
-
-    @keyframes slideInMenu {
-        from {
-            right: -70vw;
-        }
-
-        to {
-            right: 0vw;
-        }
-    }
-}
-
 /* Altlasten aus Kompatibilitätsgründen*/
 .wp-block-group.html_svg {
     text-align: center;
@@ -64,10 +26,10 @@ html {
 }
 
 /*
-  .haurand-card:hover {
-      filter: grayscale(1) opacity(.8);
-  }
-  */
+.haurand-card:hover {
+    filter: grayscale(1) opacity(.8);
+}
+*/
 
 .haurand-card h2 a::before,
 .haurand-card h3 a::before {
@@ -298,25 +260,30 @@ div#sticky_group_left {
 a.wp-block-navigation-item__content {
     box-shadow: inset 0 -1px 0 var(--wp--preset--color--contrast-2);
     text-decoration: none;
+    transition: box-shadow 0.6s ease-in-out;
 }
 
-
-
-a.wp-block-navigation-item__content:hover {
+a.wp-block-navigation-item__content:hover,
+a.wp-block-navigation-item__content:focus {
     box-shadow: inset 0 -4px 0 var(--wp--preset--color--contrast-2);
-    transition: all 0.6s ease-in-out;
-    text-decoration: none;
-}
-
-a.wp-block-navigation-item__content:active {
-    box-shadow: inset 0 -6px 0 var(--wp--preset--color--base-2);
-    transition: all 0.6s ease-in-out;
-    text-decoration: none;
 }
 
 a.wp-block-navigation-item__content:focus {
-    outline: 1px dotted;
+    outline: 2px solid var(--wp--preset--color--contrast-2);
+    outline-offset: 2px;
 }
+
+/* Fallback für High-Contrast-Modus */
+@media (forced-colors: active) {
+
+    a.wp-block-navigation-item__content:hover,
+    a.wp-block-navigation-item__content:focus {
+        text-decoration: underline;
+        box-shadow: none;
+        outline: 2px solid CanvasText;
+    }
+}
+
 
 
 /* featured image bei query loop und Referenzen */
@@ -345,24 +312,24 @@ li figure.wp-block-post-featured-image:focus,
 
 
 /*
-  span.wp-block-navigation-item__label:after {
-      display: block;
-      background-color: #13aff0;
-      position: absolute;
-      bottom: -30%;
-      left: 0;
-      content: "";
-      width: 100%;
-      height: 2px;
-      visibility: hidden;
-      -moz-transform: scaleX(0);
-      -webkit-transform: scaleX(0);
-      transform: scaleX(0);
-      transform-origin: bottom left;
-      -webkit-transition: all .25s ease-out;
-      -moz-transition: all .25s ease-out;
-      -ms-transition: all .25s ease-out;
-      -o-transition: all .25s ease-out;
-      transition: all .25s ease-out;
-  }
-  */
+span.wp-block-navigation-item__label:after {
+    display: block;
+    background-color: #13aff0;
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+    visibility: hidden;
+    -moz-transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    -webkit-transition: all .25s ease-out;
+    -moz-transition: all .25s ease-out;
+    -ms-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+}
+*/
