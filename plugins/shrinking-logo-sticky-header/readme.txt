@@ -7,21 +7,24 @@ Tags: Block Theme, Header, shrink, breakpoint, off-canvas
 Requires at least: 
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.3
+Stable tag: 1.3.1
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Animated shrinking header, responsive shrinking logo, custom breakpoints and off-canvas navigation – navigation solution for block themes.
-
 == Description ==
+
+Plugin "Dynamic Header & Navigation for Block Themes": Animated shrinking header, responsive shrinking logo, custom breakpoints and off-canvas navigation – navigation solution for block themes.
+
+Options:
 
 * Set height for header
 * Set height for shrinking header
 * Set Logo shrinking factor 
-* Set shrinked Logo left
+* Set shrinked Logo left (added in Version 1.3)
 * Set Animation duration (seconds) for shrinking header
 * Option to set a breakpoint for navigation (added in Version 1.1)
 * Option to set Off-Canvas (added in Version 1.2)
+* Option for Option for the speed of the Off-Canvas fade-in (added in Version 1.3.1)
 
 Dynamic Header & Navigation for Block Themes (Previous name of the plugin: Shrinking Logo Sticky Header) is a lightweight WordPress plugin developed specifically as a navigation solution for most Block Themes. 
 It adds a modern sticky header with smooth, animated shrinking effects for both the header and the site logo. 
@@ -33,6 +36,8 @@ These settings can be easily adjusted to match your branding or design preferenc
 One of the key advantages of Dynamic Header & Navigation for Block Themes is its simplicity: 
 After activation, the sticky and shrinking effects work in principle immediately - no additional setup or configuration is required. 
 This makes it ideal for users who want a professional, dynamic header effect without dealing with complex options or custom code.
+
+https://youtu.be/1_z6bQedAt8
 
 
 == Frequently Asked Questions ==
@@ -48,7 +53,8 @@ If the plugin does not work with your block theme, please write to the support f
 
 The template part for the header is initially transparent in many block themes. 
 For this reason, the background colour of the outer group block for the header must be changed to a colour such as white, for example. 
-If the header has a background colour, then the header ‘covers’ the content when scrolling. See also the screenshot.
+If the header has a background colour, then the header ‘covers’ the content when scrolling. See also the screenshot. This is the recommended procedure.
+If the recommended option described above does not work for you, you can also set the background colour for the header automatically via the settings.
 
 = Can you show me examples that demonstrate these effects? =
 
@@ -60,6 +66,9 @@ Yes, of course:
 * (English): https://haurand.com/plugin-shrinking-logo-sticky-header/
 * (German): https://haurand.com/das-plugin-shrinking-logo-sticky-header/
 
+== Translations ==
+* (French): Thanks to Patricia BT (https://profiles.wordpress.org/patricia70/)
+
 
 == Installation ==
 
@@ -69,6 +78,10 @@ Yes, of course:
 4. Click on `Activate plugin`
 
 == Changelog ==
+
+= 1.3.1: July 11, 2025 =
+* Added: Option for the speed of the off-canvas fade-in
+* Added: Show Version of the Plugin in Settings (header)
 
 = 1.3: June 22, 2025 =
 * Added: Optional setting of background Color for Header

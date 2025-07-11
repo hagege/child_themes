@@ -5,13 +5,13 @@
  * @package       shrinkingLO
  * @author        Hans-Gerd Gerhards
  * @license       gplv2
- * @version       1.3
+ * @version       1.3.1
  *
  * @wordpress-plugin
  * Plugin Name:   Dynamic Header & Navigation for Block Themes
  * Plugin URI:    https://haurand.com/plugin-shrinking-logo-sticky-header/
  * Description:   Animated shrinking header, responsive shrinking logo, custom breakpoints and off-canvas navigation – all-in-one navigation solution for most modern WordPress block themes.
- * Version:       1.3
+ * Version:       1.3.1
  * Author:        Hans-Gerd Gerhards
  * Author URI:    https://haurand.com/author/hgg/
  * Text Domain:   shrinking-logo-sticky-header
@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // set version.
-const SLSH_VERSION = '1.3.0';
+const SLSH_VERSION = '1.3.1';
 
 /**
  * Load language files.
@@ -64,6 +64,9 @@ function slsh_register_settings(): void {
 	
 	// Option for Off-Canvas-Menue
 	add_option( 'slsh_enable_off_canvas', 'no' );
+	
+	// Option for Option for the speed of the Off-Canvas fade-in - Version 1.3.1 
+	add_option( 'slsh_off_canvas_speed', 0.5 );
 	
 	// Option for Background Color
 	add_option( 'slsh_enable_background_color', 'no' );
@@ -133,7 +136,16 @@ function slsh_register_settings(): void {
 			},
 		)
 	);
-	
+
+	register_setting(
+		'slsh_options_group',
+		'slsh_off_canvas_speed',
+		array(
+			'type'              => 'float',
+			'sanitize_callback' => 'floatval',
+		)
+	);
+
 	register_setting(
 		'slsh_options_group',
 		'slsh_enable_background_color',
@@ -169,7 +181,7 @@ function slsh_options_page(): void {
 				We would appreciate a review of the plugin <a href="https://de.wordpress.org/plugins/shrinking-logo-sticky-header/#reviews" target="_blank">Dynamic Header & Navigation for Block Themes</a> - thanks a lot :-) 
 			</p>
 		</div>
-		<h2><?php esc_html_e( 'Dynamic Header & Navigation for Block Themes – Settings', 'shrinking-logo-sticky-header' ); ?></h2>
+		<h2><?php esc_html_e( 'Dynamic Header & Navigation for Block Themes – Settings: Version ', 'shrinking-logo-sticky-header' ); ?><?php if (defined('SLSH_VERSION')) echo esc_html(SLSH_VERSION); ?></h2>
 		<form method="post" action="<?php echo esc_url( get_admin_url() ); ?>options.php">
 			<?php settings_fields( 'slsh_options_group' ); ?>
 
@@ -223,6 +235,14 @@ function slsh_options_page(): void {
 						<span><?php esc_html_e( 'Activates special CSS rules for Off-Canvas in Block Themes.', 'shrinking-logo-sticky-header' ); ?></span>
 					</td>
 				</tr>
+				<tr>
+					<th scope="row"><label style="display: block; text-align: left" for="slsh_off_canvas_speed"><?php esc_html_e( 'Option for the speed of the Off-Canvas fade-in (Value in 0.1 steps):', 'shrinking-logo-sticky-header' ); ?></label></th>
+					<td>
+						<input type="number" step="0.1" id="slsh_off_canvas_speed" name="slsh_off_canvas_speed" value="<?php echo esc_attr( get_option( 'slsh_off_canvas_speed', 0.5 ) ); ?>" min="0.1" max="1" />
+					</td>
+				</tr>
+
+				</tr>
 				<!-- settings for Background Color (Header) -->
 				<tr>
 					<th scope="row"><h3 style="text-align: left;margin-top:30px">Background Color for Header</h3></th>
@@ -265,6 +285,7 @@ function slsh_dynamic_css(): void {
 	$logo_shrink_left   = (float) get_option( 'slsh_logo_in_header_shrink_left', 0 );
 	$nav_breakpoint     = (int) get_option( 'slsh_nav_breakpoint', 782 );
 	$enable_off_canvas  = get_option( 'slsh_enable_off_canvas', 'no' );
+	$off_canvas_speed   = (float) get_option( 'slsh_off_canvas_speed', 0.5 );
 	$enable_bg_color    = get_option( 'slsh_enable_background_color', 'no' );
 
 	$custom_css = "
@@ -315,7 +336,7 @@ function slsh_dynamic_css(): void {
 		}
 
 		.wp-block-navigation__responsive-container.is-menu-open {
-			animation: slideInMenu 0.5s linear forwards;
+			animation: slideInMenu {$off_canvas_speed}s linear forwards;
 		}
 		@keyframes slideInMenu {
 			from {
