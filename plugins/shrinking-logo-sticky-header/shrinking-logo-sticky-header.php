@@ -176,10 +176,17 @@ function slsh_options_page(): void {
 	?>
 	<div>
 		<div class="notice notice-info">
-			<p>
-				<strong>Notice:</strong> 
-				We would appreciate a review of the plugin <a href="https://de.wordpress.org/plugins/shrinking-logo-sticky-header/#reviews" target="_blank">Dynamic Header & Navigation for Block Themes</a> - thanks a lot :-) 
-			</p>
+		  <p>
+			<strong>Notice:</strong>
+			We would appreciate a review of the plugin
+			<a href="https://de.wordpress.org/plugins/shrinking-logo-sticky-header/#reviews"
+			   target="_blank"
+			   rel="noopener noreferrer"
+			   aria-label="Review Dynamic Header & Navigation for Block Themes on WordPress.org">
+			  Dynamic Header & Navigation for Block Themes
+			</a>
+			– thanks a lot :-)
+		  </p>
 		</div>
 		<h2><?php esc_html_e( 'Dynamic Header & Navigation for Block Themes – Settings: Version ', 'shrinking-logo-sticky-header' ); ?><?php if (defined('SLSH_VERSION')) echo esc_html(SLSH_VERSION); ?></h2>
 		<form method="post" action="<?php echo esc_url( get_admin_url() ); ?>options.php">
@@ -215,7 +222,7 @@ function slsh_options_page(): void {
 					<th scope="row"><p style="text-align: left;"><?php esc_html_e( 'A breakpoint is a screen width where the website layout changes to adapt for different devices like mobiles or desktops.', 'shrinking-logo-sticky-header' ); ?></p></th>
 				</tr>
 				<tr>
-					<th scope="row"><label style="display: block; text-align: left" for="slsh_nav_breakpoint"><?php esc_html_e( 'Breakpoint for Navigation (px):', 'shrinking-logo-sticky-header' ); ?></label></th>
+					<th scope="row"><label style="display: block; text-align: left" for="slsh_nav_breakpoint"><?php esc_html_e( 'Breakpoint Navigation (px):', 'shrinking-logo-sticky-header' ); ?></label></th>
 					<td>
 						<input type="number" id="slsh_nav_breakpoint" name="slsh_nav_breakpoint" value="<?php echo esc_attr( get_option( 'slsh_nav_breakpoint', 782 ) ); ?>" min="782" max="1920" />
 						<span><?php esc_html_e( 'Standard: 782', 'shrinking-logo-sticky-header' ); ?></span>
