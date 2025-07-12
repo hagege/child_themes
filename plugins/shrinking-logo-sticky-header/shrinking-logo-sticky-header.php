@@ -239,6 +239,7 @@ function slsh_options_page(): void {
 					<th scope="row"><label style="display: block; text-align: left" for="slsh_off_canvas_speed"><?php esc_html_e( 'Option for the speed of the Off-Canvas fade-in (Value in 0.1 steps):', 'shrinking-logo-sticky-header' ); ?></label></th>
 					<td>
 						<input type="number" step="0.1" id="slsh_off_canvas_speed" name="slsh_off_canvas_speed" value="<?php echo esc_attr( get_option( 'slsh_off_canvas_speed', 0.5 ) ); ?>" min="0.1" max="1" />
+						<span><?php esc_html_e( 'The smaller the value, the faster the fade-in.', 'shrinking-logo-sticky-header' ); ?></span>
 					</td>
 				</tr>
 
