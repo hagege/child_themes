@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Shrinking Logo Sticky Header\n"
-"POT-Creation-Date: 2025-06-24 07:22+0200\n"
+"POT-Creation-Date: 2025-07-13 06:52+0200\n"
 "PO-Revision-Date: 2025-04-26 11:49+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -20,59 +20,78 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #: shrinking-logo-sticky-header.php:181
-msgid "Dynamic Header & Navigation for Block Themes – Settings"
+msgid "We would appreciate a review of the plugin"
 msgstr ""
 
+#. Plugin Name of the plugin/theme
 #: shrinking-logo-sticky-header.php:186
+msgid "Dynamic Header & Navigation for Block Themes"
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:191
+msgid ""
+"Dynamic Header & Navigation for Block Themes – Settings: Version "
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:197
 msgid "Height of the shrunk header (px):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:190
+#: shrinking-logo-sticky-header.php:201
 msgid "Animation duration (seconds):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:194
+#: shrinking-logo-sticky-header.php:205
 msgid "Normal height of header (px):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:198
+#: shrinking-logo-sticky-header.php:209
 msgid "Logo shrinking factor (Value in 0.05 steps):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:202
+#: shrinking-logo-sticky-header.php:213
 msgid "Move the shrunk logo to the left (rem):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:211
+#: shrinking-logo-sticky-header.php:222
 msgid ""
 "A breakpoint is a screen width where the website layout changes to "
 "adapt for different devices like mobiles or desktops."
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:214
-msgid "Breakpoint for Navigation (px):"
+#: shrinking-logo-sticky-header.php:225
+msgid "Breakpoint Navigation (px):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:217
+#: shrinking-logo-sticky-header.php:228
 msgid "Standard: 782"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:225
+#: shrinking-logo-sticky-header.php:236
 msgid ""
 "Off-canvas is a hidden navigation panel that slides in from the side "
 "of the screen, providing a space-saving way to access menu options "
 "without cluttering the main content area."
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:228
+#: shrinking-logo-sticky-header.php:239
 msgid "Activate Off-Canvas (CSS Rules):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:231
+#: shrinking-logo-sticky-header.php:242
 msgid "Activates special CSS rules for Off-Canvas in Block Themes."
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:239
+#: shrinking-logo-sticky-header.php:246
+msgid ""
+"Option for the speed of the Off-Canvas fade-in (Value in 0.1 steps):"
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:249
+msgid "The smaller the value, the faster the fade-in."
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:259
 msgid ""
 "The header is normally transparent. However, you can set the "
 "background color for the header in the template part of your block "
@@ -80,18 +99,14 @@ msgid ""
 "set automatically using the following settings."
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:242
+#: shrinking-logo-sticky-header.php:262
 msgid "Activate Background Color for Header (CSS Rules):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:245
+#: shrinking-logo-sticky-header.php:265
 msgid ""
 "Activates special CSS rules for Background Color (Header) in Block "
 "Themes."
-msgstr ""
-
-#. Plugin Name of the plugin/theme
-msgid "Dynamic Header & Navigation for Block Themes"
 msgstr ""
 
 #. Plugin URI of the plugin/theme

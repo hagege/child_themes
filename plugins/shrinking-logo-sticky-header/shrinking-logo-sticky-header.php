@@ -178,12 +178,12 @@ function slsh_options_page(): void {
 		<div class="notice notice-info">
 		  <p>
 			<strong>Notice:</strong>
-			We would appreciate a review of the plugin
-			<a href="https://de.wordpress.org/plugins/shrinking-logo-sticky-header/#reviews"
+			<?php esc_html_e( 'We would appreciate a review of the plugin', 'shrinking-logo-sticky-header' ); ?>
+			<a href="https://wordpress.org/plugins/shrinking-logo-sticky-header/#reviews"
 			   target="_blank"
 			   rel="noopener noreferrer"
 			   aria-label="Review Dynamic Header & Navigation for Block Themes on WordPress.org">
-			  Dynamic Header & Navigation for Block Themes
+			  <?php esc_html_e( 'Dynamic Header & Navigation for Block Themes', 'shrinking-logo-sticky-header' ); ?>
 			</a>
 			– thanks a lot :-)
 		  </p>
