@@ -11,9 +11,9 @@ Stable tag: 1.3.1
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-== Description ==
+Animated shrinking header, responsive shrinking logo, custom breakpoints and off-canvas navigation – navigation solution for block themes.
 
-Plugin "Dynamic Header & Navigation for Block Themes": Animated shrinking header, responsive shrinking logo, custom breakpoints and off-canvas navigation – navigation solution for block themes.
+== Description ==
 
 Options:
 

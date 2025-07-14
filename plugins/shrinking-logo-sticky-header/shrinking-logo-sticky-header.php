@@ -185,7 +185,7 @@ function slsh_options_page(): void {
 			   aria-label="Review Dynamic Header & Navigation for Block Themes on WordPress.org">
 			  <?php esc_html_e( 'Dynamic Header & Navigation for Block Themes', 'shrinking-logo-sticky-header' ); ?>
 			</a>
-			– thanks a lot :-)
+			<?php esc_html_e( '– thanks a lot :-)', 'shrinking-logo-sticky-header' ); ?>
 		  </p>
 		</div>
 		<h2><?php esc_html_e( 'Dynamic Header & Navigation for Block Themes – Settings: Version ', 'shrinking-logo-sticky-header' ); ?><?php if (defined('SLSH_VERSION')) echo esc_html(SLSH_VERSION); ?></h2>

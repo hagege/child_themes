@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Shrinking Logo Sticky Header\n"
-"POT-Creation-Date: 2025-07-13 06:52+0200\n"
-"PO-Revision-Date: 2025-07-13 06:53+0200\n"
+"POT-Creation-Date: 2025-07-14 06:43+0200\n"
+"PO-Revision-Date: 2025-07-14 06:44+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -27,6 +27,10 @@ msgstr "Wir würden uns über eine Bewertung des Plugins freuen"
 #: shrinking-logo-sticky-header.php:186
 msgid "Dynamic Header & Navigation for Block Themes"
 msgstr "Dynamic Header & Navigation for Block Themes"
+
+#: shrinking-logo-sticky-header.php:188
+msgid "– thanks a lot :-)"
+msgstr "- vielen Dank :-)"
 
 #: shrinking-logo-sticky-header.php:191
 msgid "Dynamic Header & Navigation for Block Themes – Settings: Version "
