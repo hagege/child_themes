@@ -12,22 +12,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
 (function() {
   var lastScrollTop = 0;
-  var header = document.querySelector('header.wp-block-template-part'); // Selektor für Header
+  var ticking = false;
+  var header = document.querySelector('header.wp-block-template-part');
+  if (!header) return;
 
-  window.addEventListener('scroll', function() {
+  function updateHeaderVisibility() {
     var st = window.pageYOffset || document.documentElement.scrollTop;
 
     if (st > lastScrollTop && st > 50) {
-      // Runterscrollen: Header ausblenden
       header.classList.add('hide-header');
+      header.classList.remove('show-header');
+      header.setAttribute('aria-hidden', 'true');
     } else if (st < lastScrollTop) {
-      // Hochscrollen: Header einblenden
       header.classList.remove('hide-header');
-	  header.classList.add('show-header');
+      header.classList.add('show-header');
+      header.setAttribute('aria-hidden', 'false');
     }
 
-    lastScrollTop = st <= 0 ? 0 : st; // scrollTop kann negativ sein (iOS)
+    lastScrollTop = st <= 0 ? 0 : st;
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(updateHeaderVisibility);
+      ticking = true;
+    }
   });
 })();
+
+
 
 
