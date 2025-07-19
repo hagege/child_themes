@@ -5,13 +5,13 @@
  * @package       shrinkingLO
  * @author        Hans-Gerd Gerhards
  * @license       gplv2
- * @version       1.3.1
+ * @version       1.3.2
  *
  * @wordpress-plugin
  * Plugin Name:   Dynamic Header & Navigation for Block Themes
  * Plugin URI:    https://haurand.com/plugin-shrinking-logo-sticky-header/
  * Description:   Animated shrinking header, responsive shrinking logo, custom breakpoints and off-canvas navigation – all-in-one navigation solution for most modern WordPress block themes.
- * Version:       1.3.1
+ * Version:       1.3.2
  * Author:        Hans-Gerd Gerhards
  * Author URI:    https://haurand.com/author/hgg/
  * Text Domain:   shrinking-logo-sticky-header
@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // set version.
-const SLSH_VERSION = '1.3.1';
+const SLSH_VERSION = '1.3.2';
 
 /**
  * Load language files.
@@ -70,6 +70,9 @@ function slsh_register_settings(): void {
 	
 	// Option for Background Color
 	add_option( 'slsh_enable_background_color', 'no' );
+	
+	// Option hide header if scroll down, show header if scroll up
+	add_option( 'slsh_hide_header', 'no' );
 	
 
 	register_setting(
@@ -156,6 +159,17 @@ function slsh_register_settings(): void {
 			},
 		)
 	);
+	
+	register_setting(
+		'slsh_options_group',
+		'slsh_hide_header',
+		array(
+			'type'              => 'string',
+			'sanitize_callback' => function ( $v ) {
+				return 'yes' === $v ? 'yes' : 'no';
+			},
+		)
+	);
 }
 add_action( 'admin_init', 'slsh_register_settings' );
 
@@ -213,13 +227,22 @@ function slsh_options_page(): void {
 					<th scope="row"><label style="display: block; text-align: left" for="slsh_logo_in_header_shrink_left"><?php esc_html_e( 'Move the shrunk logo to the left (rem):', 'shrinking-logo-sticky-header' ); ?></label></th>
 					<td><input type="number" step="0.1" id="slsh_logo_in_header_shrink_left" name="slsh_logo_in_header_shrink_left" value="<?php echo esc_attr( get_option( 'slsh_logo_in_header_shrink_left', 0 ) ); ?>" min="0" max="8" /></td>
 				</tr>
+				
+				<!-- Hide header on scroll down, show header on scroll up -->
+				<tr>
+					<th scope="row"><label style="display: block; text-align: left" for="slsh_hide_header"><?php esc_html_e( 'Hide header on scroll down, show header on scroll up:', 'shrinking-logo-sticky-header' ); ?></label></th>
+					<td>
+						<input type="checkbox" id="slsh_hide_header" name="slsh_hide_header" value="yes" <?php checked( 'yes', get_option( 'slsh_hide_header', 'no' ) ); ?> />
+					</td>
+				</tr>				
+				
 
 				<!-- settings for breakpoint (CSS) -->
 				<tr>
 					<th scope="row"><h3 style="text-align: left; margin-top:30px">Breakpoint</h3></th>
 				</tr>
 				<tr>
-					<th scope="row"><p style="text-align: left;"><?php esc_html_e( 'A breakpoint is a screen width where the website layout changes to adapt for different devices like mobiles or desktops.', 'shrinking-logo-sticky-header' ); ?></p></th>
+					<th scope="row"><p style="text-align: left;"><?php esc_html_e( 'A breakpoint is a screen width where the website layout changes to adapt for different devices like mobiles or desktops. If the breakpoint remains set at 782px, then the breakpoint will be adopted by the theme without change, even if the breakpoint is set at 599px in the theme, for example.', 'shrinking-logo-sticky-header' ); ?></p></th>
 				</tr>
 				<tr>
 					<th scope="row"><label style="display: block; text-align: left" for="slsh_nav_breakpoint"><?php esc_html_e( 'Breakpoint Navigation (px):', 'shrinking-logo-sticky-header' ); ?></label></th>
@@ -295,6 +318,7 @@ function slsh_dynamic_css(): void {
 	$enable_off_canvas  = get_option( 'slsh_enable_off_canvas', 'no' );
 	$off_canvas_speed   = (float) get_option( 'slsh_off_canvas_speed', 0.5 );
 	$enable_bg_color    = get_option( 'slsh_enable_background_color', 'no' );
+	$hide_header        = get_option( 'slsh_hide_header', 'no' );
 
 	$custom_css = "
         header.wp-block-template-part {
@@ -317,8 +341,24 @@ function slsh_dynamic_css(): void {
         header.wp-block-template-part.shrink .wp-block-site-logo img {
             transform: translateX(-{$logo_shrink_left}rem) scale({$logo_shrink_height});
         }
+		html {
+		  scroll-behavior: smooth;
+		  scroll-padding-top:{$header_height}px;
+		}
     ";
-
+	
+	
+	if ( 'yes' === $hide_header ) {
+		$custom_css = "	
+		.hide-header {
+		  transform: translateY(-100%) translateX(-{$logo_shrink_left}rem) scale({$logo_shrink_height});
+		  transition: transform 0.6s ease!important;
+		}
+		.show-header {
+		  transition: transform 0.6s ease!important;
+        }";
+	}
+	
 	if ( $nav_breakpoint > 782 ) {
 		$custom_css .= "
         @media screen and (max-width: {$nav_breakpoint}px) {
@@ -329,6 +369,11 @@ function slsh_dynamic_css(): void {
                 display: none !important;
             }
         }";
+	}
+	else
+	{
+		/* setting new breakpoint because of issues when enabling off canvas because of issues with ollie theme for example */
+	    $nav_breakpoint = 599;
 	}
 	
 	if ( 'yes' === $enable_off_canvas ) {

@@ -22,15 +22,19 @@
         transform: scale(0.8) translateX(0rem);
     }
 
-	/* Breakpoint */
+	/* Breakpoint 
+	/* commented because of issues with ollie theme for example 	
     @media screen and (max-width: 782px) {
+
         .wp-block-navigation__responsive-container-open {
             display: block !important;
         }
         .wp-block-navigation__responsive-container:not(.is-menu-open.has-modal-open) {
             display: none !important;
         }
+
     }
+    */
 	
 	/* Off canvas */
 	@media screen and (max-width: 782px) {
@@ -50,4 +54,16 @@
 		  right: 0vw;
 		}
 	  }
+	}
+
+    /* Hide header on scroll down, show header on scroll up 
+	.hide-header {
+	}
+	.show-header {
+	}
+	
+	/* show correct position af anchor */
+	html {
+	  scroll-behavior: smooth;
+	  scroll-padding-top:6rem;
 	}
