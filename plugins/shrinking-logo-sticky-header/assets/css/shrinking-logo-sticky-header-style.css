@@ -11,7 +11,7 @@
     /* also animate the inner group */
     header.wp-block-template-part .wp-block-group {
         height: 100%;
-		align-content: space-around;
+		/* align-content: space-around; */
         align-items: center;
     }
     /* Logo-Animation */

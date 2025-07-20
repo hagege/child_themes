@@ -333,7 +333,7 @@ function slsh_dynamic_css(): void {
         }
         header.wp-block-template-part .wp-block-group {
             height: 100%;
-			align-content: space-around;
+			/* align-content: space-around; */
             align-items: center;
         }
         header.wp-block-template-part .wp-block-site-logo img {
