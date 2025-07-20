@@ -11,6 +11,8 @@
     /* also animate the inner group */
     header.wp-block-template-part .wp-block-group {
         height: 100%;
+		align-content: space-around;
+        align-items: center;
     }
     /* Logo-Animation */
     header.wp-block-template-part .wp-block-site-logo img {
@@ -37,7 +39,7 @@
     */
 	
 	/* Off canvas */
-	@media screen and (max-width: 782px) {
+	@media screen and (max-width: 599px) {
 	  .wp-block-navigation__responsive-container {
 		  transition: inherit; 
 		  border-radius: inherit;

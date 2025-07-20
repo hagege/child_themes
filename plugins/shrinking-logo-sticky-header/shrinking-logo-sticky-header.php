@@ -57,7 +57,7 @@ function slsh_register_settings(): void {
 	add_option( 'slsh_logo_in_header_shrink_left', 0);
 
 	// Options for Breakpoint.
-	add_option( 'slsh_nav_breakpoint', 782 );
+	add_option( 'slsh_nav_breakpoint', 599 );
 	
 	// Delete superfluous option 
 	delete_option( 'slsh_enable_nav_css' );
@@ -242,13 +242,13 @@ function slsh_options_page(): void {
 					<th scope="row"><h3 style="text-align: left; margin-top:30px">Breakpoint</h3></th>
 				</tr>
 				<tr>
-					<th scope="row"><p style="text-align: left;"><?php esc_html_e( 'A breakpoint is a screen width where the website layout changes to adapt for different devices like mobiles or desktops. If the breakpoint remains set at 782px, then the breakpoint will be adopted by the theme without change, even if the breakpoint is set at 599px in the theme, for example.', 'shrinking-logo-sticky-header' ); ?></p></th>
+					<th scope="row"><p style="text-align: left;"><?php esc_html_e( 'A breakpoint is a screen width where the website layout changes to adapt for different devices like mobiles or desktops. If the breakpoint remains set at 599px, then the breakpoint will be adopted by the theme without change, even if the breakpoint is set at 599px in the theme, for example.', 'shrinking-logo-sticky-header' ); ?></p></th>
 				</tr>
 				<tr>
 					<th scope="row"><label style="display: block; text-align: left" for="slsh_nav_breakpoint"><?php esc_html_e( 'Breakpoint Navigation (px):', 'shrinking-logo-sticky-header' ); ?></label></th>
 					<td>
-						<input type="number" id="slsh_nav_breakpoint" name="slsh_nav_breakpoint" value="<?php echo esc_attr( get_option( 'slsh_nav_breakpoint', 782 ) ); ?>" min="782" max="1920" />
-						<span><?php esc_html_e( 'Standard: 782', 'shrinking-logo-sticky-header' ); ?></span>
+						<input type="number" id="slsh_nav_breakpoint" name="slsh_nav_breakpoint" value="<?php echo esc_attr( get_option( 'slsh_nav_breakpoint', 599 ) ); ?>" min="599" max="1920" />
+						<span><?php esc_html_e( 'Standard: 599', 'shrinking-logo-sticky-header' ); ?></span>
 					</td>
 				</tr>
 				<!-- settings for Off-Canvas (CSS) -->
@@ -314,7 +314,7 @@ function slsh_dynamic_css(): void {
 	$header_height      = (int) get_option( 'slsh_heigth_header', 120 );
 	$logo_shrink_height = (float) get_option( 'slsh_logo_in_header_shrink_height', 0.8 );
 	$logo_shrink_left   = (float) get_option( 'slsh_logo_in_header_shrink_left', 0 );
-	$nav_breakpoint     = (int) get_option( 'slsh_nav_breakpoint', 782 );
+	$nav_breakpoint     = (int) get_option( 'slsh_nav_breakpoint', 599 );
 	$enable_off_canvas  = get_option( 'slsh_enable_off_canvas', 'no' );
 	$off_canvas_speed   = (float) get_option( 'slsh_off_canvas_speed', 0.5 );
 	$enable_bg_color    = get_option( 'slsh_enable_background_color', 'no' );
@@ -333,6 +333,8 @@ function slsh_dynamic_css(): void {
         }
         header.wp-block-template-part .wp-block-group {
             height: 100%;
+			align-content: space-around;
+            align-items: center;
         }
         header.wp-block-template-part .wp-block-site-logo img {
             transition: transform {$anim_duration}s cubic-bezier(0.4,0,0.2,1), height {$anim_duration}s cubic-bezier(0.4,0,0.2,1);
@@ -359,7 +361,7 @@ function slsh_dynamic_css(): void {
         }";
 	}
 	
-	if ( $nav_breakpoint > 782 ) {
+	if ( $nav_breakpoint > 599 ) {
 		$custom_css .= "
         @media screen and (max-width: {$nav_breakpoint}px) {
             .wp-block-navigation__responsive-container-open {

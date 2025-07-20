@@ -82,6 +82,7 @@ Yes, of course:
 = 1.3.2: July 18, 2025 =
 * Added: Option Hide header on scroll down, show header on scroll up
 * Added: Correct control of anchors
+* Enhancement: Better presentation through positioning a group vertically centred in the navigation
 
 = 1.3.1: July 11, 2025 =
 * Added: Option for the speed of the off-canvas fade-in
