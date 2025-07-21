@@ -82,7 +82,7 @@ Yes, of course:
 = 1.3.2: July 28, 2025 =
 * Added: Option Hide header on scroll down, show header on scroll up
 * Added: Correct control of anchors
-* Enhancements: Various CSS rules in the plugin optimised (better support for various block themes)
+* Enhancements: Various CSS rules optimised (better support for various block themes)
 
 = 1.3.1: July 11, 2025 =
 * Added: Option for the speed of the off-canvas fade-in

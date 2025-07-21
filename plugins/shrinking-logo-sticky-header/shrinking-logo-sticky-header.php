@@ -353,11 +353,11 @@ function slsh_dynamic_css(): void {
 	if ( 'yes' === $hide_header ) {
 		$custom_css = "	
 		.hide-header {
-		  transform: translateY(-100%) translateX(-{$logo_shrink_left}rem) scale({$logo_shrink_height});
-		  transition: transform 0.6s ease!important;
+		  transform: translateY(-100%) scale({$logo_shrink_height});
+		  transition: transform {$anim_duration}s ease!important;
 		}
 		.show-header {
-		  transition: transform 0.6s ease!important;
+		  transition: transform {$anim_duration}s ease!important;
         }";
 	}
 	
