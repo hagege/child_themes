@@ -327,7 +327,7 @@ function slsh_dynamic_css(): void {
             z-index: 1000;
             transition: height {$anim_duration}s cubic-bezier(.4,0,.2,1), background-color {$anim_duration}s;
             height: {$header_height}px; 
-			backface-visibility: hidden; /* Verhindert Flackern */
+			backface-visibility: hidden; /* Prevents flickering */
         }
         header.wp-block-template-part.shrink {
             height: {$shrink_height}px;
