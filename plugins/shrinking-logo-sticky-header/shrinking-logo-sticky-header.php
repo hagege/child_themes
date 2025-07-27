@@ -228,14 +228,14 @@ function slsh_options_page(): void {
 					<td><input type="number" step="0.1" id="slsh_logo_in_header_shrink_left" name="slsh_logo_in_header_shrink_left" value="<?php echo esc_attr( get_option( 'slsh_logo_in_header_shrink_left', 0 ) ); ?>" min="0" max="8" /></td>
 				</tr>
 				
-				<!-- Hide header on scroll down, show header on scroll up -->
+				<!-- Hide header on scroll down, show header on scroll up 
 				<tr>
 					<th scope="row"><label style="display: block; text-align: left" for="slsh_hide_header"><?php esc_html_e( 'Hide header on scroll down, show header on scroll up:', 'shrinking-logo-sticky-header' ); ?></label></th>
 					<td>
 						<input type="checkbox" id="slsh_hide_header" name="slsh_hide_header" value="yes" <?php checked( 'yes', get_option( 'slsh_hide_header', 'no' ) ); ?> />
 					</td>
 				</tr>				
-				
+				-->
 
 				<!-- settings for breakpoint (CSS) -->
 				<tr>
@@ -327,6 +327,7 @@ function slsh_dynamic_css(): void {
             z-index: 1000;
             transition: height {$anim_duration}s cubic-bezier(.4,0,.2,1), background-color {$anim_duration}s;
             height: {$header_height}px; 
+			backface-visibility: hidden; /* Verhindert Flackern */
         }
         header.wp-block-template-part.shrink {
             height: {$shrink_height}px;
@@ -337,8 +338,7 @@ function slsh_dynamic_css(): void {
             align-items: center;
         }
         header.wp-block-template-part .wp-block-site-logo img {
-            transition: transform {$anim_duration}s cubic-bezier(0.4,0,0.2,1), height {$anim_duration}s cubic-bezier(0.4,0,0.2,1);
-            transform: scale(1);
+            transition: transform {$anim_duration}s cubic-bezier(0.4,0,0.2,1);
         }
         header.wp-block-template-part.shrink .wp-block-site-logo img {
             transform: translateX(-{$logo_shrink_left}rem) scale({$logo_shrink_height});
@@ -349,18 +349,7 @@ function slsh_dynamic_css(): void {
 		}
     ";
 	
-	
-	if ( 'yes' === $hide_header ) {
-		$custom_css = "	
-		.hide-header {
-		  transform: translateY(-100%) scale({$logo_shrink_height});
-		  transition: transform {$anim_duration}s ease!important;
-		}
-		.show-header {
-		  transition: transform {$anim_duration}s ease!important;
-        }";
-	}
-	
+
 	if ( $nav_breakpoint > 599 ) {
 		$custom_css .= "
         @media screen and (max-width: {$nav_breakpoint}px) {
