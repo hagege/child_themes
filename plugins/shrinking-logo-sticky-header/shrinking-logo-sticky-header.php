@@ -36,7 +36,8 @@ const SLSH_VERSION = '1.3.2';
  *
  * @return void
  */
-function slsh_load_textdomain(): void {
+/* 
+	function slsh_load_textdomain(): void {
     load_plugin_textdomain(
         'shrinking-logo-sticky-header',
         false,
@@ -44,7 +45,7 @@ function slsh_load_textdomain(): void {
     );
 }
 add_action( 'init', 'slsh_load_textdomain' );
-
+*/
 
 /**
  * Registering settings
