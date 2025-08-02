@@ -67,7 +67,7 @@ Yes, of course:
 * (German): https://haurand.com/das-plugin-shrinking-logo-sticky-header/
 
 == Translations ==
-* (French): Thanks to Patricia BT (https://profiles.wordpress.org/patricia70/)
+* (French): Thanks to [Patricia BT] (https://profiles.wordpress.org/patricia70/)
 
 
 == Installation ==
@@ -79,8 +79,8 @@ Yes, of course:
 
 == Changelog ==
 
-= 1.3.2: July 28, 2025 =
-* Fix: Correct control of anchors
+= 1.3.2: August 1, 2025 =
+* Fix: Anchors are now controlled at the correct height.
 * Enhancements: Various CSS rules optimised (better support for various block themes for example Ollie)
 
 = 1.3.1: July 11, 2025 =
