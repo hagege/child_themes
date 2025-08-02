@@ -1,0 +1,140 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Shrinking Logo Sticky Header\n"
+"POT-Creation-Date: 2025-07-27 20:41+0200\n"
+"PO-Revision-Date: 2025-04-26 11:49+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: shrinking-logo-sticky-header.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: shrinking-logo-sticky-header.php:195
+msgid "We would appreciate a review of the plugin"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+#: shrinking-logo-sticky-header.php:200
+msgid "Dynamic Header & Navigation for Block Themes"
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:202
+msgid "– thanks a lot :-)"
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:205
+msgid ""
+"Dynamic Header & Navigation for Block Themes – Settings: Version "
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:211
+msgid "Height of the shrunk header (px):"
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:215
+msgid "Animation duration (seconds):"
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:219
+msgid "Normal height of header (px):"
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:223
+msgid "Logo shrinking factor (Value in 0.05 steps):"
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:227
+msgid "Move the shrunk logo to the left (rem):"
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:233
+msgid "Hide header on scroll down, show header on scroll up:"
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:245
+msgid ""
+"A breakpoint is a screen width where the website layout changes to "
+"adapt for different devices like mobiles or desktops. If the "
+"breakpoint remains set at 599px, then the breakpoint will be adopted "
+"by the theme without change, even if the breakpoint is set at 599px "
+"in the theme, for example."
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:248
+msgid "Breakpoint Navigation (px):"
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:251
+msgid "Standard: 599"
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:259
+msgid ""
+"Off-canvas is a hidden navigation panel that slides in from the side "
+"of the screen, providing a space-saving way to access menu options "
+"without cluttering the main content area."
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:262
+msgid "Activate Off-Canvas (CSS Rules):"
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:265
+msgid "Activates special CSS rules for Off-Canvas in Block Themes."
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:269
+msgid ""
+"Option for the speed of the Off-Canvas fade-in (Value in 0.1 steps):"
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:272
+msgid "The smaller the value, the faster the fade-in."
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:282
+msgid ""
+"The header is normally transparent. However, you can set the "
+"background color for the header in the template part of your block "
+"theme (recommended). The background color for the header can also be "
+"set automatically using the following settings."
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:285
+msgid "Activate Background Color for Header (CSS Rules):"
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:288
+msgid ""
+"Activates special CSS rules for Background Color (Header) in Block "
+"Themes."
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://haurand.com/plugin-shrinking-logo-sticky-header/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Animated shrinking header, responsive shrinking logo, custom "
+"breakpoints and off-canvas navigation – all-in-one navigation "
+"solution for most modern WordPress block themes."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Hans-Gerd Gerhards"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://haurand.com/author/hgg/"
+msgstr ""

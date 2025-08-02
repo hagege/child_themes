@@ -1,0 +1,72 @@
+/* Basis-Header-Styles - werden durch dynamisches CSS überschrieben */
+header.wp-block-template-part {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        transition: height 0.8s cubic-bezier(.4,0,.2,1), background-color 0.8s;
+        height: 100px;
+    }  
+    header.wp-block-template-part.shrink {
+        height: 80px;
+    }
+    /* also animate the inner group */
+    header.wp-block-template-part .wp-block-group {
+        height: 100%;
+		/* align-content: space-around; */
+        align-items: center;
+    }
+    /* Logo-Animation */
+    header.wp-block-template-part .wp-block-site-logo img {
+        transition: transform 0.8s cubic-bezier(0.4,0,0.2,1), height 0.8s cubic-bezier(0.4,0,0.2,1);
+        transform: scale(1);
+    }
+    /* Logo animation at shrink */
+    header.wp-block-template-part.shrink .wp-block-site-logo img {
+        transform: scale(0.8) translateX(0rem);
+    }
+
+	/* Breakpoint 
+	/* commented because of issues with ollie theme for example 	
+    @media screen and (max-width: 782px) {
+
+        .wp-block-navigation__responsive-container-open {
+            display: block !important;
+        }
+        .wp-block-navigation__responsive-container:not(.is-menu-open.has-modal-open) {
+            display: none !important;
+        }
+
+    }
+    */
+	
+	/* Off canvas */
+	@media screen and (max-width: 599px) {
+	  .wp-block-navigation__responsive-container {
+		  transition: inherit; 
+		  border-radius: inherit;
+	  }
+
+	  .wp-block-navigation__responsive-container.is-menu-open {
+		  animation: none;
+	  }
+	  @keyframes slideInMenu {
+		from {
+		  right: -70vw;
+		}
+		to {
+		  right: 0vw;
+		}
+	  }
+	}
+
+    /* Hide header on scroll down, show header on scroll up 
+	.hide-header {
+	}
+	.show-header {
+	}
+	
+	/* show correct position af anchor */
+	html {
+	  scroll-behavior: smooth;
+	  scroll-padding-top:6rem;
+	}
