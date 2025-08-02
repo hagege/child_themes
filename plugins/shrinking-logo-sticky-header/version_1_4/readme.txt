@@ -7,7 +7,7 @@ Tags: Block Theme, Header, shrink, breakpoint, off-canvas
 Requires at least: 
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.3.2
+Stable tag: 1.4
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -78,6 +78,9 @@ Yes, of course:
 4. Click on `Activate plugin`
 
 == Changelog ==
+
+= 1.4: August x, 2025 =
+* Added: Hide header on scroll down, show header on scroll up
 
 = 1.3.2: August 1, 2025 =
 * Fix: Anchors are now controlled at the correct height.
