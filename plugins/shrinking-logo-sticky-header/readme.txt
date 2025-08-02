@@ -59,15 +59,15 @@ If the recommended option described above does not work for you, you can also se
 = Can you show me examples that demonstrate these effects? =
 
 Yes, with pleasure:
-https://haurand.com/  and  https://space4.yd-sgs.de/
+[https://haurand.com/]https://haurand.com/  and  [https://space4.yd-sgs.de/]https://space4.yd-sgs.de/
 
 = Is there any documentation and further information about the plugin? =
 Yes, of course:
-* (English): https://haurand.com/plugin-shrinking-logo-sticky-header/
-* (German): https://haurand.com/das-plugin-shrinking-logo-sticky-header/
+* (English): [english documentation]https://haurand.com/plugin-shrinking-logo-sticky-header/
+* (German): [deutsche Dokumentation]https://haurand.com/das-plugin-shrinking-logo-sticky-header/
 
 == Translations ==
-* (French): Thanks to [Patricia BT] (https://profiles.wordpress.org/patricia70/)
+* (French): Thanks to [Patricia BT](https://profiles.wordpress.org/patricia70/)
 
 
 == Installation ==
