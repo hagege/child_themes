@@ -119,7 +119,7 @@ p.haurand-button a {
 }
 
 p.haurand-button a:hover,
-span.start_button:hover {
+a.gb-button.start_button:hover {
   color: lightgray;
   outline-color: var(--dunkelblau-color);
   outline-offset: 4px;
