@@ -29,6 +29,7 @@ Grün 	#87C12C
 
 */
 
+
 /* Profiländerung ausblenden */
 .swpm-edit-profile-link {
   display: none;
@@ -117,7 +118,8 @@ p.haurand-button a {
   text-decoration: none;
 }
 
-p.haurand-button a:hover {
+p.haurand-button a:hover,
+span.start_button:hover {
   color: lightgray;
   outline-color: var(--dunkelblau-color);
   outline-offset: 4px;
