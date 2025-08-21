@@ -200,7 +200,8 @@ input.wpcf7-form-control.wpcf7-file:hover {
 textarea.wpcf7-form-control.wpcf7-textarea:focus,
 textarea.wpcf7-form-control.wpcf7-textarea:hover,
 input.wpcf7-form-control.wpcf7-text:focus,
-input.wpcf7-form-control.wpcf7-text:hover {
+input.wpcf7-form-control.wpcf7-text:hover,
+select.wpcf7-form-control.wpcf7-select:hover {
   color: var(--dunkelblau-color);
   background-color: white;
   outline-color: var(--dunkelblau-color);
