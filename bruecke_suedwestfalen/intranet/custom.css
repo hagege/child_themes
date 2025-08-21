@@ -185,7 +185,8 @@ span.wpcf7-list-item checkbox {
 span.wpcf7-form-control-wrap input:focus,
 span.wpcf7-list-item checkbox:focus,
 input.wpcf7-form-control.wpcf7-submit.has-spinner:hover,
-input.wpcf7-form-control.wpcf7-file:hover {
+input.wpcf7-form-control.wpcf7-file:hover,
+span.wpcf7-form-control-wrap input:hover {
   color: white;
   background-color: var(--dunkelblau-color);
   border-color: var(--dunkelblau-color);
