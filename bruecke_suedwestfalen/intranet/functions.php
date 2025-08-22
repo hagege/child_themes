@@ -8,8 +8,27 @@
 
 add_theme_support( 'appearance-tools' );
 
+// Link des Logos in der Hauptnavigation anpassen
+add_filter( 'generate_logo_href', function() {
+    return 'https://intern.bruecke-suedwestfalen.de/startseite/';
+});
 
-/* Bei Klick auf Logo nicht auf die definierte Startseite (Anmeldung), sondern auf die Startseite des intern-Bereichs */
+// Link des Logos in der Sticky Navigation anpassen
+add_filter( 'generate_sticky_navigation_logo_output', function($output) {
+    $url = 'https://intern.bruecke-suedwestfalen.de/startseite/';
+    $logo = get_custom_logo();
+
+    return sprintf(
+        '<div class="sticky-navigation-logo"><a href="%1$s" rel="home">%2$s</a></div>',
+        esc_url( $url ),
+        $logo
+    );
+});
+
+
+
+
+/* Bei Klick auf Logo nicht auf die definierte Startseite (Anmeldung), sondern auf die Startseite des intern-Bereichs - rausgenommen, weil nicht notwendig: 16.3.2025 */
 
 /* add_filter( 'generate_logo_href', function() {
     return home_url('/startseite/');
