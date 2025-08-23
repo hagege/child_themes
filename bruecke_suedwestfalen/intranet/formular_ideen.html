@@ -1,0 +1,19 @@
+<label>Art der Rückmeldung:
+[select* rueckmeldung "Idee / Vorschlag" "Lob" "Kritik"]</label>
+
+<label> Bitte beschreiben Sie Ihr Anliegen möglichst konkret:
+   [textarea* beschreibung]</label>
+
+<label> Auf welchen Bereich oder welche Situation bezieht sich Ihre Rückmeldung?
+   [text bezug] </label>
+
+<label> E-Mail-Adresse oder Telefonnummer (für Rückfragen oder Feedback) (optional):
+   [text kontakt] </label>
+
+Anonymität:
+[radio anonym use_label_element "Ja" "Nein"]
+
+[honeypot hp-762]
+
+
+[submit "Senden"]

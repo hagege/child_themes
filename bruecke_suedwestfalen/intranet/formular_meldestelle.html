@@ -1,0 +1,20 @@
+<label>Art des Anliegens:
+   [select* Anliegen "Diskriminierung" "Mobbing" "Verstoß gegen interne Regeln" "Sonstiges"]</label>
+
+<label> Beschreibung des Vorfalls:
+   [textarea* Beschreibung-Vorfall]</label>
+
+<p>Datum des Vorfalls (optional): <label>[date datum_vorfall placeholder]</label></p>
+
+
+<label> Kontaktmöglichkeit - E-Mail-Adresse oder Telefonnummer (optional):
+   [text kontakt]</label>
+
+Anonymität:
+[radio anonym use_label_element "Ja" "Nein"]
+
+[honeypot hp-762]
+
+
+
+[submit "Senden"]

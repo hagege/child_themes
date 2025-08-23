@@ -1,0 +1,24 @@
+<label> Vorname:
+    [text* vorname] </label>
+
+<label> Name:
+    [text* your-name] </label>
+
+<p>Datum der betroffenen Arbeitszeit: <label>[date* arbeitszeit placeholder]</label></p>
+
+<label> Korrekturgrund:
+[select* korrekturgrund "Fehlende Buchung" "Falsche Uhrzeit erfasst" "Technischer Fehler" "Sonstiges"]</label>
+
+<label> Beschreibung der Korrektur:
+   [textarea* beschreibung_korrektur]</label>
+
+<label> Korrekturvorschlag (optional) - z. B. „Arbeitsbeginn war um 08:00 Uhr statt 09:00 Uhr“:
+   [textarea vorschlag_korrektur]</label>
+
+<label> E-Mail-Adresse oder Telefonnummer für Rückfragen oder Feedback (optional):
+   [text kontakt] </label>
+
+[honeypot hp-763]
+
+
+[submit "Senden"]
