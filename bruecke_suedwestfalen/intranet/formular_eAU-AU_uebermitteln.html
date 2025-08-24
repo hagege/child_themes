@@ -1,0 +1,44 @@
+[honeypot hp_1]
+	<div style="background-color: #f0f0f0; padding:20px;">
+		<p>Nach dem Arztbesuch nutzen Sie bitte diese Option, um Ihre elektronische Arbeitsunfähigkeitsbescheinigung (eAU) oder eine klassische AU zu übermitteln. Bitte achten Sie darauf, die Bescheinigung spätestens am ersten Kalendertag nach Beginn der Arbeitsunfähigkeit einzureichen, inklusive der voraussichtlichen Dauer.</p>
+		
+         <label> Vorname
+				[text* vorname] </label>
+
+		<label> Name
+				[text* your-name] </label>
+
+		<label> E-Mail-Adresse
+				[email* your-email autocomplete:email] </label>
+		
+		<p>Arbeitsunfähig seit: <label>[date* von placeholder]</label></p>
+		<p>Voraussichtlich arbeitsunfähig bis: <label>[date* bis placeholder]</label></p>
+		<p>Festgestellt am: <label>[date* festgestellt placeholder]</label></p>
+		
+		<p>Handelt es sich um eine elektronische Arbeitsunfähigkeitsbescheinigung? [radio au_elektronisch use_label_element default:1 "Ja" "Nein"]</p>
+		<p>Folgebescheinigung? [radio au_folge use_label_element "Ja" "Nein"]</p>
+		<p>Am Tag des Arztbesuchs noch gearbeitet? [radio erster_ausfalltag use_label_element "Ja" "Nein"]</p>
+		<p>Arbeitsunfall/Wegeunfall? [radio arbeitsunfall use_label_element "Ja" "Nein"]</p>
+		
+		[group unfall]
+			<p><strong>Achtung</strong>: Bitte die <a href="https://intern.bruecke-suedwestfalen.de/hilfe-support/">Unfallanzeige</a> downloaden, ausfüllen und schnellstmöglich an die Personalabteilung schicken!
+		[/group]
+		
+		[select* vorgesetzter first_as_label "bitte Vorgesetzte(n) auswählen" "Frau Groß" "Frau Georgaledakis" "Frau Krämer" "Frau Künstler" "Herr Przybilla" "Frau Pilz" "Frau Marlog" "Sonstige/r"]
+		
+		Nutzen Sie unsere digitale Zeiterfassung? 
+		[radio zeiterfassung use_label_element "Ja" "Nein"]
+		
+		<label> Anhang:
+		[file datei1 filetypes:pdf|jpg|png limit:5mb] </label>
+		
+		<label> Bemerkung (optional)
+		[textarea your-message] </label>
+		
+		<hr>
+		
+		[acceptance acceptance-898 acceptance_as_validation: on] Ich stimme zu, dass meine Angaben aus dem Formular zur Beantwortung meiner Anfrage erhoben und verarbeitet werden. Die Daten werden nach abgeschlossener Bearbeitung Ihrer Anfrage gelöscht. Hinweis: Sie können Ihre Einwilligung jederzeit für die Zukunft per E-Mail an info@bruecke-suedwestfalen.de widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer Datenschutzerklärung. [/acceptance]
+		
+		[submit "Senden"]
+		
+	</div>

@@ -1,0 +1,36 @@
+[honeypot hp_1]
+	<div style="background-color: #f0f0f0; padding:20px;">
+		
+		<p>Diese Option ist zu verwenden, wenn der Klient (das zu betreuende Kind) erkrankt ist oder aus anderen Gründen (z. B. Schulschließung, Ausflug, Urlaub) nicht betreut werden kann. Auch Fehlzeiten durch schulische Veranstaltungen oder bewegliche Ferientage sind hierüber zu melden.</p>
+		
+                <label> Vorname
+				[text* vorname] </label>
+
+		<label> Name
+				[text* your-name] </label>
+
+		<label> E-Mail-Adresse
+				[email* your-email autocomplete:email] </label>
+		
+		<label> Name des Klienten:
+		[text* klient-name] </label>
+		
+		<p>Abwesenheit von: <label>[date* von placeholder]</label></p>
+		<p>Abwesenheit bis: <label>[date* bis placeholder]</label></p>
+		
+		[select* vorgesetzter first_as_label "bitte Vorgesetzte(n) auswählen" "Frau Groß" "Frau Georgaledakis" "Frau Krämer" "Frau Künstler" "Herr Przybilla" "Frau Pilz" "Frau Marlog" "Sonstige/r"]
+		
+		Nutzen Sie unsere digitale Zeiterfassung?
+		[radio zeiterfassung use_label_element "Ja" "Nein"]
+		
+		<label> Bemerkung (optional):
+		[textarea your-message] </label>
+		
+		
+		<hr>
+		
+		[acceptance acceptance-898 acceptance_as_validation: on] Ich stimme zu, dass meine Angaben aus dem Formular zur Beantwortung meiner Anfrage erhoben und verarbeitet werden. Die Daten werden nach abgeschlossener Bearbeitung Ihrer Anfrage gelöscht. Hinweis: Sie können Ihre Einwilligung jederzeit für die Zukunft per E-Mail an info@bruecke-suedwestfalen.de widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer Datenschutzerklärung. [/acceptance]
+		
+		[submit "Senden"]
+		
+	</div>
