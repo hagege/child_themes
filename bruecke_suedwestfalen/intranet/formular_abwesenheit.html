@@ -1,41 +1,47 @@
-<label> Art der Abwesenheit: [select Liste-Abwesenheit first_as_label "bitte auswählen" "Abwesenheit anzeigen" "eAU/AU übermitteln" "Abwesenheit Klient" "Eigenes Kind krank" "Abweichender Einsatz"]</label>
-
-[honeypot hp_1]
+Art der Abwesenheit: [select Liste-Abwesenheit first_as_label "bitte auswählen" "Abwesenheit anzeigen" "eAU/AU
+übermitteln" "Abwesenheit Klient" "Eigenes Kind krank" "Abweichender Einsatz"]
 
 [group abwesenheit]
 <div style="background-color: #f0f0f0; padding:20px;">
 
-<p>Diese Option dient zur vorläufigen Mitteilung einer Abwesenheit, z. B. bei Krankheit vor dem Arztbesuch oder bei sonstigen Gründen wie privaten Terminen oder kurzfristigen Ausfällen. Sie ermöglicht eine frühzeitige Information, bevor eine ärztliche Bescheinigung vorliegt.</p>
+    <p>Diese Option dient zur vorläufigen Mitteilung einer Abwesenheit, z. B. bei Krankheit vor dem Arztbesuch oder bei
+        sonstigen Gründen wie privaten Terminen oder kurzfristigen Ausfällen. Sie ermöglicht eine frühzeitige
+        Information, bevor eine ärztliche Bescheinigung vorliegt.</p>
 
-<label> Vorname
-    [text* vorname] </label>
+    <label> Vorname
+        [text* vorname] </label>
 
-<label> Name
-    [text* your-name] </label>
+    <label> Name
+        [text* your-name] </label>
 
-<label> E-Mail-Adresse
-    [email* your-email autocomplete:email] </label>
+    <label> E-Mail-Adresse
+        [email* your-email autocomplete:email] </label>
 
-<p>Abwesenheit von: <label>[date* von placeholder]</label></p>
-<p>Abwesenheit bis: <label>[date* bis placeholder]</label></p>
+    <p>Abwesenheit von: <label>[date* von placeholder]</label></p>
+    <p>Abwesenheit bis: <label>[date* bis placeholder]</label></p>
 
-[select* vorgesetzter first_as_label "bitte Vorgesetzte(n) auswählen" "Frau Groß" "Frau Georgaledakis" "Frau Krämer" "Frau Künstler" "Herr Przybilla" "Frau Pilz" "Frau Marlog" "Sonstige/r"]
+    [select* vorgesetzter first_as_label "bitte Vorgesetzte(n) auswählen" "Frau Groß" "Frau Georgaledakis" "Frau Krämer"
+    "Frau Künstler" "Herr Przybilla" "Frau Pilz" "Frau Marlog" "Sonstige/r"]
 
-Nutzen Sie unsere digitale Zeiterfassung? 
-   [radio zeiterfassung use_label_element "Ja" "Nein"]
+    Nutzen Sie unsere digitale Zeiterfassung?
+    [radio zeiterfassung use_label_element "Ja" "Nein"]
 
 
-<label> Anhang:
-[file datei1 filetypes:pdf|jpg|png limit:5mb] </label>
+    <label> Anhang:
+        [file datei1 filetypes:pdf|jpg|png limit:5mb] </label>
 
-<label> Bemerkung (optional):
-    [textarea your-message] </label>
+    <label> Bemerkung (optional):
+        [textarea your-message] </label>
 
-<hr>
+    <hr>
 
-[acceptance acceptance-898 acceptance_as_validation: on] Ich stimme zu, dass meine Angaben aus dem Formular zur Beantwortung meiner Anfrage erhoben und verarbeitet werden. Die Daten werden nach abgeschlossener Bearbeitung Ihrer Anfrage gelöscht. Hinweis: Sie können Ihre Einwilligung jederzeit für die Zukunft per E-Mail an info@bruecke-suedwestfalen.de widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer Datenschutzerklärung. [/acceptance]
+    [acceptance acceptance-898 acceptance_as_validation: on] Ich stimme zu, dass meine Angaben aus dem Formular zur
+    Beantwortung meiner Anfrage erhoben und verarbeitet werden. Die Daten werden nach abgeschlossener Bearbeitung Ihrer
+    Anfrage gelöscht. Hinweis: Sie können Ihre Einwilligung jederzeit für die Zukunft per E-Mail an
+    info@bruecke-suedwestfalen.de widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in
+    unserer Datenschutzerklärung. [/acceptance]
 
-[submit "Senden"]
+    [submit "Senden"]
 </div>
 
 [/group]
@@ -44,46 +50,56 @@ Nutzen Sie unsere digitale Zeiterfassung?
 
 <div style="background-color: #f0f0f0; padding:20px;">
 
-<p>Nach dem Arztbesuch nutzen Sie bitte diese Option, um Ihre elektronische Arbeitsunfähigkeitsbescheinigung (eAU) oder eine klassische AU zu übermitteln. Bitte achten Sie darauf, die Bescheinigung spätestens am ersten Kalendertag nach Beginn der Arbeitsunfähigkeit einzureichen, inklusive der voraussichtlichen Dauer.</p>
+    <p>Nach dem Arztbesuch nutzen Sie bitte diese Option, um Ihre elektronische Arbeitsunfähigkeitsbescheinigung (eAU)
+        oder eine klassische AU zu übermitteln. Bitte achten Sie darauf, die Bescheinigung spätestens am ersten
+        Kalendertag nach Beginn der Arbeitsunfähigkeit einzureichen, inklusive der voraussichtlichen Dauer.</p>
 
-<label> Vorname
-    [text* vorname] </label>
+    <label> Vorname
+        [text* vorname] </label>
 
-<label> Name
-    [text* your-name] </label>
+    <label> Name
+        [text* your-name] </label>
 
-<label> E-Mail-Adresse
-    [email* your-email autocomplete:email] </label>
+    <label> E-Mail-Adresse
+        [email* your-email autocomplete:email] </label>
 
-<p>Arbeitsunfähig seit: <label>[date* von placeholder]</label></p>
-<p>Voraussichtlich arbeitsunfähig bis: <label>[date* bis placeholder]</label></p>
-<p>Festgestellt am: <label>[date* festgestellt placeholder]</label></p>
+    <p>Arbeitsunfähig seit: <label>[date* von placeholder]</label></p>
+    <p>Voraussichtlich arbeitsunfähig bis: <label>[date* bis placeholder]</label></p>
+    <p>Festgestellt am: <label>[date* festgestellt placeholder]</label></p>
 
-<p>Handelt es sich um eine elektronische Arbeitsunfähigkeitsbescheinigung? [radio au_elektronisch use_label_element default:1 "Ja" "Nein"]</p>
-<p>Folgebescheinigung? [radio au_folge use_label_element "Ja" "Nein"]</p>
-<p>Am Tag des Arztbesuchs noch gearbeitet? [radio erster_ausfalltag use_label_element "Ja" "Nein"]</p>
-<p>Arbeitsunfall/Wegeunfall? [radio arbeitsunfall use_label_element "Ja" "Nein"]</p>
+    <p>Handelt es sich um eine elektronische Arbeitsunfähigkeitsbescheinigung? [radio au_elektronisch use_label_element
+        default:1 "Ja" "Nein"]</p>
+    <p>Folgebescheinigung? [radio au_folge use_label_element "Ja" "Nein"]</p>
+    <p>Am Tag des Arztbesuchs noch gearbeitet? [radio erster_ausfalltag use_label_element "Ja" "Nein"]</p>
+    <p>Arbeitsunfall/Wegeunfall? [radio arbeitsunfall use_label_element "Ja" "Nein"]</p>
 
-[group unfall]
-<p><strong>Achtung</strong>: Bitte die <a href="https://intern.bruecke-suedwestfalen.de/hilfe-support/">Unfallanzeige</a> downloaden, ausfüllen und schnellstmöglich an die Personalabteilung schicken!
-[/group]
+    [group unfall]
+    <p><strong>Achtung</strong>: Bitte die <a
+            href="https://intern.bruecke-suedwestfalen.de/hilfe-support/">Unfallanzeige</a> downloaden, ausfüllen und
+        schnellstmöglich an die Personalabteilung schicken!
+        [/group]
 
-[select* vorgesetzter first_as_label "bitte Vorgesetzte(n) auswählen" "Frau Groß" "Frau Georgaledakis" "Frau Krämer" "Frau Künstler" "Herr Przybilla" "Frau Pilz" "Frau Marlog" "Sonstige/r"]
+        [select* vorgesetzter first_as_label "bitte Vorgesetzte(n) auswählen" "Frau Groß" "Frau Georgaledakis" "Frau
+        Krämer" "Frau Künstler" "Herr Przybilla" "Frau Pilz" "Frau Marlog" "Sonstige/r"]
 
-Nutzen Sie unsere digitale Zeiterfassung? 
-   [radio zeiterfassung use_label_element "Ja" "Nein"]
+        Nutzen Sie unsere digitale Zeiterfassung?
+        [radio zeiterfassung use_label_element "Ja" "Nein"]
 
-<label> Anhang:
-[file datei1 filetypes:pdf|jpg|png limit:5mb] </label>
+        <label> Anhang:
+            [file datei1 filetypes:pdf|jpg|png limit:5mb] </label>
 
-<label> Bemerkung (optional)
-    [textarea your-message] </label>
+        <label> Bemerkung (optional)
+            [textarea your-message] </label>
 
-<hr>
+        <hr>
 
-[acceptance acceptance-898 acceptance_as_validation: on] Ich stimme zu, dass meine Angaben aus dem Formular zur Beantwortung meiner Anfrage erhoben und verarbeitet werden. Die Daten werden nach abgeschlossener Bearbeitung Ihrer Anfrage gelöscht. Hinweis: Sie können Ihre Einwilligung jederzeit für die Zukunft per E-Mail an info@bruecke-suedwestfalen.de widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer Datenschutzerklärung. [/acceptance]
+        [acceptance acceptance-898 acceptance_as_validation: on] Ich stimme zu, dass meine Angaben aus dem Formular zur
+        Beantwortung meiner Anfrage erhoben und verarbeitet werden. Die Daten werden nach abgeschlossener Bearbeitung
+        Ihrer Anfrage gelöscht. Hinweis: Sie können Ihre Einwilligung jederzeit für die Zukunft per E-Mail an
+        info@bruecke-suedwestfalen.de widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in
+        unserer Datenschutzerklärung. [/acceptance]
 
-[submit "Senden"]
+        [submit "Senden"]
 
 </div>
 [/group]
@@ -92,43 +108,49 @@ Nutzen Sie unsere digitale Zeiterfassung?
 
 <div style="background-color: #f0f0f0; padding:20px;">
 
-<p>Wenn Ihr eigenes Kind erkrankt und Sie deshalb nicht arbeiten können, wählen Sie bitte diese Art der Abwesenheit. Bitte fügen Sie die ärztliche Bescheinigung/AU direkt im Formular als Datei bei.</p>
+    <p>Wenn Ihr eigenes Kind erkrankt und Sie deshalb nicht arbeiten können, wählen Sie bitte diese Art der Abwesenheit.
+        Bitte fügen Sie die ärztliche Bescheinigung/AU direkt im Formular als Datei bei.</p>
 
-<label> Vorname
-    [text* vorname] </label>
+    <label> Vorname
+        [text* vorname] </label>
 
-<label> Name
-    [text* your-name] </label>
+    <label> Name
+        [text* your-name] </label>
 
-<label> E-Mail-Adresse
-    [email* your-email autocomplete:email] </label>
+    <label> E-Mail-Adresse
+        [email* your-email autocomplete:email] </label>
 
-<p>Abwesenheit von: <label>[date* von placeholder]</label></p>
-<p>Abwesenheit bis: <label>[date* bis placeholder]</label></p>
+    <p>Abwesenheit von: <label>[date* von placeholder]</label></p>
+    <p>Abwesenheit bis: <label>[date* bis placeholder]</label></p>
 
-<label> Name des Kindes:
-    [text* kind-name] </label>
+    <label> Name des Kindes:
+        [text* kind-name] </label>
 
-<p>Geburtsdatum des Kindes: <label>[date* geburtsdatum_kind placeholder]</label></p>
+    <p>Geburtsdatum des Kindes: <label>[date* geburtsdatum_kind placeholder]</label></p>
 
-<p><span style="color: #ff0000;">Bitte fügen Sie eine ärztliche Bescheinigung als Anhang hinzu.</span></p>
+    <p><span style="color: #ff0000;">Bitte fügen Sie eine ärztliche Bescheinigung als Anhang hinzu.</span></p>
 
-<label> AU des Kindes: 
-[file datei1 filetypes:pdf|jpg|png limit:5mb] </label>
+    <label> AU des Kindes:
+        [file datei1 filetypes:pdf|jpg|png limit:5mb] </label>
 
-[select* vorgesetzter first_as_label "bitte Vorgesetzte(n) auswählen" "Frau Groß" "Frau Georgaledakis" "Frau Krämer" "Frau Künstler" "Herr Przybilla" "Frau Pilz" "Frau Marlog" "Sonstige/r"]
+    [select* vorgesetzter first_as_label "bitte Vorgesetzte(n) auswählen" "Frau Groß" "Frau Georgaledakis" "Frau Krämer"
+    "Frau Künstler" "Herr Przybilla" "Frau Pilz" "Frau Marlog" "Sonstige/r"]
 
-Nutzen Sie unsere digitale Zeiterfassung? 
-   [radio zeiterfassung use_label_element "Ja" "Nein"]
+    Nutzen Sie unsere digitale Zeiterfassung?
+    [radio zeiterfassung use_label_element "Ja" "Nein"]
 
-<label> Bemerkung (optional)
-    [textarea your-message] </label>
+    <label> Bemerkung (optional)
+        [textarea your-message] </label>
 
-<hr>
+    <hr>
 
-[acceptance acceptance-898 acceptance_as_validation: on] Ich stimme zu, dass meine Angaben aus dem Formular zur Beantwortung meiner Anfrage erhoben und verarbeitet werden. Die Daten werden nach abgeschlossener Bearbeitung Ihrer Anfrage gelöscht. Hinweis: Sie können Ihre Einwilligung jederzeit für die Zukunft per E-Mail an info@bruecke-suedwestfalen.de widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer Datenschutzerklärung. [/acceptance]
+    [acceptance acceptance-898 acceptance_as_validation: on] Ich stimme zu, dass meine Angaben aus dem Formular zur
+    Beantwortung meiner Anfrage erhoben und verarbeitet werden. Die Daten werden nach abgeschlossener Bearbeitung Ihrer
+    Anfrage gelöscht. Hinweis: Sie können Ihre Einwilligung jederzeit für die Zukunft per E-Mail an
+    info@bruecke-suedwestfalen.de widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in
+    unserer Datenschutzerklärung. [/acceptance]
 
-[submit "Senden"]
+    [submit "Senden"]
 
 </div>
 
@@ -138,37 +160,44 @@ Nutzen Sie unsere digitale Zeiterfassung?
 
 <div style="background-color: #f0f0f0; padding:20px;">
 
-<p>Diese Option ist zu verwenden, wenn der Klient (das zu betreuende Kind) erkrankt ist oder aus anderen Gründen (z. B. Schulschließung, Ausflug, Urlaub) nicht betreut werden kann. Auch Fehlzeiten durch schulische Veranstaltungen oder bewegliche Ferientage sind hierüber zu melden.</p>
+    <p>Diese Option ist zu verwenden, wenn der Klient (das zu betreuende Kind) erkrankt ist oder aus anderen Gründen
+        (z. B. Schulschließung, Ausflug, Urlaub) nicht betreut werden kann. Auch Fehlzeiten durch schulische
+        Veranstaltungen oder bewegliche Ferientage sind hierüber zu melden.</p>
 
-<label> Vorname
-    [text* vorname] </label>
+    <label> Vorname
+        [text* vorname] </label>
 
-<label> Name
-    [text* your-name] </label>
+    <label> Name
+        [text* your-name] </label>
 
-<label> E-Mail-Adresse:
-    [email* your-email autocomplete:email] </label>
+    <label> E-Mail-Adresse:
+        [email* your-email autocomplete:email] </label>
 
-<label> Name des Klienten:
-    [text* klient-name] </label>
+    <label> Name des Klienten:
+        [text* klient-name] </label>
 
-<p>Abwesenheit von: <label>[date* von placeholder]</label></p>
-<p>Abwesenheit bis: <label>[date* bis placeholder]</label></p>
+    <p>Abwesenheit von: <label>[date* von placeholder]</label></p>
+    <p>Abwesenheit bis: <label>[date* bis placeholder]</label></p>
 
-[select* vorgesetzter first_as_label "bitte Vorgesetzte(n) auswählen" "Frau Groß" "Frau Georgaledakis" "Frau Krämer" "Frau Künstler" "Herr Przybilla" "Frau Pilz" "Frau Marlog" "Sonstige/r"]
+    [select* vorgesetzter first_as_label "bitte Vorgesetzte(n) auswählen" "Frau Groß" "Frau Georgaledakis" "Frau Krämer"
+    "Frau Künstler" "Herr Przybilla" "Frau Pilz" "Frau Marlog" "Sonstige/r"]
 
-Nutzen Sie unsere digitale Zeiterfassung?
-   [radio zeiterfassung use_label_element "Ja" "Nein"]
+    Nutzen Sie unsere digitale Zeiterfassung?
+    [radio zeiterfassung use_label_element "Ja" "Nein"]
 
-<label> Bemerkung (optional)
-    [textarea your-message] </label>
+    <label> Bemerkung (optional)
+        [textarea your-message] </label>
 
 
-<hr>
+    <hr>
 
-[acceptance acceptance-898 acceptance_as_validation: on] Ich stimme zu, dass meine Angaben aus dem Formular zur Beantwortung meiner Anfrage erhoben und verarbeitet werden. Die Daten werden nach abgeschlossener Bearbeitung Ihrer Anfrage gelöscht. Hinweis: Sie können Ihre Einwilligung jederzeit für die Zukunft per E-Mail an info@bruecke-suedwestfalen.de widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer Datenschutzerklärung. [/acceptance]
+    [acceptance acceptance-898 acceptance_as_validation: on] Ich stimme zu, dass meine Angaben aus dem Formular zur
+    Beantwortung meiner Anfrage erhoben und verarbeitet werden. Die Daten werden nach abgeschlossener Bearbeitung Ihrer
+    Anfrage gelöscht. Hinweis: Sie können Ihre Einwilligung jederzeit für die Zukunft per E-Mail an
+    info@bruecke-suedwestfalen.de widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in
+    unserer Datenschutzerklärung. [/acceptance]
 
-[submit "Senden"]
+    [submit "Senden"]
 
 </div>
 
@@ -179,37 +208,46 @@ Nutzen Sie unsere digitale Zeiterfassung?
 
 <div style="background-color: #f0f0f0; padding:20px;">
 
-<p>In selbstorganisierten Schulsystemen wird die Vertretung intern geregelt. Wenn Sie außerhalb Ihres regulären Einsatzes tätig sind, geben Sie bitte den Namen des neu zu unterstützenden Kindes an. Wichtig: Ihr regulärer Klient muss zusätzlich über „Abwesenheit Klient“ abgemeldet werden.</p>
+    <p>In selbstorganisierten Schulsystemen wird die Vertretung intern geregelt. Wenn Sie außerhalb Ihres regulären
+        Einsatzes tätig sind, geben Sie bitte den Namen des neu zu unterstützenden Kindes an. Wichtig: Ihr regulärer
+        Klient muss zusätzlich über „Abwesenheit Klient“ abgemeldet werden.</p>
 
-<label> Vorname
-    [text* vorname] </label>
+    <label> Vorname
+        [text* vorname] </label>
 
-<label> Name
-    [text* your-name] </label>
+    <label> Name
+        [text* your-name] </label>
 
-<label> E-Mail-Adresse
-    [email* your-email autocomplete:email] </label>
+    <label> E-Mail-Adresse
+        [email* your-email autocomplete:email] </label>
 
-<label> Name Klient:
-    [text* klient-name] </label>
+    <label> Name Klient:
+        [text* klient-name] </label>
 
-<p>Von: <label>[date* von placeholder]</label></p>
-<p>Bis: <label>[date* bis placeholder]</label></p>
+    <p>Von: <label>[date* von placeholder]</label></p>
+    <p>Bis: <label>[date* bis placeholder]</label></p>
 
-[select* vorgesetzter first_as_label "bitte Vorgesetzte(n) auswählen" "Frau Groß" "Frau Georgaledakis" "Frau Krämer" "Frau Künstler" "Herr Przybilla" "Frau Pilz" "Frau Marlog" "Sonstige/r"]
+    [select* vorgesetzter first_as_label "bitte Vorgesetzte(n) auswählen" "Frau Groß" "Frau Georgaledakis" "Frau Krämer"
+    "Frau Künstler" "Herr Przybilla" "Frau Pilz" "Frau Marlog" "Sonstige/r"]
 
-Nutzen Sie unsere digitale Zeiterfassung?
-   [radio zeiterfassung use_label_element "Ja" "Nein"]
+    Nutzen Sie unsere digitale Zeiterfassung?
+    [radio zeiterfassung use_label_element "Ja" "Nein"]
 
-<label> Bemerkung (optional)
-    [textarea your-message] </label>
+    <label> Bemerkung (optional)
+        [textarea your-message] </label>
 
-<hr>
+    <hr>
 
-[acceptance acceptance-898 acceptance_as_validation: on] Ich stimme zu, dass meine Angaben aus dem Formular zur Beantwortung meiner Anfrage erhoben und verarbeitet werden. Die Daten werden nach abgeschlossener Bearbeitung Ihrer Anfrage gelöscht. Hinweis: Sie können Ihre Einwilligung jederzeit für die Zukunft per E-Mail an info@bruecke-suedwestfalen.de widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer Datenschutzerklärung. [/acceptance]
+    [acceptance acceptance-898 acceptance_as_validation: on] Ich stimme zu, dass meine Angaben aus dem Formular zur
+    Beantwortung meiner Anfrage erhoben und verarbeitet werden. Die Daten werden nach abgeschlossener Bearbeitung Ihrer
+    Anfrage gelöscht. Hinweis: Sie können Ihre Einwilligung jederzeit für die Zukunft per E-Mail an
+    info@bruecke-suedwestfalen.de widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in
+    unserer Datenschutzerklärung. [/acceptance]
 
-[submit "Senden"]
+    [submit "Senden"]
 
 </div>
 
 [/group]
+
+[honeypot hp_1]
