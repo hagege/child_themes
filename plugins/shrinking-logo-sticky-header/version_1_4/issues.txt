@@ -1,0 +1,6 @@
+Probleme:
+
+Eine Lösung zu "Beim Runterscrollen ausblenden, beim Hochfahren wieder einblenden", 
+aber Probleme bei Off-Canvas: Wenn Off-Canvas aktiviert ist, dann funktioniert nach Erscheinen des Off-Canvas-Menüs 
+der Effekt "Beim Runterscrollen ausblenden, beim Hochfahren wieder einblenden" nicht mehr. 
+Erst wenn man im Off-Canvas-Menü einen Menüpunkt gewählt hat, dann klappt es wieder.

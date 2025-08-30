@@ -5,13 +5,13 @@
  * @package       shrinkingLO
  * @author        Hans-Gerd Gerhards
  * @license       gplv2
- * @version       1.3.2
+ * @version       1.3.3
  *
  * @wordpress-plugin
  * Plugin Name:   Dynamic Header & Navigation for Block Themes
  * Plugin URI:    https://haurand.com/plugin-shrinking-logo-sticky-header/
  * Description:   Animated shrinking header, responsive shrinking logo, custom breakpoints and off-canvas navigation – all-in-one navigation solution for most modern WordPress block themes.
- * Version:       1.3.2
+ * Version:       1.3.3
  * Author:        Hans-Gerd Gerhards
  * Author URI:    https://haurand.com/author/hgg/
  * Text Domain:   shrinking-logo-sticky-header
@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // set version.
-const SLSH_VERSION = '1.3.2';
+const SLSH_VERSION = '1.3.3';
 
 /**
  * Load language files.
@@ -74,6 +74,12 @@ function slsh_register_settings(): void {
 	
 	// Option hide header if scroll down, show header if scroll up
 	add_option( 'slsh_hide_header', 'no' );
+	
+	// Disable inner spacing (padding) in header?
+	add_option( 'slsh_disable_padding', 'no' );
+	
+	// Activate text menu below the mobile menu (hamburger)
+	add_option( 'slsh_enable_text_menu', 'no' );
 	
 
 	register_setting(
@@ -171,6 +177,28 @@ function slsh_register_settings(): void {
 			},
 		)
 	);
+	
+	register_setting(
+		'slsh_options_group',
+		'slsh_disable_padding',
+		array(
+			'type'              => 'string',
+			'sanitize_callback' => function ( $v ) {
+				return 'yes' === $v ? 'yes' : 'no';
+			},
+		)
+	);
+	
+	register_setting(
+		'slsh_options_group',
+		'slsh_enable_text_menu',
+		array(
+			'type'              => 'string',
+			'sanitize_callback' => function ( $v ) {
+				return 'yes' === $v ? 'yes' : 'no';
+			},
+		)
+	);
 }
 add_action( 'admin_init', 'slsh_register_settings' );
 
@@ -189,7 +217,7 @@ add_action( 'admin_menu', 'slsh_register_options_page' );
  */
 function slsh_options_page(): void {
 	?>
-	<div>
+	<div style="max-width:80%; margin-left: auto; margin-right:auto; font-size: 1rem;">
 		<div class="notice notice-info">
 		  <p>
 			<strong>Notice:</strong>
@@ -203,7 +231,7 @@ function slsh_options_page(): void {
 			<?php esc_html_e( '– thanks a lot :-)', 'shrinking-logo-sticky-header' ); ?>
 		  </p>
 		</div>
-		<h2><?php esc_html_e( 'Dynamic Header & Navigation for Block Themes – Settings: Version ', 'shrinking-logo-sticky-header' ); ?><?php if (defined('SLSH_VERSION')) echo esc_html(SLSH_VERSION); ?></h2>
+		<h2 style="text-align: left; margin-top:30px; padding-top: 10px; padding-bottom: 10px; border-top: 2px solid #333; border-bottom: 2px solid #333;"><?php esc_html_e( 'Dynamic Header & Navigation for Block Themes – Settings: Version ', 'shrinking-logo-sticky-header' ); ?><?php if (defined('SLSH_VERSION')) echo esc_html(SLSH_VERSION); ?></h2>
 		<form method="post" action="<?php echo esc_url( get_admin_url() ); ?>options.php">
 			<?php settings_fields( 'slsh_options_group' ); ?>
 
@@ -211,6 +239,12 @@ function slsh_options_page(): void {
 				<tr>
 					<th scope="row"><label style="display: block; text-align: left" for="slsh_header_shrink_height"><?php esc_html_e( 'Height of the shrunk header (px):', 'shrinking-logo-sticky-header' ); ?></label></th>
 					<td><input type="number" id="slsh_header_shrink_height" name="slsh_header_shrink_height" value="<?php echo esc_attr( get_option( 'slsh_header_shrink_height', 80 ) ); ?>" min="40" max="300" /></td>
+				</tr>
+				<tr>
+					<th scope="row"><label style="display: block; text-align: left" for="slsh_disable_padding"><?php esc_html_e( 'Disable inner spacing (padding) in header?', 'shrinking-logo-sticky-header' ); ?></label></th>
+					<td>
+						<input type="checkbox" id="slsh_disable_padding" name="slsh_disable_padding" value="yes" <?php checked( 'yes', get_option( 'slsh_disable_padding', 'no' ) ); ?> />
+					</td>
 				</tr>
 				<tr>
 					<th scope="row"><label style="display: block; text-align: left" for="slsh_animation_duration"><?php esc_html_e( 'Animation duration (seconds):', 'shrinking-logo-sticky-header' ); ?></label></th>
@@ -240,53 +274,55 @@ function slsh_options_page(): void {
 
 				<!-- settings for breakpoint (CSS) -->
 				<tr>
-					<th scope="row"><h3 style="text-align: left; margin-top:30px">Breakpoint</h3></th>
+					<th scope="row"><h3 style="text-align: left; margin-top:30px; padding-top: 10px; padding-bottom: 10px; border-top: 2px solid #333; border-bottom: 2px solid #333;">Breakpoint and Accessibility</h3></th>
 				</tr>
 				<tr>
-					<th scope="row"><p style="text-align: left;"><?php esc_html_e( 'A breakpoint is a screen width where the website layout changes to adapt for different devices like mobiles or desktops. If the breakpoint remains set at 599px, then the breakpoint will be adopted by the theme without change, even if the breakpoint is set at 599px in the theme, for example.', 'shrinking-logo-sticky-header' ); ?></p></th>
+					<th scope="row"><p style="text-align: left; font-size: 0.8rem;"><?php esc_html_e( 'A breakpoint is a screen width where the website layout changes to adapt for different devices like mobiles or desktops. If the breakpoint remains set at 599px, then the breakpoint will be adopted by the theme without change.', 'shrinking-logo-sticky-header' ); ?></p></th>
 				</tr>
 				<tr>
-					<th scope="row"><label style="display: block; text-align: left" for="slsh_nav_breakpoint"><?php esc_html_e( 'Breakpoint Navigation (px):', 'shrinking-logo-sticky-header' ); ?></label></th>
+					<th scope="row"><label style="display: block; text-align: left" for="slsh_nav_breakpoint"><?php esc_html_e( 'Breakpoint Navigation (px) - Standard: 599:', 'shrinking-logo-sticky-header' ); ?></label></th>
 					<td>
 						<input type="number" id="slsh_nav_breakpoint" name="slsh_nav_breakpoint" value="<?php echo esc_attr( get_option( 'slsh_nav_breakpoint', 599 ) ); ?>" min="599" max="1920" />
-						<span><?php esc_html_e( 'Standard: 599', 'shrinking-logo-sticky-header' ); ?></span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label style="display: block; text-align: left" for="slsh_enable_text_menu"><?php esc_html_e( 'Enable Text <Menu> below mobile Icon and display larger mobile menu Icon (Hamburger) - better for accessibility reasons:', 'shrinking-logo-sticky-header' ); ?></label></th>
+					<td>
+						<input type="checkbox" id="slsh_enable_text_menu" name="slsh_enable_text_menu" value="yes" <?php checked( 'yes', get_option( 'slsh_enable_text_menu', 'no' ) ); ?> />
 					</td>
 				</tr>
 				<!-- settings for Off-Canvas (CSS) -->
 				<tr>
-					<th scope="row"><h3 style="text-align: left;margin-top:30px">Off-Canvas-Menu</h3></th>
+					<th scope="row"><h3 style="text-align: left; margin-top:30px; padding-top: 10px; padding-bottom: 10px; border-top: 2px solid #333; border-bottom: 2px solid #333;">Off-Canvas-Menu</h3></th>
 				</tr>
 				<tr>
-					<th scope="row"><p style="text-align: left;"><?php esc_html_e( 'Off-canvas is a hidden navigation panel that slides in from the side of the screen, providing a space-saving way to access menu options without cluttering the main content area.', 'shrinking-logo-sticky-header' ); ?></p></th>
+					<th scope="row"><p style="text-align: left; font-size: 0.8rem;"><?php esc_html_e( 'Off-canvas is a hidden navigation panel that slides in from the side of the screen, providing a space-saving way to access menu options without cluttering the main content area.', 'shrinking-logo-sticky-header' ); ?></p></th>
 				</tr>
 				<tr>
 					<th scope="row"><label style="display: block; text-align: left" for="slsh_enable_off_canvas"><?php esc_html_e( 'Activate Off-Canvas (CSS Rules):', 'shrinking-logo-sticky-header' ); ?></label></th>
 					<td>
 						<input type="checkbox" id="slsh_enable_off_canvas" name="slsh_enable_off_canvas" value="yes" <?php checked( 'yes', get_option( 'slsh_enable_off_canvas', 'no' ) ); ?> />
-						<span><?php esc_html_e( 'Activates special CSS rules for Off-Canvas in Block Themes.', 'shrinking-logo-sticky-header' ); ?></span>
 					</td>
 				</tr>
 				<tr>
-					<th scope="row"><label style="display: block; text-align: left" for="slsh_off_canvas_speed"><?php esc_html_e( 'Option for the speed of the Off-Canvas fade-in (Value in 0.1 steps):', 'shrinking-logo-sticky-header' ); ?></label></th>
+					<th scope="row"><label style="display: block; text-align: left" for="slsh_off_canvas_speed"><?php esc_html_e( 'Option for the speed of the Off-Canvas fade-in (Value in 0.1 steps - The smaller the value, the faster the fade-in):', 'shrinking-logo-sticky-header' ); ?></label></th>
 					<td>
 						<input type="number" step="0.1" id="slsh_off_canvas_speed" name="slsh_off_canvas_speed" value="<?php echo esc_attr( get_option( 'slsh_off_canvas_speed', 0.5 ) ); ?>" min="0.1" max="1" />
-						<span><?php esc_html_e( 'The smaller the value, the faster the fade-in.', 'shrinking-logo-sticky-header' ); ?></span>
 					</td>
 				</tr>
 
 				</tr>
 				<!-- settings for Background Color (Header) -->
 				<tr>
-					<th scope="row"><h3 style="text-align: left;margin-top:30px">Background Color for Header</h3></th>
+					<th scope="row"><h3 style="text-align: left; margin-top:30px; padding-top: 10px; padding-bottom: 10px; border-top: 2px solid #333; border-bottom: 2px solid #333;">Background Color for Header</h3></th>
 				</tr>
 				<tr>
-					<th scope="row"><p style="text-align: left;"><?php esc_html_e( 'The header is normally transparent. However, you can set the background color for the header in the template part of your block theme (recommended). The background color for the header can also be set automatically using the following settings.', 'shrinking-logo-sticky-header' ); ?></p></th>
+					<th scope="row"><p style="text-align: left; font-size: 0.8rem;"><?php esc_html_e( 'The header is normally transparent. However, you can set the background color for the header in the template part of your block theme (recommended). The background color for the header can also be set automatically using the following settings.', 'shrinking-logo-sticky-header' ); ?></p></th>
 				</tr>
 				<tr>
 					<th scope="row"><label style="display: block; text-align: left" for="slsh_enable_background_color"><?php esc_html_e( 'Activate Background Color for Header (CSS Rules):', 'shrinking-logo-sticky-header' ); ?></label></th>
 					<td>
 						<input type="checkbox" id="slsh_enable_off_canvas" name="slsh_enable_background_color" value="yes" <?php checked( 'yes', get_option( 'slsh_enable_background_color', 'no' ) ); ?> />
-						<span><?php esc_html_e( 'Activates special CSS rules for Background Color (Header) in Block Themes.', 'shrinking-logo-sticky-header' ); ?></span>
 					</td>
 				</tr>
 
@@ -320,6 +356,8 @@ function slsh_dynamic_css(): void {
 	$off_canvas_speed   = (float) get_option( 'slsh_off_canvas_speed', 0.5 );
 	$enable_bg_color    = get_option( 'slsh_enable_background_color', 'no' );
 	$hide_header        = get_option( 'slsh_hide_header', 'no' );
+	$disable_padding    = get_option( 'slsh_disable_padding', 'no' );
+	$enable_text_menu   = get_option( 'slsh_enable_text_menu', 'no' );
 
 	$custom_css = "
         header.wp-block-template-part {
@@ -349,7 +387,37 @@ function slsh_dynamic_css(): void {
 		  scroll-padding-top:{$header_height}px;
 		}
     ";
+
+
+	if ( 'yes' === $disable_padding ) {
+		$custom_css .= "
+			/* Set padding to 0px in header */
+			header.site-header.wp-block-template-part header.wp-block-group {
+				padding-top: 0px !important;
+				padding-bottom: 0px !important;
+		}";
+	}
 	
+
+   if ( 'yes' === $enable_text_menu ) {
+		$custom_css .= "
+		/* Enable Text Menu below mobile Icon */
+		  .wp-block-navigation__responsive-container-open::after {
+			content: 'Menu';
+			font-size: 15px;
+			padding-top: 4px;
+			text-align: center;
+		  }
+		/* Display larger mobile menu */
+		.wp-block-navigation__responsive-container-open svg {
+			fill: currentColor;
+			display: block;
+			height: 40px;
+			pointer-events: none;
+			width: 40px;
+		}";
+	}
+
 
 	if ( $nav_breakpoint > 599 ) {
 		$custom_css .= "
@@ -367,7 +435,8 @@ function slsh_dynamic_css(): void {
 		/* setting new breakpoint because of issues when enabling off canvas (ollie theme for example) */
 	    $nav_breakpoint = 599;
 	}
-	
+
+
 	if ( 'yes' === $enable_off_canvas ) {
 		$custom_css .= "
 		/* Off canvas */
@@ -393,7 +462,8 @@ function slsh_dynamic_css(): void {
 		  }
 	    }";
 	}
-		
+
+
 	if ( 'yes' === $enable_bg_color ) {
 		$custom_css .= "
 		/* Background Color */

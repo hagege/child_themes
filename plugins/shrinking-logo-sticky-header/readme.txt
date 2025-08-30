@@ -7,7 +7,7 @@ Tags: Block Theme, Header, shrink, breakpoint, off-canvas
 Requires at least: 
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.3.2
+Stable tag: 1.3.3
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,9 @@ Options:
 * Option to set a breakpoint for navigation (added in Version 1.1)
 * Option to set Off-Canvas (added in Version 1.2)
 * Option for the speed of the Off-Canvas fade-in (added in Version 1.3.1)
+* Option to disable inner spacing (padding) in header (added in Version 1.3.3)
+* Option to enable Text <Menu> below mobile Icon and display larger mobile menu Icon (Hamburger) - better for accessibility reasons (added in Version 1.3.3)
+
 
 Dynamic Header & Navigation for Block Themes (Previous name of the plugin: Shrinking Logo Sticky Header) is a lightweight WordPress plugin developed specifically as a navigation solution for most Block Themes. 
 It adds a modern sticky header with smooth, animated shrinking effects for both the header and the site logo. 
@@ -66,6 +69,13 @@ Yes, of course:
 * (English): https://haurand.com/plugin-shrinking-logo-sticky-header/
 * (German): https://haurand.com/das-plugin-shrinking-logo-sticky-header/
 
+= Who are you?
+I'am Hans-Gerd, a WordPress enthusiast.
+My work on this plugin will be sponsored by [https://haurand.com/] (https://haurand.com/)
+
+= How can I report security bugs? ###
+You can report security bugs through the Patchstack Vulnerability Disclosure Program. The Patchstack team helps validate, triage and handle any security vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database)
+
 == Translations ==
 * (French): Thanks to [Patricia BT](https://profiles.wordpress.org/patricia70/)
 
@@ -78,6 +88,11 @@ Yes, of course:
 4. Click on `Activate plugin`
 
 == Changelog ==
+
+= 1.3.3: September 10, 2025 =
+* Added: Option for disable inner spacing (padding) in header
+* Added: Option to enable Text <Menu> below mobile Icon and display larger mobile menu Icon (Hamburger) - better for accessibility reasons
+* Enhancements: Explanations and Design in the settings cleaned up
 
 = 1.3.2: August 1, 2025 =
 * Fix: Anchors are now controlled at the correct height.
