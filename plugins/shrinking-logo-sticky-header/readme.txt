@@ -27,6 +27,7 @@ Options:
 * Option for the speed of the Off-Canvas fade-in (added in Version 1.3.1)
 * Option to disable inner spacing (padding) in header (added in Version 1.4)
 * Option to enable Text <Menu> below mobile Icon and display larger mobile menu Icon (Hamburger) - better for accessibility reasons (added in Version 1.4)
+* Option to Label Text <Menu> (added in Version 1.4)
 
 
 Dynamic Header & Navigation for Block Themes (Previous name of the plugin: Shrinking Logo Sticky Header) is a lightweight WordPress plugin developed specifically as a navigation solution for most Block Themes. 
@@ -92,6 +93,7 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 = 1.4: September 10, 2025 =
 * Added: Option for disable inner spacing (padding) in header
 * Added: Option to enable Text <Menu> below mobile Icon and display larger mobile menu Icon (Hamburger) - better for accessibility reasons
+* Added: Option to Label Text <Menu>
 * Enhancements: Explanations and Design in the settings cleaned up
 
 = 1.3.2: August 1, 2025 =

@@ -199,6 +199,20 @@ function slsh_register_settings(): void {
 			},
 		)
 	);
+	
+	register_setting(
+		'slsh_options_group',
+		'slsh_text_menu',
+		array(
+			'type'              => 'string',
+			'sanitize_callback' => function( $value ) {
+				$value = sanitize_text_field( $value );         // Securing
+				return mb_substr( $value, 0, 6 );               // Limited to 6 characters
+			},
+			'default'           => 'Menu',                      // Default value if none set
+		)
+	);
+
 }
 add_action( 'admin_init', 'slsh_register_settings' );
 
@@ -291,6 +305,12 @@ function slsh_options_page(): void {
 						<input type="checkbox" id="slsh_enable_text_menu" name="slsh_enable_text_menu" value="yes" <?php checked( 'yes', get_option( 'slsh_enable_text_menu', 'no' ) ); ?> />
 					</td>
 				</tr>
+				<tr>
+					<th scope="row"><label style="display: block; text-align: left" for="slsh_text_menu"><?php esc_html_e( 'Label Text <Menu> (max. 6 characters): ', 'shrinking-logo-sticky-header' ); ?></label></th>
+					<td>
+						<input type="text" id="slsh_text_menu" name="slsh_text_menu" value="<?php echo esc_attr( get_option( 'slsh_text_menu', 'Menu' ) ); ?> "maxlength="6" />
+					</td>
+				</tr>
 				<!-- settings for Off-Canvas (CSS) -->
 				<tr>
 					<th scope="row"><h3 style="text-align: left; margin-top:30px; padding-top: 10px; padding-bottom: 10px; border-top: 2px solid #333; border-bottom: 2px solid #333;">Off-Canvas-Menu</h3></th>
@@ -358,6 +378,7 @@ function slsh_dynamic_css(): void {
 	$hide_header        = get_option( 'slsh_hide_header', 'no' );
 	$disable_padding    = get_option( 'slsh_disable_padding', 'no' );
 	$enable_text_menu   = get_option( 'slsh_enable_text_menu', 'no' );
+	$text_menu          = get_option( 'slsh_text_menu', 'Menu' );
 
 	$custom_css = "
         header.wp-block-template-part {
@@ -399,16 +420,17 @@ function slsh_dynamic_css(): void {
 	}
 	
 
-   if ( 'yes' === $enable_text_menu ) {
+	if ( 'yes' === $enable_text_menu ) {
+		// Save text before inserting into CSS:
+		$safe_text = addslashes( esc_js( $text_menu ) );
 		$custom_css .= "
 		/* Enable Text Menu below mobile Icon */
 		  .wp-block-navigation__responsive-container-open::after {
-			content: 'Menu';
+			content: '{$safe_text}';
 			font-size: 15px;
 			padding-top: 4px;
 			text-align: center;
-		  }
-		/* Display larger mobile menu */
+		}
 		.wp-block-navigation__responsive-container-open svg {
 			fill: currentColor;
 			display: block;
@@ -417,6 +439,7 @@ function slsh_dynamic_css(): void {
 			width: 40px;
 		}";
 	}
+
 
 
 	if ( $nav_breakpoint > 599 ) {
