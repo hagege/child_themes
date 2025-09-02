@@ -93,6 +93,7 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 = 1.4: September 10, 2025 =
 * Added: Option for disable inner spacing (padding) in header
 * Added: Option to enable Text <Menu> below mobile Icon and display larger mobile menu Icon (Hamburger) - better for accessibility reasons
+* Enhancement: Height and width of mobile icon (SVG) changed to 44px (AAA) when the above option is used
 * Added: Option to Label Text <Menu>
 * Enhancements: Explanations and Design in the settings cleaned up
 

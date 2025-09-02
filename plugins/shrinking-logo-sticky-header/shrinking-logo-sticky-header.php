@@ -434,9 +434,9 @@ function slsh_dynamic_css(): void {
 		.wp-block-navigation__responsive-container-open svg {
 			fill: currentColor;
 			display: block;
-			height: 40px;
+			height: 44px;
 			pointer-events: none;
-			width: 40px;
+			width: 44px;
 		}";
 	}
 

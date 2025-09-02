@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Shrinking Logo Sticky Header\n"
-"POT-Creation-Date: 2025-07-27 20:41+0200\n"
+"POT-Creation-Date: 2025-09-02 16:25+0200\n"
 "PO-Revision-Date: 2025-04-26 11:49+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.7\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: shrinking-logo-sticky-header.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -19,90 +19,92 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: shrinking-logo-sticky-header.php:195
+#: shrinking-logo-sticky-header.php:238
 msgid "We would appreciate a review of the plugin"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-#: shrinking-logo-sticky-header.php:200
+#: shrinking-logo-sticky-header.php:243
 msgid "Dynamic Header & Navigation for Block Themes"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:202
+#: shrinking-logo-sticky-header.php:245
 msgid "– thanks a lot :-)"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:205
+#: shrinking-logo-sticky-header.php:248
 msgid ""
 "Dynamic Header & Navigation for Block Themes – Settings: Version "
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:211
+#: shrinking-logo-sticky-header.php:254
 msgid "Height of the shrunk header (px):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:215
+#: shrinking-logo-sticky-header.php:258
+msgid "Disable inner spacing (padding) in header?"
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:264
 msgid "Animation duration (seconds):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:219
+#: shrinking-logo-sticky-header.php:268
 msgid "Normal height of header (px):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:223
+#: shrinking-logo-sticky-header.php:272
 msgid "Logo shrinking factor (Value in 0.05 steps):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:227
+#: shrinking-logo-sticky-header.php:276
 msgid "Move the shrunk logo to the left (rem):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:233
+#: shrinking-logo-sticky-header.php:282
 msgid "Hide header on scroll down, show header on scroll up:"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:245
+#: shrinking-logo-sticky-header.php:294
 msgid ""
 "A breakpoint is a screen width where the website layout changes to "
 "adapt for different devices like mobiles or desktops. If the "
 "breakpoint remains set at 599px, then the breakpoint will be adopted "
-"by the theme without change, even if the breakpoint is set at 599px "
-"in the theme, for example."
+"by the theme without change."
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:248
-msgid "Breakpoint Navigation (px):"
+#: shrinking-logo-sticky-header.php:297
+msgid "Breakpoint Navigation (px) - Standard: 599:"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:251
-msgid "Standard: 599"
+#: shrinking-logo-sticky-header.php:303
+msgid ""
+"Enable Text <Menu> below mobile Icon and display larger mobile menu "
+"Icon (Hamburger) - better for accessibility reasons:"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:259
+#: shrinking-logo-sticky-header.php:309
+msgid "Label Text <Menu> (max. 6 characters): "
+msgstr ""
+
+#: shrinking-logo-sticky-header.php:319
 msgid ""
 "Off-canvas is a hidden navigation panel that slides in from the side "
 "of the screen, providing a space-saving way to access menu options "
 "without cluttering the main content area."
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:262
+#: shrinking-logo-sticky-header.php:322
 msgid "Activate Off-Canvas (CSS Rules):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:265
-msgid "Activates special CSS rules for Off-Canvas in Block Themes."
-msgstr ""
-
-#: shrinking-logo-sticky-header.php:269
+#: shrinking-logo-sticky-header.php:328
 msgid ""
-"Option for the speed of the Off-Canvas fade-in (Value in 0.1 steps):"
+"Option for the speed of the Off-Canvas fade-in (Value in 0.1 steps - "
+"The smaller the value, the faster the fade-in):"
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:272
-msgid "The smaller the value, the faster the fade-in."
-msgstr ""
-
-#: shrinking-logo-sticky-header.php:282
+#: shrinking-logo-sticky-header.php:340
 msgid ""
 "The header is normally transparent. However, you can set the "
 "background color for the header in the template part of your block "
@@ -110,14 +112,8 @@ msgid ""
 "set automatically using the following settings."
 msgstr ""
 
-#: shrinking-logo-sticky-header.php:285
+#: shrinking-logo-sticky-header.php:343
 msgid "Activate Background Color for Header (CSS Rules):"
-msgstr ""
-
-#: shrinking-logo-sticky-header.php:288
-msgid ""
-"Activates special CSS rules for Background Color (Header) in Block "
-"Themes."
 msgstr ""
 
 #. Plugin URI of the plugin/theme

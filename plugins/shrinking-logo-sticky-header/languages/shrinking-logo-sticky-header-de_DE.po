@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Shrinking Logo Sticky Header\n"
-"POT-Creation-Date: 2025-07-27 20:40+0200\n"
-"PO-Revision-Date: 2025-07-27 20:41+0200\n"
+"POT-Creation-Date: 2025-09-02 16:25+0200\n"
+"PO-Revision-Date: 2025-09-02 16:28+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.7\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: shrinking-logo-sticky-header.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -19,71 +19,81 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: shrinking-logo-sticky-header.php:195
+#: shrinking-logo-sticky-header.php:238
 msgid "We would appreciate a review of the plugin"
 msgstr "Wir würden uns über eine Bewertung des Plugins freuen"
 
 #. Plugin Name of the plugin/theme
-#: shrinking-logo-sticky-header.php:200
+#: shrinking-logo-sticky-header.php:243
 msgid "Dynamic Header & Navigation for Block Themes"
 msgstr "Dynamic Header & Navigation for Block Themes"
 
-#: shrinking-logo-sticky-header.php:202
+#: shrinking-logo-sticky-header.php:245
 msgid "– thanks a lot :-)"
 msgstr "- vielen Dank :-)"
 
-#: shrinking-logo-sticky-header.php:205
+#: shrinking-logo-sticky-header.php:248
 msgid "Dynamic Header & Navigation for Block Themes – Settings: Version "
 msgstr "Dynamic Header & Navigation for Block Themes - Einstellungen "
 
-#: shrinking-logo-sticky-header.php:211
+#: shrinking-logo-sticky-header.php:254
 msgid "Height of the shrunk header (px):"
 msgstr "Höhe des geschrumpften Headers (px):"
 
-#: shrinking-logo-sticky-header.php:215
+#: shrinking-logo-sticky-header.php:258
+msgid "Disable inner spacing (padding) in header?"
+msgstr "Inneren Abstand (Padding) im Header deaktivieren?"
+
+#: shrinking-logo-sticky-header.php:264
 msgid "Animation duration (seconds):"
 msgstr "Animationsdauer (Sekunden):"
 
-#: shrinking-logo-sticky-header.php:219
+#: shrinking-logo-sticky-header.php:268
 msgid "Normal height of header (px):"
 msgstr "Normale Höhe des Headers (px):"
 
-#: shrinking-logo-sticky-header.php:223
+#: shrinking-logo-sticky-header.php:272
 msgid "Logo shrinking factor (Value in 0.05 steps):"
 msgstr "Schrumpfungsfaktor des Logos (Wert in 0,05 Schritten):"
 
-#: shrinking-logo-sticky-header.php:227
+#: shrinking-logo-sticky-header.php:276
 msgid "Move the shrunk logo to the left (rem):"
 msgstr "Das verkleinerte Logo nach links verschieben (rem):"
 
-#: shrinking-logo-sticky-header.php:233
+#: shrinking-logo-sticky-header.php:282
 msgid "Hide header on scroll down, show header on scroll up:"
 msgstr ""
 "Kopfzeile beim Herunterscrollen ausblenden, Kopfzeile beim Hochscrollen "
 "anzeigen:"
 
-#: shrinking-logo-sticky-header.php:245
+#: shrinking-logo-sticky-header.php:294
 msgid ""
 "A breakpoint is a screen width where the website layout changes to adapt for "
 "different devices like mobiles or desktops. If the breakpoint remains set at "
-"599px, then the breakpoint will be adopted by the theme without change, even "
-"if the breakpoint is set at 599px in the theme, for example."
+"599px, then the breakpoint will be adopted by the theme without change."
 msgstr ""
 "Ein Breakpoint ist eine Bildschirmbreite, bei der sich das Layout der "
 "Website an verschiedene Geräte wie Mobiltelefone oder Desktop-Computer "
 "anpasst. Wenn der Breakpoint auf 599px festgelegt bleibt, wird er vom Theme "
-"unverändert übernommen, selbst wenn der Breakpoint beispielsweise im Theme "
-"auf 599px festgelegt ist."
+"unverändert übernommen."
 
-#: shrinking-logo-sticky-header.php:248
-msgid "Breakpoint Navigation (px):"
-msgstr "Breakpoint Navigation (px):"
+#: shrinking-logo-sticky-header.php:297
+msgid "Breakpoint Navigation (px) - Standard: 599:"
+msgstr "Breakpoint Navigation (px) - Standard: 599:"
 
-#: shrinking-logo-sticky-header.php:251
-msgid "Standard: 599"
-msgstr "Standard: 599"
+#: shrinking-logo-sticky-header.php:303
+msgid ""
+"Enable Text <Menu> below mobile Icon and display larger mobile menu Icon "
+"(Hamburger) - better for accessibility reasons:"
+msgstr ""
+"Aktiviert den Text <Menu> unter dem mobilen Icon und zeigt ein größeres "
+"mobiles Menü-Icon (Hamburger) an - aus Gründen der Barrierefreiheit besser:"
 
-#: shrinking-logo-sticky-header.php:259
+#: shrinking-logo-sticky-header.php:309
+msgid "Label Text <Menu> (max. 6 characters): "
+msgstr "Bezeichnung <Menu> (max. 6 Zeichen): "
+
+#: shrinking-logo-sticky-header.php:319
 msgid ""
 "Off-canvas is a hidden navigation panel that slides in from the side of the "
 "screen, providing a space-saving way to access menu options without "
@@ -93,25 +103,19 @@ msgstr ""
 "Bildschirms eingeblendet wird und eine platzsparende Möglichkeit bietet, auf "
 "Menüoptionen zuzugreifen, ohne den Hauptinhaltsbereich zu überladen."
 
-#: shrinking-logo-sticky-header.php:262
+#: shrinking-logo-sticky-header.php:322
 msgid "Activate Off-Canvas (CSS Rules):"
 msgstr "Aktivierung Off-Canvas (CSS-Regeln):"
 
-#: shrinking-logo-sticky-header.php:265
-msgid "Activates special CSS rules for Off-Canvas in Block Themes."
-msgstr "Aktiviert spezielle CSS-Regeln für Off-Canvas in Block Themes."
-
-#: shrinking-logo-sticky-header.php:269
-msgid "Option for the speed of the Off-Canvas fade-in (Value in 0.1 steps):"
+#: shrinking-logo-sticky-header.php:328
+msgid ""
+"Option for the speed of the Off-Canvas fade-in (Value in 0.1 steps - The "
+"smaller the value, the faster the fade-in):"
 msgstr ""
-"Option für die Geschwindigkeit des Off-Canvas-Einblendens (Wert in 0,1 "
-"Schritten):"
+"Option für die Geschwindigkeit der Off-Canvas-Einblendung (Wert in 0,1 "
+"Schritten - je kleiner der Wert, desto schneller die Einblendung):"
 
-#: shrinking-logo-sticky-header.php:272
-msgid "The smaller the value, the faster the fade-in."
-msgstr "Je kleiner der Wert, desto schneller die Einblendung."
-
-#: shrinking-logo-sticky-header.php:282
+#: shrinking-logo-sticky-header.php:340
 msgid ""
 "The header is normally transparent. However, you can set the background "
 "color for the header in the template part of your block theme (recommended). "
@@ -123,16 +127,9 @@ msgstr ""
 "festlegen (empfohlen). Die Hintergrundfarbe für die Kopfzeile kann auch "
 "automatisch über die folgenden Einstellungen festgelegt werden."
 
-#: shrinking-logo-sticky-header.php:285
+#: shrinking-logo-sticky-header.php:343
 msgid "Activate Background Color for Header (CSS Rules):"
 msgstr "Aktivierung der Hintergrundfarbe (CSS-Regeln):"
-
-#: shrinking-logo-sticky-header.php:288
-msgid ""
-"Activates special CSS rules for Background Color (Header) in Block Themes."
-msgstr ""
-"Aktiviert spezielle CSS-Regeln für die Hintergrundfarbe (Header) in Block "
-"Themes."
 
 #. Plugin URI of the plugin/theme
 msgid "https://haurand.com/plugin-shrinking-logo-sticky-header/"
@@ -155,6 +152,21 @@ msgstr "Hans-Gerd Gerhards"
 #. Author URI of the plugin/theme
 msgid "https://haurand.com/author/hgg/"
 msgstr "https://haurand.com/author/hgg/"
+
+#~ msgid "Standard: 599"
+#~ msgstr "Standard: 599"
+
+#~ msgid "Activates special CSS rules for Off-Canvas in Block Themes."
+#~ msgstr "Aktiviert spezielle CSS-Regeln für Off-Canvas in Block Themes."
+
+#~ msgid "The smaller the value, the faster the fade-in."
+#~ msgstr "Je kleiner der Wert, desto schneller die Einblendung."
+
+#~ msgid ""
+#~ "Activates special CSS rules for Background Color (Header) in Block Themes."
+#~ msgstr ""
+#~ "Aktiviert spezielle CSS-Regeln für die Hintergrundfarbe (Header) in Block "
+#~ "Themes."
 
 #~ msgid ""
 #~ "A breakpoint is a screen width where the website layout changes to adapt "
