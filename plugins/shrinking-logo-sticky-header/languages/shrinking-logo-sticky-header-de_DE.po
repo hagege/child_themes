@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Shrinking Logo Sticky Header\n"
-"POT-Creation-Date: 2025-09-02 16:25+0200\n"
-"PO-Revision-Date: 2025-09-02 16:28+0200\n"
+"POT-Creation-Date: 2025-09-04 21:14+0200\n"
+"PO-Revision-Date: 2025-09-04 21:16+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -41,8 +41,12 @@ msgid "Height of the shrunk header (px):"
 msgstr "Höhe des geschrumpften Headers (px):"
 
 #: shrinking-logo-sticky-header.php:258
-msgid "Disable inner spacing (padding) in header?"
-msgstr "Inneren Abstand (Padding) im Header deaktivieren?"
+msgid ""
+"Disable inner spacing (padding) in header (may be helpful if the height of "
+"the shrinked header is very low)?"
+msgstr ""
+"Innere Abstände (Padding) im Header deaktivieren (kann hilfreich sein, wenn "
+"die Höhe des geschrumpften Headers sehr gering ist)?"
 
 #: shrinking-logo-sticky-header.php:264
 msgid "Animation duration (seconds):"
@@ -152,6 +156,9 @@ msgstr "Hans-Gerd Gerhards"
 #. Author URI of the plugin/theme
 msgid "https://haurand.com/author/hgg/"
 msgstr "https://haurand.com/author/hgg/"
+
+#~ msgid "Disable inner spacing (padding) in header?"
+#~ msgstr "Inneren Abstand (Padding) im Header deaktivieren?"
 
 #~ msgid "Standard: 599"
 #~ msgstr "Standard: 599"

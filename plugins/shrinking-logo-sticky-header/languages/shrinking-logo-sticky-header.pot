@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Shrinking Logo Sticky Header\n"
-"POT-Creation-Date: 2025-09-02 16:25+0200\n"
+"POT-Creation-Date: 2025-09-04 21:14+0200\n"
 "PO-Revision-Date: 2025-04-26 11:49+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -42,7 +42,9 @@ msgid "Height of the shrunk header (px):"
 msgstr ""
 
 #: shrinking-logo-sticky-header.php:258
-msgid "Disable inner spacing (padding) in header?"
+msgid ""
+"Disable inner spacing (padding) in header (may be helpful if the "
+"height of the shrinked header is very low)?"
 msgstr ""
 
 #: shrinking-logo-sticky-header.php:264
