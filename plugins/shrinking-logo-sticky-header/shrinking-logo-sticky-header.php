@@ -255,7 +255,7 @@ function slsh_options_page(): void {
 					<td><input type="number" id="slsh_header_shrink_height" name="slsh_header_shrink_height" value="<?php echo esc_attr( get_option( 'slsh_header_shrink_height', 80 ) ); ?>" min="40" max="300" /></td>
 				</tr>
 				<tr>
-					<th scope="row"><label style="display: block; text-align: left" for="slsh_disable_padding"><?php esc_html_e( 'Disable inner spacing (padding) in header?', 'shrinking-logo-sticky-header' ); ?></label></th>
+					<th scope="row"><label style="display: block; text-align: left" for="slsh_disable_padding"><?php esc_html_e( 'Disable inner spacing (padding) in header (may be helpful if the height of the shrinked header is very low)?', 'shrinking-logo-sticky-header' ); ?></label></th>
 					<td>
 						<input type="checkbox" id="slsh_disable_padding" name="slsh_disable_padding" value="yes" <?php checked( 'yes', get_option( 'slsh_disable_padding', 'no' ) ); ?> />
 					</td>
