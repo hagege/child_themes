@@ -431,11 +431,9 @@ function slsh_dynamic_css(): void {
 			padding-top: 4px;
 			text-align: center;
 		}
-		.wp-block-navigation__responsive-container-open svg {
-			fill: currentColor;
-			display: block;
+		.wp-block-navigation__responsive-container-open svg,
+		.wp-block-navigation__responsive-container-close svg{
 			height: 44px;
-			pointer-events: none;
 			width: 44px;
 		}";
 	}
