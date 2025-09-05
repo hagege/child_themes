@@ -431,6 +431,7 @@ function slsh_dynamic_css(): void {
 			padding-top: 4px;
 			text-align: center;
 		}
+		/* changed height and width for SVG close and open (mobile menu) */
 		.wp-block-navigation__responsive-container-open svg,
 		.wp-block-navigation__responsive-container-close svg{
 			height: 44px;
