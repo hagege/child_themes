@@ -30,7 +30,6 @@ p.has-text-align-center.has-contrast-background-color.has-text-color.has-backgro
   padding: 5px;
 }
 
-
 /* Änderung der Schriftfarbe für Balken "Veranstaltung erfassen" bei Terminen */
 .tribe-events-before-html a.button-mitglied,
 .tribe-events-after-html a.button-mitglied {
@@ -453,11 +452,11 @@ max-height: 400px; */
 }
 
 
-/* nur zum Testen - besser in Customizer ändern */
+/* nur zum Testen - besser in Customizer ändern 
 nav#sticky-navigation {
   opacity: 0.9;
 }
-
+*/
 
 
 /* .header-wrap .site-header {
