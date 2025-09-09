@@ -378,7 +378,7 @@ function slsh_dynamic_css(): void {
 	$hide_header        = get_option( 'slsh_hide_header', 'no' );
 	$disable_padding    = get_option( 'slsh_disable_padding', 'no' );
 	$enable_text_menu   = get_option( 'slsh_enable_text_menu', 'no' );
-	$text_menu          = get_option( 'slsh_text_menu', 'Menu' );
+    $text_menu          = sanitize_text_field( get_option( 'slsh_text_menu', 'Menu' ) );
 
 	$custom_css = "
         header.wp-block-template-part {
@@ -413,7 +413,7 @@ function slsh_dynamic_css(): void {
 	if ( 'yes' === $disable_padding ) {
 		$custom_css .= "
 			/* Set padding to 0px in header */
-			header.site-header.wp-block-template-part header.wp-block-group {
+			header.wp-block-template-part.shrink .wp-block-group {
 				padding-top: 0px !important;
 				padding-bottom: 0px !important;
 		}";
@@ -422,7 +422,7 @@ function slsh_dynamic_css(): void {
 
 	if ( 'yes' === $enable_text_menu ) {
 		// Save text before inserting into CSS:
-		$safe_text = addslashes( esc_js( $text_menu ) );
+		$safe_text = esc_html( sanitize_text_field( $text_menu ) );
 		$custom_css .= "
 		/* Enable Text Menu below mobile Icon */
 		  .wp-block-navigation__responsive-container-open::after {
