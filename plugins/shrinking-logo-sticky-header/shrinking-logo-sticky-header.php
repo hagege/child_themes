@@ -81,6 +81,9 @@ function slsh_register_settings(): void {
 	// Activate text menu below the mobile menu (hamburger)
 	add_option( 'slsh_enable_text_menu', 'no' );
 	
+	// Description for text menu below the mobile menu (hamburger)
+	add_option( 'slsh_text_menu', 'Menu' );
+	
 
 	register_setting(
 		'slsh_options_group',

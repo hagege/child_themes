@@ -23,5 +23,11 @@ delete_option( 'slsh_logo_in_header_shrink_height' );
 delete_option( 'slsh_enable_nav_css' );
 delete_option( 'slsh_nav_breakpoint' );
 delete_option( 'slsh_enable_off_canvas' );
+delete_option( 'slsh_off_canvas_speed' );
 delete_option( 'slsh_logo_in_header_shrink_left' );
 delete_option( 'slsh_enable_background_color' );
+delete_option( 'slsh_hide_header' );
+delete_option( 'slsh_disable_padding' );
+delete_option( 'slsh_enable_text_menu' );
+delete_option( 'slsh_text_menu' );
+
