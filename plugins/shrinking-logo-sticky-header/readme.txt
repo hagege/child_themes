@@ -72,7 +72,7 @@ Yes, of course:
 
 = Who are you?
 I'am Hans-Gerd, a WordPress enthusiast.
-My work on this plugin will be sponsored by [https://haurand.com/] (https://haurand.com/)
+My work on this plugin will be sponsored by [https://haurand.com/](https://haurand.com/)
 
 = How can I report security bugs? ###
 You can report security bugs through the Patchstack Vulnerability Disclosure Program. The Patchstack team helps validate, triage and handle any security vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database)
@@ -94,7 +94,7 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 * Added: Option for disable inner spacing (padding) in header
 * Added: Option to enable Text <Menu> below mobile Icon and display larger mobile menu Icon (Hamburger) - better for accessibility reasons
 * Enhancement: Height and width of mobile icon (SVG) changed to 44px (AAA) when the above option is used
-* Added: Option to Label Text <Menu>
+* Added: Option to Label Text <Menu> below mobile Icon
 * Enhancements: Explanations and Design in the settings cleaned up
 
 = 1.3.2: August 1, 2025 =
