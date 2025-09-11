@@ -37,6 +37,11 @@ a.gb-button:focus {
   outline-offset: 2px;
 }
 
+/* Copright größer */
+.inside-site-info {
+  font-size: 1.5rem;
+}
+
 /* Testbereich BFSG */
 
 /* Kasten auf Lindberg-Brillen-Seite */
