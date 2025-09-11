@@ -10,23 +10,38 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
   --dunkelblau-color: rgba(29, 31, 60, 1);
   --dunkelblau-color-transpa: rgba(29, 31, 60, 0.7);
   --orange-color: rgba(248, 89, 0, 1);
-	--orange-color-transpa: rgba(248, 89, 0, 0.1);
+  --orange-color-transpa: rgba(248, 89, 0, 0.1);
   --weiss-color: rgba(255, 255, 255, 1);
-	--grau-color-transpa: rgba(241, 241, 241, 0.5); 
-  --box-shadow: 15px 15px 30px 0px rgba(29,31,60,0.5);
+  --grau-color-transpa: rgba(241, 241, 241, 0.5);
+  --box-shadow: 15px 15px 30px 0px rgba(29, 31, 60, 0.5);
   --video-max-width-default: 100%;
   --wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
   --wp--preset--font-size--cover-paragraph: clamp(2rem, 10vw, 6rem);
   --wp--preset--font-size--h2: clamp(1.5rem, 2vw, 6rem);
-    /* funktioniert nicht, daher nur definiert */
---rot-color_transpa: rgba(191, 25, 25, 0.5);
+  /* funktioniert nicht, daher nur definiert */
+  --rot-color_transpa: rgba(191, 25, 25, 0.5);
   --mobile-breakpoint: 767px;
   --tablet-breakpoint: 900px;
 }
 
+/* Testbereich BFSG */
+.entry-content p {
+  font-size: 1.5rem;
+}
+
+/* alle Buttons mit doppelter Linie als Outline */
+a.gb-button:hover,
+a.gb-button:active,
+a.gb-button:focus {
+  outline: 3px solid var(--dunkelblau);
+  outline-offset: 2px;
+}
+
+/* Testbereich BFSG */
+
 /* Kasten auf Lindberg-Brillen-Seite */
-.lindberg_raster > .gb-grid-column {
-    z-index: 5;
+.lindberg_raster>.gb-grid-column {
+  z-index: 5;
 }
 
 /* smooth scrolling und korrekte Ansteuerung interner Anker */
@@ -42,44 +57,43 @@ a:not([href]) {
 
 
 /* Hover bei social icons */
-.wp-block-image.social_icon :hover
-{
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    transform: scale(1.05);
-    -webkit-transform: scale(1.07);
-    -moz-transform: scale(1.07);
-	  -webkit-transition: all .9s;
-    -moz-transition: all .9s;
-    transition: all .9s;
+.wp-block-image.social_icon :hover {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  transform: scale(1.05);
+  -webkit-transform: scale(1.07);
+  -moz-transform: scale(1.07);
+  -webkit-transition: all .9s;
+  -moz-transition: all .9s;
+  transition: all .9s;
 }
 
 /* Hintergrundfarbe für Overlay bei Embed Privacy */
 
 .embed-privacy-overlay {
-    background-color: var(--dunkelblau-color)!important;
-    transition: background-color 1s!important;
-    z-index: 5!important;
+  background-color: var(--dunkelblau-color) !important;
+  transition: background-color 1s !important;
+  z-index: 5 !important;
 }
 
 .embed-privacy-overlay:hover {
-  background-color: var(--dunkelblau-color-transpa)!important;
-  z-index: 5!important; 
+  background-color: var(--dunkelblau-color-transpa) !important;
+  z-index: 5 !important;
 }
 
 /* Auf mobilen Geräten Bild zuerst und dann Textblock */
 @media (max-width: 767px) {
-	.gb-grid-wrapper.raster_responsive {
-			flex-direction: column-reverse;
-	}
+  .gb-grid-wrapper.raster_responsive {
+    flex-direction: column-reverse;
+  }
 }
 
 /* Auf mobilen Geräten Filiale Haaren */
 @media (max-width: 1024px) {
-	.gb-grid-wrapper.haaren {
+  .gb-grid-wrapper.haaren {
     flex-flow: wrap-reverse;
-	}
+  }
 }
 
 /* Terminleiste oben sticky */
@@ -87,7 +101,7 @@ a:not([href]) {
   position: sticky;
   position: -webkit-sticky;
   top: 60px;
-	z-index: 10; 
+  z-index: 10;
 }
 
 
@@ -99,10 +113,10 @@ a:not([href]) {
 
 /* Anzeige des Videos auf der Startseite */
 video.background-video {
-  max-width: var(--video-max-width,var(--video-max-width-default,100%));
+  max-width: var(--video-max-width, var(--video-max-width-default, 100%));
   height: auto;
   display: block;
-/*	  max-width: 100%; */
+  /*	  max-width: 100%; */
 }
 
 
@@ -117,8 +131,9 @@ video.background-video {
 
 /* Einstellungen für das Desktop-Menü */
 @media (min-width: 769px) {
-/* nav links effect */
-.main-navigation .menu > .menu-item > a::after{
+
+  /* nav links effect */
+  .main-navigation .menu>.menu-item>a::after {
     content: "";
     position: absolute;
     right: 0;
@@ -129,23 +144,25 @@ video.background-video {
     color: var(--orange-color);
     display: block;
     width: 0;
-    height: 3px;   
-    background-color: currentcolor; 
+    height: 3px;
+    background-color: currentcolor;
     transition: 0.3s width ease;
-}
-.main-navigation .menu > .menu-item.current-menu-item > a::after,
-.main-navigation .menu > .menu-item > a:hover::after {
+  }
+
+  .main-navigation .menu>.menu-item.current-menu-item>a::after,
+  .main-navigation .menu>.menu-item>a:hover::after {
     width: 100%;
     color: var(--orange-color);
-}
+  }
 
-.main-navigation .menu > .menu-item.current-menu-item > a::after,
-.main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
-.main-navigation .menu > .menu-item > a:active::after {
-width: 100%;
-color: var(--orange-color);
-}
-/* Submenü 
+  .main-navigation .menu>.menu-item.current-menu-item>a::after,
+  .main-navigation .menu>.menu-item.current-menu-ancestor>a::after,
+  .main-navigation .menu>.menu-item>a:active::after {
+    width: 100%;
+    color: var(--orange-color);
+  }
+
+  /* Submenü 
 ul.sub-menu {
 opacity: 0.9;
 }
@@ -155,10 +172,11 @@ opacity: 0.9;
 
 /* wegen Problem mit ios */
 @media (pointer: coarse) {
-    .gb-container,
-    .gb-container:before {
-        background-attachment: initial !important;
-    }
+
+  .gb-container,
+  .gb-container:before {
+    background-attachment: initial !important;
+  }
 }
 
 /* wegen Problem mit ios
@@ -176,72 +194,75 @@ and (-webkit-min-device-pixel-ratio: 2) {
 /* Design-Anpassungen beim Formular */
 
 input.wpcf7-form-control.wpcf7-submit.has-spinner {
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    column-gap: 0.5em;
-    width: 50%;
-    font-weight: 500;
-    text-align: center;
-    padding: 15px 20px;
-    margin-right: 5%;
-    margin-bottom: 30px;
-    margin-left: 0%;
-    border: 0px solid;
-    background-color: var(--orange);
-    color: #ffffff;
-	  text-transform: uppercase;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5em;
+  width: 50%;
+  font-weight: 500;
+  text-align: center;
+  padding: 15px 20px;
+  margin-right: 5%;
+  margin-bottom: 30px;
+  margin-left: 0%;
+  border: 0px solid;
+  background-color: var(--orange);
+  color: #ffffff;
+  text-transform: uppercase;
 }
 
 input.wpcf7-form-control.wpcf7-submit.has-spinner:hover {
-	background-color: var(--dunkelblau-color);
+  background-color: var(--dunkelblau-color);
 }
 
 /* Einstellungen für Radio-Button */
-.wpcf7-form input[type=checkbox], .wpcf7-form input[type=radio] {
-/*    -webkit-appearance: inner-spin-button!important;
+.wpcf7-form input[type=checkbox],
+.wpcf7-form input[type=radio] {
+  /*    -webkit-appearance: inner-spin-button!important;
     appearance: inner-spin-button!important; */
-    width: 2rem;
-    height: 2rem;
-    accent-color: var(--orange-color);
-    margin-right: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  accent-color: var(--orange-color);
+  margin-right: 0.5rem;
 }
 
 
-.wpcf7-form input, textarea,
+.wpcf7-form input,
+textarea,
 select.wpcf7-form-control.wpcf7-select.wpcf7-validates-as-required,
 select.wpcf7-form-control.wpcf7-select {
-    background-color: var(--grau-color-transpa);
-    border-color: var(--dunkelblau-color);
-    color: black;	
-		margin-left: 0px
+  background-color: var(--grau-color-transpa);
+  border-color: var(--dunkelblau-color);
+  color: black;
+  margin-left: 0px
 }
 
 /* Datenschutz einrücken */
 span.wpcf7-list-item {
-    text-indent: -2.7em;
-    margin-left: 2.7em;
-    margin-top: 1em;
+  text-indent: -2.7em;
+  margin-left: 2.7em;
+  margin-top: 1em;
 }
 
 /* ---------------------*/
-/* Der Detail-Block mit */ 
+/* Der Detail-Block mit */
 /* einigen Anpassungen  */
 /* ---------------------*/
 summary {
   list-style: none;
-  display: flex; /* also removes the list marker */
+  display: flex;
+  /* also removes the list marker */
   align-items: center;
   padding: 0.5rem;
   font-weight: bold;
   background: var(--orange-color);
-	color: white;
+  color: white;
   border-radius: 5px;
-	margin-bottom: 1rem; 
+  margin-bottom: 1rem;
 }
 
-summary::before{
+summary::before {
   content: '>';
   transition: 0.2s;
   margin-right: 1rem;
@@ -249,20 +270,19 @@ summary::before{
 }
 
 
-details[open] > summary::before{
+details[open]>summary::before {
   transform: rotate(90deg);
 }
 
 .wp-block-details[open] summary,
-.wp-block-details summary:hover
-{
-	background: var(--dunkelblau-color);
+.wp-block-details summary:hover {
+  background: var(--dunkelblau-color);
   transition: all 0.2s ease-in-out;
 }
 
 .wp-block-details summary:focus {
-    background: var(--dunkelblau-color);
-    transition: all 0.2s ease-in-out;
+  background: var(--dunkelblau-color);
+  transition: all 0.2s ease-in-out;
 }
 
 summary::-webkit-details-marker {
@@ -270,24 +290,24 @@ summary::-webkit-details-marker {
 }
 
 .wp-block-details summary:focus {
-    outline-style: none;
+  outline-style: none;
 }
 
 /* Background content of details */
 details p {
-    background: rgba(226, 232, 240, 0.4);
-    padding: 2rem;
-    margin-top: 0;
+  background: rgba(226, 232, 240, 0.4);
+  padding: 2rem;
+  margin-top: 0;
 }
 
 @keyframes details-show {
   from {
-    opacity:0;
+    opacity: 0;
     transform: var(--details-translate, translateY(-0.5em));
   }
 }
 
-details[open] > *:not(summary),
-details[close] > *:not(summary) {
+details[open]>*:not(summary),
+details[close]>*:not(summary) {
   animation: details-show 1000ms ease-in-out;
 }
