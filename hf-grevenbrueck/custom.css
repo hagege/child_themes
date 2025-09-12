@@ -4,40 +4,63 @@
 }
 
 /* Infokasten auf der Startseite 
- .infokasten {
-     box-shadow: 1px 1px 20px rgb(0 0 0 / 20%);
-     border-right-width: 0px !important;
- }
- */
+.infokasten {
+    box-shadow: 1px 1px 20px rgb(0 0 0 / 20%);
+    border-right-width: 0px !important;
+}
+*/
 
-/* Breakpoint für mobiles Menü anpassen */
+/* Off canvas 
+@media (max-width: 1070px) {
+  .wp-block-navigation__responsive-container {
+    right: -70vw;
+    left: auto;
+    width: 70vw;
+    transition: none; 
+    border-radius: 0;
+  }
+
+  .wp-block-navigation__responsive-container.is-menu-open {
+    animation: slideInMenu 0.5s linear forwards
+  }
+  @keyframes slideInMenu {
+    from {
+      right: -70vw;
+    }
+    to {
+      right: 0vw;
+    }
+  }
+}
+*/
+/* Breakpoint für mobiles Menü anpassen 
 @media screen and (max-width: 1070px) {
-    .wp-block-navigation__responsive-container-open {
-        display: block !important;
-    }
+  .wp-block-navigation__responsive-container-open {
+    display: block !important;
+  }
 
-    .wp-block-navigation__responsive-container:not(.is-menu-open.has-modal-open) {
-        display: none !important;
-    }
+  .wp-block-navigation__responsive-container:not(.is-menu-open.has-modal-open) {
+    display: none !important;
+  }
 }
-
-/* Schriftzug Menü */
+*/
+/* Schriftzug Menü 
 @media screen and (min-width: 1070px) {
-    p.schrift_menue {
-        display: none;
-    }
+p.schrift_menue {
+   display: none;
+  }
 }
-
+*/
 
 /* Desktop (4 Spalten) 
- .grid-hauptseite {
-     box-shadow: 1px 1px 20px rgb(0 0 0 / 20%);
-    display: grid;
-     grid-template-columns: repeat(4, 1fr);
-     gap: 1rem; 
- 
- }
- */
+.grid-hauptseite {
+    box-shadow: 1px 1px 20px rgb(0 0 0 / 20%);
+   display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem; 
+
+}
+*/
 
 /* Tablet (2x2 Grid) */
 @media (max-width: 1024px) {
@@ -56,11 +79,11 @@
 /* mobiles Menü */
 /* Mobile Menü - Standard-Zustand */
 /*
- .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container a {
-   background-color: var(--wp--preset--color--custom-rot);
-   color: var(--wp--preset--color--custom-wei);
- }
- */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container a {
+  background-color: var(--wp--preset--color--custom-rot);
+  color: var(--wp--preset--color--custom-wei);
+}
+*/
 
 /* Hover- und Focus-Zustand */
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container a:hover,
