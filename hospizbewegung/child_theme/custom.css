@@ -3,26 +3,17 @@
     outline-style: solid
 }
 
-/* Rand zwischen Header und Content 
-:where(.wp-site-blocks) > * {
-    margin-block-start: 0rem;
+/* Website-Title centered */
+div.website_title_centered {
+    align-content: center;
 }
-*/
 
 /* Bildunterschriften zentriert */
 figure.wp-block-image figcaption {
     text-align: center;
 }
 
-
-/* Button: hover 
-.wp-element-button:hover, .wp-block-button__link:hover {
-    background-color: var(--wp--preset--color--contrast-3);
-    border-color: var(--wp--preset--color--contrast-3);
-    color: var(--wp--preset--color--base);
-}
-*/
-
+/* Navigation mit Unterstrich */
 a.wp-block-navigation-item__content {
     text-underline-offset: 7px;
     transition: all .2s;
@@ -39,78 +30,4 @@ a.wp-block-navigation-item__content:hover {
 
 a.wp-block-navigation-item__content:focus {
     outline: 1px dotted;
-}
-
-
-@media (min-width: 600px) {
-    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
-        display: none;
-    }
-
-    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) .wp-block-navigation__responsive-container-close {
-        display: none
-    }
-
-    .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container {
-        left: 0
-    }
-}
-
-@media (min-width: 600px) and (max-width: 800px) {
-    .wp-block-navigation__responsive-container-open:not(.always-shown) {
-        display: flex;
-    }
-}
-
-@media (min-width: 801px) {
-    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
-        display: block;
-    }
-
-    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) .wp-block-navigation__responsive-container-close {
-        display: none
-    }
-
-    .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container {
-        left: 0
-    }
-}
-
-
-/* Breakpoint für mobiles Menü */
-@media (min-width: 1060px) {
-    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
-        display: block;
-        width: 100%;
-        position: relative;
-        z-index: auto;
-        background-color: inherit;
-    }
-
-    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) .wp-block-navigation__responsive-container-close {
-        display: none;
-    }
-
-    .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container {
-        left: 0;
-    }
-
-    .wp-block-navigation__responsive-container-open:not(.always-shown) {
-        display: none;
-    }
-}
-
-@media (max-width: 1059px) {
-    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
-        display: none;
-    }
-
-    .wp-block-navigation__responsive-container-open:not(.always-shown) {
-        display: flex;
-    }
-}
-
-/* zusätzliche Einstellung bei Dynamic Header & Navigation for Block Themes */
-header.wp-block-template-part .wp-block-group p {
-    margin-top: 5px;
 }
