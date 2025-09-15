@@ -1,10 +1,13 @@
-:where(.wp-site-blocks *:focus){outline-width:2px;outline-style:solid}
+:where(.wp-site-blocks *:focus) {
+    outline-width: 2px;
+    outline-style: solid
+}
 
-/* Rand zwischen Header und Content */ 
+/* Rand zwischen Header und Content 
 :where(.wp-site-blocks) > * {
     margin-block-start: 0rem;
 }
-
+*/
 
 /* Bildunterschriften zentriert */
 figure.wp-block-image figcaption {
@@ -34,41 +37,80 @@ a.wp-block-navigation-item__content:hover {
 }
 
 
-a.wp-block-navigation-item__content:focus{
+a.wp-block-navigation-item__content:focus {
     outline: 1px dotted;
 }
 
 
 @media (min-width: 600px) {
-.wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
-display: none;
-}
+    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+        display: none;
+    }
 
-.wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) .wp-block-navigation__responsive-container-close {
-    display: none
-}
+    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) .wp-block-navigation__responsive-container-close {
+        display: none
+    }
 
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container {
-    left: 0
-}
+    .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container {
+        left: 0
+    }
 }
 
 @media (min-width: 600px) and (max-width: 800px) {
-.wp-block-navigation__responsive-container-open:not(.always-shown) {
-display: flex;
-}
+    .wp-block-navigation__responsive-container-open:not(.always-shown) {
+        display: flex;
+    }
 }
 
 @media (min-width: 801px) {
-.wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
-display: block;
+    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+        display: block;
+    }
+
+    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) .wp-block-navigation__responsive-container-close {
+        display: none
+    }
+
+    .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container {
+        left: 0
+    }
 }
 
-.wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) .wp-block-navigation__responsive-container-close {
-    display: none
+
+/* Breakpoint für mobiles Menü */
+@media (min-width: 1060px) {
+    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+        display: block;
+        width: 100%;
+        position: relative;
+        z-index: auto;
+        background-color: inherit;
+    }
+
+    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) .wp-block-navigation__responsive-container-close {
+        display: none;
+    }
+
+    .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container {
+        left: 0;
+    }
+
+    .wp-block-navigation__responsive-container-open:not(.always-shown) {
+        display: none;
+    }
 }
 
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container {
-    left: 0
+@media (max-width: 1059px) {
+    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+        display: none;
+    }
+
+    .wp-block-navigation__responsive-container-open:not(.always-shown) {
+        display: flex;
+    }
 }
+
+/* zusätzliche Einstellung bei Dynamic Header & Navigation for Block Themes */
+header.wp-block-template-part .wp-block-group p {
+    margin-top: 5px;
 }
