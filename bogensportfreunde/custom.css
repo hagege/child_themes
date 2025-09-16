@@ -1,10 +1,9 @@
-/* #######################
-smooth scrolling und korrekte Ansteuerung interner Anker
-######################### */
+/* smooth scrolling und korrekte Ansteuerung interner Anker 
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 6rem;
+  scroll-behavior: smooth;
+  scroll-padding-top:6rem;
 }
+*/
 
 /* Für Dateidownload */
 .wp-block-file a {
@@ -80,11 +79,6 @@ details[close]>*:not(summary) {
     animation: details-show 1000ms ease-in-out;
 }
 
-
-/* Schriftzug Menü immer unter Hambuger */
-.mobile_menu {
-    flex-wrap: nowrap;
-}
 
 /* Logo beim Shrinken linksbündig */
 img.custom-logo {
@@ -173,13 +167,6 @@ h3.tribe-events-calendar-month__calendar-event-title.tribe-common-h8.tribe-commo
     outline: 2px;
 }
 
-
-/* Schriftzug Menü */
-@media screen and (min-width: 1070px) {
-    p.schrift_menue {
-        display: none;
-    }
-}
 
 /* Links im Footer besser darstellen */
 .footer_links a {
