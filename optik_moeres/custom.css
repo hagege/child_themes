@@ -29,11 +29,26 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
   font-size: 1.5rem;
 }
 
+/* Schrift größer bei WS Form lite */
+.wsf-label,
+.wsf-field-label {
+  font-size: 1.5rem !important;
+  /* font-weight: 600;  optional: für Fettdruck */
+}
+
 /* alle Buttons mit doppelter Linie als Outline */
 a.gb-button:hover,
 a.gb-button:active,
 a.gb-button:focus {
   outline: 3px solid var(--dunkelblau);
+  outline-offset: 2px;
+}
+
+/* Bei Fragen und Termin */
+a.gb-button.fragen_termin:hover,
+a.gb-button.fragen_termin:active,
+a.gb-button.fragen_termin:focus {
+  outline: 3px solid var(--orange);
   outline-offset: 2px;
 }
 
