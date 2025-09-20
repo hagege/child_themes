@@ -29,48 +29,18 @@ mittelgrau: #A9B2B5 - RGB: (169, 178, 181)
   font-size: 1.5rem;
 }
 
-/* Bullets auf der Startseite 
- * 
- * 
-/* Farbe und Größe der aktiven und inaktiven Bullets */
-.swiper-pagination-bullet-active {
-  opacity: var(--swiper-pagination-bullet-opacity, 1);
-  background: var(--wp--preset--color--dunkelblau);
-
+/* Navigation im Footer */
+ul.wp-block-list.footer_navigation {
+  list-style: none;
+  display: flex;
+  gap: 0.5em;
+  padding: 0;
 }
 
-.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
-.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
-  transform: translateX(-50%);
-  width: 300px !important;
-  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 6px);
+ul.wp-block-list.footer_navigation li:not(:first-child)::before {
+  content: " | ";
+  /* color: #888;       /* Pipe-Farbe anpassen */
 }
-
-
-span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-bullet-active-main {
-  width: 20px;
-  height: 20px;
-}
-
-
-span.swiper-pagination-bullet.swiper-pagination-bullet-active-next {
-  width: 18px;
-  height: 18px;
-}
-
-span.swiper-pagination-bullet.swiper-pagination-bullet-active-next-next {
-  width: 15px;
-  height: 15px;
-}
-
-
-.gs_logo_area .swiper-pagination-bullet {
-  width: 15px;
-  height: 15px;
-}
-
-
-
 
 /* Schrift größer bei WS Form lite */
 .wsf-label,
