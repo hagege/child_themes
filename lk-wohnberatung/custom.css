@@ -22,6 +22,15 @@
     outline-width: 4px;
 }
 
+p.wpgmza-centered {
+    text-align: center;
+}
+
+.wpgmza-gdpr-compliance {
+    border: thin solid;
+    padding: 0.4em;
+}
+
 /* Damit das Suchfeld das Menü nicht überdeckt */
 input#wp-block-search__input-3 {
     z-index: 0 !important;
