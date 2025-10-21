@@ -13,7 +13,8 @@ wp_enqueue_style( 'child-theme-css', get_stylesheet_directory_uri() .'/style.css
 }
 add_action( 'wp_enqueue_scripts', 'child_theme_styles' );
 
-
+/* XML-RPC-API deaktivieren */
+add_filter('xmlrpc_enabled', '__return_false');
 
 /*----------------------------------------------------------------*/
 /* Start: Alle Medien zeigen - abschalten von jeweils 40 Medien
@@ -150,4 +151,25 @@ function circles_wp_register_block_styles() {
        )
    );
 }
+
+/* Restrict searches to posts only
+function limit_search_posts($query) {
+if ( ! is_admin() && $query->is_search() ) {
+   $query->set('post_type', 'post');
+}
+   return $query;
+}
+add_filter('pre_get_posts', 'limit_search_posts');
+*/
+
+/**
+ * Entfernt Bilder oder Blöcke mit der CSS-Klasse "rss-hide" aus dem RSS-Feed.
+ */
+function my_hide_rss_images_with_class( $block_content, $block ) {
+    if ( is_feed() && strpos( $block_content, 'rss-hide' ) !== false ) {
+        return ''; // Block auslassen
+    }
+    return $block_content;
+}
+add_filter( 'render_block', 'my_hide_rss_images_with_class', 10, 2 );
 ?>
