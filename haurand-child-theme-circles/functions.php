@@ -172,4 +172,13 @@ function my_hide_rss_images_with_class( $block_content, $block ) {
     return $block_content;
 }
 add_filter( 'render_block', 'my_hide_rss_images_with_class', 10, 2 );
-?>
+
+function featured_image_in_rss($content) {
+    global $post;
+    if (has_post_thumbnail($post->ID)) {
+        $content = '<div>' . get_the_post_thumbnail($post->ID, 'large', array('style' => 'margin-bottom: 15px;')) . '</div>' . $content;
+    }
+    return $content;
+}
+add_filter('the_excerpt_rss', 'featured_image_in_rss');
+add_filter('the_content_feed', 'featured_image_in_rss');
