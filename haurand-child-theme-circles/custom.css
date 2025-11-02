@@ -1,5 +1,5 @@
 /* wenn das featured image oben zentriert werden soll */
-.postid-16311 img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
+figure.featured_image_top_center img {
     object-position: top center;
 }
 
@@ -13,6 +13,17 @@
 .page-id-2700 img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
     object-position: 80% top;
 }
+
+/* Formular: Datenschutz */
+.noptin-form-field-wrapper.noptin-form-field-consent.noptin-optin-field-wrapper.noptin-optin-field-consent {
+    line-height: 1.2;
+    font-size: 0.7em;
+}
+
+input.noptin-checkbox-form-field.noptin-gdpr-checkbox-wrapper {
+    margin-right: 10px;
+}
+
 
 /* Clickable Cards */
 .haurand-card {
