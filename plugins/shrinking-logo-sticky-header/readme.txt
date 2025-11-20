@@ -5,9 +5,9 @@ Donate link:
 Contributors: @hage
 Tags: Block Theme, Header, shrink, breakpoint, off-canvas
 Requires at least: 
-Tested up to: 6.8
+Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.4
+Stable tag: 1.4.1
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,6 +28,7 @@ Options:
 * Option to disable inner spacing (padding) in header (added in Version 1.4)
 * Option to enable Text <Menu> below mobile Icon and display larger mobile menu Icon (Hamburger) - better for accessibility reasons (added in Version 1.4)
 * Option to Label Text <Menu> (added in Version 1.4)
+* Option: Menu does not appear as sticky on mobile devices - may be better for accessibility reasons (added in Version 1.4.1)
 
 
 Dynamic Header & Navigation for Block Themes (Previous name of the plugin: Shrinking Logo Sticky Header) is a lightweight WordPress plugin developed specifically as a navigation solution for most Block Themes. 
@@ -60,6 +61,9 @@ For this reason, the background colour of the outer group block for the header m
 If the header has a background colour, then the header ‘covers’ the content when scrolling. See also the screenshot. This is the recommended procedure.
 If the recommended option described above does not work for you, you can also set the background colour for the header automatically via the settings.
 
+= The header with the navigation is too high on mobile devices and therefore takes up too much space on the display. Can this be fixed? =
+Yes, no problem at all: From version 1.4.1 onwards, you can optionally deactivate the sticky option on mobile devices. Please see setup of the Plugin.
+
 = Can you show me examples that demonstrate these effects? =
 
 Yes, with pleasure:
@@ -89,6 +93,11 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 4. Click on `Activate plugin`
 
 == Changelog ==
+= 1.4.1: November 20, 2025 =
+* Added Option: Menu does not appear as sticky on mobile devices - may be better for accessibility reasons
+* Fix: ID in form field corrected
+* Tested up to WordPress 6.9
+
 
 = 1.4: September 10, 2025 =
 * Added: Option for disable inner spacing (padding) in header

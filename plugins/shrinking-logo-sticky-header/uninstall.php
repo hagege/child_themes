@@ -30,4 +30,5 @@ delete_option( 'slsh_hide_header' );
 delete_option( 'slsh_disable_padding' );
 delete_option( 'slsh_enable_text_menu' );
 delete_option( 'slsh_text_menu' );
+delete_option( 'slsh_disable_sticky' );
 

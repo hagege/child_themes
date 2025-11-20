@@ -5,13 +5,13 @@
  * @package       shrinkingLO
  * @author        Hans-Gerd Gerhards
  * @license       gplv2
- * @version       1.4
+ * @version       1.4.1
  *
  * @wordpress-plugin
  * Plugin Name:   Dynamic Header & Navigation for Block Themes
  * Plugin URI:    https://haurand.com/plugin-shrinking-logo-sticky-header/
  * Description:   Animated shrinking header, responsive shrinking logo, custom breakpoints and off-canvas navigation – all-in-one navigation solution for most modern WordPress block themes.
- * Version:       1.4
+ * Version:       1.4.1
  * Author:        Hans-Gerd Gerhards
  * Author URI:    https://haurand.com/author/hgg/
  * Text Domain:   shrinking-logo-sticky-header
@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // set version.
-const SLSH_VERSION = '1.4';
+const SLSH_VERSION = '1.4.1';
 
 /**
  * Load language files.
@@ -83,6 +83,9 @@ function slsh_register_settings(): void {
 	
 	// Description for text menu below the mobile menu (hamburger)
 	add_option( 'slsh_text_menu', 'Menu' );
+	
+	// Deactivate shrinking on mobile
+	add_option( 'slsh_disable_sticky', 'no' );
 	
 
 	register_setting(
@@ -215,6 +218,17 @@ function slsh_register_settings(): void {
 			'default'           => 'Menu',                      // Default value if none set
 		)
 	);
+	
+	register_setting(
+		'slsh_options_group',
+		'slsh_disable_sticky',
+		array(
+			'type'              => 'string',
+			'sanitize_callback' => function ( $v ) {
+				return 'yes' === $v ? 'yes' : 'no';
+			},
+		)
+	);
 
 }
 add_action( 'admin_init', 'slsh_register_settings' );
@@ -236,16 +250,16 @@ function slsh_options_page(): void {
 	?>
 	<div style="max-width:80%; margin-left: auto; margin-right:auto; font-size: 1rem;">
 		<div class="notice notice-info">
+		  <p style="font-size: larger; font-weight: bold;">Notice:</p>
 		  <p>
-			<strong>Notice:</strong>
-			<?php esc_html_e( 'We would appreciate a review of the plugin', 'shrinking-logo-sticky-header' ); ?>
+			<?php esc_html_e( 'Thanks a lot for using our Plugin. We would appreciate a review of the Plugin', 'shrinking-logo-sticky-header' ); ?>
 			<a href="https://wordpress.org/plugins/shrinking-logo-sticky-header/#reviews"
 			   target="_blank"
 			   rel="noopener noreferrer"
 			   aria-label="Review Dynamic Header & Navigation for Block Themes on WordPress.org">
 			  <?php esc_html_e( 'Dynamic Header & Navigation for Block Themes', 'shrinking-logo-sticky-header' ); ?>
-			</a>
-			<?php esc_html_e( '– thanks a lot :-)', 'shrinking-logo-sticky-header' ); ?>
+			</a><br>
+			<?php esc_html_e( 'Thanks a lot :-)', 'shrinking-logo-sticky-header' ); ?>
 		  </p>
 		</div>
 		<h2 style="text-align: left; margin-top:30px; padding-top: 10px; padding-bottom: 10px; border-top: 2px solid #333; border-bottom: 2px solid #333;"><?php esc_html_e( 'Dynamic Header & Navigation for Block Themes – Settings: Version ', 'shrinking-logo-sticky-header' ); ?><?php if (defined('SLSH_VERSION')) echo esc_html(SLSH_VERSION); ?></h2>
@@ -278,6 +292,12 @@ function slsh_options_page(): void {
 				<tr>
 					<th scope="row"><label style="display: block; text-align: left" for="slsh_logo_in_header_shrink_left"><?php esc_html_e( 'Move the shrunk logo to the left (rem):', 'shrinking-logo-sticky-header' ); ?></label></th>
 					<td><input type="number" step="0.1" id="slsh_logo_in_header_shrink_left" name="slsh_logo_in_header_shrink_left" value="<?php echo esc_attr( get_option( 'slsh_logo_in_header_shrink_left', 0 ) ); ?>" min="0" max="8" /></td>
+				</tr>
+				<tr>
+					<th scope="row"><label style="display: block; text-align: left" for="slsh_disable_sticky"><?php esc_html_e( 'Should the menu not be displayed as a sticky menu on mobile devices? – This can be helpful for accessibility reasons: ', 'shrinking-logo-sticky-header' ); ?></label></th>
+					<td>
+						<input type="checkbox" id="slsh_disable_sticky" name="slsh_disable_sticky" value="yes" <?php checked( 'yes', get_option( 'slsh_disable_sticky', 'no' ) ); ?> />
+					</td>
 				</tr>
 				
 				<!-- Hide header on scroll down, show header on scroll up 
@@ -345,7 +365,7 @@ function slsh_options_page(): void {
 				<tr>
 					<th scope="row"><label style="display: block; text-align: left" for="slsh_enable_background_color"><?php esc_html_e( 'Activate Background Color for Header (CSS Rules):', 'shrinking-logo-sticky-header' ); ?></label></th>
 					<td>
-						<input type="checkbox" id="slsh_enable_off_canvas" name="slsh_enable_background_color" value="yes" <?php checked( 'yes', get_option( 'slsh_enable_background_color', 'no' ) ); ?> />
+						<input type="checkbox" id="slsh_enable_background_color" name="slsh_enable_background_color" value="yes" <?php checked( 'yes', get_option( 'slsh_enable_background_color', 'no' ) ); ?> />
 					</td>
 				</tr>
 
@@ -382,6 +402,7 @@ function slsh_dynamic_css(): void {
 	$disable_padding    = get_option( 'slsh_disable_padding', 'no' );
 	$enable_text_menu   = get_option( 'slsh_enable_text_menu', 'no' );
     $text_menu          = sanitize_text_field( get_option( 'slsh_text_menu', 'Menu' ) );
+	$disable_sticky     = get_option( 'slsh_disable_sticky', 'no' );
 
 	$custom_css = "
         header.wp-block-template-part {
@@ -494,6 +515,16 @@ function slsh_dynamic_css(): void {
 		/* Background Color */
 		header.wp-block-template-part {
 			background-color: var(--wp--preset--color--base);
+		}";	
+	}
+	
+	if ( 'yes' === $disable_sticky ) {
+		$custom_css .= "
+		/* Disable Sticky on mobile */
+		@media screen and (max-width: {$nav_breakpoint}px) {
+			header.wp-block-template-part {
+				 position: inherit;
+			}
 		}";	
 	}
 
