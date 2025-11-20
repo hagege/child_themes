@@ -1,0 +1,5 @@
+/* style.css - Spezielle Effekte */
+.wp-block-button:hover {
+    transform: scale(1.01);
+    transition: transform 0.5s ease;
+}
