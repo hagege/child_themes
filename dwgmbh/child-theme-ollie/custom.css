@@ -3,3 +3,11 @@
     transform: scale(1.01);
     transition: transform 0.5s ease;
 }
+
+/* Links bei Hover */
+p a:hover {
+    text-decoration: none;
+    outline: 3px;
+    outline-color: var(--wp--preset--color--custom-orange);
+    outline-style: solid;
+}
