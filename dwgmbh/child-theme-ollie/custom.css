@@ -4,10 +4,27 @@
     transition: transform 0.5s ease;
 }
 
+/* Outline nur bei focus-visible 
+*:focus:not(:focus-visible) {
+    outline: none
+}
+*/
+
+
 /* Links bei Hover */
 p a:hover {
     text-decoration: none;
     outline: 3px;
     outline-color: var(--wp--preset--color--custom-orange);
     outline-style: solid;
+    outline-offset: 5px;
+}
+
+p a:focus,
+p a:focus-visible {
+    text-decoration: none;
+    outline: 5px;
+    outline-color: var(--wp--preset--color--custom-orange);
+    outline-style: solid;
+    outline-offset: 5px;
 }
