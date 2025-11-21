@@ -26,6 +26,11 @@
 					"color": "#F1F1F1",
 					"name": "mittelgrau",
 					"slug": "custom-mittelgrau"
+				},
+				{
+					"color": "#F8F8F8",
+					"name": "hellgrau",
+					"slug": "custom-hellgrau"
 				}
 			]
 		}
@@ -42,7 +47,7 @@
 				},
 				":active": {
 					"color": {
-						"background": "var(--wp--preset--color--custom-grau)",
+						"background": "var(--wp--preset--color--custom-mittelgrau)",
 						"text": "var(--wp--preset--color--custom-schwarz)"
 					}
 				},
@@ -51,7 +56,7 @@
 						"color": "var(--wp--preset--color--custom-orange)"
 					},
 					"color": {
-						"background": "var(--wp--preset--color--custom-grau)",
+						"background": "var(--wp--preset--color--custom-mittelgrau)",
 						"text": "var(--wp--preset--color--custom-schwarz)"
 					},
 					"outline": {
@@ -66,7 +71,7 @@
 						"color": "var(--wp--preset--color--custom-orange)"
 					},
 					"color": {
-						"background": "var(--wp--preset--color--custom-grau)",
+						"background": "var(--wp--preset--color--custom-mittelgrau)",
 						"text": "var(--wp--preset--color--custom-schwarz)"
 					},
 					"outline": {
