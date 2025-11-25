@@ -1,0 +1,476 @@
+<?xml version="1.0"?><artefact xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="artefact.xsd" name="ARIA Block Controls" slug="aria-block-controls" type="code-package" schemaVersion="2">
+  <file path="readme.txt">
+    <description>This file contains the readme information for the block. It is used to provide information about the block, its usage, and any other relevant details.</description>
+    <content><![CDATA[
+=== ARIA Block Controls ===
+
+Contributors:      WordPress Telex
+Tags:              block, accessibility, aria, a11y
+Tested up to:      6.8
+Stable tag:        0.1.0
+License:           GPLv2 or later
+License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+Enhance WordPress blocks with ARIA attributes for improved accessibility.
+
+== Description ==
+
+ARIA Block Controls is a powerful accessibility plugin that adds optional ARIA (Accessible Rich Internet Applications) attribute controls to all WordPress blocks. These controls appear in the Advanced panel of the block inspector, making it easy to enhance your site's accessibility without writing code.
+
+**Features:**
+
+* Add ARIA labels to any block for screen readers
+* Configure ARIA-labelledby to reference other elements
+* Customize ARIA-describedby for additional context
+* Set custom ARIA attributes for specific needs
+* Special handling for button blocks - ARIA attributes are applied to the anchor tag for proper semantics
+* Works with all WordPress core blocks and third-party blocks
+* Clean, intuitive interface integrated into the block editor
+* Fully compatible with WordPress 6.8 and above
+
+**Why ARIA Attributes Matter:**
+
+ARIA attributes help make your website more accessible to users with disabilities by providing additional semantic information to assistive technologies like screen readers. This plugin makes it simple to add these important attributes to your content without needing technical expertise.
+
+**Usage:**
+
+1. Select any block in the editor
+2. Open the block settings sidebar
+3. Navigate to the Advanced panel
+4. Fill in the desired ARIA attributes:
+   - **ARIA Label**: Provides an accessible name for the element
+   - **ARIA Labelledby**: References another element's ID for labeling
+   - **ARIA Describedby**: References another element's ID for description
+   - **Custom ARIA Attributes**: Add any other ARIA attribute in the format `attribute=value`
+
+== Installation ==
+
+1. Upload the plugin files to the `/wp-content/plugins/aria-block-controls` directory, or install the plugin through the WordPress plugins screen directly.
+2. Activate the plugin through the 'Plugins' screen in WordPress
+3. Start editing any post or page - ARIA controls will automatically appear in the Advanced panel of all blocks
+
+== Frequently Asked Questions ==
+
+= Does this work with all blocks? =
+
+Yes! The plugin adds ARIA controls to all blocks, including WordPress core blocks and third-party blocks.
+
+= How do button blocks work differently? =
+
+For button blocks, the ARIA attributes are applied to the actual anchor (`<a>`) tag inside the button, ensuring proper semantic structure and accessibility.
+
+= Can I add multiple ARIA attributes? =
+
+Yes, you can add multiple ARIA attributes using the "Custom ARIA Attributes" field. Separate multiple attributes with commas (e.g., `aria-expanded=true, aria-controls=menu-1`).
+
+= Will this affect my site's performance? =
+
+No, the plugin only adds markup to blocks where you've explicitly configured ARIA attributes. It has minimal impact on performance.
+
+= Is this WCAG compliant? =
+
+The plugin provides the tools to add ARIA attributes correctly, but it's up to you to use them appropriately according to WCAG guidelines.
+
+== Screenshots ==
+
+1. ARIA controls in the Advanced panel of the block inspector
+2. Custom ARIA attributes being configured for a block
+3. Button block with ARIA attributes applied to the anchor tag
+
+== Changelog ==
+
+= 0.1.0 =
+* Initial release
+* ARIA label control for all blocks
+* ARIA labelledby control for all blocks
+* ARIA describedby control for all blocks
+* Custom ARIA attributes field
+* Special handling for button blocks
+* Integration with Advanced panel
+
+== Privacy Policy ==
+
+This plugin does not collect, store, or transmit any user data. It only adds HTML attributes to your content as configured by you in the block editor.
+]]></content></file>
+  <file path="aria-block-controls.php">
+    <description>This file contains the block registration code in the form of a single block plugin. Any other plugin related functionality should be added to this file. All block rendering functionality should go to the `render.php` file.</description>
+    <content><![CDATA[<?php
+/**
+ * Plugin Name:       ARIA Block Controls
+ * Plugin URI:        https://wordpress.org/plugins/aria-block-controls
+ * Description:       Add optional ARIA attributes to all WordPress blocks through the Advanced panel, with special handling for button blocks.
+ * Version:           0.1.0
+ * Requires at least: 6.0
+ * Requires PHP:      7.4
+ * Author:            WordPress Telex
+ * License:           GPLv2 or later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:       aria-block-controls
+ *
+ * @package AriaBlockControls
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+/**
+ * Enqueue block editor assets
+ */
+function aria_block_controls_enqueue_editor_assets() {
+	$asset_file = include plugin_dir_path( __FILE__ ) . 'build/index.asset.php';
+
+	wp_enqueue_script(
+		'aria-block-controls-editor',
+		plugins_url( 'build/index.js', __FILE__ ),
+		$asset_file['dependencies'],
+		$asset_file['version'],
+		true
+	);
+
+	wp_enqueue_style(
+		'aria-block-controls-editor',
+		plugins_url( 'build/index.css', __FILE__ ),
+		array(),
+		$asset_file['version']
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'aria_block_controls_enqueue_editor_assets' );
+
+/**
+ * Add ARIA attributes to block wrapper
+ */
+function aria_block_controls_render_block( $block_content, $block ) {
+	if ( empty( $block['attrs'] ) ) {
+		return $block_content;
+	}
+
+	$aria_label = isset( $block['attrs']['ariaLabel'] ) ? $block['attrs']['ariaLabel'] : '';
+	$aria_labelledby = isset( $block['attrs']['ariaLabelledby'] ) ? $block['attrs']['ariaLabelledby'] : '';
+	$aria_describedby = isset( $block['attrs']['ariaDescribedby'] ) ? $block['attrs']['ariaDescribedby'] : '';
+	$custom_aria = isset( $block['attrs']['customAria'] ) ? $block['attrs']['customAria'] : '';
+
+	if ( empty( $aria_label ) && empty( $aria_labelledby ) && empty( $aria_describedby ) && empty( $custom_aria ) ) {
+		return $block_content;
+	}
+
+	$aria_attributes = array();
+
+	if ( ! empty( $aria_label ) ) {
+		$aria_attributes[] = sprintf( 'aria-label="%s"', esc_attr( $aria_label ) );
+	}
+
+	if ( ! empty( $aria_labelledby ) ) {
+		$aria_attributes[] = sprintf( 'aria-labelledby="%s"', esc_attr( $aria_labelledby ) );
+	}
+
+	if ( ! empty( $aria_describedby ) ) {
+		$aria_attributes[] = sprintf( 'aria-describedby="%s"', esc_attr( $aria_describedby ) );
+	}
+
+	if ( ! empty( $custom_aria ) ) {
+		$custom_attributes = array_map( 'trim', explode( ',', $custom_aria ) );
+		foreach ( $custom_attributes as $attr ) {
+			if ( strpos( $attr, '=' ) !== false ) {
+				list( $key, $value ) = array_map( 'trim', explode( '=', $attr, 2 ) );
+				if ( strpos( $key, 'aria-' ) === 0 ) {
+					$aria_attributes[] = sprintf( '%s="%s"', esc_attr( $key ), esc_attr( $value ) );
+				}
+			}
+		}
+	}
+
+	if ( empty( $aria_attributes ) ) {
+		return $block_content;
+	}
+
+	$aria_string = ' ' . implode( ' ', $aria_attributes );
+
+	if ( isset( $block['blockName'] ) && strpos( $block['blockName'], 'core/button' ) !== false ) {
+		$block_content = preg_replace(
+			'/(<a\s+[^>]*)(>)/i',
+			'$1' . $aria_string . '$2',
+			$block_content,
+			1
+		);
+	} else {
+		$processor = new WP_HTML_Tag_Processor( $block_content );
+		if ( $processor->next_tag() ) {
+			foreach ( $aria_attributes as $attr_string ) {
+				if ( preg_match( '/([a-z-]+)="([^"]*)"/', $attr_string, $matches ) ) {
+					$processor->set_attribute( $matches[1], $matches[2] );
+				}
+			}
+			$block_content = $processor->get_updated_html();
+		}
+	}
+
+	return $block_content;
+}
+add_filter( 'render_block', 'aria_block_controls_render_block', 10, 2 );
+]]></content>
+  </file>
+  <file path="src/block.json">
+    <description>This file contains metadata about the block including its name, title, category, icon, and other properties. The icon is a WordPress Dashicon name (e.g., "admin-post", "format-aside", "admin-page"). Do not use any icon that's not in the list under any circustamce. These are the only slugs available:
+	
+	menu menu-alt menu-alt2 menu-alt3 admin-site admin-site-alt admin-site-alt2 admin-site-alt3 dashboard admin-post admin-media admin-links admin-page admin-comments admin-appearance admin-plugins plugins-checked admin-users admin-tools admin-settings admin-network admin-home admin-generic admin-collapse filter admin-customizer admin-multisite welcome-write-blog welcome-add-page welcome-view-site welcome-widgets-menus welcome-comments welcome-learn-more format-aside format-image format-gallery format-video format-status format-quote format-chat format-audio camera camera-alt images-alt images-alt2 video-alt video-alt2 video-alt3 media-archive media-audio media-code media-default media-document media-interactive media-spreadsheet media-text media-video playlist-audio playlist-video controls-play controls-pause controls-forward controls-skipforward controls-back controls-skipback controls-repeat controls-volumeon controls-volumeoff image-crop image-rotate image-rotate-left image-rotate-right image-flip-vertical image-flip-horizontal image-filter undo redo database-add database database-export database-import database-remove database-view align-full-width align-pull-left align-pull-right align-wide block-default button cloud-saved cloud-upload columns cover-image ellipsis embed-audio embed-generic embed-photo embed-post embed-video exit heading html info-outline insert insert-after insert-before remove saved shortcode table-col-after table-col-before table-col-delete table-row-after table-row-before table-row-delete editor-bold editor-italic editor-ul editor-ol editor-ol-rtl editor-quote editor-alignleft editor-aligncenter editor-alignright editor-insertmore editor-spellcheck editor-expand editor-contract editor-kitchensink editor-underline editor-justify editor-textcolor editor-paste-word editor-paste-text editor-removeformatting editor-video editor-customchar editor-outdent editor-indent editor-help editor-strikethrough editor-unlink editor-rtl editor-ltr editor-break editor-code editor-paragraph editor-table align-left align-right align-center align-none lock unlock calendar calendar-alt visibility hidden post-status edit trash sticky external arrow-up arrow-down arrow-right arrow-left arrow-up-alt arrow-down-alt arrow-right-alt arrow-left-alt arrow-up-alt2 arrow-down-alt2 arrow-right-alt2 arrow-left-alt2 sort leftright randomize list-view excerpt-view grid-view move share share-alt share-alt2 rss email email-alt email-alt2 networking amazon facebook facebook-alt google instagram linkedin pinterest podio reddit spotify twitch twitter twitter-alt whatsapp xing youtube hammer art migrate performance universal-access universal-access-alt tickets nametag clipboard heart megaphone schedule tide rest-api code-standards buddicons-activity buddicons-bbpress-logo buddicons-buddypress-logo buddicons-community buddicons-forums buddicons-friends buddicons-groups buddicons-pm buddicons-replies buddicons-topics buddicons-tracking wordpress wordpress-alt pressthis update update-alt screenoptions info cart feedback cloud translation tag category archive tagcloud text bell yes yes-alt no no-alt plus plus-alt plus-alt2 minus dismiss marker star-filled star-half star-empty flag warning location location-alt vault shield shield-alt sos search slides text-page analytics chart-pie chart-bar chart-line chart-area groups businessman businesswoman businessperson id id-alt products awards forms testimonials portfolio book book-alt download upload backup clock lightbulb microphone desktop laptop tablet smartphone phone index-card carrot building store album palmtree tickets-alt money money-alt smiley thumbs-up thumbs-down layout paperclip color-picker edit-large edit-page airplane bank beer calculator car coffee drumstick food fullscreen-alt fullscreen-exit-alt games hourglass open-folder pdf pets printer privacy superhero superhero-alt</description>
+  <content><![CDATA[
+  {
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "telex/block-aria-block-controls",
+	"version": "0.1.0",
+	"title": "ARIA Block Controls",
+	"category": "widgets",
+	"icon": "universal-access",
+	"description": "Add optional ARIA attributes to all WordPress blocks through the Advanced panel.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "aria-block-controls",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
+  ]]></content>
+  </file>
+  <file path="src/index.js">
+    <description>This file registers the block, specifies the edit and save functions, and loads the block's metadata</description>
+	<content><![CDATA[
+/**
+ * WordPress dependencies
+ */
+import { addFilter } from '@wordpress/hooks';
+import { createHigherOrderComponent } from '@wordpress/compose';
+import { InspectorControls } from '@wordpress/block-editor';
+import { PanelBody, TextControl } from '@wordpress/components';
+import { __ } from '@wordpress/i18n';
+
+/**
+ * Internal dependencies
+ */
+import './style.scss';
+import './editor.scss';
+
+/**
+ * Add ARIA attributes to all blocks
+ */
+function addAriaAttributes( settings ) {
+	if ( ! settings.attributes ) {
+		settings.attributes = {};
+	}
+
+	settings.attributes.ariaLabel = {
+		type: 'string',
+		default: '',
+	};
+
+	settings.attributes.ariaLabelledby = {
+		type: 'string',
+		default: '',
+	};
+
+	settings.attributes.ariaDescribedby = {
+		type: 'string',
+		default: '',
+	};
+
+	settings.attributes.customAria = {
+		type: 'string',
+		default: '',
+	};
+
+	return settings;
+}
+
+addFilter(
+	'blocks.registerBlockType',
+	'aria-block-controls/add-attributes',
+	addAriaAttributes
+);
+
+/**
+ * Add ARIA controls to the Advanced panel
+ */
+const withAriaControls = createHigherOrderComponent( ( BlockEdit ) => {
+	return ( props ) => {
+		const { attributes, setAttributes, isSelected } = props;
+		const { ariaLabel, ariaLabelledby, ariaDescribedby, customAria } = attributes;
+
+		return (
+			<>
+				<BlockEdit { ...props } />
+				{ isSelected && (
+					<InspectorControls>
+						<PanelBody
+							title={ __( 'ARIA Attributes', 'aria-block-controls' ) }
+							initialOpen={ false }
+						>
+							<TextControl
+								label={ __( 'ARIA Label', 'aria-block-controls' ) }
+								value={ ariaLabel || '' }
+								onChange={ ( value ) => setAttributes( { ariaLabel: value } ) }
+								help={ __( 'Provides an accessible label for the element.', 'aria-block-controls' ) }
+							/>
+							<TextControl
+								label={ __( 'ARIA Labelledby', 'aria-block-controls' ) }
+								value={ ariaLabelledby || '' }
+								onChange={ ( value ) => setAttributes( { ariaLabelledby: value } ) }
+								help={ __( 'ID of the element that labels this element.', 'aria-block-controls' ) }
+							/>
+							<TextControl
+								label={ __( 'ARIA Describedby', 'aria-block-controls' ) }
+								value={ ariaDescribedby || '' }
+								onChange={ ( value ) => setAttributes( { ariaDescribedby: value } ) }
+								help={ __( 'ID of the element that describes this element.', 'aria-block-controls' ) }
+							/>
+							<TextControl
+								label={ __( 'Custom ARIA Attributes', 'aria-block-controls' ) }
+								value={ customAria || '' }
+								onChange={ ( value ) => setAttributes( { customAria: value } ) }
+								help={ __( 'Add custom ARIA attributes (e.g., aria-expanded=true, aria-controls=menu-1).', 'aria-block-controls' ) }
+							/>
+						</PanelBody>
+					</InspectorControls>
+				) }
+			</>
+		);
+	};
+}, 'withAriaControls' );
+
+addFilter(
+	'editor.BlockEdit',
+	'aria-block-controls/with-aria-controls',
+	withAriaControls
+);
+	]]></content>
+  </file>
+  <file path="src/edit.js">
+    <description>This file contains the edit function for the block which is responsible for rendering the block in the editor.</description>
+	<content><![CDATA[
+/**
+ * Retrieves the translation of text.
+ *
+ * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
+ */
+import { __ } from '@wordpress/i18n';
+
+/**
+ * React hook that is used to mark the block wrapper element.
+ * It provides all the necessary props like the class name.
+ *
+ * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
+ */
+import { useBlockProps } from '@wordpress/block-editor';
+
+/**
+ * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
+ * Those files can contain any CSS code that gets applied to the editor.
+ *
+ * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
+ */
+import './editor.scss';
+
+/**
+ * The edit function describes the structure of your block in the context of the
+ * editor. This represents what the editor will render when the block is used.
+ *
+ * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
+ *
+ * @return {Element} Element to render.
+ */
+export default function Edit() {
+	return (
+		<p { ...useBlockProps() }>
+			{ __( 'ARIA Block Controls – hello from the editor!', 'aria-block-controls' ) }
+		</p>
+	);
+}
+	]]></content>
+  </file>
+  <file path="src/save.js">
+    <description>This file contains the save function for the block which is responsible for creating the static result of rendering the block on the client to display the saved result on the front end.</description>
+	<content><![CDATA[
+/**
+ * React hook that is used to mark the block wrapper element.
+ * It provides all the necessary props like the class name.
+ *
+ * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
+ */
+import { useBlockProps } from '@wordpress/block-editor';
+
+/**
+ * The save function defines the way in which the different attributes should
+ * be combined into the final markup, which is then serialized by the block
+ * editor into `post_content`.
+ *
+ * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#save
+ *
+ * @return {Element} Element to render.
+ */
+export default function save() {
+	return null;
+}
+	]]></content>
+  </file>
+  <file path="src/style.scss">
+    <description>This file contains styles for the block in the front end.</description>
+	<content><![CDATA[
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-telex-aria-block-controls {
+	/* No front-end specific styles needed for this plugin */
+}
+	]]></content>
+  </file>
+  <file path="src/editor.scss">
+    <description>This file contains styles for the block in the editor.</description>
+	<content><![CDATA[
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-telex-aria-block-controls {
+	/* No editor specific styles needed for this plugin */
+}
+	]]></content>
+  </file>
+  <file path="src/view.js">
+    <description>This file contains the view function for the block which is responsible for rendering interactive behaviors of the block on the front end. Ideally using the WordPress interactivity API.</description>
+	<content><![CDATA[
+/**
+ * Use this file for JavaScript code that you want to run in the front-end
+ * on posts/pages that contain this block.
+ *
+ * When this file is defined as the value of the `viewScript` property
+ * in `block.json` it will be enqueued on the front end of the site.
+ *
+ * Example:
+ *
+ * ```js
+ * {
+ *   "viewScript": "file:./view.js"
+ * }
+ * ```
+ *
+ * If you're not making any changes to this file because your project doesn't need any
+ * JavaScript running in the front-end, then you should delete this file and remove
+ * the `viewScript` property from `block.json`.
+ *
+ * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#view-script
+ */
+	]]></content>
+  </file>
+  <file path="src/render.php">
+    <description>This file contains the render callback function for the block, which is responsible for rendering the block content on the front end. A render function should exist only if the block is dynamic.</description>
+	<content><![CDATA[ ]]></content>
+  </file>
+  
+</artefact>

@@ -1,0 +1,20 @@
+
+  {
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "telex/block-aria-block-controls",
+	"version": "0.1.0",
+	"title": "ARIA Block Controls",
+	"category": "widgets",
+	"icon": "universal-access",
+	"description": "Add optional ARIA attributes to all WordPress blocks through the Advanced panel.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "aria-block-controls",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
+  
