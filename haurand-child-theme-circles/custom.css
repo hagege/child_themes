@@ -3,6 +3,11 @@ figure.featured_image_top_center img {
     object-position: top center;
 }
 
+/* wenn das featured image unten zentriert werden soll */
+figure.featured_image_top_center img {
+    object-position: bottom center;
+}
+
 
 /* Altlasten aus Kompatibilitätsgründen*/
 .wp-block-group.html_svg {
