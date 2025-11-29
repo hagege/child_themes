@@ -34,28 +34,14 @@ ul li a:focus-visible {
     z-index: 999;
 }
 
-/* cickable Cards */
-div.karte_klickbar a::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-
-/* Optional: Focusrahmen um die Card */
-/** Den Focus vom Link entfernen **/
-div.karte_klickbar a:focus {
-    outline: none;
-    outline-offset: 0;
-    box-shadow: 0;
-}
-
-/** Der Card Fokus geben **/
-div.karte_klickbar:focus-within {
-    outline: 3px solid #1F1F1F;
-    outline-offset: 3px;
+/* Für die Navigation */
+ul li a.wp-block-navigation-item__content:hover {
+    text-decoration: none;
+    outline: 3px;
+    outline-color: var(--wp--preset--color--custom-orange);
+    outline-style: solid;
+    outline-offset: 0px;
+    z-index: 999;
 }
 
 /* Animierter fadeInUp-Effekt für die gesamte Website */
