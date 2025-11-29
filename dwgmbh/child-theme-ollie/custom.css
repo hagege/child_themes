@@ -57,3 +57,24 @@ div.karte_klickbar:focus-within {
     outline: 3px solid #1F1F1F;
     outline-offset: 3px;
 }
+
+/* Animierter fadeInUp-Effekt für die gesamte Website */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+p,
+div.wp-block-columns,
+figure,
+h1,
+h2 {
+    animation: fadeInUp 2s cubic-bezier(.4, 0, .2, 1) both;
+}
