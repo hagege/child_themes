@@ -159,9 +159,11 @@ details p {
 }
 
 details[open]>*:not(summary),
-details[close]>*:not(summary) {
+details[close]>*:not(summary),
+.wp-block-accordion-item.is-layout-flow.wp-block-accordion-item-is-layout-flow.is-open {
     animation: details-show 1000ms ease-in-out;
 }
+
 
 /* wegen Problem mit Überlappung des BacktoTop Kreises im mobilen Menü */
 .progress-wrap {
