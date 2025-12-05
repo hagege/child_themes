@@ -1,7 +1,7 @@
 /* style.css - Spezielle Effekte */
 .wp-block-button:hover {
-    transform: scale(1.01);
-    transition: transform 0.5s ease;
+  transform: scale(1.01);
+  transition: transform 0.5s ease;
 }
 
 /* Outline nur bei focus-visible 
@@ -14,47 +14,46 @@
 /* Links bei Hover */
 p a:hover,
 ul li a:hover {
-    text-decoration: none;
-    outline: 3px;
-    outline-color: var(--wp--preset--color--custom-orange);
-    outline-style: solid;
-    outline-offset: 5px;
-    z-index: 999;
+  text-decoration: none;
+  outline: 3px;
+  outline-color: var(--wp--preset--color--custom-orange);
+  outline-style: solid;
+  outline-offset: 5px;
+  z-index: 999;
 }
 
 p a:focus,
 p a:focus-visible,
 ul li a:focus,
 ul li a:focus-visible {
-    text-decoration: none;
-    outline: 5px;
-    outline-color: var(--wp--preset--color--custom-orange);
-    outline-style: solid;
-    outline-offset: 5px;
-    z-index: 999;
+  text-decoration: none;
+  outline: 5px;
+  outline-color: var(--wp--preset--color--custom-orange);
+  outline-style: solid;
+  outline-offset: 5px;
+  z-index: 999;
 }
 
-/* Für die Navigation */
 ul li a.wp-block-navigation-item__content:hover {
-    text-decoration: none;
-    outline: 3px;
-    outline-color: var(--wp--preset--color--custom-orange);
-    outline-style: solid;
-    outline-offset: 0px;
-    z-index: 999;
+  text-decoration: none;
+  outline: 3px;
+  outline-color: var(--wp--preset--color--custom-orange);
+  outline-style: solid;
+  outline-offset: 0px;
+  z-index: 999;
 }
 
 /* Animierter fadeInUp-Effekt für die gesamte Website */
 @keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 p,
@@ -62,5 +61,5 @@ div.wp-block-columns,
 figure,
 h1,
 h2 {
-    animation: fadeInUp 2s cubic-bezier(.4, 0, .2, 1) both;
+  animation: fadeInUp 2s cubic-bezier(.4, 0, .2, 1) both;
 }

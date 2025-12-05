@@ -185,11 +185,12 @@ main .entry-content a,
 }
 
 
-
+/* Buttons */
 main .entry-content a.wp-block-button__link {
     box-shadow: inset 0 -1px 0 var(--wp--preset--color--custom-gelb);
     text-decoration: none;
 }
+
 
 main .entry-content a:hover,
 .wp-block-group.has-global-padding.is-layout-constrained.wp-block-group-is-layout-constrained a:hover {
@@ -197,6 +198,7 @@ main .entry-content a:hover,
     transition: all 0.8s ease-in-out;
     color: black;
 }
+
 
 /* lange Wörter, z. B. endlose Links trennen */
 ul li,
@@ -392,7 +394,8 @@ details p {
 }
 
 details[open]>*:not(summary),
-details[close]>*:not(summary) {
+details[close]>*:not(summary),
+div#accordion-item-4-panel {
     animation: details-show 1000ms ease-in-out;
 }
 
