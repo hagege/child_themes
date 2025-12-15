@@ -24,6 +24,12 @@
     --wp--preset--color--custom-rot: #eb1717;
 }
 
+
+/* alle http/https-Links, die NICHT deine eigene Domain enthalten */
+a[href^="http"]:not([href*="dev-haurand.de"])::after {
+    content: "\00a0\2197";
+}
+
 /* Liste ausblenden */
 li.nicht_zeigen ul {
     color: lightgray;
