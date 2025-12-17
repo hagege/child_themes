@@ -1,0 +1,155 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.9/theme.json",
+	"version": 3,
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"color": "#911436",
+					"name": "dunkelrot",
+					"slug": "custom-dunkelrot"
+				},
+				{
+					"color": "#ffffff",
+					"name": "weiss",
+					"slug": "custom-weiss"
+				},
+				{
+					"color": "#fdfce7",
+					"name": "hellgelb",
+					"slug": "custom-hellgelb"
+				},
+				{
+					"color": "#000000",
+					"name": "schwarz",
+					"slug": "custom-schwarz"
+				},
+				{
+					"color": "#0e8273",
+					"name": "mittelgrün",
+					"slug": "custom-mittelgr-n"
+				},
+				{
+					"color": "#f6c356",
+					"name": "gelb",
+					"slug": "custom-gelb"
+				}
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Lexend",
+							"fontStyle": "normal",
+							"fontWeight": "200",
+							"src": [
+								"file:./assets/fonts/lexend/lexend-200-normal.woff2"
+							]
+						},
+						{
+							"fontFamily": "Lexend",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/lexend/lexend-400-normal.woff2"
+							]
+						},
+						{
+							"fontFamily": "Lexend",
+							"fontStyle": "normal",
+							"fontWeight": "600",
+							"src": [
+								"file:./assets/fonts/lexend/lexend-600-normal.woff2"
+							]
+						},
+						{
+							"fontFamily": "Lexend",
+							"fontStyle": "normal",
+							"fontWeight": "800",
+							"src": [
+								"file:./assets/fonts/lexend/lexend-800-normal.woff2"
+							]
+						},
+						{
+							"fontFamily": "Lexend",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": [
+								"file:./assets/fonts/lexend/lexend-700-normal.woff2"
+							]
+						},
+						{
+							"fontFamily": "Lexend",
+							"fontStyle": "normal",
+							"fontWeight": "900",
+							"src": [
+								"file:./assets/fonts/lexend/lexend-900-normal.woff2"
+							]
+						}
+					],
+					"fontFamily": "Lexend, sans-serif",
+					"name": "Lexend",
+					"slug": "lexend"
+				}
+			]
+		}
+	},
+	"styles": {
+		"css": ".gruppe-mit-cover {\n    overflow: hidden;\n}\n\n/* Problem bei Firefox auf der Startpage */\n.wp-block-image.alignfull.size-full.wave_startpage_image img,\n.wp-block-image.alignfull.size-full.wave_image img {\n    height: 9rem;\n}\n\n",
+		"spacing": {
+			"blockGap": "var(--wp--preset--spacing--medium)",
+			"padding": {
+				"bottom": "0",
+				"left": "0",
+				"right": "0",
+				"top": "0"
+			}
+		},
+		"elements": {
+			"button": {
+				"color": {
+					"background": "var(--wp--preset--color--custom-gelb)",
+					"text": "var(--wp--preset--color--custom-schwarz)"
+				},
+				":active": {
+					"color": {
+						"background": "var(--wp--preset--color--custom-gelb)",
+						"text": "var(--wp--preset--color--custom-schwarz)"
+					}
+				},
+				":focus": {
+					"border": {
+						"color": "var(--wp--preset--color--custom-gelb)"
+					},
+					"color": {
+						"background": "var(--wp--preset--color--custom-gelb)",
+						"text": "var(--wp--preset--color--custom-schwarz)"
+					},
+					"outline": {
+						"color": "var(--wp--preset--color--custom-gelb)",
+						"offset": "2px",
+						"style": "solid",
+						"width": "10px"
+					}
+				},
+				":hover": {
+					"border": {
+						"color": "var(--wp--preset--color--custom-gelb)"
+					},
+					"color": {
+						"background": "var(--wp--preset--color--custom-gelb)",
+						"text": "var(--wp--preset--color--custom-schwarz)"
+					},
+					"outline": {
+						"color": "var(--wp--preset--color--custom-gelb)",
+						"offset": "2px",
+						"style": "solid",
+						"width": "3px"
+					}
+				}
+			}
+		}
+	}
+}

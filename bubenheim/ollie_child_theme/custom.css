@@ -1,0 +1,70 @@
+.gruppe-mit-cover {
+    overflow: hidden;
+}
+
+/* Problem bei Firefox auf der Startpage */
+.wp-block-image.alignfull.size-full.wave_startpage_image img,
+.wp-block-image.alignfull.size-full.wave_image img {
+    height: 9rem;
+}
+
+/* Überschrift h2 als Link  */
+h2.link-in-card a {
+    font-family: 'Finger Paint';
+    text-decoration: none;
+}
+
+
+/* Buttons */
+/* roter Button mit rotem Outline bei Hover */
+div.roter_button a:hover,
+div.roter_button a:focus,
+div.roter_button a:active {
+    outline-color: var(--wp--preset--color--custom-dunkelrot);
+}
+
+
+/* roter Button mit rotem Outline bei Hover */
+div.gruener_button a:hover,
+div.gruener_button a:focus,
+div.gruener_button a:active {
+    outline-color: var(--wp--preset--color--custom-mittelgr-n);
+}
+
+/* language switcher */
+h2.widgettitle {
+    font-size: medium;
+    font-family: 'Lexend';
+    text-align: center;
+    visibility: hidden;
+    display: none;
+}
+
+div.widget_polylang ul {
+    list-style-type: none;
+}
+
+/* Spalte umkehren */
+@media screen and (max-width: 800px) {
+    div.inhaltsspalten {
+        flex-direction: column-reverse;
+    }
+
+    div.inhaltsspalte2 {
+        width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    div.abstand-inhaltsspalte2 {
+        display: none;
+    }
+}
+
+/* 
+.widget.widget_polylang {
+    background-color: var(--wp--preset--color--custom-hellgelb);
+    padding: 0.4rem;
+    border-radius: 5px;
+}
+*/
