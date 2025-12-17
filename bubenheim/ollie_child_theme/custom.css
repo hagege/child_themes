@@ -44,27 +44,19 @@ div.widget_polylang ul {
     list-style-type: none;
 }
 
-/* Spalte umkehren */
-@media screen and (max-width: 800px) {
-    div.inhaltsspalten {
-        flex-direction: column-reverse;
-    }
+/* Mobile: < 976px – Spalten gestapelt, Reihenfolge umkehren 
+@media screen and (max-width: 1076px) {
 
-    div.inhaltsspalte2 {
-        width: 250px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .inhaltsspalten .spalte-1 {
+    order: 2;
+  }
 
-    div.abstand-inhaltsspalte2 {
-        display: none;
-    }
-}
+  .inhaltsspalten .spalte-2 {
+    order: 1;
+  }
 
-/* 
-.widget.widget_polylang {
-    background-color: var(--wp--preset--color--custom-hellgelb);
-    padding: 0.4rem;
-    border-radius: 5px;
+  div.abstand-spalte-2 {
+       display: none;
+   }
 }
 */
