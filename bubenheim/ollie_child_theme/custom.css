@@ -44,19 +44,37 @@ div.widget_polylang ul {
     list-style-type: none;
 }
 
-/* Mobile: < 976px – Spalten gestapelt, Reihenfolge umkehren 
-@media screen and (max-width: 1076px) {
-
-  .inhaltsspalten .spalte-1 {
-    order: 2;
-  }
-
-  .inhaltsspalten .spalte-2 {
-    order: 1;
-  }
-
-  div.abstand-spalte-2 {
-       display: none;
-   }
+/* Desktop Menü */
+/* Menü bei hover */
+.wp-block-navigation a:where(:not(.wp-element-button)) {
+    text-decoration: none;
+    padding: 0.3em 0.5em;
 }
-*/
+
+/* Logo nicht bei Hover hervorheben */
+.wp-block-site-logo a:hover {
+    text-decoration: none;
+    background-color: inherit;
+}
+
+/* alle Links außer Buttons */
+a:where(:not(.wp-element-button)):hover {
+    text-decoration: none;
+    background-color: var(--wp--preset--color--custom-gelb);
+    color: var(--wp--preset--color--custom-schwarz) !important;
+}
+
+/* Links in Navigation */
+.wp-block-navigation a:where(:not(.wp-element-button)):hover {
+    text-decoration: none;
+    background-color: var(--wp--preset--color--custom-dunkelrot);
+    color: var(--wp--preset--color--custom-weiss) !important;
+}
+
+.wp-block-navigation a:where(:not(.wp-element-button)):focus,
+.wp-block-navigation a:where(:not(.wp-element-button)):active {
+    text-decoration: none;
+    background-color: var(--wp--preset--color--custom-mittelgr-n);
+    color: var(--wp--preset--color--custom-weiss) !important;
+    outline: 2px;
+}
