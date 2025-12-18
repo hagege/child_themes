@@ -53,10 +53,16 @@ div.widget_polylang ul {
 }
 
 /* alle Links außer Buttons */
+a:where(:not(.wp-element-button)) {
+    text-underline-offset: 7px;
+    transition: all .2s;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+
 a:where(:not(.wp-element-button)):hover {
-    text-decoration: none;
-    background-color: var(--wp--preset--color--custom-gelb);
-    color: var(--wp--preset--color--custom-schwarz) !important;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 2px;
 }
 
 .wp-block-navigation a:where(:not(.wp-element-button)) {
