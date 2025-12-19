@@ -3,41 +3,49 @@
 	"version": 3,
 	"title": "Grün",
 	"slug": "button-gruen",
-	"blockTypes": ["core/button"],
+	"blockTypes": [
+		"core/button"
+	],
 	"styles": {
+		"spacing": {
+			"margin": {
+				"top": "var(--wp--preset--spacing--small)",
+				"bottom": "var(--wp--preset--spacing--small)"
+			}
+		},
 		"color": {
-		  "background": "var(--wp--preset--color--custom-mittelgr-n)",
-		  "text": "var(--wp--preset--color--custom-weiss)"
+			"background": "var(--wp--preset--color--custom-mittelgr-n)",
+			"text": "var(--wp--preset--color--custom-weiss)"
 		},
 		":hover": {
-		  "border": {
-			"color": "var(--wp--preset--color--custom-mittelgr-n)"
-		  },
-		  "color": {
-			"background": "var(--wp--preset--color--custom-mittelgr-n)",
-			"text": "var(--wp--preset--color--custom-weiss)"
-		  },
-		  "outline": {
-			"color": "var(--wp--preset--color--custom-mittelgr-n)",
-			"offset": "2px",
-			"style": "solid",
-			"width": "3px"
-		  }
+			"border": {
+				"color": "var(--wp--preset--color--custom-mittelgr-n)"
+			},
+			"color": {
+				"background": "var(--wp--preset--color--custom-mittelgr-n)",
+				"text": "var(--wp--preset--color--custom-weiss)"
+			},
+			"outline": {
+				"color": "var(--wp--preset--color--custom-mittelgr-n)",
+				"offset": "2px",
+				"style": "solid",
+				"width": "3px"
+			}
 		},
 		":focus": {
-		  "border": {
-			"color": "var(--wp--preset--color--custom-mittelgr-n)"
-		  },
-		  "color": {
-			"background": "var(--wp--preset--color--custom-mittelgr-n)",
-			"text": "var(--wp--preset--color--custom-weiss)"
-		  },
-		  "outline": {
-			"color": "var(--wp--preset--color--custom-mittelgr-n)",
-			"offset": "2px",
-			"style": "solid",
-			"width": "10px"
-		  }
+			"border": {
+				"color": "var(--wp--preset--color--custom-mittelgr-n)"
+			},
+			"color": {
+				"background": "var(--wp--preset--color--custom-mittelgr-n)",
+				"text": "var(--wp--preset--color--custom-weiss)"
+			},
+			"outline": {
+				"color": "var(--wp--preset--color--custom-mittelgr-n)",
+				"offset": "2px",
+				"style": "solid",
+				"width": "10px"
+			}
 		}
-	  }
+	}
 }

@@ -2,6 +2,14 @@
     overflow: hidden;
 }
 
+/* Einstellungen Cover übernehmen */
+@media (min-width: 960px) {
+    .wp-block-cover {
+        min-height: 80vh !important;
+        aspect-ratio: unset !important;
+    }
+}
+
 /* Problem bei Firefox auf der Startpage */
 .wp-block-image.alignfull.size-full.wave_startpage_image img,
 .wp-block-image.alignfull.size-full.wave_image img {
@@ -12,6 +20,7 @@
 h2.link-in-card a {
     font-family: 'Finger Paint';
     text-decoration: none;
+    line-height: 1.6;
 }
 
 
@@ -21,7 +30,10 @@ h2.link-in-card a {
 /* roter Button mit rotem Outline bei Hover */
 div.roter_button a:hover,
 div.roter_button a:focus,
-div.roter_button a:active {
+div.roter_button a:active,
+.wp-block-button.is-style-button-rot.is-style-button-rot--5 a:hover,
+.wp-block-button.is-style-button-rot.is-style-button-rot--5 a:focus,
+.wp-block-button.is-style-button-rot.is-style-button-rot--5 a:active {
     outline-color: var(--wp--preset--color--custom-dunkelrot);
 }
 
@@ -29,21 +41,11 @@ div.roter_button a:active {
 /* grüner Button mit grünem Outline bei Hover */
 div.gruener_button a:hover,
 div.gruener_button a:focus,
-div.gruener_button a:active {
+div.gruener_button a:active,
+.wp-block-button.is-style-button-gruen.is-style-button-gruen--5 a:hover,
+.wp-block-button.is-style-button-gruen.is-style-button-gruen--5 a:focus,
+.wp-block-button.is-style-button-gruen.is-style-button-gruen--5 a:active {
     outline-color: var(--wp--preset--color--custom-mittelgr-n);
-}
-
-/* language switcher */
-h2.widgettitle {
-    font-size: medium;
-    font-family: 'Lexend';
-    text-align: center;
-    visibility: hidden;
-    display: none;
-}
-
-div.widget_polylang ul {
-    list-style-type: none;
 }
 
 /* Desktop Menü */
@@ -87,3 +89,19 @@ a:where(:not(.wp-element-button)):hover {
     color: var(--wp--preset--color--custom-weiss) !important;
     outline: 2px;
 }
+
+
+/* nicht mehr verwendet */
+/* language switcher 
+h2.widgettitle {
+    font-size: medium;
+    font-family: 'Lexend';
+    text-align: center;
+    visibility: hidden;
+    display:none;
+}
+
+div.widget_polylang ul {
+  list-style-type: none;
+}
+*/
