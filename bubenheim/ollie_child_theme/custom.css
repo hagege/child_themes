@@ -21,10 +21,7 @@ h2.link-in-card a {
 /* roter Button mit rotem Outline bei Hover */
 div.roter_button a:hover,
 div.roter_button a:focus,
-div.roter_button a:active,
-.wp-block-button.is-style-button-brand.is-style-button-brand--3 a:hover,
-.wp-block-button.is-style-button-brand.is-style-button-brand--3 a:focus,
-.wp-block-button.is-style-button-brand.is-style-button-brand--3 a:active {
+div.roter_button a:active {
     outline-color: var(--wp--preset--color--custom-dunkelrot);
 }
 
@@ -32,10 +29,7 @@ div.roter_button a:active,
 /* grüner Button mit grünem Outline bei Hover */
 div.gruener_button a:hover,
 div.gruener_button a:focus,
-div.gruener_button a:active,
-.wp-block-button.is-style-button-brand-alt.is-style-button-brand-alt--4 a:hover,
-.wp-block-button.is-style-button-brand-alt.is-style-button-brand-alt--4 a:focus,
-.wp-block-button.is-style-button-brand-alt.is-style-button-brand-alt--4 a:active {
+div.gruener_button a:active {
     outline-color: var(--wp--preset--color--custom-mittelgr-n);
 }
 

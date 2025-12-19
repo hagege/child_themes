@@ -1,0 +1,43 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Gelb",
+	"slug": "button-gelb",
+	"blockTypes": ["core/button"],
+	"styles": {
+		"color": {
+		  "background": "var(--wp--preset--color--custom-gelb)",
+		  "text": "var(--wp--preset--color--custom-weiss)"
+		},
+		":hover": {
+		  "border": {
+			"color": "var(--wp--preset--color--custom-gelb)"
+		  },
+		  "color": {
+			"background": "var(--wp--preset--color--custom-gelb)",
+			"text": "var(--wp--preset--color--custom-weiss)"
+		  },
+		  "outline": {
+			"color": "var(--wp--preset--color--custom-gelb)",
+			"offset": "2px",
+			"style": "solid",
+			"width": "3px"
+		  }
+		},
+		":focus": {
+		  "border": {
+			"color": "var(--wp--preset--color--custom-gelb)"
+		  },
+		  "color": {
+			"background": "var(--wp--preset--color--custom-gelb)",
+			"text": "var(--wp--preset--color--custom-weiss)"
+		  },
+		  "outline": {
+			"color": "var(--wp--preset--color--custom-gelb)",
+			"offset": "2px",
+			"style": "solid",
+			"width": "10px"
+		  }
+		}
+	  }
+}
