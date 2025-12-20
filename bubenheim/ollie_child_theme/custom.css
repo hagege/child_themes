@@ -4,7 +4,7 @@
 
 /* Einstellungen Cover übernehmen */
 @media (min-width: 960px) {
-    .wp-block-cover {
+    div.header-cover {
         min-height: 80vh !important;
         aspect-ratio: unset !important;
     }
