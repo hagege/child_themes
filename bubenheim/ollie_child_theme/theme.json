@@ -36,6 +36,10 @@
 				}
 			]
 		},
+		"layout": {
+			"contentSize": "1024px",
+			"wideSize": "1280px"
+		},
 		"typography": {
 			"fontFamilies": [
 				{
@@ -92,37 +96,90 @@
 					"fontFamily": "Lexend, sans-serif",
 					"name": "Lexend",
 					"slug": "lexend"
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "\"Finger Paint\"",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/finger-paint/finger-paint-400-normal.woff2"
+							]
+						}
+					],
+					"fontFamily": "\"Finger Paint\", system-ui",
+					"name": "Finger Paint",
+					"slug": "finger-paint"
 				}
 			]
 		}
 	},
 	"styles": {
-		"css": ".gruppe-mit-cover {\n    overflow: hidden;\n}\n\n/* Problem bei Firefox auf der Startpage */\n.wp-block-image.alignfull.size-full.wave_startpage_image img,\n.wp-block-image.alignfull.size-full.wave_image img {\n    height: 9rem;\n}\n\n",
-		"spacing": {
-			"blockGap": "var(--wp--preset--spacing--medium)",
-			"padding": {
-				"bottom": "0",
-				"left": "0",
-				"right": "0",
-				"top": "0"
-			}
-		},
-		"elements": {
-			"h2": {
-				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--finger-paint)",
-					"fontSize": "var(--wp--preset--font-size--large)",
-					"line-height": "var(--wp--custom--line-height--body)"
+		"blocks": {
+			"core/button": {
+				"border": {
+					"radius": {
+						"bottomLeft": "5px",
+						"bottomRight": "5px",
+						"topLeft": "5px",
+						"topRight": "5px"
+					}
 				},
-				"color": {
-					"text": "var(--wp--preset--color--custom-mittelgr-n)"
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--lexend)",
+					"fontSize": "var(--wp--preset--font-size--base)"
+				},
+				"variations": {
+					"button-brand": {
+						"border": {
+							"radius": {
+								"bottomLeft": "5px",
+								"bottomRight": "5px",
+								"topLeft": "5px",
+								"topRight": "5px"
+							}
+						},
+						"color": {
+							"background": "var(--wp--preset--color--custom-dunkelrot)",
+							"text": "var(--wp--preset--color--custom-weiss)"
+						},
+						"typography": {
+							"fontSize": "var(--wp--preset--font-size--base)"
+						}
+					},
+					"button-brand-alt": {
+						"border": {
+							"radius": {
+								"bottomLeft": "5px",
+								"bottomRight": "5px",
+								"topLeft": "5px",
+								"topRight": "5px"
+							}
+						},
+						"color": {
+							"background": "var(--wp--preset--color--custom-mittelgr-n)",
+							"text": "var(--wp--preset--color--custom-weiss)"
+						},
+						"typography": {
+							"fontSize": "var(--wp--preset--font-size--base)"
+						}
+					}
 				}
 			},
+			"core/buttons": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--lexend)",
+					"fontSize": "var(--wp--preset--font-size--large)"
+				}
+			}
+		},
+		"color": {
+			"background": "var(--wp--preset--color--custom-weiss)"
+		},
+		"css": ".gruppe-mit-cover {\n    overflow: hidden;\n}\n\n/* Einstellungen Cover übernehmen */\n@media (min-width: 960px) {\n    div.header-cover {\n        min-height: 80vh !important;\n        aspect-ratio: unset !important;\n    }\n}\n\n/* Problem bei Firefox auf der Startpage */\n.wp-block-image.alignfull.size-full.wave_startpage_image img,\n.wp-block-image.alignfull.size-full.wave_image img {\n    height: 9rem;\n}\n\n/* Überschrift h2 als Link  */\nh2.link-in-card a {\n    font-family: 'Finger Paint';\n    text-decoration: none;\n    line-height: 1.6;\n}\n\n\n/* Buttons */\n/* roter Button mit rotem Outline bei Hover */\n/* Buttons */\n/* roter Button mit rotem Outline bei Hover */\ndiv.roter_button a:hover,\ndiv.roter_button a:focus,\ndiv.roter_button a:active\n{\n    outline-color: var(--wp--preset--color--custom-dunkelrot);\n}\n\n\n/* grüner Button mit grünem Outline bei Hover */\ndiv.gruener_button a:hover,\ndiv.gruener_button a:focus,\ndiv.gruener_button a:active\n{\n    outline-color: var(--wp--preset--color--custom-mittelgr-n);\n}\n\n/* Desktop Menü */\n/* Menü bei hover */\n/* Logo nicht bei Hover hervorheben */\n.wp-block-site-logo a:hover { \n   text-decoration: none;\n   background-color: inherit;\n}\n\n/* alle Links außer Buttons */\na:where(:not(.wp-element-button)) {\n    text-underline-offset: 7px;\n    transition: all .2s;\n    text-decoration: underline;\n    text-decoration-thickness: 1px;\n}\n\na:where(:not(.wp-element-button)):hover {\n    text-underline-offset: 10px;\n    text-decoration-thickness: 2px;\n}\n\n.wp-block-navigation a:where(:not(.wp-element-button)) {\n    text-decoration: none;\n    padding: 0.3em 0.5em;\n    text-decoration: none;\n}\n\n/* Links in Navigation */\n.wp-block-navigation a:where(:not(.wp-element-button)):hover {\n    text-decoration: none;\n    background-color: var(--wp--preset--color--custom-dunkelrot) !important;\n    color: var(--wp--preset--color--custom-weiss) !important;\n}\n\n.wp-block-navigation a:where(:not(.wp-element-button)):focus,\n.wp-block-navigation a:where(:not(.wp-element-button)):active {\n    text-decoration: none;\n    background-color: var(--wp--preset--color--custom-mittelgr-n) !important;\n    color: var(--wp--preset--color--custom-weiss) !important;\n    outline: 2px;\n}\n\n\n/* nicht mehr verwendet */\n/* language switcher \nh2.widgettitle {\n    font-size: medium;\n    font-family: 'Lexend';\n    text-align: center;\n    visibility: hidden;\n    display:none;\n}\n\ndiv.widget_polylang ul {\n  list-style-type: none;\n}\n*/",
+		"elements": {
 			"button": {
-				"color": {
-					"background": "var(--wp--preset--color--custom-gelb)",
-					"text": "var(--wp--preset--color--custom-schwarz)"
-				},
 				":active": {
 					"color": {
 						"background": "var(--wp--preset--color--custom-gelb)",
@@ -158,8 +215,57 @@
 						"style": "solid",
 						"width": "3px"
 					}
+				},
+				"color": {
+					"background": "var(--wp--preset--color--custom-gelb)",
+					"text": "var(--wp--preset--color--custom-schwarz)"
+				}
+			},
+			"caption": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--lexend)"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--finger-paint)"
+				}
+			},
+			"h2": {
+				"color": {
+					"text": "var(--wp--preset--color--custom-mittelgr-n)"
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--finger-paint)",
+					"fontSize": "var(--wp--preset--font-size--large)"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--lexend)",
+					"fontStyle": "normal",
+					"fontWeight": "700"
+				}
+			},
+			"link": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--lexend)"
 				}
 			}
+		},
+		"spacing": {
+			"blockGap": "var(--wp--preset--spacing--medium)",
+			"padding": {
+				"bottom": "0",
+				"left": "0",
+				"right": "0",
+				"top": "0"
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--lexend)",
+			"fontStyle": "normal",
+			"fontWeight": "400"
 		}
 	}
 }
