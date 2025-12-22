@@ -36,6 +36,14 @@
 				}
 			]
 		},
+		"patterns": {
+			"categories": [
+				{
+					"name": "bubenheim",
+					"label": "Bubenheim"
+				}
+			]
+		},
 		"layout": {
 			"contentSize": "1024px",
 			"wideSize": "1280px"
