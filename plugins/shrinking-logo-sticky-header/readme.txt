@@ -7,7 +7,7 @@ Tags: Block Theme, Header, shrink, breakpoint, off-canvas
 Requires at least: 
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.4.1
+Stable tag: 1.5
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -78,7 +78,7 @@ Yes, of course:
 I'am Hans-Gerd, a WordPress enthusiast.
 My work on this plugin will be sponsored by [https://haurand.com/](https://haurand.com/)
 
-= How can I report security bugs? ###
+= How can I report security bugs? 
 You can report security bugs through the Patchstack Vulnerability Disclosure Program. The Patchstack team helps validate, triage and handle any security vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database)
 
 == Translations ==
@@ -93,6 +93,12 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 4. Click on `Activate plugin`
 
 == Changelog ==
+= 1.5: January 8, 2026 =
+* Fix: Flickering in header when scrolling up in most cases completely prevented (Code improvements)
+* Fix: Language Files corrected - prevent direct access
+* Plugin Check: No errors, no warnings
+
+== Changelog ==
 = 1.4.1: November 20, 2025 =
 * Added Option: Menu does not appear as sticky on mobile devices - may be better for accessibility reasons
 * Fix: ID in form field corrected
@@ -100,7 +106,7 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 
 
 = 1.4: September 10, 2025 =
-* Added: Option for disable inner spacing (padding) in header
+* Added: Option to disable inner spacing (padding) in header
 * Added: Option to enable Text <Menu> below mobile Icon and display larger mobile menu Icon (Hamburger) - better for accessibility reasons
 * Enhancement: Height and width of mobile icon (SVG) changed to 44px (AAA) when the above option is used
 * Added: Option to Label Text <Menu> below mobile Icon
