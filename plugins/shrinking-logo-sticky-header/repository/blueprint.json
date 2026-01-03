@@ -1,0 +1,62 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "shrinking-logo-sticky-header"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "installTheme",
+      "themeData": {
+        "resource": "wordpress.org/themes",
+        "slug": "ollie"
+      },
+      "options": {
+        "activate": true
+      },
+      "progress": {
+        "caption": "Installing theme: ollie"
+      }
+    },
+    {
+      "step": "mkdir",
+      "path": "/tmp/media"
+    },
+    {
+      "step": "writeFile",
+      "path": "/tmp/media/power_tour_06_2024_02.webp",
+      "data": {
+        "resource": "url",
+        "url": "https://space4.yd-sgs.de/wp-content/uploads/2025/02/power_tour_06_2024_02.webp"
+      }
+    },
+    {
+      "step": "runPHP",
+      "progress": {
+        "caption": "Importing media to library"
+      },
+      "code": "<?php\n// DEDUP_STRATEGY: keep_last\nrequire_once '/wordpress/wp-load.php';\nrequire_once ABSPATH . 'wp-admin/includes/image.php';\nrequire_once ABSPATH . 'wp-admin/includes/file.php';\nrequire_once ABSPATH . 'wp-admin/includes/media.php';\n$iterator = new RecursiveIteratorIterator( new RecursiveDirectoryIterator( '/tmp/media/' ) );\nforeach ( $iterator as $filename ) {\nif ( ! $filename->isFile() ) continue;\n// Skip Macos hidden files:\nif ( strpos( $filename->getFilename(), '._' ) === 0 ) continue;\nif ( strtolower( $filename->getFilename() ) === '.ds_store' ) continue;\n$file = array(\n'tmp_name' => $filename->getPathname(),\n'name'     => $filename->getBasename(),\n'type'     => mime_content_type( $filename->getPathname() ),\n'size'     => $filename->getSize(),\n);\n$attachment_id = media_handle_sideload( $file );\nif ( is_wp_error( $attachment_id ) ) {\nerror_log( print_r( $file, true ) );\nerror_log( print_r( $attachment_id, true ) );\n}\n}"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require_once '/wordpress/wp-load.php';\n$page_args = array(\n'post_type'    => 'page',\n'post_status'  => 'publish',\n'post_title'   => 'Dynamic Header and Navigation for Block Themes',\n'post_content' => '<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Plugin Dynamic Header & Navigation for Block Themes</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p>Dynamic Header & Navigation for Block Themes (Previous name of the plugin: Shrinking Logo Sticky Header) is a lightweight WordPress plugin developed specifically as a navigation solution for most Block Themes.<br>It adds a modern sticky header with smooth, animated shrinking effects for both the header and the site logo.<br>As users scroll down the page, the header and logo automatically reduce in size, maximizing on-screen space and keeping navigation easily accessible without disrupting the browsing experience.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>Adjustments can be made via the settings.</p>\n<!-- /wp:paragraph -->\n<!-- wp:image {\"id\":2617,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-large\"><img src=\"https://space4.yd-sgs.de/wp-content/uploads/2025/02/power_tour_06_2024_02-1024x768.webp\" alt=\"Burg in Attendorn\" class=\"wp-image-2617\"/><figcaption class=\"wp-element-caption\">Burg in Attendorn</figcaption></figure>\n<!-- /wp:image -->',\n);\n$page_id = wp_insert_post( $page_args, true );\nif ( is_wp_error( $page_id ) ) {\nerror_log( 'addPage error: ' . $page_id->get_error_message() );\n}update_option( 'page_on_front', $page_id );update_option( 'show_on_front', 'page' );",
+      "progress": {
+        "caption": "addPage: Dynamic Header and Navigation for Block Themes"
+      }
+    }
+  ],
+  "meta": {
+    "title": "Plugin (shrinking logo sticky header) + Theme (ollie) + addMedia, addPage",
+    "author": "https://github.com/akirk/playground-step-library"
+  },
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "latest"
+  }
+}
