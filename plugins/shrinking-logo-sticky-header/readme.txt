@@ -93,7 +93,7 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 4. Click on `Activate plugin`
 
 == Changelog ==
-= 1.5: January 8, 2026 =
+= 1.5: January 4, 2026 =
 * Fix: Flickering in header when scrolling up in most cases completely prevented (Code improvements)
 * Fix: Language Files corrected - prevent direct access
 * Plugin Check: No errors, no warnings
