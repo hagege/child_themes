@@ -98,7 +98,7 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 * Fix: Language Files corrected - prevent direct access
 * Plugin Check: No errors, no warnings
 
-== Changelog ==
+
 = 1.4.1: November 20, 2025 =
 * Added Option: Menu does not appear as sticky on mobile devices - may be better for accessibility reasons
 * Fix: ID in form field corrected
