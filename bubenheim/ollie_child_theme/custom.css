@@ -10,19 +10,19 @@
     }
 }
 
+/* Workaround für Link bei H2 - Schrifart behalten */
+h2 a,
+h2.link-in-card a {
+    font-family: var(--wp--preset--font-family--finger-paint);
+    text-decoration: none;
+    line-height: 1.6;
+}
+
 /* Problem bei Firefox auf der Startpage */
 .wp-block-image.alignfull.size-full.wave_startpage_image img,
 .wp-block-image.alignfull.size-full.wave_image img {
     height: 9rem;
 }
-
-/* Überschrift h2 als Link  */
-h2.link-in-card a {
-    font-family: 'Finger Paint';
-    text-decoration: none;
-    line-height: 1.6;
-}
-
 
 /* Buttons */
 /* roter Button mit rotem Outline bei Hover */
