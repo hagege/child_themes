@@ -10,6 +10,17 @@
     }
 }
 
+/* Hinter- und Vordergrundfarbe beim Embed Privacy */
+.embed-privacy-overlay {
+    background-color: var(--wp--preset--color--custom-mittelgr-n);
+}
+
+.embed-privacy-overlay p,
+.embed-privacy-overlay label,
+.embed-privacy-overlay a {
+    color: var(--wp--preset--color--custom-weiss);
+}
+
 /* GS-Logo Slider: Vor und zurück größer */
 .gs_logo_area.carousel_nav_pos--bottom .swiper-button-prev,
 .gs_logo_area.carousel_nav_pos--bottom .swiper-button-next,
@@ -93,30 +104,14 @@ a:where(:not(.wp-element-button)):hover {
 /* Links in Navigation */
 .wp-block-navigation a:where(:not(.wp-element-button)):hover {
     text-decoration: none;
-    background-color: var(--wp--preset--color--custom-dunkelrot) !important;
+    background-color: var(--wp--preset--color--custom-mittelgr-n) !important;
     color: var(--wp--preset--color--custom-weiss) !important;
 }
 
 .wp-block-navigation a:where(:not(.wp-element-button)):focus,
 .wp-block-navigation a:where(:not(.wp-element-button)):active {
     text-decoration: none;
-    background-color: var(--wp--preset--color--custom-mittelgr-n) !important;
-    color: var(--wp--preset--color--custom-weiss) !important;
+    background-color: var(--wp--preset--color--custom-gelb) !important;
+    color: var(--wp--preset--color--custom-schwarz) !important;
     outline: 2px;
 }
-
-
-/* nicht mehr verwendet */
-/* language switcher 
-h2.widgettitle {
-    font-size: medium;
-    font-family: 'Lexend';
-    text-align: center;
-    visibility: hidden;
-    display:none;
-}
-
-div.widget_polylang ul {
-  list-style-type: none;
-}
-*/
