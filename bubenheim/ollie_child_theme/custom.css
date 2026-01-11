@@ -10,6 +10,27 @@
     }
 }
 
+/* GS-Logo Slider: Vor und zurück größer */
+.gs_logo_area.carousel_nav_pos--bottom .swiper-button-prev,
+.gs_logo_area.carousel_nav_pos--bottom .swiper-button-next,
+.gs_logo_area.carousel_nav_pos--bottom .swiper-container-rtl .swiper-button-next,
+.gs_logo_area.carousel_nav_pos--bottom .swiper-container-rtl .swiper-button-prev {
+    width: 3rem;
+    height: 3rem;
+    /* margin-right: -80px; */
+}
+
+.gs_logo_area .swiper-button-next svg,
+.gs_logo_area .swiper-button-prev svg {
+    width: 20px;
+}
+
+div#gs_logo_area_49 .swiper-button-prev,
+div#gs_logo_area_49 .swiper-button-next {
+    margin-right: -4rem;
+    margin-left: -4rem;
+}
+
 /* Workaround für Link bei H2 - Schrifart behalten */
 h2 a,
 h2.link-in-card a {
@@ -39,7 +60,7 @@ div.roter_button a:active {
 div.gruener_button a:hover,
 div.gruener_button a:focus,
 div.gruener_button a:active {
-    outline-color: var(--wp--preset--color--custom-mittelgr-n);
+    outline-color: var(--wp--preset--color--custom-mittelgr-n) !important;
 }
 
 /* Desktop Menü */
