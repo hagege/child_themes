@@ -109,6 +109,8 @@ a:where(:not(.wp-element-button)):hover {
 }
 
 .wp-block-navigation a:where(:not(.wp-element-button)):focus,
+.wp-block-navigation a:where(:not(.wp-element-button)):focus-visible,
+.wp-block-navigation a:where(:not(.wp-element-button)):visited,
 .wp-block-navigation a:where(:not(.wp-element-button)):active {
     text-decoration: none;
     background-color: var(--wp--preset--color--custom-gelb) !important;
