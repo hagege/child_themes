@@ -117,3 +117,8 @@ a:where(:not(.wp-element-button)):hover {
     color: var(--wp--preset--color--custom-schwarz) !important;
     outline: 2px;
 }
+
+/* Eingabefeld für Such mit grünem Rand */
+input:not([type="submit"]) {
+    border: solid 1px var(--wp--preset--color--custom-mittelgr-n) !important;
+}
