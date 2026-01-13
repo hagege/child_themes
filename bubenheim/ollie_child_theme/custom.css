@@ -102,30 +102,49 @@ a:where(:not(.wp-element-button)):hover {
     text-decoration-thickness: 2px;
 }
 
+
 .wp-block-navigation a:where(:not(.wp-element-button)) {
     text-decoration: none;
     padding: 0.3em 0.5em;
     text-decoration: none;
 }
 
+
 /* Links in Navigation */
+
 .wp-block-navigation a:where(:not(.wp-element-button)):hover {
     text-decoration: none;
-    background-color: var(--wp--preset--color--custom-mittelgr-n) !important;
-    color: var(--wp--preset--color--custom-weiss) !important;
+    border-radius: 7px;
+    box-shadow:
+        inset 0 0 0 3px var(--wp--preset--color--custom-mittelgr-n);
+    outline: none;
 }
 
-.wp-block-navigation a:where(:not(.wp-element-button)):focus,
-.wp-block-navigation a:where(:not(.wp-element-button)):focus-visible,
-.wp-block-navigation a:where(:not(.wp-element-button)):visited,
-.wp-block-navigation a:where(:not(.wp-element-button)):active {
+/*
+.wp-block-navigation a:where(:not(.wp-element-button)):focus
+{
     text-decoration: none;
-    background-color: var(--wp--preset--color--custom-gelb) !important;
-    color: var(--wp--preset--color--custom-schwarz) !important;
+    background-color: var(--wp--preset--color--custom-dunkelrot) !important;
+    color: var(--wp--preset--color--custom-weiss) !important;
     outline: 2px;
 }
 
-/* Eingabefeld für Such mit grünem Rand */
+.wp-block-navigation a:where(:not(.wp-element-button)):active
+{
+    text-decoration: none;
+    background-color: linear-gradient(to right, var(--wp--preset--color--custom-dunkelrot) !important 80%, transparent) ;
+    color: var(--wp--preset--color--custom-weiss) !important;
+    outline: 2px;
+}
+*/
+
+/* kein Unterstrich im Menü bei aktivierer Seite */
+.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container .current-menu-item>a,
+.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container .has-child button:hover {
+    text-decoration: none;
+}
+
+/* Eingabefeld für Suche mit grünem Rand */
 input:not([type="submit"]) {
     border: solid 1px var(--wp--preset--color--custom-mittelgr-n) !important;
 }
