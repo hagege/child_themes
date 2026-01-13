@@ -10,6 +10,11 @@
     }
 }
 
+/* für Preise, damit das breiter dargestellt wird */
+.wp-block-group.is-nowrap.is-layout-flex.wp-container-core-group-is-layout-7d0538bf.wp-block-group-is-layout-flex {
+    width: 6rem;
+}
+
 /* Hinter- und Vordergrundfarbe beim Embed Privacy */
 .embed-privacy-overlay {
     background-color: var(--wp--preset--color--custom-mittelgr-n);
@@ -37,7 +42,9 @@
 }
 
 div#gs_logo_area_49 .swiper-button-prev,
-div#gs_logo_area_49 .swiper-button-next {
+div#gs_logo_area_50 .swiper-button-prev,
+div#gs_logo_area_49 .swiper-button-next,
+div#gs_logo_area_50 .swiper-button-next {
     margin-right: -4rem;
     margin-left: -4rem;
 }
