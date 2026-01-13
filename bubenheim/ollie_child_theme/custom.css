@@ -81,6 +81,13 @@ div.gruener_button a:active {
     outline-color: var(--wp--preset--color--custom-mittelgr-n) !important;
 }
 
+/* weißer Button mit weißem Outline bei Hover */
+div.weisser_button a:hover,
+div.weisser_button a:focus,
+div.weisser_button a:active {
+    outline-color: var(--wp--preset--color--custom-weiss) !important;
+}
+
 /* Desktop Menü */
 /* Menü bei hover */
 /* Logo nicht bei Hover hervorheben */
@@ -120,23 +127,6 @@ a:where(:not(.wp-element-button)):hover {
     outline: none;
 }
 
-/*
-.wp-block-navigation a:where(:not(.wp-element-button)):focus
-{
-    text-decoration: none;
-    background-color: var(--wp--preset--color--custom-dunkelrot) !important;
-    color: var(--wp--preset--color--custom-weiss) !important;
-    outline: 2px;
-}
-
-.wp-block-navigation a:where(:not(.wp-element-button)):active
-{
-    text-decoration: none;
-    background-color: linear-gradient(to right, var(--wp--preset--color--custom-dunkelrot) !important 80%, transparent) ;
-    color: var(--wp--preset--color--custom-weiss) !important;
-    outline: 2px;
-}
-*/
 
 /* kein Unterstrich im Menü bei aktivierer Seite */
 .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container .current-menu-item>a,
