@@ -3,6 +3,23 @@
     outline-style: solid
 }
 
+/* Schriftfarbe für Button */
+button.wpgmza-api-consent {
+    color: black !important;
+}
+
+/* animation for clickable cards with twentig */
+.wp-block-group.karte_klickbar,
+.wp-block-cover.karte_klickbar {
+    transform: scale(1);
+    transition: all 0.35s ease;
+}
+
+.wp-block-group.karte_klickbar:hover,
+.wp-block-cover.karte_klickbar:hover {
+    box-shadow: var(--wp--preset--shadow--natural);
+}
+
 /* Suche bei WP Go Maps */
 .wpgmza-standalone-component .dataTables_wrapper .dataTables_filter input,
 .wpgmza_map .wpgmza-inner-stack .dataTables_wrapper .dataTables_filter input {
@@ -26,9 +43,11 @@ p.wpgmza-centered {
     text-align: center;
 }
 
+/* Meldung bei Datenschutz */
 .wpgmza-gdpr-compliance {
-    border: thin solid;
+    border: 1rem solid var(--wp--preset--color--base-2);
     padding: 0.4em;
+    border-radius: 10px;
 }
 
 /* Damit das Suchfeld das Menü nicht überdeckt */
