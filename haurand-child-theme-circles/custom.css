@@ -4,7 +4,7 @@ figure.featured_image_top_center img {
 }
 
 /* wenn das featured image unten zentriert werden soll */
-figure.featured_image_top_center img {
+figure.featured_image_bottom_center img {
     object-position: bottom center;
 }
 
