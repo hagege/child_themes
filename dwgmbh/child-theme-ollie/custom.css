@@ -10,15 +10,19 @@
 }
 */
 
-
-/* Links bei Hover */
+/* Links bei Hover und in der Navigation */
+.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container .current-menu-item>a,
+.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container .has-child button:hover,
 p a:hover,
 ul li a:hover {
   text-decoration: none;
+  text-decoration-thickness: auto;
   outline: 3px;
+  outline-color: currentcolor;
+  outline-style: none;
   outline-color: var(--wp--preset--color--custom-orange);
   outline-style: solid;
-  outline-offset: 5px;
+  outline-offset: 0px;
   z-index: 999;
 }
 
