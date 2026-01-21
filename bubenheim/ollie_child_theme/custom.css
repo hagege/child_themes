@@ -2,6 +2,7 @@
     overflow: hidden;
 }
 
+
 /* Einstellungen Cover übernehmen */
 @media (min-width: 960px) {
     div.header-cover {
@@ -31,22 +32,24 @@
 .gs_logo_area.carousel_nav_pos--bottom .swiper-button-next,
 .gs_logo_area.carousel_nav_pos--bottom .swiper-container-rtl .swiper-button-next,
 .gs_logo_area.carousel_nav_pos--bottom .swiper-container-rtl .swiper-button-prev {
-    width: 3rem;
-    height: 3rem;
+    width: 3.2rem;
+    height: 3.2rem;
     /* margin-right: -80px; */
 }
 
 .gs_logo_area .swiper-button-next svg,
 .gs_logo_area .swiper-button-prev svg {
-    width: 20px;
+    width: 24px;
+    fill: var(--wp--preset--color--black);
 }
 
 div#gs_logo_area_49 .swiper-button-prev,
 div#gs_logo_area_50 .swiper-button-prev,
 div#gs_logo_area_49 .swiper-button-next,
 div#gs_logo_area_50 .swiper-button-next {
-    margin-right: -4rem;
-    margin-left: -4rem;
+    margin-right: -4.2rem;
+    margin-left: -4.2rem;
+    background-color: var(--wp--preset--color--custom-gelb);
 }
 
 /* Workaround für Link bei H2 - Schrifart behalten */
