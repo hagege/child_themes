@@ -3,20 +3,21 @@
 :root {
   --dunkelblau-color: rgba(30, 51, 127, 1);
   --orange-color: rgba(255, 125, 31, 1);
-  --hellblau-color:  rgba(0, 123, 190, 1);
+  --hellblau-color: rgba(0, 123, 190, 1);
   --hellgrau-color: rgba(234, 234, 234, 0.4);
   --lila-color: rgba(162, 50, 150, 1);
-  --rot-color: rgba(238, 56, 63, 1);	     
-  --gelb-color: rgba(255, 216, 0, 1);	  
-  --gruen-color: rgba(135, 193, 44, 1);			
+  --rot-color: rgba(238, 56, 63, 1);
+  --gelb-color: rgba(255, 216, 0, 1);
+  --gruen-color: rgba(135, 193, 44, 1);
   --wp--preset--font-size--medium: clamp(1.3125rem, 1.3125rem + ((1vw - 1rem) * -2.524), 2.625rem);
   --wp--preset--font-size--cover-paragraph: clamp(2rem, 10vw, 6rem);
   --wp--preset--font-size--h2: clamp(1.5rem, 2vw, 6rem);
-    /* funktioniert nicht, daher nur definiert */
---rot-color_transpa: rgba(191, 25, 25, 0.5);
+  /* funktioniert nicht, daher nur definiert */
+  --rot-color_transpa: rgba(191, 25, 25, 0.5);
   --mobile-breakpoint: 767px;
   --tablet-breakpoint: 900px;
 }
+
 /*
 Dunkelblau	#1E337F
 Orange		#FF7D1F
@@ -28,10 +29,30 @@ Grün 	#87C12C
 
 */
 
+/* GenerateBlocks Button: Outline bei Hover */
+
+
+a.gb-button:hover {
+  background-color: var(--wp--preset--color--global-color-8);
+  color: var(--wp--preset--color--base);
+  outline: 3px solid var(--wp--preset--color--global-color-8);
+  outline-offset: 2px;
+}
+
+a.footer_button:hover {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* Links im Footer */
+.gb-container.footer_links a:hover {
+  text-decoration: none;
+}
+
 /* für Krankmeldung */
 span.vonbis {
-    display: inline-block;
-    width: 50px;
+  display: inline-block;
+  width: 50px;
 }
 
 /* smooth scrolling und korrekte Ansteuerung interner Anker */
@@ -41,10 +62,10 @@ html {
 }
 
 .home aside#block-7 {
-    display: none;
+  display: none;
 }
 
-/* Korrektur notwendig: Nur bei Familienunterstützender Dienst hat die folgende Zeile bei Rand oben 2em erzeugt */ 
+/* Korrektur notwendig: Nur bei Familienunterstützender Dienst hat die folgende Zeile bei Rand oben 2em erzeugt */
 .entry-content:not(:first-child) {
   margin-top: 0;
 }
@@ -56,24 +77,25 @@ html {
 
 /* H1 wird auf der Startseite nicht angezeigt, taucht aber im Quelltext auf */
 .page-id-7 .entry-title,
-.page-id-68 .entry-title{
+.page-id-68 .entry-title {
   display: none;
 }
 
 /* Scrollbar vertikal immer anzeigen */
 body {
-overflow-y: scroll; /* Show vertical scrollbar */
+  overflow-y: scroll;
+  /* Show vertical scrollbar */
 }
 
 /* Bullet dunkelblau bei Listen */
 ul li::marker {
-color: var(--dunkelblau-color);
-font-size: 1.5em;
+  color: var(--dunkelblau-color);
+  font-size: 1.5em;
 }
 
 /* Schatten für Bilder */
 figure img {
-  box-shadow: 5px 5px 5px 1px rgba(30,51,127,0.2);
+  box-shadow: 5px 5px 5px 1px rgba(30, 51, 127, 0.2);
 }
 
 
@@ -90,9 +112,9 @@ div.bruecke_links_oben div.wp-block-group__inner-container {
 
 p.kachel_absatz_oben,
 h2.kachel_absatz_oben {
-/* border-radius: 0px 0px 40px 0px; */
-margin: 0px;
-font-size: clamp(1rem, 0.88rem + 0.6vw, 1.6rem);
+  /* border-radius: 0px 0px 40px 0px; */
+  margin: 0px;
+  font-size: clamp(1rem, 0.88rem + 0.6vw, 1.6rem);
 }
 
 div.kachel_oben_links p,
@@ -101,8 +123,7 @@ div.kachel_oben_links h2 {
 }
 
 div.kachel_unten_links p,
-div.kachel_unten_links h2
-{
+div.kachel_unten_links h2 {
   margin-bottom: 0px;
 }
 
@@ -113,17 +134,17 @@ h2.kachel_absatz_oben.gb-headline-text {
 
 /* Auf 100% Breite bei 850px */
 @media (max-width: 850px) {
-.bruecke_gruppe_kacheln .gb-grid-wrapper .gb-grid-column {
-  width: 100%;
-}
+  .bruecke_gruppe_kacheln .gb-grid-wrapper .gb-grid-column {
+    width: 100%;
+  }
 }
 
 /* Ansprechpartner auf den Bereichsseiten */
 @media (max-width: 767px) {
-h2.ansprechpartner {
-  margin-left: 0px;
-  margin-top: 40px;
-}
+  h2.ansprechpartner {
+    margin-left: 0px;
+    margin-top: 40px;
+  }
 }
 
 
@@ -133,35 +154,38 @@ h2.ansprechpartner {
 
 /* Einstellungen für das Desktop-Menü */
 @media (min-width: 769px) {
+
   /* nav links effect */
-  .main-navigation .menu > .menu-item > a::after{
-      content: "";
-      position: absolute;
-      right: 0;
-      left: 50%;
-      bottom: 0px;
-      -webkit-transform: translateX(-50%);
-      transform: translateX(-50%);
-      color: var(--dunkelblau-color);
-      display: block;
-      width: 0;
-      height: 3px;   
-      background-color: currentcolor; 
-      transition: 0.3s width ease;
-  }
-  .main-navigation .menu > .menu-item.current-menu-item > a::after,
-  .main-navigation .menu > .menu-item > a:hover::after {
-      width: 100%;
-      color: var(--hellblau-color);
+  .main-navigation .menu>.menu-item>a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 50%;
+    bottom: 0px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    color: var(--dunkelblau-color);
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: currentcolor;
+    transition: 0.3s width ease;
   }
 
-.main-navigation .menu > .menu-item.current-menu-item > a::after,
-  .main-navigation .menu > .menu-item.current-menu-ancestor > a::after,
-  .main-navigation .menu > .menu-item > a:active::after {
-  width: 100%;
-  color: var(--dunkelblau-color);
+  .main-navigation .menu>.menu-item.current-menu-item>a::after,
+  .main-navigation .menu>.menu-item>a:hover::after {
+    width: 100%;
+    color: var(--hellblau-color);
   }
-/* Submenü 
+
+  .main-navigation .menu>.menu-item.current-menu-item>a::after,
+  .main-navigation .menu>.menu-item.current-menu-ancestor>a::after,
+  .main-navigation .menu>.menu-item>a:active::after {
+    width: 100%;
+    color: var(--dunkelblau-color);
+  }
+
+  /* Submenü 
 ul.sub-menu {
   opacity: 0.9;
 }
@@ -169,37 +193,37 @@ ul.sub-menu {
 }
 
 /* ---------------------*/
-/* Der Detail-Block mit */ 
+/* Der Detail-Block mit */
 /* einigen Anpassungen  */
 /* ---------------------*/
 summary {
-list-style: none;
-display: flex; /* also removes the list marker */
-align-items: center;
-padding: 2rem;
-font-weight: 400;
-background: var(--dunkelblau-color);
-color: white;
+  list-style: none;
+  display: flex;
+  /* also removes the list marker */
+  align-items: center;
+  padding: 2rem;
+  font-weight: 400;
+  background: var(--dunkelblau-color);
+  color: white;
 }
 
-summary::before{
-content: '>';
-/*  margin-left: .75em; */
-transition: 0.2s;
-margin-right: 1rem;
-font-size: 2rem;
+summary::before {
+  content: '>';
+  /*  margin-left: .75em; */
+  transition: 0.2s;
+  margin-right: 1rem;
+  font-size: 2rem;
 }
 
 
-details[open] > summary::before{
-transform: rotate(90deg);
+details[open]>summary::before {
+  transform: rotate(90deg);
 }
 
 .wp-block-details[open] summary,
-.wp-block-details summary:hover
-{
-background: var(--hellblau-color);
-transition: all 0.2s ease-in-out;
+.wp-block-details summary:hover {
+  background: var(--hellblau-color);
+  transition: all 0.2s ease-in-out;
 }
 
 /* .wp-block-details 
@@ -210,7 +234,7 @@ transition: all 0.2s ease-in-out;
 */
 
 summary::-webkit-details-marker {
-display: none;
+  display: none;
 }
 
 
@@ -223,20 +247,18 @@ details p {
 */
 
 /* Hintergrundfarbe details */
-details > div.wp-block-group {
+details>div.wp-block-group {
   background: var(--hellgrau-color);
 }
 
 @keyframes details-show {
-from {
-  opacity:0;
-  transform: var(--details-translate, translateY(-0.5em));
-}
-}
-
-details[open] > *:not(summary),
-details[close] > *:not(summary) {
-animation: details-show 1000ms ease-in-out;
+  from {
+    opacity: 0;
+    transform: var(--details-translate, translateY(-0.5em));
+  }
 }
 
-
+details[open]>*:not(summary),
+details[close]>*:not(summary) {
+  animation: details-show 1000ms ease-in-out;
+}
