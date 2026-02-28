@@ -48,9 +48,9 @@ Helltürkis:   #00F5F6
 	width: 25px;
 }
 
-/* Erste Spalte bei Karte Flohmarkt komplett verstecken  */
-body.page-id-6159 table.wpgmza_table th:first-child,
-body.page-id-6159 table.wpgmza_table td:first-child {
+/* Erste Spalte bei Karte Flohmarkt komplett verstecken */
+body.page-id-6159 td.sorting_1.wpgmza_table_title.dtr-control,
+body.page-id-6159 th#wpgmza_map_list_title {
 	display: none !important;
 }
 
