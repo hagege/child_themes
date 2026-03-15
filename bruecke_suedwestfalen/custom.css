@@ -31,6 +31,12 @@ Grün 	#87C12C
 
 /* GenerateBlocks Button: Outline bei Hover */
 
+/* Footer Link zur Startseite */
+p.footer_link_startseite a:hover,
+.copyright-bar a:hover {
+  text-decoration: none;
+}
+
 
 a.gb-button:hover {
   background-color: var(--wp--preset--color--global-color-8);
