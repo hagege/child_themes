@@ -29,6 +29,46 @@ Grün 	#87C12C
 
 */
 
+/* Container-Styling für Barrierefreiheit */
+/* blau: #1e337f */
+.footer-widgets .widget_nav_menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  /* Wichtig für Mobilgeräte */
+  gap: 20px;
+  /* Sauberer Abstand zwischen den Links */
+}
+
+/* Fokus-Zustand für Tastatur-Nutzer (Barrierefreiheit) */
+.footer-widgets .widget_nav_menu a:focus {
+  outline: 2px solid #1a1a1a;
+  /* Deutlicher Rahmen beim Tabben */
+  outline-offset: 4px;
+}
+
+/* Link-Styling */
+.footer-widgets .widget_nav_menu a:hover {
+  text-decoration: none;
+  /* Unterstreichung hilft der Erkennbarkeit */
+  text-underline-offset: 3px;
+}
+
+.footer-widgets .widget_nav_menu ul,
+.site-footer .footer-bar .widget_nav_menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Zentriert die Menüpunkte horizontal */
+  gap: 30px;
+  /* Großzügiger Abstand */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 /* GenerateBlocks Button: Outline bei Hover */
 
 /* Footer Link zur Startseite */
