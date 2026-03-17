@@ -29,45 +29,57 @@ Grün 	#87C12C
 
 */
 
-/* Container-Styling für Barrierefreiheit */
-/* blau: #1e337f */
-.footer-widgets .widget_nav_menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  /* Wichtig für Mobilgeräte */
-  gap: 20px;
-  /* Sauberer Abstand zwischen den Links */
-}
 
-/* Fokus-Zustand für Tastatur-Nutzer (Barrierefreiheit) */
-.footer-widgets .widget_nav_menu a:focus {
-  outline: 2px solid #1a1a1a;
-  /* Deutlicher Rahmen beim Tabben */
-  outline-offset: 4px;
-}
+/* Footer Navigation - Barrierefreie Link-Styles (Enhanced) */
 
-/* Link-Styling */
-.footer-widgets .widget_nav_menu a:hover {
-  text-decoration: none;
-  /* Unterstreichung hilft der Erkennbarkeit */
+/* Standard-Zustand: Links unterstrichen */
+nav.footer-navigation ul li a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
   text-underline-offset: 3px;
+  color: #ffffff;
+  outline: none;
+  transition: text-decoration 0.2s ease, outline 0.2s ease;
 }
 
-.footer-widgets .widget_nav_menu ul,
-.site-footer .footer-bar .widget_nav_menu ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* Zentriert die Menüpunkte horizontal */
-  gap: 30px;
-  /* Großzügiger Abstand */
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* Hover: Unterstrich entfernen */
+nav.footer-navigation ul li a:hover {
+  text-decoration: none;
 }
+
+/* Focus: Deutlicher Kasten (Tastaturnavigation) */
+nav.footer-navigation ul li a:focus {
+  text-decoration: underline;
+  outline: 3px solid #ffffff;
+  outline-offset: 4px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Leichter Hintergrund für mehr Sichtbarkeit */
+}
+
+/* Active: Kasten beim Klicken */
+nav.footer-navigation ul li a:active {
+  text-decoration: underline;
+  outline: 3px solid #ffffff;
+  outline-offset: 4px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Focus-Visible (nur bei Tastatur-Navigation) */
+nav.footer-navigation ul li a:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 4px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Focus ohne Tastatur (Maus-Klick) - kein Outline */
+nav.footer-navigation ul li a:focus:not(:focus-visible) {
+  outline: none;
+  background-color: transparent;
+}
+
 
 /* GenerateBlocks Button: Outline bei Hover */
 
@@ -122,10 +134,11 @@ html {
 }
 
 /* H1 wird auf der Startseite nicht angezeigt, taucht aber im Quelltext auf */
-.page-id-7 .entry-title,
-.page-id-68 .entry-title {
+/* .page-id-7 .entry-title, 
+.page-id-68 .entry-title{
   display: none;
 }
+*/
 
 /* Scrollbar vertikal immer anzeigen */
 body {
