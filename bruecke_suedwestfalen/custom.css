@@ -29,6 +29,11 @@ Grün 	#87C12C
 
 */
 
+/* GB-Akkordeon mit underline bei Hover */
+div.akkordeon-hover.gb-accordion button:hover {
+  text-decoration: underline;
+}
+
 
 /* Footer Navigation - Barrierefreie Link-Styles (Enhanced) */
 
