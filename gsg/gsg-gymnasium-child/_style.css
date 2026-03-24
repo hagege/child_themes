@@ -1,0 +1,526 @@
+/*
+Theme Name: GSG Gymnasium
+Template: ollie
+Description: Maßgeschneidertes Child Theme für das GSG Gymnasium basierend auf Ollie Block Theme. Enthält alle Patterns, Templates und Styles der GSG Website.
+Author: GSG Gymnasium
+Author URI: https://gsg-gymnasium.de
+Version: 1.0.0
+Requires at least: 6.4
+Tested up to: 6.5
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: gsg-child
+Tags: education, school, gymnasium, block-theme, responsive
+*/
+
+/*
+ * =============================================================================
+ * GSG GYMNASIUM CUSTOM STYLES
+ * Alle Styles aus der Original-HTML übernommen und für WordPress optimiert
+ * =============================================================================
+ */
+
+/* Top Bar Styles */
+.gsg-top-bar {
+    background: var(--wp--preset--color--gsg-navy);
+    color: var(--wp--preset--color--base);
+    padding: 0.75rem 0;
+    font-size: 0.9rem;
+}
+
+.gsg-top-bar a {
+    color: var(--wp--preset--color--base);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.gsg-top-bar a:hover {
+    color: var(--wp--preset--color--gsg-yellow);
+}
+
+/* Logo Styles */
+.site-logo .gsg-logo-circle {
+    width: 60px;
+    height: 60px;
+    background: var(--wp--preset--color--gsg-navy);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--wp--preset--color--base);
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+/* Hero Section aus HTML */
+.gsg-hero-section {
+    background: var(--wp--preset--gradient--gsg-hero-gradient);
+    color: var(--wp--preset--color--base);
+    position: relative;
+    overflow: hidden;
+}
+
+.gsg-hero-section::before {
+    content: '📚';
+    position: absolute;
+    font-size: 30rem;
+    opacity: 0.03;
+    right: -5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Stat Cards */
+.gsg-stat-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: var(--wp--preset--spacing--50);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+.gsg-stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--wp--preset--color--gsg-yellow);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.gsg-stat-label {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* News Cards */
+.gsg-news-card {
+    background: var(--wp--preset--color--base);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--wp--preset--shadow--gsg-card);
+    transition: var(--wp--custom--gsg--transitions--smooth);
+}
+
+.gsg-news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--wp--preset--shadow--gsg-card-hover);
+}
+
+.gsg-news-image {
+    width: 100%;
+    height: 240px;
+    background: var(--wp--preset--color--gsg-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6rem;
+}
+
+.gsg-news-content {
+    padding: var(--wp--preset--spacing--50);
+}
+
+.gsg-news-meta {
+    display: flex;
+    gap: var(--wp--preset--spacing--40);
+    margin-bottom: var(--wp--preset--spacing--30);
+    font-size: 0.85rem;
+    color: var(--wp--preset--color--gsg-blue);
+}
+
+/* Fachbereich Cards */
+.gsg-fach-card {
+    background: var(--wp--preset--gradient--gsg-section-gradient);
+    padding: var(--wp--preset--spacing--60) var(--wp--preset--spacing--50);
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: var(--wp--custom--gsg--transitions--smooth);
+    cursor: pointer;
+}
+
+.gsg-fach-card:hover {
+    border-color: var(--wp--preset--color--gsg-yellow);
+    transform: translateY(-5px);
+    box-shadow: var(--wp--preset--shadow--gsg-card-hover);
+}
+
+.gsg-fach-icon {
+    font-size: 4rem;
+    margin-bottom: var(--wp--preset--spacing--40);
+}
+
+/* Event Cards */
+.gsg-event-card {
+    display: flex;
+    gap: var(--wp--preset--spacing--50);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: var(--wp--preset--spacing--50);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--wp--custom--gsg--transitions--smooth);
+}
+
+.gsg-event-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--wp--preset--color--gsg-yellow);
+}
+
+.gsg-event-date {
+    background: var(--wp--preset--color--gsg-yellow);
+    color: var(--wp--preset--color--gsg-navy);
+    padding: var(--wp--preset--spacing--40);
+    border-radius: 8px;
+    text-align: center;
+    min-width: 100px;
+    flex-shrink: 0;
+}
+
+.gsg-event-date .day {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.gsg-event-date .month {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.25rem;
+}
+
+/* Anmeldung Section */
+.gsg-anmeldung-section {
+    background: var(--wp--preset--gradient--gsg-yellow-gradient);
+    color: var(--wp--preset--color--gsg-navy);
+}
+
+/* Forms */
+.gsg-form-group {
+    margin-bottom: var(--wp--preset--spacing--40);
+}
+
+.gsg-form-group label {
+    display: block;
+    margin-bottom: var(--wp--preset--spacing--20);
+    color: var(--wp--preset--color--gsg-navy);
+    font-weight: 600;
+}
+
+.gsg-form-group input,
+.gsg-form-group textarea,
+.gsg-form-group select {
+    width: 100%;
+    padding: var(--wp--preset--spacing--30);
+    border: 2px solid var(--wp--preset--color--gsg-light-gray);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: var(--wp--custom--gsg--transitions--smooth);
+}
+
+.gsg-form-group input:focus,
+.gsg-form-group textarea:focus,
+.gsg-form-group select:focus {
+    outline: none;
+    border-color: var(--wp--preset--color--gsg-navy);
+    box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+}
+
+/* Footer */
+.site-footer {
+    background: var(--wp--preset--color--gsg-navy);
+    color: var(--wp--preset--color--base);
+}
+
+.site-footer a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: var(--wp--custom--gsg--transitions--fast);
+}
+
+.site-footer a:hover {
+    color: var(--wp--preset--color--gsg-yellow);
+}
+
+/* Social Links */
+.gsg-social-links {
+    display: flex;
+    gap: var(--wp--preset--spacing--30);
+    margin-top: var(--wp--preset--spacing--30);
+}
+
+.gsg-social-link {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--wp--custom--gsg--transitions--smooth);
+}
+
+.gsg-social-link:hover {
+    background: var(--wp--preset--color--gsg-yellow);
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .gsg-hero-section::before {
+        font-size: 20rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .gsg-event-card {
+        flex-direction: column;
+    }
+    
+    .gsg-news-image {
+        height: 180px;
+        font-size: 4rem;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .gsg-news-card,
+    .gsg-fach-card,
+    .gsg-event-card {
+        transition: none;
+    }
+    
+    .gsg-news-card:hover,
+    .gsg-fach-card:hover {
+        transform: none;
+    }
+}
+
+/* Selection */
+::selection {
+    background: var(--wp--preset--color--gsg-yellow);
+    color: var(--wp--preset--color--gsg-navy);
+}
+
+::-moz-selection {
+    background: var(--wp--preset--color--gsg-yellow);
+    color: var(--wp--preset--color--gsg-navy);
+}
+
+/* ==========================================
+   BUTTON ENHANCEMENTS
+   ========================================== */
+
+/* Alle Buttons einheitliche Größe und Animation */
+.wp-block-button__link,
+.wp-element-button,
+button[type="submit"],
+input[type="submit"] {
+    padding: 1rem 2rem !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    border: none !important;
+    min-height: 48px !important; /* Accessibility: Touch-Target */
+}
+
+/* Primary Button (Gelb) */
+.wp-block-button:not(.is-style-outline) .wp-block-button__link {
+    background: var(--wp--preset--color--gsg-yellow) !important;
+    color: var(--wp--preset--color--gsg-navy) !important;
+    box-shadow: var(--wp--preset--shadow--gsg-md);
+}
+
+.wp-block-button:not(.is-style-outline) .wp-block-button__link:hover {
+    background: var(--wp--preset--color--gsg-gold) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(229, 181, 51, 0.4);
+}
+
+.wp-block-button:not(.is-style-outline) .wp-block-button__link:focus {
+    background: var(--wp--preset--color--gsg-gold) !important;
+    outline: 3px solid var(--wp--preset--color--gsg-navy) !important;
+    outline-offset: 3px !important;
+}
+
+.wp-block-button:not(.is-style-outline) .wp-block-button__link:focus:not(:focus-visible) {
+    outline: none !important;
+}
+
+.wp-block-button:not(.is-style-outline) .wp-block-button__link:active {
+    transform: translateY(0px);
+    box-shadow: var(--wp--preset--shadow--gsg-sm);
+}
+
+/* Outline Button (Navy Border) */
+.wp-block-button.is-style-outline .wp-block-button__link {
+    background: transparent !important;
+    color: var(--wp--preset--color--gsg-navy) !important;
+    border: 2px solid var(--wp--preset--color--gsg-navy) !important;
+    padding: calc(1rem - 2px) calc(2rem - 2px) !important;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:hover {
+    background: var(--wp--preset--color--gsg-navy) !important;
+    color: var(--wp--preset--color--base) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(30, 58, 95, 0.3);
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:focus {
+    outline: 3px solid var(--wp--preset--color--gsg-yellow) !important;
+    outline-offset: 3px !important;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:focus:not(:focus-visible) {
+    outline: none !important;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:active {
+    transform: translateY(0px);
+}
+
+/* White Outline Button (für dunkle Hintergründe) */
+.wp-block-button.is-style-outline .wp-block-button__link[style*="border-color"] {
+    /* Behält individuelle Border-Colors */
+}
+
+/* Hero Button Spezial-Style (Weiß auf Navy) */
+.gsg-hero-section .wp-block-button.is-style-outline .wp-block-button__link {
+    border-color: var(--wp--preset--color--base) !important;
+    color: var(--wp--preset--color--base) !important;
+}
+
+.gsg-hero-section .wp-block-button.is-style-outline .wp-block-button__link:hover {
+    background: var(--wp--preset--color--base) !important;
+    color: var(--wp--preset--color--gsg-navy) !important;
+}
+
+/* Button Group Spacing */
+.wp-block-buttons {
+    gap: 1rem !important;
+}
+
+.wp-block-buttons .wp-block-button {
+    margin: 0 !important;
+}
+
+/* Loading State (optional) */
+.wp-block-button__link.is-loading {
+    opacity: 0.6;
+    cursor: wait;
+    pointer-events: none;
+}
+
+/* Disabled State */
+.wp-block-button__link:disabled,
+.wp-block-button__link[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* ==========================================
+   SMOOTH ANIMATIONS
+   ========================================== */
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Fade Up Animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scale In Animation */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Dezente Animationen für Content-Bereiche */
+.gsg-news-card,
+.gsg-fach-card,
+.gsg-event-card {
+    animation: fadeUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* Gestaffelte Animation für Cards */
+.gsg-news-card:nth-child(1) { animation-delay: 0s; }
+.gsg-news-card:nth-child(2) { animation-delay: 0.1s; }
+.gsg-news-card:nth-child(3) { animation-delay: 0.15s; }
+
+.gsg-fach-card:nth-child(1) { animation-delay: 0s; }
+.gsg-fach-card:nth-child(2) { animation-delay: 0.08s; }
+.gsg-fach-card:nth-child(3) { animation-delay: 0.16s; }
+.gsg-fach-card:nth-child(4) { animation-delay: 0.24s; }
+.gsg-fach-card:nth-child(5) { animation-delay: 0.32s; }
+.gsg-fach-card:nth-child(6) { animation-delay: 0.40s; }
+
+/* ==========================================
+   ACCESSIBILITY & MOTION
+   ========================================== */
+
+/* Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .wp-block-button__link:hover,
+    .gsg-news-card:hover,
+    .gsg-fach-card:hover {
+        transform: none !important;
+    }
+}
+
+/* Touch Devices: Instant Feedback */
+@media (hover: none) and (pointer: coarse) {
+    .wp-block-button__link {
+        transition-duration: 0.15s !important;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .wp-block-button__link {
+        border: 2px solid currentColor !important;
+    }
+}
+

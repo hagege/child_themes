@@ -1,0 +1,580 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "title": "GSG Gymnasium Child Theme",
+  "settings": {
+    "appearanceTools": true,
+    "useRootPaddingAwareAlignments": true,
+    "color": {
+      "custom": true,
+      "customDuotone": true,
+      "customGradient": true,
+      "defaultGradients": false,
+      "defaultPalette": false,
+      "palette": [
+        {
+          "slug": "gsg-navy",
+          "color": "#151A52",
+          "name": "GSG Navy"
+        },
+        {
+          "slug": "gsg-blue",
+          "color": "#2B4B6F",
+          "name": "GSG Blue"
+        },
+        {
+          "slug": "gsg-gray",
+          "color": "#C1C5CD",
+          "name": "GSG Gray"
+        },
+        {
+          "slug": "gsg-light-gray",
+          "color": "#E8EAED",
+          "name": "GSG Light Gray"
+        },
+        {
+          "slug": "gsg-yellow",
+          "color": "#EEC849",
+          "name": "GSG Yellow"
+        },
+        {
+          "slug": "gsg-gold",
+          "color": "#D4A017",
+          "name": "GSG Gold"
+        },
+        {
+          "slug": "base",
+          "color": "#ffffff",
+          "name": "White"
+        },
+        {
+          "slug": "contrast",
+          "color": "#000000",
+          "name": "Black"
+        },
+        {
+          "slug": "gsg-success",
+          "color": "#22C55E",
+          "name": "Success Green"
+        },
+        {
+          "slug": "gsg-info",
+          "color": "#3B82F6",
+          "name": "Info Blue"
+        },
+        {
+          "slug": "gsg-warning",
+          "color": "#F59E0B",
+          "name": "Warning Orange"
+        }
+      ],
+      "gradients": [
+        {
+          "slug": "gsg-hero-gradient",
+          "gradient": "linear-gradient(135deg, #1E3A5F 0%, #2B4B6F 100%)",
+          "name": "GSG Hero Gradient"
+        },
+        {
+          "slug": "gsg-section-gradient",
+          "gradient": "linear-gradient(180deg, #ffffff 0%, #E8EAED 100%)",
+          "name": "GSG Section Gradient"
+        },
+        {
+          "slug": "gsg-yellow-gradient",
+          "gradient": "linear-gradient(135deg, #E5B533 0%, #D4A017 100%)",
+          "name": "GSG Yellow Gradient"
+        },
+        {
+          "slug": "gsg-overlay",
+          "gradient": "radial-gradient(circle, rgba(30,58,95,0.05) 0%, transparent 70%)",
+          "name": "GSG Overlay"
+        }
+      ],
+      "duotone": [
+        {
+          "colors": ["#1E3A5F", "#E5B533"],
+          "slug": "gsg-navy-yellow",
+          "name": "GSG Navy & Yellow"
+        },
+        {
+          "colors": ["#2B4B6F", "#E8EAED"],
+          "slug": "gsg-blue-gray",
+          "name": "GSG Blue & Gray"
+        }
+      ]
+    },
+    "typography": {
+      "customFontSize": true,
+      "fontStyle": true,
+      "fontWeight": true,
+      "letterSpacing": true,
+      "lineHeight": true,
+      "textDecoration": true,
+      "textTransform": true,
+      "dropCap": true,
+      "fontSizes": [
+        {
+          "slug": "small",
+          "size": "0.875rem",
+          "name": "Small"
+        },
+        {
+          "slug": "medium",
+          "size": "1rem",
+          "name": "Medium"
+        },
+        {
+          "slug": "large",
+          "size": "1.125rem",
+          "name": "Large"
+        },
+        {
+          "slug": "x-large",
+          "size": "1.5rem",
+          "name": "Extra Large"
+        },
+        {
+          "slug": "heading-small",
+          "size": "1.8rem",
+          "name": "Heading Small"
+        },
+        {
+          "slug": "heading-medium",
+          "size": "2.5rem",
+          "name": "Heading Medium"
+        },
+        {
+          "slug": "heading-large",
+          "size": "3.5rem",
+          "name": "Heading Large"
+        },
+        {
+          "slug": "hero",
+          "size": "clamp(2.5rem, 6vw, 4rem)",
+          "name": "Hero",
+          "fluid": {
+            "min": "2.5rem",
+            "max": "4rem"
+          }
+        }
+      ],
+      "fontFamilies": [
+        {
+          "fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+          "slug": "inter",
+          "name": "Inter (System Fallback)"
+        },
+        {
+          "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+          "slug": "system",
+          "name": "System Sans-Serif"
+        }
+      ]
+    },
+    "spacing": {
+      "customSpacingSize": true,
+      "spacingScale": {
+        "steps": 0
+      },
+      "spacingSizes": [
+        {
+          "slug": "10",
+          "size": "0.25rem",
+          "name": "XXS"
+        },
+        {
+          "slug": "20",
+          "size": "0.5rem",
+          "name": "XS"
+        },
+        {
+          "slug": "30",
+          "size": "1rem",
+          "name": "S"
+        },
+        {
+          "slug": "40",
+          "size": "1.5rem",
+          "name": "M"
+        },
+        {
+          "slug": "50",
+          "size": "2rem",
+          "name": "L"
+        },
+        {
+          "slug": "60",
+          "size": "2.5rem",
+          "name": "XL"
+        },
+        {
+          "slug": "70",
+          "size": "3rem",
+          "name": "XXL"
+        },
+        {
+          "slug": "80",
+          "size": "4rem",
+          "name": "XXXL"
+        },
+        {
+          "slug": "90",
+          "size": "6rem",
+          "name": "Section"
+        }
+      ],
+      "units": ["px", "em", "rem", "vh", "vw", "%"]
+    },
+    "layout": {
+      "contentSize": "1200px",
+      "wideSize": "1400px"
+    },
+    "border": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true
+    },
+    "shadow": {
+      "defaultPresets": false,
+      "presets": [
+        {
+          "slug": "gsg-sm",
+          "shadow": "0 1px 3px rgba(30, 58, 95, 0.12)",
+          "name": "GSG Small"
+        },
+        {
+          "slug": "gsg-md",
+          "shadow": "0 4px 6px rgba(30, 58, 95, 0.1)",
+          "name": "GSG Medium"
+        },
+        {
+          "slug": "gsg-lg",
+          "shadow": "0 10px 25px rgba(30, 58, 95, 0.15)",
+          "name": "GSG Large"
+        },
+        {
+          "slug": "gsg-xl",
+          "shadow": "0 20px 40px rgba(30, 58, 95, 0.2)",
+          "name": "GSG Extra Large"
+        },
+        {
+          "slug": "gsg-card",
+          "shadow": "0 4px 15px rgba(30, 58, 95, 0.08)",
+          "name": "GSG Card"
+        },
+        {
+          "slug": "gsg-card-hover",
+          "shadow": "0 10px 30px rgba(30, 58, 95, 0.15)",
+          "name": "GSG Card Hover"
+        }
+      ]
+    },
+    "custom": {
+      "gsg": {
+        "transitions": {
+          "fast": "all 0.2s ease",
+          "smooth": "all 0.3s ease",
+          "slow": "all 0.5s cubic-bezier(0.4, 0, 0.2, 1)"
+        },
+        "borderRadius": {
+          "small": "4px",
+          "medium": "8px",
+          "large": "12px",
+          "full": "9999px"
+        },
+        "zIndex": {
+          "header": "1000",
+          "dropdown": "100",
+          "overlay": "500",
+          "modal": "2000"
+        },
+        "breakpoints": {
+          "mobile": "640px",
+          "tablet": "768px",
+          "desktop": "1024px",
+          "wide": "1280px"
+        }
+      }
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var(--wp--preset--color--base)",
+      "text": "var(--wp--preset--color--contrast)"
+    },
+    "typography": {
+      "fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+      "fontSize": "var(--wp--preset--font-size--medium)",
+      "lineHeight": "1.6"
+    },
+    "spacing": {
+      "blockGap": "var(--wp--preset--spacing--50)",
+      "padding": {
+        "top": "0",
+        "right": "var(--wp--preset--spacing--50)",
+        "bottom": "0",
+        "left": "var(--wp--preset--spacing--50)"
+      }
+    },
+    "elements": {
+      "link": {
+        "color": {
+          "text": "var(--wp--preset--color--gsg-navy)"
+        },
+        ":hover": {
+          "color": {
+            "text": "var(--wp--preset--color--gsg-blue)"
+          }
+        },
+        ":focus": {
+          "color": {
+            "text": "var(--wp--preset--color--gsg-navy)"
+          },
+          "outline": {
+            "width": "3px",
+            "style": "solid",
+            "color": "var(--wp--preset--color--gsg-yellow)",
+            "offset": "3px"
+          }
+        }
+      },
+      "button": {
+        "color": {
+          "background": "var(--wp--preset--color--gsg-yellow)",
+          "text": "var(--wp--preset--color--gsg-navy)"
+        },
+        "border": {
+          "radius": "8px",
+          "width": "0px"
+        },
+        "spacing": {
+          "padding": {
+            "top": "1rem",
+            "right": "2rem",
+            "bottom": "1rem",
+            "left": "2rem"
+          }
+        },
+        "typography": {
+          "fontWeight": "600",
+          "fontSize": "1rem",
+          "lineHeight": "1.5"
+        },
+        "shadow": "var(--wp--preset--shadow--gsg-md)",
+        ":hover": {
+          "color": {
+            "background": "var(--wp--preset--color--gsg-gold)",
+            "text": "var(--wp--preset--color--gsg-navy)"
+          },
+		  "outline": {
+            "width": "3px",
+            "style": "solid",
+            "color": "var(--wp--preset--color--gsg-base)",
+            "offset": "3px"
+          },
+          "shadow": "0 6px 20px rgba(229, 181, 51, 0.4)",
+          "transform": "translateY(-2px)"
+        },
+        ":focus": {
+          "color": {
+            "background": "var(--wp--preset--color--gsg-gold)",
+            "text": "var(--wp--preset--color--gsg-navy)"
+          },
+          "outline": {
+            "width": "3px",
+            "style": "solid",
+            "color": "var(--wp--preset--color--gsg-base)",
+            "offset": "3px"
+          }
+        },
+        ":active": {
+          "color": {
+            "background": "var(--wp--preset--color--gsg-gold)",
+            "text": "var(--wp--preset--color--gsg-navy)"
+          },
+          "transform": "translateY(0px)",
+          "shadow": "var(--wp--preset--shadow--gsg-sm)"
+        }
+      },
+      "heading": {
+        "color": {
+          "text": "var(--wp--preset--color--gsg-navy)"
+        },
+        "typography": {
+          "fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+          "fontWeight": "700",
+          "lineHeight": "1.2"
+        }
+      },
+      "h1": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--hero)",
+          "lineHeight": "1.1",
+          "fontWeight": "800"
+        }
+      },
+      "h2": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--heading-medium)",
+          "lineHeight": "1.2"
+        }
+      },
+      "h3": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--heading-small)",
+          "lineHeight": "1.3"
+        }
+      },
+      "h4": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--x-large)",
+          "lineHeight": "1.4"
+        }
+      }
+    },
+    "blocks": {
+      "core/group": {
+        "spacing": {
+          "blockGap": "var(--wp--preset--spacing--50)"
+        }
+      },
+      "core/columns": {
+        "spacing": {
+          "blockGap": "var(--wp--preset--spacing--50)"
+        }
+      },
+      "core/button": {
+        "border": {
+          "radius": "8px"
+        },
+        "spacing": {
+          "padding": {
+            "top": "1rem",
+            "right": "2rem",
+            "bottom": "1rem",
+            "left": "2rem"
+          }
+        },
+        "variations": {
+          "outline": {
+            "color": {
+              "background": "transparent",
+              "text": "var(--wp--preset--color--gsg-navy)"
+            },
+            "border": {
+              "color": "var(--wp--preset--color--gsg-navy)",
+              "width": "2px",
+              "style": "solid",
+              "radius": "8px"
+            },
+            "spacing": {
+              "padding": {
+                "top": "calc(1rem - 2px)",
+                "right": "calc(2rem - 2px)",
+                "bottom": "calc(1rem - 2px)",
+                "left": "calc(2rem - 2px)"
+              }
+            },
+            ":hover": {
+              "color": {
+                "background": "var(--wp--preset--color--gsg-navy)",
+                "text": "var(--wp--preset--color--base)"
+              },
+              "transform": "translateY(-2px)",
+              "shadow": "0 6px 20px rgba(30, 58, 95, 0.3)"
+            },
+            ":focus": {
+              "outline": {
+                "width": "3px",
+                "style": "solid",
+                "color": "var(--wp--preset--color--gsg-yellow)",
+                "offset": "3px"
+              }
+            },
+            ":active": {
+              "transform": "translateY(0px)"
+            }
+          }
+        }
+      },
+      "core/navigation": {
+        "typography": {
+          "fontWeight": "500"
+        }
+      },
+      "core/quote": {
+        "color": {
+          "background": "var(--wp--preset--color--gsg-light-gray)"
+        },
+        "border": {
+          "color": "var(--wp--preset--color--gsg-yellow)",
+          "style": "solid",
+          "width": "0 0 0 4px"
+        },
+        "spacing": {
+          "padding": {
+            "top": "var(--wp--preset--spacing--50)",
+            "right": "var(--wp--preset--spacing--50)",
+            "bottom": "var(--wp--preset--spacing--50)",
+            "left": "var(--wp--preset--spacing--60)"
+          }
+        }
+      },
+      "core/image": {
+        "border": {
+          "radius": "var(--wp--custom--gsg--border-radius--medium)"
+        }
+      },
+      "core/separator": {
+        "color": {
+          "background": "var(--wp--preset--color--gsg-gray)"
+        }
+      },
+      "core/table": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--small)"
+        }
+      }
+    }
+  },
+  "customTemplates": [
+    {
+      "name": "gymnasium-home",
+      "title": "Gymnasium Startseite",
+      "postTypes": ["page"]
+    },
+    {
+      "name": "gymnasium-news",
+      "title": "Gymnasium News",
+      "postTypes": ["page", "post"]
+    },
+    {
+      "name": "gymnasium-events",
+      "title": "Gymnasium Termine",
+      "postTypes": ["page"]
+    },
+    {
+      "name": "gymnasium-contact",
+      "title": "Gymnasium Kontakt",
+      "postTypes": ["page"]
+    }
+  ],
+  "templateParts": [
+    {
+      "name": "header",
+      "title": "Header",
+      "area": "header"
+    },
+    {
+      "name": "footer",
+      "title": "Footer",
+      "area": "footer"
+    },
+    {
+      "name": "sidebar",
+      "title": "Sidebar",
+      "area": "sidebar"
+    }
+  ]
+}
