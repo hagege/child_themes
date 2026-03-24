@@ -1,0 +1,112 @@
+/* dezente Animationen bei cards */
+
+.gsg-news-card,
+.gsg-card {
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(30, 58, 95, 0.08);
+    transition: all 0.3s ease;
+}
+
+.gsg-news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(30, 58, 95, 0.15);
+    transition: all 0.6s ease;
+}
+
+.gsg-card:hover {
+    border-color: var(--wp--preset--color--gsg-yellow) !important;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(30, 58, 95, 0.15);
+    transition: all 0.6s ease;
+}
+
+
+/* Zeile über dem Menü */
+/* Top Bar Styles */
+.gsg-top-bar {
+    background: var(--wp--preset--color--gsg-navy);
+    color: var(--wp--preset--color--base);
+    padding: 0.75rem 0;
+    font-size: 0.9rem;
+}
+
+.gsg-top-bar a {
+    color: var(--wp--preset--color--base);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.gsg-top-bar a:hover {
+    color: var(--wp--preset--color--gsg-yellow);
+}
+
+/*
+ * =============================================================================
+ * NAVIGATION STYLES 
+ * Underline-Animation, Hover-Effekte
+ * =============================================================================
+ */
+
+/* Header */
+
+.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container .current-menu-item>a,
+.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container .has-child button:hover {
+    text-decoration: none;
+}
+
+/* Navigation Links */
+.wp-block-navigation-item a,
+.wp-block-navigation__container .wp-block-navigation-item__content,
+.gsg-top-bar a {
+    position: relative;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Underline Animation on Hover */
+.wp-block-navigation-item a::after,
+.wp-block-navigation__container .wp-block-navigation-item__content::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--wp--preset--color--gsg-gold);
+    transition: width 0.3s ease;
+}
+
+
+.wp-block-navigation-item a:hover::after,
+.wp-block-navigation__container .wp-block-navigation-item__content:hover::after {
+    width: 100%;
+}
+
+
+/* Hover Text Color */
+.wp-block-navigation-item a:hover,
+.wp-block-navigation__container .wp-block-navigation-item__content:hover {
+    color: var(--wp--preset--color--gsg-gold);
+}
+
+/* Active/Current Menu Item */
+.wp-block-navigation-item.current-menu-item a,
+.wp-block-navigation__container .current-menu-item .wp-block-navigation-item__content {
+    color: var(--wp--preset--color--gsg-blue);
+    font-weight: 600;
+}
+
+.wp-block-navigation-item.current-menu-item a::after,
+.wp-block-navigation__container .current-menu-item .wp-block-navigation-item__content::after {
+    width: 100%;
+}
+
+
+/* Focus State für Accessibility */
+.wp-block-navigation-item a:focus,
+.wp-block-navigation__container .wp-block-navigation-item__content:focus {
+    outline: 3px solid var(--wp--preset--color--gsg-gold);
+    outline-offset: 3px;
+    color: var(--wp--preset--color--gsg-gold);
+}
