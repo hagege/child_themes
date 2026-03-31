@@ -9,7 +9,7 @@ Tags:
 Requires at least: 5.0
 Tested up to: 6.4.2
 Requires PHP: 8.0
-Stable tag: 0.3.2
+Stable tag: 0.3.4
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,10 @@ Weitere Optionen:
 
 
 == change log ==
+
+30.3.2026: Version 0.3.4
+			bessere Sicherheit, best practice (Claude)
+			die letzten 10 hochgeladenenen Dateien werden gezeigt
 
 25.1.2024: Version 0.3.2
 			Wochenpläne wurden nicht korrekt für jede Woche ausgegeben
