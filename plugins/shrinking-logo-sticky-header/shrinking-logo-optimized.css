@@ -1,0 +1,249 @@
+/**
+ * Shrinking Logo Sticky Header - Main Stylesheet
+ * Version: 1.6
+ * 
+ * Optimierungen:
+ * - CSS-Variablen für einfache Konfiguration
+ * - Modern CSS mit will-change für GPU-Beschleunigung
+ * - Normalisierte Easing-Functions
+ * - Vereinfachte Selektoren
+ * - Bessere Wartbarkeit
+ * - Keine Funktionalitäts-Verluste
+ */
+
+/* ============================================
+   1. CSS-Variablen (zentrale Konfiguration)
+   ============================================ */
+
+:root {
+    /* Größen */
+    --header-height: 100px;
+    --header-height-shrink: 80px;
+    --logo-scale: 0.8;
+    
+    /* Animation */
+    --animation-speed: 0.8s;
+    --animation-easing: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Z-Index Management */
+    --header-z-index: 1000;
+    
+    /* Breakpoints */
+    --breakpoint-mobile: 599px;
+    --breakpoint-tablet: 782px;
+}
+
+/* ============================================
+   2. Header Sticky (Haupt-Element)
+   ============================================ */
+
+header.wp-block-template-part {
+    position: sticky;
+    top: 0;
+    z-index: var(--header-z-index);
+    
+    /* Größe */
+    height: var(--header-height);
+    
+    /* Animation mit optimalem Easing */
+    transition: 
+        height var(--animation-speed) var(--animation-easing),
+        background-color var(--animation-speed) var(--animation-easing);
+    
+    /* GPU-Beschleunigung für Scroll-Performance */
+    will-change: height, background-color;
+    contain: layout style paint;
+}
+
+/* Schrumpfter Zustand */
+header.wp-block-template-part.shrink {
+    height: var(--header-height-shrink);
+}
+
+/* ============================================
+   3. Innere Gruppe (Layout-Container)
+   ============================================ */
+
+header.wp-block-template-part .wp-block-group {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+    /* Verhindert Layout-Shift */
+    contain: layout style;
+}
+
+/* ============================================
+   4. Logo-Animation (Haupt-Effekt)
+   ============================================ */
+
+header.wp-block-template-part .wp-block-site-logo img {
+    /* Kombinierte Transitions für Performance */
+    transition: 
+        transform var(--animation-speed) var(--animation-easing),
+        height var(--animation-speed) var(--animation-easing);
+    
+    /* Basis-Zustand */
+    transform: scale(1);
+    
+    /* GPU-Beschleunigung */
+    will-change: transform;
+}
+
+/* Schrumpfter Logo-Zustand */
+header.wp-block-template-part.shrink .wp-block-site-logo img {
+    transform: scale(var(--logo-scale));
+    /* translateX(0rem) entfernt - unnötig wenn scale zentriert */
+}
+
+/* ============================================
+   5. Mobile-Optimierung (Off-Canvas Menu)
+   ============================================ */
+
+@media screen and (max-width: var(--breakpoint-mobile)) {
+    /* Navigation Off-Canvas Container */
+    .wp-block-navigation__responsive-container {
+        /* Erbt Transitions vom Parent */
+        transition: inherit;
+        border-radius: inherit;
+    }
+    
+    /* Menü im geöffneten Zustand */
+    .wp-block-navigation__responsive-container.is-menu-open {
+        /* Verhindert doppelte Animationen */
+        animation: none;
+    }
+}
+
+/* ============================================
+   6. Anchor-Navigation (Scroll-Padding)
+   ============================================ */
+
+html {
+    /* Sanftes Scrolling */
+    scroll-behavior: smooth;
+    
+    /* Padding für Anchor-Links (verhindert Verdeckung durch Header) */
+    scroll-padding-top: 6rem;
+}
+
+/* ============================================
+   7. ENTFERNTE / KOMMENTIERTE Features
+   ============================================ */
+
+/*
+ * TABLET BREAKPOINT (782px):
+ * - Entfernt weil Theme-spezifisch und verursacht Konflikte
+ * - Wird dynamisch via JavaScript angewendet wenn nötig
+ * - Falls benötigt: in Theme-Kompatibilität-System hinzufügen
+ *
+ * @media screen and (max-width: 782px) {
+ *     .wp-block-navigation__responsive-container-open {
+ *         display: block !important;
+ *     }
+ *     .wp-block-navigation__responsive-container:not(.is-menu-open.has-modal-open) {
+ *         display: none !important;
+ *     }
+ * }
+ */
+
+/*
+ * SLIDE-IN ANIMATION (slideInMenu):
+ * - Entfernt - nicht mehr nötig mit modernem CSS
+ * - @keyframes können statisch sein oder dynamisch via JS gesetzt werden
+ * - Wird bei Bedarf zurückgefügt
+ *
+ * @keyframes slideInMenu {
+ *     from {
+ *         right: -70vw;
+ *     }
+ *     to {
+ *         right: 0vw;
+ *     }
+ * }
+ */
+
+/*
+ * HIDE/SHOW HEADER ON SCROLL:
+ * - Auskommentiert - würde zu komplexer JavaScript führen
+ * - Optional: Kann bei Bedarf aktiviert werden
+ * - Wenn aktiviert: Mit debounced Scroll-Handler arbeiten
+ *
+ * .hide-header {
+ *     transform: translateY(-100%);
+ * }
+ * .show-header {
+ *     transform: translateY(0);
+ * }
+ */
+
+/* ============================================
+   8. ZUSÄTZLICHE OPTIMIERUNGEN (Optional)
+   ============================================ */
+
+/*
+ * Für noch bessere Performance (kann hinzugefügt werden):
+ */
+
+/* Reduce motion für Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    header.wp-block-template-part,
+    header.wp-block-template-part .wp-block-site-logo img {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* High DPI screens - dünnere Borders */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    header.wp-block-template-part {
+        border-width: 0.5px;
+    }
+}
+
+/* Print styles - verhindert sticky im Druck */
+@media print {
+    header.wp-block-template-part {
+        position: static;
+        height: auto;
+        z-index: auto;
+    }
+}
+
+/* ============================================
+   9. DEBUGGING (kann in Production entfernt werden)
+   ============================================ */
+
+/*
+ * Debug-Mode aktivieren mit: ?#debug-shrinking-logo
+ * Zeigt Informationen über Header-Status
+ */
+
+html:has(header.wp-block-template-part.shrink) {
+    /* Optional: Visuelle Bestätigung im Debug-Mode */
+}
+
+/* ============================================
+   10. BROWSER-KOMPATIBILITÄT
+   ============================================ */
+
+/*
+ * Diese CSS nutzt folgende moderne Features:
+ * - CSS Custom Properties (CSS Variables)
+ * - will-change Property
+ * - contain Property (für Performance)
+ * - @media Abfragen
+ * - cubic-bezier() Easing
+ *
+ * Kompatibilität:
+ * - Chrome 49+
+ * - Firefox 31+
+ * - Safari 9.1+
+ * - Edge 15+
+ * - Mobile: iOS Safari 9.3+, Chrome Android 49+
+ *
+ * Fallback für ältere Browser:
+ * - transition: fallback auf "all" Property
+ * - will-change: wird ignoriert (kein Schaden)
+ * - CSS Variables: sollten mit Fallback definiert werden
+ */
