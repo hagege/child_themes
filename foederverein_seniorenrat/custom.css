@@ -1,5 +1,9 @@
 /* Basis: Links neutral darstellen */
-.wp-block-navigation a {
+.wp-block-navigation a,
+p a,
+li a,
+.wp-block-post-content a,
+footer a {
   position: relative;
   text-decoration: none !important;
   /* kein Standard-Unterstrich */
@@ -8,7 +12,11 @@
 }
 
 /* Unterstrich (immer sichtbar, aber neutral) */
-.wp-block-navigation a::after {
+.wp-block-navigation a::after,
+p a::after,
+li a::after,
+.wp-block-post-content a::after,
+footer a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -113,4 +121,41 @@ button:focus {
 hr.wp-block-separator.has-accent-petrol-background-color.strich_ueberschrift {
   border-bottom: 3px solid currentColor;
   height: 3px;
+}
+
+
+/* Button-Block */
+.wp-block-button__link {
+  transition: var(--wp--custom--transition);
+  border-radius: 4px;
+}
+
+/* Hover */
+.wp-block-button__link:hover {
+  background-color: var(--wp--preset--color--accent-petrol);
+  color: var(--wp--preset--color--background-white);
+  /* border: 1px solid var(--wp--preset--color--accent-petrol); */
+  outline: 2px solid var(--wp--preset--color--text-dark);
+  outline-offset: 3px;
+}
+
+/* Fokus (Accessibility) */
+.wp-block-button__link:focus-visible {
+  outline: 2px solid var(--wp--preset--color--text-dark);
+  outline-offset: 3px;
+}
+
+
+/* Hover / Fokus */
+p a:hover::after,
+p a:focus::after,
+li a:hover::after,
+li a:focus::after,
+.wp-block-post-content a:hover::after,
+.wp-block-post-content a:focus::after,
+footer a:hover::after,
+footer a:focus::after {
+  background-color: var(--wp--preset--color--accent-petrol);
+  opacity: 1;
+  transform: translateY(-2px);
 }
