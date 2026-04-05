@@ -1,4 +1,33 @@
-/* Basis: Links neutral darstellen */
+/**
+ * Custom Styling für Block Theme Navigation & Links
+ * Version: 2.0
+ * 
+ * Features:
+ * - Underline-Style Links mit Hover-Effekt
+ * - Farbvariablen aus theme.json Palette
+ * - Keyboard-Navigation Support (focus-visible)
+ * - Accessibility optimiert
+ * - Performance optimiert (keine Duplikate)
+ */
+
+/* ============================================
+   1. CSS-Variablen aus theme.json
+   ============================================ */
+
+:root {
+  --transition: var(--wp--custom--transition, all 0.2s ease);
+  --text-dark: var(--wp--preset--color--text-dark);
+  --primary-green: var(--wp--preset--color--primary-green);
+  --secondary-orange: var(--wp--preset--color--secondary-orange);
+  --accent-petrol: var(--wp--preset--color--accent-petrol);
+  --background-white: var(--wp--preset--color--background-white);
+}
+
+/* ============================================
+   2. Basis-Styling für alle Links
+   ============================================ */
+
+a,
 .wp-block-navigation a,
 p a,
 li a,
@@ -6,12 +35,18 @@ li a,
 footer a {
   position: relative;
   text-decoration: none !important;
-  /* kein Standard-Unterstrich */
   padding: 8px 10px;
   color: inherit;
+  transition: var(--transition);
 }
 
-/* Unterstrich (immer sichtbar, aber neutral) */
+/* ============================================
+   3. Unterstrich-Pseudo-Element (::after)
+   
+   WICHTIG: Nicht für Links mit Bildern!
+   ============================================ */
+
+a::after,
 .wp-block-navigation a::after,
 p a::after,
 li a::after,
@@ -23,139 +58,358 @@ footer a::after {
   bottom: 1px;
   width: 100%;
   height: 4px;
-  background-color: var(--wp--preset--color--text-dark);
+  background-color: var(--text-dark);
   opacity: 0.3;
-  transition: var(--wp--custom--transition);
+  transition: var(--transition);
+  will-change: opacity, transform;
 }
 
-/* Hover/Fokus: farbiger Unterstrich + leichte Bewegung */
+/* ============================================
+   3a. AUSNAHMEN: Keine Underlines für:
+   - Bilder in Links
+   - Buttons (wp-block-button__link)
+   
+   Verhindert ::after auf Links die Bilder enthalten
+   oder auf Button-Elements
+   ============================================ */
+
+/* BUTTONS - Bekommen KEINEN Underline */
+.wp-block-button__link::after {
+  display: none !important;
+}
+
+/* Links die nur ein Bild enthalten */
+a:has(> img:only-child)::after,
+.wp-block-navigation a:has(> img:only-child)::after,
+p a:has(> img:only-child)::after,
+li a:has(> img:only-child)::after,
+.wp-block-post-content a:has(> img:only-child)::after,
+footer a:has(> img:only-child)::after {
+  display: none;
+}
+
+/* Links die ein Bild enthalten (auch mit Text) */
+a:has(img)::after,
+.wp-block-navigation a:has(img)::after,
+p a:has(img)::after,
+li a:has(img)::after,
+.wp-block-post-content a:has(img)::after,
+footer a:has(img)::after {
+  display: none;
+}
+
+/* Fallback für ältere Browser ohne :has() Support */
+a img {
+  display: block;
+}
+
+a:has(img) {
+  position: static;
+}
+
+/* ============================================
+   4. Hover & Focus States für Links
+   
+   Struktur:
+   - .menu-green / .menu-orange / .menu-petrol / .menu-grey
+   - Alle nutzen CSS-Variablen aus theme.json
+   ============================================ */
 
 /* Grün */
 .menu-green a:hover::after,
-.menu-green a:focus::after {
-  background-color: var(--wp--preset--color--primary-green);
+.menu-green a:focus::after,
+.menu-green a:focus-visible::after {
+  background-color: var(--primary-green);
   opacity: 1;
   transform: translateY(-2px);
 }
 
 /* Orange */
 .menu-orange a:hover::after,
-.menu-orange a:focus::after {
-  background-color: var(--wp--preset--color--secondary-orange);
+.menu-orange a:focus::after,
+.menu-orange a:focus-visible::after {
+  background-color: var(--secondary-orange);
   opacity: 1;
   transform: translateY(-2px);
 }
 
 /* Petrol */
 .menu-petrol a:hover::after,
-.menu-petrol a:focus::after {
-  background-color: var(--wp--preset--color--accent-petrol);
+.menu-petrol a:focus::after,
+.menu-petrol a:focus-visible::after {
+  background-color: var(--accent-petrol);
   opacity: 1;
   transform: translateY(-2px);
 }
 
-/* Footer (neutral grau bleibt optional) */
+/* Grau (Footer/Default) */
 .menu-grey a:hover::after,
-.menu-grey a:focus::after {
-  background-color: var(--wp--preset--color--text-dark);
+.menu-grey a:focus::after,
+.menu-grey a:focus-visible::after {
+  background-color: var(--text-dark);
   opacity: 1;
   transform: translateY(-2px);
 }
 
-/* Accessibility: sichtbarer Fokus nur bei Tastatur */
-.wp-block-navigation a:focus-visible,
-.wp-block-button__link:focus-visible,
-a:focus-visible,
-button:focus-visible {
-  outline: 2px solid #000000;
-  outline-offset: 3px;
+/* Fallback: Links in Absätzen/Listen (default zu Petrol) */
+p a:hover::after,
+p a:focus::after,
+p a:focus-visible::after,
+li a:hover::after,
+li a:focus::after,
+li a:focus-visible::after,
+.wp-block-post-content a:hover::after,
+.wp-block-post-content a:focus::after,
+.wp-block-post-content a:focus-visible::after,
+footer a:hover::after,
+footer a:focus::after,
+footer a:focus-visible::after {
+  background-color: var(--accent-petrol);
+  opacity: 1;
+  transform: translateY(-2px);
 }
 
-/* Fallback für Browser ohne focus-visible */
-.wp-block-navigation a:focus,
-.wp-block-button__link:focus,
-a:focus,
-button:focus {
-  outline: 2px solid #000000;
-  outline-offset: 3px;
-}
+/* ============================================
+   5. Accessibility: Focus-Visible (WCAG 2.4.7)
+   
+   Best Practice: Nur bei Keyboard-Navigation
+   Verhindert Focus-Ring bei Mausklick
+   ============================================ */
 
-/* besserer Look */
-p a {
-  text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
-}
-
-p a:focus,
-p a:focus-visible {
-  outline: 2px solid #000 !important;
-  outline-offset: 3px;
-  border-radius: 6px;
-}
-
-
-/* Fokusrahmen für Accessibility */
 a:focus-visible,
 button:focus-visible,
 .wp-block-button__link:focus-visible,
 .wp-block-navigation a:focus-visible {
-  outline: 2px solid #000;
+  outline: 2px solid var(--text-dark);
   outline-offset: 3px;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 
-/* Fallback */
+/* ============================================
+   6. Fallback für Browser ohne focus-visible
+   ============================================ */
+
 a:focus,
-button:focus {
-  outline: 2px solid #000;
+button:focus,
+.wp-block-button__link:focus,
+.wp-block-navigation a:focus {
+  outline: 2px solid var(--text-dark);
   outline-offset: 3px;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 
-/* Verhindert Fokus bei Mausklick */
+/* ============================================
+   7. Verhindert Focus-Ring bei Mausklick
+   (Nur :focus-visible zeigt Ring)
+   ============================================ */
+
 :focus:not(:focus-visible) {
   outline: none;
 }
 
-/* Strich über der Überschrift */
-hr.wp-block-separator.has-accent-petrol-background-color.strich_ueberschrift {
-  border-bottom: 3px solid currentColor;
-  height: 3px;
-}
+/* ============================================
+   8. Button-Styling
+   ============================================ */
 
-
-/* Button-Block */
 .wp-block-button__link {
-  transition: var(--wp--custom--transition);
+  transition: var(--transition);
   border-radius: 4px;
 }
 
-/* Hover */
+/* Button Hover */
 .wp-block-button__link:hover {
-  background-color: var(--wp--preset--color--accent-petrol);
-  color: var(--wp--preset--color--background-white);
-  /* border: 1px solid var(--wp--preset--color--accent-petrol); */
-  outline: 2px solid var(--wp--preset--color--text-dark);
-  outline-offset: 3px;
+  background-color: var(--accent-petrol);
+  color: var(--background-white);
 }
 
-/* Fokus (Accessibility) */
+/* Button Focus */
+.wp-block-button__link:focus,
 .wp-block-button__link:focus-visible {
-  outline: 2px solid var(--wp--preset--color--text-dark);
+  background-color: var(--accent-petrol);
+  color: var(--background-white);
+  outline: 2px solid var(--text-dark);
   outline-offset: 3px;
+  border-radius: 4px;
 }
 
+/* ============================================
+   9. Spezielle Elemente
+   ============================================ */
 
-/* Hover / Fokus */
-p a:hover::after,
-p a:focus::after,
-li a:hover::after,
-li a:focus::after,
-.wp-block-post-content a:hover::after,
-.wp-block-post-content a:focus::after,
-footer a:hover::after,
-footer a:focus::after {
-  background-color: var(--wp--preset--color--accent-petrol);
-  opacity: 1;
-  transform: translateY(-2px);
+/* Separator/Linie über Überschrift */
+hr.wp-block-separator.has-accent-petrol-background-color.strich_ueberschrift {
+  border-bottom: 3px solid var(--accent-petrol);
+  height: 3px;
 }
+
+/* ============================================
+   10. Accessibility: Prefers-Reduced-Motion
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  a::after,
+  .wp-block-navigation a::after,
+  p a::after,
+  li a::after,
+  .wp-block-post-content a::after,
+  footer a::after {
+    transition: none;
+  }
+
+  a:hover::after,
+  a:focus::after,
+  a:focus-visible::after,
+  .menu-green a:hover::after,
+  .menu-green a:focus::after,
+  .menu-orange a:hover::after,
+  .menu-orange a:focus::after,
+  .menu-petrol a:hover::after,
+  .menu-petrol a:focus::after,
+  .menu-grey a:hover::after,
+  .menu-grey a:focus::after {
+    transform: none;
+  }
+}
+
+/* ============================================
+   11. Accessibility: High Contrast Mode
+   ============================================ */
+
+@media (prefers-contrast: more) {
+
+  a::after,
+  .wp-block-navigation a::after,
+  p a::after,
+  li a::after {
+    opacity: 0.6;
+    height: 6px;
+  }
+
+  a:hover::after,
+  a:focus::after,
+  .menu-green a:hover::after,
+  .menu-green a:focus::after,
+  .menu-orange a:hover::after,
+  .menu-orange a:focus::after,
+  .menu-petrol a:hover::after,
+  .menu-petrol a:focus::after {
+    opacity: 1;
+    height: 6px;
+  }
+
+  a:focus-visible {
+    outline: 3px solid var(--text-dark);
+  }
+}
+
+/* ============================================
+   12. Mobile: Größere Hit-Targets
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  a,
+  .wp-block-navigation a,
+  p a,
+  li a,
+  .wp-block-post-content a,
+  footer a {
+    padding: 10px 12px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  a::after,
+  .wp-block-navigation a::after,
+  p a::after,
+  li a::after,
+  .wp-block-post-content a::after,
+  footer a::after {
+    height: 3px;
+    bottom: 2px;
+  }
+}
+
+/* ============================================
+   13. Print Styles
+   ============================================ */
+
+@media print {
+
+  a,
+  .wp-block-navigation a,
+  p a,
+  li a,
+  .wp-block-post-content a,
+  footer a {
+    text-decoration: underline;
+  }
+
+  a::after,
+  .wp-block-navigation a::after,
+  p a::after,
+  li a::after,
+  .wp-block-post-content a::after,
+  footer a::after {
+    display: none;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: none;
+  }
+}
+
+/* ============================================
+   14. Dark Mode Support (optional)
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+
+  a::after,
+  .wp-block-navigation a::after,
+  p a::after,
+  li a::after,
+  .wp-block-post-content a::after,
+  footer a::after {
+    opacity: 0.2;
+  }
+
+  a:hover::after,
+  a:focus::after,
+  a:focus-visible::after {
+    opacity: 0.8;
+  }
+}
+
+/* ============================================
+   15. Browser Compatibility
+   ============================================ */
+
+/* Verhindert blauen Fokus-Ring in Chrome auf Button */
+.wp-block-button__link:focus {
+  -webkit-appearance: none;
+}
+
+/* Verhindert Safari-Highlight */
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ============================================
+   ZUSAMMENFASSUNG DER ÄNDERUNGEN:
+   
+   ✅ Duplikate entfernt (z.B. focus + focus-visible zusammengefasst)
+   ✅ CSS-Variablen zentral definiert (:root)
+   ✅ Konsistente Namensgebung
+   ✅ Kommentare für bessere Lesbarkeit
+   ✅ will-change für Performance
+   ✅ Accessibility Features hinzugefügt
+   ✅ Mobile-Optimierung
+   ✅ Print-Styles
+   ✅ Dark Mode Support
+   ✅ Browser-Fallbacks
+   ============================================
+*/
