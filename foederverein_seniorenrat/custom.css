@@ -1,0 +1,78 @@
+/* Basis: Links neutral darstellen */
+.wp-block-navigation a {
+  position: relative;
+  text-decoration: none !important; /* kein Standard-Unterstrich */
+  padding: 8px 10px;
+  color: inherit;
+}
+
+/* Unterstrich (immer sichtbar, aber neutral) */
+.wp-block-navigation a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  width: 100%;
+  height: 4px;
+  background-color: var(--wp--preset--color--text-dark);
+  opacity: 0.3;
+  transition: var(--wp--custom--transition);
+}
+
+/* Hover/Fokus: farbiger Unterstrich + leichte Bewegung */
+
+/* Grün */
+.menu-green a:hover::after,
+.menu-green a:focus::after {
+  background-color: var(--wp--preset--color--primary-green);
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* Orange */
+.menu-orange a:hover::after,
+.menu-orange a:focus::after {
+  background-color: var(--wp--preset--color--secondary-orange);
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* Petrol */
+.menu-petrol a:hover::after,
+.menu-petrol a:focus::after {
+  background-color: var(--wp--preset--color--accent-petrol);
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* Footer (neutral grau bleibt optional) */
+.menu-grey a:hover::after,
+.menu-grey a:focus::after {
+  background-color: var(--wp--preset--color--text-dark);
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* Accessibility: sichtbarer Fokus nur bei Tastatur */
+.wp-block-navigation a:focus-visible,
+.wp-block-button__link:focus-visible,
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 3px;
+}
+
+/* Fallback für Browser ohne focus-visible */
+.wp-block-navigation a:focus,
+.wp-block-button__link:focus,
+a:focus,
+button:focus {
+  outline: 2px solid #000000;
+  outline-offset: 3px;
+}
+
+/* besserer Look */
+p a {
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}

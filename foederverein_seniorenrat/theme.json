@@ -1,0 +1,166 @@
+{
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "custom": {
+      "transition": "all .2s linear"
+    },
+    "color": {
+      "palette": [
+        {
+          "slug": "primary-green",
+          "name": "Primary Green",
+          "color": "#8AB126"
+        },
+        {
+          "slug": "secondary-orange",
+          "name": "Secondary Orange",
+          "color": "#F49C08"
+        },
+        {
+          "slug": "accent-petrol",
+          "name": "Accent Petrol",
+          "color": "#058888"
+        },
+        {
+          "slug": "text-dark",
+          "name": "Text Dark",
+          "color": "#484F55"
+        },
+        {
+          "slug": "background-white",
+          "name": "Background White",
+          "color": "#FFFFFF"
+        },
+        {
+          "slug": "petrol-transparent",
+          "name": "Petrol Transparent",
+          "color": "#05888812"
+        }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "slug": "lexend",
+          "name": "Lexend",
+          "fontFamily": "'Lexend', system-ui, -apple-system, Segoe UI, Roboto, sans-serif"
+        }
+      ]
+    },
+    "layout": {
+      "contentSize": "800px",
+      "wideSize": "1200px"
+    }
+  },
+  "styles": {
+    "color": {
+      "text": "var(--wp--preset--color--text-dark)",
+      "background": "var(--wp--preset--color--background-white)"
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--lexend)"
+    },
+    "elements": {
+      "heading": {
+        "color": {
+          "text": "var(--wp--preset--color--accent-petrol)"
+        }
+      },
+      "h2": {
+        "color": {
+          "text": "var(--wp--preset--color--accent-petrol)"
+        }
+      },
+      "h3": {
+        "color": {
+          "text": "var(--wp--preset--color--accent-petrol)"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "var(--wp--preset--color--text-dark)"
+        },
+        "typography": {
+          "textDecoration": "underline"
+        },
+		"border": {
+          "radius": "2px"
+        },
+        ":hover": {
+          "color": {
+            "text": "var(--wp--preset--color--accent-petrol)"
+          }
+        },
+        ":focus": {
+          "outline": "2px solid var(--wp--preset--color--text-dark)",
+          "outlineOffset": "3px"
+        },
+        ":active": {
+          "outline": "2px solid var(--wp--preset--color--text-dark)",
+          "outlineOffset": "3px"
+        }
+      },
+      "button": {
+	     "border": {
+            "radius": "2px"
+         },
+        ":focus": {
+          "outline": "2px solid var(--wp--preset--color--text-dark)",
+          "outlineOffset": "3px"
+        },
+        ":active": {
+          "outline": "2px solid var(--wp--preset--color--text-dark)",
+          "outlineOffset": "3px"
+        }
+      }
+    },
+    "blocks": {
+      "core/button": {
+        "border": {
+          "radius": "4px"
+        },
+        "color": {
+          "text": "#000000",
+          "background": "var(--wp--preset--color--secondary-orange)"
+        },
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--lexend)"
+        },
+        "spacing": {
+          "padding": {
+            "top": "0.5em",
+            "bottom": "0.5em",
+            "left": "1em",
+            "right": "1em"
+          }
+        },
+        ":hover": {
+          "color": {
+            "text": "var(--wp--preset--color--background-white)",
+            "background": "var(--wp--preset--color--accent-petrol)"
+          },
+          "border": {
+            "color": "var(--wp--preset--color--accent-petrol)",
+            "width": "1px",
+            "style": "solid"
+          }
+        },
+        ":focus": {
+          "outline": "2px solid var(--wp--preset--color--text-dark)",
+          "outlineOffset": "3px"
+        }
+      },
+      "core/image": {
+        "border": {
+          "radius": "40px 0 40px 0"
+        }
+      },
+      "core/separator": {
+        "color": {
+          "background": "var(--wp--preset--color--accent-petrol)"
+        }
+      }
+    }
+  }
+}
