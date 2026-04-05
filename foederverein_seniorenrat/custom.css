@@ -1,7 +1,8 @@
 /* Basis: Links neutral darstellen */
 .wp-block-navigation a {
   position: relative;
-  text-decoration: none !important; /* kein Standard-Unterstrich */
+  text-decoration: none !important;
+  /* kein Standard-Unterstrich */
   padding: 8px 10px;
   color: inherit;
 }
@@ -75,4 +76,41 @@ button:focus {
 p a {
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
+}
+
+p a:focus,
+p a:focus-visible {
+  outline: 2px solid #000 !important;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+
+/* Fokusrahmen für Accessibility */
+a:focus-visible,
+button:focus-visible,
+.wp-block-button__link:focus-visible,
+.wp-block-navigation a:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Fallback */
+a:focus,
+button:focus {
+  outline: 2px solid #000;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Verhindert Fokus bei Mausklick */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Strich über der Überschrift */
+hr.wp-block-separator.has-accent-petrol-background-color.strich_ueberschrift {
+  border-bottom: 3px solid currentColor;
+  height: 3px;
 }
