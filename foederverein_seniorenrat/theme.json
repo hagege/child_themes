@@ -132,7 +132,7 @@
       },
       "core/image": {
         "border": {
-          "radius": "40px 0 40px 0"
+          "radius": "0px"
         }
       },
       "core/separator": {
