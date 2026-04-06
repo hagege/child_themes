@@ -36,6 +36,11 @@
           "slug": "petrol-transparent",
           "name": "Petrol Transparent",
           "color": "#05888812"
+        },
+        {
+          "slug": "black",
+          "name": "black",
+          "color": "#000000"
         }
       ]
     },
@@ -100,7 +105,7 @@
           "radius": "4px"
         },
         "color": {
-          "text": "#000000",
+          "text": "var(--wp--preset--color--black)",
           "background": "var(--wp--preset--color--secondary-orange)"
         },
         "typography": {

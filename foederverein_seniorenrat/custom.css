@@ -36,7 +36,7 @@ footer a {
   position: relative;
   text-decoration: none !important;
   padding: 8px 10px;
-  color: inherit;
+  /* color: inherit; */
   transition: var(--transition);
 }
 
@@ -217,14 +217,10 @@ button:focus,
 }
 
 /* Button Hover */
-.wp-block-button__link:hover {
-  background-color: var(--accent-petrol);
-  color: var(--background-white);
-}
-
 /* Button Focus */
 .wp-block-button__link:focus,
-.wp-block-button__link:focus-visible {
+.wp-block-button__link:focus-visible,
+.wp-block-button__link:hover {
   background-color: var(--accent-petrol);
   color: var(--background-white);
   outline: 2px solid var(--text-dark);
