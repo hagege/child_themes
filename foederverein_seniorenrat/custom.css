@@ -21,6 +21,8 @@
   --secondary-orange: var(--wp--preset--color--secondary-orange);
   --accent-petrol: var(--wp--preset--color--accent-petrol);
   --background-white: var(--wp--preset--color--background-white);
+  --accordion-duration: var(--wp--custom--accordion--animationDuration, 0.35s);
+  --accordion-easing: var(--wp--custom--accordion--animationEasing, ease-in-out);
 }
 
 /* ============================================
@@ -395,17 +397,21 @@ a {
 }
 
 /* ============================================
-   ZUSAMMENFASSUNG DER ÄNDERUNGEN:
-   
-   ✅ Duplikate entfernt (z.B. focus + focus-visible zusammengefasst)
-   ✅ CSS-Variablen zentral definiert (:root)
-   ✅ Konsistente Namensgebung
-   ✅ Kommentare für bessere Lesbarkeit
-   ✅ will-change für Performance
-   ✅ Accessibility Features hinzugefügt
-   ✅ Mobile-Optimierung
-   ✅ Print-Styles
-   ✅ Dark Mode Support
-   ✅ Browser-Fallbacks
-   ============================================
-*/
+   16. Akkordeon
+   ============================================ */
+/* Mit Parent-Selektor = Höhere Specificity */
+.wp-block-accordion-item .wp-block-accordion-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--accordion-duration) var(--accordion-easing);
+  visibility: visible;
+  overflow: hidden;
+}
+
+.wp-block-accordion-item.is-open>.wp-block-accordion-panel {
+  grid-template-rows: 1fr;
+}
+
+.wp-block-accordion-panel>* {
+  min-height: 0;
+}

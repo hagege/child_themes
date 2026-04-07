@@ -5,6 +5,10 @@
     "custom": {
       "transition": "all .2s linear"
     },
+    "accordion": {
+      "animationDuration": "0.35s",
+      "animationEasing": "ease-in-out"
+    },
     "color": {
       "palette": [
         {
