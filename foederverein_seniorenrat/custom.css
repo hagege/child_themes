@@ -415,3 +415,13 @@ a {
 .wp-block-accordion-panel>* {
   min-height: 0;
 }
+
+/* ============================================
+   17. "normaler" Unterstrich bei Links
+   ============================================ */
+p.unterstrichen a {
+  text-decoration: underline !important;
+  position: inherit;
+  /* text-decoration: none !important; */
+  padding: 0;
+}
