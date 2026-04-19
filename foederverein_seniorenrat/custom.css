@@ -29,16 +29,18 @@
    2. Basis-Styling für alle Links
    ============================================ */
 
-a,
 .wp-block-navigation a,
-p a,
-li a,
-.wp-block-post-content a,
 footer a {
   position: relative;
   text-decoration: none !important;
-  padding: 8px 10px;
-  /* color: inherit; */
+  padding: 8px 10px 8px 10px;
+  transition: var(--transition);
+}
+
+p a {
+  position: relative;
+  text-decoration: none !important;
+  padding: 8px 0px 8px 0px;
   transition: var(--transition);
 }
 
@@ -153,20 +155,7 @@ a:has(img) {
   transform: translateY(-2px);
 }
 
-/* Fallback: Links in Absätzen/Listen (default zu Petrol) */
-p a:hover::after,
-p a:focus::after,
-p a:focus-visible::after,
-li a:hover::after,
-li a:focus::after,
-li a:focus-visible::after,
-.wp-block-post-content a:hover::after,
-.wp-block-post-content a:focus::after,
-.wp-block-post-content a:focus-visible::after,
-footer a:hover::after,
-footer a:focus::after,
-footer a:focus-visible::after {
-  background-color: var(--accent-petrol);
+p a:hover {
   opacity: 1;
   transform: translateY(-2px);
 }
@@ -301,90 +290,7 @@ hr.wp-block-separator.has-accent-petrol-background-color.strich_ueberschrift {
   }
 }
 
-/* ============================================
-   12. Mobile: Größere Hit-Targets
-   ============================================ */
-
-@media (max-width: 768px) {
-
-  a,
-  .wp-block-navigation a,
-  p a,
-  li a,
-  .wp-block-post-content a,
-  footer a {
-    padding: 10px 12px;
-    min-height: 44px;
-    display: inline-flex;
-    align-items: center;
-  }
-
-  a::after,
-  .wp-block-navigation a::after,
-  p a::after,
-  li a::after,
-  .wp-block-post-content a::after,
-  footer a::after {
-    height: 3px;
-    bottom: 2px;
-  }
-}
-
-/* ============================================
-   13. Print Styles
-   ============================================ */
-
-@media print {
-
-  a,
-  .wp-block-navigation a,
-  p a,
-  li a,
-  .wp-block-post-content a,
-  footer a {
-    text-decoration: underline;
-  }
-
-  a::after,
-  .wp-block-navigation a::after,
-  p a::after,
-  li a::after,
-  .wp-block-post-content a::after,
-  footer a::after {
-    display: none;
-  }
-
-  a:focus-visible,
-  button:focus-visible {
-    outline: none;
-  }
-}
-
-/* ============================================
-   14. Dark Mode Support (optional)
-   ============================================ */
-
-@media (prefers-color-scheme: dark) {
-
-  a::after,
-  .wp-block-navigation a::after,
-  p a::after,
-  li a::after,
-  .wp-block-post-content a::after,
-  footer a::after {
-    opacity: 0.2;
-  }
-
-  a:hover::after,
-  a:focus::after,
-  a:focus-visible::after {
-    opacity: 0.8;
-  }
-}
-
-/* ============================================
-   15. Browser Compatibility
-   ============================================ */
+============================================15. Browser Compatibility============================================*/
 
 /* Verhindert blauen Fokus-Ring in Chrome auf Button */
 .wp-block-button__link:focus {
