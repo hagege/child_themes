@@ -1,13 +1,14 @@
 /**
  * Custom Styling für Block Theme Navigation & Links
- * Version: 2.0
+ * Version: 2.1 - Ohne Paragraph Link Styling
  * 
  * Features:
- * - Underline-Style Links mit Hover-Effekt
+ * - Underline-Style Links nur in Navigation
+ * - Underline-Style Links nur für Buttons
+ * - Paragraph Links: Standard-Styling (keine Custom Regeln)
  * - Farbvariablen aus theme.json Palette
  * - Keyboard-Navigation Support (focus-visible)
  * - Accessibility optimiert
- * - Performance optimiert (keine Duplikate)
  */
 
 /* ============================================
@@ -26,7 +27,7 @@
 }
 
 /* ============================================
-   2. Basis-Styling für alle Links
+   2. Basis-Styling für Navigation Links
    ============================================ */
 
 .wp-block-navigation a,
@@ -37,24 +38,14 @@ footer a {
   transition: var(--transition);
 }
 
-p a {
-  position: relative;
-  text-decoration: none !important;
-  padding: 8px 0px 8px 0px;
-  transition: var(--transition);
-}
-
 /* ============================================
    3. Unterstrich-Pseudo-Element (::after)
    
-   WICHTIG: Nicht für Links mit Bildern!
+   NUR für Navigation und Footer Links
+   NICHT für Links in Absätzen!
    ============================================ */
 
-a::after,
 .wp-block-navigation a::after,
-p a::after,
-li a::after,
-.wp-block-post-content a::after,
 footer a::after {
   content: "";
   position: absolute;
@@ -72,9 +63,6 @@ footer a::after {
    3a. AUSNAHMEN: Keine Underlines für:
    - Bilder in Links
    - Buttons (wp-block-button__link)
-   
-   Verhindert ::after auf Links die Bilder enthalten
-   oder auf Button-Elements
    ============================================ */
 
 /* BUTTONS - Bekommen KEINEN Underline */
@@ -83,21 +71,13 @@ footer a::after {
 }
 
 /* Links die nur ein Bild enthalten */
-a:has(> img:only-child)::after,
 .wp-block-navigation a:has(> img:only-child)::after,
-p a:has(> img:only-child)::after,
-li a:has(> img:only-child)::after,
-.wp-block-post-content a:has(> img:only-child)::after,
 footer a:has(> img:only-child)::after {
   display: none;
 }
 
 /* Links die ein Bild enthalten (auch mit Text) */
-a:has(img)::after,
 .wp-block-navigation a:has(img)::after,
-p a:has(img)::after,
-li a:has(img)::after,
-.wp-block-post-content a:has(img)::after,
 footer a:has(img)::after {
   display: none;
 }
@@ -112,7 +92,7 @@ a:has(img) {
 }
 
 /* ============================================
-   4. Hover & Focus States für Links
+   4. Hover & Focus States für Navigation Links
    
    Struktur:
    - .menu-green / .menu-orange / .menu-petrol / .menu-grey
@@ -151,11 +131,6 @@ a:has(img) {
 .menu-grey a:focus::after,
 .menu-grey a:focus-visible::after {
   background-color: var(--text-dark);
-  opacity: 1;
-  transform: translateY(-2px);
-}
-
-p a:hover {
   opacity: 1;
   transform: translateY(-2px);
 }
@@ -235,18 +210,11 @@ hr.wp-block-separator.has-accent-petrol-background-color.strich_ueberschrift {
 
 @media (prefers-reduced-motion: reduce) {
 
-  a::after,
   .wp-block-navigation a::after,
-  p a::after,
-  li a::after,
-  .wp-block-post-content a::after,
   footer a::after {
     transition: none;
   }
 
-  a:hover::after,
-  a:focus::after,
-  a:focus-visible::after,
   .menu-green a:hover::after,
   .menu-green a:focus::after,
   .menu-orange a:hover::after,
@@ -265,16 +233,12 @@ hr.wp-block-separator.has-accent-petrol-background-color.strich_ueberschrift {
 
 @media (prefers-contrast: more) {
 
-  a::after,
   .wp-block-navigation a::after,
-  p a::after,
-  li a::after {
+  footer a::after {
     opacity: 0.6;
     height: 6px;
   }
 
-  a:hover::after,
-  a:focus::after,
   .menu-green a:hover::after,
   .menu-green a:focus::after,
   .menu-orange a:hover::after,
@@ -290,7 +254,9 @@ hr.wp-block-separator.has-accent-petrol-background-color.strich_ueberschrift {
   }
 }
 
-============================================15. Browser Compatibility============================================*/
+/* ============================================
+   12. Browser Compatibility
+   ============================================ */
 
 /* Verhindert blauen Fokus-Ring in Chrome auf Button */
 .wp-block-button__link:focus {
@@ -303,7 +269,7 @@ a {
 }
 
 /* ============================================
-   16. Akkordeon
+   13. Akkordeon
    ============================================ */
 /* Mit Parent-Selektor = Höhere Specificity */
 .wp-block-accordion-item .wp-block-accordion-panel {
@@ -323,11 +289,8 @@ a {
 }
 
 /* ============================================
-   17. "normaler" Unterstrich bei Links
+   14. Links bei Hover ohne Unterstrich
    ============================================ */
-p.unterstrichen a {
-  text-decoration: underline !important;
-  position: inherit;
-  /* text-decoration: none !important; */
-  padding: 0;
+a:where(:not(.wp-element-button)):hover {
+  text-decoration: none;
 }
