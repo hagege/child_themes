@@ -110,3 +110,8 @@
     outline-offset: 3px;
     color: var(--wp--preset--color--gsg-gold);
 }
+
+/* Normale Links bei Hover */
+a:where(:not(.wp-element-button)):hover {
+    text-decoration: none;
+}

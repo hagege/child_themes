@@ -1,0 +1,624 @@
+/**
+ * Custom CSS für Werbegemeinschaft Eilendorf
+ * Version: 1.0
+ * 
+ * Farben:
+ * - Primär Rot: #E3001B
+ * - Text: #666666
+ * - Dunkel: #333333
+ * - Weiß: #FFFFFF
+ * - Hell-Grau: #F5F5F5
+ */
+
+/* ============================================
+   1. CSS-Variablen
+   ============================================ */
+
+:root {
+  --primary-red: var(--wp--preset--color--primary-red);
+  --text-color: var(--wp--preset--color--text-dark);
+  --text-dark: var(--wp--preset--color--text-dunkel);
+  --white: #FFFFFF;
+  --light-gray: var(--wp--preset--color--light-gray);
+  --dark-gray: var(--wp--preset--color--dark-gray);
+  --transition: var(--wp--custom--transition, all 0.2s ease);
+}
+
+/* ============================================
+   2. Globale Styles
+   ============================================ */
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text-color);
+  background-color: var(--white);
+  line-height: 1.6;
+}
+
+/* ============================================
+   3. Header & Navigation
+   ============================================ */
+
+.wp-block-navigation a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: var(--transition);
+  position: relative;
+}
+
+.wp-block-navigation a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-red);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.wp-block-navigation a:hover::after,
+.wp-block-navigation a:focus::after {
+  opacity: 1;
+}
+
+/* ============================================
+   4. Logo Styling
+   ============================================ */
+
+.wp-block-logo-link img {
+  max-width: 150px;
+  height: auto;
+  margin-right: 2rem;
+}
+
+/* ============================================
+   5. Buttons
+   ============================================ */
+
+.wp-block-button__link {
+  background-color: var(--primary-red);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  transition: var(--transition);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.wp-block-button__link:hover,
+.wp-block-button__link:focus {
+  background-color: #CC0015;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(227, 0, 27, 0.3);
+}
+
+.wp-block-button__link:focus-visible {
+  outline: 2px solid var(--text-dark);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   6. Paragraph Links
+   ============================================ */
+
+p a,
+li a,
+.wp-block-post-content a {
+  position: relative;
+  color: var(--primary-red);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+p a::after,
+li a::after,
+.wp-block-post-content a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-red);
+  opacity: 0.4;
+  transition: var(--transition);
+}
+
+p a:hover::after,
+li a:hover::after,
+.wp-block-post-content a:hover::after {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   7. Headings
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-dark);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+h4 {
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+/* ============================================
+   8. Hero Section Layout
+   ============================================ */
+
+.hero-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+  font-size: 16px;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+.hero-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.hero-highlights li {
+  padding: 0.5rem 0;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.hero-highlights li::before {
+  content: "✓ ";
+  color: var(--primary-red);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+/* ============================================
+   9. Image Grid (Hero)
+   ============================================ */
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  position: relative;
+  min-height: 400px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.image-grid img:nth-child(2) {
+  position: absolute;
+  width: 40%;
+  bottom: -20px;
+  right: 0;
+  z-index: 10;
+}
+
+/* ============================================
+   10. Section Styling
+   ============================================ */
+
+.wp-block-group {
+  padding: 3rem 0;
+}
+
+.wp-block-group.has-light-gray-background-color {
+  background-color: var(--light-gray);
+  padding: 3rem 2rem;
+  border-radius: 4px;
+}
+
+/* ============================================
+   11. Grid/Card Layouts
+   ============================================ */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.card {
+  background-color: var(--white);
+  border: 1px solid var(--dark-gray);
+  border-radius: 8px;
+  padding: 2rem;
+  transition: var(--transition);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(227, 0, 27, 0.15);
+  transform: translateY(-4px);
+  border-color: var(--primary-red);
+}
+
+.card h3 {
+  color: var(--primary-red);
+  margin-top: 0;
+}
+
+/* ============================================
+   12. Table Styling
+   ============================================ */
+
+.wp-block-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.wp-block-table th {
+  background-color: var(--primary-red);
+  color: var(--white);
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.wp-block-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--dark-gray);
+  color: var(--text-color);
+}
+
+.wp-block-table tr:hover {
+  background-color: var(--light-gray);
+}
+
+/* ============================================
+   13. Accordion Styling
+   ============================================ */
+
+.wp-block-accordion-item__button {
+  background-color: var(--light-gray);
+  color: var(--text-dark);
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: var(--transition);
+  border-left: 4px solid var(--primary-red);
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+
+.wp-block-accordion-item__button:hover {
+  background-color: var(--dark-gray);
+}
+
+.wp-block-accordion-item.is-open .wp-block-accordion-item__button {
+  background-color: var(--primary-red);
+  color: var(--white);
+}
+
+/* ============================================
+   14. Form Styling
+   ============================================ */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--dark-gray);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 16px;
+  color: var(--text-color);
+  transition: var(--transition);
+  margin-bottom: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-red);
+  box-shadow: 0 0 0 3px rgba(227, 0, 27, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* ============================================
+   15. Footer Styling
+   ============================================ */
+
+footer {
+  background-color: var(--text-dark);
+  color: var(--white);
+  padding: 3rem 2rem 2rem;
+  margin-top: 4rem;
+}
+
+footer a {
+  color: var(--light-gray);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+footer a:hover {
+  color: var(--primary-red);
+}
+
+footer .wp-block-columns {
+  margin-bottom: 2rem;
+}
+
+footer h3 {
+  color: var(--primary-red);
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  margin-top: 2rem;
+  font-size: 14px;
+}
+
+/* ============================================
+   16. Social Media Icons
+   ============================================ */
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-red);
+  color: var(--white);
+  border-radius: 50%;
+  transition: var(--transition);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.social-links a:hover {
+  background-color: #CC0015;
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   17. Contact Info Block
+   ============================================ */
+
+.contact-info {
+  background-color: var(--light-gray);
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  border-left: 4px solid var(--primary-red);
+}
+
+.contact-info h3 {
+  color: var(--primary-red);
+  margin-top: 0;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  color: var(--text-color);
+}
+
+.contact-info a {
+  color: var(--primary-red);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ============================================
+   18. Breadcrumbs
+   ============================================ */
+
+.breadcrumbs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.breadcrumbs a {
+  color: var(--primary-red);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs span {
+  color: var(--dark-gray);
+}
+
+/* ============================================
+   19. Media Queries - Responsive
+   ============================================ */
+
+@media (max-width: 768px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .image-grid img:nth-child(2) {
+    position: static;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wp-block-navigation a {
+    padding: 12px 16px;
+    font-size: 15px;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .wp-block-button__link {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ============================================
+   20. Print Styles
+   ============================================ */
+
+@media print {
+  footer {
+    display: none;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  .no-print {
+    display: none;
+  }
+}
+
+/* ============================================
+   21. Accessibility
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (prefers-contrast: more) {
+  body {
+    color: var(--text-dark);
+  }
+
+  .wp-block-button__link {
+    outline: 2px solid var(--text-dark);
+    outline-offset: 2px;
+  }
+
+  button:focus-visible {
+    outline: 3px solid var(--text-dark);
+  }
+}
