@@ -21,20 +21,21 @@
   --white: #FFFFFF;
   --light-gray: var(--wp--preset--color--light-gray);
   --dark-gray: var(--wp--preset--color--dark-gray);
-  --transition: var(--wp--custom--transition, all 0.2s ease);
+  --transition_1: var(--wp--custom--transition, all 0.2s ease);
+  --transition_2: var(--wp--custom--transition, all 0.6s ease);
 }
 
 /* ============================================
    2. Globale Styles
    ============================================ */
-
+/* auskommentiert: 29.4.2026
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: var(--text-color);
   background-color: var(--white);
   line-height: 1.6;
 }
-
+*/
 /* ============================================
    3. Header & Navigation
    ============================================ */
@@ -43,7 +44,7 @@ body {
   color: var(--text-color);
   text-decoration: none;
   padding: 8px 12px;
-  transition: var(--transition);
+  transition: var(--transition_1);
   position: relative;
 }
 
@@ -56,7 +57,7 @@ body {
   height: 2px;
   background-color: var(--primary-red);
   opacity: 0;
-  transition: var(--transition);
+  transition: var(--transition_1);
 }
 
 .wp-block-navigation a:hover::after,
@@ -67,17 +68,17 @@ body {
 /* ============================================
    4. Logo Styling
    ============================================ */
-
+/* auskommentiert: 29.4.2026
 .wp-block-logo-link img {
   max-width: 150px;
   height: auto;
   margin-right: 2rem;
 }
-
+*7
 /* ============================================
    5. Buttons
    ============================================ */
-
+/* auskommentiert: 29.4.2026
 .wp-block-button__link {
   background-color: var(--primary-red);
   color: var(--white);
@@ -85,7 +86,7 @@ body {
   border-radius: 4px;
   text-decoration: none;
   display: inline-block;
-  transition: var(--transition);
+  transition: var(--transition_1);
   font-weight: 600;
   border: none;
   cursor: pointer;
@@ -102,7 +103,7 @@ body {
   outline: 2px solid var(--text-dark);
   outline-offset: 2px;
 }
-
+*/
 /* ============================================
    6. Paragraph Links
    ============================================ */
@@ -113,7 +114,7 @@ li a,
   position: relative;
   color: var(--primary-red);
   text-decoration: none;
-  transition: var(--transition);
+  transition: var(--transition_1);
 }
 
 p a::after,
@@ -127,7 +128,7 @@ li a::after,
   height: 2px;
   background-color: var(--primary-red);
   opacity: 0.4;
-  transition: var(--transition);
+  transition: var(--transition_1);
 }
 
 p a:hover::after,
@@ -137,16 +138,16 @@ li a:hover::after,
   transform: translateY(-2px);
 }
 
+/* socials ohne Unterstrich */
+.wp-block-social-links .wp-social-link a::after {
+  opacity: 0;
+}
+
 /* ============================================
    7. Headings
    ============================================ */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* auskommentiert: 29.4.2026
+h1, h2, h3, h4, h5, h6 {
   color: var(--text-dark);
   font-weight: 700;
   line-height: 1.3;
@@ -173,11 +174,11 @@ h4 {
   font-size: 20px;
   margin-bottom: 1rem;
 }
-
+*/
 /* ============================================
    8. Hero Section Layout
    ============================================ */
-
+/* auskommentiert: 29.4.2026
 .hero-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -220,7 +221,7 @@ h4 {
   font-weight: 700;
   margin-right: 0.5rem;
 }
-
+*/
 /* ============================================
    9. Image Grid (Hero)
    ============================================ */
@@ -252,7 +253,7 @@ h4 {
 /* ============================================
    10. Section Styling
    ============================================ */
-
+/* auskommentiert: 29.4.2026
 .wp-block-group {
   padding: 3rem 0;
 }
@@ -262,11 +263,11 @@ h4 {
   padding: 3rem 2rem;
   border-radius: 4px;
 }
-
+*/
 /* ============================================
    11. Grid/Card Layouts
    ============================================ */
-
+/* auskommentiert: 29.4.2026 
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -279,7 +280,7 @@ h4 {
   border: 1px solid var(--dark-gray);
   border-radius: 8px;
   padding: 2rem;
-  transition: var(--transition);
+  transition: var(--transition_1);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
@@ -293,11 +294,11 @@ h4 {
   color: var(--primary-red);
   margin-top: 0;
 }
-
+*/
 /* ============================================
    12. Table Styling
    ============================================ */
-
+/* auskommentiert: 29.4.2026 
 .wp-block-table table {
   width: 100%;
   border-collapse: collapse;
@@ -325,7 +326,7 @@ h4 {
 /* ============================================
    13. Accordion Styling
    ============================================ */
-
+/* auskommentiert: 29.4.2026 
 .wp-block-accordion-item__button {
   background-color: var(--light-gray);
   color: var(--text-dark);
@@ -335,7 +336,7 @@ h4 {
   cursor: pointer;
   width: 100%;
   text-align: left;
-  transition: var(--transition);
+  transition: var(--transition_1);
   border-left: 4px solid var(--primary-red);
   margin-bottom: 0.5rem;
   border-radius: 4px;
@@ -349,11 +350,11 @@ h4 {
   background-color: var(--primary-red);
   color: var(--white);
 }
-
+*/
 /* ============================================
    14. Form Styling
    ============================================ */
-
+/* auskommentiert: 29.4.2026 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -367,7 +368,7 @@ select {
   font-family: inherit;
   font-size: 16px;
   color: var(--text-color);
-  transition: var(--transition);
+  transition: var(--transition_1);
   margin-bottom: 1rem;
 }
 
@@ -387,11 +388,11 @@ label {
   font-weight: 600;
   color: var(--text-dark);
 }
-
+*/
 /* ============================================
    15. Footer Styling
    ============================================ */
-
+/* auskommentiert: 29.4.2026 
 footer {
   background-color: var(--text-dark);
   color: var(--white);
@@ -402,7 +403,7 @@ footer {
 footer a {
   color: var(--light-gray);
   text-decoration: none;
-  transition: var(--transition);
+  transition: var(--transition_1);
 }
 
 footer a:hover {
@@ -435,11 +436,11 @@ footer li {
   margin-top: 2rem;
   font-size: 14px;
 }
-
+*/
 /* ============================================
    16. Social Media Icons
    ============================================ */
-
+/* auskommentiert: 29.4.2026 
 .social-links {
   display: flex;
   gap: 1rem;
@@ -455,7 +456,7 @@ footer li {
   background-color: var(--primary-red);
   color: var(--white);
   border-radius: 50%;
-  transition: var(--transition);
+  transition: var(--transition_1);
   text-decoration: none;
   font-size: 18px;
 }
@@ -464,11 +465,11 @@ footer li {
   background-color: #CC0015;
   transform: translateY(-2px);
 }
-
+*/
 /* ============================================
    17. Contact Info Block
    ============================================ */
-
+/* auskommentiert: 29.4.2026 
 .contact-info {
   background-color: var(--light-gray);
   padding: 2rem;
@@ -492,11 +493,11 @@ footer li {
   text-decoration: none;
   font-weight: 600;
 }
-
+*7
 /* ============================================
    18. Breadcrumbs
    ============================================ */
-
+/* auskommentiert: 29.4.2026 
 .breadcrumbs {
   display: flex;
   gap: 0.5rem;
@@ -517,11 +518,11 @@ footer li {
 .breadcrumbs span {
   color: var(--dark-gray);
 }
-
+*/
 /* ============================================
    19. Media Queries - Responsive
    ============================================ */
-
+/* auskommentiert: 29.4.2026 
 @media (max-width: 768px) {
   .hero-section {
     grid-template-columns: 1fr;
@@ -582,7 +583,7 @@ footer li {
     text-align: center;
   }
 }
-
+*/
 /* ============================================
    20. Print Styles
    ============================================ */
@@ -644,31 +645,31 @@ footer li {
 .gsg-card {
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(30, 58, 95, 0.08);
-  transition: all 0.3s ease;
+  transition: var(--transition_1);
 }
 
 .gsg-news-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 30px rgba(30, 58, 95, 0.15);
-  transition: all 0.6s ease;
+  transition: var(--transition_2);
 }
 
 .gsg-card:hover {
   border-color: var(--wp--preset--color--gsg-yellow) !important;
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(30, 58, 95, 0.15);
-  transition: all 0.6s ease;
+  transition: var(--transition_2);
 }
 
 
 /* Firmen (member) */
 div.member-badge {
-  transition: all 0.3s ease;
+  transition: var(--transition_1);
 }
 
 div.member-badge:hover,
 div.member-badge:hover p {
   background-color: var(--primary-red) !important;
   color: var(--white) !important;
-  transition: all 0.3s ease;
+  transition: var(--transition_1);
 }
