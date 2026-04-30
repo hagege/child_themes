@@ -42,6 +42,11 @@ ul.wp-block-list.footer_navigation li:not(:first-child)::before {
   /* color: #888;       /* Pipe-Farbe anpassen */
 }
 
+/* Link im Footer schwarz */
+.site-info a:hover {
+  color: black;
+}
+
 /* Schrift größer bei WS Form lite */
 .wsf-label,
 .wsf-field-label {
