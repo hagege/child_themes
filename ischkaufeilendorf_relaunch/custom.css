@@ -16,6 +16,7 @@
 
 :root {
   --primary-red: var(--wp--preset--color--primary-red);
+  --primary-red-rgb: 227, 0, 27;
   --text-color: var(--wp--preset--color--text-dark);
   --text-dark: var(--wp--preset--color--text-dunkel);
   --white: #FFFFFF;
@@ -672,4 +673,12 @@ div.member-badge:hover p {
   background-color: var(--primary-red) !important;
   color: var(--white) !important;
   transition: var(--transition_1);
+}
+
+
+figure.eilendorf-icons img {
+  background-color: rgba(var(--primary-red-rgb), 0.1);
+  padding: 0.5rem;
+  border-radius: .5rem;
+  margin: 0.5rem;
 }
