@@ -1,3 +1,32 @@
+/**
+ * Custom Styling für Block Theme Navigation & Links
+ * Version: 2.0
+ * 
+ */
+
+/* ============================================
+   1. CSS-Variablen aus theme.json
+   ============================================ */
+/*
+:root {
+  --transition: var(--wp--custom--transition, all 0.2s ease);
+
+  --primary-navy: var(--wp--preset--color--gsg-navy);
+  --primary-blue: var(--wp--preset--color--gsg-blue);
+  --primary-gray: var(--wp--preset--color--gsg-gray);
+  --primary-light-gray: var(--wp--preset--color--gsg-light-gray);
+  --primary-yellow: var(--wp--preset--color--gsg-yellow);
+  --primary-gold: var(--wp--preset--color--gsg-gold);
+  --primary-white: var(--wp--preset--color--base);
+  --primary-black: var(--wp--preset--color--contrast);
+  --primary-green: var(--wp--preset--color--gsg-success);
+  --primary-light-blue: var(--wp--preset--color--gsg-info);
+  --primary-orange: var(--wp--preset--color--gsg-warning);
+
+  --accordion-duration: var(--wp--custom--accordion--animationDuration, 0.35s);
+  --accordion-easing: var(--wp--custom--accordion--animationEasing, ease-in-out);
+}
+*/
 /* dezente Animationen bei cards */
 
 .gsg-news-card,
@@ -114,4 +143,16 @@
 /* Normale Links bei Hover */
 a:where(:not(.wp-element-button)):hover {
     text-decoration: none;
+}
+
+/* Copyright im Footer */
+.footer-copyright p,
+.footer-copyright a {
+    font-size: var(--wp--preset--font-size--small);
+    color: var(--primary-white);
+}
+
+/* Links im Footer */
+footer.wp-block-template-part.site-footer a.wp-block-navigation-item__content {
+    color: var(--wp--preset--color--white);
 }
