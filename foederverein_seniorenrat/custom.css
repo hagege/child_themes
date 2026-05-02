@@ -294,3 +294,8 @@ a {
 a:where(:not(.wp-element-button)):hover {
   text-decoration: none;
 }
+
+/* Copyright im Footer */
+.footer-copyright p {
+  font-size: var(--wp--preset--font-size--small);
+}
