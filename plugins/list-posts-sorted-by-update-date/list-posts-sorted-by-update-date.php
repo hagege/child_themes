@@ -11,7 +11,7 @@
  * Plugin Name:   List Posts sorted by update date
  * Plugin URI:    https://haurand.com
  * Description:   the posts are listed sorted by update date in \"All posts\". 
- * Version:       0.2
+ * Version:       0.3
  * Author:        Hans-Gerd Gerhards
  * Author URI:    https://haurand.com
  * Text Domain:   list-posts-sorted-by-update-date
@@ -23,40 +23,35 @@
  * along with List Posts sorted by update date. If not, see <https://www.gnu.org/licenses/gpl-2.0.html/>.
  */
 
-// Exit if accessed directly.
-if ( ! defined( 'ABSPATH' ) ) exit;
-
-// Include your custom code here.
-
-
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 function hgg_custom_posts_orderby( $query ) {
-    if ( is_admin() && $query->is_main_query() && $query->get('post_type') == 'post' ) {
-        $orderby_options = array(
-            'date'       => 'Date',
-            'title'      => 'Title',
-            'modified'   => 'Last Modified',
-        );
+	if ( ! is_admin() || ! $query->is_main_query() ) {
+		return;
+	}
 
-        // Set default orderby value
-        $default_orderby = 'modified';
+	if ( 'post' !== $query->get( 'post_type' ) ) {
+		return;
+	}
 
-        $orderby_options = apply_filters( 'custom_posts_orderby_options', $orderby_options );
+	$orderby_options = array(
+		'date'     => 'Date',
+		'title'    => 'Title',
+		'modified' => 'Last Modified',
+	);
 
-        $orderby = isset($_GET['orderby']) && in_array($_GET['orderby'], array_keys($orderby_options)) ? $_GET['orderby'] : $default_orderby;
+	$orderby_options = apply_filters( 'custom_posts_orderby_options', $orderby_options );
 
-        $query->set( 'orderby', $orderby );
-    }
+	$default_orderby = 'modified';
+	$orderby         = isset( $_GET['orderby'] ) ? sanitize_key( wp_unslash( $_GET['orderby'] ) ) : $default_orderby;
+
+	if ( ! array_key_exists( $orderby, $orderby_options ) ) {
+		$orderby = $default_orderby;
+	}
+
+	$query->set( 'orderby', $orderby );
 }
 add_action( 'pre_get_posts', 'hgg_custom_posts_orderby' );
-
-function hgg_custom_posts_orderby_options( $orderby_options ) {
-    // Add more orderby options if needed
-    $orderby_options['date'] = 'Date';
-    $orderby_options['title'] = 'Title';
-    $orderby_options['modified'] = 'Last Modified';
-    return $orderby_options;
-}
-add_filter( 'custom_posts_orderby_options', 'hgg_custom_posts_orderby_options' );
-
 
