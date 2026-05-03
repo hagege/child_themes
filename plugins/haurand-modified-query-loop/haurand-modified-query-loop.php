@@ -23,18 +23,22 @@
  * along with haurand modified query loop. If not, see <https://www.gnu.org/licenses/gpl-2.0.html/>.
  */
 
-// Exit if accessed directly.
-if ( ! defined( 'ABSPATH' ) ) exit;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
-
-// Function to modify the main query
 function custom_category_sort_query( $query ) {
-	// var_dump($query);
-	// echo $query->is_category( 'wartung' );
-	if (!is_admin() && ((is_category('wartung')) || (is_category('hans-gerd')) || (is_category('regina')))) {
-		$query->set( 'posts_per_page', -1 ); // Display all posts
-		$query->set( 'orderby', 'modified' );
-	    $query->set( 'order', 'ASC' ); // Order by ascending (oldest first)
+	if ( is_admin() || ! $query->is_main_query() || ! $query->is_category() ) {
+		return;
 	}
+
+	$category = get_queried_object();
+	if ( ! $category || ! in_array( $category->slug, array( 'wartung', 'hans-gerd', 'regina' ), true ) ) {
+		return;
+	}
+
+	$query->set( 'posts_per_page', -1 );
+	$query->set( 'orderby', 'modified' );
+	$query->set( 'order', 'ASC' );
 }
 add_action( 'pre_get_posts', 'custom_category_sort_query' );
