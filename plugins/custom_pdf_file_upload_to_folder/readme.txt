@@ -9,7 +9,7 @@ Tags:
 Requires at least: 5.0
 Tested up to: 6.4.2
 Requires PHP: 8.0
-Stable tag: 0.3.4
+Stable tag: 0.4.1
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,12 @@ Weitere Optionen:
 
 
 == change log ==
+
+3.5.2026:  Version 0.4.1
+			file_exists() checkt direkt das Dateisystem
+			KEINE Verzögerung
+			Dateien sind SOFORT sichtbar
+			VIEL schneller (kein HTTP-Request)
 
 30.3.2026: Version 0.3.4
 			bessere Sicherheit, best practice (Claude)

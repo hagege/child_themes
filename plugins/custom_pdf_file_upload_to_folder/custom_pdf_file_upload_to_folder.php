@@ -3,7 +3,7 @@
 Plugin Name: Custom PDF File Upload to Folder
 Plugin URI: http://haurand.com
 Description: A plugin to upload PDF-Files to a custom folder and post automatic per shortcode PDF-Files as link
-Version: 0.3.9
+Version: 0.4.1
 Author: Hans-Gerd Gerhards
 Author URI: http://haurand.com
 License: GPLv2 or later
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // Define plugin constants
 define( 'CUSTOM_FILE_UPLOAD_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'CUSTOM_FILE_UPLOAD_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-define( 'CUSTOM_FILE_UPLOAD_VERSION', '0.3.9' );
+define( 'CUSTOM_FILE_UPLOAD_VERSION', '0.4.1' );
 
 // Add the custom menu option in the dashboard menu
 add_action( 'admin_menu', 'custom_file_upload_add_menu' );
@@ -170,29 +170,37 @@ function custom_file_upload_page() {
 								// Set proper file permissions
 								chmod( $target_file, 0644 );
 
-								// Clear transients to refresh file list
+								// 🔑 WICHTIG: Alle relevanten Caches LÖSCHEN
+								// 1. Cache für diese spezifische Datei löschen
+								$pdf_file_url = $upload_dir['baseurl'] . '/' . $folder_name . '/' . $filename;
+								delete_transient( 'cfu_file_exists_' . md5( $pdf_file_url ) );
+								
+								// 2. Cache für die Datei-Liste löschen
 								delete_transient( 'cfu_file_list_' . md5( $target_dir ) );
-
-								// Show success message
-								echo '<div class="notice notice-success"><p>';
-								echo esc_html( $filename ) . ' ' . esc_html__( 'uploaded successfully', 'custom-pdf-upload' );
-								if ( $file_was_replaced ) {
-									echo ' (' . esc_html__( 'old file was replaced', 'custom-pdf-upload' ) . ')';
-								}
-								echo '.';
-								echo '</p></div>';
+								
+								// 3. ALLE Datei-Existenz-Caches löschen (für Wochen-Dateien und alles andere)
+								global $wpdb;
+								$wpdb->query( $wpdb->prepare(
+									"DELETE FROM {$wpdb->options} WHERE option_name LIKE %s",
+									'%cfu_file_exists_%'
+								) );
 
 								error_log( 'CFU Debug: File successfully uploaded to ' . $target_file );
+								error_log( 'CFU Debug: All caches cleared for immediate display' );
+
+								// ✅ REDIRECT zur gleichen Seite OHNE JavaScript
+								// Das ist der Schlüssel: Der Browser lädt die Seite neu, bekommt sofort das aktuelle Ergebnis
+								$current_url = admin_url( 'admin.php?page=custom-file-upload' );
+								wp_safe_remote_post( $current_url );
+								wp_redirect( $current_url );
+								exit;
 							} else {
 								echo '<div class="notice notice-error"><p>' . esc_html__( 'Failed to upload the file.', 'custom-pdf-upload' ) . '</p></div>';
 								echo '<div class="notice notice-info"><p><strong>' . esc_html__( 'Debug Info:', 'custom-pdf-upload' ) . '</strong><br>';
 								echo esc_html__( 'From:', 'custom-pdf-upload' ) . ' ' . esc_html( $file['tmp_name'] ) . '<br>';
 								echo esc_html__( 'To:', 'custom-pdf-upload' ) . ' ' . esc_html( $target_file ) . '<br>';
-								echo esc_html__( 'Temp file exists:', 'custom-pdf-upload' ) . ' ' . ( file_exists( $file['tmp_name'] ) ? 'yes' : 'no' ) . '<br>';
-								echo esc_html__( 'Target dir writable:', 'custom-pdf-upload' ) . ' ' . ( is_writable( $target_dir ) ? 'yes' : 'no' ) . '<br>';
-								echo '</p></div>';
-
-								error_log( 'CFU Debug: move_uploaded_file() failed. Temp exists: ' . ( file_exists( $file['tmp_name'] ) ? 'yes' : 'no' ) . ', Dir writable: ' . ( is_writable( $target_dir ) ? 'yes' : 'no' ) );
+								echo esc_html__( 'Check folder permissions and server logs for more details.', 'custom-pdf-upload' ) . '</p></div>';
+								error_log( 'CFU Debug: File upload failed. From: ' . $file['tmp_name'] . ' To: ' . $target_file );
 							}
 						}
 					}
@@ -201,38 +209,31 @@ function custom_file_upload_page() {
 		}
 	}
 
-	// Get the current custom folder name option
-	$week_number = (int) date( 'W' );
-	$week_number++;
-	$pdf_file = $upload_dir['baseurl'] . '/' . $current_folder_name . '/' . 'KW_' . $week_number . '_Wochenplan_SeniorenSport.pdf';
-	$pdf_file_name = 'KW_' . $week_number . '_Wochenplan_SeniorenSport.pdf';
-
-	// Render the file upload form
 	?>
 	<div class="wrap">
 		<h1><?php esc_html_e( 'PDF File Upload', 'custom-pdf-upload' ); ?></h1>
-		<form enctype="multipart/form-data" method="post" action="">
+
+		<form method="post" enctype="multipart/form-data">
 			<?php wp_nonce_field( 'custom_file_upload_action', 'custom_file_upload_nonce' ); ?>
 
 			<table class="form-table">
 				<tr>
 					<th scope="row">
-						<label for="custom_folder_name"><?php esc_html_e( 'Folder Name', 'custom-pdf-upload' ); ?></label>
+						<label for="custom_file_upload_folder_name">
+							<?php esc_html_e( 'Upload Folder Name', 'custom-pdf-upload' ); ?>
+						</label>
 					</th>
 					<td>
 						<input
 							type="text"
+							id="custom_file_upload_folder_name"
 							name="custom_file_upload_folder_name"
-							id="custom_folder_name"
-							pattern="[a-z0-9_-]{4,12}"
-							title="<?php esc_attr_e( 'Max 4-12 characters. Lowercase letters, numbers, underscore, hyphen only.', 'custom-pdf-upload' ); ?>"
 							value="<?php echo esc_attr( $current_folder_name ); ?>"
+							placeholder="wochenplan"
+							pattern="[a-z0-9_-]{4,12}"
 							required
 						/>
-						<p class="description"><?php esc_html_e( 'Expected file name:', 'custom-pdf-upload' ); ?> <strong><?php echo esc_html( $pdf_file_name ); ?></strong></p>
-						<p class="description"><?php esc_html_e( 'Upload folder URL:', 'custom-pdf-upload' ); ?> <strong><?php echo esc_url( $upload_dir['baseurl'] . '/' . $current_folder_name ); ?></strong></p>
-						<p class="description"><?php esc_html_e( 'Upload folder path:', 'custom-pdf-upload' ); ?> <strong><?php echo esc_html( $upload_dir['basedir'] . '/' . $current_folder_name . '/' ); ?></strong></p>
-						<p class="description" style="color: #0073aa;"><strong>✓ Info:</strong> <?php esc_html_e( 'Old files with the same name will be automatically replaced on upload.', 'custom-pdf-upload' ); ?></p>
+						<p class="description"><?php esc_html_e( '4-12 characters (lowercase, numbers, underscore, hyphen)', 'custom-pdf-upload' ); ?></p>
 					</td>
 				</tr>
 				<tr>
@@ -390,8 +391,9 @@ function wochenplan_shortcode() {
 		$pdf_file = $upload_dir['baseurl'] . '/' . $current_folder_name . '/' . 'KW_' . $i . '_Wochenplan_SeniorenSport.pdf';
 		$pdf_file_name = 'KW_' . $i . '_Wochenplan_SeniorenSport.pdf';
 
-		// Use wp_remote_head for better performance
-		if ( custom_file_upload_file_exists( $pdf_file ) ) {
+		// 🔑 Optimiert: Nutze lokale Datei-Existenzerkennung statt Remote-Check
+		// Das ist VIEL schneller und zeigt Dateien sofort an
+		if ( custom_file_upload_file_exists_local( $upload_dir['basedir'] . '/' . $current_folder_name . '/' . 'KW_' . $i . '_Wochenplan_SeniorenSport.pdf' ) ) {
 			$out .= '<div class="pdf-button"><a href="' . esc_url( $pdf_file ) . '" download>' . esc_html( 'KW - ' . $i . ' - Hier klicken' ) . '</a></div>';
 		} else {
 			$out .= '<div class="pdf-button-not-found">' . esc_html__( 'Die Datei ', 'custom-pdf-upload' ) . '<strong>' . esc_html( $pdf_file_name ) . '</strong> ' . esc_html__( 'ist noch nicht oder nicht mehr vorhanden.', 'custom-pdf-upload' ) . '</div>';
@@ -402,6 +404,19 @@ function wochenplan_shortcode() {
 }
 
 /**
+ * 🔥 NEUE FUNKTION: Lokale Datei-Existenzerkennung
+ * Viel schneller als wp_remote_head() und zeigt Dateien SOFORT an!
+ * Kein Remote-Check, kein Caching-Problem!
+ *
+ * @param string $file_path Lokaler Dateipfad
+ * @return bool True wenn Datei existiert
+ */
+function custom_file_upload_file_exists_local( $file_path ) {
+	return file_exists( $file_path ) && is_file( $file_path );
+}
+
+/**
+ * Alte Funktion bleibt für Backward-Compatibility, wird aber nicht mehr benutzt
  * Check if a file exists using wp_remote_head
  * More efficient than get_headers()
  */
