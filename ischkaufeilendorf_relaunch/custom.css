@@ -245,3 +245,8 @@ figure.eilendorf-icons img {
   }
 
 }
+
+/* Links bei Beiträgen Unterstrich */
+li.wp-block-post a {
+  text-decoration: none;
+}
