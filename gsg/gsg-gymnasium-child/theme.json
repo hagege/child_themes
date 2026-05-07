@@ -33,6 +33,11 @@
           "name": "GSG Light Gray"
         },
         {
+          "slug": "gsg-cool-light-gray",
+          "color": "#F1F3F4",
+          "name": "GSG Cool Light Gray"
+        },
+        {
           "slug": "gsg-yellow",
           "color": "#EEC849",
           "name": "GSG Yellow"
