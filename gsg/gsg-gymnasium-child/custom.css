@@ -116,13 +116,13 @@
 /* Hover Text Color */
 .wp-block-navigation-item a:hover,
 .wp-block-navigation__container .wp-block-navigation-item__content:hover {
-    color: var(--wp--preset--color--gsg-gold);
+    color: var(--wp--preset--color--gsg-info);
 }
 
 /* Active/Current Menu Item */
 .wp-block-navigation-item.current-menu-item a,
 .wp-block-navigation__container .current-menu-item .wp-block-navigation-item__content {
-    color: var(--wp--preset--color--gsg-blue);
+    color: var(--wp--preset--color--gsg-info);
     font-weight: 600;
 }
 
@@ -135,9 +135,9 @@
 /* Focus State für Accessibility */
 .wp-block-navigation-item a:focus,
 .wp-block-navigation__container .wp-block-navigation-item__content:focus {
-    outline: 3px solid var(--wp--preset--color--gsg-gold);
+    outline: 3px solid var(--wp--preset--color--gsg-navy);
     outline-offset: 3px;
-    color: var(--wp--preset--color--gsg-gold);
+    color: var(--wp--preset--color--gsg-info);
 }
 
 /* Normale Links bei Hover */
