@@ -145,6 +145,17 @@ a:where(:not(.wp-element-button)):hover {
     text-decoration: none;
 }
 
+/* Weiterlesen-Link Hover Effekt */
+a.wp-block-read-more:hover {
+    background-color: var(--wp--preset--color--gsg-info) !important;
+    /* Neue Hoverfarbe */
+    transition: background-color 0.3s ease;
+    /* Sanfte Animation */
+    outline: 3px solid var(--wp--preset--color--gsg-navy);
+    outline-offset: 3px;
+    color: var(--wp--preset--color--gsg-info);
+}
+
 /* Copyright im Footer */
 .footer-copyright p,
 .footer-copyright a {
