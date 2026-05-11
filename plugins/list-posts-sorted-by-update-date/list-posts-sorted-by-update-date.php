@@ -5,7 +5,7 @@
  * @package       LISTPOSTSS
  * @author        Hans-Gerd Gerhards
  * @license       gplv2
- * @version       0.2
+ * @version       0.3
  *
  * @wordpress-plugin
  * Plugin Name:   List Posts sorted by update date
@@ -52,6 +52,8 @@ function hgg_custom_posts_orderby( $query ) {
 	}
 
 	$query->set( 'orderby', $orderby );
+	
+	// FIX: Sortierungsrichtung setzen (DESC = neueste zuerst)
+	$query->set( 'order', 'DESC' );
 }
 add_action( 'pre_get_posts', 'hgg_custom_posts_orderby' );
-
