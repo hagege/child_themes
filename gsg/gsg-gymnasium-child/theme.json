@@ -1,85 +1,8 @@
 {
   "$schema": "https://schemas.wp.org/wp/6.9/theme.json",
   "version": 3,
-  "customTemplates": [
-    {
-      "name": "gymnasium-home",
-      "postTypes": [
-        "page"
-      ],
-      "title": "Gymnasium Startseite"
-    },
-    {
-      "name": "gymnasium-news",
-      "postTypes": [
-        "page",
-        "post"
-      ],
-      "title": "Gymnasium News"
-    },
-    {
-      "name": "gymnasium-events",
-      "postTypes": [
-        "page"
-      ],
-      "title": "Gymnasium Termine"
-    },
-    {
-      "name": "gymnasium-contact",
-      "postTypes": [
-        "page"
-      ],
-      "title": "Gymnasium Kontakt"
-    }
-  ],
   "settings": {
-    "appearanceTools": true,
     "color": {
-      "custom": true,
-      "customDuotone": true,
-      "customGradient": true,
-      "defaultGradients": false,
-      "defaultPalette": false,
-      "duotone": [
-        {
-          "colors": [
-            "#1E3A5F",
-            "#E5B533"
-          ],
-          "name": "GSG Navy & Yellow",
-          "slug": "gsg-navy-yellow"
-        },
-        {
-          "colors": [
-            "#2B4B6F",
-            "#E8EAED"
-          ],
-          "name": "GSG Blue & Gray",
-          "slug": "gsg-blue-gray"
-        }
-      ],
-      "gradients": [
-        {
-          "gradient": "linear-gradient(135deg, #1E3A5F 0%, #2B4B6F 100%)",
-          "name": "GSG Hero Gradient",
-          "slug": "gsg-hero-gradient"
-        },
-        {
-          "gradient": "linear-gradient(180deg, #ffffff 0%, #E8EAED 100%)",
-          "name": "GSG Section Gradient",
-          "slug": "gsg-section-gradient"
-        },
-        {
-          "gradient": "linear-gradient(135deg, #E5B533 0%, #D4A017 100%)",
-          "name": "GSG Yellow Gradient",
-          "slug": "gsg-yellow-gradient"
-        },
-        {
-          "gradient": "radial-gradient(circle, rgba(30,58,95,0.05) 0%, transparent 70%)",
-          "name": "GSG Overlay",
-          "slug": "gsg-overlay"
-        }
-      ],
       "palette": [
         {
           "color": "#151A52",
@@ -143,139 +66,17 @@
         }
       ]
     },
-    "custom": {
-      "gsg": {
-        "borderRadius": {
-          "full": "9999px",
-          "large": "12px",
-          "medium": "8px",
-          "small": "4px"
-        },
-        "breakpoints": {
-          "desktop": "1024px",
-          "mobile": "640px",
-          "tablet": "768px",
-          "wide": "1280px"
-        },
-        "transitions": {
-          "fast": "all 0.2s ease",
-          "slow": "all 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
-          "smooth": "all 0.3s ease"
-        },
-        "zIndex": {
-          "dropdown": "100",
-          "header": "1000",
-          "modal": "2000",
-          "overlay": "500"
+    "patterns": {
+      "categories": [
+        {
+          "name": "gsg",
+          "label": "gsg"
         }
-      }
+      ]
     },
     "layout": {
-      "contentSize": "1200px",
-      "wideSize": "1400px"
-    },
-    "shadow": {
-      "defaultPresets": false,
-      "presets": [
-        {
-          "name": "GSG Small",
-          "shadow": "0 1px 3px rgba(30, 58, 95, 0.12)",
-          "slug": "gsg-sm"
-        },
-        {
-          "name": "GSG Medium",
-          "shadow": "0 4px 6px rgba(30, 58, 95, 0.1)",
-          "slug": "gsg-md"
-        },
-        {
-          "name": "GSG Large",
-          "shadow": "0 10px 25px rgba(30, 58, 95, 0.15)",
-          "slug": "gsg-lg"
-        },
-        {
-          "name": "GSG Extra Large",
-          "shadow": "0 20px 40px rgba(30, 58, 95, 0.2)",
-          "slug": "gsg-xl"
-        },
-        {
-          "name": "GSG Card",
-          "shadow": "0 4px 15px rgba(30, 58, 95, 0.08)",
-          "slug": "gsg-card"
-        },
-        {
-          "name": "GSG Card Hover",
-          "shadow": "0 10px 30px rgba(30, 58, 95, 0.15)",
-          "slug": "gsg-card-hover"
-        }
-      ]
-    },
-    "spacing": {
-      "customSpacingSize": true,
-      "spacingScale": {
-        "theme": {
-          "steps": 0
-        }
-      },
-      "spacingSizes": [
-        {
-          "name": "XXS",
-          "size": "0.25rem",
-          "slug": "10"
-        },
-        {
-          "name": "XS",
-          "size": "0.5rem",
-          "slug": "20"
-        },
-        {
-          "name": "S",
-          "size": "1rem",
-          "slug": "30"
-        },
-        {
-          "name": "M",
-          "size": "1.5rem",
-          "slug": "40"
-        },
-        {
-          "name": "L",
-          "size": "2rem",
-          "slug": "50"
-        },
-        {
-          "name": "XL",
-          "size": "2.5rem",
-          "slug": "60"
-        },
-        {
-          "name": "XXL",
-          "size": "3rem",
-          "slug": "70"
-        },
-        {
-          "name": "XXXL",
-          "size": "4rem",
-          "slug": "80"
-        },
-        {
-          "name": "Section",
-          "size": "6rem",
-          "slug": "90"
-        },
-        {
-          "name": "Small",
-          "size": "1rem",
-          "slug": "small"
-        }
-      ],
-      "units": [
-        "px",
-        "em",
-        "rem",
-        "vh",
-        "vw",
-        "%"
-      ]
+      "contentSize": "1024px",
+      "wideSize": "1920px"
     },
     "typography": {
       "customFontSize": true,
@@ -444,7 +245,7 @@
       "background": "var(--wp--preset--color--base)",
       "text": "var(--wp--preset--color--contrast)"
     },
-    "css": "/**\n * Custom Styling für Block Theme Navigation & Links\n * Version: 2.0\n * \n */\n\n/* ============================================\n   1. CSS-Variablen aus theme.json\n   ============================================ */\n/*\n:root {\n  --transition: var(--wp--custom--transition, all 0.2s ease);\n\n  --primary-navy: var(--wp--preset--color--gsg-navy);\n  --primary-blue: var(--wp--preset--color--gsg-blue);\n  --primary-gray: var(--wp--preset--color--gsg-gray);\n  --primary-light-gray: var(--wp--preset--color--gsg-light-gray);\n  --primary-yellow: var(--wp--preset--color--gsg-yellow);\n  --primary-gold: var(--wp--preset--color--gsg-gold);\n  --primary-white: var(--wp--preset--color--base);\n  --primary-black: var(--wp--preset--color--contrast);\n  --primary-green: var(--wp--preset--color--gsg-success);\n  --primary-light-blue: var(--wp--preset--color--gsg-info);\n  --primary-orange: var(--wp--preset--color--gsg-warning);\n\n  --accordion-duration: var(--wp--custom--accordion--animationDuration, 0.35s);\n  --accordion-easing: var(--wp--custom--accordion--animationEasing, ease-in-out);\n}\n*/\n/* dezente Animationen bei cards */\n\n.gsg-news-card, .gsg-card {\n    overflow: hidden;\n    box-shadow: 0 4px 15px rgba(30, 58, 95, 0.08);\n    transition: all 0.3s ease;\n}\n\n.gsg-news-card:hover {\n    transform: translateY(-8px);\n    box-shadow: 0 10px 30px rgba(30, 58, 95, 0.15);\n    transition: all 0.6s ease;\n}\n\n.gsg-card:hover {\n    border-color: var(--wp--preset--color--gsg-yellow) !important;\n    transform: translateY(-5px);\n    box-shadow: 0 10px 30px rgba(30, 58, 95, 0.15);\n    transition: all 0.6s ease;\n}\n\n\n/* Zeile über dem Menü */\n/* Top Bar Styles */\n.gsg-top-bar {\n    background: var(--wp--preset--color--gsg-navy);\n    color: var(--wp--preset--color--base);\n    padding: 0.75rem 0;\n    font-size: 0.9rem;\n}\n\n.gsg-top-bar a {\n    color: var(--wp--preset--color--base);\n    text-decoration: none;\n    transition: color 0.3s ease;\n}\n\n.gsg-top-bar a:hover {\n    color: var(--wp--preset--color--gsg-yellow);\n}\n\n/*\n * =============================================================================\n * NAVIGATION STYLES \n * Underline-Animation, Hover-Effekte\n * =============================================================================\n */\n\n/* Header */\n\n.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container .current-menu-item > a, .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container .has-child button:hover {\n    text-decoration: none;\n}\n\n/* Navigation Links */\n.wp-block-navigation-item a,\n.wp-block-navigation__container .wp-block-navigation-item__content, .gsg-top-bar a {\n    position: relative;\n    text-decoration: none;\n    font-weight: 500;\n    transition: color 0.3s ease;\n}\n\n/* Underline Animation on Hover */\n.wp-block-navigation-item a::after,\n.wp-block-navigation__container .wp-block-navigation-item__content::after {\n    content: '';\n    position: absolute;\n    bottom: -5px;\n    left: 0;\n    width: 0;\n    height: 2px;\n    background: var(--wp--preset--color--gsg-gold);\n    transition: width 0.3s ease;\n}\n\n\n.wp-block-navigation-item a:hover::after,\n.wp-block-navigation__container .wp-block-navigation-item__content:hover::after {\n    width: 100%;\n}\n\n\n/* Hover Text Color */\n.wp-block-navigation-item a:hover,\n.wp-block-navigation__container .wp-block-navigation-item__content:hover {\n    color: var(--wp--preset--color--gsg-info);\n}\n\n/* Active/Current Menu Item */\n.wp-block-navigation-item.current-menu-item a,\n.wp-block-navigation__container .current-menu-item .wp-block-navigation-item__content {\n    color: var(--wp--preset--color--gsg-info);\n    font-weight: 600;\n}\n\n.wp-block-navigation-item.current-menu-item a::after,\n.wp-block-navigation__container .current-menu-item .wp-block-navigation-item__content::after {\n    width: 100%;\n}\n\n\n/* Focus State für Accessibility */\n.wp-block-navigation-item a:focus,\n.wp-block-navigation__container .wp-block-navigation-item__content:focus {\n    outline: 3px solid var(--wp--preset--color--gsg-navy);\n    outline-offset: 3px;\n    color: var(--wp--preset--color--gsg-navy);\n}\n\n/* Normale Links bei Hover */\na:where(:not(.wp-element-button)):hover {\n    text-decoration: none;\n}\n\n/* Weiterlesen-Link Hover Effekt */\na.wp-block-read-more:hover {\n    background-color: var(--wp--preset--color--gsg-navy) !important;  /* Neue Hoverfarbe */\n    transition: background-color 0.3s ease;  /* Sanfte Animation */\n    outline: 3px solid var(--wp--preset--color--gsg-navy);\n    outline-offset: 3px;\n    color: var(--wp--preset--color--gsg-navy);\n}\n\n/* Outline-Color Blauer Button */\n.wp-block-button.blauer_button a:hover {\n    outline-color: var(--wp--preset--color--gsg-navy);\n}\n\n/* Copyright im Footer */\n.footer-copyright p, .footer-copyright a {\n    font-size: var(--wp--preset--font-size--small);\n    color: var(--primary-white);\n}\n\n/* Links im Footer */\nfooter.wp-block-template-part.site-footer a.wp-block-navigation-item__content {\n     color: var(--wp--preset--color--white);\n}",
+    "css": ".gruppe-mit-cover {\n    overflow: hidden;\n}\n\n/* Einstellungen Cover übernehmen */\n@media (min-width: 960px) {\n    div.header-cover {\n        min-height: 80vh !important;\n        aspect-ratio: unset !important;\n    }\n}\n\n/* Problem bei Firefox auf der Startpage */\n.wp-block-image.alignfull.size-full.wave_startpage_image img,\n.wp-block-image.alignfull.size-full.wave_image img {\n    height: 9rem;\n}\n\n/* Überschrift h2 als Link  */\nh2.link-in-card a {\n    font-family: 'Finger Paint';\n    text-decoration: none;\n    line-height: 1.6;\n}\n\n\n/* Buttons */\n/* roter Button mit rotem Outline bei Hover */\n/* Buttons */\n/* roter Button mit rotem Outline bei Hover */\ndiv.roter_button a:hover,\ndiv.roter_button a:focus,\ndiv.roter_button a:active\n{\n    outline-color: var(--wp--preset--color--custom-dunkelrot);\n}\n\n\n/* grüner Button mit grünem Outline bei Hover */\ndiv.gruener_button a:hover,\ndiv.gruener_button a:focus,\ndiv.gruener_button a:active\n{\n    outline-color: var(--wp--preset--color--custom-mittelgr-n);\n}\n\n/* Desktop Menü */\n/* Menü bei hover */\n/* Logo nicht bei Hover hervorheben */\n.wp-block-site-logo a:hover { \n   text-decoration: none;\n   background-color: inherit;\n}\n\n/* alle Links außer Buttons */\na:where(:not(.wp-element-button)) {\n    text-underline-offset: 7px;\n    transition: all .2s;\n    text-decoration: underline;\n    text-decoration-thickness: 1px;\n}\n\na:where(:not(.wp-element-button)):hover {\n    text-underline-offset: 10px;\n    text-decoration-thickness: 2px;\n}\n\n.wp-block-navigation a:where(:not(.wp-element-button)) {\n    text-decoration: none;\n    padding: 0.3em 0.5em;\n    text-decoration: none;\n}\n\n/* Links in Navigation */\n.wp-block-navigation a:where(:not(.wp-element-button)):hover {\n    text-decoration: none;\n    background-color: var(--wp--preset--color--custom-dunkelrot) !important;\n    color: var(--wp--preset--color--custom-weiss) !important;\n}\n\n.wp-block-navigation a:where(:not(.wp-element-button)):focus,\n.wp-block-navigation a:where(:not(.wp-element-button)):active {\n    text-decoration: none;\n    background-color: var(--wp--preset--color--custom-mittelgr-n) !important;\n    color: var(--wp--preset--color--custom-weiss) !important;\n    outline: 2px;\n}\n\n\n/* nicht mehr verwendet */\n/* language switcher \nh2.widgettitle {\n    font-size: medium;\n    font-family: 'Lexend';\n    text-align: center;\n    visibility: hidden;\n    display:none;\n}\n\ndiv.widget_polylang ul {\n  list-style-type: none;\n}\n*/",
     "elements": {
       "button": {
         ":active": {
@@ -573,23 +374,5 @@
       "fontSize": "var(--wp--preset--font-size--x-large)",
       "lineHeight": "1.6"
     }
-  },
-  "templateParts": [
-    {
-      "area": "header",
-      "name": "header",
-      "title": "Header"
-    },
-    {
-      "area": "footer",
-      "name": "footer",
-      "title": "Footer"
-    },
-    {
-      "area": "sidebar",
-      "name": "sidebar",
-      "title": "Sidebar"
-    }
-  ],
-  "title": "GSG Gymnasium Child Theme"
+  }
 }
