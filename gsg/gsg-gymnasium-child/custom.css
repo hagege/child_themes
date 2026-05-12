@@ -102,7 +102,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--wp--preset--color--gsg-gold);
+    background: var(--wp--preset--color--gsg-info);
     transition: width 0.3s ease;
 }
 
@@ -131,7 +131,6 @@
     width: 100%;
 }
 
-
 /* Focus State für Accessibility */
 .wp-block-navigation-item a:focus,
 .wp-block-navigation__container .wp-block-navigation-item__content:focus {
@@ -139,6 +138,11 @@
     outline-offset: 3px;
     color: var(--wp--preset--color--gsg-navy);
 }
+
+/*
+ * Weitere Gestaltung der Links 
+ *
+*/
 
 /* Normale Links bei Hover */
 a:where(:not(.wp-element-button)):hover {
@@ -171,4 +175,33 @@ a.wp-block-read-more:hover {
 /* Links im Footer */
 footer.wp-block-template-part.site-footer a.wp-block-navigation-item__content {
     color: var(--wp--preset--color--white);
+}
+
+ul.wp-block-navigation__submenu-container {
+    padding: 0.5rem;
+    margin: 0;
+    border-radius: 4px;
+}
+
+/* ------------------- */
+/* Submenu Items */
+/* ------------------- */
+.wp-block-navigation li li a,
+.wp-block-navigation li li .wp-block-navigation-item__content {
+    padding: 0.5rem 1rem !important;
+    margin-bottom: 0.25rem;
+}
+
+.wp-block-navigation li li a:hover,
+.wp-block-navigation li li .wp-block-navigation-item__content:hover {
+    /* background-color: rgba(229, 181, 51, 0.1); */
+    border-radius: 4px;
+    padding-left: 1.25rem;
+}
+
+ul.wp-block-navigation__submenu-container.has-text-color.has-gsg-navy-color.has-background.has-base-background-color {
+    padding: 0.5rem;
+    border: 0.1rem solid var(--wp--preset--color--gsg-gray);
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);
 }

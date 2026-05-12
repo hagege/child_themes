@@ -1,237 +1,271 @@
 {
+  "$schema": "https://schemas.wp.org/wp/6.9/theme.json",
   "version": 3,
-  "$schema": "https://schemas.wp.org/wp/6.7/theme.json",
-  "title": "GSG Gymnasium Child Theme",
+  "customTemplates": [
+    {
+      "name": "gymnasium-home",
+      "postTypes": [
+        "page"
+      ],
+      "title": "Gymnasium Startseite"
+    },
+    {
+      "name": "gymnasium-news",
+      "postTypes": [
+        "page",
+        "post"
+      ],
+      "title": "Gymnasium News"
+    },
+    {
+      "name": "gymnasium-events",
+      "postTypes": [
+        "page"
+      ],
+      "title": "Gymnasium Termine"
+    },
+    {
+      "name": "gymnasium-contact",
+      "postTypes": [
+        "page"
+      ],
+      "title": "Gymnasium Kontakt"
+    }
+  ],
   "settings": {
     "appearanceTools": true,
-    "useRootPaddingAwareAlignments": true,
     "color": {
       "custom": true,
       "customDuotone": true,
       "customGradient": true,
       "defaultGradients": false,
       "defaultPalette": false,
-      "palette": [
-        {
-          "slug": "gsg-navy",
-          "color": "#151A52",
-          "name": "GSG Navy"
-        },
-        {
-          "slug": "gsg-blue",
-          "color": "#2B4B6F",
-          "name": "GSG Blue"
-        },
-        {
-          "slug": "gsg-gray",
-          "color": "#C1C5CD",
-          "name": "GSG Gray"
-        },
-        {
-          "slug": "gsg-light-gray",
-          "color": "#E8EAED",
-          "name": "GSG Light Gray"
-        },
-        {
-          "slug": "gsg-cool-light-gray",
-          "color": "#F1F3F4",
-          "name": "GSG Cool Light Gray"
-        },
-        {
-          "slug": "gsg-yellow",
-          "color": "#EEC849",
-          "name": "GSG Yellow"
-        },
-        {
-          "slug": "gsg-gold",
-          "color": "#D4A017",
-          "name": "GSG Gold"
-        },
-        {
-          "slug": "base",
-          "color": "#ffffff",
-          "name": "White"
-        },
-        {
-          "slug": "contrast",
-          "color": "#000000",
-          "name": "Black"
-        },
-        {
-          "slug": "gsg-success",
-          "color": "#22C55E",
-          "name": "Success Green"
-        },
-        {
-          "slug": "gsg-info",
-          "color": "#3B82F6",
-          "name": "Info Blue"
-        },
-        {
-          "slug": "gsg-warning",
-          "color": "#F59E0B",
-          "name": "Warning Orange"
-        }
-      ],
-      "gradients": [
-        {
-          "slug": "gsg-hero-gradient",
-          "gradient": "linear-gradient(135deg, #1E3A5F 0%, #2B4B6F 100%)",
-          "name": "GSG Hero Gradient"
-        },
-        {
-          "slug": "gsg-section-gradient",
-          "gradient": "linear-gradient(180deg, #ffffff 0%, #E8EAED 100%)",
-          "name": "GSG Section Gradient"
-        },
-        {
-          "slug": "gsg-yellow-gradient",
-          "gradient": "linear-gradient(135deg, #E5B533 0%, #D4A017 100%)",
-          "name": "GSG Yellow Gradient"
-        },
-        {
-          "slug": "gsg-overlay",
-          "gradient": "radial-gradient(circle, rgba(30,58,95,0.05) 0%, transparent 70%)",
-          "name": "GSG Overlay"
-        }
-      ],
       "duotone": [
         {
           "colors": [
             "#1E3A5F",
             "#E5B533"
           ],
-          "slug": "gsg-navy-yellow",
-          "name": "GSG Navy & Yellow"
+          "name": "GSG Navy & Yellow",
+          "slug": "gsg-navy-yellow"
         },
         {
           "colors": [
             "#2B4B6F",
             "#E8EAED"
           ],
-          "slug": "gsg-blue-gray",
-          "name": "GSG Blue & Gray"
+          "name": "GSG Blue & Gray",
+          "slug": "gsg-blue-gray"
+        }
+      ],
+      "gradients": [
+        {
+          "gradient": "linear-gradient(135deg, #1E3A5F 0%, #2B4B6F 100%)",
+          "name": "GSG Hero Gradient",
+          "slug": "gsg-hero-gradient"
+        },
+        {
+          "gradient": "linear-gradient(180deg, #ffffff 0%, #E8EAED 100%)",
+          "name": "GSG Section Gradient",
+          "slug": "gsg-section-gradient"
+        },
+        {
+          "gradient": "linear-gradient(135deg, #E5B533 0%, #D4A017 100%)",
+          "name": "GSG Yellow Gradient",
+          "slug": "gsg-yellow-gradient"
+        },
+        {
+          "gradient": "radial-gradient(circle, rgba(30,58,95,0.05) 0%, transparent 70%)",
+          "name": "GSG Overlay",
+          "slug": "gsg-overlay"
+        }
+      ],
+      "palette": [
+        {
+          "color": "#151A52",
+          "name": "GSG Navy",
+          "slug": "gsg-navy"
+        },
+        {
+          "color": "#2B4B6F",
+          "name": "GSG Blue",
+          "slug": "gsg-blue"
+        },
+        {
+          "color": "#C1C5CD",
+          "name": "GSG Gray",
+          "slug": "gsg-gray"
+        },
+        {
+          "color": "#E8EAED",
+          "name": "GSG Light Gray",
+          "slug": "gsg-light-gray"
+        },
+        {
+          "color": "#F1F3F4",
+          "name": "GSG Cool Light Gray",
+          "slug": "gsg-cool-light-gray"
+        },
+        {
+          "color": "#EEC849",
+          "name": "GSG Yellow",
+          "slug": "gsg-yellow"
+        },
+        {
+          "color": "#D4A017",
+          "name": "GSG Gold",
+          "slug": "gsg-gold"
+        },
+        {
+          "color": "#ffffff",
+          "name": "White",
+          "slug": "base"
+        },
+        {
+          "color": "#000000",
+          "name": "Black",
+          "slug": "contrast"
+        },
+        {
+          "color": "#22C55E",
+          "name": "Success Green",
+          "slug": "gsg-success"
+        },
+        {
+          "color": "#3B82F6",
+          "name": "Info Blue",
+          "slug": "gsg-info"
+        },
+        {
+          "color": "#F59E0B",
+          "name": "Warning Orange",
+          "slug": "gsg-warning"
         }
       ]
     },
-    "typography": {
-      "customFontSize": true,
-      "fontStyle": true,
-      "fontWeight": true,
-      "letterSpacing": true,
-      "lineHeight": true,
-      "textDecoration": true,
-      "textTransform": true,
-      "dropCap": true,
-      "fontSizes": [
-        {
-          "slug": "small",
-          "size": "0.875rem",
-          "name": "Small"
+    "custom": {
+      "gsg": {
+        "borderRadius": {
+          "full": "9999px",
+          "large": "12px",
+          "medium": "8px",
+          "small": "4px"
         },
-        {
-          "slug": "medium",
-          "size": "1rem",
-          "name": "Medium"
+        "breakpoints": {
+          "desktop": "1024px",
+          "mobile": "640px",
+          "tablet": "768px",
+          "wide": "1280px"
         },
-        {
-          "slug": "large",
-          "size": "1.125rem",
-          "name": "Large"
+        "transitions": {
+          "fast": "all 0.2s ease",
+          "slow": "all 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
+          "smooth": "all 0.3s ease"
         },
-        {
-          "slug": "x-large",
-          "size": "1.5rem",
-          "name": "Extra Large"
-        },
-        {
-          "slug": "heading-small",
-          "size": "1.8rem",
-          "name": "Heading Small"
-        },
-        {
-          "slug": "heading-medium",
-          "size": "2.5rem",
-          "name": "Heading Medium"
-        },
-        {
-          "slug": "heading-large",
-          "size": "3.5rem",
-          "name": "Heading Large"
-        },
-        {
-          "slug": "hero",
-          "size": "clamp(2.5rem, 6vw, 4rem)",
-          "name": "Hero",
-          "fluid": {
-            "min": "2.5rem",
-            "max": "4rem"
-          }
+        "zIndex": {
+          "dropdown": "100",
+          "header": "1000",
+          "modal": "2000",
+          "overlay": "500"
         }
-      ],
-      "fontFamilies": [
+      }
+    },
+    "layout": {
+      "contentSize": "1200px",
+      "wideSize": "1400px"
+    },
+    "shadow": {
+      "defaultPresets": false,
+      "presets": [
         {
-          "fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-          "slug": "inter",
-          "name": "Inter (System Fallback)"
+          "name": "GSG Small",
+          "shadow": "0 1px 3px rgba(30, 58, 95, 0.12)",
+          "slug": "gsg-sm"
         },
         {
-          "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-          "slug": "system",
-          "name": "System Sans-Serif"
+          "name": "GSG Medium",
+          "shadow": "0 4px 6px rgba(30, 58, 95, 0.1)",
+          "slug": "gsg-md"
+        },
+        {
+          "name": "GSG Large",
+          "shadow": "0 10px 25px rgba(30, 58, 95, 0.15)",
+          "slug": "gsg-lg"
+        },
+        {
+          "name": "GSG Extra Large",
+          "shadow": "0 20px 40px rgba(30, 58, 95, 0.2)",
+          "slug": "gsg-xl"
+        },
+        {
+          "name": "GSG Card",
+          "shadow": "0 4px 15px rgba(30, 58, 95, 0.08)",
+          "slug": "gsg-card"
+        },
+        {
+          "name": "GSG Card Hover",
+          "shadow": "0 10px 30px rgba(30, 58, 95, 0.15)",
+          "slug": "gsg-card-hover"
         }
       ]
     },
     "spacing": {
       "customSpacingSize": true,
       "spacingScale": {
-        "steps": 0
+        "theme": {
+          "steps": 0
+        }
       },
       "spacingSizes": [
         {
-          "slug": "10",
+          "name": "XXS",
           "size": "0.25rem",
-          "name": "XXS"
+          "slug": "10"
         },
         {
-          "slug": "20",
+          "name": "XS",
           "size": "0.5rem",
-          "name": "XS"
+          "slug": "20"
         },
         {
-          "slug": "30",
+          "name": "S",
           "size": "1rem",
-          "name": "S"
+          "slug": "30"
         },
         {
-          "slug": "40",
+          "name": "M",
           "size": "1.5rem",
-          "name": "M"
+          "slug": "40"
         },
         {
-          "slug": "50",
+          "name": "L",
           "size": "2rem",
-          "name": "L"
+          "slug": "50"
         },
         {
-          "slug": "60",
+          "name": "XL",
           "size": "2.5rem",
-          "name": "XL"
+          "slug": "60"
         },
         {
-          "slug": "70",
+          "name": "XXL",
           "size": "3rem",
-          "name": "XXL"
+          "slug": "70"
         },
         {
-          "slug": "80",
+          "name": "XXXL",
           "size": "4rem",
-          "name": "XXXL"
+          "slug": "80"
         },
         {
-          "slug": "90",
+          "name": "Section",
           "size": "6rem",
-          "name": "Section"
+          "slug": "90"
+        },
+        {
+          "name": "Small",
+          "size": "1rem",
+          "slug": "small"
         }
       ],
       "units": [
@@ -243,193 +277,236 @@
         "%"
       ]
     },
-    "layout": {
-      "contentSize": "1200px",
-      "wideSize": "1400px"
-    },
-    "border": {
-      "color": true,
-      "radius": true,
-      "style": true,
-      "width": true
-    },
-    "shadow": {
-      "defaultPresets": false,
-      "presets": [
+    "typography": {
+      "customFontSize": true,
+      "dropCap": true,
+      "fontFamilies": [
         {
-          "slug": "gsg-sm",
-          "shadow": "0 1px 3px rgba(30, 58, 95, 0.12)",
-          "name": "GSG Small"
+          "fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+          "name": "Inter (System Fallback)",
+          "slug": "inter"
         },
         {
-          "slug": "gsg-md",
-          "shadow": "0 4px 6px rgba(30, 58, 95, 0.1)",
-          "name": "GSG Medium"
-        },
-        {
-          "slug": "gsg-lg",
-          "shadow": "0 10px 25px rgba(30, 58, 95, 0.15)",
-          "name": "GSG Large"
-        },
-        {
-          "slug": "gsg-xl",
-          "shadow": "0 20px 40px rgba(30, 58, 95, 0.2)",
-          "name": "GSG Extra Large"
-        },
-        {
-          "slug": "gsg-card",
-          "shadow": "0 4px 15px rgba(30, 58, 95, 0.08)",
-          "name": "GSG Card"
-        },
-        {
-          "slug": "gsg-card-hover",
-          "shadow": "0 10px 30px rgba(30, 58, 95, 0.15)",
-          "name": "GSG Card Hover"
+          "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+          "name": "System Sans-Serif",
+          "slug": "system"
         }
-      ]
-    },
-    "custom": {
-      "gsg": {
-        "transitions": {
-          "fast": "all 0.2s ease",
-          "smooth": "all 0.3s ease",
-          "slow": "all 0.5s cubic-bezier(0.4, 0, 0.2, 1)"
+      ],
+      "fontSizes": [
+        {
+          "name": "Small",
+          "size": "0.875rem",
+          "slug": "small"
         },
-        "borderRadius": {
-          "small": "4px",
-          "medium": "8px",
-          "large": "12px",
-          "full": "9999px"
+        {
+          "name": "Medium",
+          "size": "1rem",
+          "slug": "medium"
         },
-        "zIndex": {
-          "header": "1000",
-          "dropdown": "100",
-          "overlay": "500",
-          "modal": "2000"
+        {
+          "name": "Large",
+          "size": "1.125rem",
+          "slug": "large"
         },
-        "breakpoints": {
-          "mobile": "640px",
-          "tablet": "768px",
-          "desktop": "1024px",
-          "wide": "1280px"
+        {
+          "name": "Extra Large",
+          "size": "1.5rem",
+          "slug": "x-large"
+        },
+        {
+          "name": "Heading Small",
+          "size": "1.8rem",
+          "slug": "heading-small"
+        },
+        {
+          "name": "Heading Medium",
+          "size": "2.5rem",
+          "slug": "heading-medium"
+        },
+        {
+          "name": "Heading Large",
+          "size": "3.5rem",
+          "slug": "heading-large"
+        },
+        {
+          "fluid": {
+            "max": "4rem",
+            "min": "2.5rem"
+          },
+          "name": "Hero",
+          "size": "clamp(2.5rem, 6vw, 4rem)",
+          "slug": "hero"
         }
-      }
-    }
+      ],
+      "fontStyle": true,
+      "fontWeight": true,
+      "letterSpacing": true,
+      "textDecoration": true,
+      "textTransform": true
+    },
+    "useRootPaddingAwareAlignments": true
   },
   "styles": {
+    "blocks": {
+      "core/button": {
+        "border": {
+          "radius": "8px"
+        },
+        "spacing": {
+          "padding": {
+            "bottom": "1rem",
+            "left": "2rem",
+            "right": "2rem",
+            "top": "1rem"
+          }
+        },
+        "variations": {
+          "outline": {
+            "border": {
+              "color": "var(--wp--preset--color--gsg-navy)",
+              "radius": "8px",
+              "style": "solid",
+              "width": "2px"
+            },
+            "color": {
+              "background": "transparent",
+              "text": "var(--wp--preset--color--gsg-navy)"
+            },
+            "spacing": {
+              "padding": {
+                "bottom": "calc(1rem - 2px)",
+                "left": "calc(2rem - 2px)",
+                "right": "calc(2rem - 2px)",
+                "top": "calc(1rem - 2px)"
+              }
+            }
+          }
+        }
+      },
+      "core/columns": {
+        "spacing": {
+          "blockGap": "var(--wp--preset--spacing--50)"
+        }
+      },
+      "core/group": {
+        "spacing": {
+          "blockGap": "var(--wp--preset--spacing--50)"
+        }
+      },
+      "core/image": {
+        "border": {
+          "radius": "var(--wp--custom--gsg--border-radius--medium)"
+        }
+      },
+      "core/navigation": {
+        "typography": {
+          "fontWeight": "500"
+        },
+        "spacing": {
+          "padding": {
+            "top": "0.5rem",
+            "right": "0.5rem",
+            "bottom": "0.5rem",
+            "left": "0.5rem"
+          }
+        }
+      },
+      "core/quote": {
+        "border": {
+          "color": "var(--wp--preset--color--gsg-yellow)",
+          "style": "solid",
+          "width": "0 0 0 4px"
+        },
+        "color": {
+          "background": "var(--wp--preset--color--gsg-light-gray)"
+        },
+        "spacing": {
+          "padding": {
+            "bottom": "var(--wp--preset--spacing--50)",
+            "left": "var(--wp--preset--spacing--60)",
+            "right": "var(--wp--preset--spacing--50)",
+            "top": "var(--wp--preset--spacing--50)"
+          }
+        }
+      },
+      "core/separator": {
+        "color": {
+          "background": "var(--wp--preset--color--gsg-gray)"
+        }
+      },
+      "core/table": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--small)"
+        }
+      }
+    },
     "color": {
       "background": "var(--wp--preset--color--base)",
       "text": "var(--wp--preset--color--contrast)"
     },
-    "typography": {
-      "fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-      "fontSize": "var(--wp--preset--font-size--large)",
-      "lineHeight": "1.6"
-    },
-    "spacing": {
-      "blockGap": "var(--wp--preset--spacing--50)",
-      "padding": {
-        "top": "0",
-        "right": "var(--wp--preset--spacing--50)",
-        "bottom": "var(--wp--preset--spacing--50)",
-        "left": "var(--wp--preset--spacing--50)"
-      }
-    },
+    "css": "/**\n * Custom Styling für Block Theme Navigation & Links\n * Version: 2.0\n * \n */\n\n/* ============================================\n   1. CSS-Variablen aus theme.json\n   ============================================ */\n/*\n:root {\n  --transition: var(--wp--custom--transition, all 0.2s ease);\n\n  --primary-navy: var(--wp--preset--color--gsg-navy);\n  --primary-blue: var(--wp--preset--color--gsg-blue);\n  --primary-gray: var(--wp--preset--color--gsg-gray);\n  --primary-light-gray: var(--wp--preset--color--gsg-light-gray);\n  --primary-yellow: var(--wp--preset--color--gsg-yellow);\n  --primary-gold: var(--wp--preset--color--gsg-gold);\n  --primary-white: var(--wp--preset--color--base);\n  --primary-black: var(--wp--preset--color--contrast);\n  --primary-green: var(--wp--preset--color--gsg-success);\n  --primary-light-blue: var(--wp--preset--color--gsg-info);\n  --primary-orange: var(--wp--preset--color--gsg-warning);\n\n  --accordion-duration: var(--wp--custom--accordion--animationDuration, 0.35s);\n  --accordion-easing: var(--wp--custom--accordion--animationEasing, ease-in-out);\n}\n*/\n/* dezente Animationen bei cards */\n\n.gsg-news-card, .gsg-card {\n    overflow: hidden;\n    box-shadow: 0 4px 15px rgba(30, 58, 95, 0.08);\n    transition: all 0.3s ease;\n}\n\n.gsg-news-card:hover {\n    transform: translateY(-8px);\n    box-shadow: 0 10px 30px rgba(30, 58, 95, 0.15);\n    transition: all 0.6s ease;\n}\n\n.gsg-card:hover {\n    border-color: var(--wp--preset--color--gsg-yellow) !important;\n    transform: translateY(-5px);\n    box-shadow: 0 10px 30px rgba(30, 58, 95, 0.15);\n    transition: all 0.6s ease;\n}\n\n\n/* Zeile über dem Menü */\n/* Top Bar Styles */\n.gsg-top-bar {\n    background: var(--wp--preset--color--gsg-navy);\n    color: var(--wp--preset--color--base);\n    padding: 0.75rem 0;\n    font-size: 0.9rem;\n}\n\n.gsg-top-bar a {\n    color: var(--wp--preset--color--base);\n    text-decoration: none;\n    transition: color 0.3s ease;\n}\n\n.gsg-top-bar a:hover {\n    color: var(--wp--preset--color--gsg-yellow);\n}\n\n/*\n * =============================================================================\n * NAVIGATION STYLES \n * Underline-Animation, Hover-Effekte\n * =============================================================================\n */\n\n/* Header */\n\n.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container .current-menu-item > a, .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container .has-child button:hover {\n    text-decoration: none;\n}\n\n/* Navigation Links */\n.wp-block-navigation-item a,\n.wp-block-navigation__container .wp-block-navigation-item__content, .gsg-top-bar a {\n    position: relative;\n    text-decoration: none;\n    font-weight: 500;\n    transition: color 0.3s ease;\n}\n\n/* Underline Animation on Hover */\n.wp-block-navigation-item a::after,\n.wp-block-navigation__container .wp-block-navigation-item__content::after {\n    content: '';\n    position: absolute;\n    bottom: -5px;\n    left: 0;\n    width: 0;\n    height: 2px;\n    background: var(--wp--preset--color--gsg-gold);\n    transition: width 0.3s ease;\n}\n\n\n.wp-block-navigation-item a:hover::after,\n.wp-block-navigation__container .wp-block-navigation-item__content:hover::after {\n    width: 100%;\n}\n\n\n/* Hover Text Color */\n.wp-block-navigation-item a:hover,\n.wp-block-navigation__container .wp-block-navigation-item__content:hover {\n    color: var(--wp--preset--color--gsg-info);\n}\n\n/* Active/Current Menu Item */\n.wp-block-navigation-item.current-menu-item a,\n.wp-block-navigation__container .current-menu-item .wp-block-navigation-item__content {\n    color: var(--wp--preset--color--gsg-info);\n    font-weight: 600;\n}\n\n.wp-block-navigation-item.current-menu-item a::after,\n.wp-block-navigation__container .current-menu-item .wp-block-navigation-item__content::after {\n    width: 100%;\n}\n\n\n/* Focus State für Accessibility */\n.wp-block-navigation-item a:focus,\n.wp-block-navigation__container .wp-block-navigation-item__content:focus {\n    outline: 3px solid var(--wp--preset--color--gsg-navy);\n    outline-offset: 3px;\n    color: var(--wp--preset--color--gsg-navy);\n}\n\n/* Normale Links bei Hover */\na:where(:not(.wp-element-button)):hover {\n    text-decoration: none;\n}\n\n/* Weiterlesen-Link Hover Effekt */\na.wp-block-read-more:hover {\n    background-color: var(--wp--preset--color--gsg-navy) !important;  /* Neue Hoverfarbe */\n    transition: background-color 0.3s ease;  /* Sanfte Animation */\n    outline: 3px solid var(--wp--preset--color--gsg-navy);\n    outline-offset: 3px;\n    color: var(--wp--preset--color--gsg-navy);\n}\n\n/* Outline-Color Blauer Button */\n.wp-block-button.blauer_button a:hover {\n    outline-color: var(--wp--preset--color--gsg-navy);\n}\n\n/* Copyright im Footer */\n.footer-copyright p, .footer-copyright a {\n    font-size: var(--wp--preset--font-size--small);\n    color: var(--primary-white);\n}\n\n/* Links im Footer */\nfooter.wp-block-template-part.site-footer a.wp-block-navigation-item__content {\n     color: var(--wp--preset--color--white);\n}",
     "elements": {
-      "link": {
-        "color": {
-          "text": "var(--wp--preset--color--gsg-navy)"
-        },
-        ":hover": {
-          "color": {
-            "text": "var(--wp--preset--color--gsg-blue)"
-          }
-        },
-        ":focus": {
-          "color": {
-            "text": "var(--wp--preset--color--gsg-navy)"
-          },
-          "outline": {
-            "width": "3px",
-            "style": "solid",
-            "color": "var(--wp--preset--color--gsg-yellow)",
-            "offset": "3px"
-          }
-        }
-      },
       "button": {
-        "color": {
-          "background": "var(--wp--preset--color--gsg-yellow)",
-          "text": "var(--wp--preset--color--gsg-navy)"
-        },
-        "border": {
-          "radius": "8px",
-          "width": "0px"
-        },
-        "spacing": {
-          "padding": {
-            "top": "1rem",
-            "right": "2rem",
-            "bottom": "1rem",
-            "left": "2rem"
-          }
-        },
-        "typography": {
-          "fontWeight": "600",
-          "fontSize": "1rem",
-          "lineHeight": "1.5"
-        },
-        "shadow": "var(--wp--preset--shadow--gsg-md)",
-        ":hover": {
-          "color": {
-            "background": "var(--wp--preset--color--gsg-gold)",
-            "text": "var(--wp--preset--color--gsg-navy)"
-          },
-          "outline": {
-            "width": "3px",
-            "style": "solid",
-            "color": "var(--wp--preset--color--base)",
-            "offset": "3px"
-          },
-          "shadow": "0 6px 20px rgba(229, 181, 51, 0.4)",
-          "transform": "translateY(-2px)"
-        },
-        ":focus": {
-          "color": {
-            "background": "var(--wp--preset--color--gsg-gold)",
-            "text": "var(--wp--preset--color--gsg-navy)"
-          },
-          "outline": {
-            "width": "3px",
-            "style": "solid",
-            "color": "var(--wp--preset--color--base)",
-            "offset": "3px"
-          }
-        },
         ":active": {
           "color": {
             "background": "var(--wp--preset--color--gsg-gold)",
             "text": "var(--wp--preset--color--gsg-navy)"
           },
-          "transform": "translateY(0px)",
           "shadow": "var(--wp--preset--shadow--gsg-sm)"
-        }
-      },
-      "heading": {
+        },
+        ":focus": {
+          "color": {
+            "background": "var(--wp--preset--color--gsg-gold)",
+            "text": "var(--wp--preset--color--gsg-navy)"
+          },
+          "outline": {
+            "color": "var(--wp--preset--color--base)",
+            "offset": "3px",
+            "style": "solid",
+            "width": "3px"
+          }
+        },
+        ":hover": {
+          "color": {
+            "background": "var(--wp--preset--color--gsg-gold)",
+            "text": "var(--wp--preset--color--gsg-navy)"
+          },
+          "outline": {
+            "color": "var(--wp--preset--color--base)",
+            "offset": "3px",
+            "style": "solid",
+            "width": "3px"
+          },
+          "shadow": "0 6px 20px rgba(229, 181, 51, 0.4)"
+        },
+        "border": {
+          "radius": "8px",
+          "width": "0px"
+        },
         "color": {
+          "background": "var(--wp--preset--color--gsg-yellow)",
           "text": "var(--wp--preset--color--gsg-navy)"
         },
+        "shadow": "var(--wp--preset--shadow--gsg-md)",
+        "spacing": {
+          "padding": {
+            "bottom": "1rem",
+            "left": "2rem",
+            "right": "2rem",
+            "top": "1rem"
+          }
+        },
         "typography": {
-          "fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-          "fontWeight": "700",
-          "lineHeight": "1.2"
+          "fontSize": "var(--wp--preset--font-size--x-large)",
+          "fontWeight": "600",
+          "lineHeight": "1.5"
         }
       },
       "h1": {
         "typography": {
           "fontSize": "var(--wp--preset--font-size--hero)",
-          "lineHeight": "1.1",
-          "fontWeight": "800"
+          "fontWeight": "800",
+          "lineHeight": "1.1"
         }
       },
       "h2": {
@@ -449,159 +526,70 @@
           "fontSize": "var(--wp--preset--font-size--x-large)",
           "lineHeight": "1.4"
         }
+      },
+      "heading": {
+        "color": {
+          "text": "var(--wp--preset--color--gsg-navy)"
+        },
+        "typography": {
+          "fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+          "fontWeight": "700",
+          "lineHeight": "1.2"
+        }
+      },
+      "link": {
+        ":focus": {
+          "color": {
+            "text": "var(--wp--preset--color--gsg-navy)"
+          },
+          "outline": {
+            "color": "var(--wp--preset--color--gsg-yellow)",
+            "offset": "3px",
+            "style": "solid",
+            "width": "3px"
+          }
+        },
+        ":hover": {
+          "color": {
+            "text": "var(--wp--preset--color--gsg-blue)"
+          }
+        },
+        "color": {
+          "text": "var(--wp--preset--color--gsg-navy)"
+        }
       }
     },
-    "blocks": {
-      "core/group": {
-        "spacing": {
-          "blockGap": "var(--wp--preset--spacing--50)"
-        }
-      },
-      "core/columns": {
-        "spacing": {
-          "blockGap": "var(--wp--preset--spacing--50)"
-        }
-      },
-      "core/button": {
-        "border": {
-          "radius": "8px"
-        },
-        "spacing": {
-          "padding": {
-            "top": "1rem",
-            "right": "2rem",
-            "bottom": "1rem",
-            "left": "2rem"
-          }
-        },
-        "variations": {
-          "outline": {
-            "color": {
-              "background": "transparent",
-              "text": "var(--wp--preset--color--gsg-navy)"
-            },
-            "border": {
-              "color": "var(--wp--preset--color--gsg-navy)",
-              "width": "2px",
-              "style": "solid",
-              "radius": "8px"
-            },
-            "spacing": {
-              "padding": {
-                "top": "calc(1rem - 2px)",
-                "right": "calc(2rem - 2px)",
-                "bottom": "calc(1rem - 2px)",
-                "left": "calc(2rem - 2px)"
-              }
-            },
-            ":hover": {
-              "color": {
-                "background": "var(--wp--preset--color--gsg-navy)",
-                "text": "var(--wp--preset--color--base)"
-              },
-              "transform": "translateY(-2px)",
-              "shadow": "0 6px 20px rgba(30, 58, 95, 0.3)"
-            },
-            ":focus": {
-              "outline": {
-                "width": "3px",
-                "style": "solid",
-                "color": "var(--wp--preset--color--gsg-yellow)",
-                "offset": "3px"
-              }
-            },
-            ":active": {
-              "transform": "translateY(0px)"
-            }
-          }
-        }
-      },
-      "core/navigation": {
-        "typography": {
-          "fontWeight": "500"
-        }
-      },
-      "core/quote": {
-        "color": {
-          "background": "var(--wp--preset--color--gsg-light-gray)"
-        },
-        "border": {
-          "color": "var(--wp--preset--color--gsg-yellow)",
-          "style": "solid",
-          "width": "0 0 0 4px"
-        },
-        "spacing": {
-          "padding": {
-            "top": "var(--wp--preset--spacing--50)",
-            "right": "var(--wp--preset--spacing--50)",
-            "bottom": "var(--wp--preset--spacing--50)",
-            "left": "var(--wp--preset--spacing--60)"
-          }
-        }
-      },
-      "core/image": {
-        "border": {
-          "radius": "var(--wp--custom--gsg--border-radius--medium)"
-        }
-      },
-      "core/separator": {
-        "color": {
-          "background": "var(--wp--preset--color--gsg-gray)"
-        }
-      },
-      "core/table": {
-        "typography": {
-          "fontSize": "var(--wp--preset--font-size--small)"
-        }
+    "spacing": {
+      "blockGap": "var(--wp--preset--spacing--50)",
+      "padding": {
+        "bottom": "var(--wp--preset--spacing--50)",
+        "left": "var(--wp--preset--spacing--50)",
+        "right": "var(--wp--preset--spacing--50)",
+        "top": "var(--wp--preset--spacing--50)"
       }
+    },
+    "typography": {
+      "fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+      "fontSize": "var(--wp--preset--font-size--x-large)",
+      "lineHeight": "1.6"
     }
   },
-  "customTemplates": [
-    {
-      "name": "gymnasium-home",
-      "title": "Gymnasium Startseite",
-      "postTypes": [
-        "page"
-      ]
-    },
-    {
-      "name": "gymnasium-news",
-      "title": "Gymnasium News",
-      "postTypes": [
-        "page",
-        "post"
-      ]
-    },
-    {
-      "name": "gymnasium-events",
-      "title": "Gymnasium Termine",
-      "postTypes": [
-        "page"
-      ]
-    },
-    {
-      "name": "gymnasium-contact",
-      "title": "Gymnasium Kontakt",
-      "postTypes": [
-        "page"
-      ]
-    }
-  ],
   "templateParts": [
     {
+      "area": "header",
       "name": "header",
-      "title": "Header",
-      "area": "header"
+      "title": "Header"
     },
     {
+      "area": "footer",
       "name": "footer",
-      "title": "Footer",
-      "area": "footer"
+      "title": "Footer"
     },
     {
+      "area": "sidebar",
       "name": "sidebar",
-      "title": "Sidebar",
-      "area": "sidebar"
+      "title": "Sidebar"
     }
-  ]
+  ],
+  "title": "GSG Gymnasium Child Theme"
 }
