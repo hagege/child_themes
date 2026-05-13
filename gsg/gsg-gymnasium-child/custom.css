@@ -28,6 +28,7 @@
   --accordion-easing: var(--wp--custom--accordion--animationEasing, ease-in-out);
 }
 */
+
 /* dezente Animationen bei cards */
 .gruppe-mit-cover {
     overflow: hidden;
@@ -184,11 +185,12 @@ footer.site-footer .wp-block-navigation .wp-block-navigation-item__content:hover
 footer.site-footer .wp-block-navigation .wp-block-navigation-item__content:focus {
     text-underline-offset: 10px;
     text-decoration-thickness: 2px;
+    border-radius: 7px;
+    box-shadow: unset;
 }
 
-/* Sicherheitsmaßnahme im CSS Block 
+/* Sicherheitsmaßnahme im CSS Block */
 .wp-site-blocks {
     padding-top: 0;
     padding-bottom: 0;
 }
-*/
