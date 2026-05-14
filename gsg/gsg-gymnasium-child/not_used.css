@@ -1,0 +1,18 @@
+/* Zeile über dem Menü */
+/* Top Bar Styles */
+.gsg-top-bar {
+    background: var(--wp--preset--color--gsg-navy);
+    color: var(--wp--preset--color--base);
+    padding: 0.75rem 0;
+    font-size: 0.9rem;
+}
+
+.gsg-top-bar a {
+    color: var(--wp--preset--color--base);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.gsg-top-bar a:hover {
+    color: var(--wp--preset--color--gsg-yellow);
+}
