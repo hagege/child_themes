@@ -211,6 +211,11 @@ footer.site-footer .wp-block-navigation .wp-block-navigation-item__content:focus
     color: var(--wp--preset--color--base);
 }
 
+.wp-block-accordion.accordion-gelb h3,
+.wp-block-accordion.accordion-gelb .wp-block-accordion-panel {
+    color: black;
+}
+
 /* Links im Accordion */
 .wp-block-accordion-panel ul li a {
     color: white;
@@ -220,6 +225,7 @@ footer.site-footer .wp-block-navigation .wp-block-navigation-item__content:focus
 /* Accordion verzögert öffnen */
 .wp-block-accordion-panel {
     overflow: hidden;
+    color: white;
 }
 
 .wp-block-accordion-item.is-open .wp-block-accordion-panel {
