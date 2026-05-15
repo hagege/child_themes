@@ -29,6 +29,36 @@
 }
 */
 
+/* Liste mit Häkchen */
+ul.wp-block-list {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+ul.wp-block-list li {
+    position: relative;
+    padding-left: 1.5em;
+}
+
+ul.wp-block-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* CPT Lehrer h2 */
+li.lehrer h2 {
+    font-size: 1.5rem;
+}
+
+/* featured images ohne Outline */
+.wp-block-post-featured-image a {
+    outline: none;
+}
+
+
 /* dezente Animationen bei cards */
 .gruppe-mit-cover {
     overflow: hidden;
