@@ -29,6 +29,12 @@
 }
 */
 
+/* Verhindert Ausdehnung bei zu breiten Viewports z. B. 4000px */
+.wp-site-blocks {
+    max-width: 1920px;
+    margin-inline: auto;
+}
+
 /* Liste mit Häkchen */
 ul.wp-block-list {
     list-style: none;

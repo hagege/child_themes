@@ -31,6 +31,22 @@
    3. Header & Navigation
    ============================================ */
 
+/* Verhindert Ausdehnung bei zu breiten Viewports z. B. 4000px */
+.wp-site-blocks {
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
+/* optional: Hintergrund außerhalb abdunkeln 
+body {
+	background: #eaeaea;
+}
+
+.wp-site-blocks {
+	background: white;
+}
+*/
+
 .wp-block-navigation a {
   color: var(--text-color);
   text-decoration: none;
@@ -249,4 +265,25 @@ figure.eilendorf-icons img {
 /* Links bei Beiträgen Unterstrich */
 li.wp-block-post a {
   text-decoration: none;
+}
+
+
+/* möglichst an den Anfang scrollen */
+.scroll-to-top {
+  scroll-margin-top: 80px;
+  /* Höhe deines Sticky Headers */
+}
+
+/* verzögerte Darstellung und Pfeil dreht sich nach oben */
+div.to-top-fixiert img:hover {
+  transform: rotate(360deg);
+  transition: transform 1.5s ease-in-out;
+}
+
+div.to-top-fixiert {
+  position: fixed;
+  right: 2em;
+  bottom: 2em;
+  transition: all 10s;
+  z-index: 999;
 }
