@@ -27,6 +27,12 @@
   --accordion-easing: var(--wp--custom--accordion--animationEasing, ease-in-out);
 }
 
+/* Verhindert Ausdehnung bei zu breiten Viewports z. B. 4000px */
+.wp-site-blocks {
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
 /* ============================================
    2. Basis-Styling für Navigation Links
    ============================================ */
