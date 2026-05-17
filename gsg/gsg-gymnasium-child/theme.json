@@ -93,6 +93,10 @@
           "slug": "system"
         }
       ],
+      "fluid": {
+        "minViewportWidth": "320px",
+        "maxViewportWidth": "1920px"
+      },
       "fontSizes": [
         {
           "name": "Small",
@@ -130,13 +134,13 @@
           "slug": "heading-large"
         },
         {
-          "fluid": {
-            "max": "4rem",
-            "min": "2.5rem"
-          },
           "name": "Hero",
-          "size": "clamp(2.5rem, 6vw, 4rem)",
-          "slug": "hero"
+          "slug": "hero",
+          "size": "2.5rem",
+          "fluid": {
+            "min": "2.5rem",
+            "max": "4rem"
+          }
         }
       ],
       "fontStyle": true,
@@ -181,6 +185,19 @@
                 "top": "calc(1rem - 2px)"
               }
             }
+          }
+        }
+      },
+      "core/accordion": {
+        "border": {
+          "radius": "8px"
+        },
+        "spacing": {
+          "padding": {
+            "top": "1rem",
+            "right": "2rem",
+            "bottom": "1rem",
+            "left": "2rem"
           }
         }
       },
@@ -343,7 +360,7 @@
             "text": "var(--wp--preset--color--gsg-navy)"
           },
           "outline": {
-            "color": "var(--wp--preset--color--gsg-yellow)",
+            "color": "var(--wp--preset--color--gsg-navy)",
             "offset": "3px",
             "style": "solid",
             "width": "3px"
