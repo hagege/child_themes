@@ -186,6 +186,11 @@ ul.wp-block-navigation__submenu-container.has-text-color.has-gsg-navy-color.has-
     outline-color: var(--wp--preset--color--gsg-navy);
 }
 
+/* Outline-Color Buttons für Auswahl Lehrer */
+.gruppe-buttons-lehrer .wp-block-buttons .wp-block-button a:hover {
+    outline-color: var(--wp--preset--color--gsg-navy);
+}
+
 /* Link im Footer */
 a[href="https://haurand.com"],
 footer.site-footer .wp-block-navigation .wp-block-navigation-item__content {
