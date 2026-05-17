@@ -144,6 +144,10 @@ a:where(:not(.wp-element-button)):hover {
     text-decoration-thickness: 2px;
 }
 
+/* geänderter Offset bei Links in Archive */
+h2.wp-block-post-title.has-x-large-font-size a:hover {
+    text-underline-offset: 4px;
+}
 
 .wp-block-navigation a:where(:not(.wp-element-button)) {
     text-decoration: none;
@@ -209,6 +213,12 @@ footer.site-footer .wp-block-navigation .wp-block-navigation-item__content:focus
     text-decoration-thickness: 2px;
     border-radius: 7px;
     box-shadow: unset;
+}
+
+/* Navigation im Footer ohne Padding left */
+nav.nav-footer,
+nav.nav-footer a {
+    padding-left: 0;
 }
 
 /* Sicherheitsmaßnahme im CSS Block */
