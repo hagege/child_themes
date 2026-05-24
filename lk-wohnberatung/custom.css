@@ -3,6 +3,12 @@
     outline-style: solid
 }
 
+/* Silbentrennung nur im Content */
+.entry-content,
+.wp-block-post-content {
+    hyphens: auto;
+}
+
 /* Schriftfarbe für Button */
 button.wpgmza-api-consent {
     color: black !important;

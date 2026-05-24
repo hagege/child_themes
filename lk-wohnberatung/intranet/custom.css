@@ -1,5 +1,11 @@
 /* Tabelle with scrollbar */
 
+/* Silbentrennung nur im Content */
+.entry-content,
+.wp-block-post-content {
+    hyphens: auto;
+}
+
 /* Anmeldung-Notiz Forum ausblenden */
 .notices-panel {
     display: none;
