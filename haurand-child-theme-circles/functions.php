@@ -182,3 +182,52 @@ function featured_image_in_rss($content) {
 }
 add_filter('the_excerpt_rss', 'featured_image_in_rss');
 add_filter('the_content_feed', 'featured_image_in_rss');
+
+// Hex-Farben als Tags blocken (Child Theme functions.php)
+add_filter('pre_insert_term', 'block_hex_colors_as_tags', 10, 2);
+function block_hex_colors_as_tags($term, $taxonomy) {
+    if ($taxonomy === 'post_tag' && preg_match('/^#[0-9a-fA-F]{6}$/', $term)) {
+        return new WP_Error('invalid_tag', 'Hex-Farbwerte sind keine gültigen Schlagwörter.');
+    }
+    return $term;
+}
+
+/* Es geht darum, dass Beiträge mit der Kategorie "Keine Anzeige" in keiner Query Loop gezeigt werden dürfen. Der jeweilige Beitrag darf nur gezeigt werden, wenn der User den exakten Link hat. */
+add_filter( 'query_loop_block_query_vars', function( $query_vars, $block ) {
+	$cat = get_category_by_slug( 'keine-anzeige' );
+
+	if ( ! $cat ) {
+		return $query_vars;
+	}
+
+	$exclude = array( $cat->term_id );
+
+	if ( isset( $query_vars['category__not_in'] ) && is_array( $query_vars['category__not_in'] ) ) {
+		$exclude = array_unique( array_merge( $query_vars['category__not_in'], $exclude ) );
+	}
+
+	$query_vars['category__not_in'] = $exclude;
+
+	return $query_vars;
+}, 10, 2 );
+
+add_action( 'pre_get_posts', function( $query ) {
+	// Admin und nicht-Hauptquery ausschließen
+	if ( is_admin() || ! $query->is_main_query() ) {
+		return;
+	}
+
+	$cat = get_category_by_slug( 'keine-anzeige' );
+
+	if ( ! $cat ) {
+		return;
+	}
+
+	// Nur bei Listen, nicht bei einzelnen Posts
+	if ( $query->is_home() || $query->is_archive() || $query->is_search() ) {
+		// Sicher zusammenmergen, falls bereits kategoriebezogene Filter existieren
+		$excluded = (array) $query->get( 'category__not_in' );
+		$excluded[] = $cat->term_id;
+		$query->set( 'category__not_in', array_unique( $excluded ) );
+	}
+} );
