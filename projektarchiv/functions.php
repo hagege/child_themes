@@ -8,10 +8,6 @@
  * @since Twenty Twenty-Four 1.0
  */
 
-/**
- * Register block styles.
- */
-
 if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 	/**
 	 * Registers custom block styles.
@@ -146,10 +142,6 @@ endif;
 
 add_action( 'init', 'twentytwentyfour_block_styles' );
 
-/**
- * Enqueue block stylesheets.
- */
-
 if ( ! function_exists( 'twentytwentyfour_block_stylesheets' ) ) :
 	/**
 	 * Enqueues custom block stylesheets.
@@ -180,10 +172,6 @@ endif;
 
 add_action( 'init', 'twentytwentyfour_block_stylesheets' );
 
-/**
- * Register pattern categories.
- */
-
 if ( ! function_exists( 'twentytwentyfour_pattern_categories' ) ) :
 	/**
 	 * Registers pattern categories.
@@ -204,3 +192,21 @@ if ( ! function_exists( 'twentytwentyfour_pattern_categories' ) ) :
 endif;
 
 add_action( 'init', 'twentytwentyfour_pattern_categories' );
+
+/* Eintrag für Block Binding wordpress_version */
+add_action(
+    'init',
+    function() {
+
+        register_meta(
+            'post',
+            'wordpress_version',
+            array(
+                'show_in_rest' => true,
+                'single'       => true,
+                'type'         => 'string',
+            )
+        );
+
+    }
+);
