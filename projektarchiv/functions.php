@@ -210,3 +210,9 @@ add_action(
 
     }
 );
+
+/* vollen Zugriff auf Patterns */ 
+add_filter( 'block_editor_settings_all', function( $settings ) {
+    $settings['disableContentOnlyForUnsyncedPatterns'] = true;
+    return $settings;
+} );
