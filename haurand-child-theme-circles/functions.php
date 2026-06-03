@@ -193,41 +193,75 @@ function block_hex_colors_as_tags($term, $taxonomy) {
 }
 
 /* Es geht darum, dass Beiträge mit der Kategorie "Keine Anzeige" in keiner Query Loop gezeigt werden dürfen. Der jeweilige Beitrag darf nur gezeigt werden, wenn der User den exakten Link hat. */
+// Helper Funktion
+function get_hidden_posts_category() {
+    static $hidden_cat = null;
+    if ( $hidden_cat === null ) {
+        $hidden_cat = get_category_by_slug( 'keine-anzeige' );
+    }
+    return $hidden_cat;
+}
+
+// Filter 1: Allgemeine Queries
+add_action( 'pre_get_posts', function( $query ) {
+    if ( is_admin() || ! $query->is_main_query() ) {
+        return;
+    }
+    
+    $hidden_category = get_hidden_posts_category();
+    if ( ! $hidden_category ) {
+        return;
+    }
+
+    $tax_query = (array) $query->get( 'tax_query' );
+    $tax_query[] = array(
+        'taxonomy' => 'category',
+        'field'    => 'term_id',
+        'terms'    => array( $hidden_category->term_id ),
+        'operator' => 'NOT IN'
+    );
+
+    $query->set( 'tax_query', $tax_query );
+});
+
+// Filter 2: Query Loop Blocks
 add_filter( 'query_loop_block_query_vars', function( $query_vars, $block ) {
-	$cat = get_category_by_slug( 'keine-anzeige' );
+    $hidden_category = get_hidden_posts_category();
+    if ( ! $hidden_category ) {
+        return $query_vars;
+    }
 
-	if ( ! $cat ) {
-		return $query_vars;
-	}
+    $tax_query = isset( $query_vars['tax_query'] ) ? (array) $query_vars['tax_query'] : array();
+    $tax_query[] = array(
+        'taxonomy' => 'category',
+        'field'    => 'term_id',
+        'terms'    => array( $hidden_category->term_id ),
+        'operator' => 'NOT IN'
+    );
 
-	$exclude = array( $cat->term_id );
-
-	if ( isset( $query_vars['category__not_in'] ) && is_array( $query_vars['category__not_in'] ) ) {
-		$exclude = array_unique( array_merge( $query_vars['category__not_in'], $exclude ) );
-	}
-
-	$query_vars['category__not_in'] = $exclude;
-
-	return $query_vars;
+    $query_vars['tax_query'] = $tax_query;
+    return $query_vars;
 }, 10, 2 );
 
-add_action( 'pre_get_posts', function( $query ) {
-	// Admin und nicht-Hauptquery ausschließen
-	if ( is_admin() || ! $query->is_main_query() ) {
-		return;
-	}
+// Filter 3: REST API
+add_filter( 'rest_post_query', function( $args, $request ) {
+    if ( is_admin() ) {
+        return $args;
+    }
+    
+    $hidden_category = get_hidden_posts_category();
+    if ( ! $hidden_category ) {
+        return $args;
+    }
 
-	$cat = get_category_by_slug( 'keine-anzeige' );
+    $tax_query = isset( $args['tax_query'] ) ? (array) $args['tax_query'] : array();
+    $tax_query[] = array(
+        'taxonomy' => 'category',
+        'field'    => 'term_id',
+        'terms'    => array( $hidden_category->term_id ),
+        'operator' => 'NOT IN'
+    );
 
-	if ( ! $cat ) {
-		return;
-	}
-
-	// Nur bei Listen, nicht bei einzelnen Posts
-	if ( $query->is_home() || $query->is_archive() || $query->is_search() ) {
-		// Sicher zusammenmergen, falls bereits kategoriebezogene Filter existieren
-		$excluded = (array) $query->get( 'category__not_in' );
-		$excluded[] = $cat->term_id;
-		$query->set( 'category__not_in', array_unique( $excluded ) );
-	}
-} );
+    $args['tax_query'] = $tax_query;
+    return $args;
+}, 10, 2 );
