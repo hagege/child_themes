@@ -1,0 +1,55 @@
+// Die folgenden CSS-Regeln können noch weiter "entschlackt" werden:
+
+.karte_klickbar {
+  position: relative;
+}
+
+.karte_klickbar > a {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: block;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.karte_klickbar > *:not(a) {
+  position: relative;
+  z-index: 1;
+}
+
+.karte_klickbar:focus-within {
+  outline: 3px solid #000000;
+  outline-offset: 3px;
+}
+
+/* Ausgangszustand für Animation */
+.wp-block-group.karte_klickbar {
+  position: relative;
+  outline: 0;
+  box-shadow: none;
+  outline-offset: 4px;
+  transition:
+    outline-color 1.5s ease,
+    outline-width 1.5s ease,
+    box-shadow 1.5s ease,
+    transform 1.5s ease;
+}
+
+/* Hover: leicht vergrößern + dezenter Schatten/Rahmen */
+.wp-block-group.karte_klickbar:hover {
+  transform: scale(1.02); /* leichte Vergrößerung */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  outline: 2px solid var(--wp--preset--color--custom-helles-lila);
+}
+
+/* Fokus (Keyboard): deutlicher Rahmen, ebenfalls leicht vergrößert */
+.wp-block-group.karte_klickbar:focus-within {
+  transform: scale(1.02);
+  outline: 6px solid var(--wp--preset--color--custom-helles-lila);
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+h2.kachel_titel a {
+    text-decoration: none;
+}
