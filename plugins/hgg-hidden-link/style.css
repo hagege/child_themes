@@ -1,68 +1,44 @@
-// Die folgenden CSS-Regeln können noch weiter "entschlackt" werden:
-
 .karte_klickbar {
   position: relative;
   cursor: pointer;
+  transition:
+    transform 380ms ease,
+    box-shadow 380ms ease,
+    outline-color 380ms ease;
 }
 
-.karte_klickbar>a {
+.karte_klickbar>a,
+.karte_klickbar .karte-link {
   position: absolute;
   inset: 0;
   z-index: 10;
   display: block;
-  text-indent: -9999px;
-  overflow: hidden;
-}
-
-.karte_klickbar>*:not(a) {
-  position: relative;
-  z-index: 1;
-}
-
-/*
-.karte_klickbar:focus-within {
-  outline: 3px solid #1F1F1F;
-  outline-offset: 3px;
-}
-
-
-.karte_klickbar a:focus-visible,
-.karte_klickbar .karte-link:focus-visible {
-  outline: 3px solid #1F1F1F;
-  outline-offset: 3px;
-}
-*/
-/* Ausgangszustand für Animation */
-.wp-block-group.karte_klickbar {
-  position: relative;
-  outline: 0;
-  box-shadow: none;
-  outline-offset: 4px;
-  transition:
-    outline-color 1.5s ease,
-    outline-width 1.5s ease,
-    box-shadow 1.5s ease,
-    transform 1.5s ease;
-}
-
-/* Hover: leicht vergrößern + dezenter Schatten/Rahmen */
-.wp-block-group.karte_klickbar:hover {
-  transform: scale(1.02);
-  /* leichte Vergrößerung */
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-  outline: 2px solid var(--wp--preset--color--custom-helles-lila);
   cursor: pointer;
 }
 
-/* Fokus (Keyboard): deutlicher Rahmen, ebenfalls leicht vergrößert */
-.wp-block-group.karte_klickbar:focus-within,
-.wp-block-group.karte_klickbar:focus-visible,
-.wp-block-group.karte_klickbar a:focus-visible {
-  transform: scale(1.02);
-  outline: 6px solid var(--wp--preset--color--custom-helles-lila);
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+.karte_klickbar:hover {
+  transform: scale(1.015);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
-h2.kachel_titel a {
-  text-decoration: none;
+.karte_klickbar:focus-within {
+  outline: 3px solid var(--wp--preset--color--custom-helles-lila);
+  outline-offset: 4px;
+}
+
+.karte_klickbar>a:focus-visible,
+.karte_klickbar .karte-link:focus-visible {
+  outline: 3px solid var(--wp--preset--color--custom-helles-lila);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .karte_klickbar {
+    transition: none;
+  }
+
+  .karte_klickbar:hover {
+    transform: none;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  }
 }
