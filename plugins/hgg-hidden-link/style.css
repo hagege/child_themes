@@ -2,9 +2,10 @@
 
 .karte_klickbar {
   position: relative;
+  cursor: pointer;
 }
 
-.karte_klickbar > a {
+.karte_klickbar>a {
   position: absolute;
   inset: 0;
   z-index: 10;
@@ -13,7 +14,7 @@
   overflow: hidden;
 }
 
-.karte_klickbar > *:not(a) {
+.karte_klickbar>*:not(a) {
   position: relative;
   z-index: 1;
 }
@@ -38,18 +39,20 @@
 
 /* Hover: leicht vergrößern + dezenter Schatten/Rahmen */
 .wp-block-group.karte_klickbar:hover {
-  transform: scale(1.02); /* leichte Vergrößerung */
+  transform: scale(1.02);
+  /* leichte Vergrößerung */
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   outline: 2px solid var(--wp--preset--color--custom-helles-lila);
+  cursor: pointer;
 }
 
 /* Fokus (Keyboard): deutlicher Rahmen, ebenfalls leicht vergrößert */
 .wp-block-group.karte_klickbar:focus-within {
   transform: scale(1.02);
   outline: 6px solid var(--wp--preset--color--custom-helles-lila);
-  box-shadow: 0 0 0 rgba(0,0,0,0);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 
 h2.kachel_titel a {
-    text-decoration: none;
+  text-decoration: none;
 }
