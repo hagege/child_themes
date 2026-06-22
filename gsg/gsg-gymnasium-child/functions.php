@@ -78,3 +78,21 @@ function my_disable_welcome_guides() {
 }
 
 add_action( 'enqueue_block_editor_assets', 'my_disable_welcome_guides', 20 );
+
+
+/**
+ * Default Featured Image (Beitragsbild) nur für Beiträge (post) aktivieren,
+ * nicht für Seiten (page) und Events (My Calendar).
+ */
+function dfi_only_for_posts($dfi_id, $post_id) {
+    $post = get_post($post_id);
+    
+    // Nur für Beiträge (post_type = 'post') das Fallback-Bild zurückgeben
+    if ($post->post_type !== 'post') {
+        return null; // Kein Fallback-Bild für Seiten, Events, etc.
+    }
+    
+    return $dfi_id; // Original-Fallback-Bild für Beiträge
+}
+
+add_filter('dfi_thumbnail_id', 'dfi_only_for_posts', 10, 2);
