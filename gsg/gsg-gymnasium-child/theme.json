@@ -5,64 +5,79 @@
     "color": {
       "palette": [
         {
-          "color": "#151A52",
           "name": "GSG Navy",
-          "slug": "gsg-navy"
+          "slug": "gsg-navy",
+          "color": "#151A52"
         },
         {
-          "color": "#234A8A",
           "name": "GSG Blue",
-          "slug": "gsg-blue"
+          "slug": "gsg-blue",
+          "color": "#234A8A"
         },
         {
-          "color": "#C1C5CD",
           "name": "GSG Gray",
-          "slug": "gsg-gray"
+          "slug": "gsg-gray",
+          "color": "#C1C5CD"
         },
         {
-          "color": "#E8EAED",
           "name": "GSG Light Gray",
-          "slug": "gsg-light-gray"
+          "slug": "gsg-light-gray",
+          "color": "#E8EAED"
         },
         {
-          "color": "#F1F3F4",
           "name": "GSG Cool Light Gray",
-          "slug": "gsg-cool-light-gray"
+          "slug": "gsg-cool-light-gray",
+          "color": "#F1F3F4"
         },
         {
-          "color": "#EEC849",
           "name": "GSG Yellow",
-          "slug": "gsg-yellow"
+          "slug": "gsg-yellow",
+          "color": "#EEC849"
         },
         {
-          "color": "#D4A017",
           "name": "GSG Gold",
-          "slug": "gsg-gold"
+          "slug": "gsg-gold",
+          "color": "#D4A017"
         },
         {
-          "color": "#ffffff",
-          "name": "White",
-          "slug": "base"
+          "name": "Base",
+          "slug": "base",
+          "color": "#fff"
         },
         {
-          "color": "#000000",
           "name": "Black",
-          "slug": "contrast"
+          "slug": "contrast",
+          "color": "#000000"
         },
         {
-          "color": "#22C55E",
+          "name": "Tint",
+          "slug": "tertiary",
+          "color": "#f8f7fc"
+        },
+        {
+          "name": "Border Base",
+          "slug": "border-light",
+          "color": "#E3E3F0"
+        },
+        {
+          "name": "Border Contrast",
+          "slug": "border-dark",
+          "color": "#4E4E60"
+        },
+        {
           "name": "Success Green",
-          "slug": "gsg-success"
+          "slug": "gsg-success",
+          "color": "#22C55E"
         },
         {
-          "color": "#3B82F6",
           "name": "Info Blue",
-          "slug": "gsg-info"
+          "slug": "gsg-info",
+          "color": "#3B82F6"
         },
         {
-          "color": "#F59E0B",
           "name": "Warning Orange",
-          "slug": "gsg-warning"
+          "slug": "gsg-warning",
+          "color": "#F59E0B"
         }
       ]
     },
