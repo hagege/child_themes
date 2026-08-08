@@ -1,0 +1,161 @@
+{
+    "$schema": "https://schemas.wp.org/wp/7.0/theme.json",
+    "version": 3,
+    "settings": {
+        "color": {
+            "palette": [
+                {
+                    "color": "#AB1125",
+                    "name": "Primary Red",
+                    "slug": "primary"
+                },
+                {
+                    "color": "#8a0e1d",
+                    "name": "Primary Red Hover",
+                    "slug": "primary-hover"
+                },
+                {
+                    "color": "#000000",
+                    "name": "Background Black",
+                    "slug": "background"
+                },
+                {
+                    "color": "#FFFFFF",
+                    "name": "White",
+                    "slug": "white"
+                },
+                {
+                    "color": "#1a1a1a",
+                    "name": "Card Grey",
+                    "slug": "card-grey"
+                },
+                {
+                    "color": "#cccccc",
+                    "name": "Text Grey",
+                    "slug": "text-grey"
+                }
+            ]
+        },
+        "layout": {
+            "contentSize": "1200px",
+            "wideSize": "1400px"
+        },
+        "typography": {
+            "fontFamilies": [
+                {
+                    "fontFace": [
+                        {
+                            "fontFamily": "Manrope",
+                            "fontStyle": "normal",
+                            "fontWeight": "400",
+                            "src": [
+                                "file:./assets/fonts/manrope/manrope-400-normal.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "Manrope",
+                            "fontStyle": "normal",
+                            "fontWeight": "600",
+                            "src": [
+                                "file:./assets/fonts/manrope/manrope-600-normal.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "Manrope",
+                            "fontStyle": "normal",
+                            "fontWeight": "800",
+                            "src": [
+                                "file:./assets/fonts/manrope/manrope-800-normal.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "Manrope",
+                            "fontStyle": "normal",
+                            "fontWeight": "200",
+                            "src": [
+                                "file:./assets/fonts/manrope/manrope-200-normal.woff2"
+                            ]
+                        }
+                    ],
+                    "fontFamily": "Manrope, sans-serif",
+                    "name": "Manrope",
+                    "slug": "manrope"
+                }
+            ]
+        }
+    },
+    "styles": {
+        "color": {
+            "background": "var(--wp--preset--color--background)",
+            "text": "var(--wp--preset--color--white)"
+        },
+        "elements": {
+            "button": {
+                ":hover": {
+                    "color": {
+                        "background": "var(--wp--preset--color--white)",
+                        "text": "var(--wp--preset--color--background)"
+                    }
+                },
+                "color": {
+                    "background": "var(--wp--preset--color--primary)",
+                    "text": "var(--wp--preset--color--white)"
+                }
+            },
+            "h1": {
+                "typography": {
+                    "fontWeight": "800"
+                }
+            },
+            "h2": {
+                "typography": {
+                    "fontWeight": "800"
+                }
+            },
+            "h3": {
+                "typography": {
+                    "fontWeight": "600"
+                }
+            },
+            "h4": {
+                "typography": {
+                    "fontWeight": "600"
+                }
+            },
+            "h5": {
+                "typography": {
+                    "fontWeight": "600"
+                }
+            },
+            "h6": {
+                "typography": {
+                    "fontWeight": "600"
+                }
+            },
+            "heading": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--manrope)",
+                    "fontWeight": "800"
+                }
+            },
+            "link": {
+                ":hover": {
+                    "color": {
+                        "text": "var(--wp--preset--color--primary)"
+                    },
+                    "typography": {
+                        "textDecoration": "none"
+                    }
+                },
+                "color": {
+                    "text": "var(--wp--preset--color--white)"
+                }
+            }
+        },
+        "typography": {
+            "fontFamily": "var(--wp--preset--font-family--manrope)",
+            "fontStyle": "normal",
+            "fontWeight": "400"
+        }
+    }
+}

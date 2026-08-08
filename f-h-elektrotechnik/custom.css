@@ -1,0 +1,21 @@
+/* Hover in Section Leistungen */
+.hover_red {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.hover_red:hover {
+    background-color: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--white);
+}
+
+/* 2. Überschrift (h3) und Link innerhalb der h3 werden weiß */
+.hover_red:hover h3,
+.hover_red:hover h3 a {
+    color: var(--wp--preset--color--white);
+}
+
+/* 3. Optional: Transition für sanften Übergang */
+.hover_red h3,
+.hover_red h3 a {
+    transition: color 0.3s ease;
+}
