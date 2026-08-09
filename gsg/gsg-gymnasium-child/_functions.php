@@ -19,7 +19,7 @@ function gsg_child_enqueue_styles() {
         'ollie-style',
         get_template_directory_uri() . '/style.css',
         array(),
-        wp_get_theme()->parent()->get('Version')
+        $parent ? $parent->get('Version') : $theme->get('Version')
     );
     
     // Child theme stylesheet
@@ -32,87 +32,67 @@ function gsg_child_enqueue_styles() {
 }
 add_action('wp_enqueue_scripts', 'gsg_child_enqueue_styles');
 
-/**
- * Add Google Fonts - Inter
- */
-function gsg_add_google_fonts() {
-    wp_enqueue_style(
-        'gsg-google-fonts',
-        'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap',
-        array(),
-        null
+
+// Copyright Shortcode: [copyright_notice]
+add_shortcode( 'copyright_notice', 'copyright_notice_shortcode' );
+
+function copyright_notice_shortcode() {
+    return sprintf(
+        '© %d %s | erstellt von <a href="https://haurand.com">haurand.com</a>',
+        intval( current_time( 'Y' ) ),
+        esc_html( get_bloginfo( 'name' ) )
     );
 }
-add_action('wp_enqueue_scripts', 'gsg_add_google_fonts');
 
-/**
- * Include Block Patterns
- */
-require_once get_stylesheet_directory() . '/patterns.php';
-
-/**
- * Disable Widgets Menu (FSE Theme)
- * Block Themes should not show Widgets menu
- */
-function gsg_remove_widgets_menu() {
-    remove_submenu_page('themes.php', 'widgets.php');
+/* Vollbildmodus deaktivieren */
+function jba_disable_editor_fullscreen_by_default() {
+    $script = "jQuery( window ).load(function() { const isFullscreenMode = wp.data.select( 'core/edit-post' ).isFeatureActive( 'fullscreenMode' ); if ( isFullscreenMode ) { wp.data.dispatch( 'core/edit-post' ).toggleFeature( 'fullscreenMode' ); } });";
+    wp_add_inline_script( 'wp-blocks', $script );
 }
-add_action('admin_menu', 'gsg_remove_widgets_menu', 999);
+add_action( 'enqueue_block_editor_assets', 'jba_disable_editor_fullscreen_by_default' );
+
 
 /**
- * Disable Classic Menus (FSE uses Navigation Block)
- * Hide the old Appearance > Menus
+ * Disable welcome guides in Gutenberg.
  */
-function gsg_remove_menus_page() {
-    remove_submenu_page('themes.php', 'nav-menus.php');
+function my_disable_welcome_guides() {
+	wp_add_inline_script( 'wp-data', "window.onload = function() {
+	const selectPost = wp.data.select( 'core/edit-post' );
+	const selectPreferences = wp.data.select( 'core/preferences' );
+	const isFullscreenMode = selectPost.isFeatureActive( 'fullscreenMode' );
+	const isWelcomeGuidePost = selectPost.isFeatureActive( 'welcomeGuide' );
+	const isWelcomeGuideWidget = selectPreferences.get( 'core/edit-widgets', 'welcomeGuide' );
+	
+	if ( isWelcomeGuideWidget ) {
+		wp.data.dispatch( 'core/preferences' ).toggle( 'core/edit-widgets', 'welcomeGuide' );
+	}
+	
+	if ( isFullscreenMode ) {
+		wp.data.dispatch( 'core/edit-post' ).toggleFeature( 'fullscreenMode' );
+	}
+	
+	if ( isWelcomeGuidePost ) {
+		wp.data.dispatch( 'core/edit-post' ).toggleFeature( 'welcomeGuide' );
+	}
+}" );
 }
-add_action('admin_menu', 'gsg_remove_menus_page', 999);
+
+add_action( 'enqueue_block_editor_assets', 'my_disable_welcome_guides', 20 );
+
 
 /**
- * Remove Theme Support for Menus and Widgets
- * This ensures no widgets or classic menus are registered
+ * Default Featured Image (Beitragsbild) nur für Beiträge (post) aktivieren,
+ * nicht für Seiten (page) und Events (My Calendar).
  */
-function gsg_remove_theme_support() {
-    // Remove widgets support
-    remove_theme_support('widgets');
-    remove_theme_support('widgets-block-editor');
+function dfi_only_for_posts($dfi_id, $post_id) {
+    $post = get_post($post_id);
     
-    // Remove custom header/background (not needed for FSE)
-    remove_theme_support('custom-header');
-    remove_theme_support('custom-background');
-}
-add_action('after_setup_theme', 'gsg_remove_theme_support', 11);
-
-/**
- * Cleanup WordPress head
- */
-remove_action('wp_head', 'rsd_link');
-remove_action('wp_head', 'wlwmanifest_link');
-remove_action('wp_head', 'wp_generator');
-remove_action('wp_head', 'wp_shortlink_wp_head');
-
-/**
- * Add security headers
- */
-function gsg_add_security_headers() {
-    header('X-Content-Type-Options: nosniff');
-    header('X-Frame-Options: SAMEORIGIN');
-    header('X-XSS-Protection: 1; mode=block');
-}
-add_action('send_headers', 'gsg_add_security_headers');
-
-/**
- * Add custom body classes
- */
-function gsg_body_classes($classes) {
-    if (is_front_page()) {
-        $classes[] = 'gsg-home';
+    // Nur für Beiträge (post_type = 'post') das Fallback-Bild zurückgeben
+    if ($post->post_type !== 'post') {
+        return null; // Kein Fallback-Bild für Seiten, Events, etc.
     }
     
-    if (!is_front_page()) {
-        $classes[] = 'inner-page';
-    }
-    
-    return $classes;
+    return $dfi_id; // Original-Fallback-Bild für Beiträge
 }
-add_filter('body_class', 'gsg_body_classes');
+
+add_filter('dfi_thumbnail_id', 'dfi_only_for_posts', 10, 2);
