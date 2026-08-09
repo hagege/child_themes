@@ -91,8 +91,6 @@ function slsh_register_settings(): void {
 	// Deactivate Margin Header top
 	add_option( 'slsh_disable_margin_header', 'no' );
 	
-	// Proper control of the anchors depending on the settings
-	add_option( 'slsh_anchor_control', 'no' );	
 	
 
 	register_setting(
@@ -248,16 +246,6 @@ function slsh_register_settings(): void {
 		)
 	);
 	
-	register_setting(
-		'slsh_options_group',
-		'slsh_anchor_control',
-		array(
-			'type'              => 'string',
-			'sanitize_callback' => function ( $v ) {
-				return 'yes' === $v ? 'yes' : 'no';
-			},
-		)
-	);
 
 }
 add_action( 'admin_init', 'slsh_register_settings' );
@@ -333,13 +321,7 @@ function slsh_options_page(): void {
 					<td>
 						<input type="checkbox" id="slsh_disable_margin_header" name="slsh_disable_margin_header" value="yes" <?php checked( 'yes', get_option( 'slsh_disable_margin_header', 'no' ) ); ?> />
 					</td>
-				</tr>
-				<tr>
-					<th scope="row"><label style="display: block; text-align: left" for="slsh_anchor_control"><?php esc_html_e( 'Should the control of anchors be based on the shrinked height of the header? ', 'shrinking-logo-sticky-header' ); ?></label></th>
-					<td>
-						<input type="checkbox" id="slsh_anchor_control" name="slsh_anchor_control" value="yes" <?php checked( 'yes', get_option( 'slsh_anchor_control', 'no' ) ); ?> />
-					</td>
-				</tr>				
+				</tr>			
 				<!-- Hide header on scroll down, show header on scroll up 
 				<tr>
 					<th scope="row"><label style="display: block; text-align: left" for="slsh_hide_header"><?php esc_html_e( 'Hide header on scroll down, show header on scroll up:', 'shrinking-logo-sticky-header' ); ?></label></th>
@@ -444,7 +426,8 @@ function slsh_dynamic_css(): void {
     $text_menu          		= sanitize_text_field( get_option( 'slsh_text_menu', 'Menu' ) );
 	$disable_sticky     		= get_option( 'slsh_disable_sticky', 'no' );
 	$disable_margin     		= get_option( 'slsh_disable_margin_header', 'no' );
-	$disable_anchor_control     = get_option( 'slsh_anchor_control', 'no' );
+//	$disable_anchor_control     = get_option( 'slsh_anchor_control', 'no' );
+//    $anchor_height              = round(($header_height - $shrink_height)/2 + $shrink_height);
 
 	$custom_css = "
         header.wp-block-template-part {
@@ -471,7 +454,7 @@ function slsh_dynamic_css(): void {
         }
 		html {
 		  scroll-behavior: smooth;
-		  scroll-padding-top:{$header_height}px;
+		  scroll-padding-top: {$header_height}px;
 		}
     ";
 
@@ -578,15 +561,6 @@ function slsh_dynamic_css(): void {
 		}";	
 	}
 	
-	if ( 'yes' === $disable_anchor_control ) {
-		$custom_css .= "
-		/* control of anchors be based on the shrinked height of the header */
-		html {
-			scroll-behavior: smooth;
-			scroll-margin-top:{$shrink_height}px;
-		}";	
-	}
-
 	wp_add_inline_style( 'slsh_style', $custom_css );
 }
 add_action( 'wp_enqueue_scripts', 'slsh_dynamic_css' );

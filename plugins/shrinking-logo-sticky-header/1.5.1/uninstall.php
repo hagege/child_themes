@@ -32,3 +32,4 @@ delete_option( 'slsh_enable_text_menu' );
 delete_option( 'slsh_text_menu' );
 delete_option( 'slsh_disable_sticky' );
 delete_option( 'slsh_base_opacity' );
+delete_option( 'slsh_disable_margin_header' );

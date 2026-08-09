@@ -67,5 +67,5 @@
 	/* show correct position af anchor */
 	html {
 	  scroll-behavior: smooth;
-	  scroll-margin-top:6rem;
+	  scroll-padding-top:6rem;
 	}
