@@ -1,6 +1,6 @@
 <?php
 /**
- * GSG Gymnasium Child Theme Functions
+ * GSG Gymnasium Child Theme Functions (Geschwister-Scholl-Gymnasium)
  * 
  * @package GSG_Child
  */
@@ -14,12 +14,14 @@ if (!defined('ABSPATH')) {
  * Enqueue parent and child theme styles
  */
 function gsg_child_enqueue_styles() {
+    $theme = wp_get_theme();
+    $parent = $theme->parent();
     // Parent theme stylesheet
     wp_enqueue_style(
         'ollie-style',
         get_template_directory_uri() . '/style.css',
         array(),
-        wp_get_theme()->parent()->get('Version')
+        $parent ? $parent->get('Version') : $theme->get('Version')
     );
     
     // Child theme stylesheet
@@ -27,7 +29,7 @@ function gsg_child_enqueue_styles() {
         'gsg-child-style',
         get_stylesheet_uri(),
         array('ollie-style'),
-        wp_get_theme()->get('Version')
+        $theme->get('Version')
     );
 }
 add_action('wp_enqueue_scripts', 'gsg_child_enqueue_styles');
