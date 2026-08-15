@@ -19,3 +19,70 @@
 .hover_red h3 a {
     transition: color 0.3s ease;
 }
+
+
+/* roter Unterstrich bei Links in der Navigation */
+
+.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container .current-menu-item>a,
+.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container .has-child button:hover {
+    text-decoration: none;
+}
+
+a.wp-block-navigation-item__content {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    /* wichtig, damit ::after sich am Link orientiert */
+}
+
+a.wp-block-navigation-item__content::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--wp--preset--color--primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    /* Startpunkt links */
+    transition: transform 0.4s ease-in-out;
+}
+
+a.wp-block-navigation-item__content:hover::after,
+a.wp-block-navigation-item__content:focus::after {
+    transform: scaleX(1);
+}
+
+a.wp-block-navigation-item__content:focus {
+    outline: 2px solid var(--wp--preset--color--primary);
+    outline-offset: 2px;
+}
+
+/* Rahmen um Menüpunkte im mobilen (geöffneten) Menü entfernen */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item,
+.wp-block-navigation__responsive-container.is-menu-open a.wp-block-navigation-item__content {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.wp-block-navigation__responsive-container.is-menu-open a.wp-block-navigation-item__content:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Fallback für High-Contrast-Modus */
+@media (forced-colors: active) {
+
+    a.wp-block-navigation-item__content:hover,
+    a.wp-block-navigation-item__content:focus {
+        text-decoration: underline;
+        box-shadow: none;
+        outline: 2px solid CanvasText;
+    }
+
+    a.wp-block-navigation-item__content::after {
+        background-color: CanvasText;
+    }
+}

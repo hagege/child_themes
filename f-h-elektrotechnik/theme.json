@@ -5,14 +5,9 @@
         "color": {
             "palette": [
                 {
-                    "color": "#AB1125",
+                    "color": "#C4142E",
                     "name": "Primary Red",
                     "slug": "primary"
-                },
-                {
-                    "color": "#8a0e1d",
-                    "name": "Primary Red Hover",
-                    "slug": "primary-hover"
                 },
                 {
                     "color": "#000000",
