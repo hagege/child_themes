@@ -79,6 +79,13 @@ li.lehrer h2 {
     }
 }
 
+/* Deaktivieren, wenn Viewport zu schmal ist */
+@media (max-width: 550px) {
+    div.website_titel_aktiv {
+        display: none;
+    }
+}
+
 /* für Preise, damit das breiter dargestellt wird */
 .wp-block-group.is-nowrap.is-layout-flex.wp-container-core-group-is-layout-7d0538bf.wp-block-group-is-layout-flex {
     width: 6rem;
@@ -116,7 +123,7 @@ li.lehrer h2 {
 }
 
 .gsg-card:hover {
-    border-color: var(--wp--preset--color--gsg-yellow) !important;
+    /* border-color: var(--wp--preset--color--gsg-yellow) !important; */
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(30, 58, 95, 0.15);
     transition: all 0.6s ease;
@@ -270,3 +277,32 @@ nav.nav-footer a {
         transform: translateY(0);
     }
 }
+
+/* möglichst an den Anfang scrollen */
+.scroll-to-top {
+    scroll-margin-top: 80px;
+    /* Höhe deines Sticky Headers */
+}
+
+
+/* verzögerte Darstellung und Pfeil dreht sich nach oben */
+div.to-top-fixiert img:hover {
+    transform: rotate(360deg);
+    transition: transform 1.5s ease-in-out;
+}
+
+div.to-top-fixiert {
+    position: fixed;
+    right: 2em;
+    bottom: 2em;
+    transition: all 10s;
+    z-index: 999;
+}
+
+/* Bildgröße in der hero-section ändern 
+@media (max-width: 960px) {
+.wp-block-superblockslider-slider.alignfull.superblockslider.gsg_slider {
+    height: 30rem !important;
+}
+}
+*/

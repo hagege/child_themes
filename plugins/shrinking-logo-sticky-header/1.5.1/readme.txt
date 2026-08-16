@@ -29,8 +29,7 @@ Options:
 * Option to enable Text <Menu> below mobile Icon and display larger mobile menu Icon (Hamburger) - better for accessibility reasons (added in Version 1.4)
 * Option to Label Text <Menu> (added in Version 1.4)
 * Option: Menu does not appear as sticky on mobile devices - may be better for accessibility reasons. (added in Version 1.4.1)
-* Option: Above the header, there may be a margin set by the theme. TThis margin can be disabled if desired. (added in Version 1.5.1)
-* Option: The anchors can be controlled based on the shrunk height of the header, if desired. (added in Version 1.5.1)
+* Option: Above the header, there may be a margin set by the theme. This margin can be disabled if desired. (added in Version 1.5.1)
 
 
 Dynamic Header & Navigation for Block Themes (Previous name of the plugin: Shrinking Logo Sticky Header) is a lightweight WordPress plugin developed specifically as a navigation solution for most Block Themes. 
@@ -101,7 +100,7 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 
 = 1.5.1: August 14, 2026 =
 * Added Option: Above the header, there may be a margin set by the theme. TThis margin can be disabled if desired.
-* Added Option: The anchors can be controlled based on the shrunk height of the header, if desired.
+* Enhancement: Improved Control of the Anchors
 * Added FAQ regarding spacing in the header.
 * Plugin Check: No errors, no warnings ("Checks complete. No errors found.")
 * Tested up to WordPress 7.1
