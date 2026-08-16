@@ -317,11 +317,16 @@ function slsh_options_page(): void {
 					</td>
 				</tr>
 				<tr>
+					<td colspan="2" style="font-weight: bold; text-align: left; font-size: 0.8rem; padding-top: 10px;">
+						<?php esc_html_e( 'The following option is useful if you want to create a row above the header, for example, to display information:', 'shrinking-logo-sticky-header' ); ?>
+					</td>
+				</tr>
+				<tr>
 					<th scope="row"><label style="display: block; text-align: left" for="slsh_disable_margin_header"><?php esc_html_e( 'Above the header, there may be a margin set by the theme. Should this margin be disabled? ', 'shrinking-logo-sticky-header' ); ?></label></th>
 					<td>
 						<input type="checkbox" id="slsh_disable_margin_header" name="slsh_disable_margin_header" value="yes" <?php checked( 'yes', get_option( 'slsh_disable_margin_header', 'no' ) ); ?> />
 					</td>
-				</tr>			
+				</tr>		
 				<!-- Hide header on scroll down, show header on scroll up 
 				<tr>
 					<th scope="row"><label style="display: block; text-align: left" for="slsh_hide_header"><?php esc_html_e( 'Hide header on scroll down, show header on scroll up:', 'shrinking-logo-sticky-header' ); ?></label></th>
@@ -426,8 +431,6 @@ function slsh_dynamic_css(): void {
     $text_menu          		= sanitize_text_field( get_option( 'slsh_text_menu', 'Menu' ) );
 	$disable_sticky     		= get_option( 'slsh_disable_sticky', 'no' );
 	$disable_margin     		= get_option( 'slsh_disable_margin_header', 'no' );
-//	$disable_anchor_control     = get_option( 'slsh_anchor_control', 'no' );
-//    $anchor_height              = round(($header_height - $shrink_height)/2 + $shrink_height);
 
 	$custom_css = "
         header.wp-block-template-part {
