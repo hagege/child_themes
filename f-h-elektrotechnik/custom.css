@@ -40,13 +40,13 @@ a.wp-block-navigation-item__content::after {
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 2px;
+    height: 3px;
     width: 100%;
     background-color: var(--wp--preset--color--primary);
     transform: scaleX(0);
     transform-origin: left;
     /* Startpunkt links */
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.6s ease-in-out;
 }
 
 a.wp-block-navigation-item__content:hover::after,
@@ -84,5 +84,40 @@ a.wp-block-navigation-item__content:focus {
 
     a.wp-block-navigation-item__content::after {
         background-color: CanvasText;
+    }
+}
+
+/* Section Technik mit Animation */
+.section-technik-animated {
+    min-height: 100vh;
+
+    /* Anthrazit → Rot → Anthrazit mit 7 Nuancen */
+    background: linear-gradient(90deg,
+            #1a1a1a 0%,
+            /* Anthrazit */
+            #401019 16.66%,
+            #661120 33.33%,
+            #8c1326 50%,
+            /* Deutlich sichtbares, aber gedämpftes Rot */
+            #661120 66.66%,
+            #401019 83.33%,
+            #1a1a1a 100%
+            /* Anthrazit */
+        );
+
+    background-size: 600% 100%;
+    /* Extra breit = extra flüssig */
+    animation: smoothRedFlow 20s ease-in-out infinite alternate;
+}
+
+@keyframes smoothRedFlow {
+    0% {
+        background-position: 0% 0%;
+        /* Anthrazit */
+    }
+
+    100% {
+        background-position: 600% 0%;
+        /* Anthrazit (über Rot) */
     }
 }
