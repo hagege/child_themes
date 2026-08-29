@@ -39,6 +39,12 @@ h4 {
     hyphens: auto;
 }
 
+.keine-trennung {
+    hyphens: none;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+}
+
 /* Untermenüpunkte größer */
 .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__submenu-container {
     font-size: 1.1rem;
