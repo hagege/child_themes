@@ -29,6 +29,16 @@
 }
 */
 
+/* Silbentrennung */
+.entry-content,
+.wp-block-post-content,
+h1,
+h2,
+h3,
+h4 {
+    hyphens: auto;
+}
+
 /* Untermenüpunkte größer */
 .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__submenu-container {
     font-size: 1.1rem;
@@ -74,7 +84,6 @@ li.lehrer h2 {
 .gruppe-mit-cover {
     overflow: hidden;
 }
-
 
 /* Einstellungen Cover übernehmen */
 @media (min-width: 960px) {
