@@ -1,0 +1,127 @@
+{
+    "$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+    "version": 3,
+    "settings": {
+        "color": {
+            "palette": [
+                {
+                    "color": "#f3cd1e",
+                    "name": "gelb",
+                    "slug": "custom-gelb"
+                },
+                {
+                    "color": "#8ed1fc",
+                    "name": "hellblau",
+                    "slug": "custom-hellblau"
+                },
+                {
+                    "color": "#bf1919",
+                    "name": "rot",
+                    "slug": "custom-rot"
+                },
+                {
+                    "color": "#0064aa",
+                    "name": "italy",
+                    "slug": "custom-italy"
+                },
+                {
+                    "color": "#ffffff",
+                    "name": "weiss",
+                    "slug": "custom-weiss"
+                },
+                {
+                    "color": "#0b600f",
+                    "name": "Grün",
+                    "slug": "custom-gr-n"
+                }
+            ]
+        },
+        "layout": {
+            "contentSize": "1024px"
+        },
+        "typography": {
+            "fontFamilies": [
+                {
+                    "fontFace": [
+                        {
+                            "fontFamily": "Inter",
+                            "fontStretch": "normal",
+                            "fontStyle": "normal",
+                            "fontWeight": "300 900",
+                            "src": [
+                                "file:./assets/fonts/inter/Inter-VariableFont_slnt,wght.woff2"
+                            ]
+                        }
+                    ],
+                    "fontFamily": "\"Inter\", sans-serif",
+                    "name": "Inter",
+                    "slug": "body"
+                },
+                {
+                    "fontFace": [
+                        {
+                            "fontFamily": "Cardo",
+                            "fontStyle": "normal",
+                            "fontWeight": "400",
+                            "src": [
+                                "file:./assets/fonts/cardo/cardo_normal_400.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "Cardo",
+                            "fontStyle": "italic",
+                            "fontWeight": "400",
+                            "src": [
+                                "file:./assets/fonts/cardo/cardo_italic_400.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "Cardo",
+                            "fontStyle": "normal",
+                            "fontWeight": "700",
+                            "src": [
+                                "file:./assets/fonts/cardo/cardo_normal_700.woff2"
+                            ]
+                        }
+                    ],
+                    "fontFamily": "Cardo",
+                    "name": "Cardo",
+                    "slug": "heading"
+                },
+                {
+                    "fontFamily": "-apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif",
+                    "name": "System Sans-serif",
+                    "slug": "system-sans-serif"
+                },
+                {
+                    "fontFamily": "Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol",
+                    "name": "System Serif",
+                    "slug": "system-serif"
+                },
+                {
+                    "fontFace": [
+                        {
+                            "fontFamily": "Handlee",
+                            "fontStyle": "normal",
+                            "fontWeight": "400",
+                            "src": "https://dev.haurand.com/wp-content/uploads/fonts/handlee-v9-latin-regular.woff2"
+                        }
+                    ],
+                    "fontFamily": "Handlee",
+                    "name": "Handlee",
+                    "slug": "handlee"
+                }
+            ]
+        }
+    },
+    "styles": {
+        "css": "/* Variablen */\n:root {\n    /* funktioniert nicht mehr bei TT4, daher nur definiert */\n    /*\n    --gelb-color: rgba(243, 205, 30, 1);\t  \n    --blau-color: rgba(8, 36, 69, 1);\n    --rot-color_transpa: rgba(191, 25, 25, 0.5);\n  */\n    --mobile-breakpoint: 767px;\n    --tablet-breakpoint: 900px;\n    --animate-duration: 1s;\n    --animate-delay: 1s;\n    --animate-repeat: 1;\n/* Definierte individuelle Farben */\n    --wp--preset--color--custom-gelb: #f3cd1e;\n    --wp--preset--color--custom-dunkelblau: #082445;\n    --wp--preset--color--custom-rot-transparent: #bf191980;\n    --wp--preset--color--custom-leuchtendes-gr-n: #9dff20;\n    --wp--preset--color--custom-leuchtendes-orange: #ff6900;\n    --wp--preset--color--custom-hellblau: #8ed1fc;\n\n    --wp--preset--color--custom-hellblau--transpa: #8DD2FC26;\n\n    --wp--preset--color--custom-rot: #eb1717;\n  }\n\n\n/* alle http/https-Links, die NICHT deine eigene Domain enthalten */\na[href^=\"http\"]:not([href*=\"dev-haurand.de\"])::after {\n    content: \"\\00a0\\2197\";\n}\n\n/* überlappend Text und Bild */\n@media (min-width: 850px) {.nach_links {\n    transform: translateX(-5rem);\n}\n}\n\n/* Liste ausblenden */\nli.nicht_zeigen ul {\n    color: lightgray;\n    display: none;\n}\n\nli.nicht_zeigen::after {\n    content: \"Achtung: Liste wird nicht gezeigt\";\n    font-style: italic;\n    background-color: lightgray;\n}\n\n/* Styling checked items \nhttps://wordpress.org/support/plugin/todo-list-block/ */\n\n/* Customization Backend Todo-List-Block */\n.wp-block-tabor-todo-list {\n    --color: #128234;\n}\n.wp-block-tabor-todo-item.is-checked .block-editor-rich-text__editable {\n    text-decoration: none;\n    color: #999;\n}\n\n.wp-block-tabor-todo-item {\n    align-items: baseline;\n    gap: 12px;\n}\n\n.Tasklist-Item[data-checked=\"checked\"] {\n    /* text-decoration: underline dotted green; */\n    opacity: 0.7;\n    list-style-type: none;\n    padding-left: 1.5em;\n    position: relative;\n    color: #999;\n}\n\n.Tasklist-Item[data-checked=\"checked\"]::before {\n    content: \"☑\";\n    position: absolute;\n    left: 0;\n    color: green;\n    font-weight: bold;\n}\n\n/* Styling unchecked items */\n.Tasklist-Item:not([data-checked=\"checked\"]) {\n    list-style-type: none;\n    padding-left: 1.5em;\n    position: relative;\n}\n\n.Tasklist-Item:not([data-checked=\"checked\"])::before {\n    content: \"☐\";\n    position: absolute;\n    left: 0;\n    color: #ccc;\n    font-size: 1em;\n}\n\n/* Design mit Wave im unteren Bereich */\n.negativer-spacer{\n    margin-top: -10rem;  \n}\n\n.gruppe-mit-cover {\n    overflow: hidden;\n}\n\n/* runde Fläche mit Text */\n.runde_flaeche {\n    width: 8em;\n    display: flex;\n    align-items: center;\n}\n\nspan.gross {\n   font-size: 2em;\n   font-weight: bold;\n}\n\n\n\nfigure.megaphon_ausrichtung img {\nvertical-align:middle;\n}\n\n\n/* fixierter Container mit der Navigation */\n.navi_container {\n    z-index: 50!important;\n}\n\n/* Bilder anders designen */\nfigure.fancy_form img, p.fancy_form, div.fancy_form  {\n    background-color: var(--wp--preset--color--custom-gelb);\n    border-radius: 40% 60% 80% 30% / 30% 30% 70% 70%;\n    padding: 3em;\n}\n\n/* Lange Wörter immer trennen */\n.entry-content {\n    word-wrap: break-word;\n}\n\n  /* Zentrierter Container ohne GB */\n  .center_container_800px {\n      max-width: 800px;\n      margin-left: auto;\n      margin-right: auto;\n  }\n  \n  \n  /* show google spreadsheet */\n  div.embed_iframe iframe {\n      width: 100%;\n  }\n  \n  .switcherOuter td {\n      font-size: 20px;\n      padding-bottom: 150px;\n  }\n  \n  /* smooth scrolling und korrekte Ansteuerung interner Anker */\n  html {\n    scroll-behavior: smooth;\n    scroll-padding-top: 7rem;\n  }\n  \n  \n  /* Animation für alle folgenden elemente */\n  /*\n  p, div.wp-block-columns, figure {\n      -webkit-animation-name: fadeInUp;\n      animation-name: fadeInUp;\n        animation-delay: .2s;\n        -webkit-animation-duration: 2s;\n      animation-duration: 2s;\n      -webkit-animation-duration: calc(var(--animate-duration)*2);\n      animation-duration: calc(var(--animate-duration)*2);\n        -webkit-animation-duration: 1s;\n      animation-duration: 1s;\n      -webkit-animation-duration: var(--animate-duration);\n      animation-duration: var(--animate-duration);\n      -webkit-animation-fill-mode: both;\n      animation-fill-mode: both;\n  }\n  */\n  \n/* gelber Unterstrich bei Links */ \nmain .entry-content a, .wp-block-group.has-global-padding.is-layout-constrained.wp-block-group-is-layout-constrained a {\n    box-shadow: inset 0 -3px 0 var(--wp--preset--color--custom-gelb);\n    text-decoration: none;\n  }\n\n\n/* Buttons */ \n  main .entry-content a.wp-block-button__link {\n    box-shadow: inset 0 -1px 0 var(--wp--preset--color--custom-gelb);\n    text-decoration: none;\n  }\n\n \n  main .entry-content a:hover, .wp-block-group.has-global-padding.is-layout-constrained.wp-block-group-is-layout-constrained a:hover{\n    box-shadow: inset 0 -50px 0 var(--wp--preset--color--custom-gelb);\n    transition: all 0.8s ease-in-out;\n    color: black;\n  }\n\n  \n  /* lange Wörter, z. B. endlose Links trennen */\n    ul li, ul.meetup_liste li a, p a {\n        word-wrap: break-word;\n  }\n  \n  .gb-inside-container p {\n      word-break: break-word;\n  }\n  \n  /* Mehr Padding nach unten bei Listen */\n  ul.meetup_liste li {\n      padding-bottom: 1rem;\n  }\n  \n  /* Oberpunkte größer */\n  ul.meetup_liste li strong {\n      font-size: 1.3rem;\n  }\n  \n  /* Für Kommentare */\n  .wp-block-post-comments-form input[type=submit]:hover {\n      background-color: var(--wp--preset--color--custom-dunkelblau);\n      border-color: var(--wp--preset--color--custom-dunkelblau);\n  }\n  \n  input#submit {\n      border-width: 0px;\n      font-size: 1.2rem;\n  }\n  \n  /* Font size Kategorieauswahl */\n  select#wp-block-categories-1 {\n  font-size: 1.2rem;\n  }\n  \n  /* damit die Image-Blöcke von GB korrekt dargestellt werden */\n  figure.gb-block-image img {\n  width: 100%;\n  height: 100%;\n  }\n  \n  @media (min-width: 850px) {\n  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {\n  display: block;\n  width: 100%;\n  position: relative;\n  z-index: auto;\n  background-color: inherit;\n  }\n  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) .wp-block-navigation__responsive-container-close {\n  display: none;\n  }\n  .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container {\n  left: 0;\n  }\n  .wp-block-navigation__responsive-container-open:not(.always-shown) {\n  display: none;\n  }\n  }\n  \n  @media (max-width: 849px) {\n  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {\n  display: none;\n  }\n  .wp-block-navigation__responsive-container-open:not(.always-shown) {\n  display: flex;\n  }\n  }\n  \n  \n  /* Design für Button */\ndiv.button_im_header a.wp-block-button__link.wp-element-button,  \n  p.form-submit.wp-block-button, .simpletoc.wp-block-simpletoc-toc button{\n  cursor: pointer;\n  font-size: 14px;\n  font-weight: 800;\n  font-family: \"Open Sans\", sans-serif;\n  padding: 15px 30px;\n  text-align: center;\n  text-decoration: none;\n  white-space: normal;\n  background: var(--wp--preset--color--custom-gelb);\n  color: var(--wp--preset--color--custom-dunkelblau);\n  border: 3px solid var(--wp--preset--color--custom-dunkelblau);\n  border-radius: 0;\n  position: relative;\n  padding: 13px 30px;\n  }\n  \ndiv.button_im_header a.wp-block-button__link.wp-element-button:hover, p.form-submit.wp-block-button:hover, .simpletoc.wp-block-simpletoc-toc button:hover{\n  color: #fff;\n  background-color: var(--wp--preset--color--custom-dunkelblau);\n  outline: none;\n  transition-duration: 1s;\n  transition-delay: 250ms, 250ms;\n  transition-property: background-color, color;\n  }\n  \ndiv.button_im_header a.wp-block-button__link.wp-element-button:after, p.form-submit.wp-block-button:after,.simpletoc.wp-block-simpletoc-toc button:after{\n  content: '';\n  position: absolute;\n  height: calc(100% + 3px);\n  width: calc(100% + 3px);\n  z-index: -1;\n  bottom: -12px;\n  right: -12px;\n  background: var(--wp--preset--color--custom-gelb);\n  border: 3px solid #F3CD1E;\n  }\n \n \n/* runder Button mit schrägem Text */\n.wp-block-buttons.schraeger_text {\n    transform: rotate(15deg);\n}\n  \n  /* ---------------------*/\n  /* Der Detail-Block mit */ \n  /* einigen Anpassungen  */\n  /* ---------------------*/\n  summary {\n    list-style: none;\n    display: flex; /* also removes the list marker */\n    align-items: center;\n    padding: 1rem;\n    font-weight: bold;\n    background: var(--wp--preset--color--custom-gelb);\n    border-radius: 0px;\n    outline: auto;\n  }\n  \n  summary::before{\n    content: '>';\n  /*  margin-left: .75em; */\n    transition: 0.2s;\n    margin-right: 1rem;\n    font-size: 2rem;\n  }\n  \n  \n  details[open] > summary::before{\n    transform: rotate(90deg);\n  }\n\n/* Strich links */\ndetails.haurand_projektarchiv {\n    border-left: solid;\n    padding-left: 1em;\n    border-left-color: var(--wp--preset--color--accent-3);\n}\n  \n  .wp-block-details[open] summary,\n  .wp-block-details summary:hover\n  {\n      background: #e2e8f0;\n  transition: all 0.2s ease-in-out;\n  }\n  \n  .wp-block-details \n  summary:focus {\n      background: #b1c5a4;\n  transition: all 0.2s ease-in-out;\n  }\n  \n  summary::-webkit-details-marker {\n    display: none;\n  }\n  \n  \n  /* Background content of details */\n  details p {\n      background: rgba(226, 232, 240, 0.31);\n      padding: 2rem;\n      margin-top: 0;\n  }\n  \n  @keyframes details-show {\n    from {\n      opacity:0;\n      transform: var(--details-translate, translateY(-0.5em));\n    }\n  }\n  \n  details[open] > *:not(summary),\n  details[close] > *:not(summary), \n  div#accordion-item-4-panel {\n    animation: details-show 1000ms ease-in-out;\n  }\n  \n  \n  /* Spalten mit Schatten */\n  div.spalten_mit_schatten > .wp-block-column {\n      box-shadow: 1px 1px 20px rgb(0 0 0/20%);\n      transition: all ease .3s;\n      border-radius: 20px;\n  }\n  \n  /* bezogen in erster Linie auf Bilder */\n  div.spalten_mit_schatten >\n  .wp-block-column:hover {\n      box-sizing: border-box;\n      filter: grayscale(1) opacity(.8);\n      transition: all ease .3s;\n      position: relative;\n  }\n  \n  /* nur bezogen auf paragraph */\n  div.spalten_mit_schatten >\n  .wp-block-column:hover p{\n      /* top: -5px;  */\n      animation-name: p-show;\n      animation-delay: .2s;\n      -webkit-animation-duration: 2s;\n      animation-duration: 2s;\n      -webkit-animation-duration: \n      calc(var(--animate-duration)*2);\n      animation-duration: \n      calc(var(--animate-duration)*2);\n  \n  }\n  \n  /* Animation */\n  @keyframes p-show {\n    from {\n      opacity:0.2;\n      transform: var(--details-translate, translateY(-0.2em));\n    }\n  }\n  \n  /* Animation */\n  @keyframes fadeInUp {\n  0% {\n      opacity: 0.1;\n      -webkit-transform: translate3d(0,10%,0);\n      transform: translate3d(0,10%,0);\n  }\n  100% {\n      opacity: 1;\n      -webkit-transform: translateZ(0);\n      transform: translateZ(0);\n  }\n  }\n  \n  /* Anpassung Suche in Navigation */\n  /*\n  button.wp-block-search__button.has-background.has-tertiary-background-color.has-icon.wp-element-button {\n      margin-bottom: 20px;\n      padding-right: 45px;\n  }\n  \n  input#wp-block-search__input-1 {\n      margin-bottom: 20px;\n  }\n  */\n  \n  .wp-block-search__button svg {\n      min-height: 30px;\n      min-width: 30px;\n  }\n  \n  \n  /* Cover mit grauem Hintergrund bei Hover */\n  \n  .cover_referenzen {\n     object-fit: contain;\n  }\n  \n  .cover_referenzen > .wp-block-cover__inner-container {\n      display: none;\n  }\n  \n  .cover_referenzen:hover > .wp-block-cover__inner-container {\n      display: inherit;\n      animation: fadein 2s;\n      -moz-animation: fadein 2s; /* Firefox */\n      -webkit-animation: fadein 2s; /* Safari and Chrome */\n      -o-animation: fadein 2s; /* Opera */\n  }\n  \n  \n  .cover_referenzen span.wp-block-cover__background.has-background-dim-0.has-background-dim:hover {\n    opacity: 1;\n    display: inherit;\n      -webkit-filter: blur(40px);\n    filter: blur(40px);\n    -webkit-transform: scale(3);\n    transform: scale(3);\n    transition: all 2s ease;\n  }\n  \n  \n  .cover_referenzen span.wp-block-cover__background.has-background-dim-0.has-background-dim > p > a {\n    box-shadow: initial;\n  }\n  \n  @keyframes fadein {\n      from {\n          opacity:0;\n      }\n      to {\n          opacity:1;\n      }\n  }\n  @-moz-keyframes fadein { /* Firefox */\n      from {\n          opacity:0;\n      }\n      to {\n          opacity:1;\n      }\n  }\n  @-webkit-keyframes fadein { /* Safari and Chrome */\n      from {\n          opacity:0;\n      }\n      to {\n          opacity:1;\n      }\n  }\n  @-o-keyframes fadein { /* Opera */\n      from {\n          opacity:0;\n      }\n      to {\n          opacity: 1;\n      }\n  }\n  \n  \n  /* Galerie als Akkordeon */\n  /* \n  .galerie_spalten >.galerie_spalte {\n  flex-basis: 0!important; \n  flex: 1 1 100px;\n  }\n  */\n  \n  .galerie_spalten {\n      display: flex;\n      flex-basis: content;\n      flex-grow: 1;\n      height: 20rem;\n      gap: 10px;\n      padding: 50px;\n  }\n  \n  \n  .galerie_spalte {\n      flex: 1;\n      flex-basis: content;\n      flex-grow: 1;\n      flex-shrink: 1;\n      border-radius: 1rem;\n      background-position: center;\n      background-repeat: no-repeat;\n      background-size: auto 100%;\n      transition: all 600ms cubic-bezier(0.25, 0.4, 0.45, 1.4);\n  }\n  \n  .galerie_spalte:hover {\n      flex-grow: 3!important;\n      flex-shrink: 1!important;\n      flex-basis: 10%!important;\n  }\n  \n  \n  /* split screen */\n              .wp-block-column.links.is-layout-flow, .wp-block-column.rechts.is-layout-flow {\n                  transition: all 2s ease-in-out;\n                  -webkit-filter: grayscale(0%);\n                  filter: grayscale(0%);\n              }\n  \n              .wp-block-column.links.is-layout-flow:hover {\n                  background-color: #f7f8f9;\n                  transform: translateX(20vw);\n                  -webkit-transition: all 3.5s ease-in-out 0s;\n                  transition: all 2.5s ease-in-out 0s;\n              }\n  \n              .wp-block-column.rechts.is-layout-flow:hover {\n                  background-color: #f7f8f9;\n                  transform: translateX(-20vw);\n                  -webkit-transition: all 3.5s ease-in-out 0s;\n                  transition: all 2.5s ease-in-out 0s;\n              }\n  \n  \n  /* Bildwechsel bei hover */\n  .custom-cover:hover .custom-image {\n     opacity:1;\n     position: unset;\n  }\n  \n  .custom-image {\n     margin: 0;\n     opacity: 0;\n     transition: 0.3s ease-in-out;\n  }\n  \n  \n  /* Bewegende Kugel */\n  figure.wp-block-image.size-full.turbulenz {\n      max-width: 200px;\n      margin-top: 50px;\n      margin-bottom: 35px;\n      animation: turbulenz 8s ease-in-out 4.5s infinite none;\n  }\n  \n  @keyframes turbulenz {\n      0%, 100% {\n          transform: translate(0, 0);\n      }\n      25% {\n          transform: translate(2px, -34px);\n      }\n      50% {\n          transform: translate(0, 34px);\n      }\n  }\n  \n  \n  \n  /* FAQ mit Buttons */\n  .faq .faq_summary {\n      display: none;\n  }\n  \n  .faq:active .faq_summary {\n      display: block;\n  }\n  \n  /*\n  .faq:visited .faq_summary {\n      display: block;\n  }\n  */\n  \n  \n  /* Image Hover fade-in-right\n   */\n  .hover-box {\n      overflow: hidden;\n      position: relative;\n  }\n  \n  .hover-box:hover .wp-block-group {\n      right: -50%;\n  }\n  \n  .hover-box .wp-block-group {\n      width: 100%;\n      transition: right 1s;\n      position: absolute;\n      top: 50%;\n      right: -150%;\n      transform: translate(-50%, -50%);\n  }\n  \n  .hover-box .wp-block-group {\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      flex-direction: column;\n  }\n  \n  .hover-box img {\n      object-fit: cover;\n  }\n  \n  \n  \n  /* Nachbau Croquette Website */\n  path.shape-fill-oben {\n      fill: white;\n      transform-origin: center;\n  }\n  \n  path.shape-fill-unten {\n      fill: white;\n      transform-origin: center;\n      transform: rotateX(180deg);\n  }\n  \n  .svg_gruppe_cover {\n      max-height: 120px;\n      bottom: 0;\n  }\n\n\n.cover-block-container {\n     /* Enables vertical scrolling */\n     overflow-y: scroll;\n\n     /* Sets the height to a fixed value or based on the viewport height */\n     height: 100vh; /* This will make the container take the full height of the viewport */\n     /* Enables scroll snapping */\n     scroll-snap-type: y mandatory;\n   }\n\n   .wp-block-cover {\n     /* This will align the snapping point at the start of each block */\n     scroll-snap-align: start;\n   }\n\n/* container holding the cover block */\n.scroll-snap-container {\n    display: flex;\n    flex-direction: column;\n    overflow-y: scroll;\n    scroll-snap-type: y mandatory; /*vertical snapping */\n    height: 100vh; /*Adjust based on layout */\n}\n\n/* Individual Cover Blocks */\n.scroll-snap-container .wp-block-cover {\n    scroll-snap-align: start;\n    transition: transform 0.3s ease, box-shadow 0.3s ease;\n    /* Smotth transition for the effect */\n}\n\n/* when a user scrolls and the block snas into place add a more pronounced effect */\n.scroll-snap-container .wp-block-cover:target {\n    transform: scale(1.02); /* slightly scale up the snapped cover block */\n    box-shadow: 0 0 20px rgba (0,0,0,0.5); /* add a shadow for emphasis */\n}",
+        "elements": {
+            "heading": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--handlee)"
+                }
+            }
+        }
+    }
+}
