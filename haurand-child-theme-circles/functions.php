@@ -191,3 +191,83 @@ function block_hex_colors_as_tags($term, $taxonomy) {
     }
     return $term;
 }
+
+/* vollen Zugriff auf Patterns - 31.7.2026 */ 
+add_filter( 'block_editor_settings_all', function( $settings ) {
+    $settings['disableContentOnlyForUnsyncedPatterns'] = true;
+    return $settings;
+} );
+
+
+/**
+ * JSON-LD Strukturierte Daten für haurand.com - 15.9.2026
+ */
+add_action( 'wp_head', function() {
+    // Nur auf der Startseite und der Kontaktseite ausgeben
+    if ( is_front_page() || is_page( 'kontakt' ) ) {
+        ?>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          "name": "haurand.com",
+          "description": "WordPress-Entwicklung, Webdesign, Schulungen und Support in Attendorn, im Kreis Olpe und überregional.",
+          "url": "https://haurand.com/",
+          "telephone": "+4927226577725",
+          "email": "gerhards@haurand.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Am Hellepädchen 7",
+            "addressLocality": "Attendorn",
+            "postalCode": "57439",
+            "addressCountry": "DE"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 51.1278,
+            "longitude": 7.8986
+          },
+          "founder": {
+            "@type": "Person",
+            "name": "Hans-Gerd Gerhards",
+            "jobTitle": "Webentwickler & WordPress-Experte",
+            "sameAs": [
+              "https://profiles.wordpress.org/hage/",
+              "https://github.com/hagege"
+            ]
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Attendorn"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Kreis Olpe"
+            },
+            {
+              "@type": "City",
+              "name": "Olpe"
+            },
+            {
+              "@type": "City",
+              "name": "Lennestadt"
+            },
+            {
+              "@type": "City",
+              "name": "Finnentrop"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Nordrhein-Westfalen"
+            },
+            {
+              "@type": "Country",
+              "name": "Deutschland"
+            }
+          ]
+        }
+        </script>
+        <?php
+    }
+}, 20 );
