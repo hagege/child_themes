@@ -87,3 +87,64 @@ function my_disable_welcome_guides() {
 }
 
 add_action( 'enqueue_block_editor_assets', 'my_disable_welcome_guides', 20 );
+
+/**
+ * JSON-LD Strukturierte Daten für Elektro Attendorn
+ */
+add_action( 'wp_head', function() {
+    // Nur auf der Startseite und der Kontaktseite ausgeben
+    if ( is_front_page() || is_page( 'kontakt' ) ) {
+        ?>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Electrician",
+          "name": "Elektro Attendorn",
+          "description": "Ihr zuverlässiger Meisterbetrieb für Elektroinstallationen, Smart Home, Wallbox-Montage und E-Check in Attendorn und Umgebung.",
+          "url": "https://elektro-attendorn.de/",
+          "telephone": "+4915251352236",
+          "email": "info@f-h-elektrotechnik.de",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Milstenauer Str. 23",
+            "addressLocality": "Attendorn",
+            "postalCode": "57439",
+            "addressCountry": "DE"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 51.1442,
+            "longitude": 7.9178
+          },
+          "founder": {
+            "@type": "Person",
+            "name": "Udo Franke-Hameke",
+            "jobTitle": "Elektromeister"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Attendorn"
+            },
+            {
+              "@type": "City",
+              "name": "Olpe"
+            },
+            {
+              "@type": "City",
+              "name": "Finnentrop"
+            },
+            {
+              "@type": "City",
+              "name": "Lennestadt"
+            },
+            {
+              "@type": "City",
+              "name": "Drolshagen"
+            }
+          ]
+        }
+        </script>
+        <?php
+    }
+}, 20 );
