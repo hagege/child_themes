@@ -110,6 +110,8 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 * Added Option: Frosted glass header.
 * Added Option: Hide header on scroll down, show header on scroll up.
 * Added: "Settings" link on the Plugins overview page for quick access to the plugin settings
+* Fix some minor issues
+* Plugin Check: No errors, no warnings ("Checks complete. No errors found.")
 
 
 = 1.5.1: August 14, 2026 =
