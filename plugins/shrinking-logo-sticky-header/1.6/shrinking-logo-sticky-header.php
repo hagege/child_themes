@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // set version.
-const SLSH_VERSION = '1.6.0';
+define( 'SLSH_VERSION', '1.6.0' );
 
 /**
  * Load language files.
@@ -341,7 +341,7 @@ add_action( 'admin_menu', 'slsh_register_options_page' );
 function slsh_plugin_action_links( array $links ): array {
 	array_unshift(
 		$links,
-		'<a href="' . esc_url( admin_url( 'options-general.php?page=slsh' ) ) . '">' . esc_html__( 'Einstellungen', 'shrinking-logo-sticky-header' ) . '</a>'
+		'<a href="' . esc_url( admin_url( 'options-general.php?page=slsh' ) ) . '">' . esc_html__( 'Settings', 'shrinking-logo-sticky-header' ) . '</a>'
 	);
 
 	return $links;
@@ -379,7 +379,7 @@ function slsh_options_page(): void {
 
 			<table>
 				<tr>
-					<th scope="row"><label style="display: block; text-align: left" for="slsh_header_shrink_height"><?php esc_html_e( 'Height of the shrunk header (px):', 'shrinking-logo-sticky-header' ); ?></label></th>
+					<th scope="row"><label style="display: block; text-align: left" for="slsh_header_shrink_height"><?php esc_html_e( 'Height of the shrunk header (40-300px):', 'shrinking-logo-sticky-header' ); ?></label></th>
 					<td><input type="number" id="slsh_header_shrink_height" name="slsh_header_shrink_height" value="<?php echo esc_attr( get_option( 'slsh_header_shrink_height', 80 ) ); ?>" min="40" max="300" /></td>
 				</tr>
 				<tr>
@@ -389,19 +389,19 @@ function slsh_options_page(): void {
 					</td>
 				</tr>
 				<tr>
-					<th scope="row"><label style="display: block; text-align: left" for="slsh_animation_duration"><?php esc_html_e( 'Animation duration (seconds):', 'shrinking-logo-sticky-header' ); ?></label></th>
+					<th scope="row"><label style="display: block; text-align: left" for="slsh_animation_duration"><?php esc_html_e( 'Animation duration (0.05-3seconds):', 'shrinking-logo-sticky-header' ); ?></label></th>
 					<td><input type="number" step="0.05" id="slsh_animation_duration" name="slsh_animation_duration" value="<?php echo esc_attr( get_option( 'slsh_animation_duration', 0.6 ) ); ?>" min="0.05" max="3" /></td>
 				</tr>
 				<tr>
-					<th scope="row"><label style="display: block; text-align: left" for="slsh_heigth_header"><?php esc_html_e( 'Normal height of header (px):', 'shrinking-logo-sticky-header' ); ?></label></th>
+					<th scope="row"><label style="display: block; text-align: left" for="slsh_heigth_header"><?php esc_html_e( 'Normal height of header (40-300px):', 'shrinking-logo-sticky-header' ); ?></label></th>
 					<td><input type="number" id="slsh_heigth_header" name="slsh_heigth_header" value="<?php echo esc_attr( get_option( 'slsh_heigth_header', 120 ) ); ?>" min="40" max="300" /></td>
 				</tr>
 				<tr>
-					<th scope="row"><label style="display: block; text-align: left" for="slsh_logo_in_header_shrink_height"><?php esc_html_e( 'Logo shrinking factor (Value in 0.05 steps):', 'shrinking-logo-sticky-header' ); ?></label></th>
+					<th scope="row"><label style="display: block; text-align: left" for="slsh_logo_in_header_shrink_height"><?php esc_html_e( 'Logo shrinking factor (Value in 0.05 steps: 0.4-1):', 'shrinking-logo-sticky-header' ); ?></label></th>
 					<td><input type="number" step="0.05" id="slsh_logo_in_header_shrink_height" name="slsh_logo_in_header_shrink_height" value="<?php echo esc_attr( get_option( 'slsh_logo_in_header_shrink_height', 0.8 ) ); ?>" min="0.4" max="1" /></td>
 				</tr>
 				<tr>
-					<th scope="row"><label style="display: block; text-align: left" for="slsh_logo_in_header_shrink_left"><?php esc_html_e( 'Move the shrunk logo to the left (rem):', 'shrinking-logo-sticky-header' ); ?></label></th>
+					<th scope="row"><label style="display: block; text-align: left" for="slsh_logo_in_header_shrink_left"><?php esc_html_e( 'Move the shrunk logo to the left (0-8rem):', 'shrinking-logo-sticky-header' ); ?></label></th>
 					<td><input type="number" step="0.1" id="slsh_logo_in_header_shrink_left" name="slsh_logo_in_header_shrink_left" value="<?php echo esc_attr( get_option( 'slsh_logo_in_header_shrink_left', 0 ) ); ?>" min="0" max="8" /></td>
 				</tr>
 				<tr>
@@ -436,7 +436,7 @@ function slsh_options_page(): void {
                     <td><input type="number" id="slsh_hide_sensitivity" name="slsh_hide_sensitivity" value="<?php echo esc_attr( get_option( 'slsh_hide_sensitivity', 10 ) ); ?>" min="1" max="100" /></td>
                 </tr>
                 <tr>
-                    <th scope="row"><label style="display: block; text-align: left" for="slsh_hide_delay"><?php esc_html_e( 'Delay before hiding in ms (0-2000):', 'shrinking-logo-sticky-header' ); ?></label></th>
+                    <th scope="row"><label style="display: block; text-align: left" for="slsh_hide_delay"><?php esc_html_e( 'Delay before hiding in ms (0-2000ms):', 'shrinking-logo-sticky-header' ); ?></label></th>
                     <td><input type="number" id="slsh_hide_delay" name="slsh_hide_delay" step="50" value="<?php echo esc_attr( get_option( 'slsh_hide_delay', 0 ) ); ?>" min="0" max="2000" /></td>
                 </tr>
 
@@ -448,7 +448,7 @@ function slsh_options_page(): void {
 					<th scope="row"><p style="text-align: left; font-size: 0.8rem;"><?php esc_html_e( 'A breakpoint is a screen width where the website layout changes to adapt for different devices like mobiles or desktops. If the breakpoint remains set at 599px, then the breakpoint will be adopted by the theme without change.', 'shrinking-logo-sticky-header' ); ?></p></th>
 				</tr>
 				<tr>
-					<th scope="row"><label style="display: block; text-align: left" for="slsh_nav_breakpoint"><?php esc_html_e( 'Breakpoint Navigation (px) - Standard: 599:', 'shrinking-logo-sticky-header' ); ?></label></th>
+					<th scope="row"><label style="display: block; text-align: left" for="slsh_nav_breakpoint"><?php esc_html_e( 'Breakpoint Navigation (px) - Standard: 599 (599-1920px):', 'shrinking-logo-sticky-header' ); ?></label></th>
 					<td>
 						<input type="number" id="slsh_nav_breakpoint" name="slsh_nav_breakpoint" value="<?php echo esc_attr( get_option( 'slsh_nav_breakpoint', 599 ) ); ?>" min="599" max="1920" />
 					</td>
@@ -479,7 +479,7 @@ function slsh_options_page(): void {
 					</td>
 				</tr>
 				<tr>
-					<th scope="row"><label style="display: block; text-align: left" for="slsh_off_canvas_speed"><?php esc_html_e( 'Option for the speed of the Off-Canvas fade-in (Value in 0.1 steps - The smaller the value, the faster the fade-in):', 'shrinking-logo-sticky-header' ); ?></label></th>
+					<th scope="row"><label style="display: block; text-align: left" for="slsh_off_canvas_speed"><?php esc_html_e( 'Option for the speed of the Off-Canvas fade-in (Value in 0.1, steps 0.1-1 - The smaller the value, the faster the fade-in):', 'shrinking-logo-sticky-header' ); ?></label></th>
 					<td>
 						<input type="number" step="0.1" id="slsh_off_canvas_speed" name="slsh_off_canvas_speed" value="<?php echo esc_attr( get_option( 'slsh_off_canvas_speed', 0.5 ) ); ?>" min="0.1" max="1" />
 					</td>
@@ -544,14 +544,14 @@ function slsh_dynamic_css(): void {
 		SLSH_VERSION
 	);
 	// variables.
-	$shrink_height      		= (int) get_option( 'slsh_header_shrink_height', 80 );
-	$anim_duration      		= (float) get_option( 'slsh_animation_duration', 0.6 );
-	$header_height      		= (int) get_option( 'slsh_heigth_header', 120 );
-	$logo_shrink_height 		= (float) get_option( 'slsh_logo_in_header_shrink_height', 0.8 );
-	$logo_shrink_left   		= (float) get_option( 'slsh_logo_in_header_shrink_left', 0 );
-	$nav_breakpoint     		= (int) get_option( 'slsh_nav_breakpoint', 599 );
+	$shrink_height      		= max( 40, min( 300, (int) get_option( 'slsh_header_shrink_height', 80 ) ) );
+	$anim_duration      		= max( 3, min( 0.05,(float) get_option( 'slsh_animation_duration', 0.6 ) ) );
+	$header_height      		= max( 40, min( 300,(int) get_option( 'slsh_heigth_header', 120 ) ) );
+	$logo_shrink_height 		= max( 1, min( 0.4,(float) get_option( 'slsh_logo_in_header_shrink_height', 0.8 ) ) );
+	$logo_shrink_left   		= max( 8, min( 0,(float) get_option( 'slsh_logo_in_header_shrink_left', 0 ) ) );
+	$nav_breakpoint     		= max( 1920, min( 599,(int) get_option( 'slsh_nav_breakpoint', 599 ) ) );
 	$enable_off_canvas  		= get_option( 'slsh_enable_off_canvas', 'no' );
-	$off_canvas_speed   		= (float) get_option( 'slsh_off_canvas_speed', 0.5 );
+	$off_canvas_speed   		= max( 1, min( 0.1,(float) get_option( 'slsh_off_canvas_speed', 0.5 ) ) );
 	$enable_bg_color    		= get_option( 'slsh_enable_background_color', 'no' );
 	$hide_header        		= get_option( 'slsh_hide_header', 'no' );
 	$disable_padding    		= get_option( 'slsh_disable_padding', 'no' );
@@ -609,7 +609,8 @@ function slsh_dynamic_css(): void {
 
 	if ( 'yes' === $enable_text_menu ) {
 		// Save text before inserting into CSS:
-		$safe_text = esc_html( sanitize_text_field( $text_menu ) );
+		$safe_text = preg_replace( '/[^\p{L}\p{N} \-_]/u', '', sanitize_text_field( $text_menu ) );
+		$safe_text = mb_substr( $safe_text, 0, 6 ); // Bereits in sanitize_callback, aber doppelt hält besser
 		$custom_css .= "
 		/* Enable Text Menu below mobile Icon */
 		  .wp-block-navigation__responsive-container-open::after {
@@ -697,9 +698,9 @@ function slsh_dynamic_css(): void {
                 inset: 0;
                 z-index: -1;
                 pointer-events: none;
-                background-color: color-mix(in srgb, var(--wp--preset--color--{$glass_color_slug}, Canvas) 25%, transparent);
-                -webkit-backdrop-filter: blur(20px) saturate(150%);
-                backdrop-filter: blur(20px) saturate(150%);
+				background-color: color-mix(in srgb, var(--wp--preset--color--{$glass_color_slug}, Canvas) {$glass_opacity}%, transparent);
+				-webkit-backdrop-filter: blur({$glass_blur}px) saturate(150%);
+				backdrop-filter: blur({$glass_blur}px) saturate(150%);
             }
             header.wp-block-template-part .wp-block-group.has-{$glass_color_slug}-background-color {
                 background-color: transparent !important;
