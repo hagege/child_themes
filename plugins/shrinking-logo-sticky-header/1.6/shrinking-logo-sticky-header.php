@@ -95,12 +95,12 @@ function slsh_register_settings(): void {
     add_option( 'slsh_enable_glass', 'no' );
     // Glass color is selected by the active block-theme preset slug.
     add_option( 'slsh_glass_color_slug', 'base' );
-    add_option( 'slsh_glass_opacity', 25 );
-    add_option( 'slsh_glass_blur', 12 );
+    add_option( 'slsh_glass_opacity', 50 );
+    add_option( 'slsh_glass_blur', 40 );
 
     // Hide header: sensitivity and delay
     add_option( 'slsh_hide_sensitivity', 10 );
-    add_option( 'slsh_hide_delay', 0 );	
+    add_option( 'slsh_hide_delay', 200 );	
 
     register_setting(
         'slsh_options_group',
