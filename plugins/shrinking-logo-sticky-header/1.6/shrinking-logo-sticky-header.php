@@ -643,7 +643,7 @@ function slsh_dynamic_css(): void {
 
 
 
-	if ( $nav_breakpoint > 599 ) {
+	if ( $nav_breakpoint > 598 ) {
 		$custom_css .= "
         @media screen and (max-width: {$nav_breakpoint}px) {
             .wp-block-navigation__responsive-container-open {
