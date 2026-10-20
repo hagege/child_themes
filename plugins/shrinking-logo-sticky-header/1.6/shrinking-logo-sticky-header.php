@@ -102,59 +102,71 @@ function slsh_register_settings(): void {
     add_option( 'slsh_hide_sensitivity', 10 );
     add_option( 'slsh_hide_delay', 0 );	
 
-	register_setting(
-		'slsh_options_group',
-		'slsh_header_shrink_height',
-		array(
-			'type'              => 'integer',
-			'sanitize_callback' => 'absint',
-		)
-	);
+    register_setting(
+        'slsh_options_group',
+        'slsh_header_shrink_height',
+        array(
+            'type'              => 'integer',
+            'sanitize_callback' => function ( $v ) {
+                return max( 40, min( 300, absint( $v ) ) );
+            },
+        )
+    );
 
     register_setting(
-		'slsh_options_group',
-		'slsh_animation_duration',
-		array(
-			'type'              => 'float',
-			'sanitize_callback' => 'floatval',
-		)
-	);
-	
-	register_setting(
-		'slsh_options_group',
-		'slsh_heigth_header',
-		array(
-			'type'              => 'integer',
-			'sanitize_callback' => 'absint',
-		)
-	);
-	
-	register_setting(
-		'slsh_options_group',
-		'slsh_logo_in_header_shrink_height',
-		array(
-			'type'              => 'float',
-			'sanitize_callback' => 'floatval',
-		)
-	);
+        'slsh_options_group',
+        'slsh_animation_duration',
+        array(
+            'type'              => 'number',
+            'sanitize_callback' => function ( $v ) {
+                return max( 0.05, min( 3, (float) $v ) );
+            },
+        )
+    );
 
-	register_setting(
-		'slsh_options_group',
-		'slsh_logo_in_header_shrink_left',
-		array(
-			'type'              => 'float',
-			'sanitize_callback' => 'floatval',
-		)
-	);
-	
-	register_setting(
-		'slsh_options_group',
-		'slsh_nav_breakpoint',
-		array(
-			'type'              => 'integer',
-			'sanitize_callback' => 'absint',
-		)
-	);
+    register_setting(
+        'slsh_options_group',
+        'slsh_heigth_header',
+        array(
+            'type'              => 'integer',
+            'sanitize_callback' => function ( $v ) {
+                return max( 40, min( 300, absint( $v ) ) );
+            },
+        )
+    );
+
+    register_setting(
+        'slsh_options_group',
+        'slsh_logo_in_header_shrink_height',
+        array(
+            'type'              => 'number',
+            'sanitize_callback' => function ( $v ) {
+                return max( 0.4, min( 1, (float) $v ) );
+            },
+        )
+    );
+
+    register_setting(
+        'slsh_options_group',
+        'slsh_logo_in_header_shrink_left',
+        array(
+            'type'              => 'number',
+            'sanitize_callback' => function ( $v ) {
+                return max( 0, min( 8, (float) $v ) );
+            },
+        )
+    );
+
+    register_setting(
+        'slsh_options_group',
+        'slsh_nav_breakpoint',
+        array(
+            'type'              => 'integer',
+            'sanitize_callback' => function ( $v ) {
+                return max( 599, min( 1920, absint( $v ) ) );
+            },
+        )
+    );
 	
 	register_setting(
 		'slsh_options_group',
@@ -167,14 +179,16 @@ function slsh_register_settings(): void {
 		)
 	);
 
-	register_setting(
-		'slsh_options_group',
-		'slsh_off_canvas_speed',
-		array(
-			'type'              => 'float',
-			'sanitize_callback' => 'floatval',
-		)
-	);
+    register_setting(
+        'slsh_options_group',
+        'slsh_off_canvas_speed',
+        array(
+            'type'              => 'number',
+            'sanitize_callback' => function ( $v ) {
+                return max( 0.1, min( 1, (float) $v ) );
+            },
+        )
+    );
 
 	register_setting(
 		'slsh_options_group',
@@ -462,7 +476,7 @@ function slsh_options_page(): void {
 				<tr>
 					<th scope="row"><label style="display: block; text-align: left" for="slsh_text_menu"><?php esc_html_e( 'Label Text <Menu> (max. 6 characters): ', 'shrinking-logo-sticky-header' ); ?></label></th>
 					<td>
-						<input type="text" id="slsh_text_menu" name="slsh_text_menu" value="<?php echo esc_attr( get_option( 'slsh_text_menu', 'Menu' ) ); ?> "maxlength="6" />
+						<input type="text" id="slsh_text_menu" name="slsh_text_menu" value="<?php echo esc_attr( get_option( 'slsh_text_menu', 'Menu' ) ); ?>" maxlength="6" />
 					</td>
 				</tr>
 				<!-- settings for Off-Canvas (CSS) -->
@@ -544,14 +558,14 @@ function slsh_dynamic_css(): void {
 		SLSH_VERSION
 	);
 	// variables.
-	$shrink_height      		= max( 40, min( 300, (int) get_option( 'slsh_header_shrink_height', 80 ) ) );
-	$anim_duration      		= max( 3, min( 0.05,(float) get_option( 'slsh_animation_duration', 0.6 ) ) );
-	$header_height      		= max( 40, min( 300,(int) get_option( 'slsh_heigth_header', 120 ) ) );
-	$logo_shrink_height 		= max( 1, min( 0.4,(float) get_option( 'slsh_logo_in_header_shrink_height', 0.8 ) ) );
-	$logo_shrink_left   		= max( 8, min( 0,(float) get_option( 'slsh_logo_in_header_shrink_left', 0 ) ) );
-	$nav_breakpoint     		= max( 1920, min( 599,(int) get_option( 'slsh_nav_breakpoint', 599 ) ) );
+	$shrink_height      		= max( 40,   min( 300,  (int) get_option( 'slsh_header_shrink_height', 80 ) ) );
+	$anim_duration      		= max( 0.05, min( 3,    (float) get_option( 'slsh_animation_duration', 0.6 ) ) );
+	$header_height      		= max( 40,   min( 300,  (int) get_option( 'slsh_heigth_header', 120 ) ) );
+	$logo_shrink_height 		= max( 0.4,  min( 1,    (float) get_option( 'slsh_logo_in_header_shrink_height', 0.8 ) ) );
+	$logo_shrink_left   		= max( 0,    min( 8,    (float) get_option( 'slsh_logo_in_header_shrink_left', 0 ) ) );
+	$nav_breakpoint     		= max( 599,  min( 1920, (int) get_option( 'slsh_nav_breakpoint', 599 ) ) );
 	$enable_off_canvas  		= get_option( 'slsh_enable_off_canvas', 'no' );
-	$off_canvas_speed   		= max( 1, min( 0.1,(float) get_option( 'slsh_off_canvas_speed', 0.5 ) ) );
+	$off_canvas_speed   		= max( 0.1,  min( 1,(float) get_option( 'slsh_off_canvas_speed', 0.5 ) ) );
 	$enable_bg_color    		= get_option( 'slsh_enable_background_color', 'no' );
 	$hide_header        		= get_option( 'slsh_hide_header', 'no' );
 	$disable_padding    		= get_option( 'slsh_disable_padding', 'no' );
@@ -563,7 +577,7 @@ function slsh_dynamic_css(): void {
     $glass_color_slug    		= sanitize_title( get_option( 'slsh_glass_color_slug', 'base' ) );
     $glass_color_slug    		= $glass_color_slug ? $glass_color_slug : 'base';
     $glass_opacity      		= max( 0, min( 100, (int) get_option( 'slsh_glass_opacity', 25 ) ) );
-    $glass_blur         		= max( 0, min( 40, (int) get_option( 'slsh_glass_blur', 12 ) ) );
+    $glass_blur         		= max( 0, min( 40,  (int) get_option( 'slsh_glass_blur', 12 ) ) );
 
 	$custom_css = "
         header.wp-block-template-part {

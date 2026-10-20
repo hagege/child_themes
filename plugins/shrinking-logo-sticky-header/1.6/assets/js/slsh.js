@@ -11,6 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
     let lastY = window.scrollY;
     let timer = null;
 
+    function menuIsOpen() {
+        return document.documentElement.classList.contains('has-modal-open') ||
+            document.body.classList.contains('has-modal-open') ||
+            !!header.querySelector('.wp-block-navigation__responsive-container.is-menu-open');
+    }
+
     function hideHeader() {
         // Do not hide while the menu is open or focus is inside the header (accessibility)
         if (header.matches(':focus-within') ||
@@ -19,6 +25,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         header.classList.add('slsh-hidden');
     }
+
+    // Remove stale focus from the menu close button after the navigation modal closes.
+    let menuWasOpen = menuIsOpen();
+    const menuObserver = new MutationObserver(function() {
+        const menuOpen = menuIsOpen();
+        if (menuWasOpen && !menuOpen && header.contains(document.activeElement)) {
+            document.activeElement.blur();
+        }
+        menuWasOpen = menuOpen;
+    });
+    menuObserver.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['class'],
+        subtree: true
+    });
 
     function update() {
         const y = window.scrollY;

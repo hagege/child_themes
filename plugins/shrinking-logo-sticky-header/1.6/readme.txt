@@ -87,7 +87,7 @@ Yes, of course:
 * (German): https://haurand.com/das-plugin-shrinking-logo-sticky-header/
 
 = Who are you?
-I'am Hans-Gerd, a WordPress enthusiast.
+I'am Hans-Gerd.
 My work on this plugin will be sponsored by [https://haurand.com/](https://haurand.com/)
 
 = How can I report security bugs? 
@@ -106,7 +106,7 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 
 == Changelog ==
 
-= 1.6.0: October 20, 2026 =
+= 1.6.0: October 27, 2026 =
 * Added Option: Frosted glass header.
 * Added Option: Hide header on scroll down, show header on scroll up.
 * Added: "Settings" link on the Plugins overview page for quick access to the plugin settings
