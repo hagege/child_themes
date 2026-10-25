@@ -719,45 +719,17 @@ function slsh_dynamic_css(): void {
             header.wp-block-template-part .wp-block-group.has-{$glass_color_slug}-background-color {
                 background-color: transparent !important;
             }
-            header.wp-block-template-part a {
-                color: inherit;
-            }
         }
-        @media (max-width: {$nav_breakpoint}px) {
-            header.wp-block-template-part {
-                background-color: var(--wp--preset--color--{$glass_color_slug}, Canvas) !important;
-            }
-            header.wp-block-template-part::before {
-                background-color: transparent;
-                -webkit-backdrop-filter: none;
-                backdrop-filter: none;
-            }
-        }
-        @media (prefers-reduced-transparency: reduce) {
-            header.wp-block-template-part {
-                background-color: var(--wp--preset--color--{$glass_color_slug}, Canvas) !important;
-            }
-            header.wp-block-template-part::before {
-                background-color: var(--wp--preset--color--{$glass_color_slug}, Canvas);
-                -webkit-backdrop-filter: none;
-                backdrop-filter: none;
-            }
-        }
-        /* While the navigation modal is open, remove the glass layer and
-           neutralize header effects that could interfere with fixed children. */
-        html.has-modal-open header.wp-block-template-part,
-        html:has(.wp-block-navigation__responsive-container.is-menu-open) header.wp-block-template-part {
-            transform: none !important;
-            filter: none !important;
-            -webkit-filter: none !important;
-            backface-visibility: visible !important;
-        }
-        html.has-modal-open header.wp-block-template-part::before,
-        html:has(.wp-block-navigation__responsive-container.is-menu-open) header.wp-block-template-part::before {
-            background-color: transparent !important;
-            -webkit-backdrop-filter: none !important;
-            backdrop-filter: none !important;
-        }";
+		@media (max-width: {$nav_breakpoint}px), (prefers-reduced-transparency: reduce) {
+			header.wp-block-template-part {
+				background-color: var(--wp--preset--color--{$glass_color_slug}, Canvas) !important;
+			}
+			header.wp-block-template-part::before {
+				background-color: transparent;
+				-webkit-backdrop-filter: none;
+				backdrop-filter: none;
+			}
+		}";
     }
 
     if ( 'yes' === $hide_header ) {
