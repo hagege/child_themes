@@ -45,7 +45,16 @@ One of the key advantages of Dynamic Header & Navigation for Block Themes is its
 After activation, the sticky and shrinking effects work in principle immediately - no additional setup or configuration is required. 
 This makes it ideal for users who want a professional, dynamic header effect without dealing with complex options or custom code.
 
+
+== Videos ==
+This video demonstrates general settings: 
+
 https://youtu.be/1_z6bQedAt8
+
+
+This video demonstrates the new options in version 1.6.0 of the plugin "Dynamic Header & Navigation for Block Themes", such as the “Frosted glass header” option and the “Hide header when scrolling down, show header when scrolling up” option:
+
+https://youtu.be/gypo-qZ7JK0
 
 
 == Frequently Asked Questions ==
