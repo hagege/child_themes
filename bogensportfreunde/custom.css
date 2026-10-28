@@ -5,6 +5,22 @@ html {
 }
 */
 
+/* Silbentrennung */
+.entry-content,
+.wp-block-post-content,
+h1,
+h2,
+h3,
+h4 {
+    hyphens: auto;
+}
+
+.keine-trennung {
+    hyphens: none;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+}
+
 /* Für Dateidownload */
 .wp-block-file a {
     font-size: var(--wp--preset--font-size--medium);

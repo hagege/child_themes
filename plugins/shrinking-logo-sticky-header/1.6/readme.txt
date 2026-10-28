@@ -56,6 +56,11 @@ This video demonstrates the new options in version 1.6.0 of the plugin "Dynamic 
 
 https://youtu.be/gypo-qZ7JK0
 
+How can I locate the "slug" for the background-color in the header div?
+This video shows how to find the slug for the header div's background-color in a block theme if the “Frosted Glass” option doesn't produce the desired effect. 
+
+https://youtu.be/qkR6lMj_cDE
+
 
 == Frequently Asked Questions ==
 
