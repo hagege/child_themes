@@ -40,7 +40,7 @@ function fuss_shortcode_handler( $atts ) {
 
         if ( $alt_text !== '' ) {
             // Schlüsselwörter, die einen Foto-/Urheberhinweis anzeigen (hier erweiterbar)
-            $keywords = array( 'Foto:', 'Fotos:', 'Fotograf:', 'Copyright:', 'Bild:', 'Credit:', 'Quelle:', '©' );
+            $keywords = array( 'Foto:', 'Fotos:', 'Fotograf:', 'Copyright:', 'Bild:', 'Credit:', 'Quelle:', '©', 'Urheber:' );
 
             // Prüfen, ob eines der Schlüsselwörter im Alt-Text vorkommt
             $has_hint = false;
