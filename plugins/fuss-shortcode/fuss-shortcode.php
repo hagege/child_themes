@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Fuss Shortcode
  * Description: Ersetzt den bisherigen [fuss]-Shortcode. Zeigt den Alt-Text des Beitragsbildes ("Mehr Informationen zum Foto: ..."), einen optionalen externen Link ("Mehr Infos auf der folgenden Website") und einen optionalen internen Link zu einem Schlagwort bzw. einer Kategorie.
- * Version: 1.1.0
+ * Version: 1.2.0
  * Author: HGG
  * Text Domain: fuss-shortcode
  */
