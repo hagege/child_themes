@@ -349,7 +349,7 @@ function fuss_get_category_data( $value ) {
 
     $url = add_query_arg(
         array(
-            'ew_view' => 'list',
+            'ew_view' => 'photo',
             'ew_cat'  => $slug,
         ),
         home_url( '/' . trim( $overview_path, '/' ) . '/' )
