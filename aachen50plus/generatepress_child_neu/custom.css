@@ -9,6 +9,23 @@ FARBWERTE
 Web und Bildschirm Druck
 */
 
+/* Für Ersatz des Plugins add-infos-to-the-events-calendar */
+.fuss-bereich {
+    margin-top: 2em;
+    padding: 1em;
+    color: #555;
+    background-color: #f9f9f2;
+}
+
+p.fuss-link,
+p.fuss-il,
+p.fuss-vl {
+    margin-bottom: 0.5em;
+}
+
+span.fuss-mitteilung {
+    font-weight: 700;
+}
 
 .event-header-grid {
     display: flex;
@@ -16,6 +33,15 @@ Web und Bildschirm Druck
     align-items: flex-start;
     gap: 30px;
     margin-bottom: 2em;
+}
+
+@media (max-width: 1200px) {
+    .event-header-grid {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 .event-title-area {
@@ -27,6 +53,12 @@ Web und Bildschirm Druck
     max-width: 260px;
     height: auto;
     border-radius: 4px;
+}
+
+/* Button für Veranstaltungssuche */
+.ew-filter-submit:hover {
+    background: var(--wp--preset--color--contrast);
+    color: white;
 }
 
 /* Untereinander ab einer Breite von 1200px abwärts */
@@ -59,15 +91,17 @@ i.fa.fa-times.ol-info-window-close {
 
 /* Absatzstyle für Copyright oben */
 p.em_bild {
-	font-style: italic;
-	margin-bottom: 4rem;
+    font-style: italic;
+    margin-bottom: 4rem;
 }
 
 /* Breakpoint bei Archive 1-Spaltig bis 1024px */
-@media (min-width: 768px) and (max-width: 1024px){
-	.generate-columns.tablet-grid-50, .grid-sizer.tablet-grid-50 {
-			width: 100%;
-	}
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .generate-columns.tablet-grid-50,
+    .grid-sizer.tablet-grid-50 {
+        width: 100%;
+    }
 }
 
 /* damit der Anker korrekt angesteuert werden kann - deaktiviert, 3.11.2022 
@@ -87,29 +121,29 @@ p.em_bild {
 
 /* Hintergrund heller */
 .widget .search-form button.search-submit {
-  background-color: #b3b3b3;
+    background-color: #b3b3b3;
 }
 
 
 /* wegen besserer Sichtbarkeit */
 .gp-icon svg {
-  fill: black;
+    fill: black;
 }
 
-/* schräge Kante beim Bild auf der Startseite */ 
+/* schräge Kante beim Bild auf der Startseite */
 .schraeg {
-clip-path: polygon(0 0, 100% 0, 100% 85%, 66% 100%, 0 85%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 66% 100%, 0 85%);
 }
 
 /* Image auf Hauptseite beim ersten Eintrag in voller Breite */
 .resize-featured-image .post-image img {
-width: 100%;
+    width: 100%;
 }
 
 
 /* Damit die Karte das Sticky Menue nicht überdeckt */
 .leaflet-container {
-z-index:0;
+    z-index: 0;
 }
 
 /* hat nicht funktioniert 
@@ -120,40 +154,40 @@ z-index: -1;
 /*------------------------------------*/
 /* Einstellungen für die Frontpage */
 /*------------------------------------*/
-.page-hero-buttons, .ackids_front {
-margin-left:20%;
-margin-right:20%;	
+.page-hero-buttons,
+.ackids_front {
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 .ackids_front {
-padding: 20px;
-background: rgba(0, 0, 0, 0.2);
-margin-bottom: 20px;	
-color: white;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    color: white;
 }
 
 .ackids_front h2 {
-font-weight: 600;
-margin-bottom: 10px;
-margin-top: 10px;
-text-shadow: 0px 0px 0.2rem #F9B81E;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-shadow: 0px 0px 0.2rem #F9B81E;
 }
 
 @media (max-width: 350px) {
-.ackids_front h2 {
-font-size: 1.3rem;
+    .ackids_front h2 {
+        font-size: 1.3rem;
+    }
 }
-}	
 
 @media (min-width: 351px) {
-.ackids_front h2 {
-font-size: 1.5rem;
+    .ackids_front h2 {
+        font-size: 1.5rem;
+    }
 }
-}	
 
 @media (min-width: 461px) {
-.ackids_front h2 {
-font-size: 2rem;
+    .ackids_front h2 {
+        font-size: 2rem;
+    }
 }
-}	
-
