@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: Fuss Shortcode
- * Description: Ersetzt den bisherigen [fuss]-Shortcode. Zeigt den Alt-Text des Beitragsbildes ("Mehr Informationen zum Foto: ..."), einen optionalen externen Link ("Mehr Infos auf der folgenden Website") und einen optionalen internen Link zu einem Schlagwort bzw. einer Kategorie.
- * Version: 1.2.0
+ * Description: Ersetzt den bisherigen [fuss]-Shortcode. Zeigt den Alt-Text des Beitragsbildes ("Mehr Informationen zum Foto: ..."), einen optionalen externen Link, einen optionalen internen Link zu einem Schlagwort bzw. einer Kategorie sowie einen Link zur Veranstaltungskategorie.
+ * Version: 1.3.0
  * Author: HGG
  * Text Domain: fuss-shortcode
  */
@@ -14,18 +14,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Shortcode-Handler für [fuss]
  *
- * Beispiel: [fuss link="http://www.jurakowaprojekt.de" il="https://aachen50plus.de/tag/ausstellung/" vl="Musik"]
+ * Beispiel: [fuss link="http://www.jurakowaprojekt.de" il="https://aachen50plus.de/tag/ausstellung/" vl="Kunst und Kultur"]
  * - link: wird als externer Link ausgegeben
  * - il:   interner Link; die Domain wird durch die aktuelle Domain ersetzt
- * - alle weiteren Attribute (z. B. vl) werden ignoriert
+ * - vl:   Veranstaltungskategorie; Link zu /events/category/<slug>/
+ * - alle weiteren Attribute werden ignoriert
  */
 function fuss_shortcode_handler( $atts ) {
 
-    // Nur "link" und "il" werden ausgewertet, alles andere wird ignoriert
     $atts = shortcode_atts(
         array(
             'link' => '',
             'il'   => '',
+            'vl'   => '',
         ),
         $atts,
         'fuss'
@@ -44,7 +45,6 @@ function fuss_shortcode_handler( $atts ) {
             // Schlüsselwörter, die einen Foto-/Urheberhinweis anzeigen (hier erweiterbar)
             $keywords = array( 'Foto:', 'Fotos:', 'Fotograf:', 'Copyright:', 'Bild:', 'Credit:', 'Quelle:', '©', 'Urheber:' );
 
-            // Prüfen, ob eines der Schlüsselwörter im Alt-Text vorkommt
             $has_hint = false;
             foreach ( $keywords as $keyword ) {
                 if ( mb_stripos( $alt_text, $keyword ) !== false ) {
@@ -87,37 +87,48 @@ function fuss_shortcode_handler( $atts ) {
     if ( $il !== '' ) {
         $parts = wp_parse_url( $il );
 
-        // Pfad ermitteln (auch wenn nur "tag/ausstellung" ohne Domain angegeben wurde)
         $path = '';
         if ( ! empty( $parts['path'] ) ) {
             $path = $parts['path'];
         }
 
-        // Pfad bereinigen: führenden und abschließenden Slash vereinheitlichen
         $path = trim( $path, '/' );
 
         if ( $path !== '' ) {
-            // Immer: /tag/ausstellung/
             // Fehlt "tag/" oder "category/" am Anfang, wird "tag/" ergänzt
-			if ( strpos( $path, 'tag/' ) !== 0 && strpos( $path, 'category/' ) !== 0 ) {
-				$path = 'tag/' . $path;
-			}
-			$url = home_url( '/' . $path . '/' );
+            if ( strpos( $path, 'tag/' ) !== 0 && strpos( $path, 'category/' ) !== 0 ) {
+                $path = 'tag/' . $path;
+            }
+            $internal_url = home_url( '/' . $path . '/' );
 
-            // Linktext aus dem letzten Pfadsegment (Slug) ableiten, z. B. "ausstellung" -> "Ausstellung"
+            // Linktext aus dem letzten Pfadsegment (Slug) ableiten
             $segments = explode( '/', $path );
             $slug     = end( $segments );
             $label    = $slug !== '' ? ucfirst( str_replace( '-', ' ', rawurldecode( $slug ) ) ) : '';
 
             $link_text = $label !== ''
-                ? 'Weitere Beiträge und Veranstaltungen zum Thema: ' . $label
-                : 'Weitere Beiträge und Veranstaltungen zum Thema';
+                ? 'Weitere Beiträge zum Thema: ' . $label
+                : 'Weitere Beiträge zum Thema';
 
-            $output .= '<p class="fuss-internal-link"><a href="' . esc_url( $url ) . '">'
+            $output .= '<p class="fuss-internal-link"><a href="' . esc_url( $internal_url ) . '">'
                      . esc_html( $link_text )
                      . '</a></p>';
         }
     }
+
+    // d) Veranstaltungskategorie (vl): Link zur Kategorieseite /events/category/<slug>/
+    $vl = trim( $atts['vl'] );
+
+    if ( $vl !== '' ) {
+        $vl_slug  = sanitize_title( $vl ); // "Kunst und Kultur" -> "kunst-und-kultur"
+        $cat_link = home_url( '/events/category/' . $vl_slug . '/' );
+
+        $output .= '<p class="fuss-event-category">'
+                 . 'Weitere Veranstaltungen in der Kategorie: '
+                 . '<a href="' . esc_url( $cat_link ) . '">' . esc_html( $vl ) . '</a>'
+                 . '</p>';
+    }
+
     if ( $output === '' ) {
         return '';
     }
