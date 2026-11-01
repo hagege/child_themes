@@ -57,9 +57,9 @@ function fuss_shortcode_handler( $atts ) {
             }
 			
             $output .= '<p class="fuss-foto-info">'
-	                 . '<strong>'		         
+	                 . '<span class="fuss-mitteilung">'		         
                      . esc_html( 'Mehr Informationen zum Foto:' )
-					 . '</strong>'		
+					 . '</span>'		
                      . '<br>'
                      . esc_html( $alt_text )
                      . '</p>';
