@@ -56,6 +56,57 @@ get_header(); ?>
                         ?>
                     </div>
 
+                    <!-- 5. KATEGORIEN UND SCHLAGWÖRTER -->
+                    <?php
+                    // Taxonomie der Veranstaltungskategorien (aus dem Fuss-Plugin, sonst Fallback)
+                    $event_cat_taxonomy = function_exists( 'fuss_event_taxonomy' ) ? fuss_event_taxonomy() : '';
+                    if ( empty( $event_cat_taxonomy ) ) {
+                        $event_cat_taxonomy = 'eventward_category';
+                    }
+
+                    // Kategorien als Links auf die Veranstaltungsübersicht (Fotoansicht)
+                    $event_categories_html = array();
+                    if ( taxonomy_exists( $event_cat_taxonomy ) ) {
+                        $event_terms = get_the_terms( get_the_ID(), $event_cat_taxonomy );
+                        if ( $event_terms && ! is_wp_error( $event_terms ) ) {
+                            foreach ( $event_terms as $event_term ) {
+                                if ( function_exists( 'fuss_get_category_data' ) ) {
+                                    $cat_data = fuss_get_category_data( $event_term->slug );
+                                    $cat_url  = $cat_data['url'];
+                                } else {
+                                    $cat_url = add_query_arg(
+                                        array(
+                                            'ew_view' => 'photo',
+                                            'ew_cat'  => $event_term->slug,
+                                        ),
+                                        home_url( '/veranstaltungen/' )
+                                    );
+                                }
+                                $event_categories_html[] = '<a href="' . esc_url( $cat_url ) . '">' . esc_html( $event_term->name ) . '</a>';
+                            }
+                        }
+                    }
+
+                    $event_tags = taxonomy_exists( 'post_tag' ) && is_object_in_taxonomy( get_post_type(), 'post_tag' )
+                        ? get_the_term_list( get_the_ID(), 'post_tag', '', ', ', '' )
+                        : false;
+
+                    if ( ! empty( $event_categories_html ) || ( $event_tags && ! is_wp_error( $event_tags ) ) ) :
+                        ?>
+                        <footer class="event-taxonomies entry-meta">
+                            <?php if ( ! empty( $event_categories_html ) ) : ?>
+                                <span class="event-categories">
+                                    <strong>Kategorien:</strong> <?php echo implode( ', ', $event_categories_html ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
+                                </span>
+                            <?php endif; ?>
+
+                            <?php if ( $event_tags && ! is_wp_error( $event_tags ) ) : ?>
+                                <span class="event-tags">
+                                    <strong> | Schlagwörter:</strong> <?php echo $event_tags; // phpcs:ignore WordPress.Security.EscapeOutput ?>
+                                </span>
+                            <?php endif; ?>
+                        </footer>
+                    <?php endif; ?>
 
                 </div>
             </article>
