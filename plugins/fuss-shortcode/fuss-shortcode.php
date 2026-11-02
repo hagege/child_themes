@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Fuss Shortcode
  * Description: Ersetzt den bisherigen [fuss]-Shortcode. Zeigt den Alt-Text des Beitragsbildes, einen optionalen externen Link, einen internen Link und einen Link zur Veranstaltungskategorie. Mit Metabox (wahlweise Seitenleiste oder unterhalb des Editors).
- * Version: 1.6.1
+ * Version: 1.6.2
  * Author: HGG
  * Text Domain: fuss-shortcode
  */
@@ -87,38 +87,9 @@ function fuss_event_post_types() {
     return $found;
 }
 
-// Taxonomie der Veranstaltungskategorien ermitteln
+// Taxonomie der Veranstaltungskategorien (Eventward)
 function fuss_event_taxonomy() {
-
-    // 1. Bekannte/vermutete Namen
-    $candidates = array(
-        'eventward_category',
-        'event_category',
-        'event-category',
-        'event_cat',
-        'events_category',
-        'tribe_events_cat',
-    );
-    foreach ( $candidates as $tax ) {
-        if ( taxonomy_exists( $tax ) ) {
-            return $tax;
-        }
-    }
-
-    // 2. Fallback: Taxonomie suchen, die einem Event-Post-Type zugeordnet ist
-    //    und "categ", "kateg" oder "cat" im Namen trägt
-    foreach ( fuss_event_post_types() as $pt ) {
-        $taxes = get_object_taxonomies( $pt, 'names' );
-        foreach ( $taxes as $tax ) {
-            if ( stripos( $tax, 'categ' ) !== false
-                || stripos( $tax, 'kateg' ) !== false
-                || stripos( $tax, 'cat' ) !== false ) {
-                return $tax;
-            }
-        }
-    }
-
-    return '';
+    return 'eventward_category';
 }
 
 /* ------------------------------------------------------------------------
@@ -405,6 +376,36 @@ function fuss_render_metabox( $post ) {
         );
     }
 
+    // Schlagwörter für die Auswahl "Schlagwort - interner Link (il)"
+    $tags = get_terms(
+        array(
+            'taxonomy'   => 'post_tag',
+            'hide_empty' => false,
+            'orderby'    => 'name',
+            'order'      => 'ASC',
+        )
+    );
+
+    // Gespeicherten Wert dem passenden Schlagwort-Slug zuordnen
+    $il_slug = '';
+    if ( $il !== '' ) {
+        $il_clean = trim( $il );
+        $il_path  = wp_parse_url( $il_clean, PHP_URL_PATH );
+        if ( $il_path === null || $il_path === false || $il_path === '' ) {
+            $il_path = $il_clean;
+        }
+        if ( preg_match( '#(tag/[^?\#]+)#i', $il_clean, $m ) ) {
+            $il_path = $m[1];
+        }
+        $il_path = trim( $il_path, '/' );
+
+        if ( preg_match( '#^tag/([^/]+)$#i', $il_path, $m ) ) {
+            $il_slug = $m[1];
+        } elseif ( $il_path !== '' && strpos( $il_path, '/' ) === false ) {
+            $il_slug = $il_path;
+        }
+    }
+
     // Umschalt-Link für die Position der Box
     $current_context = fuss_get_metabox_context();
     $target_context  = ( $current_context === 'side' ) ? 'normal' : 'side';
@@ -434,13 +435,22 @@ function fuss_render_metabox( $post ) {
     </p>
 
     <p>
-        <label for="fuss_il"><strong>Interner Link</strong></label><br>
-        <input type="text" id="fuss_il" name="fuss_il" value="<?php echo esc_attr( $il ); ?>" class="widefat" placeholder="tag/ausstellung/">
-        <span class="description" style="display:block;margin-top:4px;">Pfad oder Adresse, z. B. <code>tag/ausstellung/</code>. Die Domain wird automatisch angepasst.</span>
+        <label for="fuss_il"><strong>Schlagwort - interner Link (il)</strong></label><br>
+        <select id="fuss_il" name="fuss_il" class="widefat">
+            <option value="">– keines –</option>
+            <?php if ( ! is_wp_error( $tags ) ) : ?>
+                <?php foreach ( $tags as $tag ) : ?>
+                    <option value="<?php echo esc_attr( $tag->slug ); ?>" <?php selected( $il_slug, $tag->slug ); ?>>
+                        <?php echo esc_html( $tag->name ); ?>
+                    </option>
+                <?php endforeach; ?>
+            <?php endif; ?>
+        </select>
+        <span class="description" style="display:block;margin-top:4px;">Verlinkt auf die Schlagwort-Seite, z. B. <code>tag/ausstellung/</code>. Die Domain wird automatisch angepasst.</span>
     </p>
 
     <p>
-        <label for="fuss_vl"><strong>Veranstaltungskategorie</strong></label><br>
+        <label for="fuss_vl"><strong>Veranstaltungskategorie (vl)</strong></label><br>
         <?php if ( $taxonomy !== '' ) : ?>
             <select id="fuss_vl" name="fuss_vl" class="widefat">
                 <option value="">– keine –</option>
@@ -489,7 +499,6 @@ function fuss_save_metabox( $post_id ) {
     // Felder speichern bzw. leere Felder löschen
     $fields = array(
         'fuss_link' => array( '_fuss_link', 'esc_url_raw' ),
-        'fuss_il'   => array( '_fuss_il',   'sanitize_text_field' ),
         'fuss_vl'   => array( '_fuss_vl',   'sanitize_text_field' ),
     );
 
@@ -503,6 +512,15 @@ function fuss_save_metabox( $post_id ) {
         } else {
             delete_post_meta( $post_id, $meta_key );
         }
+    }
+
+    // Interner Link (il): Schlagwort-Slug aus der Liste, gespeichert als "tag/<slug>/"
+    $il_slug = isset( $_POST['fuss_il'] ) ? sanitize_title( wp_unslash( $_POST['fuss_il'] ) ) : '';
+
+    if ( $il_slug !== '' && term_exists( $il_slug, 'post_tag' ) ) {
+        update_post_meta( $post_id, '_fuss_il', 'tag/' . $il_slug . '/' );
+    } else {
+        delete_post_meta( $post_id, '_fuss_il' );
     }
 }
 add_action( 'save_post', 'fuss_save_metabox' );
