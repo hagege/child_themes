@@ -347,7 +347,7 @@ function fuss_add_metabox() {
     foreach ( array_unique( $post_types ) as $pt ) {
         add_meta_box(
             'fuss_metabox',
-            'Fußbereich (Links & Kategorie)',
+            'Footer-Links',
             'fuss_render_metabox',
             $pt,
             $context,
