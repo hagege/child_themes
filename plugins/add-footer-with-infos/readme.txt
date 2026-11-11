@@ -1,9 +1,18 @@
 === Add footer with infos ===
-Contributors: HGG
+Author URI: https://haurand.com/
+Plugin URI: https://haurand.com/
+Donate link: 
+Contributors: @hage
 Tags: shortcode, footer, event, links, metadata
+Requires at least: 
+Tested up to: 7.1
+Requires PHP: 7.4
 Stable tag: 0.5
+License: GPLv2
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Adds a configurable information footer to posts and supported event post types. Use the [fuss] shortcode or enter footer links in the editor metabox to append them automatically. The footer can display the featured image's photo credit, an external website, a tag archive link, and an event-category link.
+
+Adds configurable footers to posts and events, with links, tag and category archives, and featured-image photo credits.
 
 == Description ==
 

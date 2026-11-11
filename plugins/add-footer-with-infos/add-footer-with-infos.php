@@ -1,21 +1,37 @@
 <?php
 /**
- * Plugin Name: Add footer with infos
+ * Add footer with infos
+ *
+ * @author        Hans-Gerd Gerhards
+ * @license       gplv2
+ * @version       0.5
+ *
+ * @wordpress-plugin
+ * Plugin Name:   Add footer with infos
+ * Plugin URI:    https://haurand.com/
  * Description: Adds a configurable footer with photo credit, external and internal links, and an event-category link. Includes a metabox with configurable placement.
- * Version: 0.5
- * Author: HGG
- * Text Domain: add-footer-with-infos
- * Domain Path: /languages
+ * Version:       0.5
+ * Author:        Hans-Gerd Gerhards
+ * Author URI:    https://haurand.com/author/hgg/
+ * Text Domain:   add-footer-with-infos
+ * Domain Path:   /languages
+ * License:       GPLv2
+ * License URI:   https://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with shrinking Logo Sticky Header. If not, see <https://www.gnu.org/licenses/gpl-2.0.html/>.
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Direct access is not allowed.
 }
 
+/*
 add_action( 'init', 'fuss_load_textdomain', 0 );
 function fuss_load_textdomain() {
     load_plugin_textdomain( 'add-footer-with-infos', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 }
+*/
 
 /* ------------------------------------------------------------------------
  * KONFIGURATION
@@ -504,22 +520,18 @@ function fuss_save_metabox( $post_id ) {
     }
 
     // Save fields or delete empty fields.
-    $fields = array(
-        'fuss_link' => array( '_fuss_link', 'esc_url_raw' ),
-        'fuss_vl'   => array( '_fuss_vl',   'sanitize_text_field' ),
-    );
+	$fields = array(
+		'_fuss_link' => isset( $_POST['fuss_link'] ) ? esc_url_raw( wp_unslash( $_POST['fuss_link'] ) ) : '',
+		'_fuss_vl'   => isset( $_POST['fuss_vl'] ) ? sanitize_text_field( wp_unslash( $_POST['fuss_vl'] ) ) : '',
+	);
 
-    foreach ( $fields as $field => $config ) {
-        list( $meta_key, $sanitizer ) = $config;
-
-        $value = isset( $_POST[ $field ] ) ? call_user_func( $sanitizer, wp_unslash( $_POST[ $field ] ) ) : '';
-
-        if ( $value !== '' ) {
-            update_post_meta( $post_id, $meta_key, $value );
-        } else {
-            delete_post_meta( $post_id, $meta_key );
-        }
-    }
+	foreach ( $fields as $meta_key => $value ) {
+		if ( $value !== '' ) {
+			update_post_meta( $post_id, $meta_key, $value );
+		} else {
+			delete_post_meta( $post_id, $meta_key );
+		}
+	}
 
     // Internal link (il): save the selected tag slug as "tag/<slug>/".
     $il_slug = isset( $_POST['fuss_il'] ) ? sanitize_title( wp_unslash( $_POST['fuss_il'] ) ) : '';
